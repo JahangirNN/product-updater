@@ -1,0 +1,67 @@
+[
+  {
+    "product_id": "a5b2128a9d8ca9c2",
+    "store": "jwpei",
+    "action": "delta_check",
+    "result": {
+      "status": "success",
+      "handle": "thea-top-handle-bag-dark-olive",
+      "current_source_price": 99.0,
+      "old_source_price": 99.0,
+      "current_compare_price": 99.0,
+      "availability": "in_stock",
+      "old_availability": "in_stock",
+      "is_active": true,
+      "price_changed": false,
+      "stock_changed": false,
+      "variants_delta": [
+        {
+          "sku": "2T78-7",
+          "available": true,
+          "price_usd": 99.0
+        }
+      ],
+      "elapsed_ms": 788.2
+    },
+    "timestamp": "2026-09-09T15:42:52Z"
+  },
+  {
+    "product_id": "a5b2128a9d8ca9c2",
+    "store": "jwpei",
+    "action": "delta_check",
+    "result": {
+      "status": "success",
+      "handle": "thea-top-handle-bag-dark-olive",
+      "current_source_price": 99.0,
+      "old_source_price": 99.0,
+      "current_compare_price": 99.0,
+      "availability": "in_stock",
+      "old_availability": "in_stock",
+      "is_active": true,
+      "price_changed": false,
+      "stock_changed": false,
+      "variants_delta": [
+        {
+          "sku": "2T78-7",
+          "available": true,
+          "price_usd": 99.0
+        }
+      ],
+      "elapsed_ms": 754.15
+    },
+    "timestamp": "2026-09-09T15:43:34Z"
+  },
+  {
+    "action": "batch_delta_scan",
+    "store": "jwpei",
+    "products_checked": 288,
+    "in_stock": 267,
+    "out_of_stock": 5,
+    "price_changes_detected": 0,
+    "stock_changes_detected": 0,
+    "errors": 0,
+    "average_latency_ms": 2657.78,
+    "total_time_seconds": 267.32,
+    "timestamp": "2026-09-09T16:00:35Z"
+  }
+]
