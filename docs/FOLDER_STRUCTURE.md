@@ -2,15 +2,20 @@
 
 ## 1. Directory Tree
 
-The **Product Updater** adopts a **Screaming Functional Architecture**. The directory structure immediately reveals the core domain (stores, product groups, knowledge bases, and storage partitions) with **zero class hierarchies**:
+The **Product Updater** adopts a **Screaming Functional Architecture**. The directory structure immediately reveals the core domain (stores, product groups, knowledge bases, and storage partitions) with **zero class hierarchies (ADR 0005)**:
 
 ```text
 product-updater/
 ├── .agents/
-│   └── mcp_config.json              # Workspace Firecrawl MCP configuration
+│   └── skills/
+│       └── doc-keeper/              # Architectural guardian and alignment verifier
 │
-├── config.yaml                      # Declarative global settings (scheduler intervals, batch sizes)
-├── config_loader.py                 # Pure function: load_config() -> dict
+├── .github/
+│   └── workflows/
+│       └── deploy-pages.yml         # CI/CD: Automated GitHub Pages deployment on push
+│
+├── config/
+│   └── delta_config.json            # Centralized settings (120m check interval, concurrency, delays)
 │
 ├── docs/                            # Multi-file engineering documentation & decision logs
 │   ├── ARCHITECTURE.md              # System design & two-tier flow diagram
@@ -23,79 +28,72 @@ product-updater/
 │       ├── 0002-decouple-firecrawl-ingestion-from-local-delta-updates.md
 │       ├── 0003-declarative-configuration-driven-architecture.md
 │       ├── 0004-local-json-database-and-shopify-readiness.md
-│       └── 0005-functional-screaming-architecture-and-store-knowledge-bases.md
+│       ├── 0005-functional-screaming-architecture-and-store-knowledge-bases.md
+│       ├── 0006-currency-conversion-and-shopify-variants-size-guide.md
+│       ├── 0007-mobile-first-catalog-viewer-and-github-pages-deployment.md
+│       └── 0008-systematic-2-hour-delta-freshner-and-timestamp-scheduling.md
+│
+├── frontend/                        # Mobile-First Catalog Data Viewer (React + Vite + Tailwind)
+│   ├── public/data/
+│   │   ├── catalog.json             # Consolidated static catalog (1.3 MB, 288 items)
+│   │   └── meta.json                # Summary statistics & export timestamp
+│   ├── src/
+│   │   ├── components/              # Header, NavigationHierarchy, ProductCard, ProductDetailModal
+│   │   ├── services/catalogService  # Sub-5ms instant in-memory search and multi-tier filtering
+│   │   └── types/                   # Canonical TypeScript data contracts
+│   ├── vite.config.ts               # base: './' for universal GitHub Pages subpath compatibility
+│   └── tailwind.config.js           # Luxury Dark & Glassmorphism design tokens
+│
+├── scripts/                         # Automation & Export CLI Scripts
+│   ├── export_viewer_data.py        # Compiles storage/db/ into frontend/public/data/catalog.json
+│   ├── publish_viewer.py            # 1-command export, Vite build, git commit & push
+│   └── reprocess_catalog.py         # Batch migration script to fix dimension formatting
+│
+├── storage/                         # Managed Local JSON Storage Room (Pure Functions)
+│   ├── db.py                        # def save_product(), load_product(), append_delta_event()
+│   ├── forex.py                     # def get_usd_to_inr_rate(), convert_usd_to_inr()
+│   ├── validator.py                 # def validate_product() against Shopify rules
+│   │
+│   └── db/                          # Partitioned JSON Database
+│       ├── index.json               # Fast in-memory master index { id: { sku, price, last_verified_at } }
+│       ├── history/                 # Append-only price/stock delta ledgers
+│       │   ├── delta_events.json    # Queued shift events for Shopify Admin API sync
+│       │   └── delta_log.json       # Historical batch execution audit logs
+│       └── jwpei/                   # Retailer partition
+│           └── products/            # Individual JSON documents (e.g. 84d55ef19c5db172.json)
 │
 ├── stores/                          # [SCREAMING ARCHITECTURE] Self-contained store modules
 │   ├── _template/                   # Starter template for onboarding any new store
 │   │   ├── LEARNINGS.md             # Knowledge base template (gotchas, URL filters, API shortcuts)
-│   │   ├── inflow.py                # Pure functions: normalize Firecrawl raw output -> canonical
-│   │   └── delta.py                 # Pure function: fetch_latest_price_stock(product) -> delta
+│   │   ├── inflow.py                # Pure functions: normalize raw payload -> canonical
+│   │   └── delta.py                 # Pure function: check_price_and_stock(), apply_delta_to_product()
 │   │
-│   ├── xyz_store/                   # Concrete store implementation
-│   │   ├── LEARNINGS.md             # Living notes: URL query filters, DOM quirks, fast endpoints
-│   │   ├── inflow.py                # Firecrawl normalization functions for xyz_store
-│   │   ├── delta.py                 # Fast price/stock updater for xyz_store
-│   │   └── groups/                  # Category-specific logic (only if needed)
-│   │       ├── sports_shoes.py      # Custom shoe size converter / filter parser
-│   │       └── jackets.py           # Apparel sizing logic
-│   │
-│   ├── coach/                       # Luxury retailer module
-│   │   ├── LEARNINGS.md
-│   │   ├── inflow.py
-│   │   └── delta.py
-│   │
-│   └── katespade/                   # Luxury retailer module
-│       ├── LEARNINGS.md
-│       ├── inflow.py
-│       └── delta.py
+│   └── jwpei/                       # Concrete JW PEI implementation
+│       ├── LEARNINGS.md             # Living notes: swatch IDs, dimensions parsing, restock findings
+│       ├── inflow.py                # Ingestion normalizer with responsive Size Guide generator
+│       └── delta.py                 # Fast AJAX checker & pure delta mutation functions
 │
-├── storage/                         # Managed Local JSON Storage Room (Pure Functions)
-│   ├── __init__.py
-│   ├── reader.py                    # def get_product(id), def list_products(store, group)
-│   ├── writer.py                    # def save_product(p), def record_delta(id, price, stock)
-│   ├── deduplicator.py              # def make_unique_id(store, sku) -> SHA256 hash
-│   ├── validator.py                 # def validate_shopify(p) -> warnings_list
-│   │
-│   └── db/                          # The Partitioned JSON Database
-│       ├── index.json               # Fast in-memory master index { id: { store, group, sku, path } }
-│       ├── history/                 # Append-only price/stock delta ledger
-│       │   └── delta_log.json
-│       └── products/                # Partitioned product documents
-│           ├── xyz_store/
-│           │   ├── sports_shoes/    # e.g. prd_a8f9c1.json, prd_e4b2d8.json
-│           │   └── jackets/
-│           └── coach/
-│               └── handbags/
-│
-├── engine/                          # Functional Orchestrator
-│   ├── runner.py                    # def run_updater_loop() -> runs scheduled delta cycles
-│   └── dispatcher.py                # def dispatch_delta_check(store_slug, product_dict)
-│
-├── firecrawl_ingest/                # Firecrawl API Client & Two-Step Workflow
-│   ├── client.py                    # def firecrawl_discover(url, filters) -> list[urls]
-│   └── scraper.py                   # def firecrawl_deep_scrape(url) -> raw_product_dict
-│
-├── utils/                           # Shared Stateless Utilities
-│   ├── logger.py                    # Structured logging setup
-│   ├── currency.py                  # def to_inr(amount, source_curr) -> float
-│   └── retry.py                     # def retry_async(fn, retries=3)
-│
+├── sync_catalog.py                  # Universal multi-store delta engine & systematic scheduler
+├── test_delta_engine.py             # Automated unit & integration test suite for delta engine
+├── run_inflow_jwpei.py              # Store-specific full ingestion runner for JW PEI
 ├── .env.example                     # Sample environment variables
-├── .gitignore                       # Ignored virtual envs, temp logs, local databases
-├── main.py                          # Unified CLI entry point
-└── README.md                        # Project executive summary and quickstart
+├── .gitignore                       # Ignored build artifacts, node_modules, temp logs
+└── README.md                        # Executive blueprint, quickstart, and live deployment links
 ```
 
 ---
 
 ## 2. Architectural Boundaries & Rules
 
-1. **Pure Functions Only**:
-   - Every file exports top-level functions (`def ...`).
-   - No `class Scraper` or inheritance hierarchies. Data flows as pure dictionaries or Pydantic models.
+1. **Pure Functions Only (ADR 0005)**:
+   - Every module exports top-level pure functions (`def ...`).
+   - Zero classes or OOP inheritance hierarchies. Data flows as pure dictionaries with microsecond operations.
 2. **Store Isolation**:
-   - `stores/xyz_store/` has zero dependencies on `stores/coach/`. If Coach breaks, XYZ Store is completely unaffected.
+   - `stores/jwpei/` has zero dependencies on other store modules. If JW PEI DOM or endpoints change, other stores remain unaffected.
 3. **Colocated Knowledge (`LEARNINGS.md`)**:
-   - Every store folder contains its own `LEARNINGS.md`. Any developer or agent working on that store must read and update this file with newly discovered quirks, query parameter structures, or DOM changes.
+   - Every retailer partition maintains a living `LEARNINGS.md`. Any developer or subagent working on that store must read and record newly uncovered retailer quirks.
 4. **Partitioned Storage**:
-   - Products are organized by `store_slug/product_group/`. This keeps directory listings small, prevents file system lock contention, and makes Git diffs clean and human-inspectable.
+   - Products are organized by `storage/db/{store}/products/{id}.json`. This keeps directory listings small, prevents file locks, and makes Git diffs clean and human-inspectable.
+5. **Decoupled Downstream Consumption**:
+   - Viewer consumes static exports compiled from `storage/db/`.
+   - Shopify sync worker consumes append-only queue events from `storage/db/history/delta_events.json`.

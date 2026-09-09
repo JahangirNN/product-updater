@@ -1,47 +1,103 @@
-# Product Updater: Architecture & Execution Blueprint
+# Product Updater: Decoupled Dropshipping Intelligence Engine
 
-## 1. Executive Summary
+A modular, screaming-architecture e-commerce catalog ingestion, delta monitoring, and visual audit platform.
 
-The **Product Updater** is a reimagined, decoupled e-commerce intelligence system designed to solve the challenges of traditional monolithic scrapers. Instead of bundling site navigation, catalog crawling, HTML reverse-engineering, variant extraction, and periodic price/stock polling into one tangled codebase, this architecture separates responsibilities into two distinct tiers:
-
-1. **Tier 1: Product Ingestion & Discovery (Firecrawl Engine)**
-   - Utilizes Firecrawl's advanced extraction and search capabilities (via API and Model Context Protocol) to discover new products and extract high-fidelity canonical product data (titles, descriptions, bullet points, image galleries, variants, materials, care instructions).
-   - Eliminates fragile anti-bot reverse-engineering and site-specific DOM query maintenance for catalog crawls.
-
-2. **Tier 2: Product Updater (Local Delta Engine)**
-   - Operates on a structured, managed "Storage Room" of already-ingested products.
-   - Performs lightweight, lightning-fast targeted requests (via Crawlee, Playwright, or direct API/HTTP session pools) focusing strictly on **dynamic attributes**: **current price**, **original price**, and **stock/availability status**.
-   - Governed entirely by declarative configuration files defining check intervals, schedules, rate limits, and thresholds.
+🌐 **Live Catalog Viewer**: [https://jahangirnn.github.io/product-updater/](https://jahangirnn.github.io/product-updater/)  
+📦 **GitHub Repository**: [https://github.com/JahangirNN/product-updater](https://github.com/JahangirNN/product-updater)
 
 ---
 
-## 2. Core Tenets & Engineering Rules
+## 1. System Architecture
 
-- **Zero Ad-Hoc Scripting**: No single-file monolithic scripts with mixed responsibilities. Every component has a dedicated module, explicit interface, and type contract.
-- **Documentation & Decision Logs First**: Every architectural pivot, schema alteration, and technology choice is documented in structured Architecture Decision Records (ADRs).
-- **Declarative Configuration**: Polling frequencies, retry backoffs, retailer endpoints, and field selectors are configured externally in YAML/JSON, never hardcoded in execution loops.
-- **Resilience & Idempotency**: All updates are idempotent. If an update run fails or gets interrupted, the storage room retains its last known good state with zero data corruption.
-- **Separation of Concerns**: Discovery/Full Scraping != Delta Monitoring.
+The **Product Updater** decouples heavy catalog discovery from high-speed delta monitoring:
+
+```mermaid
+flowchart TD
+    subgraph Ingestion["Tier 1: Ingestion Engine"]
+        A[Retailer Collections / PDPs] --> B[Firecrawl API / Store Inflow Normalizer]
+        B --> C[Canonical Product JSON: storage/db/{store}/products/{id}.json]
+    end
+
+    subgraph Storage["Managed Storage Room"]
+        C --> D[(Partitioned JSON DB)]
+        D --> E[(Fast Master Index: storage/db/index.json)]
+        D --> F[(Shopify Shift Queue: storage/db/history/delta_events.json)]
+        D --> G[(Execution Audit Logs: storage/db/history/delta_log.json)]
+    end
+
+    subgraph DeltaEngine["Tier 2: Systematic Delta Freshner"]
+        H[config/delta_config.json: 120m interval] --> I[sync_catalog.py Dispatcher]
+        E -.->|Elapsed >= 120m| I
+        I --> J[stores/{store}/delta.py]
+        J --> K{Price or Stock Changed?}
+        K -- Yes --> L[Update JSON, Recalculate INR, Queue delta_events.json]
+        K -- No --> M[Touch last_verified_at]
+        L --> D
+        M --> D
+    end
+
+    subgraph Showcase["Downstream Presentation & Sync"]
+        D --> N[scripts/export_viewer_data.py]
+        N --> O[React 18 + Vite 6 + Tailwind Mobile Viewer on GitHub Pages]
+        F --> P[Shopify Admin API GraphQL Sync Worker]
+    end
+```
 
 ---
 
-## 3. Documentation Index
+## 2. Quickstart & CLI Commands
 
-| Document | Purpose |
-| :--- | :--- |
-| [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) | High-level system design, data flow diagrams, and component interactions |
-| [`docs/FOLDER_STRUCTURE.md`](./docs/FOLDER_STRUCTURE.md) | Proposed repository layout, module boundaries, and file organization |
-| [`docs/CONFIGURATION.md`](./docs/CONFIGURATION.md) | Declarative configuration schema (schedules, intervals, site profiles) |
-| [`docs/CODING_STANDARDS.md`](./docs/CODING_STANDARDS.md) | Engineering practices, typing, error handling, logging, and test strategy |
-| [`docs/adr/`](./docs/adr/) | Architecture Decision Records (ADRs) tracking design choices |
+### 2.1 Run the Systematic Delta Freshner
+```powershell
+# 1. Normal production check (reads config/delta_config.json, 120m interval):
+python sync_catalog.py
+
+# 2. Test mode with short interval (e.g. 2 minutes, first 10 products):
+python sync_catalog.py --interval 2 --limit 10
+
+# 3. Force check all products immediately (bypasses timestamps):
+python sync_catalog.py --force
+
+# 4. Dry run (probes live endpoints without writing mutations to disk):
+python sync_catalog.py --dry-run
+```
+
+### 2.2 Run Automated Test Suite
+```powershell
+# Executes full unit and live integration suite (config, timestamps, synthetic shifts, live JW PEI connectivity):
+python test_delta_engine.py
+```
+
+### 2.3 Publish to GitHub Pages
+```powershell
+# Exports latest database snapshot, builds Vite bundle, commits, and pushes to GitHub Pages:
+python scripts/publish_viewer.py
+```
 
 ---
 
-## 4. Prerequisites & Environment
+## 3. Architecture Decision Records (ADRs)
 
-- **Python Runtime**: Python 3.10+
-- **Tooling**: Crawlee, Playwright, Pydantic, PyYAML
-- **Firecrawl MCP Integration**:
-  - Global config: `~/.gemini/config/mcp_config.json`
-  - Workspace config: `.agents/mcp_config.json`
-  - Endpoint: `https://mcp.firecrawl.dev/v2/mcp`
+All engineering decisions are recorded and immutably numbered in [`docs/adr/`](./docs/adr/):
+
+| ADR | Title | Status |
+| :--- | :--- | :--- |
+| **[0001](./docs/adr/0001-record-architecture-decisions.md)** | Record Architecture Decisions | Accepted |
+| **[0002](./docs/adr/0002-decouple-firecrawl-ingestion-from-local-delta-updates.md)** | Decouple Firecrawl Ingestion from Local Delta Updates | Accepted |
+| **[0003](./docs/adr/0003-declarative-configuration-driven-architecture.md)** | Declarative Configuration-Driven Architecture | Accepted |
+| **[0004](./docs/adr/0004-local-json-database-and-shopify-readiness.md)** | Local JSON Database & Shopify Readiness | Accepted |
+| **[0005](./docs/adr/0005-functional-screaming-architecture-and-store-knowledge-bases.md)** | Functional Screaming Architecture & Store Knowledge Bases | Accepted |
+| **[0006](./docs/adr/0006-currency-conversion-and-shopify-variants-size-guide.md)** | Currency Conversion & Shopify Variants Size Guide | Accepted |
+| **[0007](./docs/adr/0007-mobile-first-catalog-viewer-and-github-pages-deployment.md)** | Mobile-First Catalog Viewer & Automated GitHub Pages Deployment | Accepted |
+| **[0008](./docs/adr/0008-systematic-2-hour-delta-freshner-and-timestamp-scheduling.md)** | Systematic 2-Hour Delta Freshner & Timestamp-Based Scheduling | Accepted |
+
+---
+
+## 4. Documentation Index
+
+- [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md): Full system architecture, two-tier workflows, and downstreams.
+- [`docs/FOLDER_STRUCTURE.md`](./docs/FOLDER_STRUCTURE.md): Screaming functional directory tree and module boundaries.
+- [`docs/JSON_STORAGE_SPEC.md`](./docs/JSON_STORAGE_SPEC.md): Database partitioning, primary key hashing, and JSON schemas.
+- [`docs/SHOPIFY_INTEGRATION_SPEC.md`](./docs/SHOPIFY_INTEGRATION_SPEC.md): GraphQL `productSet` mutation contracts and Size Guide tables.
+- [`docs/CODING_STANDARDS.md`](./docs/CODING_STANDARDS.md): Pure functions, typing standards, and atomic file writes.
+- `stores/jwpei/LEARNINGS.md`: Living retailer knowledge base for JW PEI (query filters, swatch IDs, fast endpoints).

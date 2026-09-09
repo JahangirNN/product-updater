@@ -17,23 +17,26 @@ flowchart TD
     subgraph Storage["Managed Storage Room"]
         D --> E[(Product Master Store)]
         E --> F[(Price & Stock History)]
-        E --> G[(Audit & Delta Logs)]
+        E --> F[(Delta Events Queue: delta_events.json)]
+        E --> G[(Audit & Delta Logs: delta_log.json)]
     end
 
     subgraph Tier2["Tier 2: Product Updater (Local Delta Engine)"]
-        H[Config Loader: config.yaml] --> I[Update Scheduler & Dispatcher]
-        E -.->|Active Products| I
-        I --> J[Targeted Fast Checkers: Crawlee / Playwright / HTTP]
+        H[Config Loader: config/delta_config.json] --> I[Global Dispatcher: sync_catalog.py]
+        E -.->|Eligible Products where elapsed >= interval| I
+        I --> J[Store Delta Modules: stores/{store}/delta.py]
         J --> K{Price or Stock Changed?}
-        K -- Yes --> L[Update Master & Record History Log]
+        K -- Yes --> L[Update Product JSON, Recalc INR, Enqueue delta_events.json]
         K -- No --> M[Touch heartbeat: last_verified_at]
         L --> E
         L --> F
+        M --> E
     end
 
     subgraph Downstream["Downstream Consumers"]
-        E --> N[Shopify Admin API Sync]
-        E --> O[Live Catalog Dashboard / Static Exporter]
+        F --> N[Shopify Admin API Sync Worker]
+        E --> O[Static Exporter: scripts/export_viewer_data.py]
+        O --> P[Mobile-First Catalog Viewer: React+Vite on GitHub Pages]
     end
 ```
 
@@ -64,12 +67,13 @@ flowchart TD
 - **Role**: Frequent, high-speed polling of existing products to detect price fluctuations and stock depletion.
 - **Key Characteristics**:
   - **Lightweight**: Does not download whole pages, heavy media, or re-parse static descriptions.
-  - **Targeted**: Focuses strictly on the price container and stock indicator or JSON hydration blobs.
-  - **Config-Driven**: Frequencies and rate limits are read from `config.yaml`.
+  - **Targeted**: Focuses strictly on storefront AJAX endpoints (e.g. `/products/{handle}.js` < 150ms) or JSON hydration blobs.
+  - **Config-Driven**: Frequencies and rate limits are read from `config/delta_config.json` (default 120m / 2 hours).
+  - **Timestamp-Based Scheduling**: Evaluates `last_verified_at` per product. Products checked < 120 minutes ago are automatically skipped with 0 network calls.
   - **Tooling**:
-    - Fast HTTP Session Pool (for API endpoints or script tag JSON).
-    - Crawlee / Camoufox (for JavaScript-heavy or bot-protected sites).
-    - Playwright (fallback for full dynamic checkout simulation).
+    - Universal Dispatcher (`sync_catalog.py` with dynamic store routing to `stores/{store}/delta.py`).
+    - Concurrent ThreadPoolExecutor with polite pacing (80ms delay, exponential backoff on HTTP 429).
+    - Shopify Delta Queue (`storage/db/history/delta_events.json`).
 
 ---
 
@@ -117,12 +121,31 @@ When Firecrawl ingests a product, it normalizes the raw output into a strict sch
 
 ---
 
-## 4. Delta Update Workflow
+## 4. Systematic Delta Update Workflow
 
-1. **Schedule Trigger**: Cron or timer triggers a delta check according to configured intervals (e.g. every 10 minutes).
-2. **Product Batching**: Products due for verification are partitioned into concurrency batches according to per-site rate limits.
-3. **Execution**: The updater fetches only the price and availability fields.
-4. **Comparison & Audit**:
-   - If price has shifted by > 0: Record an entry in `price_history` and update `products.current_price`.
-   - If availability has flipped: Record an entry in `stock_history` and update `products.availability`.
-   - If unchanged: Update `last_verified_at` timestamp.
+1. **Schedule Trigger**: Operator CLI or scheduled cron triggers `python sync_catalog.py` (reads `config/delta_config.json`, default 120m).
+2. **Product-Level Eligibility Filtering**:
+   - Compares `now - product.last_verified_at`.
+   - If `elapsed < interval_minutes`, product is skipped (0 network calls).
+   - If `elapsed >= interval_minutes` (or `--force`), product is queued for verification.
+3. **Store Dynamic Dispatch**: Products are partitioned by store and dispatched to `stores/{store}/delta.py`.
+4. **Execution & Polite Pacing**: Lightweight storefront AJAX checks (`/products/{handle}.js`) run across worker threads with 80ms polite delays and exponential backoff on 429.
+5. **Comparison & Audit**:
+   - If price has shifted: Updates `source_price` (USD), recalculates `current_price` (INR) via cached forex rate, sets `shopify_sync_pending = True`, updates `last_verified_at`, and appends an event to `storage/db/history/delta_events.json`.
+   - If availability has flipped: Updates `availability` (`in_stock` $\leftrightarrow$ `out_of_stock`), updates variant availability, sets `shopify_sync_pending = True`, updates `last_verified_at`, and appends an event to `delta_events.json`.
+   - If unchanged: Touches `last_verified_at` on disk and saves product.
+6. **Index & Metrics Refresh**: Rebuilds fast `storage/db/index.json` and logs batch metrics to `storage/db/history/delta_log.json`.
+
+---
+
+## 5. Downstream Consumers
+
+### 5.1 Mobile-First Catalog Viewer (React + Vite + Tailwind)
+- **Live Deployment**: Hosted on GitHub Pages at [https://jahangirnn.github.io/product-updater/](https://jahangirnn.github.io/product-updater/).
+- **Static In-Memory Model**: Uses `scripts/export_viewer_data.py` to compile `storage/db/` into `frontend/public/data/catalog.json` (1.3 MB) for sub-5ms instant filtering, multi-tier navigation (`Store -> Group -> Subgroup`), responsive Size Guide tables, and Raw JSON copy inspector.
+- **Automated CI/CD**: Pushes to `main` trigger GitHub Actions (`.github/workflows/deploy-pages.yml`) which automatically builds and redeploys to GitHub Pages in ~25 seconds.
+
+### 5.2 Shopify Admin API Sync Worker (Future Phase)
+- Consumes the append-only queue at `storage/db/history/delta_events.json`.
+- Executes GraphQL `productSet` mutations targeting only products flagged with `shopify_sync_pending: true`.
+- Flushes the queue upon successful Shopify receipt and resets `shopify_sync_pending: false`.
