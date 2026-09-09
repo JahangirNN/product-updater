@@ -117,7 +117,9 @@ def build_and_save_index(base_dir: str = "storage/db") -> Dict[str, Any]:
                     "status": p.get("status", "DRAFT"),
                     "groups": p.get("groups", []),
                     "file_path": os.path.relpath(p_path, base_dir).replace("\\", "/"),
-                    "updated_at": p.get("updated_at")
+                    "updated_at": p.get("updated_at"),
+                    "last_verified_at": p.get("last_verified_at"),
+                    "shopify_sync_pending": p.get("shopify_sync_pending", False)
                 }
             except Exception as err:
                 print(f"[WARN] Failed to read {p_path}: {err}")
@@ -153,3 +155,30 @@ def append_delta_log(delta_entry: Dict[str, Any], base_dir: str = "storage/db") 
     with open(tmp_log, "w", encoding="utf-8") as f:
         json.dump(existing_logs, f, indent=2, ensure_ascii=False)
     os.replace(tmp_log, log_file)
+
+
+def append_delta_event(event_entry: Dict[str, Any], queue_file: str = "storage/db/history/delta_events.json") -> None:
+    """
+    Append an individual price or stock shift event to the Shopify sync queue.
+    Future Shopify Admin API worker will consume and process items from this queue.
+    """
+    queue_dir = os.path.dirname(queue_file)
+    if queue_dir:
+        os.makedirs(queue_dir, exist_ok=True)
+
+    events = []
+    if os.path.exists(queue_file):
+        try:
+            with open(queue_file, "r", encoding="utf-8") as f:
+                events = json.load(f)
+        except Exception:
+            events = []
+
+    if "timestamp" not in event_entry:
+        event_entry["timestamp"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+    events.append(event_entry)
+    tmp_queue = f"{queue_file}.tmp"
+    with open(tmp_queue, "w", encoding="utf-8") as f:
+        json.dump(events, f, indent=2, ensure_ascii=False)
+    os.replace(tmp_queue, queue_file)

@@ -4,7 +4,7 @@ Fast, lightweight polling for price and stock availability using the storefront 
 Pure functions only, zero classes (ADR 0002, ADR 0005).
 """
 import time
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional, Tuple
 import httpx
 
 TIMEOUT_CONFIG = httpx.Timeout(6.0, connect=3.0)
@@ -130,3 +130,58 @@ def extract_handle_from_url(url: str) -> str:
     """Extract product handle from full URL."""
     cleaned = url.split("?")[0].rstrip("/")
     return cleaned.split("/")[-1]
+
+
+def apply_delta_to_product(product: Dict[str, Any], delta_result: Dict[str, Any], forex_rate: float) -> Tuple[Dict[str, Any], bool]:
+    """
+    Pure function to apply delta check results to a canonical product dict.
+    Updates price, INR recalculation, availability, and variant-level states.
+    Sets shopify_sync_pending = True if changes occurred.
+    Always touches last_verified_at.
+    Returns (updated_product, has_changed).
+    """
+    now_iso = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    product["last_verified_at"] = now_iso
+
+    if delta_result.get("status") not in ("success", "not_found"):
+        # Transient error or rate limited, don't mutate product data
+        return product, False
+
+    price_changed = bool(delta_result.get("price_changed", False))
+    stock_changed = bool(delta_result.get("stock_changed", False))
+    has_changed = price_changed or stock_changed
+
+    if not has_changed:
+        return product, False
+
+    # Apply price changes
+    new_source_price = delta_result.get("current_source_price", product.get("source_price", 0.0))
+    product["source_price"] = new_source_price
+    
+    # Recalculate INR price
+    if new_source_price > 0:
+        product["current_price"] = float(round(new_source_price * forex_rate))
+    
+    new_compare_price = delta_result.get("current_compare_price")
+    if new_compare_price is not None:
+        product["compare_at_price"] = float(round(new_compare_price * forex_rate))
+
+    # Apply availability changes
+    product["availability"] = delta_result.get("availability", product.get("availability"))
+    product["is_active"] = delta_result.get("is_active", product.get("availability") == "in_stock")
+
+    # Update variant states if available
+    variants_delta = {v["sku"]: v for v in delta_result.get("variants_delta", []) if v.get("sku")}
+    if variants_delta and product.get("variants"):
+        for var in product["variants"]:
+            sku = var.get("sku")
+            if sku in variants_delta:
+                v_info = variants_delta[sku]
+                var["is_available"] = v_info.get("available", False)
+                if v_info.get("price_usd", 0) > 0:
+                    var["price_current"] = float(round(v_info["price_usd"] * forex_rate))
+
+    product["shopify_sync_pending"] = True
+    product["updated_at"] = now_iso
+
+    return product, True

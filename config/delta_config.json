@@ -1,0 +1,19 @@
+{
+  "check_interval_minutes": 120,
+  "default_max_workers": 3,
+  "default_delay_seconds": 0.08,
+  "default_timeout_seconds": 6.0,
+  "store_configs": {
+    "jwpei": {
+      "check_interval_minutes": 120,
+      "max_workers": 3,
+      "delay_seconds": 0.08,
+      "timeout_seconds": 6.0,
+      "endpoint_pattern": "https://www.jwpei.com/products/{handle}.js"
+    }
+  },
+  "shopify_sync": {
+    "auto_sync_on_delta": false,
+    "queue_file": "storage/db/history/delta_events.json"
+  }
+}
