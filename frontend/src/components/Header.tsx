@@ -26,13 +26,13 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
             <div>
               <h1 className="text-base sm:text-lg font-bold tracking-tight text-white flex items-center gap-2 font-serif">
-                JW PEI Catalog
+                Product Catalog
                 <span className="text-[10px] font-sans font-semibold tracking-wider uppercase px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">
                   Data Viewer
                 </span>
               </h1>
               <p className="text-[11px] text-zinc-400 hidden sm:block">
-                Automated dropship product ingestion & live data audit
+                Multi-brand dropship product ingestion &amp; live catalog audit
               </p>
             </div>
           </div>

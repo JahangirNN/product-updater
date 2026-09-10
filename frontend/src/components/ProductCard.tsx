@@ -14,15 +14,24 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
     : 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80';
 
   const isSoldOut = product.availability !== 'in_stock';
-  const colorName = product.variants[0]?.title && product.variants[0]?.title !== 'Default Title'
-    ? product.variants[0].title
-    : product.title.includes(' - ')
-      ? product.title.split(' - ').pop()
-      : null;
+  const isShoe = product.group_display?.toLowerCase() === 'shoes' || product.source_store?.toLowerCase() === 'nordstrom';
+
+  // For shoes, extract clean color name from variant option or fallback
+  const shoeColor = product.product_options?.find(o => o.name === 'Color')?.values[0]?.name;
+  const colorName = shoeColor || (
+    product.variants[0]?.title && product.variants[0]?.title !== 'Default Title'
+      ? (product.variants[0].title.includes(' - ') ? product.variants[0].title.split(' - ').pop() : product.variants[0].title)
+      : product.title.includes(' - ')
+        ? product.title.split(' - ').pop()
+        : null
+  );
 
   const rawDims = product.specifications?.['Bag Dimensions'] || product.specifications?.['Dimension'] || '';
-  // Clean short dimensions for card chip
-  const shortDims = rawDims.split('(')[0].trim();
+  const shortDims = rawDims ? rawDims.split('(')[0].trim() : '';
+
+  // Shoe specific indicators
+  const gender = product.specifications?.['Gender'] || '';
+  const variantCount = product.variants?.length || 0;
 
   return (
     <div
@@ -112,15 +121,32 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
 
         {/* Specification Chips */}
         <div className="flex flex-wrap items-center gap-1 text-[10px]">
-          {product.material && (
-            <span className="px-2 py-0.5 rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/40 truncate max-w-[140px]">
-              {product.material}
-            </span>
-          )}
-          {shortDims && (
-            <span className="px-2 py-0.5 rounded-md bg-zinc-800/80 text-zinc-400 border border-zinc-700/40 font-mono">
-              📏 {shortDims.slice(0, 18)}
-            </span>
+          {isShoe ? (
+            <>
+              {gender && (
+                <span className="px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-300 border border-amber-500/20 font-medium">
+                  {gender}
+                </span>
+              )}
+              {variantCount > 0 && (
+                <span className="px-2 py-0.5 rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/40 font-mono">
+                  👟 {variantCount} Sizes
+                </span>
+              )}
+            </>
+          ) : (
+            <>
+              {product.material && (
+                <span className="px-2 py-0.5 rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/40 truncate max-w-[140px]">
+                  {product.material}
+                </span>
+              )}
+              {shortDims && (
+                <span className="px-2 py-0.5 rounded-md bg-zinc-800/80 text-zinc-400 border border-zinc-700/40 font-mono">
+                  📏 {shortDims.slice(0, 18)}
+                </span>
+              )}
+            </>
           )}
         </div>
 

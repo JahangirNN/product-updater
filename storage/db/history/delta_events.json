@@ -14,5 +14,21 @@
     "old_availability": null,
     "new_availability": "out_of_stock",
     "shopify_sync_pending": true
+  },
+  {
+    "event_id": "evt_1789037692207_24a705f3",
+    "timestamp": "2026-09-10T10:54:52Z",
+    "store": "jwpei",
+    "product_id": "24a705f364926ffa",
+    "handle": "elise-top-handle-bag-deep-burgundy",
+    "title": "Elise Top Handle Bag - Deep Burgundy",
+    "price_changed": false,
+    "old_source_price": 99.0,
+    "new_source_price": 99.0,
+    "new_current_price_inr": 9389.0,
+    "stock_changed": true,
+    "old_availability": "out_of_stock",
+    "new_availability": "in_stock",
+    "shopify_sync_pending": true
   }
 ]

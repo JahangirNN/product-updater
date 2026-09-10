@@ -12,6 +12,14 @@
       "delay_seconds": 0.5,
       "timeout_seconds": 8.0,
       "endpoint_pattern": "https://www.jwpei.com/products/{handle}.js"
+    },
+    "nordstrom": {
+      "check_interval_minutes": 60,
+      "max_workers": 2,
+      "requests_per_second": 2.0,
+      "delay_seconds": 0.5,
+      "timeout_seconds": 15.0,
+      "endpoint_pattern": "https://www.nordstrom.com/s/{handle}/{id}"
     }
   },
   "shopify_sync": {

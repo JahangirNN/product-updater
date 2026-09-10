@@ -17,10 +17,33 @@ if sys.stdout.encoding != 'utf-8':
 def classify_subgroup(product: Dict[str, Any]) -> str:
     """
     Classify product into Level 3 Subgroup based on title and specifications.
+    Supports both JW PEI Handbags and Nordstrom On Footwear.
     """
     title_lower = product.get("title", "").lower()
     handle_lower = product.get("handle", "").lower()
     specs = product.get("specifications", {})
+    source_store = product.get("source_store", "").lower()
+    groups = [g.lower() for g in product.get("groups", [])]
+
+    # Footwear taxonomy for Nordstrom / On Running
+    if source_store == "nordstrom" or "shoes" in groups or "footwear" in product.get("tags", []):
+        if "waterproof" in title_lower or "waterproof" in handle_lower:
+            return "Waterproof Footwear"
+        elif "trail" in title_lower or "hiking" in title_lower or "hike" in handle_lower:
+            return "Trail & Outdoor"
+        elif "roger" in title_lower or "tennis" in title_lower or "court" in title_lower:
+            return "Tennis & Court"
+        elif "training" in title_lower or "pulse" in title_lower or "cloud x" in title_lower:
+            return "Training & Gym"
+        elif "mule" in title_lower or "slide" in title_lower:
+            return "Mules & Slides"
+        elif "surfer" in title_lower or "runner" in title_lower or "monster" in title_lower or "running" in title_lower or "boom" in title_lower:
+            return "Running Shoes"
+        elif "coast" in title_lower or "nova" in title_lower or "tilt" in title_lower or "sneaker" in title_lower:
+            return "Lifestyle & Casual"
+        return "Performance Footwear"
+
+    # Handbags taxonomy for JW PEI
     style = specs.get("Carrying Style", "").lower() or specs.get("Carrying Method", "").lower()
 
     if "wallet" in title_lower or "wallet" in handle_lower or "card" in title_lower:
@@ -71,7 +94,14 @@ def export_catalog(
                     prod = json.load(f)
 
                 # Ensure Level 1 Store, Level 2 Group, Level 3 Subgroup mapping
-                store_display = "JW PEI" if prod.get("source_store") == "jwpei" else prod.get("vendor", "Other")
+                s_store = prod.get("source_store", "").lower()
+                if s_store == "jwpei":
+                    store_display = "JW PEI"
+                elif s_store == "nordstrom":
+                    store_display = "Nordstrom"
+                else:
+                    store_display = prod.get("vendor", "Other")
+
                 groups = prod.get("groups", ["Handbags"])
                 group_display = groups[0].capitalize() if groups else "Handbags"
                 subgroup_display = classify_subgroup(prod)

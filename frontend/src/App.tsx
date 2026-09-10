@@ -39,7 +39,19 @@ export const App: React.FC = () => {
   }, []);
 
   const handleFilterChange = (newFilters: Partial<FilterState>) => {
-    setFilters((prev) => ({ ...prev, ...newFilters }));
+    setFilters((prev) => {
+      const next = { ...prev, ...newFilters };
+      // When switching store, auto-select first available group for that store
+      if (newFilters.selectedStore && newFilters.selectedStore !== prev.selectedStore) {
+        const storeProducts = products.filter((p) => p.store_display === newFilters.selectedStore);
+        const storeGroups = Array.from(new Set(storeProducts.map((p) => p.group_display)));
+        if (storeGroups.length > 0 && !storeGroups.includes(next.selectedGroup)) {
+          next.selectedGroup = storeGroups[0];
+        }
+        next.selectedSubgroup = 'All';
+      }
+      return next;
+    });
   };
 
   // Compute subgroup counts based on current store & group
@@ -67,12 +79,15 @@ export const App: React.FC = () => {
   }, [meta]);
 
   const groups = useMemo(() => {
-    return meta?.groups || ['Handbags'];
-  }, [meta]);
+    if (!filters.selectedStore) return meta?.groups || ['Handbags'];
+    const storeProducts = products.filter((p) => p.store_display === filters.selectedStore);
+    const storeGroups = Array.from(new Set(storeProducts.map((p) => p.group_display)));
+    return storeGroups.length > 0 ? storeGroups : meta?.groups || ['Handbags'];
+  }, [products, filters.selectedStore, meta]);
 
   const subgroups = useMemo(() => {
-    return meta?.subgroups || [];
-  }, [meta]);
+    return (meta?.subgroups || []).filter((sub) => (subgroupCounts[sub] || 0) > 0);
+  }, [meta, subgroupCounts]);
 
   return (
     <div className="min-h-screen flex flex-col bg-luxury-bg text-zinc-100">
@@ -100,7 +115,7 @@ export const App: React.FC = () => {
         <div className="mb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
             <h2 className="text-lg sm:text-xl font-bold tracking-tight text-white flex items-center gap-2">
-              <span>{filters.selectedSubgroup === 'All' ? 'All Handbags' : filters.selectedSubgroup}</span>
+              <span>{filters.selectedSubgroup === 'All' ? `All ${filters.selectedGroup}` : filters.selectedSubgroup}</span>
               <span className="text-xs font-mono font-normal text-zinc-500">
                 ({filteredProducts.length} items)
               </span>

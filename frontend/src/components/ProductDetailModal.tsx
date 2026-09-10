@@ -19,6 +19,8 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
   const isSoldOut = product.availability !== 'in_stock';
   const specs = product.specifications || {};
 
+  const isShoe = product.group_display?.toLowerCase() === 'shoes' || product.source_store?.toLowerCase() === 'nordstrom';
+
   const dimensions = specs['Bag Dimensions'] || specs['Dimension'] || specs['Dimensions'] || 'N/A';
   const handleDrop = specs['Handle Drop'] || 'N/A';
   const strapDrop = specs['Shoulder Strap Drop'] || 'N/A';
@@ -26,6 +28,12 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
   const lining = specs['Lining Material'] || specs['Lining'] || 'N/A';
   const capacity = specs['Capacity'] || 'N/A';
   const carryingStyle = specs['Carrying Style'] || specs['Carrying Method'] || product.subgroup_display;
+
+  // Shoe specific specs
+  const gender = specs['Gender'] || 'Unisex';
+  const midsoleDrop = specs['Midsole Drop'] || '8mm';
+  const cushioning = specs['Cushioning'] || 'CloudTec cushioning';
+  const shoeMaterial = product.material || specs['Material'] || 'Textile and synthetic upper';
 
   return (
     <div
@@ -154,26 +162,59 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
           <div className="space-y-3">
             <div className="flex items-center gap-2 text-sm font-bold text-zinc-200">
               <Ruler className="w-4 h-4 text-amber-400" />
-              <span>Size & Measurement Guide</span>
+              <span>{isShoe ? `Size & Conversion Matrix (${gender})` : 'Size & Measurement Guide'}</span>
             </div>
 
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 overflow-hidden">
-              <table className="w-full text-xs text-left">
-                <tbody>
-                  <tr className="border-b border-zinc-800/60">
-                    <td className="px-4 py-2.5 font-semibold text-zinc-400 w-2/5">Bag Dimensions</td>
-                    <td className="px-4 py-2.5 font-mono text-zinc-100">{dimensions}</td>
-                  </tr>
-                  <tr className="border-b border-zinc-800/60">
-                    <td className="px-4 py-2.5 font-semibold text-zinc-400">Handle Drop</td>
-                    <td className="px-4 py-2.5 font-mono text-zinc-100">{handleDrop}</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-2.5 font-semibold text-zinc-400">Shoulder Strap Drop</td>
-                    <td className="px-4 py-2.5 font-mono text-zinc-100">{strapDrop}</td>
-                  </tr>
-                </tbody>
-              </table>
+              {isShoe ? (
+                <div className="max-h-56 overflow-y-auto">
+                  <table className="w-full text-xs text-left">
+                    <thead className="bg-zinc-800/80 text-zinc-400 font-semibold sticky top-0">
+                      <tr>
+                        <th className="px-3.5 py-2">US Size</th>
+                        <th className="px-3.5 py-2">UK Size</th>
+                        <th className="px-3.5 py-2">Price (INR)</th>
+                        <th className="px-3.5 py-2 text-right">Availability</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-zinc-800/60 font-mono">
+                      {product.variants.map((v, i) => {
+                        const usOpt = v.option_values?.find(o => o.option_name.includes('US'))?.name || v.title.split('/')[0]?.trim();
+                        const ukOpt = v.option_values?.find(o => o.option_name.includes('UK'))?.name || v.title.split('/')[1]?.split('-')[0]?.trim();
+                        return (
+                          <tr key={i} className="hover:bg-zinc-800/30">
+                            <td className="px-3.5 py-2 font-bold text-white">{usOpt || `Var ${i+1}`}</td>
+                            <td className="px-3.5 py-2 text-amber-300">{ukOpt || '-'}</td>
+                            <td className="px-3.5 py-2 text-zinc-300">₹{parseFloat(v.price).toLocaleString('en-IN')}</td>
+                            <td className="px-3.5 py-2 text-right">
+                              <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${v.in_stock ? 'bg-emerald-500/20 text-emerald-300' : 'bg-rose-500/20 text-rose-300'}`}>
+                                {v.in_stock ? 'In Stock' : 'Sold Out'}
+                              </span>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              ) : (
+                <table className="w-full text-xs text-left">
+                  <tbody>
+                    <tr className="border-b border-zinc-800/60">
+                      <td className="px-4 py-2.5 font-semibold text-zinc-400 w-2/5">Bag Dimensions</td>
+                      <td className="px-4 py-2.5 font-mono text-zinc-100">{dimensions}</td>
+                    </tr>
+                    <tr className="border-b border-zinc-800/60">
+                      <td className="px-4 py-2.5 font-semibold text-zinc-400">Handle Drop</td>
+                      <td className="px-4 py-2.5 font-mono text-zinc-100">{handleDrop}</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-2.5 font-semibold text-zinc-400">Shoulder Strap Drop</td>
+                      <td className="px-4 py-2.5 font-mono text-zinc-100">{strapDrop}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              )}
             </div>
           </div>
 
@@ -184,28 +225,53 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
               <span>Product Specifications</span>
             </div>
 
-            <div className="grid grid-cols-2 gap-2 text-xs">
-              <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
-                <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Material</span>
-                <span className="text-zinc-200 font-medium">{product.material || 'Vegan Leather'}</span>
+            {isShoe ? (
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Gender</span>
+                  <span className="text-zinc-200 font-medium">{gender}</span>
+                </div>
+                <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Subgroup</span>
+                  <span className="text-zinc-200 font-medium">{product.subgroup_display}</span>
+                </div>
+                <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Midsole Drop</span>
+                  <span className="text-zinc-200 font-medium">{midsoleDrop}</span>
+                </div>
+                <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Cushioning</span>
+                  <span className="text-zinc-200 font-medium">{cushioning}</span>
+                </div>
+                <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 col-span-2">
+                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Material</span>
+                  <span className="text-zinc-200 font-medium">{shoeMaterial}</span>
+                </div>
               </div>
-              <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
-                <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Lining</span>
-                <span className="text-zinc-200 font-medium">{lining}</span>
+            ) : (
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Material</span>
+                  <span className="text-zinc-200 font-medium">{product.material || 'Vegan Leather'}</span>
+                </div>
+                <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Lining</span>
+                  <span className="text-zinc-200 font-medium">{lining}</span>
+                </div>
+                <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Hardware</span>
+                  <span className="text-zinc-200 font-medium">{hardware}</span>
+                </div>
+                <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Carrying Style</span>
+                  <span className="text-zinc-200 font-medium">{carryingStyle}</span>
+                </div>
+                <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 col-span-2">
+                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Capacity</span>
+                  <span className="text-zinc-200 font-medium">{capacity}</span>
+                </div>
               </div>
-              <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
-                <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Hardware</span>
-                <span className="text-zinc-200 font-medium">{hardware}</span>
-              </div>
-              <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
-                <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Carrying Style</span>
-                <span className="text-zinc-200 font-medium">{carryingStyle}</span>
-              </div>
-              <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 col-span-2">
-                <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Capacity</span>
-                <span className="text-zinc-200 font-medium">{capacity}</span>
-              </div>
-            </div>
+            )}
           </div>
 
           {/* Supplier Link Action */}

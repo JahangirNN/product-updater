@@ -1,28 +1,36 @@
 {
-  "total_products": 422,
-  "in_stock": 416,
+  "total_products": 479,
+  "in_stock": 473,
   "out_of_stock": 6,
   "stores": [
-    "JW PEI"
+    "JW PEI",
+    "Nordstrom"
   ],
   "groups": [
-    "Handbags"
+    "Handbags",
+    "Shoes"
   ],
   "subgroups": [
     "Classic Handbags",
     "Crossbody Bags",
+    "Lifestyle & Casual",
     "Mini Bags",
+    "Running Shoes",
     "Shoulder Bags",
+    "Tennis & Court",
     "Top Handle Bags",
     "Tote Bags",
+    "Trail & Outdoor",
+    "Training & Gym",
     "Vanity & Clutches",
     "Wallets & Small Goods",
+    "Waterproof Footwear",
     "Woven & Textured"
   ],
   "price_range_inr": {
     "min": 5596.0,
     "max": 31203.0
   },
-  "last_updated": "2026-09-10T03:55:38Z",
+  "last_updated": "2026-09-10T11:31:09Z",
   "generated_by": "product-updater-export-pipeline"
 }
