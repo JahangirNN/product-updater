@@ -16,8 +16,8 @@ export const App: React.FC = () => {
   const [selectedProduct, setSelectedProduct] = useState<CatalogProduct | null>(null);
 
   const [filters, setFilters] = useState<FilterState>({
-    selectedStore: 'JW PEI',
-    selectedGroup: 'Handbags',
+    selectedStore: 'All Stores',
+    selectedGroup: 'All Groups',
     selectedSubgroup: 'All',
     searchQuery: '',
     stockFilter: 'all',
@@ -41,12 +41,16 @@ export const App: React.FC = () => {
   const handleFilterChange = (newFilters: Partial<FilterState>) => {
     setFilters((prev) => {
       const next = { ...prev, ...newFilters };
-      // When switching store, auto-select first available group for that store
+      // When switching store, ensure selectedGroup is valid for that store
       if (newFilters.selectedStore && newFilters.selectedStore !== prev.selectedStore) {
-        const storeProducts = products.filter((p) => p.store_display === newFilters.selectedStore);
-        const storeGroups = Array.from(new Set(storeProducts.map((p) => p.group_display)));
-        if (storeGroups.length > 0 && !storeGroups.includes(next.selectedGroup)) {
-          next.selectedGroup = storeGroups[0];
+        if (newFilters.selectedStore === 'All Stores') {
+          next.selectedGroup = 'All Groups';
+        } else {
+          const storeProducts = products.filter((p) => p.store_display === newFilters.selectedStore);
+          const storeGroups = Array.from(new Set(storeProducts.map((p) => p.group_display)));
+          if (storeGroups.length > 0 && (!storeGroups.includes(next.selectedGroup) || next.selectedGroup === 'All Groups')) {
+            next.selectedGroup = storeGroups[0];
+          }
         }
         next.selectedSubgroup = 'All';
       }
@@ -59,8 +63,8 @@ export const App: React.FC = () => {
     const counts: Record<string, number> = {};
     const relevant = products.filter(
       (p) =>
-        (!filters.selectedStore || p.store_display === filters.selectedStore) &&
-        (!filters.selectedGroup || p.group_display === filters.selectedGroup)
+        (!filters.selectedStore || filters.selectedStore === 'All Stores' || p.store_display === filters.selectedStore) &&
+        (!filters.selectedGroup || filters.selectedGroup === 'All Groups' || p.group_display === filters.selectedGroup)
     );
     for (const p of relevant) {
       const sg = p.subgroup_display || 'Other';
@@ -75,14 +79,16 @@ export const App: React.FC = () => {
   }, [products, filters]);
 
   const stores = useMemo(() => {
-    return meta?.stores || ['JW PEI'];
+    return meta?.stores || [];
   }, [meta]);
 
   const groups = useMemo(() => {
-    if (!filters.selectedStore) return meta?.groups || ['Handbags'];
+    if (!filters.selectedStore || filters.selectedStore === 'All Stores') {
+      return ['All Groups', ...(meta?.groups || [])];
+    }
     const storeProducts = products.filter((p) => p.store_display === filters.selectedStore);
     const storeGroups = Array.from(new Set(storeProducts.map((p) => p.group_display)));
-    return storeGroups.length > 0 ? storeGroups : meta?.groups || ['Handbags'];
+    return storeGroups.length > 0 ? storeGroups : meta?.groups || [];
   }, [products, filters.selectedStore, meta]);
 
   const subgroups = useMemo(() => {
@@ -121,7 +127,9 @@ export const App: React.FC = () => {
               </span>
             </h2>
             <p className="text-xs text-zinc-400">
-              Showing verified catalog products for <strong>{filters.selectedStore}</strong> &bull; <strong>{filters.selectedGroup}</strong>
+              Showing verified catalog products for{' '}
+              <strong>{filters.selectedStore}</strong> &bull;{' '}
+              <strong>{filters.selectedGroup}</strong>
             </p>
           </div>
         </div>
@@ -165,8 +173,8 @@ export const App: React.FC = () => {
             <button
               onClick={() =>
                 setFilters({
-                  selectedStore: 'JW PEI',
-                  selectedGroup: 'Handbags',
+                  selectedStore: 'All Stores',
+                  selectedGroup: 'All Groups',
                   selectedSubgroup: 'All',
                   searchQuery: '',
                   stockFilter: 'all',

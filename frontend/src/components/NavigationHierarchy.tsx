@@ -29,7 +29,7 @@ export const NavigationHierarchy: React.FC<NavigationHierarchyProps> = ({
               <Layers className="w-3.5 h-3.5 text-amber-500" />
               Store:
             </span>
-            {stores.map((s) => (
+            {['All Stores', ...stores].map((s) => (
               <button
                 key={s}
                 onClick={() => onFilterChange({ selectedStore: s })}
