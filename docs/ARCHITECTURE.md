@@ -68,10 +68,12 @@ flowchart TD
 - **Key Characteristics**:
   - **Lightweight**: Does not download whole pages, heavy media, or re-parse static descriptions.
   - **Targeted**: Focuses strictly on storefront AJAX endpoints (e.g. `/products/{handle}.js` < 150ms) or JSON hydration blobs.
-  - **Config-Driven**: Frequencies and rate limits are read from `config/delta_config.json` (default 120m / 2 hours).
-  - **Timestamp-Based Scheduling**: Evaluates `last_verified_at` per product. Products checked < 120 minutes ago are automatically skipped with 0 network calls.
+  - **Config-Driven**: Frequencies and rate limits are read from `config/delta_config.json` (default 60m / 1 hour).
+  - **Timestamp-Based Scheduling**: Evaluates `last_verified_at` per product. Products checked < 60 minutes ago are automatically skipped with 0 network calls.
+  - **Centralized Structured Logging**: Uses `storage/logger.py` (Loguru) with dual sinks (`logs/freshner.log` for operational metrics, `logs/errors.log` for isolated diagnostics). See [`docs/LOGGING_SPEC.md`](./LOGGING_SPEC.md).
   - **Tooling**:
     - Universal Dispatcher (`sync_catalog.py` with dynamic store routing to `stores/{store}/delta.py`).
+    - Background Scheduler Daemon (`scripts/run_freshner_daemon.py` with responsive heartbeat sleeping and signal handling).
     - Concurrent ThreadPoolExecutor with polite pacing (80ms delay, exponential backoff on HTTP 429).
     - Shopify Delta Queue (`storage/db/history/delta_events.json`).
 

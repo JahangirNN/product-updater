@@ -27,6 +27,14 @@ from storage.db import (
     append_delta_event
 )
 from storage.forex import get_usd_to_inr_rate
+from storage.logger import (
+    init_logger,
+    log_info,
+    log_success,
+    log_warning,
+    log_error,
+    log_delta
+)
 
 DEFAULT_CONFIG_PATH = "config/delta_config.json"
 DEFAULT_HEADERS = {
@@ -37,15 +45,8 @@ DEFAULT_HEADERS = {
 
 def load_delta_config(config_path: str = DEFAULT_CONFIG_PATH) -> Dict[str, Any]:
     """Load centralized delta configuration or provide resilient defaults."""
-    if os.path.exists(config_path):
-        try:
-            with open(config_path, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception as err:
-            print(f"[WARN] Failed to read {config_path}: {err}. Using defaults.")
-
-    return {
-        "check_interval_minutes": 120,
+    cfg = {
+        "check_interval_minutes": 60,
         "default_max_workers": 3,
         "default_delay_seconds": 0.08,
         "default_timeout_seconds": 6.0,
@@ -53,8 +54,38 @@ def load_delta_config(config_path: str = DEFAULT_CONFIG_PATH) -> Dict[str, Any]:
         "shopify_sync": {
             "auto_sync_on_delta": False,
             "queue_file": "storage/db/history/delta_events.json"
+        },
+        "logging": {
+            "log_dir": "logs",
+            "general_log": "freshner.log",
+            "error_log": "errors.log",
+            "rotation_general": "20 MB",
+            "rotation_error": "10 MB",
+            "retention_general": "14 days",
+            "retention_error": "30 days",
+            "console_level": "INFO"
         }
     }
+    if os.path.exists(config_path):
+        try:
+            with open(config_path, "r", encoding="utf-8") as f:
+                loaded = json.load(f)
+                cfg.update(loaded)
+        except Exception as err:
+            log_warning(f"Failed to read {config_path}: {err}. Using defaults.")
+
+    log_cfg = cfg.get("logging", {})
+    init_logger(
+        log_dir=log_cfg.get("log_dir", "logs"),
+        general_log_name=log_cfg.get("general_log", "freshner.log"),
+        error_log_name=log_cfg.get("error_log", "errors.log"),
+        rotation_general=log_cfg.get("rotation_general", "20 MB"),
+        rotation_error=log_cfg.get("rotation_error", "10 MB"),
+        retention_general=log_cfg.get("retention_general", "14 days"),
+        retention_error=log_cfg.get("retention_error", "30 days"),
+        console_level=log_cfg.get("console_level", "INFO")
+    )
+    return cfg
 
 
 def parse_iso_timestamp(ts_str: Optional[str]) -> Optional[float]:
@@ -92,10 +123,10 @@ def resolve_store_delta_module(store_name: str) -> Optional[Any]:
         mod = importlib.import_module(module_path)
         if hasattr(mod, "check_price_and_stock") and hasattr(mod, "apply_delta_to_product"):
             return mod
-        print(f"[WARN] Module {module_path} is missing required delta functions.")
+        log_warning(f"Module {module_path} is missing required delta functions.")
         return None
     except ModuleNotFoundError:
-        print(f"[WARN] No delta module found for store '{store_name}' at {module_path}.")
+        log_warning(f"No delta module found for store '{store_name}' at {module_path}.")
         return None
 
 
@@ -171,30 +202,30 @@ def run_catalog_sync(
     """
     Run systematic catalog delta sync across all products and stores.
     """
-    print("=" * 72)
-    print("GLOBAL DROPSHIP CATALOG SYNC & DELTA FRESHNER")
-    print("=" * 72)
+    log_info("=" * 72)
+    log_info("GLOBAL DROPSHIP CATALOG SYNC & DELTA FRESHNER")
+    log_info("=" * 72)
 
     config = load_delta_config(config_path)
-    base_interval = interval_override if interval_override is not None else config.get("check_interval_minutes", 120)
+    base_interval = interval_override if interval_override is not None else config.get("check_interval_minutes", 60)
 
-    print(f"Active Check Interval: {base_interval:.1f} minutes {'[OVERRIDE]' if interval_override else ''}")
-    print(f"Force Mode:            {force}")
-    print(f"Dry Run:               {dry_run}")
+    log_info(f"Active Check Interval: {base_interval:.1f} minutes {'[OVERRIDE]' if interval_override else ''}")
+    log_info(f"Force Mode:            {force}")
+    log_info(f"Dry Run:               {dry_run}")
     if store_filter:
-        print(f"Target Store:          {store_filter}")
+        log_info(f"Target Store:          {store_filter}")
 
     # 1. Load catalog index
     index_file = "storage/db/index.json"
     if not os.path.exists(index_file):
-        print("Rebuilding storage index...")
+        log_info("Rebuilding storage index...")
         catalog_index = build_and_save_index()
     else:
         with open(index_file, "r", encoding="utf-8") as f:
             catalog_index = json.load(f)
 
     all_products = list(catalog_index.values())
-    print(f"Total Products in DB:  {len(all_products)}")
+    log_info(f"Total Products in DB:  {len(all_products)}")
 
     # 2. Filter by store
     if store_filter:
@@ -214,21 +245,21 @@ def run_catalog_sync(
         else:
             skipped_count += 1
 
-    print(f"Products Due for Sync: {len(due_products)}")
-    print(f"Products Skipped:      {skipped_count} (checked within last {base_interval:.1f}m)")
+    log_info(f"Products Due for Sync: {len(due_products)}")
+    log_info(f"Products Skipped:      {skipped_count} (checked within last {base_interval:.1f}m)")
 
     if limit and limit > 0:
         due_products = due_products[:limit]
-        print(f"Limit Applied:         Processing first {len(due_products)} products")
+        log_info(f"Limit Applied:         Processing first {len(due_products)} products")
 
     if not due_products:
-        print("\nAll products are fresh. No delta polling needed.")
-        print("=" * 72)
+        log_success("All products are fresh. No delta polling needed.")
+        log_info("=" * 72)
         return {"scanned": 0, "skipped": skipped_count, "price_changes": 0, "stock_changes": 0}
 
     # 4. Resolve store modules & fetch forex
     forex_rate = get_usd_to_inr_rate()
-    print(f"Forex Rate Cached:     1 USD = ₹{forex_rate:.2f}")
+    log_info(f"Forex Rate Cached:     1 USD = ₹{forex_rate:.2f}")
 
     start_time = time.time()
     latencies = []
@@ -250,7 +281,7 @@ def run_catalog_sync(
     for store_name, store_items in by_store.items():
         store_mod = resolve_store_delta_module(store_name)
         if not store_mod:
-            print(f"[SKIP] Skipping {len(store_items)} items for unsupported store '{store_name}'.")
+            log_warning(f"[SKIP] Skipping {len(store_items)} items for unsupported store '{store_name}'.")
             continue
 
         store_conf = config.get("store_configs", {}).get(store_name, {})
@@ -258,7 +289,7 @@ def run_catalog_sync(
         delay_sec = store_conf.get("delay_seconds", config.get("default_delay_seconds", 0.08))
         timeout_sec = store_conf.get("timeout_seconds", config.get("default_timeout_seconds", 6.0))
 
-        print(f"\n--- Checking {len(store_items)} products for '{store_name}' (workers={max_workers}, delay={delay_sec}s) ---")
+        log_info(f"Checking {len(store_items)} products for '{store_name}' (workers={max_workers}, delay={delay_sec}s)")
 
         with httpx.Client(headers=DEFAULT_HEADERS, timeout=httpx.Timeout(timeout_sec, connect=3.0)) as client:
             with ThreadPoolExecutor(max_workers=max_workers) as executor:
@@ -280,13 +311,14 @@ def run_catalog_sync(
                     res = future.result()
                     if not res or not isinstance(res, dict):
                         errors += 1
+                        log_error(f"Received invalid result for product {future_to_item[future].get('id')}")
                         continue
 
                     latencies.append(res.get("elapsed_ms", 0))
 
                     if res.get("status") == "error":
                         errors += 1
-                        print(f"  [ERROR] {res.get('handle', res.get('id'))}: {res.get('error')}")
+                        log_error(f"Sync error for {res.get('handle', res.get('id'))}: {res.get('error')}")
                     elif res.get("status") in ("success", "not_found"):
                         avail = res.get("availability")
                         if avail == "in_stock":
@@ -296,14 +328,14 @@ def run_catalog_sync(
 
                         if res.get("price_changed"):
                             price_shifts += 1
-                            print(f"  [PRICE SHIFT] {res.get('handle')}: ${res.get('old_source_price')} -> ${res.get('current_source_price')} USD")
+                            log_delta("PRICE", res.get('handle', 'unknown'), f"${res.get('old_source_price')} -> ${res.get('current_source_price')} USD")
 
                         if res.get("stock_changed"):
                             stock_shifts += 1
-                            print(f"  [STOCK SHIFT] {res.get('handle')}: {res.get('old_availability')} -> {avail}")
+                            log_delta("STOCK", res.get('handle', 'unknown'), f"{res.get('old_availability')} -> {avail}")
 
                     if completed % 25 == 0 or completed == total_due:
-                        print(f"[{completed:3d}/{total_due}] Progress: {res.get('handle', '')[:32]} | {res.get('availability', 'unknown')} | {res.get('elapsed_ms', 0)}ms")
+                        log_info(f"[{completed:3d}/{total_due}] Progress: {res.get('handle', '')[:32]} | {res.get('availability', 'unknown')} | {res.get('elapsed_ms', 0)}ms")
 
     total_time = time.time() - start_time
     avg_latency = sum(latencies) / len(latencies) if latencies else 0.0
@@ -328,23 +360,26 @@ def run_catalog_sync(
         }
         append_delta_log(summary_log)
 
-    print("\n" + "=" * 72)
-    print("CATALOG SYNC COMPLETE")
-    print("=" * 72)
-    print(f"Products Checked:          {completed}")
-    print(f"Products Skipped:          {skipped_count}")
-    print(f"Currently In Stock:        {in_stock_count}")
-    print(f"Currently Out of Stock:    {out_stock_count}")
-    print(f"Price Shifts Detected:     {price_shifts}")
-    print(f"Stock Shifts Detected:     {stock_shifts}")
-    print(f"Failed / Request Errors:   {errors}")
-    print(f"Average Request Latency:   {avg_latency:.2f} ms")
-    print(f"Total Sweep Duration:      {total_time:.2f} seconds")
+    log_success("=" * 72)
+    log_success("CATALOG SYNC COMPLETE")
+    log_success("=" * 72)
+    log_info(f"Products Checked:          {completed}")
+    log_info(f"Products Skipped:          {skipped_count}")
+    log_info(f"Currently In Stock:        {in_stock_count}")
+    log_info(f"Currently Out of Stock:    {out_stock_count}")
+    log_info(f"Price Shifts Detected:     {price_shifts}")
+    log_info(f"Stock Shifts Detected:     {stock_shifts}")
+    if errors > 0:
+        log_error(f"Failed / Request Errors:   {errors} (check logs/errors.log for diagnostics)")
+    else:
+        log_info(f"Failed / Request Errors:   {errors}")
+    log_info(f"Average Request Latency:   {avg_latency:.2f} ms")
+    log_info(f"Total Sweep Duration:      {total_time:.2f} seconds")
     if not dry_run:
-        print("Logged to storage/db/history/delta_log.json")
+        log_info("Logged to storage/db/history/delta_log.json")
         if price_shifts > 0 or stock_shifts > 0:
-            print("Events queued in storage/db/history/delta_events.json (ready for Shopify sync)")
-    print("=" * 72)
+            log_info("Events queued in storage/db/history/delta_events.json (ready for Shopify sync)")
+    log_info("=" * 72)
 
     return {
         "scanned": completed,

@@ -47,28 +47,40 @@ flowchart TD
 
 ## 2. Quickstart & CLI Commands
 
-### 2.1 Run the Systematic Delta Freshner
+### 2.1 Run the Systematic Delta Freshner & Background Daemon
 ```powershell
-# 1. Normal production check (reads config/delta_config.json, 120m interval):
+# 1. Start continuous 1-hour background freshner daemon:
+python scripts/run_freshner_daemon.py
+
+# 2. Run single cycle on-demand via daemon runner:
+python scripts/run_freshner_daemon.py --once
+
+# 3. Direct CLI sweep (reads config/delta_config.json, 60m interval):
 python sync_catalog.py
 
-# 2. Test mode with short interval (e.g. 2 minutes, first 10 products):
-python sync_catalog.py --interval 2 --limit 10
-
-# 3. Force check all products immediately (bypasses timestamps):
+# 4. Force check all products immediately (bypasses timestamps):
 python sync_catalog.py --force
 
-# 4. Dry run (probes live endpoints without writing mutations to disk):
+# 5. Dry run (probes live endpoints without writing mutations to disk):
 python sync_catalog.py --dry-run
 ```
 
-### 2.2 Run Automated Test Suite
+### 2.2 Monitor Logs & Isolated Errors
+```powershell
+# Real-time operational logs:
+Get-Content logs/freshner.log -Tail 50 -Wait
+
+# Real-time isolated error diagnostics:
+Get-Content logs/errors.log -Tail 30 -Wait
+```
+
+### 2.3 Run Automated Test Suite
 ```powershell
 # Executes full unit and live integration suite (config, timestamps, synthetic shifts, live JW PEI connectivity):
 python test_delta_engine.py
 ```
 
-### 2.3 Publish to GitHub Pages
+### 2.4 Publish to GitHub Pages
 ```powershell
 # Exports latest database snapshot, builds Vite bundle, commits, and pushes to GitHub Pages:
 python scripts/publish_viewer.py
@@ -90,12 +102,14 @@ All engineering decisions are recorded and immutably numbered in [`docs/adr/`](.
 | **[0006](./docs/adr/0006-currency-conversion-and-shopify-variants-size-guide.md)** | Currency Conversion & Shopify Variants Size Guide | Accepted |
 | **[0007](./docs/adr/0007-mobile-first-catalog-viewer-and-github-pages-deployment.md)** | Mobile-First Catalog Viewer & Automated GitHub Pages Deployment | Accepted |
 | **[0008](./docs/adr/0008-systematic-2-hour-delta-freshner-and-timestamp-scheduling.md)** | Systematic 2-Hour Delta Freshner & Timestamp-Based Scheduling | Accepted |
+| **[0009](./docs/adr/0009-centralized-logging-and-background-scheduler-daemon.md)** | Centralized Structured Logging & Background Scheduler Daemon | Accepted |
 
 ---
 
 ## 4. Documentation Index
 
 - [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md): Full system architecture, two-tier workflows, and downstreams.
+- [`docs/LOGGING_SPEC.md`](./docs/LOGGING_SPEC.md): Structured logging architecture, dual sinks, rotation/retention policies, and runbooks.
 - [`docs/FOLDER_STRUCTURE.md`](./docs/FOLDER_STRUCTURE.md): Screaming functional directory tree and module boundaries.
 - [`docs/JSON_STORAGE_SPEC.md`](./docs/JSON_STORAGE_SPEC.md): Database partitioning, primary key hashing, and JSON schemas.
 - [`docs/SHOPIFY_INTEGRATION_SPEC.md`](./docs/SHOPIFY_INTEGRATION_SPEC.md): GraphQL `productSet` mutation contracts and Size Guide tables.

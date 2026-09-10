@@ -25,10 +25,13 @@ def test_config_loading():
     print("\n[TEST 1] Verifying Centralized Delta Configuration...")
     config = load_delta_config("config/delta_config.json")
     assert config is not None, "Config failed to load"
-    assert config.get("check_interval_minutes") == 120, f"Expected 120m, got {config.get('check_interval_minutes')}"
+    assert config.get("check_interval_minutes") == 60, f"Expected 60m, got {config.get('check_interval_minutes')}"
     assert "jwpei" in config.get("store_configs", {}), "JW PEI store config missing"
     assert config["store_configs"]["jwpei"]["max_workers"] >= 1, "Invalid max_workers"
-    print("  ✅ PASS: config/delta_config.json parsed successfully with 120m default interval.")
+    assert "logging" in config, "Logging config block missing"
+    assert config["logging"]["general_log"] == "freshner.log"
+    assert config["logging"]["error_log"] == "errors.log"
+    print("  ✅ PASS: config/delta_config.json parsed successfully with 60m default interval and logging setup.")
 
 
 def test_interval_and_timestamp_filtering():

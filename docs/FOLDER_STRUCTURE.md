@@ -15,10 +15,11 @@ product-updater/
 │       └── deploy-pages.yml         # CI/CD: Automated GitHub Pages deployment on push
 │
 ├── config/
-│   └── delta_config.json            # Centralized settings (120m check interval, concurrency, delays)
+│   └── delta_config.json            # Centralized settings (60m check interval, concurrency, logging)
 │
 ├── docs/                            # Multi-file engineering documentation & decision logs
 │   ├── ARCHITECTURE.md              # System design & two-tier flow diagram
+│   ├── LOGGING_SPEC.md              # Structured logging architecture, dual sinks, runbooks
 │   ├── SHOPIFY_INTEGRATION_SPEC.md  # Shopify GraphQL productSet schema & warning triggers
 │   ├── JSON_STORAGE_SPEC.md         # Partitioned JSON DB schema & deduplication logic
 │   ├── FOLDER_STRUCTURE.md          # Directory tree & module boundaries (this file)
@@ -31,11 +32,12 @@ product-updater/
 │       ├── 0005-functional-screaming-architecture-and-store-knowledge-bases.md
 │       ├── 0006-currency-conversion-and-shopify-variants-size-guide.md
 │       ├── 0007-mobile-first-catalog-viewer-and-github-pages-deployment.md
-│       └── 0008-systematic-2-hour-delta-freshner-and-timestamp-scheduling.md
+│       ├── 0008-systematic-2-hour-delta-freshner-and-timestamp-scheduling.md
+│       └── 0009-centralized-logging-and-background-scheduler-daemon.md
 │
 ├── frontend/                        # Mobile-First Catalog Data Viewer (React + Vite + Tailwind)
 │   ├── public/data/
-│   │   ├── catalog.json             # Consolidated static catalog (1.3 MB, 288 items)
+│   │   ├── catalog.json             # Consolidated static catalog (422 items)
 │   │   └── meta.json                # Summary statistics & export timestamp
 │   ├── src/
 │   │   ├── components/              # Header, NavigationHierarchy, ProductCard, ProductDetailModal
@@ -44,7 +46,12 @@ product-updater/
 │   ├── vite.config.ts               # base: './' for universal GitHub Pages subpath compatibility
 │   └── tailwind.config.js           # Luxury Dark & Glassmorphism design tokens
 │
+├── logs/                            # Centralized Structured Runtime Logs (gitignored)
+│   ├── freshner.log                 # General operational & cycle metrics (INFO+)
+│   └── errors.log                   # Isolated error diagnostics & stack traces (ERROR+)
+│
 ├── scripts/                         # Automation & Export CLI Scripts
+│   ├── run_freshner_daemon.py       # 1-hour background scheduler daemon with heartbeat sleep
 │   ├── export_viewer_data.py        # Compiles storage/db/ into frontend/public/data/catalog.json
 │   ├── publish_viewer.py            # 1-command export, Vite build, git commit & push
 │   └── reprocess_catalog.py         # Batch migration script to fix dimension formatting
@@ -52,6 +59,7 @@ product-updater/
 ├── storage/                         # Managed Local JSON Storage Room (Pure Functions)
 │   ├── db.py                        # def save_product(), load_product(), append_delta_event()
 │   ├── forex.py                     # def get_usd_to_inr_rate(), convert_usd_to_inr()
+│   ├── logger.py                    # def init_logger(), log_info(), log_error(), log_delta()
 │   ├── validator.py                 # def validate_product() against Shopify rules
 │   │
 │   └── db/                          # Partitioned JSON Database

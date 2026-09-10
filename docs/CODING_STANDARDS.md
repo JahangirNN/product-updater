@@ -38,21 +38,21 @@ async def fetch_price_data(url: str) -> dict:
     ...
 ```
 
-### 2.3 Structured Logging
-- Use standard library `logging` configured with JSON formatting.
-- Include structured context keys (e.g. `product_id`, `retailer`, `attempt`, `latency_ms`):
+### 2.3 Centralized Structured Logging (ADR 0009)
+- Use `storage/logger.py` powered by `loguru` (with graceful standard library fallback).
+- Route logs through dual sinks:
+  - `logs/freshner.log`: Operational and sync metrics (`INFO+`).
+  - `logs/errors.log`: Error isolation with full stack traces (`ERROR+`, `backtrace=True`, `diagnose=True`).
+  - Console: Real-time ANSI colorized terminal feedback.
+- Pure functional interface:
 ```python
-logger.info(
-    "Delta check completed",
-    extra={
-        "product_id": 1042,
-        "retailer": "brand_slug",
-        "price": 14999.0,
-        "status": "in_stock",
-        "latency_ms": 320
-    }
-)
+from storage.logger import log_info, log_error, log_delta
+
+log_info("Sync cycle started")
+log_delta("PRICE", "thea-top-handle-bag", "$119.0 -> $99.0 USD")
+log_error("HTTP request timed out", exc=err)
 ```
+- Full specification documented in [`docs/LOGGING_SPEC.md`](./LOGGING_SPEC.md).
 
 ---
 

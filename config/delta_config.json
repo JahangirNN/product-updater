@@ -1,11 +1,11 @@
 {
-  "check_interval_minutes": 120,
+  "check_interval_minutes": 60,
   "default_max_workers": 3,
   "default_delay_seconds": 0.08,
   "default_timeout_seconds": 6.0,
   "store_configs": {
     "jwpei": {
-      "check_interval_minutes": 120,
+      "check_interval_minutes": 60,
       "max_workers": 3,
       "delay_seconds": 0.08,
       "timeout_seconds": 6.0,
@@ -15,5 +15,15 @@
   "shopify_sync": {
     "auto_sync_on_delta": false,
     "queue_file": "storage/db/history/delta_events.json"
+  },
+  "logging": {
+    "log_dir": "logs",
+    "general_log": "freshner.log",
+    "error_log": "errors.log",
+    "rotation_general": "20 MB",
+    "rotation_error": "10 MB",
+    "retention_general": "14 days",
+    "retention_error": "30 days",
+    "console_level": "INFO"
   }
 }
