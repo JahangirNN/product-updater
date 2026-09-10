@@ -8,7 +8,8 @@ The **Product Updater** adopts a **Screaming Functional Architecture**. The dire
 product-updater/
 ├── .agents/
 │   └── skills/
-│       └── doc-keeper/              # Architectural guardian and alignment verifier
+│       ├── doc-keeper/              # Architectural guardian and alignment verifier
+│       └── x-mode/                  # Definitive 6-phase brand onboarding & ingestion pipeline
 │
 ├── .github/
 │   └── workflows/
