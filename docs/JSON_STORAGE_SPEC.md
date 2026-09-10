@@ -38,10 +38,14 @@ storage/
     ├── history/
     │   ├── delta_events.json        # Queued price/stock shifts for Shopify Admin API sync
     │   └── delta_log.json           # Execution batch run audit ledger
-    └── jwpei/
+    ├── jwpei/                       # JW PEI retailer partition (422 products)
+    │   └── products/
+    │       ├── 84d55ef19c5db172.json
+    │       └── a5b2128a9d8ca9c2.json
+    └── nordstrom/                   # Nordstrom retailer partition (57 products)
         └── products/
-            ├── 84d55ef19c5db172.json
-            └── a5b2128a9d8ca9c2.json
+            ├── 0ed43c62cfe53f48.json
+            └── 17d1ddff47ca2c5f.json
 ```
 
 ---

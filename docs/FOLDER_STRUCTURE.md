@@ -75,8 +75,10 @@ product-updater/
 │       ├── history/                 # Append-only price/stock delta ledgers
 │       │   ├── delta_events.json    # Queued shift events for Shopify Admin API sync
 │       │   └── delta_log.json       # Historical batch execution audit logs
-│       └── jwpei/                   # Retailer partition
-│           └── products/            # Individual JSON documents (e.g. 84d55ef19c5db172.json)
+│       ├── jwpei/                   # JW PEI retailer partition (422 products)
+│       │   └── products/            # Individual JSON documents (e.g. 84d55ef19c5db172.json)
+│       └── nordstrom/               # Nordstrom retailer partition (57 products)
+│           └── products/            # Individual JSON documents (e.g. 0ed43c62cfe53f48.json)
 │
 ├── stores/                          # [SCREAMING ARCHITECTURE] Self-contained store modules
 │   ├── _template/                   # Starter template for onboarding any new store
@@ -84,14 +86,21 @@ product-updater/
 │   │   ├── inflow.py                # Pure functions: normalize raw payload -> canonical
 │   │   └── delta.py                 # Pure function: check_price_and_stock(), apply_delta_to_product()
 │   │
-│   └── jwpei/                       # Concrete JW PEI implementation
-│       ├── LEARNINGS.md             # Living notes: swatch IDs, dimensions parsing, restock findings
-│       ├── inflow.py                # Ingestion normalizer with responsive Size Guide generator
-│       └── delta.py                 # Fast AJAX checker & pure delta mutation functions
+│   ├── jwpei/                       # Concrete JW PEI implementation
+│   │   ├── LEARNINGS.md             # Living notes: swatch IDs, dimensions parsing, restock findings
+│   │   ├── inflow.py                # Ingestion normalizer with responsive Size Guide generator
+│   │   └── delta.py                 # Fast AJAX checker & pure delta mutation functions
+│   │
+│   └── nordstrom/                   # Concrete Nordstrom implementation
+│       ├── LEARNINGS.md             # Living notes: size conversion matrix, On shoes DOM, query filters
+│       ├── inflow.py                # Ingestion normalizer with US/UK/EU sizing matrix & variant threshold
+│       └── delta.py                 # Fast delta checker & pure delta mutation functions
 │
 ├── sync_catalog.py                  # Universal multi-store delta engine & systematic scheduler
 ├── test_delta_engine.py             # Automated unit & integration test suite for delta engine
+├── test_nordstrom_size_filter.py    # Unit & integration test suite for Nordstrom On size matrix
 ├── run_inflow_jwpei.py              # Store-specific full ingestion runner for JW PEI
+├── run_inflow_nordstrom.py          # Store-specific full ingestion runner for Nordstrom
 ├── .env.example                     # Sample environment variables
 ├── .gitignore                       # Ignored build artifacts, node_modules, temp logs
 └── README.md                        # Executive blueprint, quickstart, and live deployment links

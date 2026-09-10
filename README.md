@@ -116,3 +116,4 @@ All engineering decisions are recorded and immutably numbered in [`docs/adr/`](.
 - [`docs/SHOPIFY_INTEGRATION_SPEC.md`](./docs/SHOPIFY_INTEGRATION_SPEC.md): GraphQL `productSet` mutation contracts and Size Guide tables.
 - [`docs/CODING_STANDARDS.md`](./docs/CODING_STANDARDS.md): Pure functions, typing standards, and atomic file writes.
 - `stores/jwpei/LEARNINGS.md`: Living retailer knowledge base for JW PEI (query filters, swatch IDs, fast endpoints).
+- `stores/nordstrom/LEARNINGS.md`: Living retailer knowledge base for Nordstrom (On shoes DOM, size conversion matrix, query filters).
