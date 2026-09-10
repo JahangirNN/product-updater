@@ -7,6 +7,9 @@ The **Product Updater** adopts a **Screaming Functional Architecture**. The dire
 ```text
 product-updater/
 ├── .agents/
+│   ├── rules/
+│   │   ├── context7-library-intelligence.md   # Mandatory Context7 library intelligence rule
+│   │   └── rate-limiting-and-concurrency.md   # Multi-store rate limiting & circuit breaking rule
 │   └── skills/
 │       ├── doc-keeper/              # Architectural guardian and alignment verifier
 │       └── x-mode/                  # Definitive 6-phase brand onboarding & ingestion pipeline
@@ -56,6 +59,7 @@ product-updater/
 │   ├── run_freshner_daemon.py       # 1-hour background scheduler daemon with heartbeat sleep
 │   ├── export_viewer_data.py        # Compiles storage/db/ into frontend/public/data/catalog.json
 │   ├── publish_viewer.py            # 1-command export, Vite build, git commit & push
+│   ├── ingest_search_jwpei.py       # Scrapes and ingests search collection batches
 │   └── reprocess_catalog.py         # Batch migration script to fix dimension formatting
 │
 ├── storage/                         # Managed Local JSON Storage Room (Pure Functions)
