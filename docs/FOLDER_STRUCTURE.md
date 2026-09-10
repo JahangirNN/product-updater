@@ -34,7 +34,8 @@ product-updater/
 │       ├── 0006-currency-conversion-and-shopify-variants-size-guide.md
 │       ├── 0007-mobile-first-catalog-viewer-and-github-pages-deployment.md
 │       ├── 0008-systematic-2-hour-delta-freshner-and-timestamp-scheduling.md
-│       └── 0009-centralized-logging-and-background-scheduler-daemon.md
+│       ├── 0009-centralized-logging-and-background-scheduler-daemon.md
+│       └── 0010-store-agnostic-rate-limiting-circuit-breaker-and-browser-fingerprinting.md
 │
 ├── frontend/                        # Mobile-First Catalog Data Viewer (React + Vite + Tailwind)
 │   ├── public/data/
@@ -61,6 +62,8 @@ product-updater/
 │   ├── db.py                        # def save_product(), load_product(), append_delta_event()
 │   ├── forex.py                     # def get_usd_to_inr_rate(), convert_usd_to_inr()
 │   ├── logger.py                    # def init_logger(), log_info(), log_error(), log_delta()
+│   ├── network.py                   # def create_http_client(), get_browser_headers() (Chrome 133)
+│   ├── rate_limiter.py              # def acquire_permit(), trip_circuit_breaker() (Pure functional)
 │   ├── validator.py                 # def validate_product() against Shopify rules
 │   │
 │   └── db/                          # Partitioned JSON Database

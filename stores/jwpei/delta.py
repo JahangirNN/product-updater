@@ -1,52 +1,108 @@
 """
 Store Delta Updater: JW PEI
 Fast, lightweight polling for price and stock availability using the storefront AJAX endpoint.
-Pure functions only, zero classes (ADR 0002, ADR 0005).
+Pure functions only, zero classes (ADR 0002, ADR 0005, ADR 0010).
 """
 import time
+import random
 from typing import Any, Dict, List, Optional, Tuple
 import httpx
 
-TIMEOUT_CONFIG = httpx.Timeout(6.0, connect=3.0)
-DEFAULT_HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "application/json",
-}
+from storage.network import create_http_client, DEFAULT_BROWSER_HEADERS
+from storage.rate_limiter import acquire_permit, trip_circuit_breaker, parse_retry_after
+
+DEFAULT_HEADERS = DEFAULT_BROWSER_HEADERS
 
 
-def check_price_and_stock(product: Dict[str, Any], client: Optional[httpx.Client] = None) -> Dict[str, Any]:
+def check_price_and_stock(
+    product: Dict[str, Any],
+    client: Optional[httpx.Client] = None,
+    store_name: str = "jwpei",
+    rate_limiter: Optional[Any] = None
+) -> Dict[str, Any]:
     """
     Poll live price and stock status for an existing product.
-    
+
     Uses https://www.jwpei.com/products/{handle}.js (<150ms latency, ~4KB).
     Compares live source_price against stored source_price to prevent false forex alarms.
+    Applies per-store rate limiting permit and trips circuit breaker on 429.
+    Preserves old_availability and price fields on 404 delisting.
     """
     t_start = time.perf_counter()
+    resolved_store = store_name or product.get("store") or product.get("source_store") or "jwpei"
     handle = product.get("handle") or extract_handle_from_url(product.get("source_url", ""))
     old_source_price = float(product.get("source_price") or 0.0)
     old_availability = product.get("availability", "unknown")
-    
+
     url = f"https://www.jwpei.com/products/{handle}.js"
 
     for attempt in range(3):
         try:
+            # 1. Acquire rate limiter permit before making request
+            if rate_limiter and callable(getattr(rate_limiter, "acquire_permit", None)):
+                try:
+                    rate_limiter.acquire_permit(resolved_store)
+                except TypeError:
+                    rate_limiter.acquire_permit()
+            elif isinstance(rate_limiter, dict):
+                acquire_fn = rate_limiter.get("acquire_permit")
+                if callable(acquire_fn):
+                    try:
+                        acquire_fn(resolved_store)
+                    except TypeError:
+                        acquire_fn()
+                else:
+                    acquire_permit(
+                        resolved_store,
+                        requests_per_second=rate_limiter.get("requests_per_second"),
+                        delay_seconds=rate_limiter.get("delay_seconds")
+                    )
+            else:
+                acquire_permit(resolved_store)
+
+            # 2. Issue request
             if client:
                 resp = client.get(url)
             else:
-                with httpx.Client(headers=DEFAULT_HEADERS, timeout=TIMEOUT_CONFIG) as c:
+                with create_http_client() as c:
                     resp = c.get(url)
 
             elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
 
             if resp.status_code == 429:
-                time.sleep(1.5 * (attempt + 1))
-                continue
+                retry_after_sec = parse_retry_after(resp.headers.get("Retry-After"))
+                jitter = random.uniform(1.0, 2.0 * (2 ** attempt))
+                backoff_duration = retry_after_sec + jitter
+
+                # Trip store circuit breaker so sibling threads pause immediately
+                if rate_limiter and callable(getattr(rate_limiter, "trip_circuit_breaker", None)):
+                    try:
+                        rate_limiter.trip_circuit_breaker(resolved_store, backoff_duration)
+                    except TypeError:
+                        rate_limiter.trip_circuit_breaker(backoff_duration)
+                elif isinstance(rate_limiter, dict) and callable(rate_limiter.get("trip_circuit_breaker")):
+                    try:
+                        rate_limiter["trip_circuit_breaker"](resolved_store, backoff_duration)
+                    except TypeError:
+                        rate_limiter["trip_circuit_breaker"](backoff_duration)
+                else:
+                    trip_circuit_breaker(resolved_store, backoff_duration)
+
+                if attempt < 2:
+                    time.sleep(backoff_duration)
+                    continue
+                else:
+                    # Final attempt exhausted: breaker tripped, exit immediately without redundant sleep
+                    break
 
             if resp.status_code == 404:
                 return {
                     "status": "not_found",
                     "handle": handle,
                     "availability": "out_of_stock",
+                    "old_availability": old_availability,
+                    "current_source_price": old_source_price,
+                    "old_source_price": old_source_price,
                     "is_active": False,
                     "price_changed": False,
                     "stock_changed": old_availability != "out_of_stock",
@@ -105,6 +161,9 @@ def check_price_and_stock(product: Dict[str, Any], client: Optional[httpx.Client
                     "status": "error",
                     "handle": handle,
                     "availability": old_availability,
+                    "old_availability": old_availability,
+                    "current_source_price": old_source_price,
+                    "old_source_price": old_source_price,
                     "is_active": old_availability == "in_stock",
                     "price_changed": False,
                     "stock_changed": False,
@@ -118,6 +177,9 @@ def check_price_and_stock(product: Dict[str, Any], client: Optional[httpx.Client
         "status": "rate_limited",
         "handle": handle,
         "availability": old_availability,
+        "old_availability": old_availability,
+        "current_source_price": old_source_price,
+        "old_source_price": old_source_price,
         "is_active": old_availability == "in_stock",
         "price_changed": False,
         "stock_changed": False,
@@ -132,20 +194,25 @@ def extract_handle_from_url(url: str) -> str:
     return cleaned.split("/")[-1]
 
 
-def apply_delta_to_product(product: Dict[str, Any], delta_result: Dict[str, Any], forex_rate: float) -> Tuple[Dict[str, Any], bool]:
+def apply_delta_to_product(
+    product: Dict[str, Any],
+    delta_result: Dict[str, Any],
+    forex_rate: float
+) -> Tuple[Dict[str, Any], bool]:
     """
     Pure function to apply delta check results to a canonical product dict.
     Updates price, INR recalculation, availability, and variant-level states.
     Sets shopify_sync_pending = True if changes occurred.
-    Always touches last_verified_at.
+    ONLY stamps last_verified_at if status in ('success', 'not_found').
     Returns (updated_product, has_changed).
     """
+    status = delta_result.get("status")
+    if status not in ("success", "not_found"):
+        # Transient error or rate limited, don't mutate product data and NEVER stamp last_verified_at
+        return product, False
+
     now_iso = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     product["last_verified_at"] = now_iso
-
-    if delta_result.get("status") not in ("success", "not_found"):
-        # Transient error or rate limited, don't mutate product data
-        return product, False
 
     price_changed = bool(delta_result.get("price_changed", False))
     stock_changed = bool(delta_result.get("stock_changed", False))
@@ -157,11 +224,11 @@ def apply_delta_to_product(product: Dict[str, Any], delta_result: Dict[str, Any]
     # Apply price changes
     new_source_price = delta_result.get("current_source_price", product.get("source_price", 0.0))
     product["source_price"] = new_source_price
-    
+
     # Recalculate INR price
     if new_source_price > 0:
         product["current_price"] = float(round(new_source_price * forex_rate))
-    
+
     new_compare_price = delta_result.get("current_compare_price")
     if new_compare_price is not None:
         product["compare_at_price"] = float(round(new_compare_price * forex_rate))

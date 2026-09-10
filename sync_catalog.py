@@ -2,7 +2,7 @@
 Global Catalog Sync & Delta Freshner Engine
 Systematically polls live retailer endpoints to monitor stock availability and price shifts.
 Orchestrates multi-store updates with polite concurrency and logs deltas for Shopify syncing.
-Pure functions only, zero classes (ADR 0002, ADR 0004, ADR 0005, ADR 0006).
+Pure functions only, zero classes (ADR 0002, ADR 0004, ADR 0005, ADR 0006, ADR 0010).
 """
 import os
 import sys
@@ -11,6 +11,7 @@ import time
 import argparse
 import importlib
 import datetime
+import inspect
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Any, Dict, List, Optional, Tuple
 import httpx
@@ -35,22 +36,35 @@ from storage.logger import (
     log_error,
     log_delta
 )
+from storage.network import (
+    create_http_client,
+    get_browser_headers,
+    DEFAULT_BROWSER_HEADERS
+)
+import storage.rate_limiter as rate_limiter
 
 DEFAULT_CONFIG_PATH = "config/delta_config.json"
-DEFAULT_HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "application/json",
-}
+DEFAULT_HEADERS = DEFAULT_BROWSER_HEADERS
 
 
 def load_delta_config(config_path: str = DEFAULT_CONFIG_PATH) -> Dict[str, Any]:
     """Load centralized delta configuration or provide resilient defaults."""
     cfg = {
         "check_interval_minutes": 60,
-        "default_max_workers": 3,
-        "default_delay_seconds": 0.08,
-        "default_timeout_seconds": 6.0,
-        "store_configs": {},
+        "default_max_workers": 2,
+        "default_requests_per_second": 2.0,
+        "default_delay_seconds": 0.5,
+        "default_timeout_seconds": 8.0,
+        "store_configs": {
+            "jwpei": {
+                "check_interval_minutes": 60,
+                "max_workers": 2,
+                "requests_per_second": 2.0,
+                "delay_seconds": 0.5,
+                "timeout_seconds": 8.0,
+                "endpoint_pattern": "https://www.jwpei.com/products/{handle}.js"
+            }
+        },
         "shopify_sync": {
             "auto_sync_on_delta": False,
             "queue_file": "storage/db/history/delta_events.json"
@@ -73,6 +87,16 @@ def load_delta_config(config_path: str = DEFAULT_CONFIG_PATH) -> Dict[str, Any]:
                 cfg.update(loaded)
         except Exception as err:
             log_warning(f"Failed to read {config_path}: {err}. Using defaults.")
+
+    # Initialize rate limiter with loaded settings
+    default_rps = float(cfg.get("default_requests_per_second", 2.0))
+    default_delay = float(cfg.get("default_delay_seconds", 0.5))
+    rate_limiter.configure_store_rate_limits("default", requests_per_second=default_rps, delay_seconds=default_delay)
+
+    for s_name, s_conf in cfg.get("store_configs", {}).items():
+        s_rps = float(s_conf.get("requests_per_second", default_rps))
+        s_delay = float(s_conf.get("delay_seconds", default_delay))
+        rate_limiter.configure_store_rate_limits(s_name, requests_per_second=s_rps, delay_seconds=s_delay)
 
     log_cfg = cfg.get("logging", {})
     init_logger(
@@ -136,59 +160,106 @@ def poll_single_product(
     client: httpx.Client,
     forex_rate: float,
     delay_seconds: float,
-    dry_run: bool = False
+    dry_run: bool = False,
+    store_name: Optional[str] = None,
+    store_rate_limiter: Optional[Any] = None
 ) -> Dict[str, Any]:
     """
     Worker function to check single product delta, mutate if needed, and return result.
+    Passes store_name and rate_limiter to store delta checks with robust parameter inspection.
+    Safe exception boundary protects dispatcher from worker thread failures.
     """
-    store = product_stub.get("store") or product_stub.get("source_store")
+    store = store_name or product_stub.get("store") or product_stub.get("source_store") or "default"
     p_id = product_stub.get("id")
 
-    full_product = load_product(store, p_id)
-    if not full_product:
+    try:
+        full_product = load_product(store, p_id)
+        if not full_product:
+            return {
+                "status": "error",
+                "id": p_id,
+                "handle": product_stub.get("handle"),
+                "store": store,
+                "error": f"Product file {p_id} not found on disk."
+            }
+
+        # Introspect store_mod.check_price_and_stock parameter signatures cleanly
+        check_fn = getattr(store_mod, "check_price_and_stock", None)
+        if not callable(check_fn):
+            return {
+                "status": "error",
+                "id": p_id,
+                "handle": product_stub.get("handle"),
+                "store": store,
+                "error": f"Store module {store} has no callable check_price_and_stock function."
+            }
+
+        sig = inspect.signature(check_fn)
+        params = sig.parameters
+        has_varkw = any(p.kind == inspect.Parameter.VAR_KEYWORD for p in params.values())
+
+        call_kwargs = {}
+        if "client" in params or has_varkw:
+            call_kwargs["client"] = client
+        if "store_name" in params or has_varkw:
+            call_kwargs["store_name"] = store
+        if "rate_limiter" in params or has_varkw:
+            call_kwargs["rate_limiter"] = store_rate_limiter
+
+        delta_res = check_fn(full_product, **call_kwargs)
+        if not isinstance(delta_res, dict):
+            delta_res = {
+                "status": "error",
+                "handle": product_stub.get("handle"),
+                "error": f"Invalid return type from delta check: {type(delta_res)}"
+            }
+
+        now_iso = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+        # Apply delta to product model (stamps last_verified_at ONLY on success or not_found)
+        updated_product, has_changed = store_mod.apply_delta_to_product(full_product, delta_res, forex_rate)
+
+        if not dry_run:
+            # Only persist updated product if check succeeded or product was delisted
+            if delta_res.get("status") in ("success", "not_found"):
+                save_product(updated_product)
+
+            if has_changed:
+                # Enqueue event for Shopify sync
+                event_entry = {
+                    "event_id": f"evt_{int(time.time()*1000)}_{p_id[:8]}",
+                    "timestamp": now_iso,
+                    "store": store,
+                    "product_id": p_id,
+                    "handle": updated_product.get("handle"),
+                    "title": updated_product.get("title"),
+                    "price_changed": delta_res.get("price_changed", False),
+                    "old_source_price": delta_res.get("old_source_price"),
+                    "new_source_price": delta_res.get("current_source_price"),
+                    "new_current_price_inr": updated_product.get("current_price"),
+                    "stock_changed": delta_res.get("stock_changed", False),
+                    "old_availability": delta_res.get("old_availability"),
+                    "new_availability": delta_res.get("availability"),
+                    "shopify_sync_pending": True
+                }
+                append_delta_event(event_entry)
+
+        delta_res["id"] = p_id
+        delta_res["store"] = store
+        delta_res["has_changed"] = has_changed
+        return delta_res
+
+    except Exception as exc:
+        log_error(f"Unexpected error checking product {p_id} ({product_stub.get('handle', 'unknown')}): {exc}")
         return {
             "status": "error",
             "id": p_id,
-            "error": f"Product file {p_id} not found on disk."
+            "handle": product_stub.get("handle"),
+            "store": store,
+            "error": str(exc),
+            "elapsed_ms": 0.0,
+            "has_changed": False
         }
-
-    # Execute store delta check
-    delta_res = store_mod.check_price_and_stock(full_product, client=client)
-    time.sleep(delay_seconds)
-
-    now_iso = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-
-    # Apply delta to product model
-    updated_product, has_changed = store_mod.apply_delta_to_product(full_product, delta_res, forex_rate)
-
-    if not dry_run:
-        # Save mutated product (or touched timestamp) to disk
-        save_product(updated_product)
-
-        if has_changed:
-            # Enqueue event for Shopify sync
-            event_entry = {
-                "event_id": f"evt_{int(time.time()*1000)}_{p_id[:8]}",
-                "timestamp": now_iso,
-                "store": store,
-                "product_id": p_id,
-                "handle": updated_product.get("handle"),
-                "title": updated_product.get("title"),
-                "price_changed": delta_res.get("price_changed", False),
-                "old_source_price": delta_res.get("old_source_price"),
-                "new_source_price": delta_res.get("current_source_price"),
-                "new_current_price_inr": updated_product.get("current_price"),
-                "stock_changed": delta_res.get("stock_changed", False),
-                "old_availability": delta_res.get("old_availability"),
-                "new_availability": delta_res.get("availability"),
-                "shopify_sync_pending": True
-            }
-            append_delta_event(event_entry)
-
-    delta_res["id"] = p_id
-    delta_res["store"] = store
-    delta_res["has_changed"] = has_changed
-    return delta_res
 
 
 def run_catalog_sync(
@@ -238,7 +309,7 @@ def run_catalog_sync(
         store_name = p.get("store") or p.get("source_store", "default")
         store_conf = config.get("store_configs", {}).get(store_name, {})
         store_interval = interval_override if interval_override is not None else store_conf.get("check_interval_minutes", base_interval)
-        
+
         is_due, elapsed = is_product_due(p, store_interval, force=force)
         if is_due:
             due_products.append((p, store_interval))
@@ -255,7 +326,17 @@ def run_catalog_sync(
     if not due_products:
         log_success("All products are fresh. No delta polling needed.")
         log_info("=" * 72)
-        return {"scanned": 0, "skipped": skipped_count, "price_changes": 0, "stock_changes": 0}
+        return {
+            "scanned": 0,
+            "skipped": skipped_count,
+            "in_stock": 0,
+            "out_of_stock": 0,
+            "price_changes": 0,
+            "stock_changes": 0,
+            "errors": 0,
+            "rate_limited": 0,
+            "duration_seconds": 0.0
+        }
 
     # 4. Resolve store modules & fetch forex
     forex_rate = get_usd_to_inr_rate()
@@ -268,8 +349,9 @@ def run_catalog_sync(
     in_stock_count = 0
     out_stock_count = 0
     errors = 0
+    rate_limited_count = 0
 
-    # Group due products by store to apply per-store concurrency
+    # Group due products by store to apply per-store concurrency and rate limits
     by_store: Dict[str, List[Dict[str, Any]]] = {}
     for p, _ in due_products:
         s = p.get("store") or p.get("source_store", "default")
@@ -282,16 +364,21 @@ def run_catalog_sync(
         store_mod = resolve_store_delta_module(store_name)
         if not store_mod:
             log_warning(f"[SKIP] Skipping {len(store_items)} items for unsupported store '{store_name}'.")
+            errors += len(store_items)
+            completed += len(store_items)
             continue
 
         store_conf = config.get("store_configs", {}).get(store_name, {})
-        max_workers = store_conf.get("max_workers", config.get("default_max_workers", 3))
-        delay_sec = store_conf.get("delay_seconds", config.get("default_delay_seconds", 0.08))
-        timeout_sec = store_conf.get("timeout_seconds", config.get("default_timeout_seconds", 6.0))
+        max_workers = store_conf.get("max_workers", config.get("default_max_workers", 2))
+        delay_sec = store_conf.get("delay_seconds", config.get("default_delay_seconds", 0.5))
+        timeout_sec = store_conf.get("timeout_seconds", config.get("default_timeout_seconds", 8.0))
 
-        log_info(f"Checking {len(store_items)} products for '{store_name}' (workers={max_workers}, delay={delay_sec}s)")
+        log_info(f"Checking {len(store_items)} products for '{store_name}' (workers={max_workers}, delay={delay_sec}s, timeout={timeout_sec}s)")
 
-        with httpx.Client(headers=DEFAULT_HEADERS, timeout=httpx.Timeout(timeout_sec, connect=3.0)) as client:
+        # Create dedicated per-store rate limiter handle
+        store_limiter = rate_limiter.create_store_limiter(store_name)
+
+        with create_http_client(timeout_seconds=timeout_sec) as client:
             with ThreadPoolExecutor(max_workers=max_workers) as executor:
                 future_to_item = {
                     executor.submit(
@@ -301,25 +388,39 @@ def run_catalog_sync(
                         client,
                         forex_rate,
                         delay_sec,
-                        dry_run
+                        dry_run,
+                        store_name,
+                        store_limiter
                     ): item
                     for item in store_items
                 }
 
                 for future in as_completed(future_to_item):
                     completed += 1
-                    res = future.result()
+                    try:
+                        res = future.result()
+                    except Exception as thread_exc:
+                        errors += 1
+                        failed_stub = future_to_item[future]
+                        log_error(f"Worker thread crashed checking {failed_stub.get('handle', failed_stub.get('id'))}: {thread_exc}")
+                        continue
+
                     if not res or not isinstance(res, dict):
                         errors += 1
                         log_error(f"Received invalid result for product {future_to_item[future].get('id')}")
                         continue
 
                     latencies.append(res.get("elapsed_ms", 0))
+                    status = res.get("status")
 
-                    if res.get("status") == "error":
+                    if status == "error":
                         errors += 1
                         log_error(f"Sync error for {res.get('handle', res.get('id'))}: {res.get('error')}")
-                    elif res.get("status") in ("success", "not_found"):
+                    elif status == "rate_limited":
+                        errors += 1
+                        rate_limited_count += 1
+                        log_error(f"Rate limit exceeded (HTTP 429) for store '{store_name}': product {res.get('handle', res.get('id'))} - {res.get('error')}")
+                    elif status in ("success", "not_found"):
                         avail = res.get("availability")
                         if avail == "in_stock":
                             in_stock_count += 1
@@ -355,6 +456,7 @@ def run_catalog_sync(
             "price_changes": price_shifts,
             "stock_changes": stock_shifts,
             "errors": errors,
+            "rate_limited": rate_limited_count,
             "average_latency_ms": round(avg_latency, 2),
             "total_time_seconds": round(total_time, 2)
         }
@@ -371,6 +473,8 @@ def run_catalog_sync(
     log_info(f"Stock Shifts Detected:     {stock_shifts}")
     if errors > 0:
         log_error(f"Failed / Request Errors:   {errors} (check logs/errors.log for diagnostics)")
+        if rate_limited_count > 0:
+            log_warning(f"Rate Limited (HTTP 429):   {rate_limited_count}")
     else:
         log_info(f"Failed / Request Errors:   {errors}")
     log_info(f"Average Request Latency:   {avg_latency:.2f} ms")
@@ -389,13 +493,14 @@ def run_catalog_sync(
         "price_changes": price_shifts,
         "stock_changes": stock_shifts,
         "errors": errors,
+        "rate_limited": rate_limited_count,
         "duration_seconds": total_time
     }
 
 
 def main():
     parser = argparse.ArgumentParser(description="Dropship Catalog Live Delta Freshner & Sync Engine")
-    parser.add_argument("--interval", type=float, help="Override check interval in minutes (e.g. 2 for testing, 120 for normal)")
+    parser.add_argument("--interval", type=float, help="Override check interval in minutes (e.g. 2 for testing, 60 for normal)")
     parser.add_argument("--store", type=str, help="Target specific store (e.g. jwpei)")
     parser.add_argument("--force", action="store_true", help="Force check all products bypassing last_verified_at")
     parser.add_argument("--limit", type=int, help="Limit number of checked products")

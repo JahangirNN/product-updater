@@ -1,14 +1,16 @@
 {
   "check_interval_minutes": 60,
-  "default_max_workers": 3,
-  "default_delay_seconds": 0.08,
-  "default_timeout_seconds": 6.0,
+  "default_max_workers": 2,
+  "default_requests_per_second": 2.0,
+  "default_delay_seconds": 0.5,
+  "default_timeout_seconds": 8.0,
   "store_configs": {
     "jwpei": {
       "check_interval_minutes": 60,
-      "max_workers": 3,
-      "delay_seconds": 0.08,
-      "timeout_seconds": 6.0,
+      "max_workers": 2,
+      "requests_per_second": 2.0,
+      "delay_seconds": 0.5,
+      "timeout_seconds": 8.0,
       "endpoint_pattern": "https://www.jwpei.com/products/{handle}.js"
     }
   },
