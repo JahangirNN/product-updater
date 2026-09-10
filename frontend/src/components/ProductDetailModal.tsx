@@ -8,6 +8,72 @@ interface ProductDetailModalProps {
   onClose: () => void;
 }
 
+interface ShoeSizeConversion {
+  usMen: string;
+  usWomen: string;
+  uk: string;
+  eu: string;
+  cm: string;
+}
+
+// Official On Running & Nordstrom Conversion Tables
+const ON_SHOE_SIZES: ShoeSizeConversion[] = [
+  { usMen: '3.5', usWomen: '5', uk: '2.5', eu: '35.5', cm: '22' },
+  { usMen: '4', usWomen: '5.5', uk: '3', eu: '36', cm: '22.5' },
+  { usMen: '4.5', usWomen: '6', uk: '3.5', eu: '36.5', cm: '23' },
+  { usMen: '5', usWomen: '6.5', uk: '4', eu: '37', cm: '23.5' },
+  { usMen: '5.5', usWomen: '7', uk: '4.5', eu: '37.5', cm: '24' },
+  { usMen: '6', usWomen: '7.5', uk: '5', eu: '38', cm: '24.5' },
+  { usMen: '6.5', usWomen: '8', uk: '5.5', eu: '38.5', cm: '25' },
+  { usMen: '7', usWomen: '8.5', uk: '6', eu: '39', cm: '25.5' },
+  { usMen: '7.5', usWomen: '9', uk: '6.5', eu: '40', cm: '26' },
+  { usMen: '8', usWomen: '9.5', uk: '7', eu: '40.5', cm: '26.5' },
+  { usMen: '8.5', usWomen: '10', uk: '7.5', eu: '41', cm: '27' },
+  { usMen: '9', usWomen: '10.5', uk: '8', eu: '42', cm: '27.5' },
+  { usMen: '9.5', usWomen: '11', uk: '8.5', eu: '42.5', cm: '28' },
+  { usMen: '10', usWomen: '11.5', uk: '9', eu: '43', cm: '28.5' },
+  { usMen: '10.5', usWomen: '12', uk: '9.5', eu: '44', cm: '29' },
+  { usMen: '11', usWomen: '12.5', uk: '10', eu: '44.5', cm: '29.5' },
+  { usMen: '11.5', usWomen: '13', uk: '10.5', eu: '45', cm: '30' },
+  { usMen: '12', usWomen: '13.5', uk: '11', eu: '46', cm: '30.5' },
+  { usMen: '12.5', usWomen: '14', uk: '11.5', eu: '47', cm: '31' },
+  { usMen: '13', usWomen: '14.5', uk: '12', eu: '47.5', cm: '31.5' },
+  { usMen: '13.5', usWomen: '15', uk: '12.5', eu: '48', cm: '32' },
+  { usMen: '14', usWomen: '15.5', uk: '13', eu: '48.5', cm: '32.5' },
+];
+
+function deriveShoeSize(rawUs: string, rawUk: string, gender: string): ShoeSizeConversion {
+  const cleanUs = rawUs.replace(/[^0-9.]/g, '');
+  const cleanUk = rawUk.replace(/[^0-9.]/g, '');
+  const isWomen = gender.toLowerCase().includes('women');
+
+  // Try matching by UK first (UK is gender-neutral foot length)
+  if (cleanUk) {
+    const match = ON_SHOE_SIZES.find((s) => parseFloat(s.uk) === parseFloat(cleanUk));
+    if (match) return match;
+  }
+
+  // Try matching by US depending on gender
+  if (cleanUs) {
+    const match = ON_SHOE_SIZES.find((s) =>
+      isWomen
+        ? parseFloat(s.usWomen) === parseFloat(cleanUs)
+        : parseFloat(s.usMen) === parseFloat(cleanUs)
+    );
+    if (match) return match;
+  }
+
+  // Fallback if size is outside standard array
+  const usNum = parseFloat(cleanUs) || 0;
+  const ukNum = parseFloat(cleanUk) || (isWomen ? Math.max(0, usNum - 2) : Math.max(0, usNum - 0.5));
+  const usMen = isWomen ? (usNum > 0 ? (usNum - 1.5).toString() : (ukNum + 0.5).toString()) : usNum.toString();
+  const usWomen = isWomen ? usNum.toString() : (usNum > 0 ? (usNum + 1.5).toString() : (ukNum + 2).toString());
+  const eu = (33 + (parseFloat(usMen) || ukNum) * 1.0).toFixed(0);
+  const cm = (21 + ukNum * 0.8).toFixed(1);
+
+  return { usMen, usWomen, uk: ukNum.toString(), eu, cm };
+}
+
 export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClose }) => {
   if (!product) return null;
 
@@ -167,26 +233,34 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
 
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 overflow-hidden">
               {isShoe ? (
-                <div className="max-h-56 overflow-y-auto">
+                <div className="max-h-64 overflow-y-auto">
                   <table className="w-full text-xs text-left">
                     <thead className="bg-zinc-800/80 text-zinc-400 font-semibold sticky top-0">
                       <tr>
-                        <th className="px-3.5 py-2">US Size</th>
-                        <th className="px-3.5 py-2">UK Size</th>
-                        <th className="px-3.5 py-2">Price (INR)</th>
-                        <th className="px-3.5 py-2 text-right">Availability</th>
+                        <th className="px-2.5 py-2">US Men</th>
+                        <th className="px-2.5 py-2">US Wmn</th>
+                        <th className="px-2.5 py-2">UK</th>
+                        <th className="px-2.5 py-2">EUR</th>
+                        <th className="px-2.5 py-2">CM</th>
+                        <th className="px-2.5 py-2">Price</th>
+                        <th className="px-2.5 py-2 text-right">Status</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-zinc-800/60 font-mono">
                       {product.variants.map((v, i) => {
-                        const usOpt = v.option_values?.find(o => o.option_name.includes('US'))?.name || v.title.split('/')[0]?.trim();
-                        const ukOpt = v.option_values?.find(o => o.option_name.includes('UK'))?.name || v.title.split('/')[1]?.split('-')[0]?.trim();
+                        const usOpt = v.option_values?.find(o => o.option_name.includes('US'))?.name || v.title.split('/')[0]?.trim() || '';
+                        const ukOpt = v.option_values?.find(o => o.option_name.includes('UK'))?.name || v.title.split('/')[1]?.split('-')[0]?.trim() || '';
+                        const conv = deriveShoeSize(usOpt, ukOpt, gender);
+
                         return (
                           <tr key={i} className="hover:bg-zinc-800/30">
-                            <td className="px-3.5 py-2 font-bold text-white">{usOpt || `Var ${i+1}`}</td>
-                            <td className="px-3.5 py-2 text-amber-300">{ukOpt || '-'}</td>
-                            <td className="px-3.5 py-2 text-zinc-300">₹{parseFloat(v.price).toLocaleString('en-IN')}</td>
-                            <td className="px-3.5 py-2 text-right">
+                            <td className="px-2.5 py-2 font-semibold text-white">{conv.usMen}</td>
+                            <td className="px-2.5 py-2 font-semibold text-amber-200">{conv.usWomen}</td>
+                            <td className="px-2.5 py-2 text-amber-400 font-bold">{conv.uk}</td>
+                            <td className="px-2.5 py-2 text-zinc-300">{conv.eu}</td>
+                            <td className="px-2.5 py-2 text-cyan-300">{conv.cm}</td>
+                            <td className="px-2.5 py-2 text-zinc-300 whitespace-nowrap">₹{parseFloat(v.price).toLocaleString('en-IN')}</td>
+                            <td className="px-2.5 py-2 text-right whitespace-nowrap">
                               <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${v.in_stock ? 'bg-emerald-500/20 text-emerald-300' : 'bg-rose-500/20 text-rose-300'}`}>
                                 {v.in_stock ? 'In Stock' : 'Sold Out'}
                               </span>
