@@ -23,7 +23,11 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
     specs = product.get("specifications", {})
     style = specs.get("Carrying Style", "").lower() or specs.get("Carrying Method", "").lower()
 
-    if "mini" in title_lower or "mini" in handle_lower:
+    if "wallet" in title_lower or "wallet" in handle_lower or "card" in title_lower:
+        return "Wallets & Small Goods"
+    elif "tote" in title_lower or "tote" in handle_lower:
+        return "Tote Bags"
+    elif "mini" in title_lower or "mini" in handle_lower:
         return "Mini Bags"
     elif "woven" in title_lower or "weave" in title_lower or "rattan" in title_lower:
         return "Woven & Textured"

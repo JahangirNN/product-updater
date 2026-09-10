@@ -17,8 +17,10 @@
   "material": "Vegan Leather",
   "specifications": {
     "Main Material": "Vegan Leather",
+    "Material": "Vegan Leather",
     "Lining Material": "Faux Suede",
     "Dimension": "10.24\" W x 5.00\" H x 2.76\" D (26cm x 12.7cm x 7cm)",
+    "Bag Dimensions": "10.24\" W x 5.00\" H x 2.76\" D (26cm x 12.7cm x 7cm)",
     "Handle Drop": "2.76\" (7cm)",
     "Shoulder Strap Drop": "20.28\" - 23.43\" (51.5cm - 59.5cm)",
     "Hardware": "Gold",
@@ -27,9 +29,7 @@
     "Number Of Straps": "1",
     "Capacity": "Fits iPhone 17 Pro Max",
     "Shoulder Strap Adjustability": "Yes",
-    "Detachable Shoulder Strap": "Yes",
-    "Bag Dimensions": "10.24\" W x 5.00\" H x 2.76\" D (26cm x 12.7cm x 7cm)",
-    "Material": "Vegan Leather"
+    "Detachable Shoulder Strap": "Yes"
   },
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Vegan Leather</li>\n      <li><strong>Lining:</strong> Faux Suede</li>\n      <li><strong>Hardware Finish:</strong> Gold</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Bag Dimensions</td>\n          <td style=\"padding: 6px;\">10.24&quot; W x 5.00&quot; H x 2.76&quot; D (26cm x 12.7cm x 7cm)</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">2.76&quot; (7cm)</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder Strap Drop</td>\n          <td style=\"padding: 6px;\">20.28&quot; - 23.43&quot; (51.5cm - 59.5cm)</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
@@ -83,10 +83,9 @@
   "groups": [
     "handbags"
   ],
+  "id": "af0460cfa703a650",
   "status": "ACTIVE",
   "validation_warnings": [],
-  "id": "af0460cfa703a650",
   "created_at": "2026-09-09T15:50:14Z",
-  "updated_at": "2026-09-09T18:58:59Z",
-  "last_verified_at": "2026-09-09T18:58:59Z"
+  "updated_at": "2026-09-10T03:38:41Z"
 }
