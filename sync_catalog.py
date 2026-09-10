@@ -435,8 +435,9 @@ def run_catalog_sync(
                             stock_shifts += 1
                             log_delta("STOCK", res.get('handle', 'unknown'), f"{res.get('old_availability')} -> {avail}")
 
-                    if completed % 25 == 0 or completed == total_due:
-                        log_info(f"[{completed:3d}/{total_due}] Progress: {res.get('handle', '')[:32]} | {res.get('availability', 'unknown')} | {res.get('elapsed_ms', 0)}ms")
+                    log_interval = 1 if total_due <= 25 else (10 if total_due <= 100 else 25)
+                    if completed % log_interval == 0 or completed == total_due:
+                        log_info(f"[{completed:3d}/{total_due}] Progress ({store_name}): {res.get('handle', '')[:32]} | {res.get('availability', 'unknown')} | {res.get('elapsed_ms', 0)}ms")
 
     total_time = time.time() - start_time
     avg_latency = sum(latencies) / len(latencies) if latencies else 0.0
