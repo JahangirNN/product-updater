@@ -91,9 +91,22 @@ Derived directly from the official Nordstrom On shoe conversion guides:
 
 ---
 
-## 5. Delta Checking & Polling (Tier 2)
-- **Monitoring Strategy**:
-  - Outbound requests acquire per-store rate permits (2.0 req/s, 0.5s delay).
-  - Trips circuit breaker on HTTP 429.
-  - On HTTP 404 delisting, previous prices and availability are preserved.
-  - Selective stamping: `last_verified_at` stamped strictly on `success` or `not_found`.
+## 5. Delta Checking & Polling (Tier 2: Zero-Cost Camoufox & Per-Size Sizing)
+
+### 5.1 Kasada Client-Side Proof-of-Work Bypass (`stores/nordstrom/camoufox_solver.py`)
+- **Challenge Identification**: Nordstrom renders Kasada JavaScript client-side proof-of-work challenges identified by `window['istlWas']` or `istlWasHere`.
+- **Zero-Cost Local Solver**: Rather than paying for Firecrawl or proxy scraper APIs, we use `camoufox` (open-source C++ stealth Firefox fork) and Playwright.
+- **Event Pump Handling**: In synchronous Camoufox, calling `time.sleep()` freezes the browser event pump and prevents Kasada from solving. Always use `page.wait_for_timeout(4000)` instead.
+- **Strict Anti-False-Positive Guardrail**: If `istlWas` remains unresolved in the HTML after adaptive waiting, the solver returns `status: "blocked"`. It never falsifies success.
+
+### 5.2 Granular Per-Size Shoe Inventory Tracking
+- **Dehydrated Entity Location**: Nordstrom embeds complete hydrated entity JSON inside `window.__INITIAL_CONFIG__` (~420KB JSON payload).
+- **Extraction Mechanism**: Parsed via `json.JSONDecoder().raw_decode()`.
+- **Schema Path**:
+  `__INITIAL_CONFIG__["products"][style_id]["coreChoices"][color_id]["items"][sku_id]["propositions"][0]["availability"]["shipQuantity"]`
+- **Stock Mapping**:
+  - If `shipQuantity > 0`: `in_stock = True`
+  - If `shipQuantity == 0`: `in_stock = False` (sold out)
+- **Variant Stock Mutation (`stores/nordstrom/delta.py`)**:
+  - When even a single size sells out or restocks, `variant_stock_changed` is set to `True`.
+  - `apply_delta_to_product` updates `var["in_stock"]` on each variant model, sets `has_changed = True`, and queues the event into `storage/db/history/delta_events.json` for Shopify sync.

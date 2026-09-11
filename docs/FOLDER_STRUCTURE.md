@@ -38,7 +38,8 @@ product-updater/
 │       ├── 0007-mobile-first-catalog-viewer-and-github-pages-deployment.md
 │       ├── 0008-systematic-2-hour-delta-freshner-and-timestamp-scheduling.md
 │       ├── 0009-centralized-logging-and-background-scheduler-daemon.md
-│       └── 0010-store-agnostic-rate-limiting-circuit-breaker-and-browser-fingerprinting.md
+│       ├── 0010-store-agnostic-rate-limiting-circuit-breaker-and-browser-fingerprinting.md
+│       └── 0011-zero-cost-local-stealth-browser-kasada-solving-and-parallel-multi-store-scheduling.md
 │
 ├── frontend/                        # Mobile-First Catalog Data Viewer (React + Vite + Tailwind)
 │   ├── public/data/
@@ -92,7 +93,8 @@ product-updater/
 │   │   └── delta.py                 # Fast AJAX checker & pure delta mutation functions
 │   │
 │   └── nordstrom/                   # Concrete Nordstrom implementation
-│       ├── LEARNINGS.md             # Living notes: size conversion matrix, On shoes DOM, query filters
+│       ├── LEARNINGS.md             # Living notes: size conversion matrix, On shoes DOM, query filters, Kasada solver
+│       ├── camoufox_solver.py       # Zero-cost local stealth browser Kasada solver & per-size stock extractor
 │       ├── inflow.py                # Ingestion normalizer with US/UK/EU sizing matrix & variant threshold
 │       └── delta.py                 # Fast delta checker & pure delta mutation functions
 │

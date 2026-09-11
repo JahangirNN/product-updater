@@ -157,12 +157,13 @@ def resolve_store_delta_module(store_name: str) -> Optional[Any]:
 def poll_single_product(
     product_stub: Dict[str, Any],
     store_mod: Any,
-    client: httpx.Client,
-    forex_rate: float,
-    delay_seconds: float,
+    client: Optional[httpx.Client] = None,
+    forex_rate: float = 95.0,
+    delay_seconds: float = 0.5,
     dry_run: bool = False,
     store_name: Optional[str] = None,
-    store_rate_limiter: Optional[Any] = None
+    store_rate_limiter: Optional[Any] = None,
+    browser_page: Optional[Any] = None
 ) -> Dict[str, Any]:
     """
     Worker function to check single product delta, mutate if needed, and return result.
@@ -205,6 +206,8 @@ def poll_single_product(
             call_kwargs["store_name"] = store
         if "rate_limiter" in params or has_varkw:
             call_kwargs["rate_limiter"] = store_rate_limiter
+        if "browser_page" in params or has_varkw:
+            call_kwargs["browser_page"] = browser_page
 
         delta_res = check_fn(full_product, **call_kwargs)
         if not isinstance(delta_res, dict):
@@ -260,6 +263,93 @@ def poll_single_product(
             "elapsed_ms": 0.0,
             "has_changed": False
         }
+
+
+
+def sync_store_batch(
+    store_name: str,
+    store_items: List[Dict[str, Any]],
+    store_mod: Any,
+    forex_rate: float,
+    store_conf: Dict[str, Any],
+    default_conf: Dict[str, Any],
+    dry_run: bool
+) -> List[Dict[str, Any]]:
+    """
+    Worker function to sync a batch of products for a single store.
+    Automatically selects HTTP client pool or Camoufox stealth browser based on store configuration.
+    Runs independently and concurrently with other store batches.
+    """
+    engine = store_conf.get("engine", "camoufox" if store_name == "nordstrom" else "http")
+    max_workers = store_conf.get("max_workers", 1 if engine == "camoufox" else default_conf.get("default_max_workers", 2))
+    delay_sec = store_conf.get("delay_seconds", 1.5 if engine == "camoufox" else default_conf.get("default_delay_seconds", 0.5))
+    timeout_sec = store_conf.get("timeout_seconds", 45.0 if engine == "camoufox" else default_conf.get("default_timeout_seconds", 8.0))
+    store_limiter = rate_limiter.create_store_limiter(store_name)
+    results: List[Dict[str, Any]] = []
+
+    if engine == "camoufox":
+        from stores.nordstrom.camoufox_solver import create_nordstrom_browser
+        log_info(f"[{store_name.upper()}] Launching Camoufox stealth browser worker for {len(store_items)} items...")
+        try:
+            with create_nordstrom_browser(headless=True) as browser:
+                page = browser.new_page()
+                for idx, item in enumerate(store_items, 1):
+                    res = poll_single_product(
+                        product_stub=item,
+                        store_mod=store_mod,
+                        client=None,
+                        forex_rate=forex_rate,
+                        delay_seconds=delay_sec,
+                        dry_run=dry_run,
+                        store_name=store_name,
+                        store_rate_limiter=store_limiter,
+                        browser_page=page
+                    )
+                    results.append(res)
+                    log_info(f"[{store_name.upper()} {idx:2d}/{len(store_items)}] {res.get('handle', item.get('id'))[:28]:28s} | {res.get('status', 'unknown'):7s} | {res.get('availability', 'unknown'):12s} | ${res.get('current_source_price')} | {res.get('elapsed_ms', 0):.0f}ms")
+                    time.sleep(delay_sec)
+        except Exception as b_exc:
+            log_error(f"[{store_name.upper()}] Camoufox worker error: {b_exc}")
+        finally:
+            log_info(f"[{store_name.upper()}] Camoufox stealth browser closed.")
+    else:
+        log_info(f"[{store_name.upper()}] Polling {len(store_items)} items via HTTP pool (workers={max_workers}, delay={delay_sec}s)...")
+        with create_http_client(timeout_seconds=timeout_sec) as client:
+            with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                future_to_item = {
+                    executor.submit(
+                        poll_single_product,
+                        item,
+                        store_mod,
+                        client,
+                        forex_rate,
+                        delay_sec,
+                        dry_run,
+                        store_name,
+                        store_limiter,
+                        None
+                    ): item
+                    for item in store_items
+                }
+                for idx, future in enumerate(as_completed(future_to_item), 1):
+                    try:
+                        res = future.result()
+                    except Exception as thread_exc:
+                        failed_stub = future_to_item[future]
+                        res = {
+                            "status": "error",
+                            "id": failed_stub.get("id"),
+                            "handle": failed_stub.get("handle"),
+                            "store": store_name,
+                            "error": str(thread_exc),
+                            "elapsed_ms": 0.0,
+                            "has_changed": False
+                        }
+                    results.append(res)
+                    if idx % 10 == 0 or idx == len(store_items):
+                        log_info(f"[{store_name.upper()} {idx:3d}/{len(store_items)}] {res.get('handle', '')[:28]:28s} | {res.get('status', 'unknown'):7s} | {res.get('availability', 'unknown'):12s} | ${res.get('current_source_price')} | {res.get('elapsed_ms', 0):.0f}ms")
+
+    return results
 
 
 def run_catalog_sync(
@@ -360,84 +450,67 @@ def run_catalog_sync(
     total_due = len(due_products)
     completed = 0
 
-    for store_name, store_items in by_store.items():
-        store_mod = resolve_store_delta_module(store_name)
-        if not store_mod:
-            log_warning(f"[SKIP] Skipping {len(store_items)} items for unsupported store '{store_name}'.")
-            errors += len(store_items)
-            completed += len(store_items)
-            continue
+    log_info(f"Launching parallel store sync across {len(by_store)} active stores: {list(by_store.keys())}")
 
-        store_conf = config.get("store_configs", {}).get(store_name, {})
-        max_workers = store_conf.get("max_workers", config.get("default_max_workers", 2))
-        delay_sec = store_conf.get("delay_seconds", config.get("default_delay_seconds", 0.5))
-        timeout_sec = store_conf.get("timeout_seconds", config.get("default_timeout_seconds", 8.0))
+    # Launch all store batches in parallel threads (JW PEI HTTP pool + Nordstrom Camoufox browser worker)
+    with ThreadPoolExecutor(max_workers=max(len(by_store), 1)) as store_executor:
+        store_futures = {}
+        for store_name, store_items in by_store.items():
+            store_mod = resolve_store_delta_module(store_name)
+            if not store_mod:
+                log_warning(f"[SKIP] Skipping {len(store_items)} items for unsupported store '{store_name}'.")
+                errors += len(store_items)
+                completed += len(store_items)
+                continue
 
-        log_info(f"Checking {len(store_items)} products for '{store_name}' (workers={max_workers}, delay={delay_sec}s, timeout={timeout_sec}s)")
+            store_conf = config.get("store_configs", {}).get(store_name, {})
+            store_futures[store_executor.submit(
+                sync_store_batch,
+                store_name,
+                store_items,
+                store_mod,
+                forex_rate,
+                store_conf,
+                config,
+                dry_run
+            )] = (store_name, len(store_items))
 
-        # Create dedicated per-store rate limiter handle
-        store_limiter = rate_limiter.create_store_limiter(store_name)
+        for future in as_completed(store_futures):
+            st_name, st_count = store_futures[future]
+            try:
+                batch_results = future.result()
+            except Exception as batch_exc:
+                log_error(f"Store batch '{st_name}' encountered unhandled error: {batch_exc}")
+                errors += st_count
+                completed += st_count
+                continue
 
-        with create_http_client(timeout_seconds=timeout_sec) as client:
-            with ThreadPoolExecutor(max_workers=max_workers) as executor:
-                future_to_item = {
-                    executor.submit(
-                        poll_single_product,
-                        item,
-                        store_mod,
-                        client,
-                        forex_rate,
-                        delay_sec,
-                        dry_run,
-                        store_name,
-                        store_limiter
-                    ): item
-                    for item in store_items
-                }
+            for res in batch_results:
+                completed += 1
+                latencies.append(res.get("elapsed_ms", 0))
+                status = res.get("status")
 
-                for future in as_completed(future_to_item):
-                    completed += 1
-                    try:
-                        res = future.result()
-                    except Exception as thread_exc:
-                        errors += 1
-                        failed_stub = future_to_item[future]
-                        log_error(f"Worker thread crashed checking {failed_stub.get('handle', failed_stub.get('id'))}: {thread_exc}")
-                        continue
+                if status == "error":
+                    errors += 1
+                    log_error(f"Sync error for {res.get('handle', res.get('id'))}: {res.get('error')}")
+                elif status in ("rate_limited", "blocked"):
+                    errors += 1
+                    rate_limited_count += 1
+                    log_error(f"Block/RateLimit ({status}) for store '{res.get('store', st_name)}': {res.get('handle', res.get('id'))} - {res.get('error')}")
+                elif status in ("success", "not_found"):
+                    avail = res.get("availability")
+                    if avail == "in_stock":
+                        in_stock_count += 1
+                    else:
+                        out_stock_count += 1
 
-                    if not res or not isinstance(res, dict):
-                        errors += 1
-                        log_error(f"Received invalid result for product {future_to_item[future].get('id')}")
-                        continue
+                    if res.get("price_changed"):
+                        price_shifts += 1
+                        log_delta("PRICE", res.get('handle', 'unknown'), f"${res.get('old_source_price')} -> ${res.get('current_source_price')} USD")
 
-                    latencies.append(res.get("elapsed_ms", 0))
-                    status = res.get("status")
-
-                    if status == "error":
-                        errors += 1
-                        log_error(f"Sync error for {res.get('handle', res.get('id'))}: {res.get('error')}")
-                    elif status == "rate_limited":
-                        errors += 1
-                        rate_limited_count += 1
-                        log_error(f"Rate limit exceeded (HTTP 429) for store '{store_name}': product {res.get('handle', res.get('id'))} - {res.get('error')}")
-                    elif status in ("success", "not_found"):
-                        avail = res.get("availability")
-                        if avail == "in_stock":
-                            in_stock_count += 1
-                        else:
-                            out_stock_count += 1
-
-                        if res.get("price_changed"):
-                            price_shifts += 1
-                            log_delta("PRICE", res.get('handle', 'unknown'), f"${res.get('old_source_price')} -> ${res.get('current_source_price')} USD")
-
-                        if res.get("stock_changed"):
-                            stock_shifts += 1
-                            log_delta("STOCK", res.get('handle', 'unknown'), f"{res.get('old_availability')} -> {avail}")
-
-                    log_interval = 1 if total_due <= 25 else (10 if total_due <= 100 else 25)
-                    if completed % log_interval == 0 or completed == total_due:
-                        log_info(f"[{completed:3d}/{total_due}] Progress ({store_name}): {res.get('handle', '')[:32]} | {res.get('availability', 'unknown')} | {res.get('elapsed_ms', 0)}ms")
+                    if res.get("stock_changed"):
+                        stock_shifts += 1
+                        log_delta("STOCK", res.get('handle', 'unknown'), f"{res.get('old_availability')} -> {avail}")
 
     total_time = time.time() - start_time
     avg_latency = sum(latencies) / len(latencies) if latencies else 0.0

@@ -104,6 +104,7 @@ All engineering decisions are recorded and immutably numbered in [`docs/adr/`](.
 | **[0008](./docs/adr/0008-systematic-2-hour-delta-freshner-and-timestamp-scheduling.md)** | Systematic 2-Hour Delta Freshner & Timestamp-Based Scheduling | Accepted |
 | **[0009](./docs/adr/0009-centralized-logging-and-background-scheduler-daemon.md)** | Centralized Structured Logging & Background Scheduler Daemon | Accepted |
 | **[0010](./docs/adr/0010-store-agnostic-rate-limiting-circuit-breaker-and-browser-fingerprinting.md)** | Store-Agnostic Rate Limiting, Circuit Breakers & Browser Fingerprinting | Accepted |
+| **[0011](./docs/adr/0011-zero-cost-local-stealth-browser-kasada-solving-and-parallel-multi-store-scheduling.md)** | Zero-Cost Local Stealth Browser Kasada Solving & Parallel Multi-Store Delta Scheduling | Accepted |
 
 ---
 

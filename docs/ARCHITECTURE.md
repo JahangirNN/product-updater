@@ -72,9 +72,11 @@ flowchart TD
   - **Timestamp-Based Scheduling**: Evaluates `last_verified_at` per product. Products checked < 60 minutes ago are automatically skipped with 0 network calls.
   - **Centralized Structured Logging**: Uses `storage/logger.py` (Loguru) with dual sinks (`logs/freshner.log` for operational metrics, `logs/errors.log` for isolated diagnostics). See [`docs/LOGGING_SPEC.md`](./LOGGING_SPEC.md).
   - **Tooling**:
-    - Universal Dispatcher (`sync_catalog.py` with dynamic store routing to `stores/{store}/delta.py`).
+    - Universal Dispatcher (`sync_catalog.py` with parallel multi-store dispatching across HTTP and local browser engines).
+    - Multi-Store Concurrency: Fast HTTP stores (JW PEI) and local stealth browser stores (Nordstrom) run concurrently via dedicated store workers.
+    - Zero-Cost Stealth Browser Engine: Local C++ Firefox solver (`camoufox` + `playwright`) for client-side Kasada challenges and granular per-size stock extraction (`shipQuantity`).
     - Background Scheduler Daemon (`scripts/run_freshner_daemon.py` with responsive heartbeat sleeping and signal handling).
-    - Concurrent ThreadPoolExecutor with polite pacing (80ms delay, exponential backoff on HTTP 429).
+    - Rate Limiter & Circuit Breaker (`storage/rate_limiter.py` with polite pacing, jitter backoff, and store isolation).
     - Shopify Delta Queue (`storage/db/history/delta_events.json`).
 
 ---
