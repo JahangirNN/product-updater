@@ -288,12 +288,26 @@ def sync_store_batch(
     results: List[Dict[str, Any]] = []
 
     if engine == "camoufox":
-        from stores.nordstrom.camoufox_solver import create_nordstrom_browser
+        if store_name == "nordstrom":
+            from stores.nordstrom.camoufox_solver import create_nordstrom_browser as create_store_browser
+        elif store_name == "michaelkors":
+            from stores.michaelkors.camoufox_solver import create_michaelkors_browser as create_store_browser
+        else:
+            from camoufox.sync_api import Camoufox
+            create_store_browser = lambda headless=True: Camoufox(headless=headless)
+
         log_info(f"[{store_name.upper()}] Launching Camoufox stealth browser worker for {len(store_items)} items...")
         try:
-            with create_nordstrom_browser(headless=True) as browser:
+            with create_store_browser(headless=True) as browser:
                 page = browser.new_page()
                 for idx, item in enumerate(store_items, 1):
+                    # If page crashed or closed in previous iteration, reopen new page
+                    try:
+                        if page.is_closed():
+                            page = browser.new_page()
+                    except Exception:
+                        page = browser.new_page()
+
                     res = poll_single_product(
                         product_stub=item,
                         store_mod=store_mod,
@@ -305,6 +319,16 @@ def sync_store_batch(
                         store_rate_limiter=store_limiter,
                         browser_page=page
                     )
+
+                    # If page suffered network disconnection (NS_ERROR), refresh page instance for next item
+                    err_str = str(res.get("error", ""))
+                    if "NS_ERROR" in err_str or "connection" in err_str.lower():
+                        try:
+                            page.close()
+                        except Exception:
+                            pass
+                        page = browser.new_page()
+
                     results.append(res)
                     log_info(f"[{store_name.upper()} {idx:2d}/{len(store_items)}] {res.get('handle', item.get('id'))[:28]:28s} | {res.get('status', 'unknown'):7s} | {res.get('availability', 'unknown'):12s} | ${res.get('current_source_price')} | {res.get('elapsed_ms', 0):.0f}ms")
                     time.sleep(delay_sec)

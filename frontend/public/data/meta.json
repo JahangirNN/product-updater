@@ -1,22 +1,57 @@
 {
-  "total_products": 479,
-  "in_stock": 473,
-  "out_of_stock": 6,
+  "total_products": 1009,
+  "in_stock": 1000,
+  "out_of_stock": 9,
   "stores": [
     "JW PEI",
+    "Michael Kors",
     "Nordstrom"
   ],
   "groups": [
+    "Belts",
+    "Flats",
     "Handbags",
-    "Shoes"
+    "Sandals",
+    "Shoes",
+    "Sneakers",
+    "Sunglasses",
+    "Wallets"
   ],
   "subgroups": [
+    "Acetate Frame Sunglasses",
+    "Backpacks",
+    "Ballet Flats",
+    "Billfolds",
+    "Blue Light Eyewear",
+    "Boots & Booties",
+    "Braided Belts",
+    "Buckle Belts",
+    "Card Cases & Holders",
     "Classic Handbags",
+    "Clutches & Evening",
+    "Compact Wallets",
+    "Continental & Flap Wallets",
     "Crossbody Bags",
+    "Designer Sunglasses",
+    "Fashion Sneakers",
+    "Heeled & Flat Sandals",
+    "Lace-Up Trainers",
+    "Leather Belts",
     "Lifestyle & Casual",
+    "Loafers",
+    "Loafers & Flats",
+    "Metal Frame Sunglasses",
     "Mini Bags",
+    "Moccasins",
+    "Platform Sandals",
+    "Platform Sneakers",
+    "Reversible Belts",
     "Running Shoes",
+    "Satchels & Top Handles",
     "Shoulder Bags",
+    "Slides & Mules",
+    "Slip-On Sneakers",
+    "Strappy & Gladiator",
     "Tennis & Court",
     "Top Handle Bags",
     "Tote Bags",
@@ -25,12 +60,14 @@
     "Vanity & Clutches",
     "Wallets & Small Goods",
     "Waterproof Footwear",
-    "Woven & Textured"
+    "Wedge & Espadrille Sandals",
+    "Woven & Textured",
+    "Wristlets"
   ],
   "price_range_inr": {
-    "min": 5596.0,
-    "max": 31203.0
+    "min": 573,
+    "max": 53440
   },
-  "last_updated": "2026-09-10T14:16:14Z",
+  "last_updated": "2026-09-11T18:46:34Z",
   "generated_by": "product-updater-export-pipeline"
 }

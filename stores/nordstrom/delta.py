@@ -142,6 +142,7 @@ def check_price_and_stock(
                 "is_active": curr_avail == "in_stock",
                 "price_changed": price_changed,
                 "stock_changed": stock_changed,
+                "size_stock": size_stock,
                 "variants_delta": variants_delta,
                 "elapsed_ms": elapsed_ms
             }

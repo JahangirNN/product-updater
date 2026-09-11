@@ -25,6 +25,81 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
     source_store = product.get("source_store", "").lower()
     groups = [g.lower() for g in product.get("groups", [])]
 
+    # Michael Kors multi-category taxonomy
+    if source_store == "michaelkors":
+        cat = product.get("product_type", "Handbags")
+        text = f"{title_lower} {handle_lower}"
+        if cat == "Handbags":
+            if any(w in text for w in ["tote", "shopper"]):
+                return "Tote Bags"
+            elif any(w in text for w in ["crossbody", "camera bag", "messenger"]):
+                return "Crossbody Bags"
+            elif any(w in text for w in ["shoulder", "pochette", "hobo"]):
+                return "Shoulder Bags"
+            elif any(w in text for w in ["satchel", "top handle", "top-handle"]):
+                return "Satchels & Top Handles"
+            elif any(w in text for w in ["clutch", "wristlet", "evening"]):
+                return "Clutches & Evening"
+            elif any(w in text for w in ["backpack"]):
+                return "Backpacks"
+            return "Shoulder Bags"
+        elif cat == "Wallets":
+            if any(w in text for w in ["card case", "cardholder", "card"]):
+                return "Card Cases & Holders"
+            elif any(w in text for w in ["wristlet"]):
+                return "Wristlets"
+            elif any(w in text for w in ["billfold"]):
+                return "Billfolds"
+            elif any(w in text for w in ["continental", "flap", "zip around", "zip-around", "large"]):
+                return "Continental & Flap Wallets"
+            return "Compact Wallets"
+        elif cat in ("Sneakers", "Shoes"):
+            if any(w in text for w in ["boot", "bootie"]):
+                return "Boots & Booties"
+            elif any(w in text for w in ["trainer", "lace-up", "lace up"]):
+                return "Lace-Up Trainers"
+            elif any(w in text for w in ["slip-on", "slip on"]):
+                return "Slip-On Sneakers"
+            elif any(w in text for w in ["platform"]):
+                return "Platform Sneakers"
+            return "Fashion Sneakers"
+        elif cat == "Sandals":
+            if any(w in text for w in ["wedge", "espadrille"]):
+                return "Wedge & Espadrille Sandals"
+            elif any(w in text for w in ["slide", "mule"]):
+                return "Slides & Mules"
+            elif any(w in text for w in ["gladiator", "strappy"]):
+                return "Strappy & Gladiator"
+            elif any(w in text for w in ["platform"]):
+                return "Platform Sandals"
+            return "Heeled & Flat Sandals"
+        elif cat == "Flats":
+            if any(w in text for w in ["loafer"]):
+                return "Loafers"
+            elif any(w in text for w in ["moccasin"]):
+                return "Moccasins"
+            elif any(w in text for w in ["ballet", "flat"]):
+                return "Ballet Flats"
+            return "Loafers & Flats"
+        elif cat == "Sunglasses":
+            if any(w in text for w in ["blue light", "optical"]):
+                return "Blue Light Eyewear"
+            color = specs.get("Color", "").lower()
+            if any(c in color for c in ["gold", "silver", "rose gold", "metal"]):
+                return "Metal Frame Sunglasses"
+            elif any(c in color for c in ["tortoise", "horn", "black", "tort", "blush horn", "dark tortoise"]):
+                return "Acetate Frame Sunglasses"
+            return "Designer Sunglasses"
+        elif cat == "Belts":
+            if any(w in text for w in ["reversible"]):
+                return "Reversible Belts"
+            elif any(w in text for w in ["buckle", "logo"]):
+                return "Buckle Belts"
+            elif any(w in text for w in ["braided", "woven"]):
+                return "Braided Belts"
+            return "Leather Belts"
+        return "Classic Luxury"
+
     # Footwear taxonomy for Nordstrom / On Running
     if source_store == "nordstrom" or "shoes" in groups or "footwear" in product.get("tags", []):
         if "waterproof" in title_lower or "waterproof" in handle_lower:
@@ -97,13 +172,16 @@ def export_catalog(
                 s_store = prod.get("source_store", "").lower()
                 if s_store == "jwpei":
                     store_display = "JW PEI"
+                    group_display = "Handbags"
                 elif s_store == "nordstrom":
                     store_display = "Nordstrom"
+                    group_display = "Shoes"
+                elif s_store == "michaelkors":
+                    store_display = "Michael Kors"
+                    group_display = prod.get("product_type") or "Handbags"
                 else:
                     store_display = prod.get("vendor", "Other")
-
-                groups = prod.get("groups", ["Handbags"])
-                group_display = groups[0].capitalize() if groups else "Handbags"
+                    group_display = prod.get("product_type", "Handbags")
                 subgroup_display = classify_subgroup(prod)
 
                 prod["store_display"] = store_display

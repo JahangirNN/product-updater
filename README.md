@@ -105,6 +105,7 @@ All engineering decisions are recorded and immutably numbered in [`docs/adr/`](.
 | **[0009](./docs/adr/0009-centralized-logging-and-background-scheduler-daemon.md)** | Centralized Structured Logging & Background Scheduler Daemon | Accepted |
 | **[0010](./docs/adr/0010-store-agnostic-rate-limiting-circuit-breaker-and-browser-fingerprinting.md)** | Store-Agnostic Rate Limiting, Circuit Breakers & Browser Fingerprinting | Accepted |
 | **[0011](./docs/adr/0011-zero-cost-local-stealth-browser-kasada-solving-and-parallel-multi-store-scheduling.md)** | Zero-Cost Local Stealth Browser Kasada Solving & Parallel Multi-Store Delta Scheduling | Accepted |
+| **[0012](./docs/adr/0012-michaelkors-store-onboarding-and-sfcc-demandware-integration.md)** | Michael Kors Store Onboarding, SFCC Demandware Ingestion & Multi-Category Pipeline Architecture | Accepted |
 
 ---
 
@@ -118,3 +119,4 @@ All engineering decisions are recorded and immutably numbered in [`docs/adr/`](.
 - [`docs/CODING_STANDARDS.md`](./docs/CODING_STANDARDS.md): Pure functions, typing standards, and atomic file writes.
 - `stores/jwpei/LEARNINGS.md`: Living retailer knowledge base for JW PEI (query filters, swatch IDs, fast endpoints).
 - `stores/nordstrom/LEARNINGS.md`: Living retailer knowledge base for Nordstrom (On shoes DOM, size conversion matrix, query filters).
+- `stores/michaelkors/LEARNINGS.md`: Living retailer knowledge base for Michael Kors (SFCC Demandware, geolocation pinning, multi-category taxonomy).

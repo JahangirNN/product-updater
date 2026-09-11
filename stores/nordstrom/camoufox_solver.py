@@ -152,14 +152,15 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
                 "message": "Product page returned HTTP 404"
             }
 
-        # Initial wait for Kasada proof-of-work
-        page.wait_for_timeout(4000)
+        # Adaptive wait for Kasada proof-of-work resolution
+        # Kasada typically takes between 4 to 8 seconds to solve client-side proof-of-work
         html = page.content()
-
-        # Adaptive wait if Kasada challenge is active
-        if "istlWas" in html:
-            page.wait_for_timeout(5000)
+        for _ in range(6):  # up to 6 x 2000ms = 12s max
+            page.wait_for_timeout(2000)
             html = page.content()
+            page_title = page.title().strip()
+            if "istlWas" not in html and len(page_title) > 3:
+                break
 
         # Check if still blocked
         if "istlWas" in html or not page.title().strip():

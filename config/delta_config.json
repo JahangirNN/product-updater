@@ -22,6 +22,15 @@
       "delay_seconds": 1.5,
       "timeout_seconds": 45.0,
       "endpoint_pattern": "https://www.nordstrom.com/s/{handle}/{id}"
+    },
+    "michaelkors": {
+      "check_interval_minutes": 60,
+      "engine": "camoufox",
+      "max_workers": 1,
+      "requests_per_second": 0.5,
+      "delay_seconds": 1.5,
+      "timeout_seconds": 30.0,
+      "endpoint_pattern": "https://www.michaelkors.com/{handle}/{id}.html"
     }
   },
   "shopify_sync": {
