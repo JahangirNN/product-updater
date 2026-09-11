@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/454852bf-92f2-4be2-95d8-32fac6cc7c9a/MK-1089-0040-0040_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/454852bf-92f2-4be2-95d8-32fac6cc7c9a/MK-1089-0040-0040_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/e73b3375-98f5-4bdf-9d88-87fe3af81779/MK-2276U-0001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b2c96921-9ed8-4e47-98d5-15d6851b7a4e/MK-2276U-0001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/990d24be-0ef8-4c7c-9450-b864eb4e9564/MK-2276U-0001-0001_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/445abd71-07e5-4007-8f57-2d371e7097ff/MK-2276U-0001-0001_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/19b217a6-6973-494f-93c3-24d4ef744f04/MK-2276U-0001-0001_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-2276U",
       "title": "Light Tort",
       "price": "15187.00",
-      "compare_at_price": null,
+      "compare_at_price": "15187.00",
       "source_price": 159.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/454852bf-92f2-4be2-95d8-32fac6cc7c9a/MK-1089-0040-0040_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Grand Cayman Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Grand Cayman Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,15 +59,27 @@
     "StyleNumber": "MK-2276U",
     "Color": "Light Tort",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Cat-eye sunglasses",
+      "Plastic frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #",
+      "Verified Purchaser",
+      "bvseo\\_sdk, dw\\_cartridge, 18.2.0, p\\_sdk\\_3.2.0"
+    ]
   },
   "groups": [
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-11T20:45:07Z",
+  "last_verified_at": "2026-09-11T22:47:59Z",
   "id": "7ee38e3c7c443e6d",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Grand Cayman Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T22:47:59Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Grand Cayman Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 159.0,
+  "compare_at_price": 15187
 }

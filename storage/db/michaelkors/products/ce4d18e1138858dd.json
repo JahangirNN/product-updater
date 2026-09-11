@@ -13,21 +13,25 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/a1f90665-d89d-4bf0-bd19-257aa50d614e/MK-2098U-1218-0255_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/b43fa43e-0c83-404c-94b8-baecc8c6c2a5/MK-2270U-0001-0001_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/a1f90665-d89d-4bf0-bd19-257aa50d614e/MK-2098U-1218-0255_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b43fa43e-0c83-404c-94b8-baecc8c6c2a5/MK-2270U-0001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d7b42896-824e-44a1-841b-6c9209f2f10b/MK-2270U-0001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/4f6c72b6-0997-4cfb-b867-0492748a7d67/MK-2270U-0001-0001_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/2942d810-b608-404f-aff0-1bf510c74061/MK-2270U-0001-0001_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/bfc52ee1-af8a-4bf9-b32c-c1555e30d4dd/MK-2270U-0001-0001_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-2270U",
       "title": "Tortoise",
       "price": "10411.00",
-      "compare_at_price": null,
+      "compare_at_price": "10411.00",
       "source_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/a1f90665-d89d-4bf0-bd19-257aa50d614e/MK-2098U-1218-0255_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/b43fa43e-0c83-404c-94b8-baecc8c6c2a5/MK-2270U-0001-0001_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -72,9 +76,11 @@
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:11:01Z",
+  "last_verified_at": "2026-09-11T23:15:56Z",
   "id": "ce4d18e1138858dd",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Tokyo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>"
+  "updated_at": "2026-09-11T23:15:56Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Tokyo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 109.0,
+  "compare_at_price": 10411
 }

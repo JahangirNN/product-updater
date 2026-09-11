@@ -13,21 +13,24 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/130b5309-ebcd-4c6b-9dfd-80f7613e8f8d/30T5G3XB2B-252-1335_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/130b5309-ebcd-4c6b-9dfd-80f7613e8f8d/30T5G3XB2B-252-1335_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/130b5309-ebcd-4c6b-9dfd-80f7613e8f8d/30T5G3XB2B-252-1335_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/a3e77d5e-a9dd-424c-8a07-947edea123bf/30T5G3XB2B-252-1335_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/25729abc-f149-4eb3-8ae1-a70858747de2/30T5G3XB2B-252-1335_4-tif"
   ],
   "variants": [
     {
       "sku": "30T5G3XB2B",
       "title": "Vanilla/Acorn",
       "price": "28606.00",
-      "compare_at_price": null,
+      "compare_at_price": "28606.00",
       "source_price": 299.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/130b5309-ebcd-4c6b-9dfd-80f7613e8f8d/30T5G3XB2B-252-1335_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Sable Medium Signature Logo Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Sable Medium Signature Logo Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 9.75”W X 12.75”H X 5.25”D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,15 +57,32 @@
     "StyleNumber": "30T5G3XB2B",
     "Color": "Vanilla/Acorn",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "9.75”W X 12.75”H X 5.25”D",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Backpack",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Trim: 60% polyurethane/20% polyester/20% cotton",
+      "Gold-tone hardware",
+      "9.75”W X 12.75”H X 5.25”D",
+      "Exterior details: 3 front zip pockets, trolley sleeve, 2 slip pockets",
+      "Interior details: 2 front slip pockets",
+      "Lining: 100% polyester",
+      "Zip fastening"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:18:32Z",
+  "last_verified_at": "2026-09-11T23:24:24Z",
   "id": "e4201f595fde266d",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Sable Medium Signature Logo Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:24:24Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Sable Medium Signature Logo Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 9.75”W X 12.75”H X 5.25”D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 299.5,
+  "compare_at_price": 28606,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
 }

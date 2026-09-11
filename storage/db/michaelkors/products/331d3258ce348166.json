@@ -13,21 +13,24 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/34b42117-41fd-4784-8dca-8906812dc9e4/32F6SJ6D2L-040-0040_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/34b42117-41fd-4784-8dca-8906812dc9e4/32F6SJ6D2L-040-0040_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/34b42117-41fd-4784-8dca-8906812dc9e4/32F6SJ6D2L-040-0040_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/052f3843-2f00-4b40-b1b4-68a85ec97d35/32F6SJ6D2L-040-0040_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/f3a0a369-be34-4c59-b59a-6b1ff93a6a9c/32F6SJ6D2L-040-0040_7-tif"
   ],
   "variants": [
     {
       "sku": "32F6SJ6D2L",
       "title": "0040",
       "price": "7593.00",
-      "compare_at_price": null,
+      "compare_at_price": "7593.00",
       "source_price": 79.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/34b42117-41fd-4784-8dca-8906812dc9e4/32F6SJ6D2L-040-0040_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Metallic Leather Card Case With Charms by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Metallic Leather Card Case With Charms by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8.75”W X 4.25&quot;H X 0.75”D</li>\n      <li><strong>Material:</strong> Leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Wallets",
@@ -54,7 +57,21 @@
     "StyleNumber": "32F6SJ6D2L",
     "Color": "0040",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "8.75”W X 4.25\"H X 0.75”D",
+    "Material": "Leather, 100% leather",
+    "DetailsBullets": [
+      "Card case",
+      "Leather",
+      "100% leather",
+      "Silver-tone hardware",
+      "8.75”W X 4.25\"H X 0.75”D",
+      "Exterior details: 4 card slots",
+      "Interior details: center slip pocket",
+      "Lining: 100% polyester",
+      "Imported",
+      "Style #"
+    ]
   },
   "groups": [
     "wallets",
@@ -64,5 +81,8 @@
   "id": "331d3258ce348166",
   "created_at": "2026-09-11T18:30:37Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Metallic Leather Card Case With Charms by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Metallic Leather Card Case With Charms by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8.75”W X 4.25&quot;H X 0.75”D</li>\n      <li><strong>Material:</strong> Leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 79.5,
+  "compare_at_price": 7593,
+  "material": "Leather, 100% leather"
 }

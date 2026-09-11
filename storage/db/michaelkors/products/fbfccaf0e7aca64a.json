@@ -7,23 +7,25 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 36247,
-  "source_price": 379.5,
+  "current_price": 23783,
+  "source_price": 249.0,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/65b3e7a9-dbbb-4174-8b86-4d5ceb3922cd/30S6SY5H3W-003-0799_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/65b3e7a9-dbbb-4174-8b86-4d5ceb3922cd/30S6SY5H3W-003-0799_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/65b3e7a9-dbbb-4174-8b86-4d5ceb3922cd/30S6SY5H3W-003-0799_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/a68536fd-50b5-466d-93cd-e9df0beb650d/30S6SY5H3W-003-0799_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/2afa9942-4be2-454a-a25c-8c365d583ae3/30S6SY5H3W-003-0799_4-tif"
   ],
   "variants": [
     {
       "sku": "30S6SY5H3W",
       "title": "Brn/Acorn",
-      "price": "36247.00",
-      "compare_at_price": null,
-      "source_price": 379.5,
+      "price": "23783.00",
+      "compare_at_price": "36247.00",
+      "source_price": 249.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -46,7 +48,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Nolita Large Crocheted Hobo Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nolita Large Crocheted Hobo Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 15.75”W X 11.5” H X 3.25”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 10.75&quot;</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,15 +56,31 @@
     "StyleNumber": "30S6SY5H3W",
     "Color": "Brn/Acorn",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "15.75”W X 11.5” H X 3.25”D",
+    "HandleDrop": "Handle drop: 10.75\"",
+    "DetailsBullets": [
+      "Shoulder bag",
+      "Polypropylene",
+      "100% polypropylene",
+      "Trim: 60% polyurethane/40% polyester",
+      "Silver-tone hardware",
+      "15.75”W X 11.5” H X 3.25”D",
+      "Handle drop: 10.75\"",
+      "Interior details: back slip pocket",
+      "Snap fastening",
+      "Dust bag not included"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:26:23Z",
+  "last_verified_at": "2026-09-11T23:34:07Z",
   "id": "fbfccaf0e7aca64a",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Nolita Large Crocheted Hobo Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:34:07Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nolita Large Crocheted Hobo Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 15.75”W X 11.5” H X 3.25”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 10.75&quot;</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 379.5,
+  "compare_at_price": 36247
 }

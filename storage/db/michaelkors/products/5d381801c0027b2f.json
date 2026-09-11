@@ -15,14 +15,15 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/55631e83-006c-47e4-883c-9fa5101ccfa2/32F5GJ6F6L-001-0001_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/55631e83-006c-47e4-883c-9fa5101ccfa2/32F5GJ6F6L-001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/55631e83-006c-47e4-883c-9fa5101ccfa2/32F5GJ6F6L-001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/2dab1fd5-e36e-41c8-b9f0-b8486d3c4b81/32F5GJ6F6L-001-0001_2-tif"
   ],
   "variants": [
     {
       "sku": "32F5GJ6F6L",
       "title": "Vanilla/Acorn",
       "price": "7593.00",
-      "compare_at_price": null,
+      "compare_at_price": "7593.00",
       "source_price": 79.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +47,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Medium Pebbled Leather Wristlet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Medium Pebbled Leather Wristlet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8.5” W x 4.75” H x 1.25” D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 7.5&quot;</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Wallets",
@@ -54,7 +55,22 @@
     "StyleNumber": "32F5GJ6F6L",
     "Color": "Vanilla/Acorn",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "8.5” W x 4.75” H x 1.25” D",
+    "HandleDrop": "Handle drop: 7.5\"",
+    "Material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather",
+    "DetailsBullets": [
+      "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+      "Wristlet",
+      "Pebbled leather",
+      "100% leather",
+      "Trim: 75% polyurethane/25% polyester",
+      "Gold-tone hardware",
+      "8.5” W x 4.75” H x 1.25” D",
+      "Handle drop: 7.5\"",
+      "Exterior details: front slip pocket",
+      "Interior details: back slip pocket"
+    ]
   },
   "groups": [
     "wallets",
@@ -64,5 +80,8 @@
   "id": "5d381801c0027b2f",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:37:13Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Medium Pebbled Leather Wristlet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Medium Pebbled Leather Wristlet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8.5” W x 4.75” H x 1.25” D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 7.5&quot;</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 79.5,
+  "compare_at_price": 7593,
+  "material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather"
 }

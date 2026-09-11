@@ -13,21 +13,25 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7b381cf9-7652-40c0-9927-2ff72954f03e/32F6S24C1C-030-0012_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/98332506-de26-4ccb-a417-e7f423ccf82a/32S5GYTC5L-230-0230_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7b381cf9-7652-40c0-9927-2ff72954f03e/32F6S24C1C-030-0012_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/98332506-de26-4ccb-a417-e7f423ccf82a/32S5GYTC5L-230-0230_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/44b58acf-74fa-43c3-9ded-0282214893d1/32S5GYTC5L-230-0230_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7af5bfc2-5926-4a0b-86a0-d13233bd4af8/32S5GYTC5L-230-0230_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/2b57a065-bac3-4d77-8efa-2300803a3e1e/32S5GYTC5L-230-0230_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/5b0ce6fc-fe84-4cec-9699-a63e1be369a2/32S5GYTC5L-230-0230_6-tif"
   ],
   "variants": [
     {
       "sku": "32S5GYTC5L",
       "title": "Black",
       "price": "18100.00",
-      "compare_at_price": null,
+      "compare_at_price": "18100.00",
       "source_price": 189.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7b381cf9-7652-40c0-9927-2ff72954f03e/32F6S24C1C-030-0012_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/98332506-de26-4ccb-a417-e7f423ccf82a/32S5GYTC5L-230-0230_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Bryant Medium Pebbled Leather Camera Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bryant Medium Pebbled Leather Camera Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 7.5”W X 5”HX 3.25”D</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +58,21 @@
     "StyleNumber": "32S5GYTC5L",
     "Color": "Black",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "7.5”W X 5”HX 3.25”D",
+    "Material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather",
+    "DetailsBullets": [
+      "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+      "Crossbody bag",
+      "Pebbled leather",
+      "100% leather",
+      "Trim: 100% cotton",
+      "Gold-tone hardware",
+      "7.5”W X 5”HX 3.25”D",
+      "Adjustable strap: 13\"-23\"",
+      "Exterior details: back slip pocket, detachable strap",
+      "Interior details: back slip pocket"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +82,8 @@
   "id": "9cc51d3d6c1ea9a8",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Bryant Medium Pebbled Leather Camera Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bryant Medium Pebbled Leather Camera Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 7.5”W X 5”HX 3.25”D</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 189.5,
+  "compare_at_price": 18100,
+  "material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather"
 }

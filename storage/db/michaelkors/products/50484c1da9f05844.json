@@ -15,14 +15,17 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/461830b8-1dca-42a7-b1dd-c0b86a0389cf/33F6GHDC2B-282-0301_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/461830b8-1dca-42a7-b1dd-c0b86a0389cf/33F6GHDC2B-282-0301_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/461830b8-1dca-42a7-b1dd-c0b86a0389cf/33F6GHDC2B-282-0301_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/23279548-2777-46c5-90c9-95a9f0ae7a20/33F6GHDC2B-282-0301_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/71182be7-b96b-4a71-b5c2-eb929d5ace75/33F6GHDC2B-282-0301_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/73e562e2-c7cc-4c6e-9ca3-dd9418b9d595/33F6GHDC2B-282-0301_4-tif"
   ],
   "variants": [
     {
       "sku": "33F6GHDC2B",
       "title": "0301",
       "price": "16190.00",
-      "compare_at_price": null,
+      "compare_at_price": "16190.00",
       "source_price": 169.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Hudson Signature Logo Camera Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Signature Logo Camera Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,20 @@
     "StyleNumber": "33F6GHDC2B",
     "Color": "0301",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Crossbody bag",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Trim: 90% coated canvas/9% polyester/1% polyurethane",
+      "Antique gold-tone hardware",
+      "Width: 8.2” (20.9cm); height: 5.3” (13.5cm); depth: 2.36” (6cm)",
+      "Exterior details: back zip pocket",
+      "Interior details: front zip pocket, phone slip pocket",
+      "Lining: 100% polyester",
+      "Zip fastening"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +80,8 @@
   "id": "50484c1da9f05844",
   "created_at": "2026-09-11T18:30:37Z",
   "updated_at": "2026-09-11T22:32:02Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Hudson Signature Logo Camera Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Signature Logo Camera Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 169.5,
+  "compare_at_price": 16190,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
 }

@@ -7,8 +7,8 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 573,
-  "source_price": 6.0,
+  "current_price": 955,
+  "source_price": 10.0,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
@@ -21,9 +21,9 @@
     {
       "sku": "MK0017",
       "title": "9999",
-      "price": "573.00",
-      "compare_at_price": null,
-      "source_price": 6.0,
+      "price": "955.00",
+      "compare_at_price": "955.00",
+      "source_price": 10.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -46,7 +46,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Leather Cleaner by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Leather Cleaner by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -60,9 +60,11 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T20:38:12Z",
+  "last_verified_at": "2026-09-11T22:40:47Z",
   "id": "678425f7345cabe5",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Leather Cleaner by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T22:40:47Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Leather Cleaner by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 10.0,
+  "compare_at_price": 955
 }

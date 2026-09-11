@@ -15,14 +15,18 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/15cb35ec-6441-4daa-be7a-85657bfd7927/33T6GJSM1L-282-0301_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/15cb35ec-6441-4daa-be7a-85657bfd7927/33T6GJSM1L-282-0301_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/15cb35ec-6441-4daa-be7a-85657bfd7927/33T6GJSM1L-282-0301_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/334556a9-af1a-4b56-9a6c-1862ed11202d/33T6GJSM1L-282-0301_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/3fbfecd0-c6da-4cdc-990f-47128fc420dc/33T6GJSM1L-282-0301_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ce08b960-6af8-40cc-86bc-a1fe8712d0f2/33T6GJSM1L-282-0301_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/69455693-702c-412d-99a9-ca3afb6fb2a2/33T6GJSM1L-282-0301_5-tif"
   ],
   "variants": [
     {
       "sku": "33T6GJSM1L",
       "title": "0301",
       "price": "19055.00",
-      "compare_at_price": null,
+      "compare_at_price": "19055.00",
       "source_price": 199.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Pebbled Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Pebbled Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 28&quot;</li>\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +58,21 @@
     "StyleNumber": "33T6GJSM1L",
     "Color": "0301",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "HandleDrop": "Handle drop: 28\"",
+    "Material": "Pebbled leather, 100% leather",
+    "DetailsBullets": [
+      "Crossbody bag",
+      "Pebbled leather",
+      "100% leather",
+      "Trim: 60% polyurethane/40% polyester",
+      "Antique gold-tone hardware",
+      "Width: 9.8” (24.8cm); height: 7.6” (19.3cm); depth: 2.3” (5.8cm)",
+      "Handle drop: 28\"",
+      "Adjustable strap: 15.5\"-28\"",
+      "Interior details: back slip pocket, phone pocket",
+      "Lining: 100% polyester"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +82,8 @@
   "id": "4c335fed5ddb7588",
   "created_at": "2026-09-11T18:30:37Z",
   "updated_at": "2026-09-11T22:30:35Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Pebbled Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Pebbled Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 28&quot;</li>\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 199.5,
+  "compare_at_price": 19055,
+  "material": "Pebbled leather, 100% leather"
 }

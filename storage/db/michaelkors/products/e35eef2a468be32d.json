@@ -7,27 +7,29 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Belts",
   "gender": "Men",
-  "current_price": 5540,
-  "source_price": 58.0,
+  "current_price": 12226,
+  "source_price": 128.0,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/8f0f519b-22fd-415f-ac2f-24437b1e384b/39T5LBLY0L-001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/52632932-e538-4569-a0a3-c156f6cc0846/30F6ANXS7E-230-0230_1-tif",
   "images": [
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/52632932-e538-4569-a0a3-c156f6cc0846/30F6ANXS7E-230-0230_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/8f0f519b-22fd-415f-ac2f-24437b1e384b/39T5LBLY0L-001-0001_1-tif"
   ],
   "variants": [
     {
       "sku": "39T5LBLY0L-S",
       "title": "S (32\") - 0001",
-      "price": "5540.00",
-      "compare_at_price": null,
-      "source_price": 58.0,
+      "price": "12226.00",
+      "compare_at_price": "5540.00",
+      "source_price": 128.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/8f0f519b-22fd-415f-ac2f-24437b1e384b/39T5LBLY0L-001-0001_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/52632932-e538-4569-a0a3-c156f6cc0846/30F6ANXS7E-230-0230_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -43,13 +45,13 @@
     {
       "sku": "39T5LBLY0L-M",
       "title": "M (34\") - 0001",
-      "price": "5540.00",
-      "compare_at_price": null,
-      "source_price": 58.0,
+      "price": "12226.00",
+      "compare_at_price": "5540.00",
+      "source_price": 128.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/8f0f519b-22fd-415f-ac2f-24437b1e384b/39T5LBLY0L-001-0001_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/52632932-e538-4569-a0a3-c156f6cc0846/30F6ANXS7E-230-0230_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -65,13 +67,13 @@
     {
       "sku": "39T5LBLY0L-L",
       "title": "L (36\") - 0001",
-      "price": "5540.00",
-      "compare_at_price": null,
-      "source_price": 58.0,
+      "price": "12226.00",
+      "compare_at_price": "5540.00",
+      "source_price": 128.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/8f0f519b-22fd-415f-ac2f-24437b1e384b/39T5LBLY0L-001-0001_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/52632932-e538-4569-a0a3-c156f6cc0846/30F6ANXS7E-230-0230_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -87,13 +89,13 @@
     {
       "sku": "39T5LBLY0L-XL",
       "title": "XL (38\") - 0001",
-      "price": "5540.00",
-      "compare_at_price": null,
-      "source_price": 58.0,
+      "price": "12226.00",
+      "compare_at_price": "5540.00",
+      "source_price": 128.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/8f0f519b-22fd-415f-ac2f-24437b1e384b/39T5LBLY0L-001-0001_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/52632932-e538-4569-a0a3-c156f6cc0846/30F6ANXS7E-230-0230_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -134,7 +136,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Pebbled Leather Double Ring Belt by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p><details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Belt Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">Waist Measurement</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">S</td><td style=\"padding: 8px; border: 1px solid #ddd;\">32\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">M</td><td style=\"padding: 8px; border: 1px solid #ddd;\">34\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">L</td><td style=\"padding: 8px; border: 1px solid #ddd;\">36\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">XL</td><td style=\"padding: 8px; border: 1px solid #ddd;\">38\"</td></tr>    </tbody>\n  </table>\n</details></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Pebbled Leather Double Ring Belt by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Closure:</strong> Buckle fastening</li>\n    </ul>\n  </div>\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Belt Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">Waist Measurement</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">S</td><td style=\"padding: 8px; border: 1px solid #ddd;\">32\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">M</td><td style=\"padding: 8px; border: 1px solid #ddd;\">34\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">L</td><td style=\"padding: 8px; border: 1px solid #ddd;\">36\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">XL</td><td style=\"padding: 8px; border: 1px solid #ddd;\">38\"</td></tr>    </tbody>\n  </table>\n</details>\n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Belts",
@@ -142,16 +144,30 @@
     "StyleNumber": "39T5LBLY0L",
     "Color": "0001",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Pebbled leather, 100% leather",
+    "DetailsBullets": [
+      "Belt",
+      "Pebbled leather",
+      "100% leather",
+      "Gunmetal hardware",
+      "Buckle fastening",
+      "Imported",
+      "Style #",
+      "bvseo\\_sdk, dw\\_cartridge, 18.2.0, p\\_sdk\\_3.2.0"
+    ]
   },
   "groups": [
     "belts",
     "men"
   ],
-  "last_verified_at": "2026-09-11T21:18:20Z",
+  "last_verified_at": "2026-09-11T23:24:11Z",
   "id": "e35eef2a468be32d",
   "created_at": "2026-09-11T18:30:39Z",
-  "updated_at": "2026-09-11T22:09:51Z",
+  "updated_at": "2026-09-11T23:24:11Z",
   "size_guide_html": "<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Belt Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">Waist Measurement</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">S</td><td style=\"padding: 8px; border: 1px solid #ddd;\">32\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">M</td><td style=\"padding: 8px; border: 1px solid #ddd;\">34\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">L</td><td style=\"padding: 8px; border: 1px solid #ddd;\">36\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">XL</td><td style=\"padding: 8px; border: 1px solid #ddd;\">38\"</td></tr>    </tbody>\n  </table>\n</details>",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Pebbled Leather Double Ring Belt by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p><details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Belt Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">Waist Measurement</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">S</td><td style=\"padding: 8px; border: 1px solid #ddd;\">32\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">M</td><td style=\"padding: 8px; border: 1px solid #ddd;\">34\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">L</td><td style=\"padding: 8px; border: 1px solid #ddd;\">36\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">XL</td><td style=\"padding: 8px; border: 1px solid #ddd;\">38\"</td></tr>    </tbody>\n  </table>\n</details></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Pebbled Leather Double Ring Belt by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Closure:</strong> Buckle fastening</li>\n    </ul>\n  </div>\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Belt Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">Waist Measurement</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">S</td><td style=\"padding: 8px; border: 1px solid #ddd;\">32\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">M</td><td style=\"padding: 8px; border: 1px solid #ddd;\">34\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">L</td><td style=\"padding: 8px; border: 1px solid #ddd;\">36\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">XL</td><td style=\"padding: 8px; border: 1px solid #ddd;\">38\"</td></tr>    </tbody>\n  </table>\n</details>\n</div>",
+  "source_compare_at_price": 58.0,
+  "compare_at_price": 5540,
+  "material": "Pebbled leather, 100% leather"
 }

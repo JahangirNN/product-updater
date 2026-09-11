@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/cad1bb7c-3db3-4547-ad67-e1e5dbbfec8c/30F5SY5M6L-230-0230_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/cad1bb7c-3db3-4547-ad67-e1e5dbbfec8c/30F5SY5M6L-230-0230_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7f67d471-597e-427e-b340-c43db35398a4/32S6GQ1C0L-001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ae86daee-ddfd-4f0f-8d39-0e8b95d0b51a/32S6GQ1C0L-001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/1dab7166-bb19-449c-87ab-bd85f05d2e0b/32S6GQ1C0L-001-0001_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/22b348a1-862d-45cd-8bad-be49c8ae6347/32S6GQ1C0L-001-0001_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/0683a6a5-b82f-4c04-ad14-0807dd3c841f/32S6GQ1C0L-001-0001_5-tif"
   ],
   "variants": [
     {
       "sku": "32S6GQ1C0L",
       "title": "Deep Red",
       "price": "15234.00",
-      "compare_at_price": null,
+      "compare_at_price": "15234.00",
       "source_price": 159.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/cad1bb7c-3db3-4547-ad67-e1e5dbbfec8c/30F5SY5M6L-230-0230_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Jana Extra-Small Leather Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jana Extra-Small Leather Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 7.5”W X 4.75”H X 2.75”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 2.75&quot;</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +59,22 @@
     "StyleNumber": "32S6GQ1C0L",
     "Color": "Deep Red",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "7.5”W X 4.75”H X 2.75”D",
+    "HandleDrop": "Handle drop: 2.75\"",
+    "Material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Leather",
+    "DetailsBullets": [
+      "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+      "Crossbody bag",
+      "Leather",
+      "100% leather",
+      "Gold-tone hardware",
+      "7.5”W X 4.75”H X 2.75”D",
+      "Handle drop: 2.75\"",
+      "Adjustable strap: 20.75\"-24.25\"",
+      "Exterior details: detachable strap",
+      "Interior details: back slip pocket"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +84,8 @@
   "id": "358db33f295c4219",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Jana Extra-Small Leather Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jana Extra-Small Leather Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 7.5”W X 4.75”H X 2.75”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 2.75&quot;</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 159.5,
+  "compare_at_price": 15234,
+  "material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Leather"
 }

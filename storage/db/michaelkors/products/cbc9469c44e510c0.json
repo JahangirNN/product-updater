@@ -13,21 +13,24 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/f2e89895-2f36-40c7-ac0d-f407fd7b0d8f/32F6G17F8L-609-0632_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/f2e89895-2f36-40c7-ac0d-f407fd7b0d8f/32F6G17F8L-609-0632_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/f2e89895-2f36-40c7-ac0d-f407fd7b0d8f/32F6G17F8L-609-0632_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/784825a1-849d-499b-93de-2cd98ed9e1ce/32F6G17F8L-609-0632_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/5be3208c-efb4-49a1-b7a7-868d03b76094/32F6G17F8L-609-0632_5-tif"
   ],
   "variants": [
     {
       "sku": "32F6G17F8L",
       "title": "0632",
       "price": "12369.00",
-      "compare_at_price": null,
+      "compare_at_price": "12369.00",
       "source_price": 129.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/f2e89895-2f36-40c7-ac0d-f407fd7b0d8f/32F6G17F8L-609-0632_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -72,9 +75,11 @@
     "wallets",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:10:20Z",
+  "last_verified_at": "2026-09-11T23:15:15Z",
   "id": "cbc9469c44e510c0",
   "created_at": "2026-09-11T18:30:37Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">MK Pop Charm Medium Nubuck Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>"
+  "updated_at": "2026-09-11T23:15:15Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">MK Pop Charm Medium Nubuck Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 129.5,
+  "compare_at_price": 12369
 }

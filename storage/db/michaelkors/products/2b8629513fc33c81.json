@@ -13,21 +13,25 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/b43fa43e-0c83-404c-94b8-baecc8c6c2a5/MK-2270U-0001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/ec2911d7-42b8-4549-b16c-23172d5bb96c/MK-1181-0710-0710_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b43fa43e-0c83-404c-94b8-baecc8c6c2a5/MK-2270U-0001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ec2911d7-42b8-4549-b16c-23172d5bb96c/MK-1181-0710-0710_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d6b05bcd-2d3f-480e-a328-1f55f05abe2d/MK-1181-0710-0710_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/a8e96a10-1a12-4753-bd28-fc256af9317d/MK-1181-0710-0710_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d66d18fe-4722-4b77-8e18-4b0c89df64ea/MK-1181-0710-0710_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/614018eb-0c38-4dc9-bf1a-434d415e3fd9/MK-1181-0710-0710_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-1181",
       "title": "Gold",
       "price": "19007.00",
-      "compare_at_price": null,
+      "compare_at_price": "19007.00",
       "source_price": 199.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/b43fa43e-0c83-404c-94b8-baecc8c6c2a5/MK-2270U-0001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/ec2911d7-42b8-4549-b16c-23172d5bb96c/MK-1181-0710-0710_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Gold Coast Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Gold Coast Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,7 +58,16 @@
     "StyleNumber": "MK-1181",
     "Color": "Gold",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Oval sunglasses",
+      "Metal frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #",
+      "bvseo\\_sdk, dw\\_cartridge, 18.2.0, p\\_sdk\\_3.2.0"
+    ]
   },
   "groups": [
     "sunglasses",
@@ -64,5 +77,7 @@
   "id": "2b8629513fc33c81",
   "created_at": "2026-09-11T18:30:38Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Gold Coast Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Gold Coast Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 199.0,
+  "compare_at_price": 19007
 }

@@ -13,21 +13,24 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/31cd40a3-56e6-467c-86ee-4019de9a85a9/32F3GJ6C7I-001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/31cd40a3-56e6-467c-86ee-4019de9a85a9/32F3GJ6C7I-001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/31cd40a3-56e6-467c-86ee-4019de9a85a9/32F3GJ6C7I-001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b41b488f-29b4-4b79-a4e4-3977031ca904/32F3GJ6C7I-001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/77b01fdf-4a10-4665-b638-fe095c5359a6/32F3GJ6C7I-001-0001_4-tif"
   ],
   "variants": [
     {
       "sku": "32F3GJ6C7I",
       "title": "Navy",
       "price": "15234.00",
-      "compare_at_price": null,
+      "compare_at_price": "15234.00",
       "source_price": 159.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/31cd40a3-56e6-467c-86ee-4019de9a85a9/32F3GJ6C7I-001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Large Nylon Gabardine Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Large Nylon Gabardine Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 9.5&quot;W X 6.5&quot;H X 3.25&quot;D</li>\n      <li><strong>Material:</strong> Nylon gabardine, 100% nylon</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,15 +57,32 @@
     "StyleNumber": "32F3GJ6C7I",
     "Color": "Navy",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "9.5\"W X 6.5\"H X 3.25\"D",
+    "Material": "Nylon gabardine, 100% nylon",
+    "DetailsBullets": [
+      "Crossbody bag",
+      "Nylon gabardine",
+      "100% nylon",
+      "Trim: 60% polyurethane /20% polyester/20% cotton",
+      "Gold-tone hardware",
+      "9.5\"W X 6.5\"H X 3.25\"D",
+      "Adjustable strap: 15”-26”",
+      "Exterior details: back and front slip pockets",
+      "Interior details: 6 card slots",
+      "Lining: 100% polyester"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:24:31Z",
+  "last_verified_at": "2026-09-11T23:31:57Z",
   "id": "f61e937ab18d9ec6",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Large Nylon Gabardine Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:31:57Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Large Nylon Gabardine Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 9.5&quot;W X 6.5&quot;H X 3.25&quot;D</li>\n      <li><strong>Material:</strong> Nylon gabardine, 100% nylon</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 159.5,
+  "compare_at_price": 15234,
+  "material": "Nylon gabardine, 100% nylon"
 }

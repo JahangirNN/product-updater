@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/8924b46d-5115-47ab-bd50-4487873836d0/33S6LJSM1B-227-0227_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/8924b46d-5115-47ab-bd50-4487873836d0/33S6LJSM1B-227-0227_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d301fb57-db88-49ef-acfd-f72c6be6a79f/32F6GYTC5L-001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/85a543e8-30af-48ed-8862-ebdf4f124f6d/32F6GYTC5L-001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6d98982c-7345-4135-b192-16555e42e80d/32F6GYTC5L-001-0001_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/e00d2a8b-7fb0-48c5-9b88-5a7fc67525d1/32F6GYTC5L-001-0001_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/05b7165d-ec67-4dd0-9fb5-5e6bf0f41beb/32F6GYTC5L-001-0001_7-tif"
   ],
   "variants": [
     {
       "sku": "32F6GYTC5L",
       "title": "Black",
       "price": "15234.00",
-      "compare_at_price": null,
+      "compare_at_price": "15234.00",
       "source_price": 159.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/8924b46d-5115-47ab-bd50-4487873836d0/33S6LJSM1B-227-0227_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Bryant Small Pebbled Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bryant Small Pebbled Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,15 +59,31 @@
     "StyleNumber": "32F6GYTC5L",
     "Color": "Black",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Pebbled leather, 100% leather",
+    "DetailsBullets": [
+      "Crossbody bag",
+      "Pebbled leather",
+      "100% leather",
+      "Trim: 65% polyurethane/35% polyester",
+      "Gold-tone hardware",
+      "Width: 8” (20.3cm); height: 4” (10.2cm); depth: 3.5” (8.9cm)",
+      "Adjustable strap: 18.25\"-21.75",
+      "Exterior details: back slip pocket, detachable strap",
+      "Lining: 100% polyester",
+      "Zip fastening"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T20:49:16Z",
+  "last_verified_at": "2026-09-11T22:52:58Z",
   "id": "9056b61766278463",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Bryant Small Pebbled Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T22:52:58Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bryant Small Pebbled Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 159.5,
+  "compare_at_price": 15234,
+  "material": "Pebbled leather, 100% leather"
 }

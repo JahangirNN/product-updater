@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/c34bf9d0-e53d-4353-96a8-a6421ded48d6/MK-2275BU-0766-0766_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/c34bf9d0-e53d-4353-96a8-a6421ded48d6/MK-2275BU-0766-0766_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/f454ad52-e04e-419d-b9cb-387b6797d4c8/MK-1167-0710-0710_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/a7b73719-a723-4af1-ab00-b3523ea554cf/MK-1167-0710-0710_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/0c0c7f64-cd28-45ad-b34a-ac8ccef98fb2/MK-1167-0710-0710_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/0b60c0b2-4e0c-4042-969a-5487b46476c3/MK-1167-0710-0710_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/805a0eab-61f2-4e8d-9551-b4c032dd2f2a/MK-1167-0710-0710_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-1167",
       "title": "Gold",
       "price": "14232.00",
-      "compare_at_price": null,
+      "compare_at_price": "14232.00",
       "source_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/c34bf9d0-e53d-4353-96a8-a6421ded48d6/MK-2275BU-0766-0766_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Mar Vista Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Mar Vista Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,15 +59,29 @@
     "StyleNumber": "MK-1167",
     "Color": "Gold",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Irregular sunglasses",
+      "Metal frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #",
+      "Verified Purchaser",
+      "y\\_2026, m\\_9, d\\_11, h\\_10",
+      "bvseo\\_bulk, prod\\_bvrr, vn\\_bulk\\_3.0.48",
+      "cp\\_1, bvpage1"
+    ]
   },
   "groups": [
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:15:53Z",
+  "last_verified_at": "2026-09-11T23:21:22Z",
   "id": "dc74fc2a475e9ca6",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Mar Vista Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:21:22Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Mar Vista Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 149.0,
+  "compare_at_price": 14232
 }

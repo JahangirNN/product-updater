@@ -52,6 +52,7 @@ export interface CatalogProduct {
   store_display: string;
   group_display: string;
   subgroup_display: string;
+  gender?: string;
   created_at: string;
   updated_at: string;
   validation_warnings?: string[];
@@ -74,6 +75,7 @@ export interface CatalogMeta {
 
 export interface FilterState {
   selectedStore: string;
+  selectedDepartment: 'All' | 'Women' | 'Men';
   selectedGroup: string;
   selectedSubgroup: string;
   searchQuery: string;

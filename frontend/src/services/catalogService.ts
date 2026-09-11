@@ -57,6 +57,24 @@ export function filterAndSortProducts(
     result = result.filter(p => p.store_display === filters.selectedStore);
   }
 
+  // 1b. Department / Gender Filter (Men vs Women)
+  if (filters.selectedDepartment && filters.selectedDepartment !== 'All') {
+    if (filters.selectedDepartment === 'Men') {
+      result = result.filter(p => 
+        (p.gender && p.gender.toLowerCase() === 'men') || 
+        p.group_display.toLowerCase().includes("men's") ||
+        (p.specifications?.['Gender'] && p.specifications['Gender'].toLowerCase() === 'men')
+      );
+    } else if (filters.selectedDepartment === 'Women') {
+      result = result.filter(p => 
+        (p.gender && p.gender.toLowerCase() === 'women') || 
+        p.group_display.toLowerCase().includes("women's") ||
+        (p.specifications?.['Gender'] && p.specifications['Gender'].toLowerCase() === 'women') ||
+        p.store_display === 'JW PEI' // JW PEI is exclusively women's luxury bags
+      );
+    }
+  }
+
   // 2. Group Filter (Level 2)
   if (filters.selectedGroup && filters.selectedGroup !== 'All Groups') {
     result = result.filter(p => p.group_display === filters.selectedGroup);

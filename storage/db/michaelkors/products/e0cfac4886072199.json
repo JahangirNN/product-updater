@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/0de0b919-7443-4675-9795-47299049c408/MK-1187-0710-0710_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/0de0b919-7443-4675-9795-47299049c408/MK-1187-0710-0710_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/0de0b919-7443-4675-9795-47299049c408/MK-1187-0710-0710_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/4fc2e0b3-5b44-4ff6-ab5b-9fbed4206278/MK-1187-0710-0710_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/92ceac87-4461-4cff-8ea7-5ddf6eaf616c/MK-1187-0710-0710_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/336c907c-5eaa-4486-b23c-9c6ff780e6d7/MK-1187-0710-0710_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/fe87a5fc-4321-4cfe-aa88-63dbdc6672bf/MK-1187-0710-0710_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-1187",
       "title": "0710",
       "price": "13276.00",
-      "compare_at_price": null,
+      "compare_at_price": "13276.00",
       "source_price": 139.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/0de0b919-7443-4675-9795-47299049c408/MK-1187-0710-0710_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Andros Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Andros Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,15 +59,26 @@
     "StyleNumber": "MK-1187",
     "Color": "0710",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Rectangle sunglasses",
+      "Metal frame",
+      "Case Included",
+      "100% UV protection",
+      "Imported",
+      "Style #",
+      "bvseo\\_sdk, dw\\_cartridge, 18.2.0, p\\_sdk\\_3.2.0"
+    ]
   },
   "groups": [
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:17:40Z",
+  "last_verified_at": "2026-09-11T23:23:26Z",
   "id": "e0cfac4886072199",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Andros Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:23:26Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Andros Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 139.0,
+  "compare_at_price": 13276
 }

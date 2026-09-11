@@ -57,10 +57,21 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
 
         {/* Top Floating Badges */}
         <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between gap-1 pointer-events-none">
-          {/* Subgroup / Carrying Style */}
-          <span className="glass-pill text-[10px] font-semibold text-zinc-300 px-2 py-0.5 rounded-md uppercase tracking-wider">
-            {product.subgroup_display}
-          </span>
+          {/* Subgroup / Department Badges */}
+          <div className="flex items-center gap-1 flex-wrap">
+            {product.gender && (
+              <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider shadow-sm ${
+                product.gender.toLowerCase() === 'men'
+                  ? 'bg-sky-500/30 text-sky-200 border border-sky-400/40 backdrop-blur-md'
+                  : 'bg-rose-500/30 text-rose-200 border border-rose-400/40 backdrop-blur-md'
+              }`}>
+                {product.gender}
+              </span>
+            )}
+            <span className="glass-pill text-[10px] font-semibold text-zinc-300 px-2 py-0.5 rounded-md uppercase tracking-wider">
+              {product.subgroup_display}
+            </span>
+          </div>
 
           {/* Stock Status Pill */}
           <span

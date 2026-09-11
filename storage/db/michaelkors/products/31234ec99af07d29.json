@@ -13,21 +13,23 @@
   "source_currency": "USD",
   "availability": "out_of_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/79fab89b-27a3-458b-aeed-f08de81a4901/32T2SJ6T3B-198-0239_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/80b9668e-fc00-4906-8a5a-61261126aba1/32T2SJ6T3B-309-0321_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/79fab89b-27a3-458b-aeed-f08de81a4901/32T2SJ6T3B-198-0239_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/80b9668e-fc00-4906-8a5a-61261126aba1/32T2SJ6T3B-309-0321_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/1adc3f2d-4566-459a-bf66-152a4b26412f/32T2SJ6T3B-309-0321_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7e9da8f0-911e-4be4-9c20-8c6b64dd7ea9/32T2SJ6T3B-309-0321_5-tif"
   ],
   "variants": [
     {
       "sku": "32T2SJ6T3B",
       "title": "0239",
       "price": "15234.00",
-      "compare_at_price": null,
+      "compare_at_price": "15234.00",
       "source_price": 159.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/79fab89b-27a3-458b-aeed-f08de81a4901/32T2SJ6T3B-198-0239_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/80b9668e-fc00-4906-8a5a-61261126aba1/32T2SJ6T3B-309-0321_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +48,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Large Logo Continental Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Large Logo Continental Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8.25”W X 4” H X 1”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop 7”</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Wallets",
@@ -54,7 +56,22 @@
     "StyleNumber": "32T2SJ6T3B",
     "Color": "0239",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "8.25”W X 4” H X 1”D",
+    "HandleDrop": "Handle drop 7”",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Wallet",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Trim: 100% polyurethane",
+      "Silver-tone hardware",
+      "8.25”W X 4” H X 1”D",
+      "Handle drop 7”",
+      "Interior details: 17 card slots, 5 slip pockets, zip pouch, phone pocket",
+      "Lining: 100% polyester",
+      "Zip fastening"
+    ]
   },
   "groups": [
     "wallets",
@@ -64,5 +81,8 @@
   "id": "31234ec99af07d29",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Large Logo Continental Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Large Logo Continental Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8.25”W X 4” H X 1”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop 7”</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 159.5,
+  "compare_at_price": 15234,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
 }

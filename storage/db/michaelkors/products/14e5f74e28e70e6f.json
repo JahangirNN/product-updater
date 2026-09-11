@@ -13,21 +13,27 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/af5c4842-2e4d-464a-a25e-b270c3ed53fa/MK-2259U-0767-0767_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/af5c4842-2e4d-464a-a25e-b270c3ed53fa/MK-2259U-0767-0767_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/494208f5-22b1-4226-bb15-139c6c29f6ae/MK-1161-0040-0040_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/711df064-d63f-4615-a695-c102a439b81f/MK-1161-0040-0040_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/1e2c9ac4-e245-44ba-a936-358458f665e6/MK-1161-0040-0040_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/656fda43-cf90-40ab-b60a-095d58c73d66/MK-1161-0040-0040_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/e705580b-2ab1-498d-962a-c951bfb72daf/MK-1161-0040-0040_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/612f227c-0a17-4549-9be7-2f9df399969f/MK-1161-0040-0040_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-1161",
       "title": "Gold",
       "price": "13276.00",
-      "compare_at_price": null,
+      "compare_at_price": "13276.00",
       "source_price": 139.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/af5c4842-2e4d-464a-a25e-b270c3ed53fa/MK-2259U-0767-0767_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +52,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Monte Carlo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Monte Carlo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,7 +60,19 @@
     "StyleNumber": "MK-1161",
     "Color": "Gold",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Oval sunglasses",
+      "Metal frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #",
+      "Verified Purchaser",
+      "y\\_2026, m\\_9, d\\_11, h\\_10",
+      "bvseo\\_bulk, prod\\_bvrr, vn\\_bulk\\_3.0.48",
+      "cp\\_1, bvpage1"
+    ]
   },
   "groups": [
     "sunglasses",
@@ -64,5 +82,7 @@
   "id": "14e5f74e28e70e6f",
   "created_at": "2026-09-11T18:30:38Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Monte Carlo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Monte Carlo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 139.0,
+  "compare_at_price": 13276
 }

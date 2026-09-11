@@ -15,14 +15,16 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7b3af838-2c1b-4c5f-ae55-8d12d959d536/30S6G16C5W-270-0121_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7b3af838-2c1b-4c5f-ae55-8d12d959d536/30S6G16C5W-270-0121_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7b3af838-2c1b-4c5f-ae55-8d12d959d536/30S6G16C5W-270-0121_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/f5adf40d-12a8-4782-9336-5e751af31de8/30S6G16C5W-270-0121_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/71a1ad57-a0e3-4c62-9f55-54b060df0d34/30S6G16C5W-270-0121_4-tif"
   ],
   "variants": [
     {
       "sku": "30S6G16C5W",
       "title": "0121",
       "price": "7546.00",
-      "compare_at_price": null,
+      "compare_at_price": "19055.00",
       "source_price": 79.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +48,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Shelly Rattan Clutch by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Shelly Rattan Clutch by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8.25&quot;W X 5&quot;H X 4&quot;D</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +56,20 @@
     "StyleNumber": "30S6G16C5W",
     "Color": "0121",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "8.25\"W X 5\"H X 4\"D",
+    "DetailsBullets": [
+      "Clutch",
+      "Rattan",
+      "100% rattan",
+      "Trim: 60% polyurethane/40% polyester",
+      "Gold-tone hardware",
+      "8.25\"W X 5\"H X 4\"D",
+      "Lining: 100% polyester",
+      "Snap fastening",
+      "Dust bag not included",
+      "Imported"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +79,7 @@
   "id": "caf6e3b059cc89ae",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Shelly Rattan Clutch by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Shelly Rattan Clutch by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8.25&quot;W X 5&quot;H X 4&quot;D</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 199.5,
+  "compare_at_price": 19055
 }

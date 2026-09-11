@@ -15,14 +15,17 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6a345a00-783c-4690-bde0-873f20919585/32F6G9IC0S-251-0201_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6a345a00-783c-4690-bde0-873f20919585/32F6G9IC0S-251-0201_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6a345a00-783c-4690-bde0-873f20919585/32F6G9IC0S-251-0201_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d6a9b04a-8fd4-4aba-a700-896737616958/32F6G9IC0S-251-0201_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d1cbaf1d-dda8-4fe5-994a-53a223e77700/32F6G9IC0S-251-0201_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/5e283f2b-7839-40fb-8e67-74179f3e25be/32F6G9IC0S-251-0201_4-tif"
   ],
   "variants": [
     {
       "sku": "32F6G9IC0S",
       "title": "0201",
       "price": "17145.00",
-      "compare_at_price": null,
+      "compare_at_price": "17145.00",
       "source_price": 179.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Laila Extra-Small Suede Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Laila Extra-Small Suede Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 3.5”</li>\n      <li><strong>Material:</strong> Suede, 100% suede</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,21 @@
     "StyleNumber": "32F6G9IC0S",
     "Color": "0201",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "HandleDrop": "Handle drop: 3.5”",
+    "Material": "Suede, 100% suede",
+    "DetailsBullets": [
+      "Crossbody bag",
+      "Suede",
+      "100% suede",
+      "Trim: 65% polyurethane/35% polyester",
+      "Gold-tone hardware",
+      "Width: 9.75” (24.8cm); height: 6” (15.2cm); depth: 4” (10.2cm)",
+      "Handle drop: 3.5”",
+      "Adjustable strap: 21\"-24\"",
+      "Exterior details: detachable strap",
+      "Interior details: back slip pocket, center zip compartment"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +81,8 @@
   "id": "c71797f998395815",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Laila Extra-Small Suede Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Laila Extra-Small Suede Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 3.5”</li>\n      <li><strong>Material:</strong> Suede, 100% suede</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 179.5,
+  "compare_at_price": 17145,
+  "material": "Suede, 100% suede"
 }

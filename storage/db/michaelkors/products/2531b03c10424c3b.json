@@ -13,8 +13,9 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/97d62238-5bb3-4d0b-9d34-0dc4e239c4f7/MK-2294U-0001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/97d62238-5bb3-4d0b-9d34-0dc4e239c4f7/MK-2294U-0001-0001_1-tif",
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/515190e7-2d36-4602-8ce9-e4bac836b12a/MK-2294U-0001-0001_2-tif",
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/63b2a108-619a-454d-a80f-385e5aca853e/MK-2294U-0001-0001_3-tif",
@@ -26,12 +27,12 @@
       "sku": "MK-2294U",
       "title": "0001",
       "price": "17097.00",
-      "compare_at_price": null,
+      "compare_at_price": "17097.00",
       "source_price": 179.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/97d62238-5bb3-4d0b-9d34-0dc4e239c4f7/MK-2294U-0001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -50,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Lucerne Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Lucerne Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate frame</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -58,7 +59,17 @@
     "StyleNumber": "MK-2294U",
     "Color": "0001",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Acetate frame",
+    "DetailsBullets": [
+      "Cat-eye sunglasses",
+      "Acetate frame",
+      "Case Included",
+      "100% UV protection",
+      "Imported",
+      "Style #",
+      "bvseo\\_sdk, dw\\_cartridge, 18.2.0, p\\_sdk\\_3.2.0"
+    ]
   },
   "groups": [
     "sunglasses",
@@ -68,5 +79,8 @@
   "id": "2531b03c10424c3b",
   "created_at": "2026-09-11T18:30:38Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Lucerne Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Lucerne Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate frame</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 179.0,
+  "compare_at_price": 17097,
+  "material": "Acetate frame"
 }

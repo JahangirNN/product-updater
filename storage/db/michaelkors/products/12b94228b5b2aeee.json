@@ -7,23 +7,24 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 19055,
-  "source_price": 199.5,
+  "current_price": 9360,
+  "source_price": 98.0,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/81d04b76-55b1-40e3-89a5-641e797e714e/32F5GJ6T2B-252-1335_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/81d04b76-55b1-40e3-89a5-641e797e714e/32F5GJ6T2B-252-1335_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/81d04b76-55b1-40e3-89a5-641e797e714e/32F5GJ6T2B-252-1335_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/1b58c124-b569-49a1-8f41-694a2e543920/32F5GJ6T2B-252-1335_2-tif"
   ],
   "variants": [
     {
       "sku": "32F5GJ6T2B",
       "title": "Brown/Luggage",
-      "price": "19055.00",
-      "compare_at_price": null,
-      "source_price": 199.5,
+      "price": "9360.00",
+      "compare_at_price": "19055.00",
+      "source_price": 98.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -46,7 +47,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Medium Signature Logo Travel Kit by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Medium Signature Logo Travel Kit by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8.5”W X 5.25”H X 3.25”D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +55,21 @@
     "StyleNumber": "32F5GJ6T2B",
     "Color": "Brown/Luggage",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "8.5”W X 5.25”H X 3.25”D",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Travel kit",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Gold-tone hardware",
+      "8.5”W X 5.25”H X 3.25”D",
+      "Zip fastening",
+      "Lining: 100% polyester",
+      "Imported",
+      "Style #",
+      "Verified Purchaser"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +79,8 @@
   "id": "12b94228b5b2aeee",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Medium Signature Logo Travel Kit by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Medium Signature Logo Travel Kit by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8.5”W X 5.25”H X 3.25”D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 199.5,
+  "compare_at_price": 19055,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
 }

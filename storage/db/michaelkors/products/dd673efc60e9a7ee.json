@@ -7,27 +7,30 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 34337,
-  "source_price": 359.5,
+  "current_price": 19055,
+  "source_price": 199.5,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/c4a3441c-3bae-4da2-9834-7a0f666e99f0/30S6G13C5M-740-0705_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/c4a3441c-3bae-4da2-9834-7a0f666e99f0/30S6G13C5M-740-0705_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/c4a3441c-3bae-4da2-9834-7a0f666e99f0/30S6G13C5M-740-0705_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/a7fffd64-a466-456f-ab16-29df6355aca1/30S6G13C5M-740-0705_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/5540c2a8-6323-44d7-86f1-3e42250ff250/30S6G13C5M-740-0705_4-tif"
   ],
   "variants": [
     {
       "sku": "30S6G13C5M",
       "title": "Burnt Khaki",
-      "price": "34337.00",
-      "compare_at_price": null,
-      "source_price": 359.5,
+      "price": "19055.00",
+      "compare_at_price": "34337.00",
+      "source_price": 199.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/c4a3441c-3bae-4da2-9834-7a0f666e99f0/30S6G13C5M-740-0705_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Athena Small Metallic Leather Convertible Clutch by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Athena Small Metallic Leather Convertible Clutch by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 10”W X 6”H X 3”D</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Metallic leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,21 @@
     "StyleNumber": "30S6G13C5M",
     "Color": "Burnt Khaki",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "10”W X 6”H X 3”D",
+    "Material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Metallic leather",
+    "DetailsBullets": [
+      "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+      "Clutch",
+      "Metallic leather",
+      "100% leather",
+      "Gold-tone hardware",
+      "10”W X 6”H X 3”D",
+      "Adjustable strap: 20.25\"-24\"",
+      "Interior details: back slip pocket",
+      "Lining: 100% polyester",
+      "Zip fastening"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +81,8 @@
   "id": "dd673efc60e9a7ee",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Athena Small Metallic Leather Convertible Clutch by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Athena Small Metallic Leather Convertible Clutch by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 10”W X 6”H X 3”D</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Metallic leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 359.5,
+  "compare_at_price": 34337,
+  "material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Metallic leather"
 }

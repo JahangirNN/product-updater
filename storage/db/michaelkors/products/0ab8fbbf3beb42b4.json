@@ -13,8 +13,9 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/5781982b-a585-4881-83c8-706fa2c6b01f/39F6LHDF0B-282-0301_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/5781982b-a585-4881-83c8-706fa2c6b01f/39F6LHDF0B-282-0301_1-tif",
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/8b070cba-6e30-4c35-a0e9-4b405972d396/39F6LHDF0B-282-0301_2-tif",
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/34a233cc-9330-4306-836e-e423e3ea96f1/39F6LHDF0B-282-0301_5-tif"
@@ -24,12 +25,12 @@
       "sku": "39F6LHDF0B",
       "title": "0301",
       "price": "12369.00",
-      "compare_at_price": null,
+      "compare_at_price": "12369.00",
       "source_price": 129.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/5781982b-a585-4881-83c8-706fa2c6b01f/39F6LHDF0B-282-0301_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -81,5 +82,7 @@
   "created_at": "2026-09-11T18:30:38Z",
   "updated_at": "2026-09-11T22:09:51Z",
   "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Signature Logo Folio Card Case by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 3.23”W X 4.4”H X 0.4&quot;D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n    </ul>\n  </div>\n  \n</div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Signature Logo Folio Card Case by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 3.23”W X 4.4”H X 0.4&quot;D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 129.5,
+  "compare_at_price": 12369
 }

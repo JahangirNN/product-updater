@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/65b3e7a9-dbbb-4174-8b86-4d5ceb3922cd/30S6SY5H3W-003-0799_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/65b3e7a9-dbbb-4174-8b86-4d5ceb3922cd/30S6SY5H3W-003-0799_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/385919a9-e44c-4c98-b830-b9d57456baba/30S0GTFT3B-252-1335_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/a0226a72-7ab2-448d-99fc-94ae584d15dd/30S0GTFT3B-252-1335_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/dfa80228-8f40-43f1-a6cd-04d3a1b021a6/30S0GTFT3B-252-1335_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d651a9ac-cd22-46c7-8ce5-8f637f8849c2/30S0GTFT3B-252-1335_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/c4aeb53e-3ed0-4bcf-8ea6-4ba1fb694b62/30S0GTFT3B-252-1335_6-tif"
   ],
   "variants": [
     {
       "sku": "30S0GTFT3B",
       "title": "Brn/Acorn",
       "price": "47709.00",
-      "compare_at_price": null,
+      "compare_at_price": "47709.00",
       "source_price": 499.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/65b3e7a9-dbbb-4174-8b86-4d5ceb3922cd/30S6SY5H3W-003-0799_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Logo Suitcase by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Logo Suitcase by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 14.5&quot;W X 20&quot;H X 9.5&quot;D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 1&quot;</li>\n      <li><strong>Material:</strong> Logo-print canvas, 69% coated canvas/17% polyester/13% cotton/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,15 +59,33 @@
     "StyleNumber": "30S0GTFT3B",
     "Color": "Brn/Acorn",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "14.5\"W X 20\"H X 9.5\"D",
+    "HandleDrop": "Handle drop: 1\"",
+    "Material": "Logo-print canvas, 69% coated canvas/17% polyester/13% cotton/1% polyurethane",
+    "DetailsBullets": [
+      "Suitcase",
+      "Logo-print canvas",
+      "69% coated canvas/17% polyester/13% cotton/1% polyurethane",
+      "Trim: 100% leather",
+      "Gold-tone hardware",
+      "14.5\"W X 20\"H X 9.5\"D",
+      "Handle drop: 1\"",
+      "Exterior details: 360-degree rotating wheels",
+      "Interior details: 2 back zip pockets, 2 front zip pockets, clip-in panel",
+      "Lining: 100% polyester"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T20:51:37Z",
+  "last_verified_at": "2026-09-11T22:55:54Z",
   "id": "96904e6d483cbdb1",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Logo Suitcase by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T22:55:54Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Logo Suitcase by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 14.5&quot;W X 20&quot;H X 9.5&quot;D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 1&quot;</li>\n      <li><strong>Material:</strong> Logo-print canvas, 69% coated canvas/17% polyester/13% cotton/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 499.5,
+  "compare_at_price": 47709,
+  "material": "Logo-print canvas, 69% coated canvas/17% polyester/13% cotton/1% polyurethane"
 }

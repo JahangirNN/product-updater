@@ -7,27 +7,30 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 24786,
-  "source_price": 259.5,
+  "current_price": 9456,
+  "source_price": 99.0,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7088b244-5082-4a35-a35b-9681b33fff0d/30S6SETS2V-198-0239_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7088b244-5082-4a35-a35b-9681b33fff0d/30S6SETS2V-198-0239_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7088b244-5082-4a35-a35b-9681b33fff0d/30S6SETS2V-198-0239_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/8ec0b2bb-b785-4cd3-9087-47523423bc22/30S6SETS2V-198-0239_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/50c22de0-276d-4c9d-acec-0035f3bdf55a/30S6SETS2V-198-0239_4-tif"
   ],
   "variants": [
     {
       "sku": "30S6SETS2V",
       "title": "0239",
-      "price": "24786.00",
-      "compare_at_price": null,
-      "source_price": 259.5,
+      "price": "9456.00",
+      "compare_at_price": "24786.00",
+      "source_price": 99.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7088b244-5082-4a35-a35b-9681b33fff0d/30S6SETS2V-198-0239_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Scarlett Medium Textured Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Scarlett Medium Textured Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 13.75”W X 8.75”H X 4.25”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 4.5”</li>\n      <li><strong>Material:</strong> Polyurethane blend, 60% polyurethane/40% polyester</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,22 @@
     "StyleNumber": "30S6SETS2V",
     "Color": "0239",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "13.75”W X 8.75”H X 4.25”D",
+    "HandleDrop": "Handle drop: 4.5”",
+    "Material": "Polyurethane blend, 60% polyurethane/40% polyester",
+    "DetailsBullets": [
+      "Satchel",
+      "Polyurethane blend",
+      "60% polyurethane/40% polyester",
+      "Silver-tone hardware",
+      "13.75”W X 8.75”H X 4.25”D",
+      "Handle drop: 4.5”",
+      "Adjustable strap: 18.5\"-22\"",
+      "Exterior details: detachable strap",
+      "Interior details: back zip pocket",
+      "Lining: 100% polyester"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +82,8 @@
   "id": "27dfaab4bd3b5e3b",
   "created_at": "2026-09-11T18:30:35Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Scarlett Medium Textured Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Scarlett Medium Textured Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 13.75”W X 8.75”H X 4.25”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 4.5”</li>\n      <li><strong>Material:</strong> Polyurethane blend, 60% polyurethane/40% polyester</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 259.5,
+  "compare_at_price": 24786,
+  "material": "Polyurethane blend, 60% polyurethane/40% polyester"
 }

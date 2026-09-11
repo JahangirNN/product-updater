@@ -13,21 +13,25 @@
   "source_currency": "USD",
   "availability": "out_of_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/47dde256-48d3-4296-bdd3-bc7146fa9f0b/33S4LHUY1B-227-0227_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/734b906c-22ff-49dd-b340-4d88190ba221/32S5GYTC5B-149-1546_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/47dde256-48d3-4296-bdd3-bc7146fa9f0b/33S4LHUY1B-227-0227_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/734b906c-22ff-49dd-b340-4d88190ba221/32S5GYTC5B-149-1546_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/f2f71610-4470-40ad-94f9-e6a7dceb63d1/32S5GYTC5B-149-1546_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/9011c210-1c67-4a03-90bb-adf644e4feff/32S5GYTC5B-149-1546_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/82504988-2c66-40f0-bf0e-e6f7e3a1aa10/32S5GYTC5B-149-1546_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6b7a2398-4a7d-4503-aab8-579ea8d185a0/32S5GYTC5B-149-1546_6-tif"
   ],
   "variants": [
     {
       "sku": "32S5GYTC5B",
       "title": "Vanilla/Acorn",
       "price": "18100.00",
-      "compare_at_price": null,
+      "compare_at_price": "18100.00",
       "source_price": 189.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/47dde256-48d3-4296-bdd3-bc7146fa9f0b/33S4LHUY1B-227-0227_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/734b906c-22ff-49dd-b340-4d88190ba221/32S5GYTC5B-149-1546_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Bryant Medium Signature Logo Camera Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bryant Medium Signature Logo Camera Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 7.5&quot;W X 5&quot;H X 3.25&quot;D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +58,21 @@
     "StyleNumber": "32S5GYTC5B",
     "Color": "Vanilla/Acorn",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "7.5\"W X 5\"H X 3.25\"D",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Crossbody bag",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Trim: 60% polyurethane/20% cotton/20% polyester",
+      "Gold-tone hardware",
+      "7.5\"W X 5\"H X 3.25\"D",
+      "Adjustable strap: 13\"-23\"",
+      "Exterior details: back slip pocket",
+      "Interior details: back slip pocket",
+      "Lining: 100% polyester"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +82,8 @@
   "id": "354e3ad8851b8d78",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Bryant Medium Signature Logo Camera Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bryant Medium Signature Logo Camera Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 7.5&quot;W X 5&quot;H X 3.25&quot;D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 189.5,
+  "compare_at_price": 18100,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
 }

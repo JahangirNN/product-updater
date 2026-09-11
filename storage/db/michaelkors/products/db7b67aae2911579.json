@@ -7,27 +7,33 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Wallets",
   "gender": "Men",
-  "current_price": 15234,
-  "source_price": 159.5,
+  "current_price": 13276,
+  "source_price": 139.0,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/44c64f65-f100-4e33-881c-10043c49b1d3/39S6LHDF2L-230-0230_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/44c64f65-f100-4e33-881c-10043c49b1d3/39S6LHDF2L-230-0230_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/44c64f65-f100-4e33-881c-10043c49b1d3/39S6LHDF2L-230-0230_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7aa3299b-d4d1-4cf1-b9cd-9700160470c6/39S6LHDF2L-230-0230_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/dc3b1079-7874-4a7b-9f9a-b59dbdcb2dfd/39S6LHDF2L-230-0230_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/61f5d5bb-6aa7-44e6-881d-7086bb166310/39S6LHDF2L-230-0230_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/0e34626d-6204-4b2f-8d15-aa6f906e582a/39S6LHDF2L-230-0230_7-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7bd17dfb-e518-4f0f-9a3f-836424b0be5e/39S6LHDF2L-230-0230_8-tif"
   ],
   "variants": [
     {
       "sku": "39S6LHDF2L",
       "title": "0230",
-      "price": "15234.00",
-      "compare_at_price": null,
-      "source_price": 159.5,
+      "price": "13276.00",
+      "compare_at_price": "15234.00",
+      "source_price": 139.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/44c64f65-f100-4e33-881c-10043c49b1d3/39S6LHDF2L-230-0230_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +52,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Hudson Logo Embossed Leather Billfold Wallet and Passcase by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Logo Embossed Leather Billfold Wallet and Passcase by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 4.33”W X 3.66”H X 1”D</li>\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Wallets",
@@ -54,15 +60,32 @@
     "StyleNumber": "39S6LHDF2L",
     "Color": "0230",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "4.33”W X 3.66”H X 1”D",
+    "Material": "Pebbled leather, 100% leather",
+    "DetailsBullets": [
+      "Billfold wallet with passcase",
+      "Pebbled leather",
+      "100% leather",
+      "4.33”W X 3.66”H X 1”D",
+      "Interior details: 20 card slots, ID window, 4 slip pockets, bill compartment",
+      "Lining: 100% polyester",
+      "Imported",
+      "Style #",
+      "Verified Purchaser",
+      "y\\_2026, m\\_9, d\\_10, h\\_11"
+    ]
   },
   "groups": [
-    "wallets",
-    "men"
+    "men",
+    "wallets"
   ],
-  "last_verified_at": "2026-09-11T21:15:07Z",
+  "last_verified_at": "2026-09-11T23:20:31Z",
   "id": "db7b67aae2911579",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Hudson Logo Embossed Leather Billfold Wallet and Passcase by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:20:31Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Logo Embossed Leather Billfold Wallet and Passcase by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 4.33”W X 3.66”H X 1”D</li>\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 159.5,
+  "compare_at_price": 15234,
+  "material": "Pebbled leather, 100% leather"
 }

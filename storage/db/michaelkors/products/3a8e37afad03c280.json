@@ -7,27 +7,30 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 21920,
-  "source_price": 229.5,
+  "current_price": 9456,
+  "source_price": 99.0,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/4a065e82-ae84-444f-b256-bc7e67f0fead/30S6G0ZT2B-149-1546_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/4a065e82-ae84-444f-b256-bc7e67f0fead/30S6G0ZT2B-149-1546_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/4a065e82-ae84-444f-b256-bc7e67f0fead/30S6G0ZT2B-149-1546_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/846ab739-289f-4184-a097-fac94201e396/30S6G0ZT2B-149-1546_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6d6e4ba0-4562-4272-bae9-adc85bfc227c/30S6G0ZT2B-149-1546_4-tif"
   ],
   "variants": [
     {
       "sku": "30S6G0ZT2B",
       "title": "1546",
-      "price": "21920.00",
-      "compare_at_price": null,
-      "source_price": 229.5,
+      "price": "9456.00",
+      "compare_at_price": "21920.00",
+      "source_price": 99.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/4a065e82-ae84-444f-b256-bc7e67f0fead/30S6G0ZT2B-149-1546_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Marlowe Medium Signature Logo Pocket Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Marlowe Medium Signature Logo Pocket Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 15”W X 10.5”H X 5.75”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 11&quot;</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,22 @@
     "StyleNumber": "30S6G0ZT2B",
     "Color": "1546",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "15”W X 10.5”H X 5.75”D",
+    "HandleDrop": "Handle drop: 11\"",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Tote bag",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Trim: 60% polyurethane/40% polyester",
+      "Gold-tone hardware",
+      "15”W X 10.5”H X 5.75”D",
+      "Handle drop: 11\"",
+      "Exterior details: front slip pocket",
+      "Interior details: back zip pocket",
+      "Lining: 100% polyester"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +82,8 @@
   "id": "3a8e37afad03c280",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Marlowe Medium Signature Logo Pocket Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Marlowe Medium Signature Logo Pocket Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 15”W X 10.5”H X 5.75”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 11&quot;</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 229.5,
+  "compare_at_price": 21920,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
 }

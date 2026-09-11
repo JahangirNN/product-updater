@@ -13,21 +13,25 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7ba26997-01c8-4f3a-a8af-d31549ce6f37/30F6S24L2C-030-0012_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7ba26997-01c8-4f3a-a8af-d31549ce6f37/30F6S24L2C-030-0012_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7ba26997-01c8-4f3a-a8af-d31549ce6f37/30F6S24L2C-030-0012_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/342fb72e-af34-434b-81eb-c1b939dae5fc/30F6S24L2C-030-0012_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b19516fb-feb2-4101-89d9-c6ee336ae6e2/30F6S24L2C-030-0012_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/54b04439-e40c-4f14-aa59-af182fe0618c/30F6S24L2C-030-0012_4-tif"
   ],
   "variants": [
     {
       "sku": "30F6S24L2C",
       "title": "0012",
       "price": "21920.00",
-      "compare_at_price": null,
+      "compare_at_price": "21920.00",
       "source_price": 229.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7ba26997-01c8-4f3a-a8af-d31549ce6f37/30F6S24L2C-030-0012_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Teddi Medium Washed Denim Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Teddi Medium Washed Denim Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> 100% cotton</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +58,20 @@
     "StyleNumber": "30F6S24L2C",
     "Color": "0012",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "100% cotton",
+    "DetailsBullets": [
+      "Shoulder bag",
+      "Denim",
+      "100% cotton",
+      "Trim: 60% polyurethane/40% polyester",
+      "Silver-tone hardware",
+      "Width: 13” (33cm); height: 7” (17.8cm); depth: 6” (15.2cm)",
+      "Interior details: back zip pocket",
+      "Lining: 100% polyester",
+      "Zip fastening",
+      "Dust bag not included"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +81,8 @@
   "id": "08f1429a9ebb0c9b",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Teddi Medium Washed Denim Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Teddi Medium Washed Denim Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> 100% cotton</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 229.5,
+  "compare_at_price": 21920,
+  "material": "100% cotton"
 }

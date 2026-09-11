@@ -15,14 +15,17 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/ebcc1878-3a37-4b2c-9177-b4baa73fa68a/33F6GHDB6L-251-0201_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ebcc1878-3a37-4b2c-9177-b4baa73fa68a/33F6GHDB6L-251-0201_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ebcc1878-3a37-4b2c-9177-b4baa73fa68a/33F6GHDB6L-251-0201_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/c46792c4-f4f4-48b1-9cb0-4d626bc3b762/33F6GHDB6L-251-0201_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/da603036-04ca-4ae9-841c-73e60b3fae1b/33F6GHDB6L-251-0201_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/3972bb0a-c606-4374-bb38-b2cf81ff14a4/33F6GHDB6L-251-0201_4-tif"
   ],
   "variants": [
     {
       "sku": "33F6GHDB6L",
       "title": "0201",
       "price": "38158.00",
-      "compare_at_price": null,
+      "compare_at_price": "38158.00",
       "source_price": 399.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Hudson Burnished Leather Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Burnished Leather Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Burnished leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Clip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,20 @@
     "StyleNumber": "33F6GHDB6L",
     "Color": "0201",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Burnished leather, 100% leather",
+    "DetailsBullets": [
+      "Backpack",
+      "Burnished leather",
+      "100% leather",
+      "Trim 1: 65% polyurethane/35% polyester",
+      "Trim 2: 100% polyester",
+      "Antique gold-tone hardware",
+      "Width: 15” (38.1cm); height: 18” (45.7cm); depth: 6” (15.2cm)",
+      "Exterior details: 2 front zip pockets, 1 trolley sleeve",
+      "Interior details: 2 side zip pockets, back zip pocket",
+      "Lining: 100% polyester"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +80,8 @@
   "id": "28538b35032d784d",
   "created_at": "2026-09-11T18:30:35Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Hudson Burnished Leather Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Burnished Leather Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Burnished leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Clip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 399.5,
+  "compare_at_price": 38158,
+  "material": "Burnished leather, 100% leather"
 }

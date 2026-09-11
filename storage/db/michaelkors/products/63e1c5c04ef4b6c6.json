@@ -7,27 +7,30 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 9504,
-  "source_price": 99.5,
+  "current_price": 8501,
+  "source_price": 89.0,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/81e06ddf-eee0-4d8e-acd9-a405ed9767a4/32S5GZCU1B-252-1335_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/81e06ddf-eee0-4d8e-acd9-a405ed9767a4/32S5GZCU1B-252-1335_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/4e32aa32-8b95-424f-8caf-ff794d20061f/32S5GZCU1B-149-1546_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ea861b05-abe7-42b2-9e84-aaa90ed43a65/32S5GZCU1B-149-1546_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/738c607a-b9f1-4215-9ffa-ec12bf5fec69/32S5GZCU1B-149-1546_4-tif"
   ],
   "variants": [
     {
       "sku": "32S5GZCU1B",
       "title": "1335",
-      "price": "9504.00",
-      "compare_at_price": null,
-      "source_price": 99.5,
+      "price": "8501.00",
+      "compare_at_price": "9504.00",
+      "source_price": 89.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/81e06ddf-eee0-4d8e-acd9-a405ed9767a4/32S5GZCU1B-252-1335_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Zoe Small Signature Logo Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Zoe Small Signature Logo Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 9”W X 4.25”H X 1.75”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 8.5”</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,15 +57,33 @@
     "StyleNumber": "32S5GZCU1B",
     "Color": "1335",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "9”W X 4.25”H X 1.75”D",
+    "HandleDrop": "Handle drop: 8.5”",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Shoulder bag",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Gold-tone hardware",
+      "9”W X 4.25”H X 1.75”D",
+      "Handle drop: 8.5”",
+      "Exterior details: 2 front snap pockets",
+      "Lining: 100% polyester",
+      "Zip fastening",
+      "Dust bag not included"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T20:36:47Z",
+  "last_verified_at": "2026-09-11T22:39:18Z",
   "id": "63e1c5c04ef4b6c6",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Zoe Small Signature Logo Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T22:39:18Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Zoe Small Signature Logo Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 9”W X 4.25”H X 1.75”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 8.5”</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 99.5,
+  "compare_at_price": 9504,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
 }

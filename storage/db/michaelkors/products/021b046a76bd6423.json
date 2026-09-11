@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/b98b26df-d1b3-4540-ba5b-94492b11da14/32S6GJ6W8L-001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b98b26df-d1b3-4540-ba5b-94492b11da14/32S6GJ6W8L-001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/14dc978d-5079-4767-bfb7-c79ebc87c5ff/32R6GY5W6B-149-1546_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/41fcf397-78dd-4a86-883e-cb508a010350/32R6GY5W6B-149-1546_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ca7a2d81-7855-4f12-af51-b7742c7b4b4d/32R6GY5W6B-149-1546_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/9e47f437-2e71-4852-8285-a6beccaae772/32R6GY5W6B-149-1546_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/8bff3840-0df5-4506-8961-31703d6dddfc/32R6GY5W6B-149-1546_5-tif"
   ],
   "variants": [
     {
       "sku": "32R6GY5W6B",
       "title": "Vanilla/Acorn",
       "price": "19055.00",
-      "compare_at_price": null,
+      "compare_at_price": "19055.00",
       "source_price": 199.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/b98b26df-d1b3-4540-ba5b-94492b11da14/32S6GJ6W8L-001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Nolita Medium Signature Logo Chain Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nolita Medium Signature Logo Chain Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 11.25”W X 4.5”H X 2.5”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 10.5&quot;</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 37% rayon/24% polyester/24% cotton/15% linen</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +59,22 @@
     "StyleNumber": "32R6GY5W6B",
     "Color": "Vanilla/Acorn",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "11.25”W X 4.5”H X 2.5”D",
+    "HandleDrop": "Handle drop: 10.5\"",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Shoulder bag",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Gold-tone hardware",
+      "11.25”W X 4.5”H X 2.5”D",
+      "Handle drop: 10.5\"",
+      "Interior details: back slip pocket",
+      "Lining: 37% rayon/24% polyester/24% cotton/15% linen",
+      "Zip fastening",
+      "Dust bag not included"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +84,8 @@
   "id": "021b046a76bd6423",
   "created_at": "2026-09-11T18:30:35Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Nolita Medium Signature Logo Chain Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nolita Medium Signature Logo Chain Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 11.25”W X 4.5”H X 2.5”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 10.5&quot;</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 37% rayon/24% polyester/24% cotton/15% linen</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 199.5,
+  "compare_at_price": 19055,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
 }

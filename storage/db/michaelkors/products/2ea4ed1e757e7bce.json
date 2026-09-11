@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/700ee652-86a5-4de5-9246-437d7842c562/32F6G22C9B-149-1546_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/700ee652-86a5-4de5-9246-437d7842c562/32F6G22C9B-149-1546_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/617bf62e-a654-4779-8b71-29628dcaa5e3/30T6AY5L2U-156-0250_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/489626ae-954e-4dca-a30b-c5d74c8bfb8e/30T6AY5L2U-156-0250_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/0e325482-b6a3-4d00-866e-e17c443cde18/30T6AY5L2U-156-0250_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/4ed0859d-075c-412f-8513-f6a56cda1b89/30T6AY5L2U-156-0250_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/1890bed5-32b9-45c1-a38e-8e7c6e3a1fe7/30T6AY5L2U-156-0250_5-tif"
   ],
   "variants": [
     {
       "sku": "30T6AY5L2U",
       "title": "0250",
       "price": "15187.00",
-      "compare_at_price": null,
+      "compare_at_price": "38158.00",
       "source_price": 159.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/700ee652-86a5-4de5-9246-437d7842c562/32F6G22C9B-149-1546_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Nolita Medium Whipstitched Logo Leather Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nolita Medium Whipstitched Logo Leather Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 15.25”W X 7.75”H X 4”D</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 37% rayon/24% polyester/24% cotton/15% linen</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +59,21 @@
     "StyleNumber": "30T6AY5L2U",
     "Color": "0250",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "15.25”W X 7.75”H X 4”D",
+    "Material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Leather",
+    "DetailsBullets": [
+      "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+      "Shoulder bag",
+      "Leather",
+      "100% leather",
+      "Trim: 65% polyurethane/35% polyester",
+      "Gold-tone hardware",
+      "15.25”W X 7.75”H X 4”D",
+      "Adjustable strap: 14.5\"-26\"",
+      "Interior details: back slip pocket, 2 front slip pockets",
+      "Lining: 37% rayon/24% polyester/24% cotton/15% linen"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +83,8 @@
   "id": "2ea4ed1e757e7bce",
   "created_at": "2026-09-11T18:30:35Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Nolita Medium Whipstitched Logo Leather Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nolita Medium Whipstitched Logo Leather Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 15.25”W X 7.75”H X 4”D</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 37% rayon/24% polyester/24% cotton/15% linen</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 399.5,
+  "compare_at_price": 38158,
+  "material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Leather"
 }

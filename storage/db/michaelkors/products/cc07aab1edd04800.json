@@ -13,21 +13,25 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/1bd77e3c-8f26-41e6-800e-21f2048b3685/30F5GNXT0L-230-0230_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/1bd77e3c-8f26-41e6-800e-21f2048b3685/30F5GNXT0L-230-0230_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/83df55ed-ada4-404b-8455-ab9e8cc09907/32F6GNXT1L-251-0201_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/8bfad35f-bde4-4239-8aa9-6421cbcaa72f/32F6GNXT1L-251-0201_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/9eae3f90-196c-4697-9318-37642acc0495/32F6GNXT1L-251-0201_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/edd327e0-a720-4123-a2cb-d2a20d0168f7/32F6GNXT1L-251-0201_4-tif"
   ],
   "variants": [
     {
       "sku": "32F6GNXT1L",
       "title": "Loden",
       "price": "17145.00",
-      "compare_at_price": null,
+      "compare_at_price": "17145.00",
       "source_price": 179.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/1bd77e3c-8f26-41e6-800e-21f2048b3685/30F5GNXT0L-230-0230_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Hamilton Moderne Extra-Small Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hamilton Moderne Extra-Small Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 10.5”W X 4.75”H X 3.5”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 3.75”</li>\n      <li><strong>Material:</strong> Leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,15 +58,33 @@
     "StyleNumber": "32F6GNXT1L",
     "Color": "Loden",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "10.5”W X 4.75”H X 3.5”D",
+    "HandleDrop": "Handle drop: 3.75”",
+    "Material": "Leather, 100% leather",
+    "DetailsBullets": [
+      "Leather",
+      "100% leather",
+      "Trim: 65% polyurethane/35% polyester",
+      "Gold-tone hardware",
+      "10.5”W X 4.75”H X 3.5”D",
+      "Handle drop: 3.75”",
+      "Adjustable strap: 20.5”-24”",
+      "Interior details: back slip pocket",
+      "Lining: 100% polyester",
+      "Zip fastening"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:10:33Z",
+  "last_verified_at": "2026-09-11T23:15:28Z",
   "id": "cc07aab1edd04800",
   "created_at": "2026-09-11T18:30:35Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Hamilton Moderne Extra-Small Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:15:28Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hamilton Moderne Extra-Small Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 10.5”W X 4.75”H X 3.5”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 3.75”</li>\n      <li><strong>Material:</strong> Leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 179.5,
+  "compare_at_price": 17145,
+  "material": "Leather, 100% leather"
 }

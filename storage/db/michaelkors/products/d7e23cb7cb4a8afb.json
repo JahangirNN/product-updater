@@ -7,27 +7,30 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 18912,
-  "source_price": 198.0,
+  "current_price": 8501,
+  "source_price": 89.0,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/4621d127-7bfb-4062-ad27-d27675b67c3b/30S5GQNT7W-888-6782_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/4621d127-7bfb-4062-ad27-d27675b67c3b/30S5GQNT7W-888-6782_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/4621d127-7bfb-4062-ad27-d27675b67c3b/30S5GQNT7W-888-6782_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/00d21792-8201-4931-bbfe-3029571d1286/30S5GQNT7W-888-6782_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/f58c3b81-7def-4420-9711-a3f1c62f45c5/30S5GQNT7W-888-6782_4-tif"
   ],
   "variants": [
     {
       "sku": "30S5GQNT7W",
       "title": "6782",
-      "price": "18912.00",
-      "compare_at_price": null,
-      "source_price": 198.0,
+      "price": "8501.00",
+      "compare_at_price": "18912.00",
+      "source_price": 89.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/4621d127-7bfb-4062-ad27-d27675b67c3b/30S5GQNT7W-888-6782_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Quinn Large Hand-Crocheted Straw Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Quinn Large Hand-Crocheted Straw Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 10.75&quot;</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,20 @@
     "StyleNumber": "30S5GQNT7W",
     "Color": "6782",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "HandleDrop": "Handle drop: 10.75\"",
+    "DetailsBullets": [
+      "Tote bag",
+      "Polypropylene",
+      "100% polypropylene",
+      "Trim: 60% polyurethane/40% polyester",
+      "Gold-tone hardware",
+      "Width: 15.5” (39.3cm); height: 14.5” (36.8cm); depth: 5.5” (14cm)",
+      "Handle drop: 10.75\"",
+      "Interior details: back zip pocket, front slip pocket",
+      "Snap fastening",
+      "Dust bag not included"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +80,7 @@
   "id": "d7e23cb7cb4a8afb",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Quinn Large Hand-Crocheted Straw Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Quinn Large Hand-Crocheted Straw Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 10.75&quot;</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 198.0,
+  "compare_at_price": 18912
 }

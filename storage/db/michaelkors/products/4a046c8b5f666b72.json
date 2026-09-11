@@ -7,27 +7,30 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Sunglasses",
   "gender": "Women",
-  "current_price": 19007,
-  "source_price": 199.0,
+  "current_price": 15187,
+  "source_price": 159.0,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/277754e5-acb0-4576-9578-1c83a06f6817/MK-1151-0300-0300_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/277754e5-acb0-4576-9578-1c83a06f6817/MK-1151-0300-0300_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/277754e5-acb0-4576-9578-1c83a06f6817/MK-1151-0300-0300_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/82a17a6e-4526-4907-9c0c-41f379ed516c/MK-1151-0300-0300_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b1accc03-c7f0-448c-8bbb-1681695f0e35/MK-1151-0300-0300_4-tif"
   ],
   "variants": [
     {
       "sku": "MK-1151",
       "title": "Gold",
-      "price": "19007.00",
-      "compare_at_price": null,
-      "source_price": 199.0,
+      "price": "15187.00",
+      "compare_at_price": "19007.00",
+      "source_price": 159.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/277754e5-acb0-4576-9578-1c83a06f6817/MK-1151-0300-0300_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Manchester Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Manchester Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,7 +57,19 @@
     "StyleNumber": "MK-1151",
     "Color": "Gold",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Oval sunglasses",
+      "Metal frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #",
+      "Verified Purchaser",
+      "y\\_2026, m\\_9, d\\_10, h\\_11",
+      "bvseo\\_bulk, prod\\_bvrr, vn\\_bulk\\_3.0.48",
+      "cp\\_1, bvpage1"
+    ]
   },
   "groups": [
     "sunglasses",
@@ -64,5 +79,7 @@
   "id": "4a046c8b5f666b72",
   "created_at": "2026-09-11T18:30:38Z",
   "updated_at": "2026-09-11T22:29:44Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Manchester Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Manchester Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 199.0,
+  "compare_at_price": 19007
 }

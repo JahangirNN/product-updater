@@ -13,21 +13,25 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/2d8d2b94-7058-4099-8da5-6092b4082631/32F6SJ6C5L-309-0321_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/2d8d2b94-7058-4099-8da5-6092b4082631/32F6SJ6C5L-309-0321_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/2d8d2b94-7058-4099-8da5-6092b4082631/32F6SJ6C5L-309-0321_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/c5a4efe4-603d-408f-bff7-1d02995933e7/32F6SJ6C5L-309-0321_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ca267512-1212-4d94-b0a9-37ada8146661/32F6SJ6C5L-309-0321_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/3d5fce19-5129-46cc-88c8-d13c47edee18/32F6SJ6C5L-309-0321_4-tif"
   ],
   "variants": [
     {
       "sku": "32F6SJ6C5L",
       "title": "0321",
       "price": "12369.00",
-      "compare_at_price": null,
+      "compare_at_price": "12369.00",
       "source_price": 129.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/2d8d2b94-7058-4099-8da5-6092b4082631/32F6SJ6C5L-309-0321_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Small Leather Smartphone Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Small Leather Smartphone Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,15 +58,31 @@
     "StyleNumber": "32F6SJ6C5L",
     "Color": "0321",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Pebbled leather, 100% leather",
+    "DetailsBullets": [
+      "Crossbody bag",
+      "Pebbled leather",
+      "100% leather",
+      "Trim: 60% polyurethane/40% polyester",
+      "Gold-tone hardware",
+      "Width: 3.75” (10cm); height: 7” (18cm); depth: 1.25” (3cm)",
+      "Adjustable strap: 18.5\"-22.25\"",
+      "Interior details: 3 card slots",
+      "Lining: 100% polyester",
+      "Zip fastening"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:25:29Z",
+  "last_verified_at": "2026-09-11T23:33:02Z",
   "id": "f8a58f87e772edc9",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Small Leather Smartphone Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:33:02Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Small Leather Smartphone Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 129.5,
+  "compare_at_price": 12369,
+  "material": "Pebbled leather, 100% leather"
 }

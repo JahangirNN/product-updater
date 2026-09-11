@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/42d675d0-ec49-4b2f-b01b-fb756c2c37a2/30T5G9IS2T-193-3033_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/42d675d0-ec49-4b2f-b01b-fb756c2c37a2/30T5G9IS2T-193-3033_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/42d675d0-ec49-4b2f-b01b-fb756c2c37a2/30T5G9IS2T-193-3033_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d7553ce5-55e8-42b1-bb01-31cd6cf92a80/30T5G9IS2T-193-3033_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/1b35cf72-e7c7-49b6-85ac-dcd6f8538fd0/30T5G9IS2T-193-3033_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ad915f59-3b8b-4e41-96a0-6b1b751d6cdc/30T5G9IS2T-193-3033_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/3795ce8c-3d80-4fa8-b6fc-80b22f65193b/30T5G9IS2T-193-3033_5-tif"
   ],
   "variants": [
     {
       "sku": "30T5G9IS2T",
       "title": "3033",
       "price": "26696.00",
-      "compare_at_price": null,
+      "compare_at_price": "26696.00",
       "source_price": 279.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/42d675d0-ec49-4b2f-b01b-fb756c2c37a2/30T5G9IS2T-193-3033_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Laila Medium Color-Block Pebbled Leather Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Laila Medium Color-Block Pebbled Leather Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 11.5”W X 8.75”H X 5.5”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 4”</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +59,22 @@
     "StyleNumber": "30T5G9IS2T",
     "Color": "3033",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "11.5”W X 8.75”H X 5.5”D",
+    "HandleDrop": "Handle drop: 4”",
+    "Material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather",
+    "DetailsBullets": [
+      "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+      "Satchel",
+      "Pebbled leather",
+      "100% leather",
+      "Gold-tone hardware",
+      "11.5”W X 8.75”H X 5.5”D",
+      "Handle drop: 4”",
+      "Adjustable strap: 19.5\"-22.5\"",
+      "Exterior details: detachable strap",
+      "Interior details: back slip and zip pockets, center zip pocket"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +84,8 @@
   "id": "bfd6a8cc1e79f14e",
   "created_at": "2026-09-11T18:30:35Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Laila Medium Color-Block Pebbled Leather Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Laila Medium Color-Block Pebbled Leather Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 11.5”W X 8.75”H X 5.5”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 4”</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 279.5,
+  "compare_at_price": 26696,
+  "material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather"
 }

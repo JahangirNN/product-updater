@@ -7,23 +7,27 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 15234,
-  "source_price": 159.5,
+  "current_price": 7546,
+  "source_price": 79.0,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7fdc839c-7ba7-429d-86e5-066d00c8d8e2/32S6GJ6C5V-282-0301_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7fdc839c-7ba7-429d-86e5-066d00c8d8e2/32S6GJ6C5V-282-0301_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7fdc839c-7ba7-429d-86e5-066d00c8d8e2/32S6GJ6C5V-282-0301_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/5890719d-3336-4c53-a5f2-4783ced46fb6/32S6GJ6C5V-282-0301_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d1355206-da6b-4121-8ec5-0f6014ef0782/32S6GJ6C5V-282-0301_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/db0d8563-d32b-4047-8b7f-b467cf3d023d/32S6GJ6C5V-282-0301_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/9d153352-5dfd-40d4-9493-dd13038ba4a9/32S6GJ6C5V-282-0301_5-tif"
   ],
   "variants": [
     {
       "sku": "32S6GJ6C5V",
       "title": "0301",
-      "price": "15234.00",
-      "compare_at_price": null,
-      "source_price": 159.5,
+      "price": "7546.00",
+      "compare_at_price": "15234.00",
+      "source_price": 79.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<p>Jet Set Small Signature Logo Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Product Specifications & Care</summary>\n  <div style=\"padding: 10px; font-size: 14px; line-height: 1.6;\">\n    <p><strong>Brand:</strong> MICHAEL Michael Kors</p>\n    <p><strong>Style #:</strong> 32S6GJ6C5V</p>\n    <p><strong>Care:</strong> Wipe clean with soft, dry cloth. Store in protective dust bag.</p>\n  </div>\n</details>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Small Signature Logo Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 16.5&quot;W X 4.5&quot;H X 2&quot;D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +58,21 @@
     "StyleNumber": "32S6GJ6C5V",
     "Color": "0301",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "16.5\"W X 4.5\"H X 2\"D",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Crossbody bag",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Gold-tone hardware",
+      "16.5\"W X 4.5\"H X 2\"D",
+      "Adjustable strap: 18.5\"-22.5\"",
+      "Exterior details: back slip pocket, detachable strap",
+      "Interior details: back zip pocket, front slip pocket, 6 card slots",
+      "Lining: 100% polyester",
+      "Snap fastening"
+    ]
   },
   "groups": [
     "handbags",
@@ -63,5 +81,9 @@
   "last_verified_at": "2026-09-11T22:31:13Z",
   "id": "4e0d837869695f5f",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T22:31:13Z"
+  "updated_at": "2026-09-11T22:31:13Z",
+  "source_compare_at_price": 159.5,
+  "compare_at_price": 15234,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Small Signature Logo Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 16.5&quot;W X 4.5&quot;H X 2&quot;D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>"
 }

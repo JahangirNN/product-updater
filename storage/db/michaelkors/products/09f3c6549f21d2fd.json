@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/86f0c067-dd3b-408e-b577-073d3af3e3f9/32T6GZYC1V-282-0301_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/86f0c067-dd3b-408e-b577-073d3af3e3f9/32T6GZYC1V-282-0301_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/0b5ca4af-4f19-4f6d-93b8-71cd0149633b/30H3GTVT7C-270-0121_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/c519ea5b-6dcd-47ef-aeff-ee6fa9c6952b/30H3GTVT7C-270-0121_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/8e6d57aa-f1ea-4217-8588-86f8be4eaeb6/30H3GTVT7C-270-0121_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7a422635-9e83-41a4-b9c9-12b8ec7209b5/30H3GTVT7C-270-0121_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/8a547430-f8a6-4ce4-bc7c-86c1a2b7f6bd/30H3GTVT7C-270-0121_7-tif"
   ],
   "variants": [
     {
       "sku": "30H3GTVT7C",
       "title": "0121",
       "price": "9360.00",
-      "compare_at_price": null,
+      "compare_at_price": "9360.00",
       "source_price": 98.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/86f0c067-dd3b-408e-b577-073d3af3e3f9/32T6GZYC1V-282-0301_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Watch Hunger Stop Cotton Canvas Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Watch Hunger Stop Cotton Canvas Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 15.25” W X 14.75” H X 4” D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 11.5”</li>\n      <li><strong>Material:</strong> Cotton canvas, 100% cotton</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +59,22 @@
     "StyleNumber": "30H3GTVT7C",
     "Color": "0121",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "15.25” W X 14.75” H X 4” D",
+    "HandleDrop": "Handle drop: 11.5”",
+    "Material": "Cotton canvas, 100% cotton",
+    "DetailsBullets": [
+      "For each Watch Hunger Stop tote purchased from a Michael Kors retail store or official Michael Kors website, Michael Kors will donate 100% of profits (the equivalent of US $54) to WFP. Visit WatchHungerStop.com for program details and other ways to help. WFP does not endorse any product or service.",
+      "Cotton canvas",
+      "100% cotton",
+      "15.25” W X 14.75” H X 4” D",
+      "Handle drop: 11.5”",
+      "Interior details: back slip pocket",
+      "Imported",
+      "Dust bag not included",
+      "Style #",
+      "Verified Purchaser"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +84,8 @@
   "id": "09f3c6549f21d2fd",
   "created_at": "2026-09-11T18:30:37Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Watch Hunger Stop Cotton Canvas Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Watch Hunger Stop Cotton Canvas Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 15.25” W X 14.75” H X 4” D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 11.5”</li>\n      <li><strong>Material:</strong> Cotton canvas, 100% cotton</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 98.0,
+  "compare_at_price": 9360,
+  "material": "Cotton canvas, 100% cotton"
 }

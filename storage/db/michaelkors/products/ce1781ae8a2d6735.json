@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/b493e620-5c43-45b9-a94c-2878bbfe514b/MK-1160-3791-3791_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b493e620-5c43-45b9-a94c-2878bbfe514b/MK-1160-3791-3791_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/aa37ad0c-cbcc-4bdf-b272-367b8e20013e/MK-1179-0001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/90521368-f1cb-4e90-bda0-472358f2aaf8/MK-1179-0001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/84338506-60b2-4266-8da3-0f316c2e0b75/MK-1179-0001-0001_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/48ae04ca-4805-4660-9666-da44e15ebf40/MK-1179-0001-0001_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/65048b47-7153-4f5d-9d3a-c19b5fd18737/MK-1179-0001-0001_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-1179",
       "title": "Tortoise",
       "price": "17097.00",
-      "compare_at_price": null,
+      "compare_at_price": "17097.00",
       "source_price": 179.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/b493e620-5c43-45b9-a94c-2878bbfe514b/MK-1160-3791-3791_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -69,9 +74,11 @@
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:10:52Z",
+  "last_verified_at": "2026-09-11T23:15:46Z",
   "id": "ce1781ae8a2d6735",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Key West Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>"
+  "updated_at": "2026-09-11T23:15:46Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Key West Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 179.0,
+  "compare_at_price": 17097
 }

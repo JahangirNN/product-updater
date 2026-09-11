@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/4e6c82f8-fe0a-4160-95f8-0241a4880ffd/MK-2258U-4751-4751_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/4e6c82f8-fe0a-4160-95f8-0241a4880ffd/MK-2258U-4751-4751_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/c34bf9d0-e53d-4353-96a8-a6421ded48d6/MK-2275BU-0766-0766_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/8149fb61-38ac-4b64-bcb5-a7efc4a7054a/MK-2275BU-0766-0766_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/fc5374d0-dcac-4c7e-b626-694ce916caac/MK-2275BU-0766-0766_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/9211700f-5164-4260-8df7-f3544f66e8ce/MK-2275BU-0766-0766_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/99acf4cb-9a5f-47b7-aa55-a5f68d2a1d9a/MK-2275BU-0766-0766_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-2275BU",
       "title": "Blush Horn",
       "price": "15187.00",
-      "compare_at_price": null,
+      "compare_at_price": "15187.00",
       "source_price": 159.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/4e6c82f8-fe0a-4160-95f8-0241a4880ffd/MK-2258U-4751-4751_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Santo Domingo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Santo Domingo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,7 +59,19 @@
     "StyleNumber": "MK-2275BU",
     "Color": "Blush Horn",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Square sunglasses",
+      "Plastic frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #",
+      "Verified Purchaser",
+      "y\\_2026, m\\_9, d\\_10, h\\_11",
+      "bvseo\\_bulk, prod\\_bvrr, vn\\_bulk\\_3.0.48",
+      "cp\\_1, bvpage1"
+    ]
   },
   "groups": [
     "sunglasses",
@@ -64,5 +81,7 @@
   "id": "4128b42e05dc33ec",
   "created_at": "2026-09-11T18:30:38Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Santo Domingo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Santo Domingo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 159.0,
+  "compare_at_price": 15187
 }

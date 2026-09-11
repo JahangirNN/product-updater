@@ -13,21 +13,25 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/78f99c12-2ec1-4491-aac8-48aceea5e79d/MK-1180-0040-0040_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7d6fb110-f189-4acf-9687-4c345b4ddd62/MK-2260D-0767-0767_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/78f99c12-2ec1-4491-aac8-48aceea5e79d/MK-1180-0040-0040_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7d6fb110-f189-4acf-9687-4c345b4ddd62/MK-2260D-0767-0767_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6660d245-fe75-4f50-998e-2c28e86b6942/MK-2260D-0767-0767_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/56eca7d8-9d26-4d18-85eb-3ae4888967a5/MK-2260D-0767-0767_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/deb14744-345d-4020-8f02-3c80f8b1d369/MK-2260D-0767-0767_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/178865ca-2780-499e-b932-c6666558fd97/MK-2260D-0767-0767_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-2260D",
       "title": "Black Horn",
       "price": "13276.00",
-      "compare_at_price": null,
+      "compare_at_price": "13276.00",
       "source_price": 139.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/78f99c12-2ec1-4491-aac8-48aceea5e79d/MK-1180-0040-0040_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7d6fb110-f189-4acf-9687-4c345b4ddd62/MK-2260D-0767-0767_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Wilmington Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Wilmington Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate frame</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,15 +58,31 @@
     "StyleNumber": "MK-2260D",
     "Color": "Black Horn",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Acetate frame",
+    "DetailsBullets": [
+      "Oval sunglasses",
+      "Acetate frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #",
+      "y\\_2026, m\\_9, d\\_11, h\\_10",
+      "bvseo\\_bulk, prod\\_bvrr, vn\\_bulk\\_3.0.48",
+      "cp\\_1, bvpage1",
+      "loc\\_en\\_US, sid\\_MK-2260D, prod, sort\\_\\[SortEntry(order=SUBMISSION\\_TIME, direction=DESCENDING)\\]"
+    ]
   },
   "groups": [
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:15:35Z",
+  "last_verified_at": "2026-09-11T23:21:02Z",
   "id": "dbdb2065ee061864",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Wilmington Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:21:02Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Wilmington Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate frame</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 139.0,
+  "compare_at_price": 13276,
+  "material": "Acetate frame"
 }

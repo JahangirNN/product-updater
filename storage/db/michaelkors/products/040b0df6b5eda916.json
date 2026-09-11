@@ -15,14 +15,17 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d1f9790b-8451-4691-99f1-07719e139572/30F6GEJE7S-230-0230_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d1f9790b-8451-4691-99f1-07719e139572/30F6GEJE7S-230-0230_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d1f9790b-8451-4691-99f1-07719e139572/30F6GEJE7S-230-0230_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/f978ca68-5407-4ed9-bd9b-82ed2f85c201/30F6GEJE7S-230-0230_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/f81c08a5-70fe-442e-91e3-ebc2b2f65166/30F6GEJE7S-230-0230_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/9873490e-5a3a-4d4a-b43e-1d855e560d2c/30F6GEJE7S-230-0230_4-tif"
   ],
   "variants": [
     {
       "sku": "30F6GEJE7S",
       "title": "Chocolate",
       "price": "38158.00",
-      "compare_at_price": null,
+      "compare_at_price": "38158.00",
       "source_price": 399.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Ellie Large Suede Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Ellie Large Suede Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 12&quot;</li>\n      <li><strong>Material:</strong> Suede, 100% suede</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,21 @@
     "StyleNumber": "30F6GEJE7S",
     "Color": "Chocolate",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "HandleDrop": "Handle drop: 12\"",
+    "Material": "Suede, 100% suede",
+    "DetailsBullets": [
+      "Shoulder bag",
+      "Suede",
+      "100% suede",
+      "Trim: 65% polyurethane/35% polyester",
+      "Gold-tone hardware",
+      "Width: 15.5” (40cm); height: 16” (41cm); depth: 5.5” (14cm)",
+      "Handle drop: 12\"",
+      "Interior details: back zip pocket, center zip compartment, 2 front slip pockets",
+      "Lining: 100% polyester",
+      "Snap fastening"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +81,8 @@
   "id": "040b0df6b5eda916",
   "created_at": "2026-09-11T18:30:35Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Ellie Large Suede Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Ellie Large Suede Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 12&quot;</li>\n      <li><strong>Material:</strong> Suede, 100% suede</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 399.5,
+  "compare_at_price": 38158,
+  "material": "Suede, 100% suede"
 }

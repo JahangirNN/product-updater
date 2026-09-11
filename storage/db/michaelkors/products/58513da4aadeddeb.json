@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/fc329fe0-bae7-4d47-9e77-228208a0fbb3/MK-1186-0710-0710_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/fc329fe0-bae7-4d47-9e77-228208a0fbb3/MK-1186-0710-0710_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/fc329fe0-bae7-4d47-9e77-228208a0fbb3/MK-1186-0710-0710_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/215baf24-a43f-4e40-9b8e-2ac5bef5c1a0/MK-1186-0710-0710_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/51654897-41a5-4b5f-80b3-5b6d299b16a9/MK-1186-0710-0710_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/4d7f06f7-ba46-4bf1-9dde-0e38d95b926c/MK-1186-0710-0710_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d52d9b99-68f8-4367-8b90-4669e96e4566/MK-1186-0710-0710_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-1186",
       "title": "0710",
       "price": "13276.00",
-      "compare_at_price": null,
+      "compare_at_price": "13276.00",
       "source_price": 139.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/fc329fe0-bae7-4d47-9e77-228208a0fbb3/MK-1186-0710-0710_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Patra Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Patra Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,7 +59,16 @@
     "StyleNumber": "MK-1186",
     "Color": "0710",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Square sunglasses",
+      "Metal",
+      "Case Included",
+      "100% UV",
+      "Imported",
+      "Style #",
+      "bvseo\\_sdk, dw\\_cartridge, 18.2.0, p\\_sdk\\_3.2.0"
+    ]
   },
   "groups": [
     "sunglasses",
@@ -64,5 +78,7 @@
   "id": "58513da4aadeddeb",
   "created_at": "2026-09-11T18:30:38Z",
   "updated_at": "2026-09-11T22:34:58Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Patra Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Patra Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 139.0,
+  "compare_at_price": 13276
 }

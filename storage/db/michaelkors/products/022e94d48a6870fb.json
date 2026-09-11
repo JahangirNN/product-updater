@@ -7,27 +7,30 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Sneakers",
   "gender": "Women",
-  "current_price": 17145,
-  "source_price": 179.5,
+  "current_price": 14232,
+  "source_price": 149.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6213ef42-d57a-4e69-bf37-5c4e382c2392/43S6BWFS8D-562-0664_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6213ef42-d57a-4e69-bf37-5c4e382c2392/43S6BWFS8D-562-0664_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6213ef42-d57a-4e69-bf37-5c4e382c2392/43S6BWFS8D-562-0664_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/476907d2-2c1d-468a-9c43-76bb708b3444/43S6BWFS8D-562-0664_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/2f09465e-8eda-47cc-a11e-64bd85a055a1/43S6BWFS8D-562-0664_5-tif"
   ],
   "variants": [
     {
       "sku": "43S6BWFS8D-5",
       "title": "US 5 / UK 3 - 0664",
-      "price": "17145.00",
-      "compare_at_price": null,
-      "source_price": 179.5,
+      "price": "14232.00",
+      "compare_at_price": "17145.00",
+      "source_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6213ef42-d57a-4e69-bf37-5c4e382c2392/43S6BWFS8D-562-0664_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -45,13 +48,13 @@
     {
       "sku": "43S6BWFS8D-5.5",
       "title": "US 5.5 / UK 3.5 - 0664",
-      "price": "17145.00",
-      "compare_at_price": null,
-      "source_price": 179.5,
+      "price": "14232.00",
+      "compare_at_price": "17145.00",
+      "source_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6213ef42-d57a-4e69-bf37-5c4e382c2392/43S6BWFS8D-562-0664_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -69,13 +72,13 @@
     {
       "sku": "43S6BWFS8D-6",
       "title": "US 6 / UK 4 - 0664",
-      "price": "17145.00",
-      "compare_at_price": null,
-      "source_price": 179.5,
+      "price": "14232.00",
+      "compare_at_price": "17145.00",
+      "source_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6213ef42-d57a-4e69-bf37-5c4e382c2392/43S6BWFS8D-562-0664_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -93,13 +96,13 @@
     {
       "sku": "43S6BWFS8D-6.5",
       "title": "US 6.5 / UK 4.5 - 0664",
-      "price": "17145.00",
-      "compare_at_price": null,
-      "source_price": 179.5,
+      "price": "14232.00",
+      "compare_at_price": "17145.00",
+      "source_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6213ef42-d57a-4e69-bf37-5c4e382c2392/43S6BWFS8D-562-0664_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -117,13 +120,13 @@
     {
       "sku": "43S6BWFS8D-7",
       "title": "US 7 / UK 5 - 0664",
-      "price": "17145.00",
-      "compare_at_price": null,
-      "source_price": 179.5,
+      "price": "14232.00",
+      "compare_at_price": "17145.00",
+      "source_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6213ef42-d57a-4e69-bf37-5c4e382c2392/43S6BWFS8D-562-0664_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -141,13 +144,13 @@
     {
       "sku": "43S6BWFS8D-7.5",
       "title": "US 7.5 / UK 5.5 - 0664",
-      "price": "17145.00",
-      "compare_at_price": null,
-      "source_price": 179.5,
+      "price": "14232.00",
+      "compare_at_price": "17145.00",
+      "source_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6213ef42-d57a-4e69-bf37-5c4e382c2392/43S6BWFS8D-562-0664_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -165,13 +168,13 @@
     {
       "sku": "43S6BWFS8D-8",
       "title": "US 8 / UK 6 - 0664",
-      "price": "17145.00",
-      "compare_at_price": null,
-      "source_price": 179.5,
+      "price": "14232.00",
+      "compare_at_price": "17145.00",
+      "source_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6213ef42-d57a-4e69-bf37-5c4e382c2392/43S6BWFS8D-562-0664_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -189,13 +192,13 @@
     {
       "sku": "43S6BWFS8D-8.5",
       "title": "US 8.5 / UK 6.5 - 0664",
-      "price": "17145.00",
-      "compare_at_price": null,
-      "source_price": 179.5,
+      "price": "14232.00",
+      "compare_at_price": "17145.00",
+      "source_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6213ef42-d57a-4e69-bf37-5c4e382c2392/43S6BWFS8D-562-0664_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -213,13 +216,13 @@
     {
       "sku": "43S6BWFS8D-9",
       "title": "US 9 / UK 7 - 0664",
-      "price": "17145.00",
-      "compare_at_price": null,
-      "source_price": 179.5,
+      "price": "14232.00",
+      "compare_at_price": "17145.00",
+      "source_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6213ef42-d57a-4e69-bf37-5c4e382c2392/43S6BWFS8D-562-0664_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -237,13 +240,13 @@
     {
       "sku": "43S6BWFS8D-9.5",
       "title": "US 9.5 / UK 7.5 - 0664",
-      "price": "17145.00",
-      "compare_at_price": null,
-      "source_price": 179.5,
+      "price": "14232.00",
+      "compare_at_price": "17145.00",
+      "source_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6213ef42-d57a-4e69-bf37-5c4e382c2392/43S6BWFS8D-562-0664_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -261,13 +264,13 @@
     {
       "sku": "43S6BWFS8D-10",
       "title": "US 10 / UK 8 - 0664",
-      "price": "17145.00",
-      "compare_at_price": null,
-      "source_price": 179.5,
+      "price": "14232.00",
+      "compare_at_price": "17145.00",
+      "source_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6213ef42-d57a-4e69-bf37-5c4e382c2392/43S6BWFS8D-562-0664_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -285,13 +288,13 @@
     {
       "sku": "43S6BWFS8D-11",
       "title": "US 11 / UK 9 - 0664",
-      "price": "17145.00",
-      "compare_at_price": null,
-      "source_price": 179.5,
+      "price": "14232.00",
+      "compare_at_price": "17145.00",
+      "source_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6213ef42-d57a-4e69-bf37-5c4e382c2392/43S6BWFS8D-562-0664_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -358,7 +361,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Bowie Mixed-Media Trainer by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p><details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Women's Shoe Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">US Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">UK Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">EU Size</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 3</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 35.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 5.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 3.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 36</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 6</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 4</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 36.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 4.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 37</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 37.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 5.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 38.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 39</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 39.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 41</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42</td></tr>    </tbody>\n  </table>\n</details></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bowie Mixed-Media Trainer by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Leather/mesh/metallic</li>\n      <li><strong>Lining:</strong> polyester</li>\n      <li><strong>Silhouette:</strong> Round toe</li>\n      <li><strong>Closure:</strong> Lace-up fastening</li>\n    </ul>\n  </div>\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Women's Shoe Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">US Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">UK Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">EU Size</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 3</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 35.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 5.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 3.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 36</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 6</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 4</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 36.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 4.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 37</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 37.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 5.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 38.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 39</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 39.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 41</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42</td></tr>    </tbody>\n  </table>\n</details>\n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sneakers",
@@ -366,7 +369,19 @@
     "StyleNumber": "43S6BWFS8D",
     "Color": "0664",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Leather/mesh/metallic",
+    "DetailsBullets": [
+      "Trainer",
+      "Leather/mesh/metallic",
+      "Lining: polyester",
+      "Sole: rubber",
+      "Round toe",
+      "Lace-up fastening",
+      "Imported",
+      "Style #",
+      "bvseo\\_sdk, dw\\_cartridge, 18.2.0, p\\_sdk\\_3.2.0"
+    ]
   },
   "groups": [
     "sneakers",
@@ -377,5 +392,8 @@
   "created_at": "2026-09-11T18:30:37Z",
   "updated_at": "2026-09-11T22:09:51Z",
   "size_guide_html": "<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Women's Shoe Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">US Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">UK Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">EU Size</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 3</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 35.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 5.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 3.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 36</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 6</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 4</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 36.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 4.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 37</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 37.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 5.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 38.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 39</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 39.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 41</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42</td></tr>    </tbody>\n  </table>\n</details>",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Bowie Mixed-Media Trainer by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p><details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Women's Shoe Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">US Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">UK Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">EU Size</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 3</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 35.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 5.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 3.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 36</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 6</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 4</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 36.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 4.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 37</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 37.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 5.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 38.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 39</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 39.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 41</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42</td></tr>    </tbody>\n  </table>\n</details></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bowie Mixed-Media Trainer by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Leather/mesh/metallic</li>\n      <li><strong>Lining:</strong> polyester</li>\n      <li><strong>Silhouette:</strong> Round toe</li>\n      <li><strong>Closure:</strong> Lace-up fastening</li>\n    </ul>\n  </div>\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Women's Shoe Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">US Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">UK Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">EU Size</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 3</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 35.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 5.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 3.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 36</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 6</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 4</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 36.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 4.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 37</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 37.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 5.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 38.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 39</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 39.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 41</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42</td></tr>    </tbody>\n  </table>\n</details>\n</div>",
+  "source_compare_at_price": 179.5,
+  "compare_at_price": 17145,
+  "material": "Leather/mesh/metallic"
 }

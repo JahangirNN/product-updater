@@ -13,21 +13,24 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/517ce445-14f4-4347-844f-ffa572efd509/32S5GTVE9L-001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/517ce445-14f4-4347-844f-ffa572efd509/32S5GTVE9L-001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/517ce445-14f4-4347-844f-ffa572efd509/32S5GTVE9L-001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/88557b05-61c9-44db-ab1f-4066df0fe61f/32S5GTVE9L-001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/c496c223-0b09-498c-944d-dda43127f21a/32S5GTVE9L-001-0001_5-tif"
   ],
   "variants": [
     {
       "sku": "32S5GTVE9L",
       "title": "0001",
       "price": "15234.00",
-      "compare_at_price": null,
+      "compare_at_price": "15234.00",
       "source_price": 159.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/517ce445-14f4-4347-844f-ffa572efd509/32S5GTVE9L-001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Leather Continental Wristlet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Leather Continental Wristlet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8.25&quot;W x 4&quot;H X 0.75&quot;D</li>\n      <li><strong>Handle Drop:</strong> Handle Drop: 7&quot;</li>\n      <li><strong>Material:</strong> 100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance from tanneries meeting the highest standards of environmental performance</li>\n      <li><strong>Hardware:</strong> Gold-Tone Hardware</li>\n      <li><strong>Lining:</strong> 100% Polyester</li>\n      <li><strong>Closure:</strong> Zip-Around Fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Wallets",
@@ -54,7 +57,22 @@
     "StyleNumber": "32S5GTVE9L",
     "Color": "0001",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "8.25\"W x 4\"H X 0.75\"D",
+    "HandleDrop": "Handle Drop: 7\"",
+    "Material": "100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance from tanneries meeting the highest standards of environmental performance",
+    "DetailsBullets": [
+      "100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+      "100% leather from tanneries meeting the highest standards of environmental performance from tanneries meeting the highest standards of environmental performance",
+      "Gold-Tone Hardware",
+      "8.25\"W x 4\"H X 0.75\"D",
+      "Handle Drop: 7\"",
+      "Interior Details: Zip Pocket, 3 Slit Pockets, 10 Card Slots",
+      "Lining: 100% Polyester",
+      "Zip-Around Fastening",
+      "Imported",
+      "Style #"
+    ]
   },
   "groups": [
     "wallets",
@@ -64,5 +82,8 @@
   "id": "2453409dd3d3c3d1",
   "created_at": "2026-09-11T18:30:37Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Leather Continental Wristlet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Leather Continental Wristlet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8.25&quot;W x 4&quot;H X 0.75&quot;D</li>\n      <li><strong>Handle Drop:</strong> Handle Drop: 7&quot;</li>\n      <li><strong>Material:</strong> 100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance from tanneries meeting the highest standards of environmental performance</li>\n      <li><strong>Hardware:</strong> Gold-Tone Hardware</li>\n      <li><strong>Lining:</strong> 100% Polyester</li>\n      <li><strong>Closure:</strong> Zip-Around Fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 159.5,
+  "compare_at_price": 15234,
+  "material": "100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance from tanneries meeting the highest standards of environmental performance"
 }

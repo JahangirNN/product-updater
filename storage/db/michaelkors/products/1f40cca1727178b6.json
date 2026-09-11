@@ -13,21 +13,24 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/bbfbb9ce-9646-4652-a028-14cf4c3a73e1/32H3G8EC7L-847-3300_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/bbfbb9ce-9646-4652-a028-14cf4c3a73e1/32H3G8EC7L-847-3300_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/bbfbb9ce-9646-4652-a028-14cf4c3a73e1/32H3G8EC7L-847-3300_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/2d8c77f0-7e9c-4a59-a815-74e738f2b29e/32H3G8EC7L-847-3300_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/9983cd15-5896-4a07-a57b-4ec1e2689ea7/32H3G8EC7L-847-3300_4-tif"
   ],
   "variants": [
     {
       "sku": "32H3G8EC7L",
       "title": "3300",
       "price": "9456.00",
-      "compare_at_price": null,
+      "compare_at_price": "18912.00",
       "source_price": 99.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/bbfbb9ce-9646-4652-a028-14cf4c3a73e1/32H3G8EC7L-847-3300_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -79,5 +82,7 @@
   "created_at": "2026-09-11T18:30:37Z",
   "updated_at": "2026-09-11T22:09:51Z",
   "material": "100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance",
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Empire Large Leather Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 9.5&quot;W X 5&quot;H X 2.5&quot;D</li>\n      <li><strong>Material:</strong> 100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Empire Large Leather Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 9.5&quot;W X 5&quot;H X 2.5&quot;D</li>\n      <li><strong>Material:</strong> 100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 198.0,
+  "compare_at_price": 18912
 }

@@ -7,27 +7,30 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 19055,
-  "source_price": 199.5,
+  "current_price": 15234,
+  "source_price": 159.5,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/3d91c2c7-97ae-42eb-83e2-179308809ece/32F5GQ1C0B-149-1546_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/3d91c2c7-97ae-42eb-83e2-179308809ece/32F5GQ1C0B-149-1546_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/3d91c2c7-97ae-42eb-83e2-179308809ece/32F5GQ1C0B-149-1546_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/a3c02f0f-4926-4c45-9112-56c429ff264f/32F5GQ1C0B-149-1546_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/02c756e0-d62b-4864-ada3-07cd06fac6d6/32F5GQ1C0B-149-1546_4-tif"
   ],
   "variants": [
     {
       "sku": "32F5GQ1C0B",
       "title": "Moss",
-      "price": "19055.00",
-      "compare_at_price": null,
-      "source_price": 199.5,
+      "price": "15234.00",
+      "compare_at_price": "19055.00",
+      "source_price": 159.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/3d91c2c7-97ae-42eb-83e2-179308809ece/32F5GQ1C0B-149-1546_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Jana Extra-Small Signature Logo Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jana Extra-Small Signature Logo Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 7.5”W X 4.75”H X 2.75”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 2.75&quot;</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,22 @@
     "StyleNumber": "32F5GQ1C0B",
     "Color": "Moss",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "7.5”W X 4.75”H X 2.75”D",
+    "HandleDrop": "Handle drop: 2.75\"",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Crossbody bag",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Trim: 60% polyurethane/20% cotton/20% polyester",
+      "Gold-tone hardware",
+      "7.5”W X 4.75”H X 2.75”D",
+      "Handle drop: 2.75\"",
+      "Adjustable strap: 20.75\"-24.25\"",
+      "Exterior details: detachable strap",
+      "Interior details: back slip pocket"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +82,8 @@
   "id": "0a2422aa39633483",
   "created_at": "2026-09-11T18:30:35Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Jana Extra-Small Signature Logo Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jana Extra-Small Signature Logo Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 7.5”W X 4.75”H X 2.75”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 2.75&quot;</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 199.5,
+  "compare_at_price": 19055,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
 }

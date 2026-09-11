@@ -13,21 +13,24 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/e476e3ee-b4da-4857-9247-1439341964ec/MK-9051-0001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/e476e3ee-b4da-4857-9247-1439341964ec/MK-9051-0001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/e476e3ee-b4da-4857-9247-1439341964ec/MK-9051-0001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/28dbbb0c-1f50-49ef-8463-14f078c0d0a9/MK-9051-0001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/cccddf4e-5521-4838-ab9d-5c6f7ae7b880/MK-9051-0001-0001_5-tif"
   ],
   "variants": [
     {
       "sku": "MK-9051",
       "title": "Tortoise",
       "price": "37728.00",
-      "compare_at_price": null,
+      "compare_at_price": "37728.00",
       "source_price": 395.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/e476e3ee-b4da-4857-9247-1439341964ec/MK-9051-0001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Forio Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Forio Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate frame</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,7 +57,16 @@
     "StyleNumber": "MK-9051",
     "Color": "Tortoise",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Acetate frame",
+    "DetailsBullets": [
+      "Oval sunglasses",
+      "Acetate frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #"
+    ]
   },
   "groups": [
     "sunglasses",
@@ -64,5 +76,8 @@
   "id": "c133cffd0d21d11a",
   "created_at": "2026-09-11T18:30:38Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Forio Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Forio Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate frame</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 395.0,
+  "compare_at_price": 37728,
+  "material": "Acetate frame"
 }

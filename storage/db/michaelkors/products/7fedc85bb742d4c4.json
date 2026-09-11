@@ -15,14 +15,17 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/ff468b75-aa38-47dc-a064-4feb6cd09322/30F6G24L3B-149-1546_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ff468b75-aa38-47dc-a064-4feb6cd09322/30F6G24L3B-149-1546_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ff468b75-aa38-47dc-a064-4feb6cd09322/30F6G24L3B-149-1546_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/e41902a8-fc71-4c91-a51b-6bd9f999b721/30F6G24L3B-149-1546_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/bf55e264-3295-4a7c-ac0c-de7f8212b42f/30F6G24L3B-149-1546_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/11fa0732-dfb8-4f9f-a2df-3d44c12df819/30F6G24L3B-149-1546_4-tif"
   ],
   "variants": [
     {
       "sku": "30F6G24L3B",
       "title": "1546",
       "price": "28606.00",
-      "compare_at_price": null,
+      "compare_at_price": "28606.00",
       "source_price": 299.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Teddi Large Signature Logo Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Teddi Large Signature Logo Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,15 +57,31 @@
     "StyleNumber": "30F6G24L3B",
     "Color": "1546",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Shoulder bag",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Trim: 60% polyurethane/40% polyester",
+      "Gold-tone hardware",
+      "Width: 15” (38.1cm); height: 6.75” (17.1cm); depth: 5” (12.7cm)",
+      "Interior details: back and front slip pockets",
+      "Lining: 100% polyester",
+      "Zip fastening",
+      "Dust bag not included"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T20:45:55Z",
+  "last_verified_at": "2026-09-11T22:49:00Z",
   "id": "7fedc85bb742d4c4",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Teddi Large Signature Logo Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T22:49:00Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Teddi Large Signature Logo Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 299.5,
+  "compare_at_price": 28606,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
 }

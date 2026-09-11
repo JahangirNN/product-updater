@@ -7,27 +7,31 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 53440,
-  "source_price": 559.5,
+  "current_price": 38158,
+  "source_price": 399.5,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/3f675e2b-9be9-4f62-9f45-8439c88c04c8/33T6SX3M4L-001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/3f675e2b-9be9-4f62-9f45-8439c88c04c8/33T6SX3M4L-001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/3f675e2b-9be9-4f62-9f45-8439c88c04c8/33T6SX3M4L-001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/729611cd-4fc6-4856-9082-3443962ca2f2/33T6SX3M4L-001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/e2cf2d2c-7254-46f4-9db9-e895bb1ac111/33T6SX3M4L-001-0001_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/4d54ca8d-9bb9-4aeb-a90b-f2defb86b770/33T6SX3M4L-001-0001_5-tif"
   ],
   "variants": [
     {
       "sku": "33T6SX3M4L",
       "title": "0001",
-      "price": "53440.00",
-      "compare_at_price": null,
-      "source_price": 559.5,
+      "price": "38158.00",
+      "compare_at_price": "53440.00",
+      "source_price": 399.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/3f675e2b-9be9-4f62-9f45-8439c88c04c8/33T6SX3M4L-001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Holmes Extra-Large Pebbled Leather Convertible Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Holmes Extra-Large Pebbled Leather Convertible Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 8.5&quot;</li>\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +58,21 @@
     "StyleNumber": "33T6SX3M4L",
     "Color": "0001",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "HandleDrop": "Handle drop: 8.5\"",
+    "Material": "Pebbled leather, 100% leather",
+    "DetailsBullets": [
+      "Messenger bag",
+      "Pebbled leather",
+      "100% leather",
+      "Trim: 60% polyurethane/40% polyester",
+      "Silver-tone hardware",
+      "Width: 16.5” (42cm); height: 11” (27.9cm); depth: 5.5” (13.9cm)",
+      "Adjustable strap: 15.5\"-27\"",
+      "Handle drop: 8.5\"",
+      "Exterior details: front and back slip pockets",
+      "Interior details: 2 slip pockets, zip pocket, laptop compartment"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +82,8 @@
   "id": "a4bed34eb12188da",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Holmes Extra-Large Pebbled Leather Convertible Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Holmes Extra-Large Pebbled Leather Convertible Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 8.5&quot;</li>\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 559.5,
+  "compare_at_price": 53440,
+  "material": "Pebbled leather, 100% leather"
 }

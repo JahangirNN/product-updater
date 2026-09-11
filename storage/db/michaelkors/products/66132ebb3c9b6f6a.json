@@ -13,21 +13,24 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7254e49a-3cab-4ec7-a1b9-6ab03590936b/33S6BWHT9L-282-0301_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7254e49a-3cab-4ec7-a1b9-6ab03590936b/33S6BWHT9L-282-0301_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7254e49a-3cab-4ec7-a1b9-6ab03590936b/33S6BWHT9L-282-0301_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ccda8ccb-24f8-4112-823a-394270f5ae58/33S6BWHT9L-282-0301_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/df00d7fe-4b0a-4b2f-8aa5-34fca1b726a0/33S6BWHT9L-282-0301_4-tif"
   ],
   "variants": [
     {
       "sku": "33S6BWHT9L",
       "title": "Luggage",
       "price": "31472.00",
-      "compare_at_price": null,
+      "compare_at_price": "31472.00",
       "source_price": 329.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7254e49a-3cab-4ec7-a1b9-6ab03590936b/33S6BWHT9L-282-0301_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Whitley Medium Nubuck Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Whitley Medium Nubuck Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 24&quot;W X 13.75&quot;H X 8.75&quot;D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 4.5&quot;</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,15 +57,33 @@
     "StyleNumber": "33S6BWHT9L",
     "Color": "Luggage",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "24\"W X 13.75\"H X 8.75\"D",
+    "HandleDrop": "Handle drop: 4.5\"",
+    "Material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+    "DetailsBullets": [
+      "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+      "Tote bag",
+      "Nubuck",
+      "100% nubuck",
+      "Trim: 100% leather",
+      "Silver-tone hardware",
+      "24\"W X 13.75\"H X 8.75\"D",
+      "Handle drop: 4.5\"",
+      "Interior details: 4 side slip pockets",
+      "Compatible with 16\" laptop"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T20:37:24Z",
+  "last_verified_at": "2026-09-11T22:39:58Z",
   "id": "66132ebb3c9b6f6a",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Whitley Medium Nubuck Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T22:39:58Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Whitley Medium Nubuck Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 24&quot;W X 13.75&quot;H X 8.75&quot;D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 4.5&quot;</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 329.5,
+  "compare_at_price": 31472,
+  "material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance."
 }

@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/3d91c2c7-97ae-42eb-83e2-179308809ece/32F5GQ1C0B-149-1546_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/3d91c2c7-97ae-42eb-83e2-179308809ece/32F5GQ1C0B-149-1546_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/21bedb05-0002-4ccb-9d7d-c7d487621008/32R6SY5W6L-230-0230_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/143a99d6-43cb-4c99-a74b-931251cb1479/32R6SY5W6L-230-0230_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/998af7fb-02d6-4b65-8500-c525d29b5e59/32R6SY5W6L-230-0230_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/78d36388-4c82-4ab8-b717-9841c7ac60f5/32R6SY5W6L-230-0230_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/a600fb63-93a1-4704-a6e4-b371e7b4df9e/32R6SY5W6L-230-0230_5-tif"
   ],
   "variants": [
     {
       "sku": "32R6SY5W6L",
       "title": "Moss",
       "price": "19055.00",
-      "compare_at_price": null,
+      "compare_at_price": "19055.00",
       "source_price": 199.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/3d91c2c7-97ae-42eb-83e2-179308809ece/32F5GQ1C0B-149-1546_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Nolita Medium Nubuck Chain Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nolita Medium Nubuck Chain Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 11.25”W X 4.5”H X 2.5”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 10.5&quot;</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 37% rayon/24% polyester/24% cotton/15% linen</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +59,22 @@
     "StyleNumber": "32R6SY5W6L",
     "Color": "Moss",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "11.25”W X 4.5”H X 2.5”D",
+    "HandleDrop": "Handle drop: 10.5\"",
+    "Material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+    "DetailsBullets": [
+      "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+      "Shoulder bag",
+      "Nubuck",
+      "100% nubuck",
+      "Silver-tone hardware",
+      "11.25”W X 4.5”H X 2.5”D",
+      "Handle drop: 10.5\"",
+      "Interior details: back slip pocket",
+      "Lining: 37% rayon/24% polyester/24% cotton/15% linen",
+      "Zip fastening"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +84,8 @@
   "id": "ac661a36d6104585",
   "created_at": "2026-09-11T18:30:35Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Nolita Medium Nubuck Chain Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nolita Medium Nubuck Chain Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 11.25”W X 4.5”H X 2.5”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 10.5&quot;</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 37% rayon/24% polyester/24% cotton/15% linen</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 199.5,
+  "compare_at_price": 19055,
+  "material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance."
 }

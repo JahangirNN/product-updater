@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7d6fb110-f189-4acf-9687-4c345b4ddd62/MK-2260D-0767-0767_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7d6fb110-f189-4acf-9687-4c345b4ddd62/MK-2260D-0767-0767_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/1ac6e839-102d-4426-9593-dec73b324879/MK-1172-0710-0710_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/fcd8d847-e9ed-41d3-baed-3fc443bf4a90/MK-1172-0710-0710_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/9ee5a7a2-b0c7-4c23-9413-30417c07e4c1/MK-1172-0710-0710_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b4d7862d-9358-4e3a-92b4-62df896a85e3/MK-1172-0710-0710_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/84f96bd8-c1b7-4370-afbe-bfdd5b62e746/MK-1172-0710-0710_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-1172",
       "title": "Gold",
       "price": "13276.00",
-      "compare_at_price": null,
+      "compare_at_price": "13276.00",
       "source_price": 139.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7d6fb110-f189-4acf-9687-4c345b4ddd62/MK-2260D-0767-0767_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Perledo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Perledo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,15 +59,29 @@
     "StyleNumber": "MK-1172",
     "Color": "Gold",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Aviator sunglasses",
+      "Metal frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #",
+      "y\\_2026, m\\_9, d\\_10, h\\_11",
+      "bvseo\\_bulk, prod\\_bvrr, vn\\_bulk\\_3.0.48",
+      "cp\\_1, bvpage1",
+      "loc\\_en\\_US, sid\\_MK-1172, prod, sort\\_\\[SortEntry(order=SUBMISSION\\_TIME, direction=DESCENDING)\\]"
+    ]
   },
   "groups": [
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-11T20:50:50Z",
+  "last_verified_at": "2026-09-11T22:54:55Z",
   "id": "9554bf065d30d1ac",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Perledo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T22:54:55Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Perledo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 139.0,
+  "compare_at_price": 13276
 }

@@ -13,21 +13,25 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6be7a3ce-5a69-4530-ad4f-c5814bb317c7/MK-1173-0200-0200_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/bdfa33cc-bb99-465e-9ffb-4110a9024561/MK-2277U-2901-2901_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6be7a3ce-5a69-4530-ad4f-c5814bb317c7/MK-1173-0200-0200_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/bdfa33cc-bb99-465e-9ffb-4110a9024561/MK-2277U-2901-2901_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/15a7cae8-1a6f-4744-9f52-b436da04b7df/MK-2277U-2901-2901_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/99a056b0-45b4-4c6a-b3d3-7cd3e5b17cfd/MK-2277U-2901-2901_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6f3446e3-ecfb-44c9-b728-9adc2759056e/MK-2277U-2901-2901_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/30684b31-232e-40e9-836f-99eb54180603/MK-2277U-2901-2901_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-2277U",
       "title": "Light Tort",
       "price": "15187.00",
-      "compare_at_price": null,
+      "compare_at_price": "15187.00",
       "source_price": 159.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6be7a3ce-5a69-4530-ad4f-c5814bb317c7/MK-1173-0200-0200_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/bdfa33cc-bb99-465e-9ffb-4110a9024561/MK-2277U-2901-2901_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Grenada Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Grenada Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,15 +58,29 @@
     "StyleNumber": "MK-2277U",
     "Color": "Light Tort",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Aviator sunglasses",
+      "Plastic frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #",
+      "Verified Purchaser",
+      "y\\_2026, m\\_9, d\\_11, h\\_10",
+      "bvseo\\_bulk, prod\\_bvrr, vn\\_bulk\\_3.0.48",
+      "cp\\_1, bvpage1"
+    ]
   },
   "groups": [
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:19:42Z",
+  "last_verified_at": "2026-09-11T23:25:45Z",
   "id": "e6302822f4fdca5a",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Grenada Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:25:45Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Grenada Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 159.0,
+  "compare_at_price": 15187
 }

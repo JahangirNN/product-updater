@@ -7,14 +7,15 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Wallets",
   "gender": "Men",
-  "current_price": 7593,
-  "source_price": 79.5,
+  "current_price": 12369,
+  "source_price": 129.5,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/9845f0c3-9147-49d4-8c04-c92b458d98c3/39F5LHDF0L-001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/9845f0c3-9147-49d4-8c04-c92b458d98c3/39F5LHDF0L-001-0001_1-tif",
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/7368b2f2-ecf1-4fbf-aa70-d716a9de3f3c/39F5LHDF0L-001-0001_2-tif",
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/37517ff8-4c8a-4912-82da-5e94642fe0f1/39F5LHDF0L-001-0001_3-tif"
@@ -23,13 +24,13 @@
     {
       "sku": "39F5LHDF0L",
       "title": "Nickel",
-      "price": "7593.00",
-      "compare_at_price": null,
-      "source_price": 79.5,
+      "price": "12369.00",
+      "compare_at_price": "7593.00",
+      "source_price": 129.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/9845f0c3-9147-49d4-8c04-c92b458d98c3/39F5LHDF0L-001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -48,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Hudson Pebbled Leather Folio Card Case by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Pebbled Leather Folio Card Case by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 3”W X 4.4”H X 1&quot;D</li>\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Wallets",
@@ -56,7 +57,21 @@
     "StyleNumber": "39F5LHDF0L",
     "Color": "Nickel",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "3”W X 4.4”H X 1\"D",
+    "Material": "Pebbled leather, 100% leather",
+    "DetailsBullets": [
+      "Card case",
+      "Pebbled leather",
+      "100% leather",
+      "Trim: 60% polyurethane/20% cotton/20% polyester",
+      "Gunmetal hardware",
+      "3”W X 4.4”H X 1\"D",
+      "Exterior details: back slip pocket",
+      "Interior details: 4 card slots, 2 slip pockets, back bill compartment",
+      "Lining: 100% polyester",
+      "Imported"
+    ]
   },
   "groups": [
     "wallets",
@@ -66,5 +81,8 @@
   "id": "c5307d5d31e34d65",
   "created_at": "2026-09-11T18:30:38Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Hudson Pebbled Leather Folio Card Case by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Pebbled Leather Folio Card Case by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 3”W X 4.4”H X 1&quot;D</li>\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 79.5,
+  "compare_at_price": 7593,
+  "material": "Pebbled leather, 100% leather"
 }

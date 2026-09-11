@@ -13,21 +13,24 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/69ca88cb-850e-4531-b220-aecc0f7cc927/30F6GEJE7L-001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d6252ba7-4c91-4b03-946c-65ae87ccd3e7/32F6ANXC0H-243-3740_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/69ca88cb-850e-4531-b220-aecc0f7cc927/30F6GEJE7L-001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d6252ba7-4c91-4b03-946c-65ae87ccd3e7/32F6ANXC0H-243-3740_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/a17fa0f0-adbe-480f-93ff-a71ffc1e68d3/32F6ANXC0H-243-3740_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d5a1c6f1-9202-4377-ae1f-2aeb4986c286/32F6ANXC0H-243-3740_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/89d5a46a-ab72-4815-8be4-6160e2601a04/32F6ANXC0H-243-3740_7-tif"
   ],
   "variants": [
     {
       "sku": "32F6ANXC0H",
       "title": "3740",
       "price": "21920.00",
-      "compare_at_price": null,
+      "compare_at_price": "21920.00",
       "source_price": 229.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/69ca88cb-850e-4531-b220-aecc0f7cc927/30F6GEJE7L-001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d6252ba7-4c91-4b03-946c-65ae87ccd3e7/32F6ANXC0H-243-3740_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Hamilton Moderne Extra-Small Leopard Print Calf Hair Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hamilton Moderne Extra-Small Leopard Print Calf Hair Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> 100% leather</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,20 @@
     "StyleNumber": "32F6ANXC0H",
     "Color": "3740",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "100% leather",
+    "DetailsBullets": [
+      "Crossbody bag",
+      "Leopard-print calf hair",
+      "100% leather",
+      "Antique gold-tone hardware",
+      "Width: 8” (20.3cm); height: 4.25” (10.79cm); depth: 1.75” (4.44cm)",
+      "Detachable strap: 20.5”(52.07cm)",
+      "Interior details: back slip pocket",
+      "Lining: 100% polyester",
+      "Zip fastening",
+      "Imported"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +80,8 @@
   "id": "afcb426393f3b4dd",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Hamilton Moderne Extra-Small Leopard Print Calf Hair Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hamilton Moderne Extra-Small Leopard Print Calf Hair Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> 100% leather</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 229.5,
+  "compare_at_price": 21920,
+  "material": "100% leather"
 }

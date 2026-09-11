@@ -13,21 +13,25 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/9f1a5635-4a13-4e7b-85e4-9b3c41666297/32S5SZCU1L-001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/58fa18e4-4fb2-4b5c-ae9d-5e5360228e21/30S5G9IS1V-282-0301_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/9f1a5635-4a13-4e7b-85e4-9b3c41666297/32S5SZCU1L-001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/58fa18e4-4fb2-4b5c-ae9d-5e5360228e21/30S5G9IS1V-282-0301_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/618ba5ca-d0e6-4b8c-80b9-2ce5c8bb42e0/30S5G9IS1V-282-0301_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/8918fb66-bb4f-4d59-8bb1-b37521dda8bb/30S5G9IS1V-282-0301_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/224bae7b-917c-4448-9c89-54026f41aa7a/30S5G9IS1V-282-0301_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/84b706a5-90a0-42e0-9e0a-14ac88adeaa5/30S5G9IS1V-282-0301_7-tif"
   ],
   "variants": [
     {
       "sku": "30S5G9IS1V",
       "title": "Chartreuse",
       "price": "21920.00",
-      "compare_at_price": null,
+      "compare_at_price": "21920.00",
       "source_price": 229.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/9f1a5635-4a13-4e7b-85e4-9b3c41666297/32S5SZCU1L-001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/58fa18e4-4fb2-4b5c-ae9d-5e5360228e21/30S5G9IS1V-282-0301_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Laila Small Signature Logo Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Laila Small Signature Logo Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 10”W X 7.25”H X 4.75”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 3.5”</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +58,22 @@
     "StyleNumber": "30S5G9IS1V",
     "Color": "Chartreuse",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "10”W X 7.25”H X 4.75”D",
+    "HandleDrop": "Handle drop: 3.5”",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Satchel",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Trim: 100% polyurethane",
+      "Gold-tone hardware",
+      "10”W X 7.25”H X 4.75”D",
+      "Handle drop: 3.5”",
+      "Interior details: back slip and zip pockets, center zip pocket",
+      "Lining: 100% polyester",
+      "Snap fastening"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +83,8 @@
   "id": "4e5a671feeb0a69d",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:31:25Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Laila Small Signature Logo Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Laila Small Signature Logo Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 10”W X 7.25”H X 4.75”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 3.5”</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 229.5,
+  "compare_at_price": 21920,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
 }

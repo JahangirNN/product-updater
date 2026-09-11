@@ -15,14 +15,17 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6c8de9df-1fd2-45d5-9882-465b8974c5de/32F6G9IC5B-252-1335_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6c8de9df-1fd2-45d5-9882-465b8974c5de/32F6G9IC5B-252-1335_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6c8de9df-1fd2-45d5-9882-465b8974c5de/32F6G9IC5B-252-1335_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/581cec18-6865-4642-ae19-cb0802307342/32F6G9IC5B-252-1335_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ec546387-4cee-43cd-8413-86127815e044/32F6G9IC5B-252-1335_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/87f4119d-40f4-4da5-836f-686e6307f02c/32F6G9IC5B-252-1335_4-tif"
   ],
   "variants": [
     {
       "sku": "32F6G9IC5B",
       "title": "1335",
       "price": "12369.00",
-      "compare_at_price": null,
+      "compare_at_price": "12369.00",
       "source_price": 129.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Laila Small Signature Logo Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Laila Small Signature Logo Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,20 @@
     "StyleNumber": "32F6G9IC5B",
     "Color": "1335",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Shoulder bag",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Gold-tone hardware",
+      "Width: 11.5” (29.2cm); height: 4.5” (11.4cm); depth: 3.5” (8.9cm)",
+      "Interior details: back slip pocket",
+      "Lining: 100% polyester",
+      "Zip fastening",
+      "Dust bag not included",
+      "Imported"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +80,8 @@
   "id": "335044419d61baf1",
   "created_at": "2026-09-11T18:30:35Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Laila Small Signature Logo Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Laila Small Signature Logo Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 129.5,
+  "compare_at_price": 12369,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
 }

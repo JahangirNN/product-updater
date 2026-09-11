@@ -702,5 +702,21 @@
     "average_latency_ms": 4911.21,
     "total_time_seconds": 1728.57,
     "timestamp": "2026-09-11T21:57:18Z"
+  },
+  {
+    "action": "global_delta_sync",
+    "interval_minutes": 60,
+    "force": false,
+    "products_checked": 367,
+    "products_skipped": 642,
+    "in_stock": 343,
+    "out_of_stock": 24,
+    "price_changes": 7,
+    "stock_changes": 14,
+    "errors": 0,
+    "rate_limited": 0,
+    "average_latency_ms": 9174.3,
+    "total_time_seconds": 4062.25,
+    "timestamp": "2026-09-11T23:36:05Z"
   }
 ]

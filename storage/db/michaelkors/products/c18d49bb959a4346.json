@@ -15,14 +15,17 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/c92eb1bb-ed56-4734-b42d-fd3414c65534/30F6BNXT0C-462-3741_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/c92eb1bb-ed56-4734-b42d-fd3414c65534/30F6BNXT0C-462-3741_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/c92eb1bb-ed56-4734-b42d-fd3414c65534/30F6BNXT0C-462-3741_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/750171de-0cbe-418f-83a4-7f9adf181467/30F6BNXT0C-462-3741_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/a0c20d2b-4cff-4208-81e2-ede1bf430239/30F6BNXT0C-462-3741_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b812833a-7ef4-4ddb-ac69-1e0e86bd2c19/30F6BNXT0C-462-3741_4-tif"
   ],
   "variants": [
     {
       "sku": "30F6BNXT0C",
       "title": "3741",
       "price": "34337.00",
-      "compare_at_price": null,
+      "compare_at_price": "34337.00",
       "source_price": 359.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Hamilton Moderne Small Washed Denim Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hamilton Moderne Small Washed Denim Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 9”</li>\n      <li><strong>Material:</strong> 100% cotton</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,21 @@
     "StyleNumber": "30F6BNXT0C",
     "Color": "3741",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "HandleDrop": "Handle drop: 9”",
+    "Material": "100% cotton",
+    "DetailsBullets": [
+      "Shoulder bag",
+      "Denim",
+      "100% cotton",
+      "Gold-tone hardware",
+      "Width: 15.25” (38.7cm); height: 7.5” (19cm); depth: 5.5” (13.9cm)",
+      "Handle drop: 9”",
+      "Interior details: back and front slip pockets",
+      "Lining: 100% polyester",
+      "Zip fastening",
+      "Dust bag not included"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +81,8 @@
   "id": "c18d49bb959a4346",
   "created_at": "2026-09-11T18:30:35Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Hamilton Moderne Small Washed Denim Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hamilton Moderne Small Washed Denim Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 9”</li>\n      <li><strong>Material:</strong> 100% cotton</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 359.5,
+  "compare_at_price": 34337,
+  "material": "100% cotton"
 }

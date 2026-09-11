@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/f05b2b0b-775a-4f3d-92d4-441018b4245b/MK-1176-1027-1027_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/f05b2b0b-775a-4f3d-92d4-441018b4245b/MK-1176-1027-1027_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/a1f90665-d89d-4bf0-bd19-257aa50d614e/MK-2098U-1218-0255_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/2fc6a2df-b8d1-4b77-9ba2-9c1a179f5078/MK-2098U-1218-0255_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/5d9e5929-5dc5-4827-a268-01a19bb788cb/MK-2098U-1218-0255_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/a96c457e-661f-4d6e-9e03-85c4592f99a6/MK-2098U-1218-0255_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/e64dc920-c39b-4f96-8811-73d37e802313/MK-2098U-1218-0255_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-2098U",
       "title": "Tortoise",
       "price": "10411.00",
-      "compare_at_price": null,
+      "compare_at_price": "10411.00",
       "source_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/f05b2b0b-775a-4f3d-92d4-441018b4245b/MK-1176-1027-1027_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Isle of Palms Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Isle of Palms Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate Frame</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,7 +59,20 @@
     "StyleNumber": "MK-2098U",
     "Color": "Tortoise",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Acetate Frame",
+    "DetailsBullets": [
+      "Acetate Frame",
+      "Case Included",
+      "100% UV Protection",
+      "Imported",
+      "Style #",
+      "satisfaction",
+      "comfort",
+      "appearance",
+      "large",
+      "size"
+    ]
   },
   "groups": [
     "sunglasses",
@@ -64,5 +82,8 @@
   "id": "c94722f13dbd3ad4",
   "created_at": "2026-09-11T18:30:38Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Isle of Palms Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Isle of Palms Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate Frame</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 109.0,
+  "compare_at_price": 10411,
+  "material": "Acetate Frame"
 }

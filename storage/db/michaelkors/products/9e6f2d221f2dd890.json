@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/bebcebb3-eaea-410c-bc5f-5858df1378fb/MK-1164-0040-0040_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/bebcebb3-eaea-410c-bc5f-5858df1378fb/MK-1164-0040-0040_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/bebd0ebc-b8cd-4c54-ad88-3353d5407a63/MK-1168-0001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/79d08937-b772-4b5e-b68a-a90f464f3d8b/MK-1168-0001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/f1923b38-8241-462e-84e3-e37275b3a595/MK-1168-0001-0001_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/cf63303b-bb2c-4437-850f-0247c66e58e1/MK-1168-0001-0001_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/f08de8e9-ad35-4aaf-93c6-098e0d9b4403/MK-1168-0001-0001_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-1168",
       "title": "Black",
       "price": "14232.00",
-      "compare_at_price": null,
+      "compare_at_price": "14232.00",
       "source_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/bebcebb3-eaea-410c-bc5f-5858df1378fb/MK-1164-0040-0040_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Brentwood Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Brentwood Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,7 +59,16 @@
     "StyleNumber": "MK-1168",
     "Color": "Black",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Pilot sunglasses",
+      "Metal frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #",
+      "bvseo\\_sdk, dw\\_cartridge, 18.2.0, p\\_sdk\\_3.2.0"
+    ]
   },
   "groups": [
     "sunglasses",
@@ -64,5 +78,7 @@
   "id": "9e6f2d221f2dd890",
   "created_at": "2026-09-11T18:30:38Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Brentwood Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Brentwood Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 149.0,
+  "compare_at_price": 14232
 }

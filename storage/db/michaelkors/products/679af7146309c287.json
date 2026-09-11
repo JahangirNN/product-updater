@@ -11,23 +11,30 @@
   "source_price": 119.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d195aae2-3a81-4480-8e72-44f579ed3803/42S6HUFS1S-156-0250_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d195aae2-3a81-4480-8e72-44f579ed3803/42S6HUFS1S-156-0250_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/9391edcc-649d-4aeb-9f70-c4a597f5f3cf/42F5ATFB5S-251-0201_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/20995e09-48e8-4f7e-98ad-3a69a3f98705/42F5ATFB5S-251-0201_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/416914f5-1d4b-4bec-90c8-7a043076a86f/42F5ATFB5S-251-0201_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/60630b7c-8ee3-4b86-a59f-87ed55fe8698/42F5ATFB5S-251-0201_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/5c2ebe83-8e19-42b7-bc2a-929cca2a7b3a/42F5ATFB5S-251-0201_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/1f1453ce-4d07-428c-aa3c-49e6efbd2b4c/42F5ATFB5S-251-0201_6-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/90d70d37-5ffb-4f71-ae20-d2583f87dc6e/42F5ATFB5S-251-0201_11-tif"
   ],
   "variants": [
     {
       "sku": "42F5ATFB5S-7",
       "title": "US 7 / UK 6.5 - 0201",
       "price": "11366.00",
-      "compare_at_price": null,
+      "compare_at_price": "23687.00",
       "source_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d195aae2-3a81-4480-8e72-44f579ed3803/42S6HUFS1S-156-0250_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -46,12 +53,12 @@
       "sku": "42F5ATFB5S-7.5",
       "title": "US 7.5 / UK 7 - 0201",
       "price": "11366.00",
-      "compare_at_price": null,
+      "compare_at_price": "23687.00",
       "source_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d195aae2-3a81-4480-8e72-44f579ed3803/42S6HUFS1S-156-0250_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -70,12 +77,12 @@
       "sku": "42F5ATFB5S-8",
       "title": "US 8 / UK 7.5 - 0201",
       "price": "11366.00",
-      "compare_at_price": null,
+      "compare_at_price": "23687.00",
       "source_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d195aae2-3a81-4480-8e72-44f579ed3803/42S6HUFS1S-156-0250_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -94,12 +101,12 @@
       "sku": "42F5ATFB5S-8.5",
       "title": "US 8.5 / UK 8 - 0201",
       "price": "11366.00",
-      "compare_at_price": null,
+      "compare_at_price": "23687.00",
       "source_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d195aae2-3a81-4480-8e72-44f579ed3803/42S6HUFS1S-156-0250_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -118,12 +125,12 @@
       "sku": "42F5ATFB5S-9",
       "title": "US 9 / UK 8.5 - 0201",
       "price": "11366.00",
-      "compare_at_price": null,
+      "compare_at_price": "23687.00",
       "source_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d195aae2-3a81-4480-8e72-44f579ed3803/42S6HUFS1S-156-0250_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -142,12 +149,12 @@
       "sku": "42F5ATFB5S-9.5",
       "title": "US 9.5 / UK 9 - 0201",
       "price": "11366.00",
-      "compare_at_price": null,
+      "compare_at_price": "23687.00",
       "source_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d195aae2-3a81-4480-8e72-44f579ed3803/42S6HUFS1S-156-0250_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -166,12 +173,12 @@
       "sku": "42F5ATFB5S-10",
       "title": "US 10 / UK 9.5 - 0201",
       "price": "11366.00",
-      "compare_at_price": null,
+      "compare_at_price": "23687.00",
       "source_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d195aae2-3a81-4480-8e72-44f579ed3803/42S6HUFS1S-156-0250_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -190,12 +197,12 @@
       "sku": "42F5ATFB5S-10.5",
       "title": "US 10.5 / UK 10 - 0201",
       "price": "11366.00",
-      "compare_at_price": null,
+      "compare_at_price": "23687.00",
       "source_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d195aae2-3a81-4480-8e72-44f579ed3803/42S6HUFS1S-156-0250_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -214,12 +221,12 @@
       "sku": "42F5ATFB5S-11",
       "title": "US 11 / UK 10.5 - 0201",
       "price": "11366.00",
-      "compare_at_price": null,
+      "compare_at_price": "23687.00",
       "source_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d195aae2-3a81-4480-8e72-44f579ed3803/42S6HUFS1S-156-0250_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -238,12 +245,12 @@
       "sku": "42F5ATFB5S-11.5",
       "title": "US 11.5 / UK 11 - 0201",
       "price": "11366.00",
-      "compare_at_price": null,
+      "compare_at_price": "23687.00",
       "source_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d195aae2-3a81-4480-8e72-44f579ed3803/42S6HUFS1S-156-0250_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -262,12 +269,12 @@
       "sku": "42F5ATFB5S-12",
       "title": "US 12 / UK 11.5 - 0201",
       "price": "11366.00",
-      "compare_at_price": null,
+      "compare_at_price": "23687.00",
       "source_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d195aae2-3a81-4480-8e72-44f579ed3803/42S6HUFS1S-156-0250_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -286,12 +293,12 @@
       "sku": "42F5ATFB5S-13",
       "title": "US 13 / UK 12.5 - 0201",
       "price": "11366.00",
-      "compare_at_price": null,
+      "compare_at_price": "23687.00",
       "source_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d195aae2-3a81-4480-8e72-44f579ed3803/42S6HUFS1S-156-0250_1-tif",
+      "in_stock": false,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Size",
@@ -358,7 +365,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Atlas Suede Boot by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p><details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Men's Shoe Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">US Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">UK Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">EU Size</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 41</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 43</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 44</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 44.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 10.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 45</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 45.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 12</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 11.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 46</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 13</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 12.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 47.5</td></tr>    </tbody>\n  </table>\n</details></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Atlas Suede Boot by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Suede</li>\n      <li><strong>Lining:</strong> polyester</li>\n      <li><strong>Silhouette:</strong> Round toe</li>\n      <li><strong>Closure:</strong> Lace-up fastening</li>\n    </ul>\n  </div>\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Men's Shoe Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">US Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">UK Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">EU Size</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 41</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 43</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 44</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 44.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 10.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 45</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 45.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 12</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 11.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 46</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 13</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 12.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 47.5</td></tr>    </tbody>\n  </table>\n</details>\n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Shoes",
@@ -366,16 +373,32 @@
     "StyleNumber": "42F5ATFB5S",
     "Color": "0201",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Suede",
+    "DetailsBullets": [
+      "Boot",
+      "Suede",
+      "Lining: polyester",
+      "Sole: rubber",
+      "Round toe",
+      "Lace-up fastening",
+      "Heel height: 2.5\"",
+      "Imported",
+      "Style #",
+      "bvseo\\_sdk, dw\\_cartridge, 18.2.0, p\\_sdk\\_3.2.0"
+    ]
   },
   "groups": [
-    "shoes",
-    "men"
+    "men",
+    "shoes"
   ],
-  "last_verified_at": "2026-09-11T20:38:20Z",
+  "last_verified_at": "2026-09-11T22:40:57Z",
   "id": "679af7146309c287",
   "created_at": "2026-09-11T18:30:39Z",
-  "updated_at": "2026-09-11T22:09:51Z",
+  "updated_at": "2026-09-11T22:40:57Z",
   "size_guide_html": "<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Men's Shoe Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">US Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">UK Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">EU Size</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 41</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 43</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 44</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 44.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 10.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 45</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 45.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 12</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 11.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 46</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 13</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 12.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 47.5</td></tr>    </tbody>\n  </table>\n</details>",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Atlas Suede Boot by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p><details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Men's Shoe Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">US Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">UK Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">EU Size</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 41</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 43</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 44</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 44.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 10.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 45</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 45.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 12</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 11.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 46</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 13</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 12.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 47.5</td></tr>    </tbody>\n  </table>\n</details></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Atlas Suede Boot by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Suede</li>\n      <li><strong>Lining:</strong> polyester</li>\n      <li><strong>Silhouette:</strong> Round toe</li>\n      <li><strong>Closure:</strong> Lace-up fastening</li>\n    </ul>\n  </div>\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Men's Shoe Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">US Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">UK Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">EU Size</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 41</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 43</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 44</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 44.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 10.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 45</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 45.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 12</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 11.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 46</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 13</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 12.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 47.5</td></tr>    </tbody>\n  </table>\n</details>\n</div>",
+  "source_compare_at_price": 248.0,
+  "compare_at_price": 23687,
+  "material": "Suede"
 }

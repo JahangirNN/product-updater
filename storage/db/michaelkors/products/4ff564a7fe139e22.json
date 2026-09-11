@@ -13,21 +13,24 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/130b5309-ebcd-4c6b-9dfd-80f7613e8f8d/30T5G3XB2B-252-1335_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/5c6e0be9-7d29-43f3-85d1-91ce2eddf5a1/32S5GYTU0B-252-1335_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/130b5309-ebcd-4c6b-9dfd-80f7613e8f8d/30T5G3XB2B-252-1335_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/5c6e0be9-7d29-43f3-85d1-91ce2eddf5a1/32S5GYTU0B-252-1335_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7f9ed562-b80a-4685-94ef-1a6106939a92/32S5GYTU0B-252-1335_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/86d957a5-6b67-4f93-b00e-3f1c2900bdc6/32S5GYTU0B-252-1335_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/5f964fe7-9f99-4e52-ace1-47aeaf5791b0/32S5GYTU0B-252-1335_6-tif"
   ],
   "variants": [
     {
       "sku": "32S5GYTU0B",
       "title": "Vanilla/Acorn",
       "price": "14232.00",
-      "compare_at_price": null,
+      "compare_at_price": "15234.00",
       "source_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/130b5309-ebcd-4c6b-9dfd-80f7613e8f8d/30T5G3XB2B-252-1335_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/5c6e0be9-7d29-43f3-85d1-91ce2eddf5a1/32S5GYTU0B-252-1335_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Bryant Small Signature Logo Convertible Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bryant Small Signature Logo Convertible Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8”W X 4.5”HX 1.5”D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,21 @@
     "StyleNumber": "32S5GYTU0B",
     "Color": "Vanilla/Acorn",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "8”W X 4.5”HX 1.5”D",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Shoulder bag",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Trim: 60% polyurethane/40% polyester",
+      "Gold-tone hardware",
+      "8”W X 4.5”HX 1.5”D",
+      "Adjustable strap: 19\"-21.5\"",
+      "Exterior details: detachable strap",
+      "Interior details: back slip pocket",
+      "Lining: 100% polyester"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +81,8 @@
   "id": "4ff564a7fe139e22",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:31:53Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Bryant Small Signature Logo Convertible Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bryant Small Signature Logo Convertible Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8”W X 4.5”HX 1.5”D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 159.5,
+  "compare_at_price": 15234,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
 }

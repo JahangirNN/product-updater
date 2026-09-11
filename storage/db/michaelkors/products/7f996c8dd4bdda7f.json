@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "out_of_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/4d771d63-32a7-46c2-8dc8-db082d3d9335/30F5GY5M6L-001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/4d771d63-32a7-46c2-8dc8-db082d3d9335/30F5GY5M6L-001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/cad1bb7c-3db3-4547-ad67-e1e5dbbfec8c/30F5SY5M6L-230-0230_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/40b36e9b-faff-4513-91db-3d19e706b37c/30F5SY5M6L-230-0230_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/a6af8177-03c9-47cf-b6b7-902b3699294c/30F5SY5M6L-230-0230_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/24915306-846e-45d9-aee9-414ccc932044/30F5SY5M6L-230-0230_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/5b38edd2-3d72-47cf-a797-7809c2dd8466/30F5SY5M6L-230-0230_5-tif"
   ],
   "variants": [
     {
       "sku": "30F5SY5M6L",
       "title": "Black",
       "price": "28606.00",
-      "compare_at_price": null,
+      "compare_at_price": "28606.00",
       "source_price": 299.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/4d771d63-32a7-46c2-8dc8-db082d3d9335/30F5GY5M6L-001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Nolita Medium Pebbled Leather Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nolita Medium Pebbled Leather Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 15.25”W X 7.75”H X 4”D</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 37% rayon/24% polyester/24% cotton/15% linen</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,15 +59,32 @@
     "StyleNumber": "30F5SY5M6L",
     "Color": "Black",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "15.25”W X 7.75”H X 4”D",
+    "Material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather",
+    "DetailsBullets": [
+      "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+      "Shoulder bag",
+      "Pebbled leather",
+      "100% leather",
+      "Silver-tone hardware",
+      "15.25”W X 7.75”H X 4”D",
+      "Adjustable measurement: 14.5”-26”",
+      "Interior details: back and front slip pockets",
+      "Lining: 37% rayon/24% polyester/24% cotton/15% linen",
+      "Zip fastening"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T20:45:37Z",
+  "last_verified_at": "2026-09-11T22:48:38Z",
   "id": "7f996c8dd4bdda7f",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Nolita Medium Pebbled Leather Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T22:48:38Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nolita Medium Pebbled Leather Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 15.25”W X 7.75”H X 4”D</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 37% rayon/24% polyester/24% cotton/15% linen</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 299.5,
+  "compare_at_price": 28606,
+  "material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather"
 }

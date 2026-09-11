@@ -15,14 +15,17 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/da5d69f0-dec5-43bb-b989-3b102933fa12/33S6LJSB6B-227-0227_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/da5d69f0-dec5-43bb-b989-3b102933fa12/33S6LJSB6B-227-0227_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/da5d69f0-dec5-43bb-b989-3b102933fa12/33S6LJSB6B-227-0227_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/2c80b501-c33e-495c-b402-8a5482533967/33S6LJSB6B-227-0227_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/8928474f-256f-48d1-8dc0-daa3042f992e/33S6LJSB6B-227-0227_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ced3ad6f-4485-4086-898c-e51710083a57/33S6LJSB6B-227-0227_4-tif"
   ],
   "variants": [
     {
       "sku": "33S6LJSB6B",
       "title": "0227",
       "price": "38158.00",
-      "compare_at_price": null,
+      "compare_at_price": "38158.00",
       "source_price": 399.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Signature Logo Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Signature Logo Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 12.5&quot;W X 17.5&quot;H X 5.75&quot;D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 3&quot;</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Drawstring/snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,15 +57,33 @@
     "StyleNumber": "33S6LJSB6B",
     "Color": "0227",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "12.5\"W X 17.5\"H X 5.75\"D",
+    "HandleDrop": "Handle drop: 3\"",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Backpack",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Trim 1: 90% coated canvas/9% polyester/1% polyurethane",
+      "Trim 2: 60% polyurethane/40% polyester",
+      "Gunmetal hardware",
+      "12.5\"W X 17.5\"H X 5.75\"D",
+      "Handle drop: 3\"",
+      "Exterior details: front zip pocket, back trolley sleeve",
+      "Interior details: 2 front slip pockets"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:15:25Z",
+  "last_verified_at": "2026-09-11T23:20:51Z",
   "id": "db833633ffc47980",
   "created_at": "2026-09-11T18:30:35Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Signature Logo Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:20:51Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Signature Logo Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 12.5&quot;W X 17.5&quot;H X 5.75&quot;D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 3&quot;</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Drawstring/snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 399.5,
+  "compare_at_price": 38158,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
 }

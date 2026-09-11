@@ -13,21 +13,25 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/1befbd81-8381-4a74-a36a-497906a5fed2/32F5GNXC0B-252-1335_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/1befbd81-8381-4a74-a36a-497906a5fed2/32F5GNXC0B-252-1335_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/4cc023f6-1a6f-492b-b2e8-4ba1e8491397/33T6GX3M4L-282-0301_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/611607e4-1663-4e31-8989-c4edc394463f/33T6GX3M4L-282-0301_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7e90e8fe-4737-4efc-acde-5b5aa18a5172/33T6GX3M4L-282-0301_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/3a161c40-e2de-45a1-b721-035b323bc69e/33T6GX3M4L-282-0301_5-tif"
   ],
   "variants": [
     {
       "sku": "33T6GX3M4L",
       "title": "Loden",
       "price": "38158.00",
-      "compare_at_price": null,
+      "compare_at_price": "38158.00",
       "source_price": 399.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/1befbd81-8381-4a74-a36a-497906a5fed2/32F5GNXC0B-252-1335_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Holmes Extra-Large Pebbled Leather Convertible Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Holmes Extra-Large Pebbled Leather Convertible Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 16.5”W X 11”H X 5.5”D</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +58,21 @@
     "StyleNumber": "33T6GX3M4L",
     "Color": "Loden",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "16.5”W X 11”H X 5.5”D",
+    "Material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather",
+    "DetailsBullets": [
+      "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+      "Messenger bag",
+      "Pebbled leather",
+      "100% leather",
+      "Trim: 60% polyurethane/40% polyester",
+      "Antique gold-tone hardware",
+      "16.5”W X 11”H X 5.5”D",
+      "Adjustable strap: 15.5\"-27\"",
+      "Exterior details: 2 front slip pockets, back slip pocket",
+      "Interior details: 2 front slip pockets"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +82,8 @@
   "id": "3f8bcaf538a0f4f1",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Holmes Extra-Large Pebbled Leather Convertible Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Holmes Extra-Large Pebbled Leather Convertible Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 16.5”W X 11”H X 5.5”D</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 399.5,
+  "compare_at_price": 38158,
+  "material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather"
 }

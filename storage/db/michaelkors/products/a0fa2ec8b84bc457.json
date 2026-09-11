@@ -13,21 +13,25 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/965f7738-57ab-4ad9-b6dd-1f645edb9b08/32S6G0ZC6B-149-1546_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/965f7738-57ab-4ad9-b6dd-1f645edb9b08/32S6G0ZC6B-149-1546_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/75907a78-7fe0-4951-b4be-f1eda76506dc/30T6AZVH1L-165-0106_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/657605fe-ff43-4e9b-955f-416378a7c1ef/30T6AZVH1L-165-0106_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/94dc78a6-f3d7-43df-9d08-6fda2d1c6ec5/30T6AZVH1L-165-0106_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/efddc79e-d473-4e26-bdad-3e7cac920b05/30T6AZVH1L-165-0106_6-tif"
   ],
   "variants": [
     {
       "sku": "30T6AZVH1L",
       "title": "0106",
       "price": "34289.00",
-      "compare_at_price": null,
+      "compare_at_price": "57260.00",
       "source_price": 359.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/965f7738-57ab-4ad9-b6dd-1f645edb9b08/32S6G0ZC6B-149-1546_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Limited Edition Gwen Small Studded Hand Woven Leather Hobo Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Limited Edition Gwen Small Studded Hand Woven Leather Hobo Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 10”(25.4cm)</li>\n      <li><strong>Material:</strong> Leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Drawstring fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +58,21 @@
     "StyleNumber": "30T6AZVH1L",
     "Color": "0106",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "HandleDrop": "Handle drop: 10”(25.4cm)",
+    "Material": "Leather, 100% leather",
+    "DetailsBullets": [
+      "Hobo shoulder bag",
+      "Leather",
+      "100% leather",
+      "Trim 1: 100% polyester",
+      "Trim 2: 100% leather",
+      "Antique gold-tone hardware",
+      "Width: 9”(22.9cm); height: 19.5(49.5cm); depth: 4.5” (11.4cm)",
+      "Handle drop: 10”(25.4cm)",
+      "Lining: 100% polyester",
+      "Drawstring fastening"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +82,8 @@
   "id": "a0fa2ec8b84bc457",
   "created_at": "2026-09-11T18:30:35Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Limited Edition Gwen Small Studded Hand Woven Leather Hobo Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Limited Edition Gwen Small Studded Hand Woven Leather Hobo Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 10”(25.4cm)</li>\n      <li><strong>Material:</strong> Leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Drawstring fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 599.5,
+  "compare_at_price": 57260,
+  "material": "Leather, 100% leather"
 }

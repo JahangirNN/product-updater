@@ -7,27 +7,30 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 26696,
-  "source_price": 279.5,
+  "current_price": 10411,
+  "source_price": 109.0,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/3c739bf7-78c9-4b70-ab77-efbe0c0f2244/30T5G3XB3C-001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/3c739bf7-78c9-4b70-ab77-efbe0c0f2244/30T5G3XB3C-001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/3c739bf7-78c9-4b70-ab77-efbe0c0f2244/30T5G3XB3C-001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/060bcaf1-feb8-47dd-bd7d-ac9bf2d2b64a/30T5G3XB3C-001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ed85ec5d-da0d-4a46-8a43-3d8e0e82d858/30T5G3XB3C-001-0001_4-tif"
   ],
   "variants": [
     {
       "sku": "30T5G3XB3C",
       "title": "0001",
-      "price": "26696.00",
-      "compare_at_price": null,
-      "source_price": 279.5,
+      "price": "10411.00",
+      "compare_at_price": "26696.00",
+      "source_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/3c739bf7-78c9-4b70-ab77-efbe0c0f2244/30T5G3XB3C-001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Sable Large Nylon Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Sable Large Nylon Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 10.75”W X 15.5”H X 5.25”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 2&quot;</li>\n      <li><strong>Material:</strong> The main material of this product contains at least 85% recycled nylon., Nylon</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,22 @@
     "StyleNumber": "30T5G3XB3C",
     "Color": "0001",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "10.75”W X 15.5”H X 5.25”D",
+    "HandleDrop": "Handle drop: 2\"",
+    "Material": "The main material of this product contains at least 85% recycled nylon., Nylon",
+    "DetailsBullets": [
+      "The main material of this product contains at least 85% recycled nylon.",
+      "Backpack",
+      "Nylon",
+      "100% nylon",
+      "Trim: 60% polyurethane/20% cotton/20% polyester",
+      "Gold-tone hardware",
+      "10.75”W X 15.5”H X 5.25”D",
+      "Handle drop: 2\"",
+      "Adjustable strap: 7.25”-16.5”",
+      "Exterior details: back trolley sleeve, 3 front zip pockets, 2 slip pockets"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +82,8 @@
   "id": "c8caa325206067ff",
   "created_at": "2026-09-11T18:30:35Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Sable Large Nylon Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Sable Large Nylon Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 10.75”W X 15.5”H X 5.25”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 2&quot;</li>\n      <li><strong>Material:</strong> The main material of this product contains at least 85% recycled nylon., Nylon</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 279.5,
+  "compare_at_price": 26696,
+  "material": "The main material of this product contains at least 85% recycled nylon., Nylon"
 }

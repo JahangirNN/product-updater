@@ -13,21 +13,24 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/bf176bc6-cc3d-40e0-8fe4-8b9ba9c0ad45/MK-9046-0020-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/bf176bc6-cc3d-40e0-8fe4-8b9ba9c0ad45/MK-9046-0020-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/bf176bc6-cc3d-40e0-8fe4-8b9ba9c0ad45/MK-9046-0020-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/438b3ec3-4961-4b67-b7a3-0571eab7f28c/MK-9046-0020-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d867db2c-fdd5-4d35-9f66-2975682071d8/MK-9046-0020-0001_5-tif"
   ],
   "variants": [
     {
       "sku": "MK-9046",
       "title": "Tortoise",
       "price": "33430.00",
-      "compare_at_price": null,
+      "compare_at_price": "33430.00",
       "source_price": 350.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/bf176bc6-cc3d-40e0-8fe4-8b9ba9c0ad45/MK-9046-0020-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Avenue Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Avenue Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,15 +57,25 @@
     "StyleNumber": "MK-9046",
     "Color": "Tortoise",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Shield sunglasses",
+      "Metal frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #"
+    ]
   },
   "groups": [
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:26:35Z",
+  "last_verified_at": "2026-09-11T23:34:22Z",
   "id": "fc49a6415295b465",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Avenue Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:34:22Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Avenue Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 350.0,
+  "compare_at_price": 33430
 }

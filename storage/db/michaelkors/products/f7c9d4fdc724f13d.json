@@ -7,27 +7,30 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Sunglasses",
   "gender": "Women",
-  "current_price": 14232,
-  "source_price": 149.0,
+  "current_price": 15187,
+  "source_price": 159.0,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/bebcebb3-eaea-410c-bc5f-5858df1378fb/MK-1164-0040-0040_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/bebcebb3-eaea-410c-bc5f-5858df1378fb/MK-1164-0040-0040_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/bebcebb3-eaea-410c-bc5f-5858df1378fb/MK-1164-0040-0040_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/57398b74-ad33-4af7-92b8-cbbc3e77a2f7/MK-1164-0040-0040_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/2c20206a-1cf0-4912-8063-f46e1ce60971/MK-1164-0040-0040_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-1164",
       "title": "Black",
-      "price": "14232.00",
-      "compare_at_price": null,
-      "source_price": 149.0,
+      "price": "15187.00",
+      "compare_at_price": "21873.00",
+      "source_price": 159.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/bebcebb3-eaea-410c-bc5f-5858df1378fb/MK-1164-0040-0040_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Buenos Aires Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Buenos Aires Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,15 +57,29 @@
     "StyleNumber": "MK-1164",
     "Color": "Black",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Irregular sunglasses",
+      "Metal frame",
+      "Case included",
+      "Silver-tone colorway features detachable neck strap",
+      "100% UV protection",
+      "Imported",
+      "Style #",
+      "Verified Purchaser",
+      "y\\_2026, m\\_9, d\\_10, h\\_11",
+      "bvseo\\_bulk, prod\\_bvrr, vn\\_bulk\\_3.0.48"
+    ]
   },
   "groups": [
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:25:08Z",
+  "last_verified_at": "2026-09-11T23:32:36Z",
   "id": "f7c9d4fdc724f13d",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Buenos Aires Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:32:36Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Buenos Aires Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 229.0,
+  "compare_at_price": 21873
 }

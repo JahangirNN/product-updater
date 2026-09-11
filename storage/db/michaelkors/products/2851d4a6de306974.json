@@ -15,14 +15,17 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/ca351870-3513-472f-bdf2-918e59138ce9/33F6LHDM1B-001-0001_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ca351870-3513-472f-bdf2-918e59138ce9/33F6LHDM1B-001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ca351870-3513-472f-bdf2-918e59138ce9/33F6LHDM1B-001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b9adc5ec-4d5f-46f3-9da5-db2d97e97a29/33F6LHDM1B-001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/c0279a01-4d70-4fa4-9289-64a9d0393fb7/33F6LHDM1B-001-0001_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/03d0c014-c695-4c75-9c8e-9afbb8a4c633/33F6LHDM1B-001-0001_4-tif"
   ],
   "variants": [
     {
       "sku": "33F6LHDM1B",
       "title": "0001",
       "price": "16190.00",
-      "compare_at_price": null,
+      "compare_at_price": "16190.00",
       "source_price": 169.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Hudson Signature Logo Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Signature Logo Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,20 @@
     "StyleNumber": "33F6LHDM1B",
     "Color": "0001",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Messenger bag",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Trim: 60% polyurethane/40% polyester",
+      "Gunmetal hardware",
+      "Width: 11” (28cm); height: 7.5” (19cm); depth: 2.5” (6.3cm)",
+      "Interior details: front slip pocket",
+      "Lining: 100% polyester",
+      "Zip fastening",
+      "Dust bag not included"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +80,8 @@
   "id": "2851d4a6de306974",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Hudson Signature Logo Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Signature Logo Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 169.5,
+  "compare_at_price": 16190,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
 }

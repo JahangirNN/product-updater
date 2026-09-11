@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/71dd4a89-9fcb-44a8-a038-cbef1cc151d9/MK-9054-0001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/71dd4a89-9fcb-44a8-a038-cbef1cc151d9/MK-9054-0001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/71dd4a89-9fcb-44a8-a038-cbef1cc151d9/MK-9054-0001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/3b2f804a-c855-4bc1-bd1c-be216b78afa6/MK-9054-0001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/4cadcacb-5cc3-44f0-a1e5-2b5aa00b881e/MK-9054-0001-0001_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b139573c-3020-44e7-a7e4-543f943d1ded/MK-9054-0001-0001_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6534f790-4960-40af-995a-48910e758087/MK-9054-0001-0001_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-9054",
       "title": "0001",
       "price": "37728.00",
-      "compare_at_price": null,
+      "compare_at_price": "37728.00",
       "source_price": 395.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/71dd4a89-9fcb-44a8-a038-cbef1cc151d9/MK-9054-0001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Toledo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Toledo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate frame</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,7 +59,16 @@
     "StyleNumber": "MK-9054",
     "Color": "0001",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Acetate frame",
+    "DetailsBullets": [
+      "Square sunglasses",
+      "Acetate frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #"
+    ]
   },
   "groups": [
     "sunglasses",
@@ -64,5 +78,8 @@
   "id": "b25241e74cfb9089",
   "created_at": "2026-09-11T18:30:38Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Toledo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Toledo Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate frame</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 395.0,
+  "compare_at_price": 37728,
+  "material": "Acetate frame"
 }

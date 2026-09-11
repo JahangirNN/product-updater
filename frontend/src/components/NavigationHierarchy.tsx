@@ -4,6 +4,7 @@ import { FilterState } from '../types';
 
 interface NavigationHierarchyProps {
   stores: string[];
+  departmentCounts: { All: number; Women: number; Men: number };
   groups: string[];
   subgroups: string[];
   subgroupCounts: Record<string, number>;
@@ -13,6 +14,7 @@ interface NavigationHierarchyProps {
 
 export const NavigationHierarchy: React.FC<NavigationHierarchyProps> = ({
   stores,
+  departmentCounts,
   groups,
   subgroups,
   subgroupCounts,
@@ -22,10 +24,10 @@ export const NavigationHierarchy: React.FC<NavigationHierarchyProps> = ({
   return (
     <nav className="border-b border-zinc-800/60 bg-zinc-950/40 px-4 py-3 sm:px-6">
       <div className="max-w-7xl mx-auto flex flex-col gap-3">
-        {/* Tier 1 & 2: Store -> Group breadcrumb/tabs */}
-        <div className="flex flex-wrap items-center justify-between gap-2">
+        {/* Tier 1: Store & Department Switcher */}
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-zinc-850/80 pb-2.5">
           <div className="flex items-center gap-1.5 text-xs text-zinc-400 font-medium overflow-x-auto py-1">
-            <span className="flex items-center gap-1 text-zinc-500 uppercase tracking-wider text-[10px] font-semibold">
+            <span className="flex items-center gap-1 text-zinc-500 uppercase tracking-wider text-[10px] font-semibold mr-1">
               <Layers className="w-3.5 h-3.5 text-amber-500" />
               Store:
             </span>
@@ -33,7 +35,7 @@ export const NavigationHierarchy: React.FC<NavigationHierarchyProps> = ({
               <button
                 key={s}
                 onClick={() => onFilterChange({ selectedStore: s })}
-                className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all ${
+                className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
                   filters.selectedStore === s
                     ? 'bg-amber-500 text-zinc-950 shadow-glow-gold'
                     : 'bg-zinc-900 text-zinc-300 hover:text-white hover:bg-zinc-800'
@@ -42,11 +44,55 @@ export const NavigationHierarchy: React.FC<NavigationHierarchyProps> = ({
                 {s}
               </button>
             ))}
+          </div>
 
-            <span className="text-zinc-600 font-bold mx-1">/</span>
+          {/* Department / Gender Switcher */}
+          <div className="flex items-center gap-1 bg-zinc-900/90 p-1 rounded-xl border border-zinc-800">
+            <span className="text-zinc-500 uppercase tracking-wider text-[10px] font-bold px-2">
+              Department:
+            </span>
+            {(['All', 'Women', 'Men'] as const).map((dept) => {
+              const count = departmentCounts[dept];
+              const isSelected = filters.selectedDepartment === dept;
+              return (
+                <button
+                  key={dept}
+                  onClick={() => onFilterChange({ selectedDepartment: dept })}
+                  className={`px-3 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
+                    isSelected
+                      ? dept === 'Women'
+                        ? 'bg-rose-500/20 text-rose-300 border border-rose-500/40 shadow-sm'
+                        : dept === 'Men'
+                        ? 'bg-sky-500/20 text-sky-300 border border-sky-500/40 shadow-sm'
+                        : 'bg-zinc-200 text-zinc-950'
+                      : 'text-zinc-400 hover:text-white hover:bg-zinc-800/80'
+                  }`}
+                >
+                  <span>{dept === 'All' ? 'All' : dept === 'Women' ? "Women's" : "Men's"}</span>
+                  <span
+                    className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${
+                      isSelected
+                        ? dept === 'Women'
+                          ? 'bg-rose-500/40 text-rose-100'
+                          : dept === 'Men'
+                          ? 'bg-sky-500/40 text-sky-100'
+                          : 'bg-zinc-400 text-zinc-950'
+                        : 'bg-zinc-800 text-zinc-400'
+                    }`}
+                  >
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
 
-            <span className="text-zinc-500 uppercase tracking-wider text-[10px] font-semibold">
-              Group:
+        {/* Tier 2: Categories (Filtered by Department) */}
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <div className="flex items-center gap-1.5 text-xs text-zinc-400 font-medium overflow-x-auto py-1">
+            <span className="text-zinc-500 uppercase tracking-wider text-[10px] font-semibold mr-1">
+              Category:
             </span>
             {groups.map((g) => (
               <button

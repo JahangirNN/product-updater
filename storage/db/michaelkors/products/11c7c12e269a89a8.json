@@ -13,21 +13,25 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7617590d-a3ad-4c1d-865b-be8a4df40042/32S6SJ6W1L-413-3168_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7617590d-a3ad-4c1d-865b-be8a4df40042/32S6SJ6W1L-413-3168_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/1d4b2397-77ab-4378-a1b8-9de50dbb3c12/32R4G8ED6L-187-1663_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/a52c8f76-d781-4071-95b5-1774956778c6/32R4G8ED6L-187-1663_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/0b43fb12-ef5f-4318-b8a2-638ee85ba641/32R4G8ED6L-187-1663_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/bda85974-dbf7-43ae-a051-cbdd55db9e7a/32R4G8ED6L-187-1663_6-tif"
   ],
   "variants": [
     {
       "sku": "32R4G8ED6L",
       "title": "1663",
       "price": "9360.00",
-      "compare_at_price": null,
+      "compare_at_price": "9360.00",
       "source_price": 98.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7617590d-a3ad-4c1d-865b-be8a4df40042/32S6SJ6W1L-413-3168_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -79,5 +83,7 @@
   "created_at": "2026-09-11T18:30:37Z",
   "updated_at": "2026-09-11T22:09:51Z",
   "material": "100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance",
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Medium Pebbled Leather Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 5.25&quot;W X 3.5&quot;H X 1.5&quot;D</li>\n      <li><strong>Material:</strong> 100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Medium Pebbled Leather Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 5.25&quot;W X 3.5&quot;H X 1.5&quot;D</li>\n      <li><strong>Material:</strong> 100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 98.0,
+  "compare_at_price": 9360
 }

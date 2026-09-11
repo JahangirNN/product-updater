@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/473542f4-5ffc-470f-878a-57f9be469d46/32F6AYTC5T-251-0201_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/473542f4-5ffc-470f-878a-57f9be469d46/32F6AYTC5T-251-0201_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/a1b7ebb5-eb56-4604-a890-4f38e3c56c34/32F6AYTC5S-251-0201_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/647fe8ee-1540-42d3-a030-3dcd790e68bc/32F6AYTC5S-251-0201_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/70bcf78d-bba2-4aaf-9d53-d67237c5607b/32F6AYTC5S-251-0201_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/fc89d870-140f-425e-b776-70a986c56dbc/32F6AYTC5S-251-0201_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/9b9cb0b0-e819-4a0d-a075-56c4b08f241b/32F6AYTC5S-251-0201_7-tif"
   ],
   "variants": [
     {
       "sku": "32F6AYTC5S",
       "title": "Burnt Khaki",
       "price": "17145.00",
-      "compare_at_price": null,
+      "compare_at_price": "17145.00",
       "source_price": 179.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/473542f4-5ffc-470f-878a-57f9be469d46/32F6AYTC5T-251-0201_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Bryant Small Logo Embossed Suede Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bryant Small Logo Embossed Suede Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Suede, 100% suede</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +59,20 @@
     "StyleNumber": "32F6AYTC5S",
     "Color": "Burnt Khaki",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Suede, 100% suede",
+    "DetailsBullets": [
+      "Crossbody bag",
+      "Suede",
+      "100% suede",
+      "Trim: 60% polyurethane/40% polyester",
+      "Antique gold-tone hardware",
+      "Width: 8” (20.3cm); height: 4” (10.2cm); depth: 3.5” (8.9cm)",
+      "Adjustable strap: 22\"",
+      "Exterior details: back slip pocket",
+      "Lining: 100% polyester",
+      "Zip fastening"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +82,8 @@
   "id": "2ae6044a16ee48cc",
   "created_at": "2026-09-11T18:30:35Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Bryant Small Logo Embossed Suede Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bryant Small Logo Embossed Suede Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Suede, 100% suede</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 179.5,
+  "compare_at_price": 17145,
+  "material": "Suede, 100% suede"
 }

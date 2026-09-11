@@ -13,21 +13,25 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/63ec29e1-1db2-4dbc-a114-74e8d33fb6c1/30F6G24L2I-001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/63ec29e1-1db2-4dbc-a114-74e8d33fb6c1/30F6G24L2I-001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/63ec29e1-1db2-4dbc-a114-74e8d33fb6c1/30F6G24L2I-001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b358a986-d847-42af-afeb-7638f7d6e65d/30F6G24L2I-001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/01fc9899-02d1-4c93-afa9-def19c786f96/30F6G24L2I-001-0001_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/02a88149-1b67-4f31-9f8f-599bb744d3ea/30F6G24L2I-001-0001_4-tif"
   ],
   "variants": [
     {
       "sku": "30F6G24L2I",
       "title": "0001",
       "price": "21920.00",
-      "compare_at_price": null,
+      "compare_at_price": "21920.00",
       "source_price": 229.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/63ec29e1-1db2-4dbc-a114-74e8d33fb6c1/30F6G24L2I-001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Teddi Medium Textured Slouch Shouder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Teddi Medium Textured Slouch Shouder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Polyurethane blend, 60% polyurethane/40% polyester</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +58,20 @@
     "StyleNumber": "30F6G24L2I",
     "Color": "0001",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Polyurethane blend, 60% polyurethane/40% polyester",
+    "DetailsBullets": [
+      "Shoulder bag",
+      "Polyurethane blend",
+      "60% polyurethane/40% polyester",
+      "Gold-tone hardware",
+      "Width: 13” (33cm); height: 7” (17.8cm); depth: 6” (15.2cm)",
+      "Interior details: back zip pocket",
+      "Lining: 100% polyester",
+      "Zip fastening",
+      "Dust bag not included",
+      "Imported"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +81,8 @@
   "id": "1d3f04ca930872bf",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Teddi Medium Textured Slouch Shouder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Teddi Medium Textured Slouch Shouder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Polyurethane blend, 60% polyurethane/40% polyester</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 229.5,
+  "compare_at_price": 21920,
+  "material": "Polyurethane blend, 60% polyurethane/40% polyester"
 }

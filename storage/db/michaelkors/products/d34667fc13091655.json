@@ -13,21 +13,25 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/b87a62c3-a631-4baa-9571-c95d684ce262/32F1GJ6E7B-200-0200_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b87a62c3-a631-4baa-9571-c95d684ce262/32F1GJ6E7B-200-0200_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b8ee7502-624a-4e7f-bd81-c9302ff632a9/32S5GYTP3L-230-0230_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/2eb1f63c-8da3-448e-86b7-6f4aaedc72e5/32S5GYTP3L-230-0230_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/e0a05c15-3cf8-48f8-b501-0b8abf36efc2/32S5GYTP3L-230-0230_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/8f8d9db2-af95-4956-98a3-3aa5e6d61a44/32S5GYTP3L-230-0230_6-tif"
   ],
   "variants": [
     {
       "sku": "32S5GYTP3L",
       "title": "Soft Pink",
       "price": "12369.00",
-      "compare_at_price": null,
+      "compare_at_price": "12369.00",
       "source_price": 129.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/b87a62c3-a631-4baa-9571-c95d684ce262/32F1GJ6E7B-200-0200_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Bryant Large Pebbled Leather Snap-Front Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bryant Large Pebbled Leather Snap-Front Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 7.5&quot; W X 4&quot; H</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Wallets",
@@ -54,7 +58,21 @@
     "StyleNumber": "32S5GYTP3L",
     "Color": "Soft Pink",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "7.5\" W X 4\" H",
+    "Material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather",
+    "DetailsBullets": [
+      "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+      "Wallet",
+      "Pebbled leather",
+      "100% leather",
+      "Trim: 100% polyurethane",
+      "Gold-tone hardware",
+      "7.5\" W X 4\" H",
+      "Exterior details: back zip pocket",
+      "Interior details: 2 front and back bill compartments, 12 card slots",
+      "Lining: 100% polyester"
+    ]
   },
   "groups": [
     "wallets",
@@ -64,5 +82,8 @@
   "id": "d34667fc13091655",
   "created_at": "2026-09-11T18:30:37Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Bryant Large Pebbled Leather Snap-Front Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bryant Large Pebbled Leather Snap-Front Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 7.5&quot; W X 4&quot; H</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 129.5,
+  "compare_at_price": 12369,
+  "material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather"
 }

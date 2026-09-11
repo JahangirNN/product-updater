@@ -15,14 +15,17 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/1c880ea7-d447-4a19-84a3-64db454093c8/30F6GTVT2B-282-0301_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/1c880ea7-d447-4a19-84a3-64db454093c8/30F6GTVT2B-282-0301_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/1c880ea7-d447-4a19-84a3-64db454093c8/30F6GTVT2B-282-0301_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/701b2ba0-c0d3-4ab0-bdc2-d3752324c94e/30F6GTVT2B-282-0301_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/e2a7d767-d286-4f6b-ad5f-fd38502fcedc/30F6GTVT2B-282-0301_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d1faf80d-d03e-407e-b3b8-0b87e7568fc1/30F6GTVT2B-282-0301_4-tif"
   ],
   "variants": [
     {
       "sku": "30F6GTVT2B",
       "title": "0301",
       "price": "21920.00",
-      "compare_at_price": null,
+      "compare_at_price": "21920.00",
       "source_price": 229.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Travel Medium Signature Logo Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Travel Medium Signature Logo Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 11&quot;</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,21 @@
     "StyleNumber": "30F6GTVT2B",
     "Color": "0301",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "HandleDrop": "Handle drop: 11\"",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Tote bag",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Trim: 60% polyurethane/40% polyester",
+      "Gold-tone hardware",
+      "Width: 15.75” (40cm); height: 10.5” (41cm); depth: 6.25” (14cm)",
+      "Handle drop: 11\"",
+      "Exterior details: front zip pocket",
+      "Interior details: back slip pocket, 2 front slip pockets",
+      "Lining: 100% polyester"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +81,8 @@
   "id": "a99ca931ac2e52b0",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Travel Medium Signature Logo Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Travel Medium Signature Logo Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 11&quot;</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 229.5,
+  "compare_at_price": 21920,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
 }

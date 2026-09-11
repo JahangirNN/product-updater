@@ -13,21 +13,25 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/05e9d49a-459f-4e0d-8994-f62387976f1b/32T6A9IC0L-156-0250_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/05e9d49a-459f-4e0d-8994-f62387976f1b/32T6A9IC0L-156-0250_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/69b0cc4d-6220-49ad-ab8d-4e132b00c6c5/32T4GJ6C6L-012-0018_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/40051de8-3813-402a-867c-5d7a16a605ff/32T4GJ6C6L-012-0018_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/8c5d0358-0874-427b-a43f-00fe2050cd97/32T4GJ6C6L-012-0018_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/af0a5d6f-4cf5-4e19-ac54-30418c20ea92/32T4GJ6C6L-012-0018_4-tif"
   ],
   "variants": [
     {
       "sku": "32T4GJ6C6L",
       "title": "0018",
       "price": "7546.00",
-      "compare_at_price": null,
+      "compare_at_price": "17001.00",
       "source_price": 79.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/05e9d49a-459f-4e0d-8994-f62387976f1b/32T6A9IC0L-156-0250_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Medium Logo Embossed Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Medium Logo Embossed Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 15”W X 10”H X 4.25”D</li>\n      <li><strong>Material:</strong> Leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,15 +58,32 @@
     "StyleNumber": "32T4GJ6C6L",
     "Color": "0018",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "15”W X 10”H X 4.25”D",
+    "Material": "Leather, 100% leather",
+    "DetailsBullets": [
+      "Crossbody bag",
+      "Leather",
+      "100% leather",
+      "Gold-tone hardware",
+      "15”W X 10”H X 4.25”D",
+      "Interior details: interior zip pocket",
+      "Lining: 100% polyester",
+      "Snap fastening",
+      "Dust bag not included",
+      "Imported"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:19:05Z",
+  "last_verified_at": "2026-09-11T23:24:56Z",
   "id": "e51402eb45c8eeba",
   "created_at": "2026-09-11T18:30:35Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Medium Logo Embossed Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:24:56Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Medium Logo Embossed Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 15”W X 10”H X 4.25”D</li>\n      <li><strong>Material:</strong> Leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 178.0,
+  "compare_at_price": 17001,
+  "material": "Leather, 100% leather"
 }

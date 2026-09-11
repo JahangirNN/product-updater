@@ -13,21 +13,24 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/dfbc70b5-36f9-48e3-91af-59d2dd3b8089/MK-9050-0255-0255_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/dfbc70b5-36f9-48e3-91af-59d2dd3b8089/MK-9050-0255-0255_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/dfbc70b5-36f9-48e3-91af-59d2dd3b8089/MK-9050-0255-0255_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b523eb14-941c-43a3-b548-20478c1fbd00/MK-9050-0255-0255_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/aac38203-74e4-4b14-9d3e-049963d25d38/MK-9050-0255-0255_5-tif"
   ],
   "variants": [
     {
       "sku": "MK-9050",
       "title": "Tortoise",
       "price": "33430.00",
-      "compare_at_price": null,
+      "compare_at_price": "33430.00",
       "source_price": 350.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/dfbc70b5-36f9-48e3-91af-59d2dd3b8089/MK-9050-0255-0255_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Bowery Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bowery Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,7 +57,15 @@
     "StyleNumber": "MK-9050",
     "Color": "Tortoise",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Square sunglasses",
+      "Plastic frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #"
+    ]
   },
   "groups": [
     "sunglasses",
@@ -64,5 +75,7 @@
   "id": "bb411672ea8d69e1",
   "created_at": "2026-09-11T18:30:38Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Bowery Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bowery Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 350.0,
+  "compare_at_price": 33430
 }

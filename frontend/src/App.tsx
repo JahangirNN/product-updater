@@ -17,6 +17,7 @@ export const App: React.FC = () => {
 
   const [filters, setFilters] = useState<FilterState>({
     selectedStore: 'All Stores',
+    selectedDepartment: 'All',
     selectedGroup: 'All Groups',
     selectedSubgroup: 'All',
     searchQuery: '',
@@ -41,17 +42,13 @@ export const App: React.FC = () => {
   const handleFilterChange = (newFilters: Partial<FilterState>) => {
     setFilters((prev) => {
       const next = { ...prev, ...newFilters };
-      // When switching store, ensure selectedGroup is valid for that store
+      // When switching store or department, reset group if incompatible
       if (newFilters.selectedStore && newFilters.selectedStore !== prev.selectedStore) {
-        if (newFilters.selectedStore === 'All Stores') {
-          next.selectedGroup = 'All Groups';
-        } else {
-          const storeProducts = products.filter((p) => p.store_display === newFilters.selectedStore);
-          const storeGroups = Array.from(new Set(storeProducts.map((p) => p.group_display)));
-          if (storeGroups.length > 0 && (!storeGroups.includes(next.selectedGroup) || next.selectedGroup === 'All Groups')) {
-            next.selectedGroup = storeGroups[0];
-          }
-        }
+        next.selectedGroup = 'All Groups';
+        next.selectedSubgroup = 'All';
+      }
+      if (newFilters.selectedDepartment && newFilters.selectedDepartment !== prev.selectedDepartment) {
+        next.selectedGroup = 'All Groups';
         next.selectedSubgroup = 'All';
       }
       return next;
@@ -82,14 +79,54 @@ export const App: React.FC = () => {
     return meta?.stores || [];
   }, [meta]);
 
-  const groups = useMemo(() => {
-    if (!filters.selectedStore || filters.selectedStore === 'All Stores') {
-      return ['All Groups', ...(meta?.groups || [])];
+  const departmentCounts = useMemo(() => {
+    const storeProds = products.filter(
+      (p) => !filters.selectedStore || filters.selectedStore === 'All Stores' || p.store_display === filters.selectedStore
+    );
+    let women = 0;
+    let men = 0;
+    for (const p of storeProds) {
+      const g = (p.gender || p.specifications?.['Gender'] || '').toLowerCase();
+      const gd = (p.group_display || '').toLowerCase();
+      if (g === 'men' || gd.includes("men's")) {
+        men++;
+      } else {
+        women++;
+      }
     }
-    const storeProducts = products.filter((p) => p.store_display === filters.selectedStore);
-    const storeGroups = Array.from(new Set(storeProducts.map((p) => p.group_display)));
-    return storeGroups.length > 0 ? storeGroups : meta?.groups || [];
-  }, [products, filters.selectedStore, meta]);
+    return {
+      All: storeProds.length,
+      Women: women,
+      Men: men,
+    };
+  }, [products, filters.selectedStore]);
+
+  const groups = useMemo(() => {
+    let storeProducts = products;
+    if (filters.selectedStore && filters.selectedStore !== 'All Stores') {
+      storeProducts = storeProducts.filter((p) => p.store_display === filters.selectedStore);
+    }
+    if (filters.selectedDepartment && filters.selectedDepartment !== 'All') {
+      if (filters.selectedDepartment === 'Men') {
+        storeProducts = storeProducts.filter(
+          (p) =>
+            (p.gender && p.gender.toLowerCase() === 'men') ||
+            p.group_display.toLowerCase().includes("men's") ||
+            (p.specifications?.['Gender'] && p.specifications['Gender'].toLowerCase() === 'men')
+        );
+      } else {
+        storeProducts = storeProducts.filter(
+          (p) =>
+            (p.gender && p.gender.toLowerCase() === 'women') ||
+            p.group_display.toLowerCase().includes("women's") ||
+            (p.specifications?.['Gender'] && p.specifications['Gender'].toLowerCase() === 'women') ||
+            p.store_display === 'JW PEI'
+        );
+      }
+    }
+    const storeGroups = Array.from(new Set(storeProducts.map((p) => p.group_display))).sort();
+    return ['All Groups', ...storeGroups];
+  }, [products, filters.selectedStore, filters.selectedDepartment]);
 
   const subgroups = useMemo(() => {
     return (meta?.subgroups || []).filter((sub) => (subgroupCounts[sub] || 0) > 0);
@@ -105,9 +142,10 @@ export const App: React.FC = () => {
         filteredCount={filteredProducts.length}
       />
 
-      {/* Hierarchical Navigation (Store -> Group -> Subgroup) */}
+      {/* Hierarchical Navigation (Store -> Department -> Group -> Subgroup) */}
       <NavigationHierarchy
         stores={stores}
+        departmentCounts={departmentCounts}
         groups={groups}
         subgroups={subgroups}
         subgroupCounts={subgroupCounts}
@@ -174,6 +212,7 @@ export const App: React.FC = () => {
               onClick={() =>
                 setFilters({
                   selectedStore: 'All Stores',
+                  selectedDepartment: 'All',
                   selectedGroup: 'All Groups',
                   selectedSubgroup: 'All',
                   searchQuery: '',

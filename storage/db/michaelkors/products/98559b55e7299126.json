@@ -15,14 +15,17 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6854993f-20c2-44cf-b68e-cc13a3040d3d/30F6SY5T9L-001-0001_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6854993f-20c2-44cf-b68e-cc13a3040d3d/30F6SY5T9L-001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6854993f-20c2-44cf-b68e-cc13a3040d3d/30F6SY5T9L-001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/faf92d14-1c10-4201-83db-0bc2b8a7168e/30F6SY5T9L-001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7bcb8a44-c193-4aff-9d60-083f2e951a21/30F6SY5T9L-001-0001_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/13d7a83c-0292-41c8-8b89-d06e643f7b27/30F6SY5T9L-001-0001_4-tif"
   ],
   "variants": [
     {
       "sku": "30F6SY5T9L",
       "title": "0001",
       "price": "31472.00",
-      "compare_at_price": null,
+      "compare_at_price": "31472.00",
       "source_price": 329.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Nolita Large Pebbled Leather Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nolita Large Pebbled Leather Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 11.5&quot;</li>\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,21 @@
     "StyleNumber": "30F6SY5T9L",
     "Color": "0001",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "HandleDrop": "Handle drop: 11.5\"",
+    "Material": "Pebbled leather, 100% leather",
+    "DetailsBullets": [
+      "Tote bag",
+      "Pebbled leather",
+      "100% leather",
+      "Trim: 65% polyurethane/35% polyester",
+      "Silver-tone hardware",
+      "Width: 18.75” (47.6cm); height: 10.5” (26.7cm); depth: 7.75” (19.7cm)",
+      "Handle drop: 11.5\"",
+      "Interior details: back zip and slip pockets",
+      "Lining: 100% polyester",
+      "Snap fastening"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +81,8 @@
   "id": "98559b55e7299126",
   "created_at": "2026-09-11T18:30:35Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Nolita Large Pebbled Leather Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nolita Large Pebbled Leather Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 11.5&quot;</li>\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 329.5,
+  "compare_at_price": 31472,
+  "material": "Pebbled leather, 100% leather"
 }

@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/09d4cfd6-6d17-4eb1-b69f-8740fa9015ca/MK-2281U-1218-1218_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/09d4cfd6-6d17-4eb1-b69f-8740fa9015ca/MK-2281U-1218-1218_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6be7a3ce-5a69-4530-ad4f-c5814bb317c7/MK-1173-0200-0200_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/216e4c24-45b9-4de3-b794-5f70fc02cf41/MK-1173-0200-0200_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/bd4ee7cc-a97b-45fc-8312-4f5830a2fa00/MK-1173-0200-0200_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/1b4598b8-a46e-4d47-abf2-546f44112fdf/MK-1173-0200-0200_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/9bfaca7b-bd45-4bf5-b562-89fbdf6c27a6/MK-1173-0200-0200_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-1173",
       "title": "Brown",
       "price": "19007.00",
-      "compare_at_price": null,
+      "compare_at_price": "19007.00",
       "source_price": 199.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/09d4cfd6-6d17-4eb1-b69f-8740fa9015ca/MK-2281U-1218-1218_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Denver Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Denver Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,15 +59,26 @@
     "StyleNumber": "MK-1173",
     "Color": "Brown",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Aviator sunglasses",
+      "Metal frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #",
+      "bvseo\\_sdk, dw\\_cartridge, 18.2.0, p\\_sdk\\_3.2.0"
+    ]
   },
   "groups": [
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:17:21Z",
+  "last_verified_at": "2026-09-11T23:23:07Z",
   "id": "dfc08d2e32576166",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Denver Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:23:07Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Denver Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 199.0,
+  "compare_at_price": 19007
 }

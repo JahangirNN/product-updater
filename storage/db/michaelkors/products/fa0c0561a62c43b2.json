@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6656fc54-918f-422d-af2a-90dc9fd6336d/MK-2271U-0001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6656fc54-918f-422d-af2a-90dc9fd6336d/MK-2271U-0001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/48570e74-432d-4a75-b94d-1a796d6cd03f/MK-1178-2717-2717_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/783eda80-31a6-434c-a902-4f16bcb4644e/MK-1178-2717-2717_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/e992d772-b05f-46b5-930b-d0dc421fd908/MK-1178-2717-2717_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/229248ed-2518-4b0d-a7ed-8fe4fc7f8d80/MK-1178-2717-2717_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/96557d1d-1d49-4174-b38b-7f3e672ebbd7/MK-1178-2717-2717_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-1178",
       "title": "Tortoise",
       "price": "17097.00",
-      "compare_at_price": null,
+      "compare_at_price": "17097.00",
       "source_price": 179.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/6656fc54-918f-422d-af2a-90dc9fd6336d/MK-2271U-0001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Sea Island Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Sea Island Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,15 +59,26 @@
     "StyleNumber": "MK-1178",
     "Color": "Tortoise",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Butterfly sunglasses",
+      "Metal frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #",
+      "bvseo\\_sdk, dw\\_cartridge, 18.2.0, p\\_sdk\\_3.2.0"
+    ]
   },
   "groups": [
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:25:52Z",
+  "last_verified_at": "2026-09-11T23:33:29Z",
   "id": "fa0c0561a62c43b2",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Sea Island Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:33:29Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Sea Island Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 179.0,
+  "compare_at_price": 17097
 }

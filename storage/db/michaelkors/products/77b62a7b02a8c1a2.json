@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/b1998358-56c7-429b-b72f-b254f3580e16/MK-2263U-0001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/454852bf-92f2-4be2-95d8-32fac6cc7c9a/MK-1089-0040-0040_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/b1998358-56c7-429b-b72f-b254f3580e16/MK-2263U-0001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/454852bf-92f2-4be2-95d8-32fac6cc7c9a/MK-1089-0040-0040_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/9862fa71-8045-421f-a585-ddfad4f7c7b1/MK-1089-0040-0040_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/50db69a9-d569-419a-8bb6-d308599d58e9/MK-1089-0040-0040_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/441e352a-9b94-498a-b346-121a320303d5/MK-1089-0040-0040_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/db33de12-7ec0-46e8-9321-77978b5632f4/MK-1089-0040-0040_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/5aa408f6-42a6-41dc-91eb-732bdc40237d/MK-1089-0040-0040_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-1089",
       "title": "0040",
       "price": "17097.00",
-      "compare_at_price": null,
+      "compare_at_price": "17097.00",
       "source_price": 179.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/b1998358-56c7-429b-b72f-b254f3580e16/MK-2263U-0001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/454852bf-92f2-4be2-95d8-32fac6cc7c9a/MK-1089-0040-0040_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -72,9 +77,11 @@
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-11T20:42:16Z",
+  "last_verified_at": "2026-09-11T22:45:02Z",
   "id": "77b62a7b02a8c1a2",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Kona Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>"
+  "updated_at": "2026-09-11T22:45:02Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Kona Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 179.0,
+  "compare_at_price": 17097
 }

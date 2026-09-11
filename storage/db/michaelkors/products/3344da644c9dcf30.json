@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7254e49a-3cab-4ec7-a1b9-6ab03590936b/33S6BWHT9L-282-0301_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7254e49a-3cab-4ec7-a1b9-6ab03590936b/33S6BWHT9L-282-0301_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/26ed5b4f-03f4-4bf3-9bc5-c83bb8ae86d2/33S6LJSB6X-001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/0f828590-9fdf-41ea-9956-2d81072e0837/33S6LJSB6X-001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/eeaa60be-bfbd-426a-8079-9168dc75118f/33S6LJSB6X-001-0001_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/0efe4c53-5d18-49ec-9548-febb773693c7/33S6LJSB6X-001-0001_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/e5344bcb-fe9e-4d5a-a90c-d183ce02a4e9/33S6LJSB6X-001-0001_5-tif"
   ],
   "variants": [
     {
       "sku": "33S6LJSB6X",
       "title": "Luggage",
       "price": "38158.00",
-      "compare_at_price": null,
+      "compare_at_price": "38158.00",
       "source_price": 399.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7254e49a-3cab-4ec7-a1b9-6ab03590936b/33S6BWHT9L-282-0301_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Pebbled Leather Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Pebbled Leather Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 12.5&quot;W X 17.5&quot;H X 5.75&quot;D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 3&quot;</li>\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Drawstring/snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +59,22 @@
     "StyleNumber": "33S6LJSB6X",
     "Color": "Luggage",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "12.5\"W X 17.5\"H X 5.75\"D",
+    "HandleDrop": "Handle drop: 3\"",
+    "Material": "Pebbled leather, 100% leather",
+    "DetailsBullets": [
+      "Backpack",
+      "Pebbled leather",
+      "100% leather",
+      "Gunmetal hardware",
+      "12.5\"W X 17.5\"H X 5.75\"D",
+      "Handle drop: 3\"",
+      "Exterior details: front zip pocket, back trolley sleeve",
+      "Interior details: 2 front slip pockets",
+      "Lining: 100% polyester",
+      "Drawstring/snap fastening"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +84,8 @@
   "id": "3344da644c9dcf30",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Pebbled Leather Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Pebbled Leather Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 12.5&quot;W X 17.5&quot;H X 5.75&quot;D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 3&quot;</li>\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Drawstring/snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 399.5,
+  "compare_at_price": 38158,
+  "material": "Pebbled leather, 100% leather"
 }

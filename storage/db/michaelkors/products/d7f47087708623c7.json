@@ -15,14 +15,17 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7d1a9ee9-7d95-4d24-9193-6410b32bec03/32F6UNXC0C-030-0012_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7d1a9ee9-7d95-4d24-9193-6410b32bec03/32F6UNXC0C-030-0012_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/7d1a9ee9-7d95-4d24-9193-6410b32bec03/32F6UNXC0C-030-0012_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/336c5394-38e1-4ed2-88e6-6dfd248c2f86/32F6UNXC0C-030-0012_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/f704ab73-5b07-4b98-9901-53c7484fbb67/32F6UNXC0C-030-0012_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/0a7fd4b1-c0e1-483b-9a35-4032188cad16/32F6UNXC0C-030-0012_7-tif"
   ],
   "variants": [
     {
       "sku": "32F6UNXC0C",
       "title": "Burnt Khaki",
       "price": "24786.00",
-      "compare_at_price": null,
+      "compare_at_price": "24786.00",
       "source_price": 259.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Hamilton Moderne Extra-Small Washed Denim Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hamilton Moderne Extra-Small Washed Denim Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> 100% cotton</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,7 +57,20 @@
     "StyleNumber": "32F6UNXC0C",
     "Color": "Burnt Khaki",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "100% cotton",
+    "DetailsBullets": [
+      "Crossbody bag",
+      "Denim",
+      "100% cotton",
+      "Gunmetal hardware",
+      "Width: 8” (20.3cm); height: 4.25” (10.8cm); depth: 1.75” (4.45cm)",
+      "Exterior details: back slip pocket",
+      "Interior details: back slip pocket",
+      "Lining: 100% polyester",
+      "Zip fastening",
+      "Dust bag not included"
+    ]
   },
   "groups": [
     "handbags",
@@ -64,5 +80,8 @@
   "id": "d7f47087708623c7",
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Hamilton Moderne Extra-Small Washed Denim Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hamilton Moderne Extra-Small Washed Denim Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> 100% cotton</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 259.5,
+  "compare_at_price": 24786,
+  "material": "100% cotton"
 }

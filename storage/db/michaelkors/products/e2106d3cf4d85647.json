@@ -15,14 +15,17 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/5a1ed711-9371-435d-ad99-a326d81b2259/30F6UNXT0C-030-0012_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/5a1ed711-9371-435d-ad99-a326d81b2259/30F6UNXT0C-030-0012_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/5a1ed711-9371-435d-ad99-a326d81b2259/30F6UNXT0C-030-0012_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/e4b0e4e9-abff-406e-b20a-9c5648a1cc18/30F6UNXT0C-030-0012_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/2f0eb39a-df0a-4297-9917-1456f7455a3a/30F6UNXT0C-030-0012_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/d0c18718-2ae8-444f-aaf3-f8c582f2f6e6/30F6UNXT0C-030-0012_4-tif"
   ],
   "variants": [
     {
       "sku": "30F6UNXT0C",
       "title": "0012",
       "price": "34337.00",
-      "compare_at_price": null,
+      "compare_at_price": "34337.00",
       "source_price": 359.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Hamilton Moderne Small Washed Denim Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hamilton Moderne Small Washed Denim Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 9”</li>\n      <li><strong>Material:</strong> 100% cotton</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,15 +57,32 @@
     "StyleNumber": "30F6UNXT0C",
     "Color": "0012",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "HandleDrop": "Handle drop: 9”",
+    "Material": "100% cotton",
+    "DetailsBullets": [
+      "Satchel",
+      "Denim",
+      "100% cotton",
+      "Trim: 65% polyurethane/35% polyester",
+      "Gunmetal hardware",
+      "Width: 15.25” (38.7cm); height: 7.5” (19cm); depth: 5.5” (13.9cm)",
+      "Handle drop: 9”",
+      "Interior details: back and front slip pockets",
+      "Lining: 100% polyester",
+      "Zip fastening"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T21:18:11Z",
+  "last_verified_at": "2026-09-11T23:23:58Z",
   "id": "e2106d3cf4d85647",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Hamilton Moderne Small Washed Denim Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T23:23:58Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hamilton Moderne Small Washed Denim Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 9”</li>\n      <li><strong>Material:</strong> 100% cotton</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 359.5,
+  "compare_at_price": 34337,
+  "material": "100% cotton"
 }

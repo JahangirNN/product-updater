@@ -15,14 +15,18 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/72426818-c64d-4c3a-a4ff-97a72c7bfa09/33F6GNIU9S-251-0201_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/72426818-c64d-4c3a-a4ff-97a72c7bfa09/33F6GNIU9S-251-0201_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/72426818-c64d-4c3a-a4ff-97a72c7bfa09/33F6GNIU9S-251-0201_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/cd03eddc-1b1f-4cfa-9924-b99afcf02836/33F6GNIU9S-251-0201_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/bafedd4e-0775-4236-af43-49cb3fb660e3/33F6GNIU9S-251-0201_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ccbf44ad-41a0-4655-a900-0085709f3339/33F6GNIU9S-251-0201_4-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/4c16ff73-ab9c-4852-9df6-07a8be55538b/33F6GNIU9S-251-0201_7-tif"
   ],
   "variants": [
     {
       "sku": "33F6GNIU9S",
       "title": "0201",
       "price": "38158.00",
-      "compare_at_price": null,
+      "compare_at_price": "38158.00",
       "source_price": 399.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -46,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Nicholas Medium Suede Slouch Duffel Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nicholas Medium Suede Slouch Duffel Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 3.5&quot;</li>\n      <li><strong>Material:</strong> Suede, 100% suede</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,15 +58,32 @@
     "StyleNumber": "33F6GNIU9S",
     "Color": "0201",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "HandleDrop": "Handle drop: 3.5\"",
+    "Material": "Suede, 100% suede",
+    "DetailsBullets": [
+      "Duffel bag",
+      "Suede",
+      "100% suede",
+      "Antique gold-tone hardware",
+      "Width: 17.32” (43.99cm); height: 10.63” (27cm); depth: 9.05” (22.9cm)",
+      "Fits up to 15\" laptop",
+      "Handle drop: 3.5\"",
+      "Exterior details: front slip pocket, back trolley sleeve",
+      "Interior details: center zip pocket",
+      "Lining: 100% polyester"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T20:48:10Z",
+  "last_verified_at": "2026-09-11T22:51:44Z",
   "id": "8b1a61d474c0f6e0",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Nicholas Medium Suede Slouch Duffel Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "updated_at": "2026-09-11T22:51:44Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nicholas Medium Suede Slouch Duffel Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 3.5&quot;</li>\n      <li><strong>Material:</strong> Suede, 100% suede</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 399.5,
+  "compare_at_price": 38158,
+  "material": "Suede, 100% suede"
 }

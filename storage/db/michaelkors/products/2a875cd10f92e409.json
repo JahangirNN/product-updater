@@ -13,21 +13,27 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/8b301681-385f-4b7a-b586-17926f36a478/MK9055-3915-3915_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/8b301681-385f-4b7a-b586-17926f36a478/MK9055-3915-3915_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/8b301681-385f-4b7a-b586-17926f36a478/MK9055-3915-3915_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/8d05d0d6-a013-4dd7-8489-ee2b5724f352/MK9055-3915-3915_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/e226ca2e-3dc7-40f7-a76a-7a9bfacdc96e/MK9055-3915-3915_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/fbc32f58-e5d9-4773-8050-485c48e06226/MK9055-3915-3915_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/be1d93b2-510e-40cd-9d04-26cdfc545e3d/MK9055-3915-3915_6-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/f7a66c81-f0a3-4b65-bede-4fee4848472e/MK9055-3915-3915_8-tif"
   ],
   "variants": [
     {
       "sku": "MK-9055",
       "title": "Standard",
       "price": "33430.00",
-      "compare_at_price": null,
+      "compare_at_price": "33430.00",
       "source_price": 350.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/8b301681-385f-4b7a-b586-17926f36a478/MK9055-3915-3915_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +52,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">City Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">City Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate frame</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,7 +60,16 @@
     "StyleNumber": "MK-9055",
     "Color": "Standard",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Acetate frame",
+    "DetailsBullets": [
+      "Sunglasses",
+      "Acetate frame",
+      "Case included",
+      "100% UV protection",
+      "Made in Italy",
+      "Style #"
+    ]
   },
   "groups": [
     "sunglasses",
@@ -64,5 +79,8 @@
   "id": "2a875cd10f92e409",
   "created_at": "2026-09-11T18:30:38Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">City Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">City Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate frame</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 350.0,
+  "compare_at_price": 33430,
+  "material": "Acetate frame"
 }

@@ -25,7 +25,7 @@
       "sku": "30F6A9IT0H",
       "title": "3740",
       "price": "26696.00",
-      "compare_at_price": null,
+      "compare_at_price": "26696.00",
       "source_price": 279.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -49,7 +49,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Laila Small Leopard Print Calf Hair Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Laila Small Leopard Print Calf Hair Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 8.5”(21.59cm)</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -57,7 +57,20 @@
     "StyleNumber": "30F6A9IT0H",
     "Color": "3740",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "HandleDrop": "Handle drop: 8.5”(21.59cm)",
+    "DetailsBullets": [
+      "Shoulder bag",
+      "Leopard-print calf hair",
+      "100% calf hair",
+      "Trim: 60% polyurethane/40% polyester",
+      "Antique gold-tone hardware",
+      "Width: 12.75” (32.4cm); height: 5.25” (13.33cm); depth: 4.5” (11.4cm)",
+      "Handle drop: 8.5”(21.59cm)",
+      "Exterior details: back and front snap pockets",
+      "Interior details: back slip pocket",
+      "Lining: 100% polyester"
+    ]
   },
   "groups": [
     "handbags",
@@ -67,5 +80,7 @@
   "id": "3a5985f8eb20cb14",
   "created_at": "2026-09-11T18:30:35Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Laila Small Leopard Print Calf Hair Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Laila Small Leopard Print Calf Hair Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 8.5”(21.59cm)</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 279.5,
+  "compare_at_price": 26696
 }

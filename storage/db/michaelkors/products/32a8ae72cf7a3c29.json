@@ -13,21 +13,26 @@
   "source_currency": "USD",
   "availability": "in_stock",
   "is_active": true,
-  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/aa37ad0c-cbcc-4bdf-b272-367b8e20013e/MK-1179-0001-0001_1-tif",
+  "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/aa37ad0c-cbcc-4bdf-b272-367b8e20013e/MK-1179-0001-0001_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/14511e1e-cef8-4455-ab9f-882f11932128/MK-2240U-0001-0001_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/6186ed33-c8ff-4f8a-b779-02b2f73d491d/MK-2240U-0001-0001_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/f33b44e6-1468-421a-af91-c0401b9f09d6/MK-2240U-0001-0001_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/165e112b-cc7e-416b-941e-c932cafc2ed2/MK-2240U-0001-0001_5-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/3b3834ab-7efb-4a0f-bb02-402843256a25/MK-2240U-0001-0001_6-tif"
   ],
   "variants": [
     {
       "sku": "MK-2240U",
       "title": "Dark Tortoise",
       "price": "10411.00",
-      "compare_at_price": null,
+      "compare_at_price": "10411.00",
       "source_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/aa37ad0c-cbcc-4bdf-b272-367b8e20013e/MK-1179-0001-0001_1-tif",
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Medium/d3a33d74-bae5-401e-886e-224c867ed8d8/MF620M9LFX-211-1211_1-tif",
       "option_values": [
         {
           "option_name": "Color",
@@ -46,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Siesta Key Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Siesta Key Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -54,7 +59,19 @@
     "StyleNumber": "MK-2240U",
     "Color": "Dark Tortoise",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Irregular sunglasses",
+      "Plastic frame",
+      "Case included",
+      "100% UV protection",
+      "Imported",
+      "Style #",
+      "Verified Purchaser",
+      "y\\_2026, m\\_9, d\\_10, h\\_11",
+      "bvseo\\_bulk, prod\\_bvrr, vn\\_bulk\\_3.0.48",
+      "cp\\_1, bvpage1"
+    ]
   },
   "groups": [
     "sunglasses",
@@ -64,5 +81,7 @@
   "id": "32a8ae72cf7a3c29",
   "created_at": "2026-09-11T18:30:38Z",
   "updated_at": "2026-09-11T22:09:51Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Siesta Key Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Siesta Key Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "source_compare_at_price": 109.0,
+  "compare_at_price": 10411
 }

@@ -15,14 +15,17 @@
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/285b1019-b611-493a-b55d-905d0cfa8702/33F6GHDM1B-282-0301_1-tif",
   "images": [
-    "https://assets.michaelkors.com/transform/ECOM_Image_Large/285b1019-b611-493a-b55d-905d0cfa8702/33F6GHDM1B-282-0301_1-tif"
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/285b1019-b611-493a-b55d-905d0cfa8702/33F6GHDM1B-282-0301_1-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/4a0e6c8b-8ae7-46f2-9d11-8994cff67d89/33F6GHDM1B-282-0301_2-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/c75c7a32-ac09-41cc-8ab8-8a9e12c5ff6f/33F6GHDM1B-282-0301_3-tif",
+    "https://assets.michaelkors.com/transform/ECOM_Image_Large/ac7d3f06-2170-4b1e-8393-15acf4a1ab99/33F6GHDM1B-282-0301_4-tif"
   ],
   "variants": [
     {
       "sku": "33F6GHDM1B",
       "title": "0301",
       "price": "16190.00",
-      "compare_at_price": null,
+      "compare_at_price": "16190.00",
       "source_price": 169.5,
       "currency": "INR",
       "source_currency": "USD",
@@ -78,5 +81,7 @@
   "created_at": "2026-09-11T18:30:36Z",
   "updated_at": "2026-09-11T22:09:51Z",
   "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Signature Logo Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Signature Logo Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
+  "source_compare_at_price": 169.5,
+  "compare_at_price": 16190
 }
