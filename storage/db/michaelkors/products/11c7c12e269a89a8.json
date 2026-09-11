@@ -46,7 +46,7 @@
       ]
     }
   ],
-  "description_html": "<p>Medium Pebbled Leather Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Product Specifications & Care</summary>\n  <div style=\"padding: 10px; font-size: 14px; line-height: 1.6;\">\n    <p><strong>Brand:</strong> MICHAEL Michael Kors</p>\n    <p><strong>Style #:</strong> 32R4G8ED6L</p>\n    <p><strong>Care:</strong> Wipe clean with soft, dry cloth. Store in protective dust bag.</p>\n  </div>\n</details>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Medium Pebbled Leather Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 5.25&quot;W X 3.5&quot;H X 1.5&quot;D</li>\n      <li><strong>Material:</strong> 100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Wallets",
@@ -54,14 +54,30 @@
     "StyleNumber": "32R4G8ED6L",
     "Color": "1663",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "5.25\"W X 3.5\"H X 1.5\"D",
+    "Material": "100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance",
+    "DetailsBullets": [
+      "100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+      "100% leather from tanneries meeting the highest standards of environmental performance",
+      "Wallet",
+      "Pebbled leather",
+      "100% leather",
+      "Gold-tone hardware",
+      "5.25\"W X 3.5\"H X 1.5\"D",
+      "Exterior details: back zip pocket",
+      "Interior details: back slip pocket, 6 card slots, ID window",
+      "Lining: 100% polyester"
+    ]
   },
   "groups": [
     "wallets",
     "women"
   ],
-  "last_verified_at": "2026-09-11T18:34:29Z",
+  "last_verified_at": "2026-09-11T21:36:33Z",
   "id": "11c7c12e269a89a8",
   "created_at": "2026-09-11T18:30:37Z",
-  "updated_at": "2026-09-11T18:34:29Z"
+  "updated_at": "2026-09-11T22:09:51Z",
+  "material": "100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Medium Pebbled Leather Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 5.25&quot;W X 3.5&quot;H X 1.5&quot;D</li>\n      <li><strong>Material:</strong> 100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>"
 }

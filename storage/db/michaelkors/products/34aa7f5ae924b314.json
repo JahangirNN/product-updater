@@ -7,8 +7,8 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 24786,
-  "source_price": 259.5,
+  "current_price": 17097,
+  "source_price": 179.0,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
@@ -21,9 +21,9 @@
     {
       "sku": "30S6SQNT6C",
       "title": "0664",
-      "price": "24786.00",
-      "compare_at_price": null,
-      "source_price": 259.5,
+      "price": "17097.00",
+      "compare_at_price": "24786.00",
+      "source_price": 179.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -46,7 +46,7 @@
       ]
     }
   ],
-  "description_html": "<p>Quinn Large Striped Canvas Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Product Specifications & Care</summary>\n  <div style=\"padding: 10px; font-size: 14px; line-height: 1.6;\">\n    <p><strong>Brand:</strong> MICHAEL Michael Kors</p>\n    <p><strong>Style #:</strong> 30S6SQNT6C</p>\n    <p><strong>Care:</strong> Wipe clean with soft, dry cloth. Store in protective dust bag.</p>\n  </div>\n</details>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Quinn Large Striped Canvas Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 18.5”W X 11”H X 5”D</li>\n      <li><strong>Material:</strong> Canvas, 70% cotton/30% polyester</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,14 +54,32 @@
     "StyleNumber": "30S6SQNT6C",
     "Color": "0664",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "18.5”W X 11”H X 5”D",
+    "Material": "Canvas, 70% cotton/30% polyester",
+    "DetailsBullets": [
+      "Tote bag",
+      "Canvas",
+      "70% cotton/30% polyester",
+      "Trim: 60% polyurethane/40% polyester",
+      "Silver-tone hardware",
+      "18.5”W X 11”H X 5”D",
+      "Interior details: back zip pocket, 2 front slip pockets",
+      "Snap fastening",
+      "Dust bag not included",
+      "Imported"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T18:34:28Z",
+  "last_verified_at": "2026-09-11T21:50:03Z",
   "id": "34aa7f5ae924b314",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T18:34:28Z"
+  "updated_at": "2026-09-11T22:09:51Z",
+  "source_compare_at_price": 259.5,
+  "compare_at_price": 24786,
+  "material": "Canvas, 70% cotton/30% polyester",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Quinn Large Striped Canvas Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 18.5”W X 11”H X 5”D</li>\n      <li><strong>Material:</strong> Canvas, 70% cotton/30% polyester</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>"
 }

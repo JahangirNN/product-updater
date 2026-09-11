@@ -6,7 +6,7 @@
   "title": "Hamilton Moderne Extra-Small Leather and Leopard Print Calf Hair Slouchy Crossbody Bag",
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
-  "gender": "Men",
+  "gender": "Women",
   "current_price": 28606,
   "source_price": 299.5,
   "currency": "INR",
@@ -47,23 +47,37 @@
       ]
     }
   ],
-  "description_html": "<p>Hamilton Moderne Extra-Small Leather and Leopard Print Calf Hair Slouchy Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Product Specifications & Care</summary>\n  <div style=\"padding: 10px; font-size: 14px; line-height: 1.6;\">\n    <p><strong>Brand:</strong> MICHAEL Michael Kors</p>\n    <p><strong>Style #:</strong> 32F6ANXC1H</p>\n    <p><strong>Care:</strong> Wipe clean with soft, dry cloth. Store in protective dust bag.</p>\n  </div>\n</details>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hamilton Moderne Extra-Small Leather and Leopard Print Calf Hair Slouchy Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Leopard-print calf hair/leather</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
-    "Gender": "Men",
+    "Gender": "Women",
     "StyleNumber": "32F6ANXC1H",
     "Color": "3740",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Leopard-print calf hair/leather",
+    "DetailsBullets": [
+      "Crossbody bag",
+      "Leopard-print calf hair/leather",
+      "100% calf hair",
+      "Trim: 100% leather",
+      "Antique gold-tone hardware",
+      "Width: 8.75” (22.2cm); height: 5” (12.7cm); depth: 4.5” (11.43cm)",
+      "Exterior details: back slip pocket",
+      "Interior details: back slip pocket",
+      "Lining: 100% polyester",
+      "Snap fastening"
+    ]
   },
   "groups": [
-    "belts",
     "handbags",
-    "men"
+    "women"
   ],
-  "last_verified_at": "2026-09-11T18:34:27Z",
+  "last_verified_at": "2026-09-11T21:39:55Z",
   "id": "178be06df859056e",
   "created_at": "2026-09-11T18:30:35Z",
-  "updated_at": "2026-09-11T18:34:27Z"
+  "updated_at": "2026-09-11T22:09:51Z",
+  "material": "Leopard-print calf hair/leather",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hamilton Moderne Extra-Small Leather and Leopard Print Calf Hair Slouchy Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Leopard-print calf hair/leather</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>"
 }

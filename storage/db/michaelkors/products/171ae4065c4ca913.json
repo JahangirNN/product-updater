@@ -48,7 +48,7 @@
       ]
     }
   ],
-  "description_html": "<p>Hudson Signature Logo Card Case by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Product Specifications & Care</summary>\n  <div style=\"padding: 10px; font-size: 14px; line-height: 1.6;\">\n    <p><strong>Brand:</strong> MICHAEL Michael Kors</p>\n    <p><strong>Style #:</strong> 39S6LHDD5B</p>\n    <p><strong>Care:</strong> Wipe clean with soft, dry cloth. Store in protective dust bag.</p>\n  </div>\n</details>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Signature Logo Card Case by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 4.5”W X 2.9&quot;H X 0.4”D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Wallets",
@@ -56,14 +56,30 @@
     "StyleNumber": "39S6LHDD5B",
     "Color": "Brown/Luggage",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "4.5”W X 2.9\"H X 0.4”D",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Card case",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Trim: 60% polyurethane/20% cotton/20% polyester",
+      "Gunmetal hardware",
+      "4.5”W X 2.9\"H X 0.4”D",
+      "Exterior details: slip pocket, 3 card slots",
+      "Lining: 100% polyester",
+      "Zip fastening",
+      "Imported"
+    ]
   },
   "groups": [
-    "men",
-    "wallets"
+    "wallets",
+    "men"
   ],
-  "last_verified_at": "2026-09-11T18:34:31Z",
+  "last_verified_at": "2026-09-11T21:39:27Z",
   "id": "171ae4065c4ca913",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T18:34:31Z"
+  "updated_at": "2026-09-11T22:09:51Z",
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Signature Logo Card Case by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 4.5”W X 2.9&quot;H X 0.4”D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>"
 }

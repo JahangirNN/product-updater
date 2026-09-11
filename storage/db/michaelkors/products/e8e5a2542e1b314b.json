@@ -11,7 +11,7 @@
   "source_price": 99.5,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/a9e20eb2-7a5f-497f-bd90-c73c2a2956e7/32F6AYTD1E-001-0001_1-tif",
   "images": [
@@ -46,7 +46,7 @@
       ]
     }
   ],
-  "description_html": "<p>Bryant Medium Signature Logo Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Product Specifications & Care</summary>\n  <div style=\"padding: 10px; font-size: 14px; line-height: 1.6;\">\n    <p><strong>Brand:</strong> MICHAEL Michael Kors</p>\n    <p><strong>Style #:</strong> 32S5GYTZ2B</p>\n    <p><strong>Care:</strong> Wipe clean with soft, dry cloth. Store in protective dust bag.</p>\n  </div>\n</details>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bryant Medium Signature Logo Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 5.5&quot; W X 3.75&quot; H X 1.5&quot; D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Wallets",
@@ -54,14 +54,30 @@
     "StyleNumber": "32S5GYTZ2B",
     "Color": "Vanilla/Acorn",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "5.5\" W X 3.75\" H X 1.5\" D",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Wallet",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Trim: 100% polyurethane",
+      "Gold-tone hardware",
+      "5.5\" W X 3.75\" H X 1.5\" D",
+      "Interior details: 2 slip pockets, ID window, 6 card slots",
+      "Lining: 100% polyester",
+      "Snap fastening",
+      "Imported"
+    ]
   },
   "groups": [
     "wallets",
     "women"
   ],
-  "last_verified_at": "2026-09-11T18:34:29Z",
+  "last_verified_at": "2026-09-11T21:21:07Z",
   "id": "e8e5a2542e1b314b",
   "created_at": "2026-09-11T18:30:37Z",
-  "updated_at": "2026-09-11T18:34:29Z"
+  "updated_at": "2026-09-11T22:09:51Z",
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bryant Medium Signature Logo Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 5.5&quot; W X 3.75&quot; H X 1.5&quot; D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>"
 }

@@ -5,8 +5,8 @@
   "handle": "daniela-suede-boot",
   "title": "Daniela Suede Boot",
   "vendor": "MICHAEL Michael Kors",
-  "product_type": "Shoes",
-  "gender": "Men",
+  "product_type": "Boots",
+  "gender": "Women",
   "current_price": 18100,
   "source_price": 189.5,
   "currency": "INR",
@@ -19,8 +19,8 @@
   ],
   "variants": [
     {
-      "sku": "40F6DNME7S-7",
-      "title": "US 7 / UK 6.5 - 0201",
+      "sku": "40F6DNME7S-5",
+      "title": "US 5 / UK 3 - 0201",
       "price": "18100.00",
       "compare_at_price": null,
       "source_price": 189.5,
@@ -31,7 +31,103 @@
       "option_values": [
         {
           "option_name": "Size",
-          "name": "US 7 / UK 6.5"
+          "name": "US 5 / UK 3"
+        },
+        {
+          "option_name": "Color",
+          "name": "0201"
+        }
+      ],
+      "size_us": "5",
+      "size_uk": "3",
+      "size_eu": "35.5"
+    },
+    {
+      "sku": "40F6DNME7S-5.5",
+      "title": "US 5.5 / UK 3.5 - 0201",
+      "price": "18100.00",
+      "compare_at_price": null,
+      "source_price": 189.5,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/c4b5f78f-55b4-401d-932b-0ac4a622888b/40F6DNME7S-251-0201_1-tif",
+      "option_values": [
+        {
+          "option_name": "Size",
+          "name": "US 5.5 / UK 3.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "0201"
+        }
+      ],
+      "size_us": "5.5",
+      "size_uk": "3.5",
+      "size_eu": "36"
+    },
+    {
+      "sku": "40F6DNME7S-6",
+      "title": "US 6 / UK 4 - 0201",
+      "price": "18100.00",
+      "compare_at_price": null,
+      "source_price": 189.5,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/c4b5f78f-55b4-401d-932b-0ac4a622888b/40F6DNME7S-251-0201_1-tif",
+      "option_values": [
+        {
+          "option_name": "Size",
+          "name": "US 6 / UK 4"
+        },
+        {
+          "option_name": "Color",
+          "name": "0201"
+        }
+      ],
+      "size_us": "6",
+      "size_uk": "4",
+      "size_eu": "36.5"
+    },
+    {
+      "sku": "40F6DNME7S-6.5",
+      "title": "US 6.5 / UK 4.5 - 0201",
+      "price": "18100.00",
+      "compare_at_price": null,
+      "source_price": 189.5,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/c4b5f78f-55b4-401d-932b-0ac4a622888b/40F6DNME7S-251-0201_1-tif",
+      "option_values": [
+        {
+          "option_name": "Size",
+          "name": "US 6.5 / UK 4.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "0201"
+        }
+      ],
+      "size_us": "6.5",
+      "size_uk": "4.5",
+      "size_eu": "37"
+    },
+    {
+      "sku": "40F6DNME7S-7",
+      "title": "US 7 / UK 5 - 0201",
+      "price": "18100.00",
+      "compare_at_price": null,
+      "source_price": 189.5,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/c4b5f78f-55b4-401d-932b-0ac4a622888b/40F6DNME7S-251-0201_1-tif",
+      "option_values": [
+        {
+          "option_name": "Size",
+          "name": "US 7 / UK 5"
         },
         {
           "option_name": "Color",
@@ -39,12 +135,12 @@
         }
       ],
       "size_us": "7",
-      "size_uk": "6.5",
-      "size_eu": "40"
+      "size_uk": "5",
+      "size_eu": "37.5"
     },
     {
       "sku": "40F6DNME7S-7.5",
-      "title": "US 7.5 / UK 7 - 0201",
+      "title": "US 7.5 / UK 5.5 - 0201",
       "price": "18100.00",
       "compare_at_price": null,
       "source_price": 189.5,
@@ -55,7 +151,7 @@
       "option_values": [
         {
           "option_name": "Size",
-          "name": "US 7.5 / UK 7"
+          "name": "US 7.5 / UK 5.5"
         },
         {
           "option_name": "Color",
@@ -63,12 +159,12 @@
         }
       ],
       "size_us": "7.5",
-      "size_uk": "7",
-      "size_eu": "40.5"
+      "size_uk": "5.5",
+      "size_eu": "38.5"
     },
     {
       "sku": "40F6DNME7S-8",
-      "title": "US 8 / UK 7.5 - 0201",
+      "title": "US 8 / UK 6 - 0201",
       "price": "18100.00",
       "compare_at_price": null,
       "source_price": 189.5,
@@ -79,7 +175,7 @@
       "option_values": [
         {
           "option_name": "Size",
-          "name": "US 8 / UK 7.5"
+          "name": "US 8 / UK 6"
         },
         {
           "option_name": "Color",
@@ -87,12 +183,12 @@
         }
       ],
       "size_us": "8",
-      "size_uk": "7.5",
-      "size_eu": "41"
+      "size_uk": "6",
+      "size_eu": "39"
     },
     {
       "sku": "40F6DNME7S-8.5",
-      "title": "US 8.5 / UK 8 - 0201",
+      "title": "US 8.5 / UK 6.5 - 0201",
       "price": "18100.00",
       "compare_at_price": null,
       "source_price": 189.5,
@@ -103,7 +199,7 @@
       "option_values": [
         {
           "option_name": "Size",
-          "name": "US 8.5 / UK 8"
+          "name": "US 8.5 / UK 6.5"
         },
         {
           "option_name": "Color",
@@ -111,12 +207,12 @@
         }
       ],
       "size_us": "8.5",
-      "size_uk": "8",
-      "size_eu": "42"
+      "size_uk": "6.5",
+      "size_eu": "39.5"
     },
     {
       "sku": "40F6DNME7S-9",
-      "title": "US 9 / UK 8.5 - 0201",
+      "title": "US 9 / UK 7 - 0201",
       "price": "18100.00",
       "compare_at_price": null,
       "source_price": 189.5,
@@ -127,7 +223,7 @@
       "option_values": [
         {
           "option_name": "Size",
-          "name": "US 9 / UK 8.5"
+          "name": "US 9 / UK 7"
         },
         {
           "option_name": "Color",
@@ -135,12 +231,12 @@
         }
       ],
       "size_us": "9",
-      "size_uk": "8.5",
-      "size_eu": "42.5"
+      "size_uk": "7",
+      "size_eu": "40"
     },
     {
       "sku": "40F6DNME7S-9.5",
-      "title": "US 9.5 / UK 9 - 0201",
+      "title": "US 9.5 / UK 7.5 - 0201",
       "price": "18100.00",
       "compare_at_price": null,
       "source_price": 189.5,
@@ -151,7 +247,7 @@
       "option_values": [
         {
           "option_name": "Size",
-          "name": "US 9.5 / UK 9"
+          "name": "US 9.5 / UK 7.5"
         },
         {
           "option_name": "Color",
@@ -159,12 +255,12 @@
         }
       ],
       "size_us": "9.5",
-      "size_uk": "9",
-      "size_eu": "43"
+      "size_uk": "7.5",
+      "size_eu": "40.5"
     },
     {
       "sku": "40F6DNME7S-10",
-      "title": "US 10 / UK 9.5 - 0201",
+      "title": "US 10 / UK 8 - 0201",
       "price": "18100.00",
       "compare_at_price": null,
       "source_price": 189.5,
@@ -175,7 +271,7 @@
       "option_values": [
         {
           "option_name": "Size",
-          "name": "US 10 / UK 9.5"
+          "name": "US 10 / UK 8"
         },
         {
           "option_name": "Color",
@@ -183,36 +279,12 @@
         }
       ],
       "size_us": "10",
-      "size_uk": "9.5",
-      "size_eu": "44"
-    },
-    {
-      "sku": "40F6DNME7S-10.5",
-      "title": "US 10.5 / UK 10 - 0201",
-      "price": "18100.00",
-      "compare_at_price": null,
-      "source_price": 189.5,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/c4b5f78f-55b4-401d-932b-0ac4a622888b/40F6DNME7S-251-0201_1-tif",
-      "option_values": [
-        {
-          "option_name": "Size",
-          "name": "US 10.5 / UK 10"
-        },
-        {
-          "option_name": "Color",
-          "name": "0201"
-        }
-      ],
-      "size_us": "10.5",
-      "size_uk": "10",
-      "size_eu": "44.5"
+      "size_uk": "8",
+      "size_eu": "41"
     },
     {
       "sku": "40F6DNME7S-11",
-      "title": "US 11 / UK 10.5 - 0201",
+      "title": "US 11 / UK 9 - 0201",
       "price": "18100.00",
       "compare_at_price": null,
       "source_price": 189.5,
@@ -223,7 +295,7 @@
       "option_values": [
         {
           "option_name": "Size",
-          "name": "US 11 / UK 10.5"
+          "name": "US 11 / UK 9"
         },
         {
           "option_name": "Color",
@@ -231,80 +303,8 @@
         }
       ],
       "size_us": "11",
-      "size_uk": "10.5",
-      "size_eu": "45"
-    },
-    {
-      "sku": "40F6DNME7S-11.5",
-      "title": "US 11.5 / UK 11 - 0201",
-      "price": "18100.00",
-      "compare_at_price": null,
-      "source_price": 189.5,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/c4b5f78f-55b4-401d-932b-0ac4a622888b/40F6DNME7S-251-0201_1-tif",
-      "option_values": [
-        {
-          "option_name": "Size",
-          "name": "US 11.5 / UK 11"
-        },
-        {
-          "option_name": "Color",
-          "name": "0201"
-        }
-      ],
-      "size_us": "11.5",
-      "size_uk": "11",
-      "size_eu": "45.5"
-    },
-    {
-      "sku": "40F6DNME7S-12",
-      "title": "US 12 / UK 11.5 - 0201",
-      "price": "18100.00",
-      "compare_at_price": null,
-      "source_price": 189.5,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/c4b5f78f-55b4-401d-932b-0ac4a622888b/40F6DNME7S-251-0201_1-tif",
-      "option_values": [
-        {
-          "option_name": "Size",
-          "name": "US 12 / UK 11.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "0201"
-        }
-      ],
-      "size_us": "12",
-      "size_uk": "11.5",
-      "size_eu": "46"
-    },
-    {
-      "sku": "40F6DNME7S-13",
-      "title": "US 13 / UK 12.5 - 0201",
-      "price": "18100.00",
-      "compare_at_price": null,
-      "source_price": 189.5,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/c4b5f78f-55b4-401d-932b-0ac4a622888b/40F6DNME7S-251-0201_1-tif",
-      "option_values": [
-        {
-          "option_name": "Size",
-          "name": "US 13 / UK 12.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "0201"
-        }
-      ],
-      "size_us": "13",
-      "size_uk": "12.5",
-      "size_eu": "47.5"
+      "size_uk": "9",
+      "size_eu": "42"
     }
   ],
   "options": [
@@ -312,40 +312,40 @@
       "name": "Size",
       "values": [
         {
-          "name": "US 7 / UK 6.5"
+          "name": "US 5 / UK 3"
         },
         {
-          "name": "US 7.5 / UK 7"
+          "name": "US 5.5 / UK 3.5"
         },
         {
-          "name": "US 8 / UK 7.5"
+          "name": "US 6 / UK 4"
         },
         {
-          "name": "US 8.5 / UK 8"
+          "name": "US 6.5 / UK 4.5"
         },
         {
-          "name": "US 9 / UK 8.5"
+          "name": "US 7 / UK 5"
         },
         {
-          "name": "US 9.5 / UK 9"
+          "name": "US 7.5 / UK 5.5"
         },
         {
-          "name": "US 10 / UK 9.5"
+          "name": "US 8 / UK 6"
         },
         {
-          "name": "US 10.5 / UK 10"
+          "name": "US 8.5 / UK 6.5"
         },
         {
-          "name": "US 11 / UK 10.5"
+          "name": "US 9 / UK 7"
         },
         {
-          "name": "US 11.5 / UK 11"
+          "name": "US 9.5 / UK 7.5"
         },
         {
-          "name": "US 12 / UK 11.5"
+          "name": "US 10 / UK 8"
         },
         {
-          "name": "US 13 / UK 12.5"
+          "name": "US 11 / UK 9"
         }
       ]
     },
@@ -358,23 +358,38 @@
       ]
     }
   ],
-  "description_html": "<p>Daniela Suede Boot by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Men's Shoe Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">US Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">UK Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">EU Size</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 41</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 43</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 44</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 44.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 10.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 45</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 45.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 12</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 11.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 46</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 13</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 12.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 47.5</td></tr>    </tbody>\n  </table>\n</details>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Daniela Suede Boot by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Suede</li>\n      <li><strong>Lining:</strong> polyester</li>\n      <li><strong>Silhouette:</strong> Point toe</li>\n    </ul>\n  </div>\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Women's Shoe Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">US Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">UK Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">EU Size</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 3</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 35.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 5.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 3.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 36</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 6</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 4</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 36.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 4.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 37</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 37.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 5.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 38.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 39</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 39.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 41</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42</td></tr>    </tbody>\n  </table>\n</details>\n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
-    "Category": "Shoes",
-    "Gender": "Men",
+    "Category": "Boots",
+    "Gender": "Women",
     "StyleNumber": "40F6DNME7S",
     "Color": "0201",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Suede",
+    "DetailsBullets": [
+      "Boot",
+      "Suede",
+      "Lining: polyester",
+      "Sole: rubber",
+      "Point toe",
+      "Slip on",
+      "Heel height: 2”",
+      "Heel type: stacked",
+      "Imported",
+      "Style #"
+    ]
   },
   "groups": [
-    "belts",
-    "men",
-    "shoes"
+    "boots",
+    "women"
   ],
-  "last_verified_at": "2026-09-11T18:34:27Z",
+  "last_verified_at": "2026-09-11T21:56:28Z",
   "id": "42bd2c7af7810b72",
   "created_at": "2026-09-11T18:30:35Z",
-  "updated_at": "2026-09-11T18:34:27Z"
+  "updated_at": "2026-09-11T22:09:51Z",
+  "size_guide_html": "<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Women's Shoe Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">US Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">UK Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">EU Size</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 3</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 35.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 5.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 3.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 36</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 6</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 4</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 36.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 4.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 37</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 37.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 5.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 38.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 39</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 39.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 41</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42</td></tr>    </tbody>\n  </table>\n</details>",
+  "material": "Suede",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Daniela Suede Boot by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Suede</li>\n      <li><strong>Lining:</strong> polyester</li>\n      <li><strong>Silhouette:</strong> Point toe</li>\n    </ul>\n  </div>\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Women's Shoe Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">US Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">UK Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">EU Size</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 3</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 35.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 5.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 3.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 36</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 6</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 4</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 36.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 4.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 37</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 37.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 5.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 38.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 39</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 8.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 6.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 39.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 9.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 7.5</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 40.5</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 10</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 8</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 41</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">US 11</td><td style=\"padding: 8px; border: 1px solid #ddd;\">UK 9</td><td style=\"padding: 8px; border: 1px solid #ddd;\">EU 42</td></tr>    </tbody>\n  </table>\n</details>\n</div>"
 }

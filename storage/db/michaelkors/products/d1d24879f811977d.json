@@ -7,8 +7,8 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Wallets",
   "gender": "Men",
-  "current_price": 9504,
-  "source_price": 99.5,
+  "current_price": 8501,
+  "source_price": 89.0,
   "currency": "INR",
   "source_currency": "USD",
   "availability": "in_stock",
@@ -21,9 +21,9 @@
     {
       "sku": "39S6LHDD5L",
       "title": "0230",
-      "price": "9504.00",
-      "compare_at_price": null,
-      "source_price": 99.5,
+      "price": "8501.00",
+      "compare_at_price": "9504.00",
+      "source_price": 89.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -46,7 +46,7 @@
       ]
     }
   ],
-  "description_html": "<p>Hudson Logo Embossed Leather Card Case by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Product Specifications & Care</summary>\n  <div style=\"padding: 10px; font-size: 14px; line-height: 1.6;\">\n    <p><strong>Brand:</strong> MICHAEL Michael Kors</p>\n    <p><strong>Style #:</strong> 39S6LHDD5L</p>\n    <p><strong>Care:</strong> Wipe clean with soft, dry cloth. Store in protective dust bag.</p>\n  </div>\n</details>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Logo Embossed Leather Card Case by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 4.25”W X 2.79&quot;H X 2.67”D</li>\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Wallets",
@@ -54,14 +54,32 @@
     "StyleNumber": "39S6LHDD5L",
     "Color": "0230",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "4.25”W X 2.79\"H X 2.67”D",
+    "Material": "Pebbled leather, 100% leather",
+    "DetailsBullets": [
+      "Card case",
+      "Pebbled leather",
+      "100% leather",
+      "4.53”W X 2.96”H X 0.40”D",
+      "Gunmetal hardware",
+      "4.25”W X 2.79\"H X 2.67”D",
+      "Exterior details: slip pocket, zip compartment, 3 card slots",
+      "Lining: 100% polyester",
+      "Imported",
+      "Style #"
+    ]
   },
   "groups": [
-    "men",
-    "wallets"
+    "wallets",
+    "men"
   ],
-  "last_verified_at": "2026-09-11T18:34:31Z",
+  "last_verified_at": "2026-09-11T21:12:02Z",
   "id": "d1d24879f811977d",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T18:34:31Z"
+  "updated_at": "2026-09-11T22:09:51Z",
+  "source_compare_at_price": 99.5,
+  "compare_at_price": 9504,
+  "material": "Pebbled leather, 100% leather",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Logo Embossed Leather Card Case by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 4.25”W X 2.79&quot;H X 2.67”D</li>\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n    </ul>\n  </div>\n  \n</div>"
 }

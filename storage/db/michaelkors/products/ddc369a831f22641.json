@@ -11,7 +11,7 @@
   "source_price": 99.5,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/470ffb81-df36-45ed-ae5c-7bc4ad56a8c1/39S6LHDF0L-282-0301_1-tif",
   "images": [
@@ -46,7 +46,7 @@
       ]
     }
   ],
-  "description_html": "<p>Hudson Pebbled Leather Folio Card Case by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Product Specifications & Care</summary>\n  <div style=\"padding: 10px; font-size: 14px; line-height: 1.6;\">\n    <p><strong>Brand:</strong> MICHAEL Michael Kors</p>\n    <p><strong>Style #:</strong> 39S6LHDF0L</p>\n    <p><strong>Care:</strong> Wipe clean with soft, dry cloth. Store in protective dust bag.</p>\n  </div>\n</details>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Pebbled Leather Folio Card Case by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Wallets",
@@ -54,14 +54,28 @@
     "StyleNumber": "39S6LHDF0L",
     "Color": "Navy",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Pebbled leather, 100% leather",
+    "DetailsBullets": [
+      "Card case",
+      "Pebbled leather",
+      "100% leather",
+      "Gunmetal hardware",
+      "Interior details: ID window, 4 card slots",
+      "Lining: 100% polyester",
+      "Imported",
+      "Style #",
+      "bvseo\\_sdk, dw\\_cartridge, 18.2.0, p\\_sdk\\_3.2.0"
+    ]
   },
   "groups": [
-    "men",
-    "wallets"
+    "wallets",
+    "men"
   ],
-  "last_verified_at": "2026-09-11T18:34:31Z",
+  "last_verified_at": "2026-09-11T21:16:41Z",
   "id": "ddc369a831f22641",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T18:34:31Z"
+  "updated_at": "2026-09-11T22:09:51Z",
+  "material": "Pebbled leather, 100% leather",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Pebbled Leather Folio Card Case by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n    </ul>\n  </div>\n  \n</div>"
 }

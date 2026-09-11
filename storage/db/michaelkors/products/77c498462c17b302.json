@@ -28,7 +28,7 @@
       "source_price": 99.5,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/c223c2d6-62ce-4e68-8f8f-129c34c291aa/39S6LBLY7L-007-2437_2-tif",
       "option_values": [
         {
@@ -50,7 +50,7 @@
       "source_price": 99.5,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/c223c2d6-62ce-4e68-8f8f-129c34c291aa/39S6LBLY7L-007-2437_2-tif",
       "option_values": [
         {
@@ -72,7 +72,7 @@
       "source_price": 99.5,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/c223c2d6-62ce-4e68-8f8f-129c34c291aa/39S6LBLY7L-007-2437_2-tif",
       "option_values": [
         {
@@ -136,7 +136,7 @@
       ]
     }
   ],
-  "description_html": "<p>Reversible Logo Embossed Leather Buckle Belt by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Belt Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">Waist Measurement</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">S</td><td style=\"padding: 8px; border: 1px solid #ddd;\">32\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">M</td><td style=\"padding: 8px; border: 1px solid #ddd;\">34\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">L</td><td style=\"padding: 8px; border: 1px solid #ddd;\">36\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">XL</td><td style=\"padding: 8px; border: 1px solid #ddd;\">38\"</td></tr>    </tbody>\n  </table>\n</details>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Reversible Logo Embossed Leather Buckle Belt by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Closure:</strong> Buckle fastening</li>\n    </ul>\n  </div>\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Belt Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">Waist Measurement</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">S</td><td style=\"padding: 8px; border: 1px solid #ddd;\">32\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">M</td><td style=\"padding: 8px; border: 1px solid #ddd;\">34\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">L</td><td style=\"padding: 8px; border: 1px solid #ddd;\">36\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">XL</td><td style=\"padding: 8px; border: 1px solid #ddd;\">38\"</td></tr>    </tbody>\n  </table>\n</details>\n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Belts",
@@ -144,14 +144,30 @@
     "StyleNumber": "39S6LBLY7L",
     "Color": "Blk/Brown",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Leather, 100% leather",
+    "DetailsBullets": [
+      "Belt",
+      "Leather",
+      "100% leather",
+      "Gunmetal hardware",
+      "Buckle fastening",
+      "Imported",
+      "Style #",
+      "Verified Purchaser",
+      "y\\_2026, m\\_9, d\\_10, h\\_11",
+      "bvseo\\_bulk, prod\\_bvrr, vn\\_bulk\\_3.0.48"
+    ]
   },
   "groups": [
     "belts",
     "men"
   ],
-  "last_verified_at": "2026-09-11T18:34:31Z",
+  "last_verified_at": "2026-09-11T20:42:25Z",
   "id": "77c498462c17b302",
   "created_at": "2026-09-11T18:30:39Z",
-  "updated_at": "2026-09-11T18:34:31Z"
+  "updated_at": "2026-09-11T22:09:51Z",
+  "size_guide_html": "<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Belt Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">Waist Measurement</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">S</td><td style=\"padding: 8px; border: 1px solid #ddd;\">32\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">M</td><td style=\"padding: 8px; border: 1px solid #ddd;\">34\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">L</td><td style=\"padding: 8px; border: 1px solid #ddd;\">36\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">XL</td><td style=\"padding: 8px; border: 1px solid #ddd;\">38\"</td></tr>    </tbody>\n  </table>\n</details>",
+  "material": "Leather, 100% leather",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Reversible Logo Embossed Leather Buckle Belt by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Closure:</strong> Buckle fastening</li>\n    </ul>\n  </div>\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Michael Kors Belt Size Guide</summary>\n  <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n    <thead><tr style=\"background: #f8f8f8;\"><th style=\"padding: 8px; border: 1px solid #ddd;\">Size</th><th style=\"padding: 8px; border: 1px solid #ddd;\">Waist Measurement</th></tr></thead>\n    <tbody>\n<tr><td style=\"padding: 8px; border: 1px solid #ddd;\">S</td><td style=\"padding: 8px; border: 1px solid #ddd;\">32\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">M</td><td style=\"padding: 8px; border: 1px solid #ddd;\">34\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">L</td><td style=\"padding: 8px; border: 1px solid #ddd;\">36\"</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\">XL</td><td style=\"padding: 8px; border: 1px solid #ddd;\">38\"</td></tr>    </tbody>\n  </table>\n</details>\n</div>"
 }

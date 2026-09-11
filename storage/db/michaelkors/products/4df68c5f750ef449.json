@@ -11,7 +11,7 @@
   "source_price": 199.5,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/a209717e-3258-4de6-a1a2-6c0e8518e40d/30F3G7WT7C-001-0001_1-tif",
   "images": [
@@ -46,7 +46,7 @@
       ]
     }
   ],
-  "description_html": "<p>Jet Set Pebbled Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Product Specifications & Care</summary>\n  <div style=\"padding: 10px; font-size: 14px; line-height: 1.6;\">\n    <p><strong>Brand:</strong> MICHAEL Michael Kors</p>\n    <p><strong>Style #:</strong> 33T6LJSM1X</p>\n    <p><strong>Care:</strong> Wipe clean with soft, dry cloth. Store in protective dust bag.</p>\n  </div>\n</details>",
+  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Pebbled Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -60,8 +60,9 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T18:34:29Z",
+  "last_verified_at": "2026-09-11T22:31:00Z",
   "id": "4df68c5f750ef449",
   "created_at": "2026-09-11T18:30:37Z",
-  "updated_at": "2026-09-11T18:34:29Z"
+  "updated_at": "2026-09-11T22:31:00Z",
+  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Pebbled Leather Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
 }

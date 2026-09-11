@@ -46,7 +46,7 @@
       ]
     }
   ],
-  "description_html": "<p>Large Logo Continental Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Product Specifications & Care</summary>\n  <div style=\"padding: 10px; font-size: 14px; line-height: 1.6;\">\n    <p><strong>Brand:</strong> MICHAEL Michael Kors</p>\n    <p><strong>Style #:</strong> 32F1GJ6E7B</p>\n    <p><strong>Care:</strong> Wipe clean with soft, dry cloth. Store in protective dust bag.</p>\n  </div>\n</details>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Large Logo Continental Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8.25”W X 4” H X 1”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop 7”</li>\n      <li><strong>Material:</strong> Logo-print canvas, 69% coated canvas/17% polyester/13% cotton/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Wallets",
@@ -54,14 +54,31 @@
     "StyleNumber": "32F1GJ6E7B",
     "Color": "Brown",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "8.25”W X 4” H X 1”D",
+    "HandleDrop": "Handle drop 7”",
+    "Material": "Logo-print canvas, 69% coated canvas/17% polyester/13% cotton/1% polyurethane",
+    "DetailsBullets": [
+      "Wallet",
+      "Logo-print canvas",
+      "69% coated canvas/17% polyester/13% cotton/1% polyurethane",
+      "Trim: 100% polyurethane",
+      "Gold-tone hardware",
+      "8.25”W X 4” H X 1”D",
+      "Handle drop 7”",
+      "Interior details: 17 card slots, 5 slip pockets, zip pouch, phone pocket",
+      "Lining: 100% polyester",
+      "Zip fastening"
+    ]
   },
   "groups": [
     "wallets",
     "women"
   ],
-  "last_verified_at": "2026-09-11T18:34:28Z",
+  "last_verified_at": "2026-09-11T22:32:51Z",
   "id": "50e003417d3d6614",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T18:34:28Z"
+  "updated_at": "2026-09-11T22:32:51Z",
+  "material": "Logo-print canvas, 69% coated canvas/17% polyester/13% cotton/1% polyurethane",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Large Logo Continental Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8.25”W X 4” H X 1”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop 7”</li>\n      <li><strong>Material:</strong> Logo-print canvas, 69% coated canvas/17% polyester/13% cotton/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>"
 }

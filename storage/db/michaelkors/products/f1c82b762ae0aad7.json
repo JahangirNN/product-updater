@@ -7,11 +7,11 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 4680,
-  "source_price": 49.0,
+  "current_price": 15234,
+  "source_price": 159.5,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/b69c9126-67ee-486f-b1be-8a7bace39a6e/32R5G5VC3B-001-0001_1-tif",
   "images": [
@@ -21,9 +21,9 @@
     {
       "sku": "32F5SJ6C5V",
       "title": "0239",
-      "price": "4680.00",
+      "price": "15234.00",
       "compare_at_price": null,
-      "source_price": 49.0,
+      "source_price": 159.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -46,7 +46,7 @@
       ]
     }
   ],
-  "description_html": "<p>Jet Set Small Signature Logo Camera Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Product Specifications & Care</summary>\n  <div style=\"padding: 10px; font-size: 14px; line-height: 1.6;\">\n    <p><strong>Brand:</strong> MICHAEL Michael Kors</p>\n    <p><strong>Style #:</strong> 32F5SJ6C5V</p>\n    <p><strong>Care:</strong> Wipe clean with soft, dry cloth. Store in protective dust bag.</p>\n  </div>\n</details>",
+  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Small Signature Logo Camera Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -60,8 +60,9 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T18:34:28Z",
+  "last_verified_at": "2026-09-11T21:23:29Z",
   "id": "f1c82b762ae0aad7",
   "created_at": "2026-09-11T18:30:35Z",
-  "updated_at": "2026-09-11T18:34:28Z"
+  "updated_at": "2026-09-11T22:09:51Z",
+  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Small Signature Logo Camera Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
 }

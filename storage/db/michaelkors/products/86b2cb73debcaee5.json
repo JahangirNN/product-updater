@@ -7,11 +7,11 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 31424,
-  "source_price": 329.0,
+  "current_price": 38158,
+  "source_price": 399.5,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/f9749975-4fbf-4e99-9741-f7a1955ade2a/30R5G9IS6B-173-7988_1-tif",
   "images": [
@@ -21,9 +21,9 @@
     {
       "sku": "30T6AY5L2O",
       "title": "0230",
-      "price": "31424.00",
+      "price": "38158.00",
       "compare_at_price": null,
-      "source_price": 329.0,
+      "source_price": 399.5,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -46,7 +46,7 @@
       ]
     }
   ],
-  "description_html": "<p>Nolita Medium Pebbled Leather Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Product Specifications & Care</summary>\n  <div style=\"padding: 10px; font-size: 14px; line-height: 1.6;\">\n    <p><strong>Brand:</strong> MICHAEL Michael Kors</p>\n    <p><strong>Style #:</strong> 30T6AY5L2O</p>\n    <p><strong>Care:</strong> Wipe clean with soft, dry cloth. Store in protective dust bag.</p>\n  </div>\n</details>",
+  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Nolita Medium Pebbled Leather Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -60,8 +60,9 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T18:34:28Z",
+  "last_verified_at": "2026-09-11T20:47:05Z",
   "id": "86b2cb73debcaee5",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T18:34:28Z"
+  "updated_at": "2026-09-11T22:09:51Z",
+  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Nolita Medium Pebbled Leather Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
 }

@@ -50,7 +50,7 @@
       ]
     }
   ],
-  "description_html": "<p>Oxford Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Product Specifications & Care</summary>\n  <div style=\"padding: 10px; font-size: 14px; line-height: 1.6;\">\n    <p><strong>Brand:</strong> MICHAEL Michael Kors</p>\n    <p><strong>Style #:</strong> MK-1188</p>\n    <p><strong>Care:</strong> Wipe clean with soft, dry cloth. Store in protective dust bag.</p>\n  </div>\n</details>",
+  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Oxford Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -64,8 +64,9 @@
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-11T18:34:30Z",
+  "last_verified_at": "2026-09-11T20:59:06Z",
   "id": "a9a630d5b78b9a50",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T18:34:30Z"
+  "updated_at": "2026-09-11T22:09:51Z",
+  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Oxford Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p></div>"
 }

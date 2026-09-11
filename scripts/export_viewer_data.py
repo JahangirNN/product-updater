@@ -25,10 +25,38 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
     source_store = product.get("source_store", "").lower()
     groups = [g.lower() for g in product.get("groups", [])]
 
-    # Michael Kors multi-category taxonomy
+    # Michael Kors multi-category taxonomy with strict Men & Women separation
     if source_store == "michaelkors":
+        gender = product.get("gender", "Women")
         cat = product.get("product_type", "Handbags")
         text = f"{title_lower} {handle_lower}"
+        
+        if gender == "Men":
+            if cat == "Shoes":
+                if any(w in text for w in ["trainer", "sneaker"]):
+                    return "Lace-Up Trainers"
+                elif any(w in text for w in ["loafer", "moccasin"]):
+                    return "Loafers & Moccasins"
+                elif any(w in text for w in ["boot", "bootie"]):
+                    return "Boots & Booties"
+                elif any(w in text for w in ["slide", "sandal", "boat"]):
+                    return "Slides & Casual"
+                return "Designer Footwear"
+            elif cat == "Belts":
+                if any(w in text for w in ["reversible"]):
+                    return "Reversible Belts"
+                elif any(w in text for w in ["braided", "woven"]):
+                    return "Braided Belts"
+                return "Leather Belts"
+            elif cat == "Wallets":
+                if any(w in text for w in ["card"]):
+                    return "Card Cases & Holders"
+                elif any(w in text for w in ["billfold"]):
+                    return "Billfolds"
+                return "Wallets & Folios"
+            return "Men's Luxury"
+
+        # Women's Collections
         if cat == "Handbags":
             if any(w in text for w in ["tote", "shopper"]):
                 return "Tote Bags"
@@ -53,15 +81,13 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
             elif any(w in text for w in ["continental", "flap", "zip around", "zip-around", "large"]):
                 return "Continental & Flap Wallets"
             return "Compact Wallets"
-        elif cat in ("Sneakers", "Shoes"):
-            if any(w in text for w in ["boot", "bootie"]):
-                return "Boots & Booties"
-            elif any(w in text for w in ["trainer", "lace-up", "lace up"]):
-                return "Lace-Up Trainers"
+        elif cat == "Sneakers":
+            if any(w in text for w in ["platform"]):
+                return "Platform Sneakers"
             elif any(w in text for w in ["slip-on", "slip on"]):
                 return "Slip-On Sneakers"
-            elif any(w in text for w in ["platform"]):
-                return "Platform Sneakers"
+            elif any(w in text for w in ["trainer", "lace-up", "lace up"]):
+                return "Lace-Up Trainers"
             return "Fashion Sneakers"
         elif cat == "Sandals":
             if any(w in text for w in ["wedge", "espadrille"]):
@@ -74,13 +100,21 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
                 return "Platform Sandals"
             return "Heeled & Flat Sandals"
         elif cat == "Flats":
-            if any(w in text for w in ["loafer"]):
+            if any(w in text for w in ["mule"]):
+                return "Mules & Clogs"
+            elif any(w in text for w in ["loafer"]):
                 return "Loafers"
             elif any(w in text for w in ["moccasin"]):
                 return "Moccasins"
-            elif any(w in text for w in ["ballet", "flat"]):
+            elif any(w in text for w in ["ballet"]):
                 return "Ballet Flats"
+            elif any(w in text for w in ["espadrille"]):
+                return "Espadrilles"
             return "Loafers & Flats"
+        elif cat == "Boots":
+            if any(w in text for w in ["knee-high", "knee high"]):
+                return "Knee-High Boots"
+            return "Ankle Boots & Booties"
         elif cat == "Sunglasses":
             if any(w in text for w in ["blue light", "optical"]):
                 return "Blue Light Eyewear"
@@ -90,15 +124,7 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
             elif any(c in color for c in ["tortoise", "horn", "black", "tort", "blush horn", "dark tortoise"]):
                 return "Acetate Frame Sunglasses"
             return "Designer Sunglasses"
-        elif cat == "Belts":
-            if any(w in text for w in ["reversible"]):
-                return "Reversible Belts"
-            elif any(w in text for w in ["buckle", "logo"]):
-                return "Buckle Belts"
-            elif any(w in text for w in ["braided", "woven"]):
-                return "Braided Belts"
-            return "Leather Belts"
-        return "Classic Luxury"
+        return "Women's Luxury"
 
     # Footwear taxonomy for Nordstrom / On Running
     if source_store == "nordstrom" or "shoes" in groups or "footwear" in product.get("tags", []):
@@ -178,7 +204,32 @@ def export_catalog(
                     group_display = "Shoes"
                 elif s_store == "michaelkors":
                     store_display = "Michael Kors"
-                    group_display = prod.get("product_type") or "Handbags"
+                    gender = prod.get("gender", "Women")
+                    pt = prod.get("product_type", "Handbags")
+                    if gender == "Men":
+                        if pt == "Shoes":
+                            group_display = "Men's Shoes"
+                        elif pt == "Belts":
+                            group_display = "Men's Belts"
+                        else:
+                            group_display = "Men's Wallets"
+                    else:
+                        if pt == "Handbags":
+                            group_display = "Women's Handbags"
+                        elif pt == "Wallets":
+                            group_display = "Women's Wallets"
+                        elif pt == "Sneakers":
+                            group_display = "Women's Sneakers"
+                        elif pt == "Flats":
+                            group_display = "Women's Flats & Mules"
+                        elif pt == "Sandals":
+                            group_display = "Women's Sandals"
+                        elif pt == "Boots":
+                            group_display = "Women's Boots"
+                        elif pt == "Sunglasses":
+                            group_display = "Women's Sunglasses"
+                        else:
+                            group_display = f"Women's {pt}"
                 else:
                     store_display = prod.get("vendor", "Other")
                     group_display = prod.get("product_type", "Handbags")

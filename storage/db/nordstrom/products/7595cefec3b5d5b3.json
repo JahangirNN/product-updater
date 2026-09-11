@@ -9,8 +9,8 @@
   "source_sku": "ON-7893058-5.5",
   "source_price": 90.0,
   "source_compare_at_price": 113.88,
-  "current_price": 8561.0,
-  "compare_at_price": 10832.0,
+  "current_price": 8596.0,
+  "compare_at_price": 10877.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -155,7 +155,7 @@
       "source_compare_at_price": 113.88,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/cc600efe-6192-4206-a0cd-f6b23dfede93.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -543,9 +543,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-11T18:02:38Z",
+  "last_verified_at": "2026-09-11T21:36:52Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-11T18:02:38Z",
+  "updated_at": "2026-09-11T21:36:52Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,

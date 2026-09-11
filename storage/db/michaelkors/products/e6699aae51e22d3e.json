@@ -46,7 +46,7 @@
       ]
     }
   ],
-  "description_html": "<p>Varick Saffiano Leather Billfold Wallet With Passcase by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Product Specifications & Care</summary>\n  <div style=\"padding: 10px; font-size: 14px; line-height: 1.6;\">\n    <p><strong>Brand:</strong> MICHAEL Michael Kors</p>\n    <p><strong>Style #:</strong> 39F5LVAF2L</p>\n    <p><strong>Care:</strong> Wipe clean with soft, dry cloth. Store in protective dust bag.</p>\n  </div>\n</details>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Varick Saffiano Leather Billfold Wallet With Passcase by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 4.3&quot;W X 3.6&quot;H X 0.5&quot;D</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Saffiano leather</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Wallets",
@@ -54,14 +54,30 @@
     "StyleNumber": "39F5LVAF2L",
     "Color": "Deep Red",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "4.3\"W X 3.6\"H X 0.5\"D",
+    "Material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Saffiano leather",
+    "DetailsBullets": [
+      "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+      "Billfold wallet with passcase",
+      "Saffiano leather",
+      "100% leather",
+      "Trim: 60% polyurethane/20% cotton/20% polyester",
+      "Gunmetal hardware",
+      "4.3\"W X 3.6\"H X 0.5\"D",
+      "Interior details: billfold compartment, 6 card slots, removable passcase with ID window and 2 card slots",
+      "Lining: 100% polyester",
+      "Imported"
+    ]
   },
   "groups": [
-    "men",
-    "wallets"
+    "wallets",
+    "men"
   ],
-  "last_verified_at": "2026-09-11T18:34:31Z",
+  "last_verified_at": "2026-09-11T21:19:53Z",
   "id": "e6699aae51e22d3e",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-11T18:34:31Z"
+  "updated_at": "2026-09-11T22:09:51Z",
+  "material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Saffiano leather",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Varick Saffiano Leather Billfold Wallet With Passcase by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 4.3&quot;W X 3.6&quot;H X 0.5&quot;D</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Saffiano leather</li>\n      <li><strong>Hardware:</strong> Gunmetal hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n    </ul>\n  </div>\n  \n</div>"
 }

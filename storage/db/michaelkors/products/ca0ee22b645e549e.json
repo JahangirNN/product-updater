@@ -46,7 +46,7 @@
       ]
     }
   ],
-  "description_html": "<p>Hudson Signature Logo Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Product Specifications & Care</summary>\n  <div style=\"padding: 10px; font-size: 14px; line-height: 1.6;\">\n    <p><strong>Brand:</strong> MICHAEL Michael Kors</p>\n    <p><strong>Style #:</strong> 33F6GHDM1B</p>\n    <p><strong>Care:</strong> Wipe clean with soft, dry cloth. Store in protective dust bag.</p>\n  </div>\n</details>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Signature Logo Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,14 +54,29 @@
     "StyleNumber": "33F6GHDM1B",
     "Color": "0301",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+    "DetailsBullets": [
+      "Messenger bag",
+      "Logo-print canvas",
+      "89.4% coated canvas/9.6% polyester/1% polyurethane",
+      "Trim: 60% polyurethane/40% polyester",
+      "Antique gold-tone hardware",
+      "Width: 11” (28cm); height: 7.5” (19cm); depth: 2.5” (6.3cm)",
+      "Interior details: front slip pocket",
+      "Lining: 100% polyester",
+      "Zip fastening",
+      "Dust bag not included"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T18:34:29Z",
+  "last_verified_at": "2026-09-11T21:09:14Z",
   "id": "ca0ee22b645e549e",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-11T18:34:29Z"
+  "updated_at": "2026-09-11T22:09:51Z",
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Hudson Signature Logo Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>"
 }

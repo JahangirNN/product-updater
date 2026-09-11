@@ -46,7 +46,7 @@
       ]
     }
   ],
-  "description_html": "<p>Empire Large Leather Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n<details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n  <summary style=\"font-weight: bold; cursor: pointer;\">Product Specifications & Care</summary>\n  <div style=\"padding: 10px; font-size: 14px; line-height: 1.6;\">\n    <p><strong>Brand:</strong> MICHAEL Michael Kors</p>\n    <p><strong>Style #:</strong> 32H3G8EC7L</p>\n    <p><strong>Care:</strong> Wipe clean with soft, dry cloth. Store in protective dust bag.</p>\n  </div>\n</details>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Empire Large Leather Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 9.5&quot;W X 5&quot;H X 2.5&quot;D</li>\n      <li><strong>Material:</strong> 100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Handbags",
@@ -54,14 +54,30 @@
     "StyleNumber": "32H3G8EC7L",
     "Color": "3300",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "Dimensions": "9.5\"W X 5\"H X 2.5\"D",
+    "Material": "100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance",
+    "DetailsBullets": [
+      "100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance.",
+      "100% leather from tanneries meeting the highest standards of environmental performance",
+      "Crossbody bag",
+      "Leather",
+      "100% leather",
+      "Gold-tone hardware",
+      "9.5\"W X 5\"H X 2.5\"D",
+      "Adjustable strap: 12.5\"-22.5\"",
+      "Exterior details: front slip pocket",
+      "Interior details: 3 front card slots"
+    ]
   },
   "groups": [
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-11T18:34:29Z",
+  "last_verified_at": "2026-09-11T21:42:16Z",
   "id": "1f40cca1727178b6",
   "created_at": "2026-09-11T18:30:37Z",
-  "updated_at": "2026-09-11T18:34:29Z"
+  "updated_at": "2026-09-11T22:09:51Z",
+  "material": "100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Empire Large Leather Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 9.5&quot;W X 5&quot;H X 2.5&quot;D</li>\n      <li><strong>Material:</strong> 100% of the leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>"
 }
