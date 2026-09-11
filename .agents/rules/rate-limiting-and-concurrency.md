@@ -44,3 +44,19 @@ Never fire unpaced outbound requests against retailer storefronts, never use OOP
 ### 2.7 Top-Level Worker Exception Isolation
 - Worker loops in thread pools must wrap single-item execution in top-level `try/except Exception as err` blocks.
 - Route exceptions with full tracebacks to `logs/errors.log`. One failing product must never crash sibling workers or the dispatcher.
+
+### 2.8 Anti-Bot Adaptive Challenge Settlement
+- Never rely on static sleeps (e.g. `time.sleep(4)`) when resolving client-side anti-bot challenges (e.g., Kasada, Akamai).
+- Use an **adaptive polling loop** (up to 12s) checking that anti-bot challenge scripts (e.g., `istlWas`) are cleared and the document title/DOM is fully hydrated before extracting data.
+- Recurring hourly sweeps MUST run via local stealth browsers (Camoufox) or HTTP pools with zero external paid scraper API cost.
+
+### 2.9 Stealth Browser Worker Tab Crash Isolation
+- When long-running background sweeps reuse a stealth browser tab, transient network glitches can cause `NS_ERROR_UNKNOWN_HOST` or socket drops.
+- The worker must catch Firefox protocol exceptions and immediately recreate a fresh tab (`page = browser.new_page()`) so subsequent products are not failed by a poisoned session.
+
+### 2.10 Granular Multi-Variant & Size Availability Invariant
+- For shoe and apparel retailers with sizing, catalog-level stock checks are insufficient.
+- The delta engine must extract per-size availability from hydrated JSON (`shipQuantity > 0` or proposition availability).
+- Stored variants must update their `in_stock` boolean per individual size independently.
+- Top-level product `availability` is `in_stock` if and only if `any(v["in_stock"] for v in variants)`.
+

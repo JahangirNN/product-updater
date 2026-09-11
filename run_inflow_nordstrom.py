@@ -24,7 +24,7 @@ from storage.db import save_product, build_and_save_index
 from stores.nordstrom.inflow import parse_product_payload
 
 FIRECRAWL_API_URL = "https://api.firecrawl.dev/v1/scrape"
-FIRECRAWL_API_KEY = os.environ.get("FIRECRAWL_API_KEY", "fc-c8760028c40942e685a271b9a4067238")
+FIRECRAWL_API_KEY = os.environ.get("FIRECRAWL_API_KEY", "fc-5536da28f44342329859982d2c848986")
 CACHE_DIR = "scratch/nordstrom_raw"
 
 FIRECRAWL_SCHEMA = {

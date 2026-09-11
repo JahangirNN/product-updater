@@ -77,9 +77,10 @@ Run an automated audit script across all newly scraped items to verify:
 ### Tier B: Live Store Parity Audit (20 Random Samples via Subagent)
 Launch a research subagent or execute a sampling script:
 - Sample 20 products at random.
-- Query live retailer endpoints (`.js` or storefront JSON).
-- Verify 1-to-1 parity for: Title, SKU, Source Price, Current Stock State (`in_stock` vs `out_of_stock`).
+- Query live retailer endpoints (`.js`, storefront JSON, or Camoufox stealth browser).
+- Verify 1-to-1 parity for: Title, SKU, Source Price, Current Stock State (`in_stock` vs `out_of_stock`), and **Granular Per-Size Availability** (confirming that individual shoe or apparel sizes match live stock).
 - **Success Criteria**: 100.0% accuracy across all 20 samples.
+
 
 ---
 
@@ -177,8 +178,21 @@ All sync activity routes through Loguru dual sinks:
 - `logs/errors.log`: Error forensic sink strictly capturing `ERROR` and `CRITICAL` events with full diagnostic stack traces (`backtrace=True, diagnose=True`, 10 MB rotation, 30 days retention).
 - `status == "rate_limited"` events are explicitly logged to `logs/errors.log`.
 
-### 4.8 Master Index & Delta Freshner Execution Steps
+### 4.8 Zero-Cost Local Stealth Browser for Anti-Bot Stores (`stores/{brand_slug}/camoufox_solver.py`)
+When a retailer employs client-side bot management (e.g. Kasada, Akamai):
+- **Zero API Fees**: Avoid paid proxy or scraping APIs for recurring hourly sweeps. Use a local headless stealth engine (`camoufox` + `playwright`).
+- **Adaptive Challenge Settlement**: Never use static sleeps. Implement an adaptive polling loop (up to 12s) that actively verifies anti-bot challenge scripts (`istlWas`) are cleared and page DOM is hydrated.
+- **Worker Tab Crash Recovery**: If a transient network glitch raises `NS_ERROR_UNKNOWN_HOST` or disconnects the tab, wrap the sweep loop to catch protocol errors and respawn `page = browser.new_page()` immediately.
+
+### 4.9 Granular Multi-Variant & Size Availability Invariant
+When syncing multi-variant sized goods (shoes, clothing):
+- Extract per-size availability maps from hydrated JSON/DOM (e.g., `shipQuantity > 0` per SKU).
+- In `apply_delta_to_product()`, iterate through `product["variants"]` and update each variant's `in_stock` boolean individually according to its SKU/size match.
+- Top-level `product["availability"]` is set to `"in_stock"` if and only if `any(v.get("in_stock", False) for v in product["variants"])`.
+
+### 4.10 Master Index & Delta Freshner Execution Steps
 1. **Rebuild Master Index**:
+
    ```bash
    python -c "from storage.db import build_and_save_index; build_and_save_index()"
    ```

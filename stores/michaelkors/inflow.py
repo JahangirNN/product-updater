@@ -55,26 +55,48 @@ def clean_title(title: str) -> str:
     return t.strip()
 
 
-def resolve_category(title: str, handle: str, fallback_category: str) -> str:
-    """Resolve true product category from keywords in title and handle."""
+def resolve_gender_and_category(sku: str, title: str, handle: str, fallback_category: str = "Handbags") -> Tuple[str, str]:
+    """
+    Deterministically resolve gender and category based on Michael Kors SKU prefixes and keywords.
+    Enforces pure functional taxonomy alignment (ADR 0005, ADR 0012).
+    """
+    pre = sku[:2].upper()
     text = f"{title} {handle}".lower()
-    if any(w in text for w in ["sunglasses", "eyewear"]):
-        return "Sunglasses"
-    if any(w in text for w in ["belt"]):
-        return "Belts"
-    if any(w in text for w in ["wallet", "card case", "cardholder", "wristlet", "billfold", "coin purse"]):
-        return "Wallets"
-    if any(w in text for w in ["sneaker", "trainer"]):
-        return "Sneakers"
-    if any(w in text for w in ["sandal", "slide", "flip flop"]):
-        return "Sandals"
-    if any(w in text for w in ["flat", "loafer", "moccasin", "ballet"]):
-        return "Flats"
-    if any(w in text for w in ["boot", "bootie", "shoe", "oxford", "derby", "pump", "heel"]):
-        return "Shoes"
-    if any(w in text for w in ["bag", "tote", "crossbody", "shoulder", "satchel", "clutch", "pochette", "backpack", "messenger"]):
-        return "Handbags"
-    return fallback_category
+
+    # 1. Deterministic Gender from SKU Prefix
+    if pre in ("42", "39"):
+        gender = "Men"
+    else:
+        gender = "Women"
+
+    # 2. Category Resolution
+    if gender == "Men":
+        if pre == "42":
+            category = "Shoes"
+        elif any(w in text for w in ["belt"]):
+            category = "Belts"
+        else:
+            category = "Wallets"
+    else:
+        # Women
+        if any(w in text for w in ["sunglasses", "eyewear"]):
+            category = "Sunglasses"
+        elif pre == "43" or any(w in text for w in ["sneaker", "trainer"]):
+            category = "Sneakers"
+        elif any(w in text for w in ["sandal", "slide", "flip flop"]):
+            category = "Sandals"
+        elif any(w in text for w in ["flat", "loafer", "moccasin", "ballet", "mule", "espadrille"]):
+            category = "Flats"
+        elif any(w in text for w in ["boot", "bootie"]):
+            category = "Boots"
+        elif any(w in text for w in ["wallet", "card case", "cardholder", "wristlet", "billfold", "coin purse"]):
+            category = "Wallets"
+        elif pre == "MF":
+            category = "Apparel"
+        else:
+            category = "Handbags"
+
+    return gender, category
 
 
 def extract_color_from_title(title: str, default_color: str = "") -> str:
@@ -91,7 +113,7 @@ def generate_size_guide_accordion(category: str, gender: str, sku: str) -> str:
     """Generate rich Shopify accordion HTML with size guide table (ADR 0006)."""
     cat_lower = category.lower()
     
-    if "shoe" in cat_lower or "sneaker" in cat_lower or "flat" in cat_lower or "sandal" in cat_lower:
+    if "shoe" in cat_lower or "sneaker" in cat_lower or "flat" in cat_lower or "sandal" in cat_lower or "boot" in cat_lower:
         is_women = "women" in gender.lower()
         sizes = WOMEN_SHOE_SIZES if is_women else MEN_SHOE_SIZES
         gender_title = "Women's" if is_women else "Men's"
@@ -157,7 +179,7 @@ def build_variants(
     """Build canonical variants and options array for Shopify compatibility."""
     cat_lower = category.lower()
     
-    if "shoe" in cat_lower or "sneaker" in cat_lower or "flat" in cat_lower or "sandal" in cat_lower:
+    if "shoe" in cat_lower or "sneaker" in cat_lower or "flat" in cat_lower or "sandal" in cat_lower or "boot" in cat_lower:
         is_women = "women" in gender.lower()
         size_chart = WOMEN_SHOE_SIZES if is_women else MEN_SHOE_SIZES
         
@@ -250,10 +272,9 @@ def normalize_canonical_product(
     title = clean_title(raw_item.get("title", ""))
     handle = raw_item.get("handle") or title.lower().replace(" ", "-")
     
-    # Resolve accurate category from title/handle keywords
+    # Resolve accurate gender and category deterministically
     raw_cat = raw_item.get("category", "Handbags")
-    category = resolve_category(title, handle, raw_cat)
-    gender = raw_item.get("gender", "Women")
+    gender, category = resolve_gender_and_category(sku, title, handle, raw_cat)
     source_price_usd = float(raw_item.get("source_price_usd", 0.0))
     url = raw_item.get("url", "")
     
