@@ -85,18 +85,32 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
   const isSoldOut = product.availability !== 'in_stock';
   const specs = product.specifications || {};
 
-  const isShoe = product.group_display?.toLowerCase() === 'shoes' || product.source_store?.toLowerCase() === 'nordstrom';
+  const grp = product.group_display?.toLowerCase() || '';
+  const pt = product.product_type?.toLowerCase() || '';
+  const store = product.source_store?.toLowerCase() || '';
+
+  const isShoe = 
+    store === 'nordstrom' || 
+    grp === 'shoes' || 
+    grp.includes('shoe') || 
+    grp.includes('sneaker') || 
+    grp.includes('sandal') || 
+    grp.includes('flat') || 
+    grp.includes('boot') ||
+    ['shoes', 'sneakers', 'sandals', 'flats', 'boots'].includes(pt);
+
+  const isBelt = grp.includes('belt') || pt === 'belts';
 
   const dimensions = specs['Bag Dimensions'] || specs['Dimension'] || specs['Dimensions'] || 'N/A';
-  const handleDrop = specs['Handle Drop'] || 'N/A';
+  const handleDrop = specs['Handle Drop'] || specs['HandleDrop'] || 'N/A';
   const strapDrop = specs['Shoulder Strap Drop'] || 'N/A';
   const hardware = specs['Hardware'] || specs['Hardware Finish'] || 'N/A';
   const lining = specs['Lining Material'] || specs['Lining'] || 'N/A';
   const capacity = specs['Capacity'] || 'N/A';
   const carryingStyle = specs['Carrying Style'] || specs['Carrying Method'] || product.subgroup_display;
 
-  // Shoe specific specs
-  const gender = specs['Gender'] || 'Unisex';
+  // Shoe / Belt specific specs
+  const gender = product.gender || specs['Gender'] || 'Unisex';
   const midsoleDrop = specs['Midsole Drop'] || '8mm';
   const cushioning = specs['Cushioning'] || 'CloudTec cushioning';
   const shoeMaterial = product.material || specs['Material'] || 'Textile and synthetic upper';
@@ -228,7 +242,13 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
           <div className="space-y-3">
             <div className="flex items-center gap-2 text-sm font-bold text-zinc-200">
               <Ruler className="w-4 h-4 text-amber-400" />
-              <span>{isShoe ? `Size & Conversion Matrix (${gender})` : 'Size & Measurement Guide'}</span>
+              <span>
+                {isShoe 
+                  ? `Footwear Size & Conversion Matrix (${gender})` 
+                  : isBelt 
+                  ? `Belt Size & Measurement Guide (${gender})` 
+                  : 'Size & Measurement Guide'}
+              </span>
             </div>
 
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 overflow-hidden">
@@ -237,31 +257,94 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                   <table className="w-full text-xs text-left">
                     <thead className="bg-zinc-800/80 text-zinc-400 font-semibold sticky top-0">
                       <tr>
-                        <th className="px-2.5 py-2">US Men</th>
-                        <th className="px-2.5 py-2">US Wmn</th>
-                        <th className="px-2.5 py-2">UK</th>
-                        <th className="px-2.5 py-2">EUR</th>
-                        <th className="px-2.5 py-2">CM</th>
-                        <th className="px-2.5 py-2">Price</th>
-                        <th className="px-2.5 py-2 text-right">Status</th>
+                        <th className="px-3 py-2">US Size</th>
+                        <th className="px-3 py-2">UK Size</th>
+                        <th className="px-3 py-2">EU Size</th>
+                        <th className="px-3 py-2">Color / Variant</th>
+                        <th className="px-3 py-2">Price</th>
+                        <th className="px-3 py-2 text-right">Status</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-zinc-800/60 font-mono">
-                      {product.variants.map((v, i) => {
-                        const usOpt = v.option_values?.find(o => o.option_name.includes('US'))?.name || v.title.split('/')[0]?.trim() || '';
-                        const ukOpt = v.option_values?.find(o => o.option_name.includes('UK'))?.name || v.title.split('/')[1]?.split('-')[0]?.trim() || '';
-                        const conv = deriveShoeSize(usOpt, ukOpt, gender);
+                      {product.variants.map((v: any, i: number) => {
+                        let us = v.size_us || '';
+                        let uk = v.size_uk || '';
+                        let eu = v.size_eu || '';
+                        let color = '';
+
+                        if (v.title) {
+                          const m = v.title.match(/US\s*([\d.]+)(?:\s*\/\s*UK\s*([\d.]+))?(?:\s*-\s*(.*))?/i);
+                          if (m) {
+                            us = us || m[1];
+                            uk = uk || m[2];
+                            color = color || m[3];
+                          } else {
+                            const conv = deriveShoeSize(v.title, '', gender);
+                            us = us || (gender.toLowerCase().includes('women') ? conv.usWomen : conv.usMen);
+                            uk = uk || conv.uk;
+                            eu = eu || conv.eu;
+                          }
+                          if (!color && v.title.includes(' - ')) {
+                            color = v.title.split(' - ').pop() || '';
+                          }
+                        }
 
                         return (
                           <tr key={i} className="hover:bg-zinc-800/30">
-                            <td className="px-2.5 py-2 font-semibold text-white">{conv.usMen}</td>
-                            <td className="px-2.5 py-2 font-semibold text-amber-200">{conv.usWomen}</td>
-                            <td className="px-2.5 py-2 text-amber-400 font-bold">{conv.uk}</td>
-                            <td className="px-2.5 py-2 text-zinc-300">{conv.eu}</td>
-                            <td className="px-2.5 py-2 text-cyan-300">{conv.cm}</td>
-                            <td className="px-2.5 py-2 text-zinc-300 whitespace-nowrap">₹{parseFloat(v.price).toLocaleString('en-IN')}</td>
-                            <td className="px-2.5 py-2 text-right whitespace-nowrap">
-                              <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${v.in_stock ? 'bg-emerald-500/20 text-emerald-300' : 'bg-rose-500/20 text-rose-300'}`}>
+                            <td className="px-3 py-2 font-bold text-white">{us ? `US ${us}` : '-'}</td>
+                            <td className="px-3 py-2 font-semibold text-amber-400">{uk ? `UK ${uk}` : '-'}</td>
+                            <td className="px-3 py-2 text-zinc-300">{eu ? `EU ${eu}` : '-'}</td>
+                            <td className="px-3 py-2 text-zinc-400 font-sans truncate max-w-[120px]">{color || 'Standard'}</td>
+                            <td className="px-3 py-2 text-zinc-200 whitespace-nowrap">₹{parseFloat(v.price || '0').toLocaleString('en-IN')}</td>
+                            <td className="px-3 py-2 text-right whitespace-nowrap">
+                              <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${v.in_stock ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' : 'bg-rose-500/20 text-rose-300 border border-rose-500/30'}`}>
+                                {v.in_stock ? 'In Stock' : 'Sold Out'}
+                              </span>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              ) : isBelt ? (
+                <div className="max-h-64 overflow-y-auto">
+                  <table className="w-full text-xs text-left">
+                    <thead className="bg-zinc-800/80 text-zinc-400 font-semibold sticky top-0">
+                      <tr>
+                        <th className="px-3 py-2">Size</th>
+                        <th className="px-3 py-2">Waist Measurement</th>
+                        <th className="px-3 py-2">Color</th>
+                        <th className="px-3 py-2">Price</th>
+                        <th className="px-3 py-2 text-right">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-zinc-800/60 font-mono">
+                      {product.variants.map((v: any, i: number) => {
+                        const title = v.title || '';
+                        let size = v.size || '';
+                        let waist = '';
+                        let color = '';
+                        const match = title.match(/^([SMLX]+)\s*(?:\(([^)]+)\))?(?:\s*-\s*(.*))?/i);
+                        if (match) {
+                          size = size || match[1];
+                          waist = match[2] || '';
+                          color = match[3] || '';
+                        }
+                        if (!waist) {
+                          if (size === 'S') waist = '32"';
+                          else if (size === 'M') waist = '34"';
+                          else if (size === 'L') waist = '36"';
+                          else if (size === 'XL') waist = '38"';
+                        }
+                        return (
+                          <tr key={i} className="hover:bg-zinc-800/30">
+                            <td className="px-3 py-2 font-bold text-white">{size || title}</td>
+                            <td className="px-3 py-2 text-amber-300 font-medium">{waist ? `Fits waist ${waist}` : '-'}</td>
+                            <td className="px-3 py-2 text-zinc-400 font-sans">{color || 'Standard'}</td>
+                            <td className="px-3 py-2 text-zinc-200 whitespace-nowrap">₹{parseFloat(v.price || '0').toLocaleString('en-IN')}</td>
+                            <td className="px-3 py-2 text-right whitespace-nowrap">
+                              <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${v.in_stock ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' : 'bg-rose-500/20 text-rose-300 border border-rose-500/30'}`}>
                                 {v.in_stock ? 'In Stock' : 'Sold Out'}
                               </span>
                             </td>
@@ -275,7 +358,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                 <table className="w-full text-xs text-left">
                   <tbody>
                     <tr className="border-b border-zinc-800/60">
-                      <td className="px-4 py-2.5 font-semibold text-zinc-400 w-2/5">Bag Dimensions</td>
+                      <td className="px-4 py-2.5 font-semibold text-zinc-400 w-2/5">Dimensions</td>
                       <td className="px-4 py-2.5 font-mono text-zinc-100">{dimensions}</td>
                     </tr>
                     <tr className="border-b border-zinc-800/60">
@@ -306,20 +389,37 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                   <span className="text-zinc-200 font-medium">{gender}</span>
                 </div>
                 <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
-                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Subgroup</span>
-                  <span className="text-zinc-200 font-medium">{product.subgroup_display}</span>
-                </div>
-                <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
-                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Midsole Drop</span>
-                  <span className="text-zinc-200 font-medium">{midsoleDrop}</span>
-                </div>
-                <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
-                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Cushioning</span>
-                  <span className="text-zinc-200 font-medium">{cushioning}</span>
+                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Category / Silhouette</span>
+                  <span className="text-zinc-200 font-medium">{product.subgroup_display || product.group_display}</span>
                 </div>
                 <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 col-span-2">
                   <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Material</span>
-                  <span className="text-zinc-200 font-medium">{shoeMaterial}</span>
+                  <span className="text-zinc-200 font-medium">{product.material || shoeMaterial}</span>
+                </div>
+                {specs['DetailsBullets'] && Array.isArray(specs['DetailsBullets']) && (specs['DetailsBullets'] as any).length > 0 && (
+                  <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 col-span-2">
+                    <span className="text-zinc-500 block text-[10px] uppercase font-semibold mb-1">Highlights</span>
+                    <ul className="list-disc pl-4 space-y-0.5 text-zinc-300">
+                      {(specs['DetailsBullets'] as any).slice(0, 4).map((b: string, idx: number) => (
+                        <li key={idx}>{b}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            ) : isBelt ? (
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Gender</span>
+                  <span className="text-zinc-200 font-medium">{gender}</span>
+                </div>
+                <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Style</span>
+                  <span className="text-zinc-200 font-medium">{product.subgroup_display}</span>
+                </div>
+                <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 col-span-2">
+                  <span className="text-zinc-500 block text-[10px] uppercase font-semibold">Material</span>
+                  <span className="text-zinc-200 font-medium">{product.material || '100% Leather'}</span>
                 </div>
               </div>
             ) : (
@@ -347,6 +447,20 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
               </div>
             )}
           </div>
+
+          {/* Official Retailer Description & Size Guide Accordion */}
+          {product.descriptionHtml && (
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-sm font-bold text-zinc-200">
+                <Info className="w-4 h-4 text-amber-400" />
+                <span>Retailer Description & Specifications</span>
+              </div>
+              <div 
+                className="p-4 rounded-2xl border border-zinc-800 bg-zinc-900/40 text-xs text-zinc-300 leading-relaxed max-h-60 overflow-y-auto [&_.size-guide-accordion]:border-zinc-800 [&_.size-guide-accordion]:bg-zinc-900/70 [&_.size-guide-accordion_table]:border-zinc-700 [&_.size-guide-accordion_td]:border-zinc-800 [&_.size-guide-accordion_th]:border-zinc-800 [&_.size-guide-accordion_th]:bg-zinc-800"
+                dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
+              />
+            </div>
+          )}
 
           {/* Supplier Link Action */}
           <div className="pt-2">

@@ -14,7 +14,21 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
     : 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80';
 
   const isSoldOut = product.availability !== 'in_stock';
-  const isShoe = product.group_display?.toLowerCase() === 'shoes' || product.source_store?.toLowerCase() === 'nordstrom';
+  const grp = product.group_display?.toLowerCase() || '';
+  const pt = product.product_type?.toLowerCase() || '';
+  const store = product.source_store?.toLowerCase() || '';
+
+  const isShoe = 
+    store === 'nordstrom' || 
+    grp === 'shoes' || 
+    grp.includes('shoe') || 
+    grp.includes('sneaker') || 
+    grp.includes('sandal') || 
+    grp.includes('flat') || 
+    grp.includes('boot') ||
+    ['shoes', 'sneakers', 'sandals', 'flats', 'boots'].includes(pt);
+
+  const isBelt = grp.includes('belt') || pt === 'belts';
 
   // For shoes, extract clean color name from variant option or fallback
   const shoeColor = product.product_options?.find(o => o.name === 'Color')?.values[0]?.name;
@@ -26,11 +40,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
         : null
   );
 
-  const rawDims = product.specifications?.['Bag Dimensions'] || product.specifications?.['Dimension'] || '';
+  const rawDims = product.specifications?.['Bag Dimensions'] || product.specifications?.['Dimension'] || product.specifications?.['Dimensions'] || '';
   const shortDims = rawDims ? rawDims.split('(')[0].trim() : '';
 
-  // Shoe specific indicators
-  const gender = product.specifications?.['Gender'] || '';
+  // Indicators
+  const gender = product.gender || product.specifications?.['Gender'] || '';
   const variantCount = product.variants?.length || 0;
 
   return (
@@ -142,6 +156,24 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
               {variantCount > 0 && (
                 <span className="px-2 py-0.5 rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/40 font-mono">
                   👟 {variantCount} Sizes
+                </span>
+              )}
+            </>
+          ) : isBelt ? (
+            <>
+              {gender && (
+                <span className="px-2 py-0.5 rounded-md bg-sky-500/10 text-sky-300 border border-sky-500/20 font-medium">
+                  {gender}
+                </span>
+              )}
+              {variantCount > 0 && (
+                <span className="px-2 py-0.5 rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/40 font-mono">
+                  📏 {variantCount} Sizes (S-XL)
+                </span>
+              )}
+              {product.material && (
+                <span className="px-2 py-0.5 rounded-md bg-zinc-800/80 text-zinc-400 border border-zinc-700/40 truncate max-w-[110px]">
+                  {product.material}
                 </span>
               )}
             </>
