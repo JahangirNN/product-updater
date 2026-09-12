@@ -16,9 +16,41 @@ def create_michaelkors_browser(headless: bool = True):
 def solve_and_extract_pdp(page, url: str, target_handle: str = "") -> Dict[str, Any]:
     """
     Navigate to a Michael Kors PDP via Camoufox, handle Akamai, and extract price & availability.
+    Prefers native SFCC variation AJAX when SKU is detectable, otherwise anchors price under product header.
     """
     t_start = time.perf_counter()
     try:
+        # Check if SKU can be extracted to use SFCC AJAX directly
+        m_sku = re.search(r'/([A-Z0-9\-]+)\.html', url)
+        if m_sku:
+            sku = m_sku.group(1)
+            sfcc_url = f"https://www.michaelkors.com/on/demandware.store/Sites-mk_us-Site/en_US/Product-Variation?pid={sku}&format=ajax"
+            page.goto(sfcc_url, wait_until="domcontentloaded", timeout=15000)
+            text = page.evaluate("() => document.body.innerText")
+            if "product" in text:
+                import json
+                d = json.loads(text)
+                p = d.get("product", {})
+                price_obj = p.get("price") or {}
+                sales_obj = price_obj.get("sales") if isinstance(price_obj, dict) else None
+                list_obj = price_obj.get("list") if isinstance(price_obj, dict) else None
+                p_usd = 0.0
+                if isinstance(sales_obj, dict) and sales_obj.get("value"):
+                    p_usd = float(sales_obj["value"])
+                elif isinstance(list_obj, dict) and list_obj.get("value"):
+                    p_usd = float(list_obj["value"])
+
+                is_avail = bool(p.get("available", False))
+                is_ready = bool(p.get("readyToOrder", False))
+                avail_status = "in_stock" if (is_avail and is_ready) else ("in_stock" if is_avail else "out_of_stock")
+
+                return {
+                    "status": "success",
+                    "price_usd": p_usd,
+                    "availability": avail_status,
+                    "elapsed_ms": round((time.perf_counter() - t_start) * 1000, 2)
+                }
+
         page.goto(url, wait_until="domcontentloaded", timeout=30000)
         page.wait_for_timeout(2000)
         
@@ -32,15 +64,18 @@ def solve_and_extract_pdp(page, url: str, target_handle: str = "") -> Dict[str, 
                 "error": "Akamai Access Denied"
             }
             
-        # Price extraction: look for data-price or $XX
+        # Price extraction: look for data-price or price under heading
         price_usd = 0.0
         p_match = re.search(r'data-price=\"([0-9\.]+)\"', content)
         if p_match:
             price_usd = float(p_match.group(1))
         else:
-            matches = re.findall(r'\$(\d+(?:\.\d{2})?)', content)
+            # Anchor search under product title or maincontent to avoid header promo carousel trap
+            mc_idx = content.find('maincontent')
+            search_scope = content[mc_idx:] if mc_idx != -1 else content
+            matches = re.findall(r'\$(\d+(?:\.\d{2})?)', search_scope[:5000])
             if matches:
-                price_usd = float(matches[-1])
+                price_usd = float(matches[0])
                 
         # Stock extraction
         avail = "in_stock"
@@ -61,3 +96,4 @@ def solve_and_extract_pdp(page, url: str, target_handle: str = "") -> Dict[str, 
             "elapsed_ms": round((time.perf_counter() - t_start) * 1000, 2),
             "error": str(err)
         }
+

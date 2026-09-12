@@ -44,9 +44,8 @@ def publish_viewer(auto_push: bool = True):
         return False
     print("      Vite build complete: frontend/dist/ generated.")
 
-    # 3. Git status & stage
-    print("\n[3/4] Staging catalog data and frontend changes...")
-    run_cmd("git add frontend/ storage/db/ scripts/")
+    print("\n[3/4] Staging catalog data, store modules, and frontend changes...")
+    run_cmd("git add frontend/ storage/db/ scripts/ stores/ docs/ config/")
 
     commit_msg = f"chore(catalog): sync live product catalog [{count} items] ({time.strftime('%Y-%m-%d %H:%M')})"
     code, stdout, stderr = run_cmd(f'git commit -m "{commit_msg}"')

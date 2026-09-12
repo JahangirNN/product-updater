@@ -1,13 +1,22 @@
 """
 Store Delta Updater: Michael Kors (Handbags, Wallets, Shoes, Sunglasses, Belts)
-Polls price and stock availability for existing products during hourly sync sweeps.
-Pure functions only, zero classes (ADR 0002, ADR 0005, ADR 0010).
+Polls price, overall stock, and variant-level size stock availability during hourly sync sweeps.
+Uses Michael Kors' native SFCC Demandware AJAX API for sub-second, geo-independent polling,
+with Camoufox stealth browser as seamless fallback.
+Pure functions only, zero classes (ADR 0002, ADR 0005, ADR 0008, ADR 0010).
 """
 import time
 import random
 import re
+import json
 from typing import Any, Dict, List, Optional, Tuple
 import httpx
+
+try:
+    from curl_cffi import requests as cffi_requests
+    HAS_CURL_CFFI = True
+except ImportError:
+    HAS_CURL_CFFI = False
 
 from storage.network import create_http_client, DEFAULT_BROWSER_HEADERS
 from storage.rate_limiter import acquire_permit, trip_circuit_breaker, parse_retry_after
@@ -21,6 +30,94 @@ def extract_handle_from_url(url: str) -> str:
     return m.group(1) if m else "product"
 
 
+def is_variant_in_stock(variant: Dict[str, Any], selectable_sizes: List[str], all_size_values: List[str]) -> bool:
+    """
+    Determine if a variant is in stock based on selectable sizes from SFCC Demandware.
+    If no size variations exist on the product, variant stock is determined by overall availability.
+    """
+    if not all_size_values:
+        return True
+    if not selectable_sizes:
+        return False
+
+    v_sku = str(variant.get("sku", "")).strip().lower()
+    v_title = str(variant.get("title", "")).strip().lower()
+    size_opt = ""
+    for opt in variant.get("option_values", []):
+        if opt.get("option_name", "").lower() in ("size", "waist", "length"):
+            size_opt = str(opt.get("name", "")).strip().lower()
+            break
+
+    for s_size in selectable_sizes:
+        s_clean = str(s_size).strip().lower()
+        if not s_clean:
+            continue
+        # 1. Match word boundary in size_opt (e.g. 'US 6 / UK 4' -> '6')
+        if re.search(r'(?:\b|_)' + re.escape(s_clean) + r'(?:\b|_)', size_opt):
+            return True
+        # 2. Match SKU suffix: -6 or -6.5 or -s
+        if v_sku.endswith("-" + s_clean) or v_sku.endswith("_" + s_clean):
+            return True
+        # 3. Match in title (e.g. 'S (32")' -> '32' or 's')
+        if re.search(r'(?:\b|_)' + re.escape(s_clean) + r'(?:\b|_)', v_title):
+            return True
+
+    return False
+
+
+def fetch_sfcc_product_data(
+    sku: str,
+    color: str = "",
+    timeout: float = 10.0,
+    browser_page: Optional[Any] = None
+) -> Tuple[Optional[Dict[str, Any]], int, str]:
+    """
+    Query Michael Kors SFCC Demandware AJAX variation endpoint.
+    Forces en_US and Sites-mk_us-Site to eliminate geo-redirects and get clean JSON.
+    Returns (product_dict, http_status_code, error_message).
+    """
+    endpoint = f"https://www.michaelkors.com/on/demandware.store/Sites-mk_us-Site/en_US/Product-Variation?pid={sku}&format=ajax"
+    if color:
+        endpoint += f"&dwvar_{sku}_color={color}"
+
+    # 1. Try curl_cffi with chrome120 impersonation (fastest, ~350ms, zero Akamai block)
+    if HAS_CURL_CFFI:
+        try:
+            resp = cffi_requests.get(endpoint, impersonate="chrome120", timeout=timeout)
+            if resp.status_code == 200:
+                data = resp.json()
+                return data.get("product"), 200, ""
+            elif resp.status_code in (404, 500):
+                # SFCC returns 500 or 404 when product is delisted
+                return None, resp.status_code, "Product not found or delisted"
+            elif resp.status_code == 429:
+                return None, 429, "Rate limited"
+        except Exception as exc:
+            pass
+
+    # 2. Fallback to Camoufox browser page if available
+    if browser_page is not None:
+        try:
+            browser_page.goto(endpoint, wait_until="domcontentloaded", timeout=int(timeout * 1000))
+            text = browser_page.evaluate("() => document.body.innerText")
+            data = json.loads(text)
+            if "product" in data:
+                return data.get("product"), 200, ""
+        except Exception as exc:
+            pass
+
+    # 3. Standard HTTP client fallback
+    try:
+        with httpx.Client(timeout=timeout, headers=DEFAULT_HEADERS) as client:
+            resp = client.get(endpoint)
+            if resp.status_code == 200:
+                data = resp.json()
+                return data.get("product"), 200, ""
+            return None, resp.status_code, f"HTTP {resp.status_code}"
+    except Exception as exc:
+        return None, 0, str(exc)
+
+
 def check_price_and_stock(
     product: Dict[str, Any],
     client: Optional[httpx.Client] = None,
@@ -30,9 +127,9 @@ def check_price_and_stock(
     **kwargs
 ) -> Dict[str, Any]:
     """
-    Poll live price and stock status for an existing Michael Kors product.
-    Supports browser page or HTTP request, applies jittered backoff on 429,
-    trips the circuit breaker, and preserves state on 404 delisting.
+    Poll live price, overall stock, and variant-level size stock status for a Michael Kors product.
+    Queries native SFCC Demandware AJAX endpoint, maps variant stock matrices,
+    and preserves state on 404 delisting.
     """
     t_start = time.perf_counter()
     resolved_store = store_name or product.get("source_store") or "michaelkors"
@@ -41,6 +138,21 @@ def check_price_and_stock(
     sku = product.get("source_sku", "")
     old_source_price = float(product.get("source_price") or 0.0)
     old_availability = product.get("availability", "in_stock")
+    stored_variants = product.get("variants", [])
+
+    # Extract base SKU if not directly provided
+    if not sku:
+        m = re.search(r'/([A-Z0-9\-]+)\.html', url)
+        if m:
+            sku = m.group(1)
+        elif stored_variants:
+            sku = stored_variants[0].get("sku", "").split("-")[0]
+
+    # Extract color code from source_url if present
+    color = ""
+    m_col = re.search(r'dwvar_[A-Z0-9\-]+_color=([0-9A-Za-z]+)', url)
+    if m_col:
+        color = m_col.group(1)
 
     # 1. Acquire rate limiter permit
     if rate_limiter and callable(getattr(rate_limiter, "acquire_permit", None)):
@@ -51,143 +163,49 @@ def check_price_and_stock(
     else:
         acquire_permit(resolved_store)
 
-    # 2. Camoufox browser page mode
-    if browser_page is not None:
-        try:
-            browser_page.goto(url, wait_until="domcontentloaded", timeout=25000)
-            browser_page.wait_for_timeout(2000)
-            content = browser_page.content()
-            
-            if "Access Denied" in content:
-                elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
-                return {
-                    "status": "rate_limited",
-                    "handle": handle,
-                    "availability": old_availability,
-                    "old_availability": old_availability,
-                    "current_source_price": old_source_price,
-                    "old_source_price": old_source_price,
-                    "price_changed": False,
-                    "stock_changed": False,
-                    "elapsed_ms": elapsed_ms,
-                    "message": "Akamai challenge detected in Camoufox page"
-                }
-                
-            # Extract price and stock from page
-            curr_price = old_source_price
-            curr_avail = "in_stock"
-            
-            # Search for price
-            price_match = re.search(r'data-price=\"([0-9\.]+)\"', content)
-            if price_match:
-                curr_price = float(price_match.group(1))
-            else:
-                p_match = re.search(r'\$(\d+(?:\.\d{2})?)', content)
-                if p_match:
-                    curr_price = float(p_match.group(1))
-                    
-            if "out of stock" in content.lower() or "sold out" in content.lower():
-                curr_avail = "out_of_stock"
-                
-            elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
-            return {
-                "status": "success",
-                "handle": handle,
-                "availability": curr_avail,
-                "old_availability": old_availability,
-                "current_source_price": curr_price,
-                "old_source_price": old_source_price,
-                "price_changed": curr_price != old_source_price,
-                "stock_changed": curr_avail != old_availability,
-                "elapsed_ms": elapsed_ms,
-                "message": f"Polled live PDP ({curr_avail}, ${curr_price})"
-            }
-        except Exception as err:
-            elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
-            return {
-                "status": "error",
-                "handle": handle,
-                "availability": old_availability,
-                "old_availability": old_availability,
-                "current_source_price": old_source_price,
-                "old_source_price": old_source_price,
-                "price_changed": False,
-                "stock_changed": False,
-                "elapsed_ms": elapsed_ms,
-                "message": str(err)
-            }
+    # 2. Query SFCC Demandware variation data
+    p_data, status_code, err_msg = fetch_sfcc_product_data(
+        sku=sku,
+        color=color,
+        timeout=12.0,
+        browser_page=browser_page
+    )
 
-    # 3. HTTP Client Mode
-    managed_client = False
-    if client is None:
-        client = create_http_client(timeout=10.0)
-        managed_client = True
+    elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
 
-    try:
-        resp = client.get(url, headers=DEFAULT_HEADERS)
-        elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
-        
-        if resp.status_code == 404:
-            return {
-                "status": "not_found",
-                "handle": handle,
-                "availability": "out_of_stock",
-                "old_availability": old_availability,
-                "current_source_price": old_source_price,
-                "old_source_price": old_source_price,
-                "is_active": False,
-                "price_changed": False,
-                "stock_changed": old_availability != "out_of_stock",
-                "elapsed_ms": elapsed_ms,
-                "message": "Product delisted (HTTP 404)"
-            }
-        elif resp.status_code == 429:
-            wait_sec = parse_retry_after(resp.headers)
-            trip_circuit_breaker(resolved_store, wait_sec)
-            return {
-                "status": "rate_limited",
-                "handle": handle,
-                "availability": old_availability,
-                "old_availability": old_availability,
-                "current_source_price": old_source_price,
-                "old_source_price": old_source_price,
-                "price_changed": False,
-                "stock_changed": False,
-                "elapsed_ms": elapsed_ms,
-                "message": "HTTP 429 rate limit encountered"
-            }
-        elif resp.status_code != 200:
-            return {
-                "status": "error",
-                "handle": handle,
-                "availability": old_availability,
-                "old_availability": old_availability,
-                "current_source_price": old_source_price,
-                "old_source_price": old_source_price,
-                "price_changed": False,
-                "stock_changed": False,
-                "elapsed_ms": elapsed_ms,
-                "message": f"HTTP {resp.status_code}"
-            }
-            
-        # Parse 200 response
-        curr_price = old_source_price
-        curr_avail = old_availability
-        
+    # 3. Handle rate limits and errors
+    if status_code == 429:
+        trip_circuit_breaker(resolved_store, 30)
         return {
-            "status": "success",
+            "status": "rate_limited",
             "handle": handle,
-            "availability": curr_avail,
+            "availability": old_availability,
             "old_availability": old_availability,
-            "current_source_price": curr_price,
+            "current_source_price": old_source_price,
             "old_source_price": old_source_price,
             "price_changed": False,
             "stock_changed": False,
             "elapsed_ms": elapsed_ms,
-            "message": "Polled successfully"
+            "message": "HTTP 429 rate limit encountered"
         }
-    except Exception as err:
-        elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
+
+    if status_code == 404:
+        return {
+            "status": "not_found",
+            "handle": handle,
+            "availability": "out_of_stock",
+            "old_availability": old_availability,
+            "current_source_price": old_source_price,
+            "old_source_price": old_source_price,
+            "is_active": False,
+            "price_changed": False,
+            "stock_changed": old_availability != "out_of_stock",
+            "variants_delta": [{"sku": v.get("sku"), "in_stock": False} for v in stored_variants],
+            "elapsed_ms": elapsed_ms,
+            "message": "Product delisted (HTTP 404)"
+        }
+
+    if not p_data:
         return {
             "status": "error",
             "handle": handle,
@@ -198,11 +216,87 @@ def check_price_and_stock(
             "price_changed": False,
             "stock_changed": False,
             "elapsed_ms": elapsed_ms,
-            "message": str(err)
+            "message": f"SFCC query failed: {err_msg} (status {status_code})"
         }
-    finally:
-        if managed_client:
-            client.close()
+
+    # 4. Extract price
+    price_obj = p_data.get("price") or {}
+    curr_price = old_source_price
+    sales_obj = price_obj.get("sales") if isinstance(price_obj, dict) else None
+    list_obj = price_obj.get("list") if isinstance(price_obj, dict) else None
+
+    if isinstance(sales_obj, dict) and sales_obj.get("value") is not None and float(sales_obj["value"]) > 0:
+        curr_price = float(sales_obj["value"])
+    elif isinstance(list_obj, dict) and list_obj.get("value") is not None and float(list_obj["value"]) > 0:
+        curr_price = float(list_obj["value"])
+
+    compare_price = None
+    if isinstance(list_obj, dict) and list_obj.get("value") is not None and float(list_obj["value"]) > 0:
+        compare_price = float(list_obj["value"])
+
+    # 5. Extract overall availability
+    is_avail = bool(p_data.get("available", False))
+    is_ready = bool(p_data.get("readyToOrder", False))
+    curr_avail = "in_stock" if (is_avail and is_ready) else ("in_stock" if is_avail else "out_of_stock")
+
+    # 6. Extract size stock matrix from variationAttributes
+    selectable_sizes = []
+    all_sizes = []
+    for va in p_data.get("variationAttributes", []):
+        if va.get("displayName") in ("Size", "Waist", "Length"):
+            for v in va.get("values", []):
+                d_val = str(v.get("displayValue") or v.get("id") or "").strip()
+                all_sizes.append(d_val)
+                if v.get("selectable"):
+                    selectable_sizes.append(d_val)
+
+    # 7. Map variant-level stock
+    variants_delta = []
+    variant_stock_changed = False
+
+    for var in stored_variants:
+        v_sku = var.get("sku", "")
+        old_v_stock = var.get("in_stock", True)
+
+        if curr_avail == "out_of_stock":
+            new_v_stock = False
+        elif not all_sizes:
+            new_v_stock = True
+        else:
+            new_v_stock = is_variant_in_stock(var, selectable_sizes, all_sizes)
+
+        if new_v_stock != old_v_stock:
+            variant_stock_changed = True
+
+        variants_delta.append({
+            "sku": v_sku,
+            "in_stock": new_v_stock,
+            "source_price": curr_price
+        })
+
+    # If all variants are out of stock, overall product is out of stock
+    if variants_delta and not any(vd["in_stock"] for vd in variants_delta):
+        curr_avail = "out_of_stock"
+
+    price_changed = (curr_price != old_source_price)
+    stock_changed = (curr_avail != old_availability) or variant_stock_changed
+
+    return {
+        "status": "success",
+        "handle": handle,
+        "availability": curr_avail,
+        "old_availability": old_availability,
+        "current_source_price": curr_price,
+        "old_source_price": old_source_price,
+        "current_compare_price": compare_price,
+        "price_changed": price_changed,
+        "stock_changed": stock_changed,
+        "selectable_sizes": selectable_sizes,
+        "all_sizes": all_sizes,
+        "variants_delta": variants_delta,
+        "elapsed_ms": elapsed_ms,
+        "message": f"Polled SFCC AJAX: ${curr_price}, {curr_avail}, {len(selectable_sizes)}/{len(all_sizes)} sizes in stock"
+    }
 
 
 def apply_delta_to_product(
@@ -211,44 +305,66 @@ def apply_delta_to_product(
     forex_rate: float
 ) -> Tuple[Dict[str, Any], bool]:
     """
-    Apply delta check results to a canonical product dict.
+    Pure function to apply delta check results to a canonical product dict.
+    Updates price, INR recalculation, availability, and per-variant size stock states.
+    Sets shopify_sync_pending = True if changes occurred.
     Strictly enforces selective timestamping (ADR 0008, ADR 0010):
-    ONLY stamp last_verified_at if status in ("success", "not_found").
+    ONLY stamp last_verified_at if status in ('success', 'not_found').
+    Returns (updated_product, has_changed).
     """
-    has_changed = False
     status = delta_result.get("status")
-    
-    # 1. Update availability
-    new_avail = delta_result.get("availability")
-    if new_avail and new_avail != product.get("availability"):
-        product["availability"] = new_avail
-        has_changed = True
-        
-    # 2. Update price
-    new_source_price = delta_result.get("current_source_price")
-    if new_source_price is not None and float(new_source_price) > 0:
-        if float(new_source_price) != float(product.get("source_price") or 0.0):
-            product["source_price"] = float(new_source_price)
-            product["current_price"] = int(round(float(new_source_price) * forex_rate))
-            has_changed = True
-            
-            # Propagate to variants
-            for v in product.get("variants", []):
-                v["source_price"] = float(new_source_price)
-                v["price"] = f"{product['current_price']:.2f}"
-                
-    # 3. Delisting handling
+    if status not in ("success", "not_found"):
+        # Transient error or rate limited: never mutate product and never stamp timestamp
+        return product, False
+
+    now_iso = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    product["last_verified_at"] = now_iso
+
+    price_changed = bool(delta_result.get("price_changed", False))
+    stock_changed = bool(delta_result.get("stock_changed", False))
+    has_changed = price_changed or stock_changed
+
+    if not has_changed:
+        return product, False
+
+    # 1. Apply price changes
+    new_source_price = delta_result.get("current_source_price", product.get("source_price", 0.0))
+    if new_source_price and float(new_source_price) > 0:
+        product["source_price"] = float(new_source_price)
+        product["current_price"] = int(round(float(new_source_price) * forex_rate))
+
+    new_compare_price = delta_result.get("current_compare_price")
+    if new_compare_price is not None and float(new_compare_price) > 0:
+        product["source_compare_at_price"] = float(new_compare_price)
+        product["compare_at_price"] = int(round(float(new_compare_price) * forex_rate))
+
+    # 2. Apply availability changes
+    product["availability"] = delta_result.get("availability", product.get("availability"))
+    product["is_active"] = (product["availability"] == "in_stock")
+
+    # 3. Update variant-level states
+    var_map = {vd["sku"]: vd for vd in delta_result.get("variants_delta", []) if vd.get("sku")}
+    if product.get("variants"):
+        for var in product["variants"]:
+            v_sku = var.get("sku")
+            if v_sku in var_map:
+                var["in_stock"] = var_map[v_sku]["in_stock"]
+            elif product["availability"] == "out_of_stock":
+                var["in_stock"] = False
+
+            var["source_price"] = product["source_price"]
+            var["price"] = f"{product['current_price']:.2f}"
+            if product.get("compare_at_price"):
+                var["compare_at_price"] = f"{product['compare_at_price']:.2f}"
+
+    # 4. Delisting handling
     if status == "not_found":
         product["is_active"] = False
         product["availability"] = "out_of_stock"
         for v in product.get("variants", []):
             v["in_stock"] = False
-        has_changed = True
-        
-    # 4. SELECTIVE TIMESTAMPING INVARIANT
-    if status in ("success", "not_found"):
-        now_iso = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-        product["last_verified_at"] = now_iso
-        has_changed = True
-        
-    return product, has_changed
+
+    product["shopify_sync_pending"] = True
+    product["updated_at"] = now_iso
+
+    return product, True

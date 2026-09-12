@@ -17,13 +17,84 @@ if sys.stdout.encoding != 'utf-8':
 def classify_subgroup(product: Dict[str, Any]) -> str:
     """
     Classify product into Level 3 Subgroup based on title and specifications.
-    Supports both JW PEI Handbags and Nordstrom On Footwear.
+    Supports JW PEI, Nordstrom On, Michael Kors, and Coach.
     """
     title_lower = product.get("title", "").lower()
     handle_lower = product.get("handle", "").lower()
     specs = product.get("specifications", {})
     source_store = product.get("source_store", "").lower()
     groups = [g.lower() for g in product.get("groups", [])]
+    text = f"{title_lower} {handle_lower}"
+
+    # Coach multi-category taxonomy
+    if source_store == "coach":
+        pt = product.get("product_type", "")
+        gender = product.get("gender", "Women")
+
+        # Footwear
+        if pt == "Shoes & Footwear":
+            if any(w in text for w in ["sneaker", "runner", "trainer"]):
+                return "Sneakers & Trainers"
+            elif any(w in text for w in ["sandal", "slide", "flip flop", "espadrille"]):
+                return "Sandals & Slides"
+            elif any(w in text for w in ["boot", "bootie", "chukka"]):
+                return "Boots & Booties"
+            elif any(w in text for w in ["heel", "pump", "slingback", "wedge"]):
+                return "Heels & Pumps"
+            elif any(w in text for w in ["loafer", "mule", "mary jane", "ballet", "flat", "clog", "derby", "driver", "slipper"]):
+                return "Loafers, Drivers & Flats"
+            return "Designer Footwear"
+
+        # Wallets & Small Goods
+        if pt in ("Wallets & Small Goods", "Wristlets"):
+            if "wristlet" in text:
+                return "Wristlets"
+            elif any(w in text for w in ["card case", "cardholder", "card id", "id case", "id card", "id wallet", "id lanyard", "key case", "lanyard", "holder wallet"]):
+                return "Card Cases & ID Holders"
+            elif any(w in text for w in ["3-in-1", "billfold", "bifold"]):
+                return "Billfolds & Passcases"
+            elif any(w in text for w in ["corner zip", "double zip", "zip around", "zip-around", "continental", "long wallet", "accordion"]):
+                return "Zip & Continental Wallets"
+            elif any(w in text for w in ["snap", "tri-fold", "trifold", "medium wallet", "small wallet", "compact", "flap"]):
+                return "Compact & Trifold Wallets"
+            if not any(w in text for w in ["bag", "plaza", "crossbody", "shoulder"]):
+                return "Wallets & Small Leather Goods"
+
+        # Backpacks
+        if pt == "Backpacks" or "backpack" in text:
+            return "Backpacks"
+
+        # Men's Work & Messenger Bags
+        if any(w in text for w in ["brief", "workbag", "portfolio", "messenger", "flight bag"]):
+            return "Briefcases & Messengers"
+
+        # Belt / Sling Bags
+        if any(w in text for w in ["sling", "pack", "belt bag"]):
+            return "Belt & Sling Bags"
+
+        # Totes & Carryalls
+        if any(w in text for w in ["tote", "carryall", "shopper", "cabu"]):
+            return "Totes & Carryalls"
+
+        # Satchels & Top Handles / Barrel / Bucket / Frame
+        if any(w in text for w in ["satchel", "top handle", "top-handle", "barrel", "rowan", "bucket", "drawstring", "kisslock"]):
+            return "Satchels & Top Handles"
+
+        # Crossbody & Pouches
+        if any(w in text for w in ["crossbody", "camera bag"]):
+            return "Crossbody Bags"
+        if any(w in text for w in ["nolita", "pouch", "clutch"]):
+            return "Pouches & Clutches"
+
+        # Shoulder Bags
+        if any(w in text for w in ["shoulder", "hobo", "swinger", "teri", "plaza", "payton"]):
+            return "Shoulder Bags"
+
+        # Duffle & Travel
+        if any(w in text for w in ["duffle", "travel"]):
+            return "Duffles & Travel Bags"
+
+        return "Designer Handbags"
 
     # Michael Kors multi-category taxonomy with strict Men & Women separation
     if source_store == "michaelkors":
@@ -228,8 +299,33 @@ def export_catalog(
                             group_display = "Women's Boots"
                         elif pt == "Sunglasses":
                             group_display = "Women's Sunglasses"
+                elif s_store == "coach":
+                    store_display = "COACH"
+                    gender = prod.get("gender", "Women")
+                    pt = prod.get("product_type", "Handbags")
+                    t_chk = (prod.get("title", "") + " " + prod.get("handle", "")).lower()
+                    if gender == "Men":
+                        if pt == "Shoes & Footwear":
+                            group_display = "Men's Shoes"
+                        elif pt == "Wallets & Small Goods":
+                            group_display = "Men's Wallets"
+                        elif pt == "Backpacks":
+                            group_display = "Men's Backpacks"
                         else:
-                            group_display = f"Women's {pt}"
+                            group_display = "Men's Bags"
+                    else:
+                        if pt == "Shoes & Footwear":
+                            group_display = "Women's Shoes"
+                        elif pt == "Wristlets" and "wristlet" in t_chk:
+                            group_display = "Women's Wristlets"
+                        elif pt in ("Wallets & Small Goods", "Wristlets") and "wristlet" not in t_chk and any(w in t_chk for w in ["bag", "plaza"]):
+                            group_display = "Women's Handbags"
+                        elif pt == "Wallets & Small Goods":
+                            group_display = "Women's Wallets"
+                        elif pt == "Backpacks":
+                            group_display = "Women's Backpacks"
+                        else:
+                            group_display = "Women's Handbags"
                 else:
                     store_display = prod.get("vendor", "Other")
                     group_display = prod.get("product_type", "Handbags")

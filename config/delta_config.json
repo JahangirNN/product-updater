@@ -25,12 +25,21 @@
     },
     "michaelkors": {
       "check_interval_minutes": 60,
-      "engine": "camoufox",
-      "max_workers": 1,
-      "requests_per_second": 0.5,
-      "delay_seconds": 1.5,
-      "timeout_seconds": 30.0,
-      "endpoint_pattern": "https://www.michaelkors.com/{handle}/{id}.html"
+      "engine": "http",
+      "max_workers": 2,
+      "requests_per_second": 2.0,
+      "delay_seconds": 0.5,
+      "timeout_seconds": 10.0,
+      "endpoint_pattern": "https://www.michaelkors.com/on/demandware.store/Sites-mk_us-Site/en_US/Product-Variation?pid={id}&format=ajax"
+    },
+    "coach": {
+      "check_interval_minutes": 60,
+      "engine": "http",
+      "max_workers": 2,
+      "requests_per_second": 2.0,
+      "delay_seconds": 0.5,
+      "timeout_seconds": 12.0,
+      "endpoint_pattern": "https://www.coach.com/products/{handle}/{id}.html"
     }
   },
   "shopify_sync": {

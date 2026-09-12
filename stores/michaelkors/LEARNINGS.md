@@ -58,18 +58,19 @@
 ---
 
 ## 4. Delta Updater Fast Paths (Price & Stock)
-*How we check price and stock in milliseconds / zero external cost:*
+*How we check price, overall availability, and per-variant size stock in milliseconds / zero external cost:*
 
-- **Engine**: Local Camoufox stealth browser (`stores/michaelkors/camoufox_solver.py`).
-  - Demandware employs Akamai / Cloudflare bot mitigation that blocks standard headless HTTP requests.
-  - Camoufox runs Firefox C++ stealth rendering with US geolocation coordinates (`latitude: 40.7128, longitude: -74.0060`, timezone: `America/New_York`).
-  - Typical PDP execution latency: ~14.5 seconds.
-- **DOM Selectors**:
-  - Price: `.price-sales, .sales .value, [data-qa="product-price"], .price, .product-price`
-  - Stock / Availability:
-    - In Stock: `button[data-qa="add-to-bag"]:not([disabled])`, `button.add-to-cart:not([disabled])`
-    - Sold Out: `button[disabled]`, text matching `"Sold Out"`, `"Out of Stock"`
-  - Delisted / 404: Page title containing `"Page Not Found"`, `"Product Unavailable"`, or redirection to 404 error page.
+- **Primary Fast-Path**: Native SFCC Demandware AJAX Variation API (`stores/michaelkors/delta.py`).
+  - **Endpoint**: `https://www.michaelkors.com/on/demandware.store/Sites-mk_us-Site/en_US/Product-Variation?pid={sku}&format=ajax`
+  - **TLS Fingerprint**: `curl_cffi` with `impersonate="chrome120"` completely bypasses Akamai Bot Manager while providing sub-second (~400ms) execution.
+  - **Zero Geolocation Trap**: Explicit `Sites-mk_us-Site/en_US` query parameter forces US storefront response, completely eliminating the international 302 redirect to `michaelkors.global/in/en/`.
+  - **Per-Variant Size Stock Resolution**:
+    - Inspects `variationAttributes` for `displayName == "Size"` (or `"Waist"`, `"Length"`).
+    - Checks `selectable: True` (in stock) vs `selectable: False` (sold out) for each size value (e.g. `5`, `6`, `8.5`, `34`).
+    - Maps each variant by option values, SKU suffix (`-6`), or title, updating `var["in_stock"]` dynamically.
+- **Fallback Engine**: Local Camoufox stealth browser (`stores/michaelkors/camoufox_solver.py`).
+  - Runs Firefox C++ stealth rendering if HTTP client fails.
+  - Uses the same SFCC variation endpoint or anchors PDP price searches strictly under product headings `# {Title}` to avoid header promotional carousels.
 
 ---
 
