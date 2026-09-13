@@ -20,6 +20,7 @@ sys.path.insert(0, os.getcwd())
 from storage.network import get_browser_headers, create_http_client
 from storage.forex import get_usd_to_inr_rate
 from storage.rate_limiter import acquire_permit
+from storage.db import generate_product_id
 import stores.coach.inflow as coach_inflow
 
 OUTPUT_DIR = "storage/db/coach/products"
@@ -168,9 +169,10 @@ def fetch_and_process_product(
     raw_data = parse_pdp_html(resp.text, url, group_name, gender)
     canonical = coach_inflow.parse_product_payload(raw_data, forex_rate, group_name)
 
-    # Deduplication Primary Key: SHA256("coach::" + sku)[:16]
+    # Deduplication Primary Key: deterministic SHA256("coach::" + sku.lower())[:16]
     clean_sku = canonical["source_sku"].strip()
-    product_id = hashlib.sha256(f"coach::{clean_sku}".encode("utf-8")).hexdigest()[:16]
+    product_id = generate_product_id("coach", clean_sku)
+    canonical["id"] = product_id
     canonical["product_id"] = product_id
     canonical["store"] = "coach"
 

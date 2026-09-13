@@ -62,7 +62,7 @@ def check_price_and_stock(
             if client:
                 resp = client.get(source_url, headers=DEFAULT_HEADERS, follow_redirects=True)
             else:
-                with create_http_client(headers=DEFAULT_HEADERS) as c:
+                with create_http_client(custom_headers=DEFAULT_HEADERS) as c:
                     resp = c.get(source_url, follow_redirects=True)
 
             elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
@@ -112,7 +112,8 @@ def check_price_and_stock(
 
             # 5. Extract price, availability, and variants from HTML & JSON-LD
             html_text = resp.text
-            parsed_info = extract_coach_pdp_info(html_text)
+            target_sku = product.get("source_sku")
+            parsed_info = extract_coach_pdp_info(html_text, target_sku=target_sku)
 
             current_source_price = parsed_info.get("price") or old_source_price
             current_availability = parsed_info.get("availability") or old_availability
@@ -171,14 +172,20 @@ def check_price_and_stock(
     }
 
 
-def extract_coach_pdp_info(html_text: str) -> Dict[str, Any]:
-    """Parse Coach HTML to extract current price, overall stock, and variant status."""
+def extract_coach_pdp_info(html_text: str, target_sku: Optional[str] = None) -> Dict[str, Any]:
+    """
+    Parse Coach HTML to extract current price, overall stock, and variant status.
+    If target_sku is provided, precisely pins availability and price to the specific SKU.
+    """
     info: Dict[str, Any] = {
         "price": None,
         "compare_at_price": None,
         "availability": "out_of_stock",
         "variants_delta": []
     }
+
+    clean_target_sku = re.sub(r'\s+', ' ', target_sku).strip().lower() if target_sku else ""
+    target_found = False
 
     # 1. Parse JSON-LD blocks
     json_lds = re.findall(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', html_text, re.DOTALL)
@@ -187,19 +194,28 @@ def extract_coach_pdp_info(html_text: str) -> Dict[str, Any]:
             d = json.loads(block)
             t = d.get("@type")
             if t == "Product":
+                p_sku = d.get("sku", "")
+                clean_p_sku = re.sub(r'\s+', ' ', p_sku).strip().lower() if p_sku else ""
                 offers = d.get("offers", {})
                 if isinstance(offers, list) and offers:
                     offers = offers[0]
                 if isinstance(offers, dict):
-                    if offers.get("price"):
-                        info["price"] = float(offers["price"])
-                    avail = offers.get("availability", "")
-                    if "InStock" in avail:
-                        info["availability"] = "in_stock"
+                    p_price = float(offers.get("price") or 0.0)
+                    p_avail = offers.get("availability", "")
+                    p_in_stock = "InStock" in p_avail
+                    
+                    if (clean_target_sku and (clean_p_sku == clean_target_sku or clean_p_sku.startswith(clean_target_sku) or clean_target_sku.startswith(clean_p_sku))) or not target_found:
+                        if p_price > 0:
+                            info["price"] = p_price
+                        info["availability"] = "in_stock" if p_in_stock else "out_of_stock"
+                        if clean_target_sku and clean_p_sku == clean_target_sku:
+                            target_found = True
+
             elif t == "ProductGroup":
                 variants = d.get("hasVariant", [])
                 for v in variants:
-                    v_sku = v.get("sku")
+                    v_sku = v.get("sku") or ""
+                    clean_v_sku = re.sub(r'\s+', ' ', v_sku).strip().lower() if v_sku else ""
                     v_offers = v.get("offers", {})
                     if isinstance(v_offers, list) and v_offers:
                         v_offers = v_offers[0]
@@ -211,8 +227,13 @@ def extract_coach_pdp_info(html_text: str) -> Dict[str, Any]:
                         "available": v_in_stock,
                         "price_usd": v_price
                     })
-                    if v_in_stock:
-                        info["availability"] = "in_stock"
+
+                    # If target_sku matches this specific variant in ProductGroup
+                    if clean_target_sku and (clean_v_sku == clean_target_sku or clean_v_sku.startswith(clean_target_sku) or clean_target_sku.startswith(clean_v_sku)):
+                        if v_price > 0:
+                            info["price"] = v_price
+                        info["availability"] = "in_stock" if v_in_stock else "out_of_stock"
+                        target_found = True
         except Exception:
             pass
 
@@ -230,8 +251,8 @@ def extract_coach_pdp_info(html_text: str) -> Dict[str, Any]:
                 "size": s_clean,
                 "available": in_stock
             })
-        if any_in_stock:
-            info["availability"] = "in_stock"
+        # For footwear, overall availability is true if ANY size is enabled
+        info["availability"] = "in_stock" if any_in_stock else "out_of_stock"
 
     return info
 
