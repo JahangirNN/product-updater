@@ -302,29 +302,40 @@ def apply_delta_to_product(
     # Update variant states if available
     variants_delta = delta_result.get("variants_delta", [])
     if variants_delta and product.get("variants"):
-        sku_map = {v["sku"]: v for v in variants_delta if v.get("sku")}
-        size_map = {v["size"]: v for v in variants_delta if v.get("size")}
+        sku_map = {re.sub(r'\s+', ' ', v["sku"]).strip().upper(): v for v in variants_delta if v.get("sku")}
+        size_map = {str(v["size"]).strip(): v for v in variants_delta if v.get("size")}
         
         variant_modified = False
         for var in product["variants"]:
-            v_sku = var.get("sku")
-            # Match by SKU
-            if v_sku in sku_map:
-                v_info = sku_map[v_sku]
-                new_stock = v_info.get("available", False)
+            v_sku = var.get("sku", "")
+            clean_var_sku = re.sub(r'\s+', ' ', v_sku).strip().upper() if v_sku else ""
+            
+            # 1. Match by SKU (Color Variants or Sized SKUs)
+            if clean_var_sku in sku_map:
+                v_info = sku_map[clean_var_sku]
+                new_stock = bool(v_info.get("available", False))
                 if var.get("in_stock") != new_stock:
                     var["in_stock"] = new_stock
                     variant_modified = True
+
+                new_v_price = float(v_info.get("price_usd") or 0.0)
+                if new_v_price > 0:
+                    old_v_price = float(var.get("source_price") or 0.0)
+                    if abs(new_v_price - old_v_price) > 0.01:
+                        var["source_price"] = new_v_price
+                        var["price"] = f"{round(new_v_price * forex_rate):.2f}"
+                        variant_modified = True
             else:
-                # Match by Size (e.g. "US 7 / UK 6.5" or "7")
+                # 2. Match by Size (Footwear)
                 v_title = var.get("title", "")
                 for s_key, s_info in size_map.items():
-                    if f"US {s_key} " in v_title or v_title == s_key or v_sku.endswith(f"-{s_key}"):
-                        new_stock = s_info.get("available", False)
+                    if f"US {s_key} " in v_title or v_title == s_key or v_sku.endswith(f"-{s_key}") or v_sku.endswith(f" {s_key} D"):
+                        new_stock = bool(s_info.get("available", False))
                         if var.get("in_stock") != new_stock:
                             var["in_stock"] = new_stock
                             variant_modified = True
                         break
+
         if variant_modified:
             has_changed = True
             # Recalculate top-level availability from variants
