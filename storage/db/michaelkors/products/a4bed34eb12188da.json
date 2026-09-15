@@ -7,11 +7,11 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 38158,
+  "current_price": 38193,
   "source_price": 399.5,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/3f675e2b-9be9-4f62-9f45-8439c88c04c8/33T6SX3M4L-001-0001_1-tif",
   "images": [
@@ -24,7 +24,7 @@
     {
       "sku": "33T6SX3M4L",
       "title": "0001",
-      "price": "38158.00",
+      "price": "38193.00",
       "compare_at_price": "53440.00",
       "source_price": 399.5,
       "currency": "INR",
@@ -77,12 +77,13 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-13T05:40:04Z",
+  "last_verified_at": "2026-09-13T07:08:18Z",
   "id": "a4bed34eb12188da",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-13T05:40:04Z",
+  "updated_at": "2026-09-13T07:08:18Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Holmes Extra-Large Pebbled Leather Convertible Messenger Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 8.5&quot;</li>\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 559.5,
   "compare_at_price": 53440,
-  "material": "Pebbled leather, 100% leather"
+  "material": "Pebbled leather, 100% leather",
+  "shopify_sync_pending": true
 }

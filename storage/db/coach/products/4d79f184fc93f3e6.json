@@ -9,37 +9,66 @@
   "source_sku": "CEC30 SVYUC",
   "source_price": 65.4,
   "source_compare_at_price": null,
-  "current_price": 6252.0,
+  "current_price": 6257.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "forex_rate_used": 95.601765,
+  "forex_rate_used": 95.674534,
   "availability": "in_stock",
   "material": "Digitally printed leather and refined pebble leather",
   "specifications": {
     "Closure": "Snap closure",
     "Material": "Digitally printed leather and refined pebble leather",
-    "Pockets": "Bill compartment"
+    "Pockets": "Bill compartment",
+    "Bag Dimensions": "5.0\" (L) x 3.5\" (H) x 0.5\" (W)"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Medium Corner Zip Wallet is made for daily plans and keeps essentials secure. Crafted of digitally printed leather and refined pebble leather, this wallet features seven credit card slots, a bill compartment, a zip coin pocket and an ID window for easy organization.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Digitally printed leather and refined pebble leather</li>\n      <li><strong>Lining:</strong> Fabric / Polyester</li>\n      <li><strong>Closure:</strong> Snap closure</li>\n      <li><strong>Organization:</strong> Bill compartment</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "dimensions": {
+    "length_in": "5.0",
+    "height_in": "3.5",
+    "width_in": "0.5",
+    "formatted": "5.0\" (L) x 3.5\" (H) x 0.5\" (W)"
+  },
+  "measurements": {
+    "handle_drop_in": null,
+    "strap_drop_in": null,
+    "heel_height_in": null
+  },
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Medium Corner Zip Wallet is made for daily plans and keeps essentials secure. Crafted of digitally printed leather and refined pebble leather, this wallet features seven credit card slots, a bill compartment, a zip coin pocket and an ID window for easy organization.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Digitally printed leather and refined pebble leather</li>\n      <li><strong>Lining:</strong> Fabric / Polyester</li>\n      <li><strong>Closure:</strong> Snap closure</li>\n      <li><strong>Organization:</strong> Bill compartment</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">5.0&quot; (L) x 3.5&quot; (H) x 0.5&quot; (W)</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://coach.scene7.com/is/image/Coach/cec30_impal_a0",
     "https://coach.scene7.com/is/image/Coach/cec30_impal_a5",
     "https://coach.scene7.com/is/image/Coach/cec30_impal_a8",
     "https://coach.scene7.com/is/image/Coach/cec30_impal_a91",
-    "https://coach.scene7.com/is/image/Coach/cec30_impal_swatch",
     "https://coach.scene7.com/is/image/Coach/cec30_svyuc_a0",
     "https://coach.scene7.com/is/image/Coach/cec30_svyuc_a5",
     "https://coach.scene7.com/is/image/Coach/cec30_svyuc_a8",
-    "https://coach.scene7.com/is/image/Coach/cec30_svyuc_a91",
-    "https://coach.scene7.com/is/image/Coach/cec30_svyuc_swatch"
+    "https://coach.scene7.com/is/image/Coach/cec30_svyuc_a91"
   ],
   "variants": [
     {
       "id": null,
       "sku": "CEC30 SVYUC",
       "title": "Silver/Washed Yellow",
-      "price": "6252.00",
+      "price": "6257.00",
+      "compare_at_price": null,
+      "source_price": 65.4,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cec30_svyuc_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Washed Yellow"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CEC30 IMPAL",
+      "title": "Gold/Pale Green",
+      "price": "6257.00",
       "compare_at_price": null,
       "source_price": 65.4,
       "source_compare_at_price": null,
@@ -50,7 +79,7 @@
       "option_values": [
         {
           "option_name": "Color",
-          "name": "Silver/Washed Yellow"
+          "name": "Gold/Pale Green"
         }
       ]
     }
@@ -61,6 +90,9 @@
       "values": [
         {
           "name": "Silver/Washed Yellow"
+        },
+        {
+          "name": "Gold/Pale Green"
         }
       ]
     }
@@ -73,10 +105,9 @@
   "groups": [
     "women_wallets"
   ],
-  "product_id": "800f848c3812fafe",
-  "store": "coach",
   "created_at": "2026-09-13T00:43:24Z",
-  "last_verified_at": "2026-09-13T05:43:23Z",
-  "id": "4d79f184fc93f3e6",
-  "updated_at": "2026-09-13T05:43:23Z"
+  "last_verified_at": "2026-09-15T17:10:22Z",
+  "id": "800f848c3812fafe",
+  "product_id": "800f848c3812fafe",
+  "store": "coach"
 }

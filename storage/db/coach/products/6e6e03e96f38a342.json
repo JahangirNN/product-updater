@@ -9,11 +9,11 @@
   "source_sku": "CET31 IMXHE",
   "source_price": 189.0,
   "source_compare_at_price": null,
-  "current_price": 18069.0,
+  "current_price": 18082.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "forex_rate_used": 95.601765,
+  "forex_rate_used": 95.674534,
   "availability": "in_stock",
   "material": "Station Carryall Bag In Signature Canvas",
   "specifications": {
@@ -22,9 +22,21 @@
     "Handle Drop": "Handles with 4\" drop",
     "Shoulder Strap Drop": "Detachable strap with 21.25\" drop for shoulder or crossbody wear",
     "Closure": "Magnetic snap closure",
-    "Pockets": "Center zip compartment"
+    "Pockets": "Center zip compartment",
+    "Bag Dimensions": "11.0\" (L) x 8.0\" (H) x 4.5\" (W)"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Station Carryall Bag is made for busy days and nights out. This Signature canvas and smooth leather style has a center zip compartment for easy organization, and it&#x27;s spacious enough to fit a tablet. The detachable strap allows for shoulder or crossbody wear.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Station Carryall Bag In Signature Canvas</li>\n      <li><strong>Lining:</strong> Recycled polyester lining</li>\n      <li><strong>Closure:</strong> Magnetic snap closure</li>\n      <li><strong>Organization:</strong> Center zip compartment</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">Handles with 4&quot; drop</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">Detachable strap with 21.25&quot; drop for shoulder or crossbody wear</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "dimensions": {
+    "length_in": "11.0",
+    "height_in": "8.0",
+    "width_in": "4.5",
+    "formatted": "11.0\" (L) x 8.0\" (H) x 4.5\" (W)"
+  },
+  "measurements": {
+    "handle_drop_in": "4",
+    "strap_drop_in": "21.25",
+    "heel_height_in": null
+  },
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Station Carryall Bag is made for busy days and nights out. This Signature canvas and smooth leather style has a center zip compartment for easy organization, and it&#x27;s spacious enough to fit a tablet. The detachable strap allows for shoulder or crossbody wear.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Station Carryall Bag In Signature Canvas</li>\n      <li><strong>Lining:</strong> Recycled polyester lining</li>\n      <li><strong>Closure:</strong> Magnetic snap closure</li>\n      <li><strong>Organization:</strong> Center zip compartment</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">11.0&quot; (L) x 8.0&quot; (H) x 4.5&quot; (W)</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">Handles with 4&quot; drop</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">Detachable strap with 21.25&quot; drop for shoulder or crossbody wear</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://coach.scene7.com/is/image/Coach/cet31_imxaq_a0",
     "https://coach.scene7.com/is/image/Coach/cet31_imxaq_a10",
@@ -37,7 +49,6 @@
     "https://coach.scene7.com/is/image/Coach/cet31_imxaq_a8",
     "https://coach.scene7.com/is/image/Coach/cet31_imxaq_a92",
     "https://coach.scene7.com/is/image/Coach/cet31_imxaq_a99",
-    "https://coach.scene7.com/is/image/Coach/cet31_imxaq_swatch",
     "https://coach.scene7.com/is/image/Coach/cet31_imxhe_a0",
     "https://coach.scene7.com/is/image/Coach/cet31_imxhe_a10",
     "https://coach.scene7.com/is/image/Coach/cet31_imxhe_a21",
@@ -48,15 +59,33 @@
     "https://coach.scene7.com/is/image/Coach/cet31_imxhe_a62",
     "https://coach.scene7.com/is/image/Coach/cet31_imxhe_a8",
     "https://coach.scene7.com/is/image/Coach/cet31_imxhe_a92",
-    "https://coach.scene7.com/is/image/Coach/cet31_imxhe_a99",
-    "https://coach.scene7.com/is/image/Coach/cet31_imxhe_swatch"
+    "https://coach.scene7.com/is/image/Coach/cet31_imxhe_a99"
   ],
   "variants": [
     {
       "id": null,
       "sku": "CET31 IMXHE",
       "title": "Gold/Tan/Brown",
-      "price": "18069.00",
+      "price": "18082.00",
+      "compare_at_price": null,
+      "source_price": 189.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cet31_imxhe_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Tan/Brown"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CET31 IMXAQ",
+      "title": "Gold/Walnut/Black",
+      "price": "18082.00",
       "compare_at_price": null,
       "source_price": 189.0,
       "source_compare_at_price": null,
@@ -67,7 +96,7 @@
       "option_values": [
         {
           "option_name": "Color",
-          "name": "Gold/Tan/Brown"
+          "name": "Gold/Walnut/Black"
         }
       ]
     }
@@ -78,6 +107,9 @@
       "values": [
         {
           "name": "Gold/Tan/Brown"
+        },
+        {
+          "name": "Gold/Walnut/Black"
         }
       ]
     }
@@ -90,10 +122,9 @@
   "groups": [
     "women_bags"
   ],
-  "product_id": "a77bc3cb3d8dcbfa",
-  "store": "coach",
   "created_at": "2026-09-13T00:45:21Z",
-  "last_verified_at": "2026-09-13T05:45:24Z",
-  "id": "6e6e03e96f38a342",
-  "updated_at": "2026-09-13T05:45:24Z"
+  "last_verified_at": "2026-09-15T17:11:26Z",
+  "id": "a77bc3cb3d8dcbfa",
+  "product_id": "a77bc3cb3d8dcbfa",
+  "store": "coach"
 }

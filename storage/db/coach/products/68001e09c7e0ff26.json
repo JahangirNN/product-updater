@@ -9,30 +9,155 @@
   "source_sku": "CEU77 SV/GN",
   "source_price": 59.0,
   "source_compare_at_price": null,
-  "current_price": 5641.0,
+  "current_price": 5645.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "forex_rate_used": 95.601765,
+  "forex_rate_used": 95.674534,
   "availability": "in_stock",
   "material": "Signature coated canvas",
   "specifications": {
     "Material": "Signature coated canvas",
-    "Pockets": "Inside zip and open pockets"
+    "Pockets": "Inside zip and open pockets",
+    "Bag Dimensions": "4.25\" (L) x 5.5\" (H) x 0.75\" (W)"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Passport Card Case is made for travel organization. Crafted of Signature canvas, this slim passport holder features six credit card slots with inside zip and open pockets for convenient storage.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Signature coated canvas</li>\n      <li><strong>Lining:</strong> Fabric / Polyester</li>\n      <li><strong>Closure:</strong> N/A</li>\n      <li><strong>Organization:</strong> Inside zip and open pockets</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "dimensions": {
+    "length_in": "4.25",
+    "height_in": "5.5",
+    "width_in": "0.75",
+    "formatted": "4.25\" (L) x 5.5\" (H) x 0.75\" (W)"
+  },
+  "measurements": {
+    "handle_drop_in": null,
+    "strap_drop_in": null,
+    "heel_height_in": null
+  },
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Passport Card Case is made for travel organization. Crafted of Signature canvas, this slim passport holder features six credit card slots with inside zip and open pockets for convenient storage.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Signature coated canvas</li>\n      <li><strong>Lining:</strong> Fabric / Polyester</li>\n      <li><strong>Closure:</strong> N/A</li>\n      <li><strong>Organization:</strong> Inside zip and open pockets</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">4.25&quot; (L) x 5.5&quot; (H) x 0.75&quot; (W)</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://coach.scene7.com/is/image/Coach/ceu77_svgn_a0",
     "https://coach.scene7.com/is/image/Coach/ceu77_svgn_a5",
-    "https://coach.scene7.com/is/image/Coach/ceu77_svgn_a8",
-    "https://coach.scene7.com/is/image/Coach/ceu77_svgn_swatch"
+    "https://coach.scene7.com/is/image/Coach/ceu77_svgn_a8"
   ],
   "variants": [
     {
       "id": null,
+      "sku": "CW170 QBMQV",
+      "title": "Gunmetal/Chalk/Black",
+      "price": "3636.00",
+      "compare_at_price": null,
+      "source_price": 38.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cw170_qbmqv_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gunmetal/Chalk/Black"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CW170 QBMI5",
+      "title": "Gunmetal/Charcoal/Black",
+      "price": "5645.00",
+      "compare_at_price": null,
+      "source_price": 59.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cw170_qbmi5_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gunmetal/Charcoal/Black"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CW170 QBNRX",
+      "title": "Gunmetal/Tan/Black",
+      "price": "5645.00",
+      "compare_at_price": null,
+      "source_price": 59.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cw170_qbnrx_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gunmetal/Tan/Black"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CW170 IMPO",
+      "title": "Gold/Powder Pink",
+      "price": "5645.00",
+      "compare_at_price": null,
+      "source_price": 59.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cw170_impo_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Powder Pink"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CW170 SVYZK",
+      "title": "Silver/Black Signature",
+      "price": "5645.00",
+      "compare_at_price": null,
+      "source_price": 59.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cw170_svyzk_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Black Signature"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CW170 SVXI2",
+      "title": "Silver/Tan/Black",
+      "price": "5645.00",
+      "compare_at_price": null,
+      "source_price": 59.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cw170_svxi2_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Tan/Black"
+        }
+      ]
+    },
+    {
+      "id": null,
       "sku": "CEU77 SV/GN",
       "title": "Silver/GREEN",
-      "price": "5641.00",
+      "price": "5645.00",
       "compare_at_price": null,
       "source_price": 59.0,
       "source_compare_at_price": null,
@@ -46,6 +171,63 @@
           "name": "Silver/GREEN"
         }
       ]
+    },
+    {
+      "id": null,
+      "sku": "CFR97 SVXAM",
+      "title": "SV/Walnut/Black",
+      "price": "5645.00",
+      "compare_at_price": null,
+      "source_price": 59.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cfr97_svxam_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "SV/Walnut/Black"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CU131 SVMPL",
+      "title": "Silver/Maple",
+      "price": "5645.00",
+      "compare_at_price": null,
+      "source_price": 59.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cu131_svmpl_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Maple"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CU131 QB/BK",
+      "title": "Gunmetal/Black",
+      "price": "5645.00",
+      "compare_at_price": null,
+      "source_price": 59.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cu131_qbbk_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gunmetal/Black"
+        }
+      ]
     }
   ],
   "product_options": [
@@ -53,7 +235,34 @@
       "name": "Color",
       "values": [
         {
+          "name": "Gunmetal/Chalk/Black"
+        },
+        {
+          "name": "Gunmetal/Charcoal/Black"
+        },
+        {
+          "name": "Gunmetal/Tan/Black"
+        },
+        {
+          "name": "Gold/Powder Pink"
+        },
+        {
+          "name": "Silver/Black Signature"
+        },
+        {
+          "name": "Silver/Tan/Black"
+        },
+        {
           "name": "Silver/GREEN"
+        },
+        {
+          "name": "SV/Walnut/Black"
+        },
+        {
+          "name": "Silver/Maple"
+        },
+        {
+          "name": "Gunmetal/Black"
         }
       ]
     }
@@ -66,10 +275,9 @@
   "groups": [
     "men_wallets"
   ],
-  "product_id": "315d4c5a85cb0f85",
-  "store": "coach",
   "created_at": "2026-09-13T00:40:23Z",
-  "last_verified_at": "2026-09-13T05:40:19Z",
-  "id": "68001e09c7e0ff26",
-  "updated_at": "2026-09-13T05:40:19Z"
+  "last_verified_at": "2026-09-15T17:11:13Z",
+  "id": "315d4c5a85cb0f85",
+  "product_id": "315d4c5a85cb0f85",
+  "store": "coach"
 }

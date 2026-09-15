@@ -7,11 +7,11 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 28606,
-  "source_price": 299.5,
+  "current_price": 10421,
+  "source_price": 109.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/bfcc6fc7-4e15-4ebb-801d-ce4385b32342/30S6SETT2V-198-0239_1-tif",
   "images": [
@@ -23,9 +23,9 @@
     {
       "sku": "30S6SETT2V",
       "title": "0239",
-      "price": "28606.00",
-      "compare_at_price": "28606.00",
-      "source_price": 299.5,
+      "price": "10421.00",
+      "compare_at_price": "28633.00",
+      "source_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -77,12 +77,13 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-13T04:41:07Z",
+  "last_verified_at": "2026-09-13T07:40:49Z",
   "id": "f295ca9835d43ba5",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-13T04:41:07Z",
+  "updated_at": "2026-09-13T07:40:49Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Scarlett Medium Textured Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 16”W X 10.5”H X 5”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 11”</li>\n      <li><strong>Material:</strong> Polyurethane blend, 60% polyurethane/40% polyester</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 299.5,
-  "compare_at_price": 28606,
-  "material": "Polyurethane blend, 60% polyurethane/40% polyester"
+  "compare_at_price": 28633,
+  "material": "Polyurethane blend, 60% polyurethane/40% polyester",
+  "shopify_sync_pending": true
 }

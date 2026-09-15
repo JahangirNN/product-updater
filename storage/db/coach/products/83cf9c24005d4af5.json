@@ -9,12 +9,12 @@
   "source_sku": "CV917 QBMI5",
   "source_price": 220.0,
   "source_compare_at_price": null,
-  "current_price": 21032.0,
+  "current_price": 21048.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "forex_rate_used": 95.601765,
-  "availability": "out_of_stock",
+  "forex_rate_used": 95.674534,
+  "availability": "in_stock",
   "material": "Ethan Slim Brief In Signature Canvas",
   "specifications": {
     "Material": "Ethan Slim Brief In Signature Canvas",
@@ -22,29 +22,40 @@
     "Handle Drop": "Handles with 4.25\" drop",
     "Shoulder Strap Drop": "Detachable strap with 25\" drop for shoulder or crossbody wear",
     "Pockets": "Inside laptop compartment",
-    "Closure": "Zip closure"
+    "Closure": "Zip closure",
+    "Bag Dimensions": "15.0\" (L) x 10.5\" (H) x 2.25\" (W)"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Ethan Brief is crafted of Signature Coated Canvas and Smooth Calf Leather. Whether you&#x27;re heading to the office or jetting off on a trip, this men&#x27;s work bag is designed to carry your essentials with ease. It features multiple pockets and a dedicated space for your tech, ensuring everything stays organized and accessible and a detachable strap for versatility and comfort on the go.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Ethan Slim Brief In Signature Canvas</li>\n      <li><strong>Lining:</strong> Fabric lining</li>\n      <li><strong>Closure:</strong> Zip closure</li>\n      <li><strong>Organization:</strong> Inside laptop compartment</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">Handles with 4.25&quot; drop</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">Detachable strap with 25&quot; drop for shoulder or crossbody wear</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "dimensions": {
+    "length_in": "15.0",
+    "height_in": "10.5",
+    "width_in": "2.25",
+    "formatted": "15.0\" (L) x 10.5\" (H) x 2.25\" (W)"
+  },
+  "measurements": {
+    "handle_drop_in": "4.25",
+    "strap_drop_in": "25",
+    "heel_height_in": null
+  },
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Ethan Brief is crafted of Signature Coated Canvas and Smooth Calf Leather. Whether you&#x27;re heading to the office or jetting off on a trip, this men&#x27;s work bag is designed to carry your essentials with ease. It features multiple pockets and a dedicated space for your tech, ensuring everything stays organized and accessible and a detachable strap for versatility and comfort on the go.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Ethan Slim Brief In Signature Canvas</li>\n      <li><strong>Lining:</strong> Fabric lining</li>\n      <li><strong>Closure:</strong> Zip closure</li>\n      <li><strong>Organization:</strong> Inside laptop compartment</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">15.0&quot; (L) x 10.5&quot; (H) x 2.25&quot; (W)</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">Handles with 4.25&quot; drop</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">Detachable strap with 25&quot; drop for shoulder or crossbody wear</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://coach.scene7.com/is/image/Coach/cv917_qbmi5_a0",
     "https://coach.scene7.com/is/image/Coach/cv917_qbmi5_a3",
     "https://coach.scene7.com/is/image/Coach/cv917_qbmi5_a8",
     "https://coach.scene7.com/is/image/Coach/cv917_qbmi5_a91",
-    "https://coach.scene7.com/is/image/Coach/cv917_qbmi5_a92",
-    "https://coach.scene7.com/is/image/Coach/cv917_qbmi5_swatch"
+    "https://coach.scene7.com/is/image/Coach/cv917_qbmi5_a92"
   ],
   "variants": [
     {
       "id": null,
       "sku": "CV917 QBMI5",
       "title": "Gunmetal/Charcoal/Black",
-      "price": "21032.00",
+      "price": "21048.00",
       "compare_at_price": null,
       "source_price": 220.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cv917_qbmi5_a0",
       "option_values": [
         {
@@ -72,12 +83,9 @@
   "groups": [
     "men_bags"
   ],
-  "product_id": "2cdabb2bb220511e",
-  "store": "coach",
   "created_at": "2026-09-13T00:40:00Z",
-  "last_verified_at": "2026-09-13T05:39:52Z",
-  "is_active": false,
-  "shopify_sync_pending": true,
-  "updated_at": "2026-09-13T05:39:52Z",
-  "id": "83cf9c24005d4af5"
+  "last_verified_at": "2026-09-15T17:11:58Z",
+  "id": "2cdabb2bb220511e",
+  "product_id": "2cdabb2bb220511e",
+  "store": "coach"
 }

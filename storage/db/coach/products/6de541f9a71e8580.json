@@ -9,11 +9,11 @@
   "source_sku": "CX140 QB/BK",
   "source_price": 131.2,
   "source_compare_at_price": null,
-  "current_price": 12543.0,
+  "current_price": 12552.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "forex_rate_used": 95.601765,
+  "forex_rate_used": 95.674534,
   "availability": "in_stock",
   "material": "Smooth calf leather",
   "specifications": {
@@ -21,22 +21,33 @@
     "Lining": "Fabric lining",
     "Shoulder Strap Drop": "Adjustable strap with 24.25\" drop for shoulder or crossbody wear",
     "Pockets": "Inside multifunction pocket",
-    "Closure": "Double zip closure"
+    "Closure": "Double zip closure",
+    "Bag Dimensions": "9\" (L) x 6\" (H) x 2 3/4\" (W)"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Smooth calf leather Inside multifunction pocket Double zip closure, fabric lining Outside slip pocket Adjustable strap with 24 1/4&quot; drop for shoulder or crossbody wear 9&quot; (L) x 6&quot; (H) x 2 3/4&quot; (W) Style No. CX140</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Smooth calf leather</li>\n      <li><strong>Lining:</strong> Fabric lining</li>\n      <li><strong>Closure:</strong> Double zip closure</li>\n      <li><strong>Organization:</strong> Inside multifunction pocket</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">Adjustable strap with 24.25&quot; drop for shoulder or crossbody wear</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "dimensions": {
+    "length_in": "9",
+    "height_in": "6",
+    "width_in": "2 3/4",
+    "formatted": "9\" (L) x 6\" (H) x 2 3/4\" (W)"
+  },
+  "measurements": {
+    "handle_drop_in": null,
+    "strap_drop_in": "24.25",
+    "heel_height_in": null
+  },
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Smooth calf leather Inside multifunction pocket Double zip closure, fabric lining Outside slip pocket Adjustable strap with 24 1/4&quot; drop for shoulder or crossbody wear 9&quot; (L) x 6&quot; (H) x 2 3/4&quot; (W) Style No. CX140</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Smooth calf leather</li>\n      <li><strong>Lining:</strong> Fabric lining</li>\n      <li><strong>Closure:</strong> Double zip closure</li>\n      <li><strong>Organization:</strong> Inside multifunction pocket</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">9&quot; (L) x 6&quot; (H) x 2 3/4&quot; (W)</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">Adjustable strap with 24.25&quot; drop for shoulder or crossbody wear</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://coach.scene7.com/is/image/Coach/cx140_qbbk_a0",
     "https://coach.scene7.com/is/image/Coach/cx140_qbbk_a3",
     "https://coach.scene7.com/is/image/Coach/cx140_qbbk_a8",
-    "https://coach.scene7.com/is/image/Coach/cx140_qbbk_a91",
-    "https://coach.scene7.com/is/image/Coach/cx140_qbbk_swatch"
+    "https://coach.scene7.com/is/image/Coach/cx140_qbbk_a91"
   ],
   "variants": [
     {
       "id": null,
       "sku": "CX140 QB/BK",
       "title": "Gunmetal/Black",
-      "price": "12543.00",
+      "price": "12552.00",
       "compare_at_price": null,
       "source_price": 131.2,
       "source_compare_at_price": null,
@@ -70,10 +81,9 @@
   "groups": [
     "men_bags"
   ],
-  "product_id": "dbd8a49d39c2e44c",
-  "store": "coach",
   "created_at": "2026-09-13T00:47:29Z",
-  "last_verified_at": "2026-09-13T05:47:28Z",
-  "id": "6de541f9a71e8580",
-  "updated_at": "2026-09-13T05:47:28Z"
+  "last_verified_at": "2026-09-15T17:11:22Z",
+  "id": "dbd8a49d39c2e44c",
+  "product_id": "dbd8a49d39c2e44c",
+  "store": "coach"
 }

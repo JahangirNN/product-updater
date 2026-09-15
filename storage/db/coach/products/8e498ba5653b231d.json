@@ -9,16 +9,27 @@
   "source_sku": "CEE10 IND  6   B",
   "source_price": 94.0,
   "source_compare_at_price": null,
-  "current_price": 8987.0,
+  "current_price": 8993.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "forex_rate_used": 95.601765,
-  "availability": "in_stock",
+  "forex_rate_used": 95.674534,
+  "availability": "out_of_stock",
   "material": "Bow Kitten Heel Sandal In Signature Denim",
   "specifications": {
     "Material": "Bow Kitten Heel Sandal In Signature Denim",
     "Heel Height": "Heel Height: 1.5\""
+  },
+  "dimensions": {
+    "length_in": null,
+    "height_in": "1.5",
+    "width_in": null,
+    "formatted": null
+  },
+  "measurements": {
+    "handle_drop_in": null,
+    "strap_drop_in": null,
+    "heel_height_in": "1.5"
   },
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Signature denim, man-made leather and leather upper Man-made leather lining, Signature denim and man-made leather footbed Rubber outsole Slip on 1.5&quot; heel This style is crafted of our Signature denim made from cotton sourced from farms that use regenerative agricultural practices—those that help to maintain and rejuvenate land, increase biological diversity and soil health and could lead to increased carbon absorption Style No. CEE10</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Upper Material:</strong> Bow Kitten Heel Sandal In Signature Denim</li>\n      <li><strong>Lining:</strong> Fabric / Polyester</li>\n      <li><strong>Heel / Sole:</strong> Heel Height: 1.5&quot;</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Official COACH Women Footwear Size Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px; text-align: left;\">\n      <thead>\n        <tr style=\"background: #f8f8f8; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">Fit / Width</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #eee;\"><td style=\"padding: 6px;\">US 7</td><td style=\"padding: 6px;\">UK 6.5</td><td style=\"padding: 6px;\">Standard (D)</td></tr>\n        <tr style=\"border-bottom: 1px solid #eee;\"><td style=\"padding: 6px;\">US 8</td><td style=\"padding: 6px;\">UK 7.5</td><td style=\"padding: 6px;\">Standard (D)</td></tr>\n        <tr style=\"border-bottom: 1px solid #eee;\"><td style=\"padding: 6px;\">US 9</td><td style=\"padding: 6px;\">UK 8.5</td><td style=\"padding: 6px;\">Standard (D)</td></tr>\n        <tr style=\"border-bottom: 1px solid #eee;\"><td style=\"padding: 6px;\">US 10</td><td style=\"padding: 6px;\">UK 9.5</td><td style=\"padding: 6px;\">Standard (D)</td></tr>\n        <tr style=\"border-bottom: 1px solid #eee;\"><td style=\"padding: 6px;\">US 11</td><td style=\"padding: 6px;\">UK 10.5</td><td style=\"padding: 6px;\">Standard (D)</td></tr>\n        <tr><td style=\"padding: 6px;\">US 12</td><td style=\"padding: 6px;\">UK 11.5</td><td style=\"padding: 6px;\">Standard (D)</td></tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
@@ -27,15 +38,14 @@
     "https://coach.scene7.com/is/image/Coach/cee10_ind_a3",
     "https://coach.scene7.com/is/image/Coach/cee10_ind_a8",
     "https://coach.scene7.com/is/image/Coach/cee10_ind_a9",
-    "https://coach.scene7.com/is/image/Coach/cee10_ind_a91",
-    "https://coach.scene7.com/is/image/Coach/cee10_ind_swatch"
+    "https://coach.scene7.com/is/image/Coach/cee10_ind_a91"
   ],
   "variants": [
     {
       "id": null,
       "sku": "CEE10 IND  6   B-5",
       "title": "US 5 / UK 3",
-      "price": "8987.00",
+      "price": "8993.00",
       "compare_at_price": null,
       "source_price": 94.0,
       "source_compare_at_price": null,
@@ -54,7 +64,7 @@
       "id": null,
       "sku": "CEE10 IND  6   B-5.5",
       "title": "US 5.5 / UK 3.5",
-      "price": "8987.00",
+      "price": "8993.00",
       "compare_at_price": null,
       "source_price": 94.0,
       "source_compare_at_price": null,
@@ -73,13 +83,13 @@
       "id": null,
       "sku": "CEE10 IND  6   B-6",
       "title": "US 6 / UK 4",
-      "price": "8987.00",
+      "price": "8993.00",
       "compare_at_price": null,
       "source_price": 94.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cee10_ind_a0",
       "option_values": [
         {
@@ -92,7 +102,7 @@
       "id": null,
       "sku": "CEE10 IND  6   B-6.5",
       "title": "US 6.5 / UK 4.5",
-      "price": "8987.00",
+      "price": "8993.00",
       "compare_at_price": null,
       "source_price": 94.0,
       "source_compare_at_price": null,
@@ -111,7 +121,7 @@
       "id": null,
       "sku": "CEE10 IND  6   B-7",
       "title": "US 7 / UK 5",
-      "price": "8987.00",
+      "price": "8993.00",
       "compare_at_price": null,
       "source_price": 94.0,
       "source_compare_at_price": null,
@@ -130,7 +140,7 @@
       "id": null,
       "sku": "CEE10 IND  6   B-7.5",
       "title": "US 7.5 / UK 5.5",
-      "price": "8987.00",
+      "price": "8993.00",
       "compare_at_price": null,
       "source_price": 94.0,
       "source_compare_at_price": null,
@@ -149,7 +159,7 @@
       "id": null,
       "sku": "CEE10 IND  6   B-8",
       "title": "US 8 / UK 6",
-      "price": "8987.00",
+      "price": "8993.00",
       "compare_at_price": null,
       "source_price": 94.0,
       "source_compare_at_price": null,
@@ -168,13 +178,13 @@
       "id": null,
       "sku": "CEE10 IND  6   B-8.5",
       "title": "US 8.5 / UK 6.5",
-      "price": "8987.00",
+      "price": "8993.00",
       "compare_at_price": null,
       "source_price": 94.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cee10_ind_a0",
       "option_values": [
         {
@@ -187,7 +197,7 @@
       "id": null,
       "sku": "CEE10 IND  6   B-9",
       "title": "US 9 / UK 7",
-      "price": "8987.00",
+      "price": "8993.00",
       "compare_at_price": null,
       "source_price": 94.0,
       "source_compare_at_price": null,
@@ -206,13 +216,13 @@
       "id": null,
       "sku": "CEE10 IND  6   B-9.5",
       "title": "US 9.5 / UK 7.5",
-      "price": "8987.00",
+      "price": "8993.00",
       "compare_at_price": null,
       "source_price": 94.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cee10_ind_a0",
       "option_values": [
         {
@@ -225,7 +235,7 @@
       "id": null,
       "sku": "CEE10 IND  6   B-10",
       "title": "US 10 / UK 8",
-      "price": "8987.00",
+      "price": "8993.00",
       "compare_at_price": null,
       "source_price": 94.0,
       "source_compare_at_price": null,
@@ -244,7 +254,7 @@
       "id": null,
       "sku": "CEE10 IND  6   B-11",
       "title": "US 11 / UK 9",
-      "price": "8987.00",
+      "price": "8993.00",
       "compare_at_price": null,
       "source_price": 94.0,
       "source_compare_at_price": null,
@@ -311,10 +321,9 @@
   "groups": [
     "women_shoes"
   ],
-  "product_id": "d0aab906a358a34c",
-  "store": "coach",
   "created_at": "2026-09-13T00:46:55Z",
-  "last_verified_at": "2026-09-13T05:46:57Z",
-  "id": "8e498ba5653b231d",
-  "updated_at": "2026-09-13T05:46:57Z"
+  "last_verified_at": "2026-09-15T17:12:18Z",
+  "id": "d0aab906a358a34c",
+  "product_id": "d0aab906a358a34c",
+  "store": "coach"
 }

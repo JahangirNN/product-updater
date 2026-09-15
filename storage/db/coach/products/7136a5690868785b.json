@@ -9,20 +9,32 @@
   "source_sku": "CCC41 B4MPL",
   "source_price": 135.0,
   "source_compare_at_price": null,
-  "current_price": 12906.0,
+  "current_price": 12916.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "forex_rate_used": 95.601765,
+  "forex_rate_used": 95.674534,
   "availability": "in_stock",
   "material": "Natural grain leather",
   "specifications": {
     "Material": "Natural grain leather",
     "Lining": "Fabric lining",
     "Handle Drop": "Handle with 7.75\" drop",
-    "Closure": "Zip-top closure"
+    "Closure": "Zip-top closure",
+    "Bag Dimensions": "8.25\" (L) x 4.75\" (H) x 1.75\" (W)"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">A little bag with limitless possibilities, our Plaza is the perfect go-everywhere design—with a sophisticated New York attitude. Crafted of natural grain leather with a beautiful texture and soft feel, the one compartment style has space for all your day-to-day essentials including a phone, wallet, keys and other accessories. Wear as a short shoulder bag or convert to a wristlet.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Natural grain leather</li>\n      <li><strong>Lining:</strong> Fabric lining</li>\n      <li><strong>Closure:</strong> Zip-top closure</li>\n      <li><strong>Organization:</strong> N/A</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">Handle with 7.75&quot; drop</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "dimensions": {
+    "length_in": "8.25",
+    "height_in": "4.75",
+    "width_in": "1.75",
+    "formatted": "8.25\" (L) x 4.75\" (H) x 1.75\" (W)"
+  },
+  "measurements": {
+    "handle_drop_in": "7.75",
+    "strap_drop_in": null,
+    "heel_height_in": null
+  },
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">A little bag with limitless possibilities, our Plaza is the perfect go-everywhere design—with a sophisticated New York attitude. Crafted of natural grain leather with a beautiful texture and soft feel, the one compartment style has space for all your day-to-day essentials including a phone, wallet, keys and other accessories. Wear as a short shoulder bag or convert to a wristlet.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Natural grain leather</li>\n      <li><strong>Lining:</strong> Fabric lining</li>\n      <li><strong>Closure:</strong> Zip-top closure</li>\n      <li><strong>Organization:</strong> N/A</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">8.25&quot; (L) x 4.75&quot; (H) x 1.75&quot; (W)</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">Handle with 7.75&quot; drop</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://coach.scene7.com/is/image/Coach/ccc41_b4bk_a0",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4bk_a10",
@@ -35,7 +47,6 @@
     "https://coach.scene7.com/is/image/Coach/ccc41_b4bk_a92",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4bk_a93",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4bk_a99",
-    "https://coach.scene7.com/is/image/Coach/ccc41_b4bk_swatch",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a0",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a10",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a3",
@@ -47,7 +58,6 @@
     "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a92",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a93",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a99",
-    "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_swatch",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4nv_a0",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4nv_a10",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4nv_a3",
@@ -58,12 +68,10 @@
     "https://coach.scene7.com/is/image/Coach/ccc41_b4nv_a91",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4nv_a92",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4nv_a99",
-    "https://coach.scene7.com/is/image/Coach/ccc41_b4nv_swatch",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4ol_a0",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4ol_a3",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4ol_a5",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4ol_a8",
-    "https://coach.scene7.com/is/image/Coach/ccc41_b4ol_swatch",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4sca_a0",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4sca_a10",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4sca_a3",
@@ -74,7 +82,6 @@
     "https://coach.scene7.com/is/image/Coach/ccc41_b4sca_a92",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4sca_a93",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4sca_a99",
-    "https://coach.scene7.com/is/image/Coach/ccc41_b4sca_swatch",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4tf_a0",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4tf_a10",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4tf_a3",
@@ -86,7 +93,6 @@
     "https://coach.scene7.com/is/image/Coach/ccc41_b4tf_a92",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4tf_a93",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4tf_a99",
-    "https://coach.scene7.com/is/image/Coach/ccc41_b4tf_swatch",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4yds_a0",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4yds_a10",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4yds_a3",
@@ -96,15 +102,71 @@
     "https://coach.scene7.com/is/image/Coach/ccc41_b4yds_a88",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4yds_a91",
     "https://coach.scene7.com/is/image/Coach/ccc41_b4yds_a92",
-    "https://coach.scene7.com/is/image/Coach/ccc41_b4yds_a99",
-    "https://coach.scene7.com/is/image/Coach/ccc41_b4yds_swatch"
+    "https://coach.scene7.com/is/image/Coach/ccc41_b4yds_a99"
   ],
   "variants": [
     {
       "id": null,
-      "sku": "CCC41 B4MPL",
-      "title": "Brass/Maple",
-      "price": "12906.00",
+      "sku": "CFT28 LHBLK",
+      "title": "Silver/Black",
+      "price": "12916.00",
+      "compare_at_price": null,
+      "source_price": 135.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cft28_lhblk_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Black"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CER64 B4PGB",
+      "title": "Brass/Dark Fuchsia",
+      "price": "12916.00",
+      "compare_at_price": null,
+      "source_price": 135.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cer64_b4pgb_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brass/Dark Fuchsia"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CFK14 B4ZAF",
+      "title": "Brass/Deep Sky Multi",
+      "price": "12916.00",
+      "compare_at_price": null,
+      "source_price": 135.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cfk14_b4zaf_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brass/Deep Sky Multi"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CCC41 B4/BK",
+      "title": "Brass/Black",
+      "price": "12916.00",
       "compare_at_price": null,
       "source_price": 135.0,
       "source_compare_at_price": null,
@@ -115,7 +177,235 @@
       "option_values": [
         {
           "option_name": "Color",
+          "name": "Brass/Black"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CCC41 B4/OL",
+      "title": "Brass/Olive",
+      "price": "12916.00",
+      "compare_at_price": null,
+      "source_price": 135.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/ccc41_b4ol_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brass/Olive"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CCC41 B4YDS",
+      "title": "Brass/Black Currant",
+      "price": "12916.00",
+      "compare_at_price": null,
+      "source_price": 135.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/ccc41_b4yds_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brass/Black Currant"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CCC41 B4/NV",
+      "title": "Brass/Navy",
+      "price": "6458.00",
+      "compare_at_price": null,
+      "source_price": 67.5,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/ccc41_b4nv_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brass/Navy"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CCC41 B4MPL",
+      "title": "Brass/Maple",
+      "price": "12916.00",
+      "compare_at_price": null,
+      "source_price": 135.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
           "name": "Brass/Maple"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CCC41 B4SCA",
+      "title": "Brass/Scarlet",
+      "price": "12916.00",
+      "compare_at_price": null,
+      "source_price": 135.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/ccc41_b4sca_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brass/Scarlet"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CCC41 B4/TF",
+      "title": "Brass/Toffee",
+      "price": "7750.00",
+      "compare_at_price": null,
+      "source_price": 81.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/ccc41_b4tf_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brass/Toffee"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CER42 B4/FX",
+      "title": "Brass/Fuchsia",
+      "price": "10046.00",
+      "compare_at_price": null,
+      "source_price": 105.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cer42_b4fx_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brass/Fuchsia"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CER59 B4PMC",
+      "title": "Brass/Pink Multi",
+      "price": "11720.00",
+      "compare_at_price": null,
+      "source_price": 122.5,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cer59_b4pmc_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brass/Pink Multi"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CER67 B4/HA",
+      "title": "Brass/Chalk",
+      "price": "11720.00",
+      "compare_at_price": null,
+      "source_price": 122.5,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cer67_b4ha_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brass/Chalk"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CFF95 B4/KE",
+      "title": "Brass/Kelly Green",
+      "price": "10046.00",
+      "compare_at_price": null,
+      "source_price": 105.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cff95_b4ke_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brass/Kelly Green"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CCC42 B4YDT",
+      "title": "Brass/Maple",
+      "price": "12916.00",
+      "compare_at_price": null,
+      "source_price": 135.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/ccc42_b4ydt_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brass/Maple"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CCC42 B4YU2",
+      "title": "Brass/Melon Pink",
+      "price": "7750.00",
+      "compare_at_price": null,
+      "source_price": 81.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/ccc42_b4yu2_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brass/Melon Pink"
         }
       ]
     }
@@ -125,7 +415,49 @@
       "name": "Color",
       "values": [
         {
+          "name": "Silver/Black"
+        },
+        {
+          "name": "Brass/Dark Fuchsia"
+        },
+        {
+          "name": "Brass/Deep Sky Multi"
+        },
+        {
+          "name": "Brass/Black"
+        },
+        {
+          "name": "Brass/Olive"
+        },
+        {
+          "name": "Brass/Black Currant"
+        },
+        {
+          "name": "Brass/Navy"
+        },
+        {
           "name": "Brass/Maple"
+        },
+        {
+          "name": "Brass/Scarlet"
+        },
+        {
+          "name": "Brass/Toffee"
+        },
+        {
+          "name": "Brass/Fuchsia"
+        },
+        {
+          "name": "Brass/Pink Multi"
+        },
+        {
+          "name": "Brass/Chalk"
+        },
+        {
+          "name": "Brass/Kelly Green"
+        },
+        {
+          "name": "Brass/Melon Pink"
         }
       ]
     }
@@ -138,10 +470,9 @@
   "groups": [
     "women_bags"
   ],
-  "product_id": "13cd662eef2c35c5",
-  "store": "coach",
   "created_at": "2026-09-13T00:38:49Z",
-  "last_verified_at": "2026-09-13T05:38:42Z",
-  "id": "7136a5690868785b",
-  "updated_at": "2026-09-13T05:38:42Z"
+  "last_verified_at": "2026-09-15T17:11:30Z",
+  "id": "13cd662eef2c35c5",
+  "product_id": "13cd662eef2c35c5",
+  "store": "coach"
 }

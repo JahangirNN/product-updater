@@ -9,43 +9,110 @@
   "source_sku": "23845 BLK",
   "source_price": 69.0,
   "source_compare_at_price": null,
-  "current_price": 6597.0,
+  "current_price": 6602.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "forex_rate_used": 95.601765,
+  "forex_rate_used": 95.674534,
   "availability": "in_stock",
   "material": "Sport calf leather",
   "specifications": {
     "Material": "Sport calf leather",
-    "Pockets": "Full-length bill compartment"
+    "Pockets": "Full-length bill compartment",
+    "Bag Dimensions": "3 1/4\" (L) x 4 1/4\" (H)"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Sport calf leather Nine credit card slots Full-length bill compartment 3 1/4&quot; (L) x 4 1/4&quot; (H) Style No. 23845</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Sport calf leather</li>\n      <li><strong>Lining:</strong> Fabric / Polyester</li>\n      <li><strong>Closure:</strong> N/A</li>\n      <li><strong>Organization:</strong> Full-length bill compartment</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "dimensions": {
+    "length_in": "3 1/4",
+    "height_in": "4 1/4",
+    "width_in": null,
+    "formatted": "3 1/4\" (L) x 4 1/4\" (H)"
+  },
+  "measurements": {
+    "handle_drop_in": null,
+    "strap_drop_in": null,
+    "heel_height_in": null
+  },
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Sport calf leather Nine credit card slots Full-length bill compartment 3 1/4&quot; (L) x 4 1/4&quot; (H) Style No. 23845</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Sport calf leather</li>\n      <li><strong>Lining:</strong> Fabric / Polyester</li>\n      <li><strong>Closure:</strong> N/A</li>\n      <li><strong>Organization:</strong> Full-length bill compartment</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">3 1/4&quot; (L) x 4 1/4&quot; (H)</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://coach.scene7.com/is/image/Coach/23845_blk_a0",
     "https://coach.scene7.com/is/image/Coach/23845_blk_a8",
-    "https://coach.scene7.com/is/image/Coach/23845_blk_swatch",
     "https://coach.scene7.com/is/image/Coach/23845_sad_a0",
-    "https://coach.scene7.com/is/image/Coach/23845_sad_a8",
-    "https://coach.scene7.com/is/image/Coach/23845_sad_swatch"
+    "https://coach.scene7.com/is/image/Coach/23845_sad_a8"
   ],
   "variants": [
     {
       "id": null,
+      "sku": "CZ258 BLK",
+      "title": "Black",
+      "price": "14351.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cz258_blk_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CZ258 RWD",
+      "title": "Redwood",
+      "price": "14351.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cz258_rwd_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Redwood"
+        }
+      ]
+    },
+    {
+      "id": null,
       "sku": "23845 BLK",
       "title": "Black",
-      "price": "6597.00",
+      "price": "6602.00",
       "compare_at_price": null,
       "source_price": 69.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://coach.scene7.com/is/image/Coach/23845_blk_a0",
+      "image_url": "https://coach.scene7.com/is/image/Coach/cz258_blk_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Black"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "23845 SAD",
+      "title": "Saddle",
+      "price": "6602.00",
+      "compare_at_price": null,
+      "source_price": 69.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/23845_sad_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Saddle"
         }
       ]
     }
@@ -56,6 +123,12 @@
       "values": [
         {
           "name": "Black"
+        },
+        {
+          "name": "Redwood"
+        },
+        {
+          "name": "Saddle"
         }
       ]
     }
@@ -68,10 +141,9 @@
   "groups": [
     "men_wallets"
   ],
-  "product_id": "cf29169f66c2c098",
-  "store": "coach",
   "created_at": "2026-09-13T00:46:52Z",
-  "last_verified_at": "2026-09-13T05:46:54Z",
-  "id": "100cccad47138305",
-  "updated_at": "2026-09-13T05:46:54Z"
+  "last_verified_at": "2026-09-15T17:08:52Z",
+  "id": "cf29169f66c2c098",
+  "product_id": "cf29169f66c2c098",
+  "store": "coach"
 }

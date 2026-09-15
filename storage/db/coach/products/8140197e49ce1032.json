@@ -9,20 +9,32 @@
   "source_sku": "CBZ96 B4WBR",
   "source_price": 198.0,
   "source_compare_at_price": null,
-  "current_price": 18929.0,
+  "current_price": 18944.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "forex_rate_used": 95.601765,
-  "availability": "out_of_stock",
+  "forex_rate_used": 95.674534,
+  "availability": "in_stock",
   "material": "Suede",
   "specifications": {
     "Material": "Suede",
     "Handle Drop": "Handles with 10\" drop",
     "Pockets": "Zip compartment",
-    "Closure": "Snap closure"
+    "Closure": "Snap closure",
+    "Bag Dimensions": "13.25\" (L) x 10.25\" (H) x 7.75\" (W)"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">A wardrobe hero for every day, Lana combines easy organization with sophisticated good looks. Detailed with our Signature hardware, the velvety suede design has a center zip compartment to secure belongings and two open compartments with room to hold a sweater or an extra pair of shoes. It&#x27;s sleek, spacious, stylish, functional (basically, everything you want in a bag).</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Suede</li>\n      <li><strong>Lining:</strong> Fabric / Polyester</li>\n      <li><strong>Closure:</strong> Snap closure</li>\n      <li><strong>Organization:</strong> Zip compartment</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">Handles with 10&quot; drop</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "dimensions": {
+    "length_in": "13.25",
+    "height_in": "10.25",
+    "width_in": "7.75",
+    "formatted": "13.25\" (L) x 10.25\" (H) x 7.75\" (W)"
+  },
+  "measurements": {
+    "handle_drop_in": "10",
+    "strap_drop_in": null,
+    "heel_height_in": null
+  },
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">A wardrobe hero for every day, Lana combines easy organization with sophisticated good looks. Detailed with our Signature hardware, the velvety suede design has a center zip compartment to secure belongings and two open compartments with room to hold a sweater or an extra pair of shoes. It&#x27;s sleek, spacious, stylish, functional (basically, everything you want in a bag).</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Suede</li>\n      <li><strong>Lining:</strong> Fabric / Polyester</li>\n      <li><strong>Closure:</strong> Snap closure</li>\n      <li><strong>Organization:</strong> Zip compartment</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">13.25&quot; (L) x 10.25&quot; (H) x 7.75&quot; (W)</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">Handles with 10&quot; drop</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://coach.scene7.com/is/image/Coach/cbz96_b4ay_a0",
     "https://coach.scene7.com/is/image/Coach/cbz96_b4ay_a10",
@@ -33,7 +45,6 @@
     "https://coach.scene7.com/is/image/Coach/cbz96_b4ay_a88",
     "https://coach.scene7.com/is/image/Coach/cbz96_b4ay_a91",
     "https://coach.scene7.com/is/image/Coach/cbz96_b4ay_a99",
-    "https://coach.scene7.com/is/image/Coach/cbz96_b4ay_swatch",
     "https://coach.scene7.com/is/image/Coach/cbz96_b4wbr_a0",
     "https://coach.scene7.com/is/image/Coach/cbz96_b4wbr_a10",
     "https://coach.scene7.com/is/image/Coach/cbz96_b4wbr_a3",
@@ -42,26 +53,44 @@
     "https://coach.scene7.com/is/image/Coach/cbz96_b4wbr_a8",
     "https://coach.scene7.com/is/image/Coach/cbz96_b4wbr_a88",
     "https://coach.scene7.com/is/image/Coach/cbz96_b4wbr_a91",
-    "https://coach.scene7.com/is/image/Coach/cbz96_b4wbr_a99",
-    "https://coach.scene7.com/is/image/Coach/cbz96_b4wbr_swatch"
+    "https://coach.scene7.com/is/image/Coach/cbz96_b4wbr_a99"
   ],
   "variants": [
     {
       "id": null,
       "sku": "CBZ96 B4WBR",
       "title": "Brass/Warm Brown",
-      "price": "18929.00",
+      "price": "18944.00",
       "compare_at_price": null,
       "source_price": 198.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
-      "image_url": "https://coach.scene7.com/is/image/Coach/cbz96_b4ay_a0",
+      "image_url": "https://coach.scene7.com/is/image/Coach/cbz96_b4wbr_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Brass/Warm Brown"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CBZ96 B4/AY",
+      "title": "Brass/CLAY",
+      "price": "23679.00",
+      "compare_at_price": null,
+      "source_price": 247.5,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cbz96_b4ay_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brass/CLAY"
         }
       ]
     }
@@ -72,6 +101,9 @@
       "values": [
         {
           "name": "Brass/Warm Brown"
+        },
+        {
+          "name": "Brass/CLAY"
         }
       ]
     }
@@ -84,12 +116,9 @@
   "groups": [
     "women_bags"
   ],
-  "product_id": "78db742b9aa05bba",
-  "store": "coach",
   "created_at": "2026-09-13T00:43:03Z",
-  "last_verified_at": "2026-09-13T05:42:59Z",
-  "is_active": false,
-  "shopify_sync_pending": true,
-  "updated_at": "2026-09-13T05:42:59Z",
-  "id": "8140197e49ce1032"
+  "last_verified_at": "2026-09-15T17:11:55Z",
+  "id": "78db742b9aa05bba",
+  "product_id": "78db742b9aa05bba",
+  "store": "coach"
 }

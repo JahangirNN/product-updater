@@ -9,11 +9,11 @@
   "source_sku": "CGV48 IMMAG",
   "source_price": 149.0,
   "source_compare_at_price": null,
-  "current_price": 14245.0,
+  "current_price": 14256.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "forex_rate_used": 95.601765,
+  "forex_rate_used": 95.674534,
   "availability": "in_stock",
   "material": "Smooth leather",
   "specifications": {
@@ -22,9 +22,21 @@
     "Handle Drop": "Handles with 3.25\" drop",
     "Shoulder Strap Drop": "Detachable strap with 22.25\" drop for shoulder or crossbody wear",
     "Pockets": "Inside multifunction pocket",
-    "Closure": "Zip-top closure"
+    "Closure": "Zip-top closure",
+    "Bag Dimensions": "6.0\" (L) x 5.5\" (H) x 3.5\" (W)"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The City Mini Tote Bag works well for errands and everyday plans. Crafted of smooth leather, this mini tote bag has an inside multifunction pocket for easy organization and a zip-top closure.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Smooth leather</li>\n      <li><strong>Lining:</strong> Recycled polyester lining</li>\n      <li><strong>Closure:</strong> Zip-top closure</li>\n      <li><strong>Organization:</strong> Inside multifunction pocket</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">Handles with 3.25&quot; drop</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">Detachable strap with 22.25&quot; drop for shoulder or crossbody wear</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "dimensions": {
+    "length_in": "6.0",
+    "height_in": "5.5",
+    "width_in": "3.5",
+    "formatted": "6.0\" (L) x 5.5\" (H) x 3.5\" (W)"
+  },
+  "measurements": {
+    "handle_drop_in": "3.25",
+    "strap_drop_in": "22.25",
+    "heel_height_in": null
+  },
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The City Mini Tote Bag works well for errands and everyday plans. Crafted of smooth leather, this mini tote bag has an inside multifunction pocket for easy organization and a zip-top closure.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Smooth leather</li>\n      <li><strong>Lining:</strong> Recycled polyester lining</li>\n      <li><strong>Closure:</strong> Zip-top closure</li>\n      <li><strong>Organization:</strong> Inside multifunction pocket</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">6.0&quot; (L) x 5.5&quot; (H) x 3.5&quot; (W)</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">Handles with 3.25&quot; drop</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">Detachable strap with 22.25&quot; drop for shoulder or crossbody wear</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://coach.scene7.com/is/image/Coach/cgv48_immag_a0",
     "https://coach.scene7.com/is/image/Coach/cgv48_immag_a10",
@@ -36,15 +48,33 @@
     "https://coach.scene7.com/is/image/Coach/cgv48_immag_a62",
     "https://coach.scene7.com/is/image/Coach/cgv48_immag_a8",
     "https://coach.scene7.com/is/image/Coach/cgv48_immag_a92",
-    "https://coach.scene7.com/is/image/Coach/cgv48_immag_a99",
-    "https://coach.scene7.com/is/image/Coach/cgv48_immag_swatch"
+    "https://coach.scene7.com/is/image/Coach/cgv48_immag_a99"
   ],
   "variants": [
     {
       "id": null,
+      "sku": "CFW21 SVN2W",
+      "title": "Silver/Blue Jay",
+      "price": "14256.00",
+      "compare_at_price": null,
+      "source_price": 149.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cfw21_svn2w_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Blue Jay"
+        }
+      ]
+    },
+    {
+      "id": null,
       "sku": "CGV48 IMMAG",
       "title": "Im/Magenta",
-      "price": "14245.00",
+      "price": "14256.00",
       "compare_at_price": null,
       "source_price": 149.0,
       "source_compare_at_price": null,
@@ -65,6 +95,9 @@
       "name": "Color",
       "values": [
         {
+          "name": "Silver/Blue Jay"
+        },
+        {
           "name": "Im/Magenta"
         }
       ]
@@ -78,10 +111,9 @@
   "groups": [
     "women_bags"
   ],
-  "product_id": "fc8b46bfc6fbf0cf",
-  "store": "coach",
   "created_at": "2026-09-13T00:49:05Z",
-  "last_verified_at": "2026-09-13T05:48:56Z",
-  "id": "eadd6467b534c132",
-  "updated_at": "2026-09-13T05:48:56Z"
+  "last_verified_at": "2026-09-15T17:14:43Z",
+  "id": "fc8b46bfc6fbf0cf",
+  "product_id": "fc8b46bfc6fbf0cf",
+  "store": "coach"
 }

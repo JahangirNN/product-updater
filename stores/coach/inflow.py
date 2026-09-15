@@ -6,7 +6,8 @@ Pure functions only, zero classes (ADR 0005, ADR 0006).
 import re
 import html
 import hashlib
-from typing import Any, Dict, List, Optional
+import time
+from typing import Any, Dict, List, Optional, Tuple
 from storage.forex import convert_usd_to_inr
 
 
@@ -50,6 +51,13 @@ def parse_product_payload(raw_data: Dict[str, Any], usd_to_inr_rate: float, grou
 
     # 5. Specifications & Measurements
     specs = parse_specifications(raw_data.get("description", ""), raw_data.get("bullets", []), raw_data.get("specs", {}))
+    dimensions, measurements = extract_structured_dimensions_and_measurements(
+        raw_data.get("description", ""),
+        raw_data.get("bullets", []),
+        specs
+    )
+    if dimensions.get("formatted") and "Bag Dimensions" not in specs:
+        specs["Bag Dimensions"] = dimensions["formatted"]
     material = specs.get("Material") or specs.get("Major Material") or "Refined Leather"
 
     # 6. Variants & Sizing
@@ -63,7 +71,8 @@ def parse_product_payload(raw_data: Dict[str, Any], usd_to_inr_rate: float, grou
         source_compare_usd=source_compare_usd,
         is_shoe=is_shoe,
         gender=gender,
-        featured_image=featured_image
+        featured_image=featured_image,
+        usd_to_inr_rate=usd_to_inr_rate
     )
 
     # 7. Product Options
@@ -102,6 +111,8 @@ def parse_product_payload(raw_data: Dict[str, Any], usd_to_inr_rate: float, grou
         "availability": availability,
         "material": material,
         "specifications": specs,
+        "dimensions": dimensions,
+        "measurements": measurements,
         "descriptionHtml": description_html,
         "images": images,
         "variants": variants,
@@ -144,10 +155,12 @@ def determine_product_type(title: str, group_name: str) -> str:
 
 
 def clean_images(image_list: List[str]) -> List[str]:
-    """Filter and sanitize Scene7 high-resolution image URLs."""
+    """Filter and sanitize Scene7 high-resolution image URLs, strictly excluding swatches."""
     urls = []
     for img in image_list:
         if not img or not isinstance(img, str):
+            continue
+        if "_swatch" in img.lower() or "swatch_" in img.lower():
             continue
         clean = img.split("?")[0].strip().rstrip("\\")
         if clean.startswith("//"):
@@ -155,6 +168,96 @@ def clean_images(image_list: List[str]) -> List[str]:
         if clean.startswith("http") and clean not in urls:
             urls.append(clean)
     return urls
+
+
+def extract_structured_dimensions_and_measurements(
+    desc: str,
+    bullets: List[str],
+    specs: Dict[str, Any]
+) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+    """
+    Extract isolated dimensions (LxHxW) and measurements (drops, heel)
+    conforming to Shopify Metafield specifications.
+    """
+    dimensions: Dict[str, Any] = {
+        "length_in": None,
+        "height_in": None,
+        "width_in": None,
+        "formatted": None
+    }
+    measurements: Dict[str, Any] = {
+        "handle_drop_in": None,
+        "strap_drop_in": None,
+        "heel_height_in": None
+    }
+
+    all_texts = list(bullets)
+    if desc:
+        all_texts.extend([line.strip() for line in desc.splitlines() if line.strip()])
+    if "Bag Dimensions" in specs:
+        all_texts.append(str(specs["Bag Dimensions"]))
+
+    dim_pattern = re.compile(
+        r'(\d+(?:\s+\d+/\d+)?|\d+(?:\.\d+)?)"\s*\(L\)\s*x\s*(\d+(?:\s+\d+/\d+)?|\d+(?:\.\d+)?)"\s*\(H\)(?:\s*x\s*(\d+(?:\s+\d+/\d+)?|\d+(?:\.\d+)?)"\s*\(W\))?',
+        re.IGNORECASE
+    )
+
+    for text in all_texts:
+        clean_text = html.unescape(text).strip()
+        if not clean_text:
+            continue
+
+        # 1. Check Dimensions LxHxW format
+        if not dimensions["formatted"]:
+            m_dim = dim_pattern.search(clean_text)
+            if m_dim:
+                l_val = m_dim.group(1).strip()
+                h_val = m_dim.group(2).strip()
+                w_val = m_dim.group(3).strip() if m_dim.group(3) else None
+                dimensions["length_in"] = l_val
+                dimensions["height_in"] = h_val
+                dimensions["width_in"] = w_val
+                dimensions["formatted"] = f'{l_val}" (L) x {h_val}" (H)' + (f' x {w_val}" (W)' if w_val else '')
+
+        # 1b. Check Key-Value Dimensions: Length: 11.0", Height: 8.0", Width: 4.5"
+        if not dimensions["length_in"]:
+            m_len = re.search(r'length:\s*([0-9./\s]+)"?', clean_text, re.IGNORECASE)
+            if m_len:
+                dimensions["length_in"] = m_len.group(1).strip()
+        if not dimensions["height_in"]:
+            m_hgt = re.search(r'height:\s*([0-9./\s]+)"?', clean_text, re.IGNORECASE)
+            if m_hgt:
+                dimensions["height_in"] = m_hgt.group(1).strip()
+        if not dimensions["width_in"]:
+            m_wdt = re.search(r'width:\s*([0-9./\s]+)"?', clean_text, re.IGNORECASE)
+            if m_wdt:
+                dimensions["width_in"] = m_wdt.group(1).strip()
+
+        # 2. Check Handle Drop
+        if not measurements["handle_drop_in"] and "handle" in clean_text.lower() and "drop" in clean_text.lower():
+            m_hd = re.search(r'(\d+(?:\s+\d+/\d+)?|\d+(?:\.\d+)?)"\s*drop', clean_text, re.IGNORECASE)
+            if m_hd:
+                measurements["handle_drop_in"] = m_hd.group(1).strip()
+
+        # 3. Check Strap / Crossbody Drop
+        if not measurements["strap_drop_in"] and any(k in clean_text.lower() for k in ["strap", "crossbody", "shoulder"]) and "drop" in clean_text.lower():
+            m_sd = re.search(r'(\d+(?:\s+\d+/\d+)?|\d+(?:\.\d+)?)"\s*drop', clean_text, re.IGNORECASE)
+            if m_sd:
+                measurements["strap_drop_in"] = m_sd.group(1).strip()
+
+        # 4. Check Heel Height
+        if not measurements["heel_height_in"] and "heel" in clean_text.lower():
+            m_hl = re.search(r'(\d+(?:\s+\d+/\d+)?|\d+(?:\.\d+)?)"\s*heel', clean_text, re.IGNORECASE)
+            if m_hl:
+                measurements["heel_height_in"] = m_hl.group(1).strip()
+
+    if not dimensions["formatted"] and dimensions["length_in"] and dimensions["height_in"]:
+        l = dimensions["length_in"]
+        h = dimensions["height_in"]
+        w = dimensions["width_in"]
+        dimensions["formatted"] = f'{l}" (L) x {h}" (H)' + (f' x {w}" (W)' if w else '')
+
+    return dimensions, measurements
 
 
 def parse_specifications(desc: str, bullets: List[str], existing_specs: Dict[str, Any]) -> Dict[str, str]:
@@ -170,10 +273,10 @@ def parse_specifications(desc: str, bullets: List[str], existing_specs: Dict[str
         clean_b = html.unescape(b).strip()
         if not clean_b:
             continue
-        # Dimensions pattern: e.g. 9 1/2" (L) x 6" (H) x 3" (W)
-        dim_match = re.search(r'(\d+[\s\d/.]*"\s*\(L\)\s*x\s*\d+[\s\d/.]*"\s*\(H\)\s*x\s*\d+[\s\d/.]*"\s*\(W\))', clean_b, re.IGNORECASE)
+        # Fraction-aware dimensions pattern
+        dim_match = re.search(r'(\d+(?:\s+\d+/\d+)?|\d+/\d+)"\s*\(L\)\s*x\s*(\d+(?:\s+\d+/\d+)?|\d+/\d+)"\s*\(H\)(?:\s*x\s*(\d+(?:\s+\d+/\d+)?|\d+/\d+)"\s*\(W\))?', clean_b, re.IGNORECASE)
         if dim_match:
-            specs["Bag Dimensions"] = dim_match.group(1).strip()
+            specs["Bag Dimensions"] = dim_match.group(0).strip()
             continue
 
         # Simple LxHxW
@@ -214,6 +317,66 @@ def parse_specifications(desc: str, bullets: List[str], existing_specs: Dict[str
     return specs
 
 
+
+def extract_color_variants_from_group(
+    has_variant: List[Dict[str, Any]],
+    base_sku: str,
+    source_price_usd: float,
+    source_compare_usd: Optional[float],
+    usd_to_inr_rate: float,
+    featured_image: Optional[str]
+) -> List[Dict[str, Any]]:
+    """Extract canonical color variants from ProductGroup hasVariant list."""
+    variants = []
+    seen_skus = set()
+    for idx, v in enumerate(has_variant):
+        v_sku = v.get("sku") or f"{base_sku}-{idx+1}"
+        if v_sku in seen_skus:
+            continue
+        seen_skus.add(v_sku)
+
+        color_name = v.get("color") or v.get("name") or "Standard"
+        offers = v.get("offers", {})
+        if isinstance(offers, list) and offers:
+            offers = offers[0]
+        v_price_usd = float(offers.get("price") or source_price_usd or 0.0)
+        v_price_inr = convert_usd_to_inr(v_price_usd, usd_to_inr_rate) if v_price_usd > 0 else 0
+        v_stock = "instock" in str(offers.get("availability", "InStock")).lower()
+
+        # Extract hero image for this color variant
+        v_images = v.get("image", [])
+        if isinstance(v_images, (str, dict)):
+            v_images = [v_images]
+        v_hero = None
+        for img_obj in v_images:
+            u = img_obj.get("url") if isinstance(img_obj, dict) else img_obj
+            if u and isinstance(u, str):
+                u_clean = u.split("?")[0].strip()
+                if "_swatch" not in u_clean.lower() and "swatch_" not in u_clean.lower():
+                    v_hero = u_clean
+                    break
+        if not v_hero:
+            v_hero = featured_image
+
+        variants.append({
+            "id": None,
+            "sku": v_sku,
+            "title": color_name,
+            "price": f"{v_price_inr:.2f}",
+            "compare_at_price": None,
+            "source_price": v_price_usd,
+            "source_compare_at_price": source_compare_usd,
+            "currency": "INR",
+            "source_currency": "USD",
+            "in_stock": v_stock,
+            "image_url": v_hero,
+            "option_values": [
+                {"option_name": "Color", "name": color_name}
+            ]
+        })
+    return variants
+
+
 def build_canonical_variants(
     raw_data: Dict[str, Any],
     base_sku: str,
@@ -223,11 +386,14 @@ def build_canonical_variants(
     source_compare_usd: Optional[float],
     is_shoe: bool,
     gender: str,
-    featured_image: Optional[str]
+    featured_image: Optional[str],
+    usd_to_inr_rate: float
 ) -> List[Dict[str, Any]]:
     """Build canonical variants for both shoes (multi-size) and accessories (colors)."""
     raw_variants = raw_data.get("variants", [])
     raw_shoe_sizes = raw_data.get("shoe_sizes", [])
+    has_variant = (raw_data.get("product_group") or {}).get("hasVariant", [])
+    raw_color_variants = raw_data.get("color_variants", [])
     
     variants = []
 
@@ -255,6 +421,10 @@ def build_canonical_variants(
                     {"option_name": "Size", "name": f"US {us_size} / UK {uk_size}"}
                 ]
             })
+    elif has_variant:
+        variants = extract_color_variants_from_group(has_variant, base_sku, source_price_usd, source_compare_usd, usd_to_inr_rate, featured_image)
+    elif raw_color_variants:
+        variants = extract_color_variants_from_group(raw_color_variants, base_sku, source_price_usd, source_compare_usd, usd_to_inr_rate, featured_image)
     elif raw_variants:
         for idx, rv in enumerate(raw_variants):
             v_sku = rv.get("sku") or f"{base_sku}-{idx+1}"
@@ -262,6 +432,8 @@ def build_canonical_variants(
             v_size = rv.get("size")
             v_stock = bool(rv.get("in_stock", True))
             v_title = rv.get("name") or v_color
+            v_price = float(rv.get("price") or source_price_usd)
+            v_price_inr = convert_usd_to_inr(v_price, usd_to_inr_rate)
             
             option_vals = [{"option_name": "Color", "name": v_color}]
             if v_size and is_shoe:
@@ -271,9 +443,9 @@ def build_canonical_variants(
                 "id": rv.get("id"),
                 "sku": v_sku,
                 "title": v_title,
-                "price": f"{price_inr:.2f}",
-                "compare_at_price": f"{compare_inr:.2f}" if compare_inr and compare_inr > price_inr else None,
-                "source_price": source_price_usd,
+                "price": f"{v_price_inr:.2f}",
+                "compare_at_price": f"{compare_inr:.2f}" if compare_inr and compare_inr > v_price_inr else None,
+                "source_price": v_price,
                 "source_compare_at_price": source_compare_usd,
                 "currency": "INR",
                 "source_currency": "USD",

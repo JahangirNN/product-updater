@@ -9,11 +9,11 @@
   "source_sku": "CEZ37 IMWBR",
   "source_price": 199.0,
   "source_compare_at_price": null,
-  "current_price": 19025.0,
+  "current_price": 19039.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "forex_rate_used": 95.601765,
+  "forex_rate_used": 95.674534,
   "availability": "in_stock",
   "material": "Suede and smooth leather",
   "specifications": {
@@ -22,9 +22,21 @@
     "Handle Drop": "Detachable handle with 8.5\" drop",
     "Shoulder Strap Drop": "Detachable strap with 23.25\" drop for shoulder or crossbody wear",
     "Pockets": "Inside multifunction pocket",
-    "Closure": "Zip-top closure"
+    "Closure": "Zip-top closure",
+    "Bag Dimensions": "10.0\" (L) x 4.0\" (H) x 2.75\" (W)"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Ashton Bag is a slim profile small bag for evenings or daily plans. Crafted of suede and smooth leather, this shoulder bag includes a zip-top closure and inside multifunction pocket for simple organization. Outside snap pockets and a detachable strap let this minimalist crossbody switch from hand-held to hands-free wear.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Suede and smooth leather</li>\n      <li><strong>Lining:</strong> Recycled polyester lining</li>\n      <li><strong>Closure:</strong> Zip-top closure</li>\n      <li><strong>Organization:</strong> Inside multifunction pocket</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">Detachable handle with 8.5&quot; drop</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">Detachable strap with 23.25&quot; drop for shoulder or crossbody wear</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "dimensions": {
+    "length_in": "10.0",
+    "height_in": "4.0",
+    "width_in": "2.75",
+    "formatted": "10.0\" (L) x 4.0\" (H) x 2.75\" (W)"
+  },
+  "measurements": {
+    "handle_drop_in": "8.5",
+    "strap_drop_in": "23.25",
+    "heel_height_in": null
+  },
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Ashton Bag is a slim profile small bag for evenings or daily plans. Crafted of suede and smooth leather, this shoulder bag includes a zip-top closure and inside multifunction pocket for simple organization. Outside snap pockets and a detachable strap let this minimalist crossbody switch from hand-held to hands-free wear.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Suede and smooth leather</li>\n      <li><strong>Lining:</strong> Recycled polyester lining</li>\n      <li><strong>Closure:</strong> Zip-top closure</li>\n      <li><strong>Organization:</strong> Inside multifunction pocket</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">10.0&quot; (L) x 4.0&quot; (H) x 2.75&quot; (W)</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">Detachable handle with 8.5&quot; drop</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">Detachable strap with 23.25&quot; drop for shoulder or crossbody wear</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://coach.scene7.com/is/image/Coach/cez37_imwbr_a0",
     "https://coach.scene7.com/is/image/Coach/cez37_imwbr_a10",
@@ -35,15 +47,14 @@
     "https://coach.scene7.com/is/image/Coach/cez37_imwbr_a8",
     "https://coach.scene7.com/is/image/Coach/cez37_imwbr_a91",
     "https://coach.scene7.com/is/image/Coach/cez37_imwbr_a92",
-    "https://coach.scene7.com/is/image/Coach/cez37_imwbr_a99",
-    "https://coach.scene7.com/is/image/Coach/cez37_imwbr_swatch"
+    "https://coach.scene7.com/is/image/Coach/cez37_imwbr_a99"
   ],
   "variants": [
     {
       "id": null,
       "sku": "CEZ37 IMWBR",
       "title": "Gold/Warm Brown",
-      "price": "19025.00",
+      "price": "19039.00",
       "compare_at_price": null,
       "source_price": 199.0,
       "source_compare_at_price": null,
@@ -57,6 +68,139 @@
           "name": "Gold/Warm Brown"
         }
       ]
+    },
+    {
+      "id": null,
+      "sku": "CER19 IMS9W",
+      "title": "Gold/Faded Blush",
+      "price": "11290.00",
+      "compare_at_price": null,
+      "source_price": 118.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cer19_ims9w_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Faded Blush"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDC12 SVCAH",
+      "title": "Silver/Chalk Multi",
+      "price": "12438.00",
+      "compare_at_price": null,
+      "source_price": 130.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cdc12_svcah_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Chalk Multi"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDA95 SV/IZ",
+      "title": "Silver/Light Violet",
+      "price": "11290.00",
+      "compare_at_price": null,
+      "source_price": 118.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cda95_sviz_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Light Violet"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDA95 SV/MI",
+      "title": "Silver/Mint",
+      "price": "11290.00",
+      "compare_at_price": null,
+      "source_price": 118.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cda95_svmi_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Mint"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CCZ24 IMYMX",
+      "title": "Gold/Tan/Vintage Brown",
+      "price": "12438.00",
+      "compare_at_price": null,
+      "source_price": 130.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/ccz24_imymx_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Tan/Vintage Brown"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CCE38 QBD20",
+      "title": "Gunmetal/Olive Multi",
+      "price": "12438.00",
+      "compare_at_price": null,
+      "source_price": 130.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cce38_qbd20_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gunmetal/Olive Multi"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CM079 SV/HA",
+      "title": "Silver/Chalk",
+      "price": "11290.00",
+      "compare_at_price": null,
+      "source_price": 118.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cm079_svha_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Chalk"
+        }
+      ]
     }
   ],
   "product_options": [
@@ -65,6 +209,27 @@
       "values": [
         {
           "name": "Gold/Warm Brown"
+        },
+        {
+          "name": "Gold/Faded Blush"
+        },
+        {
+          "name": "Silver/Chalk Multi"
+        },
+        {
+          "name": "Silver/Light Violet"
+        },
+        {
+          "name": "Silver/Mint"
+        },
+        {
+          "name": "Gold/Tan/Vintage Brown"
+        },
+        {
+          "name": "Gunmetal/Olive Multi"
+        },
+        {
+          "name": "Silver/Chalk"
         }
       ]
     }
@@ -77,10 +242,9 @@
   "groups": [
     "women_bags"
   ],
-  "product_id": "bba8edde35607d09",
-  "store": "coach",
   "created_at": "2026-09-13T00:46:00Z",
-  "last_verified_at": "2026-09-13T05:46:11Z",
-  "id": "fd1a30df2dccd480",
-  "updated_at": "2026-09-13T05:46:11Z"
+  "last_verified_at": "2026-09-15T17:15:14Z",
+  "id": "bba8edde35607d09",
+  "product_id": "bba8edde35607d09",
+  "store": "coach"
 }

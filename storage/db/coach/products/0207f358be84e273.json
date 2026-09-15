@@ -9,20 +9,32 @@
   "source_sku": "CFQ23 IMPOP",
   "source_price": 179.0,
   "source_compare_at_price": null,
-  "current_price": 17113.0,
+  "current_price": 17126.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "forex_rate_used": 95.601765,
+  "forex_rate_used": 95.674534,
   "availability": "in_stock",
   "material": "Shiny smooth leather",
   "specifications": {
     "Material": "Shiny smooth leather",
     "Lining": "Recycled polyester lining",
-    "Shoulder Strap Drop": "Detachable long strap with 22.75\" drop for shoulder or crossbody wear",
-    "Closure": "Zip-top closure"
+    "Shoulder Strap Drop": "Detachable long strap with 22.75\\\" drop for shoulder or crossbody wear",
+    "Closure": "Zip-top closure",
+    "Bag Dimensions": "7.75\" (L) x 5.0\" (H) x 2.25\" (W)"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Soft Teri Mini Crossbody Bag is made for daytime plans and evenings out. Crafted of smooth leather, this compact style features two credit card slots and an inside snap pocket for keeping essentials organized. Detachable short and long straps offer options for shoulder or crossbody wear.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Shiny smooth leather</li>\n      <li><strong>Lining:</strong> Recycled polyester lining</li>\n      <li><strong>Closure:</strong> Zip-top closure</li>\n      <li><strong>Organization:</strong> N/A</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">Detachable long strap with 22.75&quot; drop for shoulder or crossbody wear</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "dimensions": {
+    "length_in": "7.75",
+    "height_in": "5.0",
+    "width_in": "2.25",
+    "formatted": "7.75\" (L) x 5.0\" (H) x 2.25\" (W)"
+  },
+  "measurements": {
+    "handle_drop_in": null,
+    "strap_drop_in": "8.75",
+    "heel_height_in": null
+  },
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Soft Teri Mini Crossbody Bag is made for daytime plans and evenings out. Crafted of smooth leather, this compact style features two credit card slots and an inside snap pocket for keeping essentials organized. Detachable short and long straps offer options for shoulder or crossbody wear.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Shiny smooth leather</li>\n      <li><strong>Lining:</strong> Recycled polyester lining</li>\n      <li><strong>Closure:</strong> Zip-top closure</li>\n      <li><strong>Organization:</strong> N/A</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">7.75&quot; (L) x 5.0&quot; (H) x 2.25&quot; (W)</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">Detachable long strap with 22.75\\&quot; drop for shoulder or crossbody wear</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://coach.scene7.com/is/image/Coach/cfq23_impop_a0",
     "https://coach.scene7.com/is/image/Coach/cfq23_impop_a10",
@@ -35,15 +47,14 @@
     "https://coach.scene7.com/is/image/Coach/cfq23_impop_a8",
     "https://coach.scene7.com/is/image/Coach/cfq23_impop_a88",
     "https://coach.scene7.com/is/image/Coach/cfq23_impop_a92",
-    "https://coach.scene7.com/is/image/Coach/cfq23_impop_a99",
-    "https://coach.scene7.com/is/image/Coach/cfq23_impop_swatch"
+    "https://coach.scene7.com/is/image/Coach/cfq23_impop_a99"
   ],
   "variants": [
     {
       "id": null,
       "sku": "CFQ23 IMPOP",
       "title": "Gold/Poppy",
-      "price": "17113.00",
+      "price": "17126.00",
       "compare_at_price": null,
       "source_price": 179.0,
       "source_compare_at_price": null,
@@ -57,6 +68,519 @@
           "name": "Gold/Poppy"
         }
       ]
+    },
+    {
+      "id": null,
+      "sku": "CW323 IMXAQ",
+      "title": "Gold/Walnut/Black",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cw323_imxaq_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Walnut/Black"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CW323 IMXHE",
+      "title": "Gold/Tan/Brown",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cw323_imxhe_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Tan/Brown"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CW323 SVPWH",
+      "title": "Silver/Sand/Taupe",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cw323_svpwh_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Sand/Taupe"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CW323 IMXU5",
+      "title": "Gold/White/Chalk",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cw323_imxu5_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/White/Chalk"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CW323 IMYED",
+      "title": "Gold/Black Currant",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cw323_imyed_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Black Currant"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CFF98 IMWBR",
+      "title": "Gold/Warm Brown",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cff98_imwbr_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Warm Brown"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDW68 SVB9C",
+      "title": "Silver/Light Sand",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cdw68_svb9c_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Light Sand"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDW68 IMSOF",
+      "title": "Gold/Soft Pink",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cdw68_imsof_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Soft Pink"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDW68 IMCNT",
+      "title": "Gold/Bright Cherry",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cdw68_imcnt_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Bright Cherry"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CEN05 IMN48",
+      "title": "Gold/Blue Multi",
+      "price": "10524.00",
+      "compare_at_price": null,
+      "source_price": 110.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cen05_imn48_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Blue Multi"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CEM94 IMUWR",
+      "title": "Gold/Light Lemon",
+      "price": "9567.00",
+      "compare_at_price": null,
+      "source_price": 100.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cem94_imuwr_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Light Lemon"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CEM95 IMTN2",
+      "title": "Gold/Tan",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cem95_imtn2_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Tan"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CFF97 IMNH1",
+      "title": "Gold/Light Pink",
+      "price": "9567.00",
+      "compare_at_price": null,
+      "source_price": 100.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cff97_imnh1_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Light Pink"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CW309 IMMPL",
+      "title": "Gold/Maple",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cw309_immpl_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Maple"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CW309 IMCHK",
+      "title": "Gold/Chalk",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cw309_imchk_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Chalk"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CW309 IMBLK",
+      "title": "Gold/Black",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cw309_imblk_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Black"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDW66 IMYUB",
+      "title": "Gold/Toast",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cdw66_imyub_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Toast"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDW51 IMBRN",
+      "title": "Gold/Brown",
+      "price": "11959.00",
+      "compare_at_price": null,
+      "source_price": 125.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cdw51_imbrn_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Brown"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDW51 IMP2Q",
+      "title": "Gold/Sunset",
+      "price": "11959.00",
+      "compare_at_price": null,
+      "source_price": 125.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cdw51_imp2q_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Sunset"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDW67 SV/IY",
+      "title": "Silver/Ivory",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cdw67_sviy_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Ivory"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDQ25 IMTYV",
+      "title": "Gold/Indigo",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cdq25_imtyv_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Indigo"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDP30 IMBLK",
+      "title": "Gold/Black",
+      "price": "17126.00",
+      "compare_at_price": null,
+      "source_price": 179.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cw309_imblk_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Black"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CCE43 IMORX",
+      "title": "Gold/Dark Wine",
+      "price": "10524.00",
+      "compare_at_price": null,
+      "source_price": 110.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cce43_imorx_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Dark Wine"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CCE83 SVEIG",
+      "title": "Silver/METALLIC GUNMETAL",
+      "price": "9567.00",
+      "compare_at_price": null,
+      "source_price": 100.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cce83_sveig_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/METALLIC GUNMETAL"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CBG63 IMY2L",
+      "title": "Gold/Blue Bell Multi",
+      "price": "13394.00",
+      "compare_at_price": null,
+      "source_price": 140.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cbg63_imy2l_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Blue Bell Multi"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CAJ98 SV/HA",
+      "title": "Silver/Chalk",
+      "price": "13394.00",
+      "compare_at_price": null,
+      "source_price": 140.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/caj98_svha_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Chalk"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CW310 SV/BK",
+      "title": "Silver/Black",
+      "price": "9567.00",
+      "compare_at_price": null,
+      "source_price": 100.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cw310_svbk_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Black"
+        }
+      ]
     }
   ],
   "product_options": [
@@ -65,6 +589,84 @@
       "values": [
         {
           "name": "Gold/Poppy"
+        },
+        {
+          "name": "Gold/Walnut/Black"
+        },
+        {
+          "name": "Gold/Tan/Brown"
+        },
+        {
+          "name": "Silver/Sand/Taupe"
+        },
+        {
+          "name": "Gold/White/Chalk"
+        },
+        {
+          "name": "Gold/Black Currant"
+        },
+        {
+          "name": "Gold/Warm Brown"
+        },
+        {
+          "name": "Silver/Light Sand"
+        },
+        {
+          "name": "Gold/Soft Pink"
+        },
+        {
+          "name": "Gold/Bright Cherry"
+        },
+        {
+          "name": "Gold/Blue Multi"
+        },
+        {
+          "name": "Gold/Light Lemon"
+        },
+        {
+          "name": "Gold/Tan"
+        },
+        {
+          "name": "Gold/Light Pink"
+        },
+        {
+          "name": "Gold/Maple"
+        },
+        {
+          "name": "Gold/Chalk"
+        },
+        {
+          "name": "Gold/Black"
+        },
+        {
+          "name": "Gold/Toast"
+        },
+        {
+          "name": "Gold/Brown"
+        },
+        {
+          "name": "Gold/Sunset"
+        },
+        {
+          "name": "Silver/Ivory"
+        },
+        {
+          "name": "Gold/Indigo"
+        },
+        {
+          "name": "Gold/Dark Wine"
+        },
+        {
+          "name": "Silver/METALLIC GUNMETAL"
+        },
+        {
+          "name": "Gold/Blue Bell Multi"
+        },
+        {
+          "name": "Silver/Chalk"
+        },
+        {
+          "name": "Silver/Black"
         }
       ]
     }
@@ -77,10 +679,9 @@
   "groups": [
     "women_bags"
   ],
-  "product_id": "2fd64f38d40e3d67",
-  "store": "coach",
   "created_at": "2026-09-13T00:40:14Z",
-  "last_verified_at": "2026-09-13T05:40:13Z",
-  "id": "0207f358be84e273",
-  "updated_at": "2026-09-13T05:40:13Z"
+  "last_verified_at": "2026-09-15T17:08:15Z",
+  "id": "2fd64f38d40e3d67",
+  "product_id": "2fd64f38d40e3d67",
+  "store": "coach"
 }

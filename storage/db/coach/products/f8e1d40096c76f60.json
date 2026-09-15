@@ -9,32 +9,43 @@
   "source_sku": "CEU74 PMZ",
   "source_price": 79.0,
   "source_compare_at_price": null,
-  "current_price": 7553.0,
+  "current_price": 7558.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "forex_rate_used": 95.601765,
+  "forex_rate_used": 95.674534,
   "availability": "in_stock",
   "material": "3-In-1 Wallet In Loved Leather",
   "specifications": {
     "Material": "3-In-1 Wallet In Loved Leather",
-    "Pockets": "Full-length bill compartments"
+    "Pockets": "Full-length bill compartments",
+    "Bag Dimensions": "4.5\" (L) x 3.75\" (H) x 1.0\" (W)"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The 3-in-1 Wallet is ready for all-day use or quick errands. Crafted of rub-off smooth leather, this compact wallet features eight credit card slots, full-length bill compartments and a removable insert with an ID window and two extra card slots.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> 3-In-1 Wallet In Loved Leather</li>\n      <li><strong>Lining:</strong> Fabric / Polyester</li>\n      <li><strong>Closure:</strong> N/A</li>\n      <li><strong>Organization:</strong> Full-length bill compartments</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "dimensions": {
+    "length_in": "4.5",
+    "height_in": "3.75",
+    "width_in": "1.0",
+    "formatted": "4.5\" (L) x 3.75\" (H) x 1.0\" (W)"
+  },
+  "measurements": {
+    "handle_drop_in": null,
+    "strap_drop_in": null,
+    "heel_height_in": null
+  },
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The 3-in-1 Wallet is ready for all-day use or quick errands. Crafted of rub-off smooth leather, this compact wallet features eight credit card slots, full-length bill compartments and a removable insert with an ID window and two extra card slots.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> 3-In-1 Wallet In Loved Leather</li>\n      <li><strong>Lining:</strong> Fabric / Polyester</li>\n      <li><strong>Closure:</strong> N/A</li>\n      <li><strong>Organization:</strong> Full-length bill compartments</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">4.5&quot; (L) x 3.75&quot; (H) x 1.0&quot; (W)</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://coach.scene7.com/is/image/Coach/ceu74_pmz_a0",
     "https://coach.scene7.com/is/image/Coach/ceu74_pmz_a5",
     "https://coach.scene7.com/is/image/Coach/ceu74_pmz_a8",
     "https://coach.scene7.com/is/image/Coach/ceu74_pmz_a81",
-    "https://coach.scene7.com/is/image/Coach/ceu74_pmz_a91",
-    "https://coach.scene7.com/is/image/Coach/ceu74_pmz_swatch"
+    "https://coach.scene7.com/is/image/Coach/ceu74_pmz_a91"
   ],
   "variants": [
     {
       "id": null,
       "sku": "CEU74 PMZ",
       "title": "Black Brown",
-      "price": "7553.00",
+      "price": "7558.00",
       "compare_at_price": null,
       "source_price": 79.0,
       "source_compare_at_price": null,
@@ -68,10 +79,9 @@
   "groups": [
     "men_wallets"
   ],
-  "product_id": "a94b73e47ae2d993",
-  "store": "coach",
   "created_at": "2026-09-13T00:45:24Z",
-  "last_verified_at": "2026-09-13T05:45:31Z",
-  "id": "f8e1d40096c76f60",
-  "updated_at": "2026-09-13T05:45:31Z"
+  "last_verified_at": "2026-09-15T17:15:03Z",
+  "id": "a94b73e47ae2d993",
+  "product_id": "a94b73e47ae2d993",
+  "store": "coach"
 }

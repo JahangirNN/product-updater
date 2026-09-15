@@ -9,11 +9,11 @@
   "source_sku": "CEA65 IMPOP",
   "source_price": 199.0,
   "source_compare_at_price": null,
-  "current_price": 19025.0,
+  "current_price": 19039.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "forex_rate_used": 95.601765,
+  "forex_rate_used": 95.674534,
   "availability": "in_stock",
   "material": "Shiny smooth leather",
   "specifications": {
@@ -21,9 +21,21 @@
     "Lining": "Recycled polyester lining",
     "Handle Drop": "Handles with 10.5\" drop",
     "Pockets": "Inside zip, cell phone and multifunction pockets",
-    "Closure": "Zip-top closure"
+    "Closure": "Zip-top closure",
+    "Bag Dimensions": "13.75\" (L) x 10.25\" (H) x 5.0\" (W)"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Station is perfect for commutes and busy days. This smooth leather tote features inside zip, cell phone and multifunction pockets and an outside zip pocket to keep everything organized.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Shiny smooth leather</li>\n      <li><strong>Lining:</strong> Recycled polyester lining</li>\n      <li><strong>Closure:</strong> Zip-top closure</li>\n      <li><strong>Organization:</strong> Inside zip, cell phone and multifunction pockets</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">Handles with 10.5&quot; drop</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "dimensions": {
+    "length_in": "13.75",
+    "height_in": "10.25",
+    "width_in": "5.0",
+    "formatted": "13.75\" (L) x 10.25\" (H) x 5.0\" (W)"
+  },
+  "measurements": {
+    "handle_drop_in": "10.5",
+    "strap_drop_in": null,
+    "heel_height_in": null
+  },
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Station is perfect for commutes and busy days. This smooth leather tote features inside zip, cell phone and multifunction pockets and an outside zip pocket to keep everything organized.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Shiny smooth leather</li>\n      <li><strong>Lining:</strong> Recycled polyester lining</li>\n      <li><strong>Closure:</strong> Zip-top closure</li>\n      <li><strong>Organization:</strong> Inside zip, cell phone and multifunction pockets</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">13.75&quot; (L) x 10.25&quot; (H) x 5.0&quot; (W)</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">Handles with 10.5&quot; drop</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://coach.scene7.com/is/image/Coach/cea65_imblk_a0",
     "https://coach.scene7.com/is/image/Coach/cea65_imblk_a10",
@@ -32,7 +44,6 @@
     "https://coach.scene7.com/is/image/Coach/cea65_imblk_a8",
     "https://coach.scene7.com/is/image/Coach/cea65_imblk_a91",
     "https://coach.scene7.com/is/image/Coach/cea65_imblk_a99",
-    "https://coach.scene7.com/is/image/Coach/cea65_imblk_swatch",
     "https://coach.scene7.com/is/image/Coach/cea65_immpl_a0",
     "https://coach.scene7.com/is/image/Coach/cea65_immpl_a10",
     "https://coach.scene7.com/is/image/Coach/cea65_immpl_a3",
@@ -40,7 +51,6 @@
     "https://coach.scene7.com/is/image/Coach/cea65_immpl_a8",
     "https://coach.scene7.com/is/image/Coach/cea65_immpl_a91",
     "https://coach.scene7.com/is/image/Coach/cea65_immpl_a99",
-    "https://coach.scene7.com/is/image/Coach/cea65_immpl_swatch",
     "https://coach.scene7.com/is/image/Coach/cea65_impop_a0",
     "https://coach.scene7.com/is/image/Coach/cea65_impop_a10",
     "https://coach.scene7.com/is/image/Coach/cea65_impop_a3",
@@ -49,7 +59,6 @@
     "https://coach.scene7.com/is/image/Coach/cea65_impop_a8",
     "https://coach.scene7.com/is/image/Coach/cea65_impop_a91",
     "https://coach.scene7.com/is/image/Coach/cea65_impop_a99",
-    "https://coach.scene7.com/is/image/Coach/cea65_impop_swatch",
     "https://coach.scene7.com/is/image/Coach/cea65_imvan_a0",
     "https://coach.scene7.com/is/image/Coach/cea65_imvan_a10",
     "https://coach.scene7.com/is/image/Coach/cea65_imvan_a3",
@@ -58,22 +67,39 @@
     "https://coach.scene7.com/is/image/Coach/cea65_imvan_a8",
     "https://coach.scene7.com/is/image/Coach/cea65_imvan_a91",
     "https://coach.scene7.com/is/image/Coach/cea65_imvan_a99",
-    "https://coach.scene7.com/is/image/Coach/cea65_imvan_swatch",
     "https://coach.scene7.com/is/image/Coach/cea65_imvfr_a0",
     "https://coach.scene7.com/is/image/Coach/cea65_imvfr_a10",
     "https://coach.scene7.com/is/image/Coach/cea65_imvfr_a3",
     "https://coach.scene7.com/is/image/Coach/cea65_imvfr_a6",
     "https://coach.scene7.com/is/image/Coach/cea65_imvfr_a8",
     "https://coach.scene7.com/is/image/Coach/cea65_imvfr_a91",
-    "https://coach.scene7.com/is/image/Coach/cea65_imvfr_a99",
-    "https://coach.scene7.com/is/image/Coach/cea65_imvfr_swatch"
+    "https://coach.scene7.com/is/image/Coach/cea65_imvfr_a99"
   ],
   "variants": [
     {
       "id": null,
-      "sku": "CEA65 IMPOP",
-      "title": "Gold/Poppy",
-      "price": "19025.00",
+      "sku": "CEA65 IMVFR",
+      "title": "Gold/Sandy Beige",
+      "price": "8467.00",
+      "compare_at_price": null,
+      "source_price": 88.5,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cea65_imvfr_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Sandy Beige"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CEA65 IMBLK",
+      "title": "Gold/Black",
+      "price": "19039.00",
       "compare_at_price": null,
       "source_price": 199.0,
       "source_compare_at_price": null,
@@ -81,6 +107,63 @@
       "source_currency": "USD",
       "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cea65_imblk_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Black"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CEA65 IMMPL",
+      "title": "Gold/Maple",
+      "price": "19039.00",
+      "compare_at_price": null,
+      "source_price": 199.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cea65_immpl_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Maple"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CEA65 IMVAN",
+      "title": "Gold/Vanilla",
+      "price": "14112.00",
+      "compare_at_price": null,
+      "source_price": 147.5,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cea65_imvan_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Gold/Vanilla"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CEA65 IMPOP",
+      "title": "Gold/Poppy",
+      "price": "19039.00",
+      "compare_at_price": null,
+      "source_price": 199.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cea65_impop_a0",
       "option_values": [
         {
           "option_name": "Color",
@@ -93,6 +176,18 @@
     {
       "name": "Color",
       "values": [
+        {
+          "name": "Gold/Sandy Beige"
+        },
+        {
+          "name": "Gold/Black"
+        },
+        {
+          "name": "Gold/Maple"
+        },
+        {
+          "name": "Gold/Vanilla"
+        },
         {
           "name": "Gold/Poppy"
         }
@@ -107,10 +202,9 @@
   "groups": [
     "women_bags"
   ],
-  "product_id": "b9115070a75300a0",
-  "store": "coach",
   "created_at": "2026-09-13T00:45:55Z",
-  "last_verified_at": "2026-09-13T05:46:04Z",
-  "id": "412a5b3ef378fa6e",
-  "updated_at": "2026-09-13T05:46:04Z"
+  "last_verified_at": "2026-09-15T17:10:05Z",
+  "id": "b9115070a75300a0",
+  "product_id": "b9115070a75300a0",
+  "store": "coach"
 }

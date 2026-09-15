@@ -7,7 +7,7 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 11366,
+  "current_price": 11377,
   "source_price": 119.0,
   "currency": "INR",
   "source_currency": "USD",
@@ -23,12 +23,12 @@
     {
       "sku": "32S6SYTU1W",
       "title": "0239",
-      "price": "11366.00",
-      "compare_at_price": "12369.00",
+      "price": "11377.00",
+      "compare_at_price": "12380.00",
       "source_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/f0b6c09f-84ad-4b24-b6a2-63a2b64f6715/32S6SYTU1W-198-0239_1-tif",
       "option_values": [
         {
@@ -75,11 +75,12 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-13T05:40:28Z",
+  "last_verified_at": "2026-09-13T07:08:37Z",
   "id": "bb9fe613ecc729d3",
   "created_at": "2026-09-11T18:30:37Z",
-  "updated_at": "2026-09-13T05:40:28Z",
+  "updated_at": "2026-09-13T07:08:37Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Bryant Small Crocheted Convertible Crossbody Pochette by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8”W X 4.5”HX 1.5”D</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 129.5,
-  "compare_at_price": 12369
+  "compare_at_price": 12380,
+  "shopify_sync_pending": true
 }

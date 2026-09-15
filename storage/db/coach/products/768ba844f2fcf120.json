@@ -9,32 +9,43 @@
   "source_sku": "CFE01 IMBRN",
   "source_price": 69.0,
   "source_compare_at_price": null,
-  "current_price": 6597.0,
+  "current_price": 6602.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "forex_rate_used": 95.601765,
+  "forex_rate_used": 95.674534,
   "availability": "in_stock",
   "material": "Smooth leather",
   "specifications": {
     "Material": "Smooth leather",
     "Pockets": "Full-length bill compartment",
-    "Closure": "Snap closure"
+    "Closure": "Snap closure",
+    "Bag Dimensions": "4.25\" (L) x 3.5\" (H) x 1.0\" (W)"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Snap Wallet works well for everyday organization. This smooth leather wallet features three credit card slots, a full-length bill compartment, an outside zip coin pocket and an ID window for convenient storage.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Smooth leather</li>\n      <li><strong>Lining:</strong> Fabric / Polyester</li>\n      <li><strong>Closure:</strong> Snap closure</li>\n      <li><strong>Organization:</strong> Full-length bill compartment</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "dimensions": {
+    "length_in": "4.25",
+    "height_in": "3.5",
+    "width_in": "1.0",
+    "formatted": "4.25\" (L) x 3.5\" (H) x 1.0\" (W)"
+  },
+  "measurements": {
+    "handle_drop_in": null,
+    "strap_drop_in": null,
+    "heel_height_in": null
+  },
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Snap Wallet works well for everyday organization. This smooth leather wallet features three credit card slots, a full-length bill compartment, an outside zip coin pocket and an ID window for convenient storage.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Smooth leather</li>\n      <li><strong>Lining:</strong> Fabric / Polyester</li>\n      <li><strong>Closure:</strong> Snap closure</li>\n      <li><strong>Organization:</strong> Full-length bill compartment</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">4.25&quot; (L) x 3.5&quot; (H) x 1.0&quot; (W)</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://coach.scene7.com/is/image/Coach/cfe01_imbrn_a0",
     "https://coach.scene7.com/is/image/Coach/cfe01_imbrn_a5",
     "https://coach.scene7.com/is/image/Coach/cfe01_imbrn_a8",
-    "https://coach.scene7.com/is/image/Coach/cfe01_imbrn_a91",
-    "https://coach.scene7.com/is/image/Coach/cfe01_imbrn_swatch"
+    "https://coach.scene7.com/is/image/Coach/cfe01_imbrn_a91"
   ],
   "variants": [
     {
       "id": null,
       "sku": "CFE01 IMBRN",
       "title": "Gold/Brown",
-      "price": "6597.00",
+      "price": "6602.00",
       "compare_at_price": null,
       "source_price": 69.0,
       "source_compare_at_price": null,
@@ -68,10 +79,9 @@
   "groups": [
     "women_wallets"
   ],
-  "product_id": "48db3e878d8f1a73",
-  "store": "coach",
   "created_at": "2026-09-13T00:41:19Z",
-  "last_verified_at": "2026-09-13T05:41:09Z",
-  "id": "768ba844f2fcf120",
-  "updated_at": "2026-09-13T05:41:09Z"
+  "last_verified_at": "2026-09-15T17:11:35Z",
+  "id": "48db3e878d8f1a73",
+  "product_id": "48db3e878d8f1a73",
+  "store": "coach"
 }

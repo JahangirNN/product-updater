@@ -9,11 +9,11 @@
   "source_sku": "CES17 SV/GN",
   "source_price": 269.0,
   "source_compare_at_price": null,
-  "current_price": 25717.0,
+  "current_price": 25736.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "forex_rate_used": 95.601765,
+  "forex_rate_used": 95.674534,
   "availability": "in_stock",
   "material": "Signature coated canvas and smooth leather",
   "specifications": {
@@ -21,23 +21,34 @@
     "Lining": "Recycled polyester lining",
     "Handle Drop": "Top handle with 3\" drop",
     "Pockets": "Laptop compartment with zip closure",
-    "Closure": "Zip closure"
+    "Closure": "Zip closure",
+    "Bag Dimensions": "11.75\" (L) x 16.5\" (H) x 6.0\" (W)"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Taylor Backpack is made for work days and daily plans. Crafted of Signature canvas and smooth leather, this backpack includes a laptop compartment with zip closure, inside zip, cell phone and multifunction pockets and an outside zip pocket for essentials. A luggage sleeve and adjustable shoulder straps add travel-ready versatility.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Signature coated canvas and smooth leather</li>\n      <li><strong>Lining:</strong> Recycled polyester lining</li>\n      <li><strong>Closure:</strong> Zip closure</li>\n      <li><strong>Organization:</strong> Laptop compartment with zip closure</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">Top handle with 3&quot; drop</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "dimensions": {
+    "length_in": "11.75",
+    "height_in": "16.5",
+    "width_in": "6.0",
+    "formatted": "11.75\" (L) x 16.5\" (H) x 6.0\" (W)"
+  },
+  "measurements": {
+    "handle_drop_in": "3",
+    "strap_drop_in": null,
+    "heel_height_in": null
+  },
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">The Taylor Backpack is made for work days and daily plans. Crafted of Signature canvas and smooth leather, this backpack includes a laptop compartment with zip closure, inside zip, cell phone and multifunction pockets and an outside zip pocket for essentials. A luggage sleeve and adjustable shoulder straps add travel-ready versatility.</p>\n  \n  <div class=\"product-highlights\">\n    <h4>Product Specifications</h4>\n    <ul>\n      <li><strong>Material:</strong> Signature coated canvas and smooth leather</li>\n      <li><strong>Lining:</strong> Recycled polyester lining</li>\n      <li><strong>Closure:</strong> Zip closure</li>\n      <li><strong>Organization:</strong> Laptop compartment with zip closure</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Size & Measurement Guide</summary>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Dimensions (L x H x W)</td>\n          <td style=\"padding: 6px;\">11.75&quot; (L) x 16.5&quot; (H) x 6.0&quot; (W)</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">Handle Drop</td>\n          <td style=\"padding: 6px;\">Top handle with 3&quot; drop</td>\n        </tr>\n        <tr>\n          <td style=\"padding: 6px; font-weight: 600;\">Shoulder / Crossbody Strap Drop</td>\n          <td style=\"padding: 6px;\">N/A</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://coach.scene7.com/is/image/Coach/ces17_svgn_a0",
     "https://coach.scene7.com/is/image/Coach/ces17_svgn_a3",
     "https://coach.scene7.com/is/image/Coach/ces17_svgn_a5",
     "https://coach.scene7.com/is/image/Coach/ces17_svgn_a8",
-    "https://coach.scene7.com/is/image/Coach/ces17_svgn_a91",
-    "https://coach.scene7.com/is/image/Coach/ces17_svgn_swatch"
+    "https://coach.scene7.com/is/image/Coach/ces17_svgn_a91"
   ],
   "variants": [
     {
       "id": null,
       "sku": "CES17 SV/GN",
       "title": "Silver/Green",
-      "price": "25717.00",
+      "price": "25736.00",
       "compare_at_price": null,
       "source_price": 269.0,
       "source_compare_at_price": null,
@@ -51,6 +62,139 @@
           "name": "Silver/Green"
         }
       ]
+    },
+    {
+      "id": null,
+      "sku": "CDX95 SVN2E",
+      "title": "Silver/Ink Blue",
+      "price": "18944.00",
+      "compare_at_price": null,
+      "source_price": 198.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cdx95_svn2e_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Ink Blue"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDX95 SVYZK",
+      "title": "Silver/Black Signature",
+      "price": "25736.00",
+      "compare_at_price": null,
+      "source_price": 269.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cdx95_svyzk_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Black Signature"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDX93 SV/OL",
+      "title": "Silver/Olive",
+      "price": "18944.00",
+      "compare_at_price": null,
+      "source_price": 198.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cdx93_svol_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Olive"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDX93 SV/BK",
+      "title": "Silver/Black",
+      "price": "25736.00",
+      "compare_at_price": null,
+      "source_price": 269.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cdx93_svbk_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Black"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDX93 SVSMU",
+      "title": "Silver/Deep Blue",
+      "price": "25736.00",
+      "compare_at_price": null,
+      "source_price": 269.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cdx93_svsmu_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Deep Blue"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDX93 SV/GP",
+      "title": "Silver/Graphite",
+      "price": "25736.00",
+      "compare_at_price": null,
+      "source_price": 269.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cdx93_svgp_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Graphite"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "sku": "CDX93 SVMPL",
+      "title": "Silver/Maple",
+      "price": "25736.00",
+      "compare_at_price": null,
+      "source_price": 269.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cdx93_svmpl_a0",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver/Maple"
+        }
+      ]
     }
   ],
   "product_options": [
@@ -59,6 +203,27 @@
       "values": [
         {
           "name": "Silver/Green"
+        },
+        {
+          "name": "Silver/Ink Blue"
+        },
+        {
+          "name": "Silver/Black Signature"
+        },
+        {
+          "name": "Silver/Olive"
+        },
+        {
+          "name": "Silver/Black"
+        },
+        {
+          "name": "Silver/Deep Blue"
+        },
+        {
+          "name": "Silver/Graphite"
+        },
+        {
+          "name": "Silver/Maple"
         }
       ]
     }
@@ -71,10 +236,9 @@
   "groups": [
     "men_bags"
   ],
-  "product_id": "a97c1f8c7fd75cc5",
-  "store": "coach",
   "created_at": "2026-09-13T00:45:27Z",
-  "last_verified_at": "2026-09-13T05:45:32Z",
-  "id": "c39752e55157c7e8",
-  "updated_at": "2026-09-13T05:45:32Z"
+  "last_verified_at": "2026-09-15T17:13:40Z",
+  "id": "a97c1f8c7fd75cc5",
+  "product_id": "a97c1f8c7fd75cc5",
+  "store": "coach"
 }
