@@ -68,8 +68,8 @@ def test_product_with_fewer_than_7_sizes_is_excluded():
             {"us_size": "13", "in_stock": True}
         ]
     }
-    res = parse_product_payload(raw_payload_6_sizes, usd_to_inr_rate=90.0)
-    assert res is None, "Product with 6 size variants should be excluded"
+    res = parse_product_payload(raw_payload_6_sizes, usd_to_inr_rate=90.0, min_size_variants=7)
+    assert res is None, "Product with 6 size variants should be excluded when min_size_variants=7"
 
     # Single size remnant (e.g. only US 14 left)
     raw_single_size = {
@@ -78,8 +78,8 @@ def test_product_with_fewer_than_7_sizes_is_excluded():
         "current_price": 160.0,
         "sizes": [{"us_size": "14", "in_stock": True}]
     }
-    assert parse_product_payload(raw_single_size, usd_to_inr_rate=90.0) is None, (
-        "Single size remnant must be excluded"
+    assert parse_product_payload(raw_single_size, usd_to_inr_rate=90.0, min_size_variants=7) is None, (
+        "Single size remnant must be excluded when min_size_variants=7"
     )
 
 
@@ -169,8 +169,8 @@ def test_duplicate_sizes_are_deduplicated_before_count():
             {"us_size": "11", "in_stock": True}
         ]
     }
-    res = parse_product_payload(raw_payload_with_dupes, usd_to_inr_rate=90.0)
-    assert res is None, "4 unique sizes repeated 8 times should still be excluded (< 7 distinct sizes)"
+    res = parse_product_payload(raw_payload_with_dupes, usd_to_inr_rate=90.0, min_size_variants=7)
+    assert res is None, "4 unique sizes repeated 8 times should still be excluded (< 7 distinct sizes) when min_size_variants=7"
 
 
 def test_kids_products_are_excluded_even_if_having_sizes():

@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Bow Kitten Heel Sandal In Signature Denim",
   "specifications": {
     "Material": "Bow Kitten Heel Sandal In Signature Denim",
@@ -127,7 +127,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cee10_ind_a0",
       "option_values": [
         {
@@ -322,9 +322,11 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:46:55Z",
-  "last_verified_at": "2026-09-15T18:03:12Z",
+  "last_verified_at": "2026-09-17T15:19:37Z",
   "id": "d0aab906a358a34c",
   "product_id": "d0aab906a358a34c",
   "store": "coach",
-  "updated_at": "2026-09-15T18:03:12Z"
+  "updated_at": "2026-09-17T15:19:37Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

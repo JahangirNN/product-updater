@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Udele Sport Slide In Signature Jacquard Canvas",
   "specifications": {
     "Material": "Udele Sport Slide In Signature Jacquard Canvas",
@@ -156,7 +156,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdm17_ckj_a0",
       "option_values": [
         {
@@ -175,7 +175,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdm17_ckj_a0",
       "option_values": [
         {
@@ -222,9 +222,11 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:48:06Z",
-  "last_verified_at": "2026-09-15T18:04:22Z",
+  "last_verified_at": "2026-09-17T15:20:09Z",
   "id": "ebfd29986025001c",
   "product_id": "ebfd29986025001c",
   "store": "coach",
-  "updated_at": "2026-09-15T18:04:22Z"
+  "updated_at": "2026-09-17T15:20:09Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

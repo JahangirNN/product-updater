@@ -15,6 +15,94 @@ def create_nordstrom_browser(headless: bool = True):
     return Camoufox(headless=headless)
 
 
+def setup_camoufox_route_blocking(page: Any) -> None:
+    """
+    Attach route filter to Camoufox page to block images, media, fonts, stylesheets,
+    and third-party trackers, keeping only primary scripts and documents needed for Kasada + React.
+    """
+    def _route_filter(route):
+        rt = route.request.resource_type
+        u = route.request.url.lower()
+        if rt in ["image", "media", "font"]:
+            route.abort()
+        elif any(k in u for k in ["analytics", "tracking", "doubleclick", "google-analytics", "quantummetric", "branch.io", "facebook"]):
+            route.abort()
+        else:
+            route.continue_()
+
+    try:
+        page.route("**/*", _route_filter)
+    except Exception:
+        pass
+
+
+def fetch_collection_catalog(page: Any) -> Dict[str, Dict[str, Any]]:
+    """
+    Harvest live price and stock status for the entire On shoe catalog from Nordstrom collection search pages.
+    Extracts all products from window.__INITIAL_CONFIG__ in only 2 page navigations (~40s total).
+    Returns mapping keyed by style ID and webPathAlias.
+    """
+    collection_urls = [
+        "https://www.nordstrom.com/sr?origin=keywordsearch&keyword=on%20shoes&filterByBrand=on&filterByGenderAge=men&filterByGenderAge=unisex&filterByGenderAge=women&page=1",
+        "https://www.nordstrom.com/sr?origin=keywordsearch&keyword=on%20shoes&filterByBrand=on&filterByGenderAge=men&filterByGenderAge=unisex&filterByGenderAge=women&page=2"
+    ]
+    catalog: Dict[str, Dict[str, Any]] = {}
+
+    for c_url in collection_urls:
+        try:
+            page.goto(c_url, wait_until="domcontentloaded", timeout=45000)
+            for _ in range(12):
+                page.wait_for_timeout(1000)
+                html = page.content()
+                if "istlWas" not in html and len(html) > 20000:
+                    break
+
+            idx = html.find("window.__INITIAL_CONFIG__ =")
+            if idx == -1:
+                continue
+
+            raw_sub = html[idx + len("window.__INITIAL_CONFIG__ ="):].strip()
+            decoder = json.JSONDecoder()
+            config_data, _ = decoder.raw_decode(raw_sub)
+            p_by_id = config_data.get("productResults", {}).get("productsById", {})
+
+            for st_id, p_obj in p_by_id.items():
+                props = p_obj.get("propositions", [])
+                prop0 = props[0] if props else {}
+                avail_data = prop0.get("availability", {})
+                ship_qty = int(avail_data.get("shipQuantity", 0) or 0)
+                salability = prop0.get("salability", {}).get("status", "")
+
+                retail_range = prop0.get("sellingRetailPriceRange", {})
+                base_range = prop0.get("baseRetailPriceRange", {})
+
+                min_p = float(retail_range.get("min", 0.0)) if retail_range.get("min") else 0.0
+                max_p = float(retail_range.get("max", 0.0)) if retail_range.get("max") else min_p
+                comp_p = float(base_range.get("max", 0.0)) if base_range.get("max") else max_p
+
+                in_stock = (ship_qty > 0) and (salability == "SELLABLE")
+                handle_alias = p_obj.get("webPathAlias") or ""
+
+                entry = {
+                    "style_id": str(st_id),
+                    "handle": handle_alias,
+                    "title": p_obj.get("copyProductTitle"),
+                    "price_min": min_p,
+                    "price_max": max_p,
+                    "compare_price": comp_p,
+                    "ship_quantity": ship_qty,
+                    "salability": salability,
+                    "in_stock": in_stock
+                }
+                catalog[str(st_id)] = entry
+                if handle_alias:
+                    catalog[handle_alias] = entry
+        except Exception:
+            continue
+
+    return catalog
+
+
 def extract_product_from_html(html: str, target_handle: str = "") -> Optional[Dict[str, Any]]:
     """
     Extract product details from HTML, prioritizing primary JSON-LD product block.
@@ -152,14 +240,17 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
                 "message": "Product page returned HTTP 404"
             }
 
+        # Ensure route blocking is active
+        setup_camoufox_route_blocking(page)
+
         # Adaptive wait for Kasada proof-of-work resolution
-        # Kasada typically takes between 4 to 8 seconds to solve client-side proof-of-work
+        # Kasada typically takes between 3 to 6 seconds to solve client-side proof-of-work
         html = page.content()
-        for _ in range(6):  # up to 6 x 2000ms = 12s max
-            page.wait_for_timeout(2000)
+        for _ in range(10):  # up to 10 x 1000ms = 10s max
+            page.wait_for_timeout(1000)
             html = page.content()
             page_title = page.title().strip()
-            if "istlWas" not in html and len(page_title) > 3:
+            if "istlWas" not in html and ("__INITIAL_CONFIG__" in html or "application/ld+json" in html or len(page_title) > 3):
                 break
 
         # Check if still blocked

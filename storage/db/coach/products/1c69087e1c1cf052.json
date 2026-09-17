@@ -88,7 +88,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cch97_s8w_a0",
       "option_values": [
         {
@@ -145,7 +145,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cch97_s8w_a0",
       "option_values": [
         {
@@ -321,9 +321,10 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:39:12Z",
-  "last_verified_at": "2026-09-15T17:54:42Z",
+  "last_verified_at": "2026-09-17T16:17:23Z",
   "id": "1c69087e1c1cf052",
   "product_id": "1c69087e1c1cf052",
   "store": "coach",
-  "updated_at": "2026-09-15T17:54:42Z"
+  "updated_at": "2026-09-17T16:17:23Z",
+  "shopify_sync_pending": true
 }

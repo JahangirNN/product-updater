@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Wallets",
   "gender": "Women",
-  "current_price": 8501,
+  "current_price": 8515,
   "source_price": 89.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/704b8f69-d533-4c1d-937a-dad94b71b1e5/32S6SJ6W9L-413-3168_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/704b8f69-d533-4c1d-937a-dad94b71b1e5/32S6SJ6W9L-413-3168_1-tif",
@@ -23,12 +23,12 @@
     {
       "sku": "32S6SJ6W9L",
       "title": "3168",
-      "price": "8501.00",
-      "compare_at_price": "12369.00",
+      "price": "8515.00",
+      "compare_at_price": "12390.00",
       "source_price": 89.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/704b8f69-d533-4c1d-937a-dad94b71b1e5/32S6SJ6W9L-413-3168_1-tif",
       "option_values": [
         {
@@ -77,12 +77,13 @@
     "wallets",
     "women"
   ],
-  "last_verified_at": "2026-09-13T07:09:04Z",
+  "last_verified_at": "2026-09-17T17:20:29Z",
   "id": "de87aeeba88b2402",
   "created_at": "2026-09-11T18:30:37Z",
-  "updated_at": "2026-09-13T07:09:04Z",
+  "updated_at": "2026-09-17T17:20:29Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Michael Kors X Christina Zimpel Jet Set Extra Large Convertible Wristlet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8.5”W X 4.75” H X 1.25”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop 7.5”</li>\n      <li><strong>Material:</strong> Polyurethane blend, 75% polyurethane/25% polyester</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 129.5,
-  "compare_at_price": 12369,
-  "material": "Polyurethane blend, 75% polyurethane/25% polyester"
+  "compare_at_price": 12390,
+  "material": "Polyurethane blend, 75% polyurethane/25% polyester",
+  "shopify_sync_pending": true
 }

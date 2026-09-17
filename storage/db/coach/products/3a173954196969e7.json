@@ -187,7 +187,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cap32_blk_a0",
       "option_values": [
         {
@@ -325,9 +325,10 @@
     "men_shoes"
   ],
   "created_at": "2026-09-13T00:40:53Z",
-  "last_verified_at": "2026-09-15T17:56:24Z",
+  "last_verified_at": "2026-09-17T17:17:43Z",
   "id": "3a173954196969e7",
   "product_id": "3a173954196969e7",
   "store": "coach",
-  "updated_at": "2026-09-15T17:56:24Z"
+  "updated_at": "2026-09-17T17:17:43Z",
+  "shopify_sync_pending": true
 }

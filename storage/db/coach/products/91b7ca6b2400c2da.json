@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Leather upper",
   "specifications": {
     "Material": "Leather upper",
@@ -320,9 +320,11 @@
     "men_shoes"
   ],
   "created_at": "2026-09-13T00:44:09Z",
-  "last_verified_at": "2026-09-15T18:00:06Z",
+  "last_verified_at": "2026-09-17T17:22:16Z",
   "id": "91b7ca6b2400c2da",
   "product_id": "91b7ca6b2400c2da",
   "store": "coach",
-  "updated_at": "2026-09-15T18:00:06Z"
+  "updated_at": "2026-09-17T17:22:16Z",
+  "is_active": false,
+  "shopify_sync_pending": true
 }

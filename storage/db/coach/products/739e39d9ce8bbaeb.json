@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Man-made leather lining and footbed",
   "specifications": {
     "Heel Height": "Heel Height: 2.5\"",
@@ -184,7 +184,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cci16_nrx_a0",
       "option_values": [
         {
@@ -203,7 +203,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cci16_nrx_a0",
       "option_values": [
         {
@@ -222,7 +222,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cci16_nrx_a0",
       "option_values": [
         {
@@ -322,9 +322,11 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:42:51Z",
-  "last_verified_at": "2026-09-15T17:58:46Z",
+  "last_verified_at": "2026-09-17T17:20:18Z",
   "id": "739e39d9ce8bbaeb",
   "product_id": "739e39d9ce8bbaeb",
   "store": "coach",
-  "updated_at": "2026-09-15T17:58:46Z"
+  "updated_at": "2026-09-17T17:20:18Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

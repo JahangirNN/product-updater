@@ -152,11 +152,11 @@ def process_and_save_product(
     url: str,
     raw_data: Dict[str, Any],
     forex_rate: float,
-    min_size_variants: int = 7,
+    min_size_variants: int = 1,
     min_us_size: Optional[float] = None
 ) -> Optional[Dict[str, Any]]:
     """
-    Parse raw payload, enforce min 7 size variants filter, validate, and save product.
+    Parse raw payload, enforce category boundaries, validate, and save product.
     Returns summary dict if product accepted; returns None if excluded.
     """
     raw_data["url"] = url
@@ -168,7 +168,7 @@ def process_and_save_product(
         min_us_size=min_us_size
     )
     if not canonical:
-        # Excluded by size filter (e.g. < 7 distinct size variants or kids category leak)
+        # Excluded (e.g. kids category leak)
         return None
 
     is_valid, status, warnings = validate_product(canonical)
@@ -209,23 +209,14 @@ def process_and_save_product(
     }
 
 
-def run_full_inflow(max_workers: int = 3, min_size_variants: int = 7):
+def run_full_inflow(max_workers: int = 3, min_size_variants: int = 1):
     print("=" * 75)
     print("NORDSTROM ON SHOES CATALOG INGESTION (X-MODE TIER 1)")
-    print(f"Filter Constraint: Distinct Size Variants >= {min_size_variants} | Storing All Available US & UK Sizes")
+    print(f"Filter Constraint: Adult Footwear (All Available Sizes) | Storing All Available US & UK Sizes")
     print("=" * 75)
 
-    # Clear previous Nordstrom product files to remove items excluded under the corrected filter
     nordstrom_dir = "storage/db/nordstrom/products"
-    if os.path.exists(nordstrom_dir):
-        print(f"Purging existing products in {nordstrom_dir} for clean ingestion...")
-        for old_file in os.listdir(nordstrom_dir):
-            if old_file.endswith(".json"):
-                try:
-                    os.remove(os.path.join(nordstrom_dir, old_file))
-                except Exception:
-                    pass
-
+    os.makedirs(nordstrom_dir, exist_ok=True)
     os.makedirs(CACHE_DIR, exist_ok=True)
 
     urls_file = "scratch/all_nordstrom_urls.json"
@@ -311,4 +302,4 @@ def run_full_inflow(max_workers: int = 3, min_size_variants: int = 7):
 
 
 if __name__ == "__main__":
-    run_full_inflow(max_workers=2, min_size_variants=7)
+    run_full_inflow(max_workers=3, min_size_variants=1)

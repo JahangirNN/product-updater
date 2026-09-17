@@ -61,3 +61,26 @@
    **Solution**: Always use `storage.network.get_browser_headers()` or Camoufox.
 3. **Gotcha**: Windows CP1252 stdout encoding error on fancy characters (e.g. smart quotes or bullet points).
    **Solution**: Ensure UTF-8 file encoding for all writes (`encoding="utf-8"`).
+
+---
+
+## 6. Multi-Color Variant Ingestion, Sizing Extraction & Filename Rules
+- **Accessories & Bags (Colorway Ingestion)**:
+  - Ingest multi-color variants directly from JSON-LD `ProductGroup.hasVariant`.
+  - Bind individual Scene7 hero images (`a0`) per colorway.
+  - Set option name strictly to `"Color"` (Shopify Option 1).
+  - Map individual variant SKUs and distinct prices per colorway (capturing sale discounts per color).
+- **Footwear (Sizing Ingestion)**:
+  - Ingest size variants from HTML buttons (`variation-size` enabled/disabled).
+  - Set option name strictly to `"Size"`.
+  - Map US shoe sizes to official UK counterparts (e.g. `US 7 / UK 6.5`).
+- **Structured Dimension Separation**:
+  - Extract fractional inch dimensions (e.g. `4 1/2" (L) x 3 3/4" (H) x 1" (W)`) into dedicated `dimensions`.
+  - Extract structured key-value measurements (e.g. `Length: 11.0"`, `Handle Drop: 8.5"`) into `measurements`.
+- **Media Hygiene**:
+  - Automatically filter out thumbnail swatches (`*_swatch*` and `swatch_*`) from the media gallery to preserve viewer visual quality.
+- **ADR 0004 Filename Alignment**:
+  - All files in `storage/db/coach/products/` must be named strictly `{product_id}.json` (`SHA256("coach::" + sku)[:16]`) to match the primary key and enable instant resolution by `load_product("coach", p_id)`.
+- **Variant Delta Synchronization**:
+  - In `stores/coach/delta.py`, synchronize both variant-level stock (`in_stock`) and variant-level pricing (`source_price` / `price`) when live Coach PDPs return `ProductGroup.hasVariant`.
+

@@ -51,7 +51,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdt32_mpl_a0",
       "option_values": [
         {
@@ -70,7 +70,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdt32_mpl_a0",
       "option_values": [
         {
@@ -89,7 +89,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdt32_mpl_a0",
       "option_values": [
         {
@@ -184,7 +184,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdt32_mpl_a0",
       "option_values": [
         {
@@ -222,7 +222,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdt32_mpl_a0",
       "option_values": [
         {
@@ -241,7 +241,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdt32_mpl_a0",
       "option_values": [
         {
@@ -322,9 +322,10 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:42:02Z",
-  "last_verified_at": "2026-09-15T17:57:48Z",
+  "last_verified_at": "2026-09-17T17:19:17Z",
   "id": "5bfae2d7f6c83856",
   "product_id": "5bfae2d7f6c83856",
   "store": "coach",
-  "updated_at": "2026-09-15T17:57:48Z"
+  "updated_at": "2026-09-17T17:19:17Z",
+  "shopify_sync_pending": true
 }

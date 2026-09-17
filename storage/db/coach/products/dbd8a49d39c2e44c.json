@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Smooth calf leather",
   "specifications": {
     "Material": "Smooth calf leather",
@@ -53,7 +53,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cx140_qbbk_a0",
       "option_values": [
         {
@@ -82,9 +82,11 @@
     "men_bags"
   ],
   "created_at": "2026-09-13T00:47:29Z",
-  "last_verified_at": "2026-09-15T18:03:42Z",
+  "last_verified_at": "2026-09-17T15:19:53Z",
   "id": "dbd8a49d39c2e44c",
   "product_id": "dbd8a49d39c2e44c",
   "store": "coach",
-  "updated_at": "2026-09-15T18:03:42Z"
+  "updated_at": "2026-09-17T15:19:53Z",
+  "is_active": false,
+  "shopify_sync_pending": true
 }

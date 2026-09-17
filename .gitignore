@@ -35,3 +35,11 @@ scratch/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Runtime & Scratch
+storage/*.pid
+storage/test_pids/
+*.lock
+.agents/
+ORIGINAL_REQUEST.md
+

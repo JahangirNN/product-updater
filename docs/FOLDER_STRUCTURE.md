@@ -78,8 +78,12 @@ product-updater/
 │       │   └── delta_log.json       # Historical batch execution audit logs
 │       ├── jwpei/                   # JW PEI retailer partition (422 products)
 │       │   └── products/            # Individual JSON documents (e.g. 84d55ef19c5db172.json)
-│       └── nordstrom/               # Nordstrom retailer partition (57 products)
-│           └── products/            # Individual JSON documents (e.g. 0ed43c62cfe53f48.json)
+│       ├── nordstrom/               # Nordstrom retailer partition (57 products)
+│       │   └── products/            # Individual JSON documents (e.g. 0ed43c62cfe53f48.json)
+│       ├── michaelkors/             # Michael Kors retailer partition (530 products)
+│       │   └── products/            # Individual JSON documents
+│       └── coach/                   # Coach retailer partition (573 products)
+│           └── products/            # Individual JSON documents
 │
 ├── stores/                          # [SCREAMING ARCHITECTURE] Self-contained store modules
 │   ├── _template/                   # Starter template for onboarding any new store
@@ -92,11 +96,21 @@ product-updater/
 │   │   ├── inflow.py                # Ingestion normalizer with responsive Size Guide generator
 │   │   └── delta.py                 # Fast AJAX checker & pure delta mutation functions
 │   │
-│   └── nordstrom/                   # Concrete Nordstrom implementation
-│       ├── LEARNINGS.md             # Living notes: size conversion matrix, On shoes DOM, query filters, Kasada solver
-│       ├── camoufox_solver.py       # Zero-cost local stealth browser Kasada solver & per-size stock extractor
-│       ├── inflow.py                # Ingestion normalizer with US/UK/EU sizing matrix & variant threshold
-│       └── delta.py                 # Fast delta checker & pure delta mutation functions
+│   ├── nordstrom/                   # Concrete Nordstrom implementation
+│   │   ├── LEARNINGS.md             # Living notes: size conversion matrix, On shoes DOM, two-tier sweep
+│   │   ├── camoufox_solver.py       # Zero-cost local stealth browser solver, route blocking & collection sweep
+│   │   ├── inflow.py                # Ingestion normalizer with US/UK/EU sizing matrix & variant threshold
+│   │   └── delta.py                 # Two-tier fast delta checker & pure delta mutation functions
+│   │
+│   ├── michaelkors/                 # Concrete Michael Kors implementation
+│   │   ├── LEARNINGS.md             # Living notes: SFCC Demandware, category taxonomy, geolocation pinning
+│   │   ├── inflow.py                # Ingestion normalizer with dimension parsing & multi-angle galleries
+│   │   └── delta.py                 # Fast Demandware AJAX delta checker
+│   │
+│   └── coach/                       # Concrete Coach implementation
+│       ├── LEARNINGS.md             # Living notes: SFCC Scene7, multi-color variants, sizing extraction, filename alignment
+│       ├── inflow.py                # Ingestion normalizer with multi-color binding & dimension extraction
+│       └── delta.py                 # Fast JSON-LD delta checker & variant price/stock synchronizer
 │
 ├── sync_catalog.py                  # Universal multi-store delta engine & systematic scheduler
 ├── test_delta_engine.py             # Automated unit & integration test suite for delta engine

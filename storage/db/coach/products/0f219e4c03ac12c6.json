@@ -138,7 +138,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ces30_svbk_a0",
       "option_values": [
         {
@@ -198,9 +198,10 @@
     "men_bags"
   ],
   "created_at": "2026-09-13T00:38:40Z",
-  "last_verified_at": "2026-09-15T17:54:09Z",
+  "last_verified_at": "2026-09-17T16:17:05Z",
   "id": "0f219e4c03ac12c6",
   "product_id": "0f219e4c03ac12c6",
   "store": "coach",
-  "updated_at": "2026-09-15T17:54:09Z"
+  "updated_at": "2026-09-17T16:17:05Z",
+  "shopify_sync_pending": true
 }

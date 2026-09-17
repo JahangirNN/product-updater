@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 7546,
+  "current_price": 7558,
   "source_price": 79.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/705b0f66-9610-49eb-8ce8-0b32c4c359d5/32S5GAVC1B-252-1335_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/705b0f66-9610-49eb-8ce8-0b32c4c359d5/32S5GAVC1B-252-1335_1-tif",
@@ -24,12 +24,12 @@
     {
       "sku": "32S5GAVC1B",
       "title": "Vanilla/Acorn",
-      "price": "7546.00",
-      "compare_at_price": "21777.00",
+      "price": "7558.00",
+      "compare_at_price": "21814.00",
       "source_price": 79.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/705b0f66-9610-49eb-8ce8-0b32c4c359d5/32S5GAVC1B-252-1335_1-tif",
       "option_values": [
         {
@@ -77,12 +77,13 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-13T07:39:13Z",
+  "last_verified_at": "2026-09-17T17:18:19Z",
   "id": "60f43713972f6e03",
   "created_at": "2026-09-11T18:30:35Z",
-  "updated_at": "2026-09-13T07:39:13Z",
+  "updated_at": "2026-09-17T17:18:19Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Ava Extra Small Signature Logo Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8”W X 5.25”H X 3”D</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 228.0,
-  "compare_at_price": 21777,
-  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
+  "compare_at_price": 21814,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+  "shopify_sync_pending": true
 }

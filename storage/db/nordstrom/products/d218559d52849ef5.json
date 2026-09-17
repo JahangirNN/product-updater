@@ -1,0 +1,110 @@
+{
+  "id": "d218559d52849ef5",
+  "source_store": "nordstrom",
+  "source_url": "https://www.nordstrom.com/s/rincon-4-running-shoe-men/7716678",
+  "handle": "rincon-4-running-shoe-men",
+  "title": "Rincon 4 Running Shoe",
+  "vendor": "HOKA",
+  "product_type": "Athletic Shoes",
+  "source_sku": "HOKA-7716678-11",
+  "source_price": 125.0,
+  "source_compare_at_price": 125.0,
+  "current_price": 11999.0,
+  "compare_at_price": 11999.0,
+  "currency": "INR",
+  "source_currency": "USD",
+  "forex_rate_used": 95.989284,
+  "availability": "in_stock",
+  "material": "Textile and synthetic upper/textile lining/synthetic sole",
+  "specifications": {
+    "Brand": "HOKA",
+    "Gender": "Men",
+    "Category": "Footwear",
+    "Material": "Textile and synthetic upper/textile lining/synthetic sole",
+    "Midsole Drop": "5mm",
+    "Cushioning": "Foam cushioning meets cloud-like weightless comfort",
+    "Item Number": "10228448",
+    "Available Sizes (US)": "US 11",
+    "Available Sizes (UK)": "UK 10.5"
+  },
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> On Running</li>\n      <li><strong>Gender:</strong> Men</li>\n      <li><strong>Material:</strong> Textile and synthetic upper/textile lining/synthetic sole</li>\n      <li><strong>Midsole Drop:</strong> 5mm</li>\n      <li><strong>Cushioning:</strong> Foam cushioning meets cloud-like weightless comfort</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 On Running Shoe Size & Conversion Guide (Men)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 45.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "images": [
+    "https://n.nordstrommedia.com/it/5e2f751d-5c2f-45e0-89d8-836497816d15.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/fb6e4d14-467a-4ce1-b49c-98ecc558de39.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/1b5b58b0-f4a2-47d8-88fe-28b62c026563.jpeg?crop=pad",
+    "https://n.nordstrommedia.com/it/4756123c-b1a5-4916-b262-edcec5c92677.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/03d25eeb-75df-4ff0-890c-6cb50619ca42.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/95fbd169-7930-4b62-829a-499a97581457.jpeg?crop=pad&trim=color"
+  ],
+  "variants": [
+    {
+      "id": 771667800,
+      "sku": "HOKA-7716678-11",
+      "title": "US 11 / UK 10.5 - White Black",
+      "price": "11999.00",
+      "compare_at_price": null,
+      "source_price": 125.0,
+      "source_compare_at_price": 125.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/5e2f751d-5c2f-45e0-89d8-836497816d15.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White Black"
+        }
+      ]
+    }
+  ],
+  "product_options": [
+    {
+      "name": "Size (US)",
+      "values": [
+        {
+          "name": "US 11"
+        }
+      ]
+    },
+    {
+      "name": "Size (UK)",
+      "values": [
+        {
+          "name": "UK 10.5"
+        }
+      ]
+    },
+    {
+      "name": "Color",
+      "values": [
+        {
+          "name": "White Black"
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "on-shoes",
+    "footwear",
+    "sneakers",
+    "running",
+    "men",
+    "sizes-1"
+  ],
+  "groups": [
+    "shoes"
+  ],
+  "last_verified_at": "2026-09-17T16:29:18Z",
+  "created_at": "2026-09-17T14:59:39Z",
+  "updated_at": "2026-09-17T16:29:18Z",
+  "status": "ACTIVE",
+  "validation_warnings": []
+}

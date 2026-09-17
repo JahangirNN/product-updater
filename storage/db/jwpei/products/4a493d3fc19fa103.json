@@ -8,12 +8,12 @@
   "source_sku": "2T33-72",
   "source_price": 89.0,
   "source_compare_at_price": 89.0,
-  "current_price": 8441.0,
-  "compare_at_price": 8441.0,
+  "current_price": 8515.0,
+  "compare_at_price": 8515.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Vegan Leather",
   "specifications": {
     "Bag Dimensions": "7.8'' W × 6.9'' H× 2.8'' D (19.8cm x 17.5cmx 7cm)",
@@ -45,7 +45,9 @@
           "option_name": "Color",
           "name": "Standard"
         }
-      ]
+      ],
+      "is_available": true,
+      "price_current": 8515.0
     }
   ],
   "product_options": [
@@ -87,6 +89,8 @@
   "validation_warnings": [],
   "id": "4a493d3fc19fa103",
   "created_at": "2026-09-09T15:47:10Z",
-  "updated_at": "2026-09-13T07:07:13Z",
-  "last_verified_at": "2026-09-13T07:07:13Z"
+  "updated_at": "2026-09-17T17:18:05Z",
+  "last_verified_at": "2026-09-17T17:18:05Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

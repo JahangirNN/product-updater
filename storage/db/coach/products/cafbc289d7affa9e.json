@@ -70,7 +70,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cee54_blk_a0",
       "option_values": [
         {
@@ -322,9 +322,10 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:46:41Z",
-  "last_verified_at": "2026-09-15T18:02:59Z",
+  "last_verified_at": "2026-09-17T15:19:32Z",
   "id": "cafbc289d7affa9e",
   "product_id": "cafbc289d7affa9e",
   "store": "coach",
-  "updated_at": "2026-09-15T18:02:59Z"
+  "updated_at": "2026-09-17T15:19:32Z",
+  "shopify_sync_pending": true
 }

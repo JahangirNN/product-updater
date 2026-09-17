@@ -16,6 +16,29 @@ from storage.rate_limiter import acquire_permit, trip_circuit_breaker, parse_ret
 
 DEFAULT_HEADERS = DEFAULT_BROWSER_HEADERS
 
+# Module-level collection cache for Two-Tier Fast Sweep
+_COLLECTION_CACHE: Dict[str, Any] = {}
+_COLLECTION_CACHE_TS: float = 0.0
+_COLLECTION_CACHE_TTL: float = 300.0  # 5 minutes TTL
+
+
+def get_or_refresh_collection_cache(browser_page: Any) -> Dict[str, Any]:
+    """Retrieve or refresh the cached collection catalog harvested via Camoufox."""
+    global _COLLECTION_CACHE, _COLLECTION_CACHE_TS
+    now = time.time()
+    if _COLLECTION_CACHE and (now - _COLLECTION_CACHE_TS) < _COLLECTION_CACHE_TTL:
+        return _COLLECTION_CACHE
+
+    from stores.nordstrom.camoufox_solver import fetch_collection_catalog
+    try:
+        cache = fetch_collection_catalog(browser_page)
+        if cache:
+            _COLLECTION_CACHE = cache
+            _COLLECTION_CACHE_TS = now
+    except Exception:
+        pass
+    return _COLLECTION_CACHE
+
 
 def norm_size_string(s: str) -> str:
     """Normalize size string: 'US 9.5' -> '9.5', '11.5 M' -> '11.5', '10' -> '10'."""
@@ -66,9 +89,47 @@ def check_price_and_stock(
     else:
         acquire_permit(resolved_store)
 
-    # 2. Browser solver mode (Camoufox with per-size variant tracking)
+    # 2. Browser solver mode (Two-Tier: Collection Fast-Sweep + Targeted PDP)
     if browser_page is not None:
         from stores.nordstrom.camoufox_solver import solve_and_extract_pdp
+
+        # Extract numeric style ID from source_url
+        style_match = re.search(r'/(\d{6,8})(?:[/?#]|$)', url)
+        style_id = style_match.group(1) if style_match else ""
+
+        col_cache = get_or_refresh_collection_cache(browser_page)
+        col_item = col_cache.get(style_id) or col_cache.get(handle)
+
+        # Fast-Path Evaluation: If price and overall stock are identical to stored on disk,
+        # return instant success without loading the heavy PDP
+        if col_item:
+            cached_in_stock = bool(col_item.get("in_stock", False))
+            live_avail = "in_stock" if cached_in_stock else "out_of_stock"
+            p_min = float(col_item.get("price_min", 0.0) or 0.0)
+            p_max = float(col_item.get("price_max", p_min) or p_min)
+
+            price_in_range = (abs(old_source_price - p_min) < 0.01) or (p_min <= old_source_price <= p_max) if old_source_price > 0 else False
+            stock_unchanged = (live_avail == old_availability)
+
+            if price_in_range and stock_unchanged and cached_in_stock:
+                elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
+                return {
+                    "status": "success",
+                    "handle": handle,
+                    "current_source_price": old_source_price,
+                    "old_source_price": old_source_price,
+                    "current_compare_price": col_item.get("compare_price") or product.get("source_compare_at_price"),
+                    "availability": old_availability,
+                    "old_availability": old_availability,
+                    "is_active": old_availability == "in_stock",
+                    "price_changed": False,
+                    "stock_changed": False,
+                    "size_stock": {},
+                    "variants_delta": [],
+                    "elapsed_ms": elapsed_ms
+                }
+
+        # Tier 2: Delta Detected, Product Sold Out, or Not in Collection -> Visit PDP
         solve_res = solve_and_extract_pdp(browser_page, url, target_handle=handle)
         status = solve_res.get("status")
         elapsed_ms = solve_res.get("elapsed_ms", round((time.perf_counter() - t_start) * 1000, 2))
@@ -85,6 +146,7 @@ def check_price_and_stock(
             variants_delta = []
             has_any_variant_in_stock = False
             variant_stock_changed = False
+            changed_variants = []
 
             for v in product.get("variants", []):
                 v_sku = v.get("sku")
@@ -117,6 +179,11 @@ def check_price_and_stock(
 
                 if var_avail != old_v_in_stock:
                     variant_stock_changed = True
+                    changed_variants.append({
+                        "sku": v_sku,
+                        "old_in_stock": old_v_in_stock,
+                        "new_in_stock": var_avail
+                    })
 
                 variants_delta.append({
                     "sku": v_sku,
@@ -129,7 +196,7 @@ def check_price_and_stock(
                 curr_avail = "in_stock" if has_any_variant_in_stock else "out_of_stock"
 
             price_changed = abs(curr_price - old_source_price) > 0.01 if (old_source_price > 0 and curr_price > 0) else False
-            stock_changed = (curr_avail != old_availability) or variant_stock_changed
+            stock_changed = (curr_avail != old_availability)
 
             return {
                 "status": "success",
@@ -142,6 +209,8 @@ def check_price_and_stock(
                 "is_active": curr_avail == "in_stock",
                 "price_changed": price_changed,
                 "stock_changed": stock_changed,
+                "variant_stock_changed": variant_stock_changed,
+                "changed_variants": changed_variants,
                 "size_stock": size_stock,
                 "variants_delta": variants_delta,
                 "elapsed_ms": elapsed_ms

@@ -137,7 +137,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdb67_imchk_a0",
       "option_values": [
         {
@@ -282,9 +282,10 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:40:08Z",
-  "last_verified_at": "2026-09-15T17:55:39Z",
+  "last_verified_at": "2026-09-17T16:18:10Z",
   "id": "2f1250a8848f7f98",
   "product_id": "2f1250a8848f7f98",
   "store": "coach",
-  "updated_at": "2026-09-15T17:55:39Z"
+  "updated_at": "2026-09-17T16:18:10Z",
+  "shopify_sync_pending": true
 }

@@ -80,7 +80,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceo22_imchk_a0",
       "option_values": [
         {
@@ -137,7 +137,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceo23_svpwh_a0",
       "option_values": [
         {
@@ -156,7 +156,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceo23_imxaq_a0",
       "option_values": [
         {
@@ -222,9 +222,10 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:45:20Z",
-  "last_verified_at": "2026-09-15T18:01:20Z",
+  "last_verified_at": "2026-09-17T15:18:54Z",
   "id": "a6f3efb58151390e",
   "product_id": "a6f3efb58151390e",
   "store": "coach",
-  "updated_at": "2026-09-15T18:01:20Z"
+  "updated_at": "2026-09-17T15:18:54Z",
+  "shopify_sync_pending": true
 }

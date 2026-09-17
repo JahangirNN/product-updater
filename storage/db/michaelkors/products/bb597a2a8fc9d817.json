@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 7546,
+  "current_price": 7558,
   "source_price": 79.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/e7115002-f35a-46cd-9db0-732c57e6116a/32F5GAVC1L-001-0001_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/e7115002-f35a-46cd-9db0-732c57e6116a/32F5GAVC1L-001-0001_1-tif",
@@ -25,12 +25,12 @@
     {
       "sku": "32F5GAVC1L",
       "title": "Chambray",
-      "price": "7546.00",
-      "compare_at_price": "21777.00",
+      "price": "7558.00",
+      "compare_at_price": "21814.00",
       "source_price": 79.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/e7115002-f35a-46cd-9db0-732c57e6116a/32F5GAVC1L-001-0001_1-tif",
       "option_values": [
         {
@@ -79,12 +79,13 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-13T07:08:36Z",
+  "last_verified_at": "2026-09-17T17:19:49Z",
   "id": "bb597a2a8fc9d817",
   "created_at": "2026-09-11T18:30:35Z",
-  "updated_at": "2026-09-13T07:08:36Z",
+  "updated_at": "2026-09-17T17:19:49Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Ava Extra Small Saffiano Leather Crossbody by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8&quot;W X 5.25&quot;H X 3&quot;D</li>\n      <li><strong>Handle Drop:</strong> Handle Drop: 4&quot;</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance</li>\n      <li><strong>Hardware:</strong> Gold-Tone Hardware</li>\n      <li><strong>Lining:</strong> 100% Polyester</li>\n      <li><strong>Closure:</strong> Magnetic Snap Fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 228.0,
-  "compare_at_price": 21777,
-  "material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance"
+  "compare_at_price": 21814,
+  "material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., 100% leather from tanneries meeting the highest standards of environmental performance",
+  "shopify_sync_pending": true
 }

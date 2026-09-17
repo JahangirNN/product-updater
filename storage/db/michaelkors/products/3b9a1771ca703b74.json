@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Sunglasses",
   "gender": "Women",
-  "current_price": 9456,
+  "current_price": 9472,
   "source_price": 99.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/dd8d21d2-a848-460e-9683-bc1c7c3cf4de/MK-2265U-0767-0767_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/dd8d21d2-a848-460e-9683-bc1c7c3cf4de/MK-2265U-0767-0767_1-tif",
@@ -25,12 +25,12 @@
     {
       "sku": "MK-2265U",
       "title": "Black Horn",
-      "price": "9456.00",
-      "compare_at_price": "13276.00",
+      "price": "9472.00",
+      "compare_at_price": "13299.00",
       "source_price": 99.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/dd8d21d2-a848-460e-9683-bc1c7c3cf4de/MK-2265U-0767-0767_1-tif",
       "option_values": [
         {
@@ -77,12 +77,13 @@
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-13T07:07:27Z",
+  "last_verified_at": "2026-09-17T17:17:43Z",
   "id": "3b9a1771ca703b74",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-13T07:07:27Z",
+  "updated_at": "2026-09-17T17:17:43Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Lake Tahoe Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate frame</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 139.0,
-  "compare_at_price": 13276,
-  "material": "Acetate frame"
+  "compare_at_price": 13299,
+  "material": "Acetate frame",
+  "shopify_sync_pending": true
 }

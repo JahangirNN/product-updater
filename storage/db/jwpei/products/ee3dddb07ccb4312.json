@@ -8,8 +8,8 @@
   "source_sku": "2T273-50",
   "source_price": 129.0,
   "source_compare_at_price": 129.0,
-  "current_price": 12235.0,
-  "compare_at_price": 12235.0,
+  "current_price": 12383.0,
+  "compare_at_price": 12383.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -55,7 +55,9 @@
           "option_name": "Color",
           "name": "Blue Denim"
         }
-      ]
+      ],
+      "is_available": true,
+      "price_current": 12383.0
     }
   ],
   "product_options": [
@@ -86,6 +88,8 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:31:30Z",
-  "updated_at": "2026-09-13T07:10:35Z",
-  "last_verified_at": "2026-09-13T07:10:35Z"
+  "updated_at": "2026-09-17T17:22:50Z",
+  "last_verified_at": "2026-09-17T17:22:50Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

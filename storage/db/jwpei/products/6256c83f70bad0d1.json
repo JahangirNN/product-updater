@@ -8,12 +8,12 @@
   "source_sku": "2T333-3",
   "source_price": 139.0,
   "source_compare_at_price": 139.0,
-  "current_price": 13289.0,
-  "compare_at_price": 13289.0,
+  "current_price": 13343.0,
+  "compare_at_price": 13343.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Vegan Leather",
   "specifications": {
     "Main Material": "Vegan Leather",
@@ -57,8 +57,8 @@
           "name": "Yellowish Brown"
         }
       ],
-      "is_available": false,
-      "price_current": 13289.0
+      "is_available": true,
+      "price_current": 13343.0
     }
   ],
   "product_options": [
@@ -90,8 +90,8 @@
   "validation_warnings": [],
   "id": "6256c83f70bad0d1",
   "created_at": "2026-09-09T15:49:03Z",
-  "updated_at": "2026-09-13T07:40:09Z",
-  "last_verified_at": "2026-09-13T07:40:09Z",
-  "is_active": false,
+  "updated_at": "2026-09-17T17:18:53Z",
+  "last_verified_at": "2026-09-17T17:18:53Z",
+  "is_active": true,
   "shopify_sync_pending": true
 }

@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 16142,
+  "current_price": 16228,
   "source_price": 169.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/0cad3be6-d255-4b3a-9885-5ba06eff8b1f/32S6SQNC1C-562-0664_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/0cad3be6-d255-4b3a-9885-5ba06eff8b1f/32S6SQNC1C-562-0664_1-tif",
@@ -23,12 +23,12 @@
     {
       "sku": "32S6SQNC1C",
       "title": "0664",
-      "price": "16142.00",
-      "compare_at_price": "17145.00",
+      "price": "16228.00",
+      "compare_at_price": "17236.00",
       "source_price": 169.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/0cad3be6-d255-4b3a-9885-5ba06eff8b1f/32S6SQNC1C-562-0664_1-tif",
       "option_values": [
         {
@@ -77,12 +77,13 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-13T07:07:32Z",
+  "last_verified_at": "2026-09-17T17:17:50Z",
   "id": "3fc48513f40ba957",
   "created_at": "2026-09-11T18:30:37Z",
-  "updated_at": "2026-09-13T07:07:32Z",
+  "updated_at": "2026-09-17T17:17:50Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Quinn Small Striped Canvas Convertible Crossbody Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 10.75” W X 7.5” H X 3.25”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 4&quot;</li>\n      <li><strong>Material:</strong> Canvas, 70% cotton/30% polyester</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 179.5,
-  "compare_at_price": 17145,
-  "material": "Canvas, 70% cotton/30% polyester"
+  "compare_at_price": 17236,
+  "material": "Canvas, 70% cotton/30% polyester",
+  "shopify_sync_pending": true
 }

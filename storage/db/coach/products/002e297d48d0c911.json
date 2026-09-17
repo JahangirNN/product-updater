@@ -204,7 +204,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef36_mqv_a0",
       "option_values": [
         {
@@ -323,9 +323,10 @@
     "women_shoes"
   ],
   "created_at": "2026-09-12T22:59:57Z",
-  "last_verified_at": "2026-09-15T17:53:36Z",
+  "last_verified_at": "2026-09-17T16:16:54Z",
   "id": "002e297d48d0c911",
   "product_id": "002e297d48d0c911",
   "store": "coach",
-  "updated_at": "2026-09-15T17:53:36Z"
+  "updated_at": "2026-09-17T16:16:54Z",
+  "shopify_sync_pending": true
 }

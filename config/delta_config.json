@@ -44,7 +44,7 @@
   },
   "shopify_sync": {
     "auto_sync_on_delta": false,
-    "queue_file": "storage/db/history/delta_events.json"
+    "queue_file": "storage/db/history/delta_events.jsonl"
   },
   "logging": {
     "log_dir": "logs",

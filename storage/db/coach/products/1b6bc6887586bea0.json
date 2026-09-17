@@ -167,7 +167,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccf33_qbbk_a0",
       "option_values": [
         {
@@ -277,9 +277,10 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:39:06Z",
-  "last_verified_at": "2026-09-15T17:54:35Z",
+  "last_verified_at": "2026-09-17T16:17:19Z",
   "id": "1b6bc6887586bea0",
   "product_id": "1b6bc6887586bea0",
   "store": "coach",
-  "updated_at": "2026-09-15T17:54:35Z"
+  "updated_at": "2026-09-17T16:17:19Z",
+  "shopify_sync_pending": true
 }

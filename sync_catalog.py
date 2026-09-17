@@ -145,6 +145,7 @@ def resolve_store_delta_module(store_name: str) -> Optional[Any]:
     module_path = f"stores.{store_name}.delta"
     try:
         mod = importlib.import_module(module_path)
+        mod = importlib.reload(mod)
         if hasattr(mod, "check_price_and_stock") and hasattr(mod, "apply_delta_to_product"):
             return mod
         log_warning(f"Module {module_path} is missing required delta functions.")
@@ -243,6 +244,8 @@ def poll_single_product(
                     "stock_changed": delta_res.get("stock_changed", False),
                     "old_availability": delta_res.get("old_availability"),
                     "new_availability": delta_res.get("availability"),
+                    "variant_stock_changed": delta_res.get("variant_stock_changed", False),
+                    "changed_variants": delta_res.get("changed_variants", []),
                     "shopify_sync_pending": True
                 }
                 append_delta_event(event_entry)
@@ -297,41 +300,84 @@ def sync_store_batch(
             create_store_browser = lambda headless=True: Camoufox(headless=headless)
 
         log_info(f"[{store_name.upper()}] Launching Camoufox stealth browser worker for {len(store_items)} items...")
+        BROWSER_RECYCLE_INTERVAL = 25
         try:
             with create_store_browser(headless=True) as browser:
                 page = browser.new_page()
+                if store_name == "nordstrom":
+                    from stores.nordstrom.camoufox_solver import setup_camoufox_route_blocking
+                    setup_camoufox_route_blocking(page)
+
+                items_since_recycle = 0
+
                 for idx, item in enumerate(store_items, 1):
-                    # If page crashed or closed in previous iteration, reopen new page
-                    try:
-                        if page.is_closed():
-                            page = browser.new_page()
-                    except Exception:
-                        page = browser.new_page()
-
-                    res = poll_single_product(
-                        product_stub=item,
-                        store_mod=store_mod,
-                        client=None,
-                        forex_rate=forex_rate,
-                        delay_seconds=delay_sec,
-                        dry_run=dry_run,
-                        store_name=store_name,
-                        store_rate_limiter=store_limiter,
-                        browser_page=page
-                    )
-
-                    # If page suffered network disconnection (NS_ERROR), refresh page instance for next item
-                    err_str = str(res.get("error", ""))
-                    if "NS_ERROR" in err_str or "connection" in err_str.lower():
+                    # Periodic page recycling to prevent memory bloat in long-running daemons
+                    if items_since_recycle >= BROWSER_RECYCLE_INTERVAL:
                         try:
                             page.close()
                         except Exception:
                             pass
                         page = browser.new_page()
+                        if store_name == "nordstrom":
+                            setup_camoufox_route_blocking(page)
+                        items_since_recycle = 0
+                        log_info(f"[{store_name.upper()}] Page recycled after {BROWSER_RECYCLE_INTERVAL} items to prevent memory bloat.")
+
+                    # If page crashed or closed in previous iteration, reopen new page
+                    try:
+                        if page.is_closed():
+                            page = browser.new_page()
+                            if store_name == "nordstrom":
+                                setup_camoufox_route_blocking(page)
+                            items_since_recycle = 0
+                    except Exception:
+                        page = browser.new_page()
+                        if store_name == "nordstrom":
+                            setup_camoufox_route_blocking(page)
+                        items_since_recycle = 0
+
+                    # Error-isolated per-item processing: individual failures do not abort the batch
+                    try:
+                        res = poll_single_product(
+                            product_stub=item,
+                            store_mod=store_mod,
+                            client=None,
+                            forex_rate=forex_rate,
+                            delay_seconds=delay_sec,
+                            dry_run=dry_run,
+                            store_name=store_name,
+                            store_rate_limiter=store_limiter,
+                            browser_page=page
+                        )
+                    except Exception as item_exc:
+                        log_error(f"[{store_name.upper()}] Item-level error for {item.get('handle', item.get('id', 'unknown'))}: {item_exc}")
+                        res = {
+                            "status": "error",
+                            "handle": item.get("handle", item.get("id")),
+                            "error": str(item_exc),
+                            "elapsed_ms": 0.0,
+                            "has_changed": False
+                        }
+
+                    items_since_recycle += 1
+
+                    # If page suffered network disconnection (NS_ERROR) or DNS failure, force page recycle
+                    err_str = str(res.get("error", ""))
+                    if "NS_ERROR" in err_str or "connection" in err_str.lower() or "getaddrinfo" in err_str.lower():
+                        try:
+                            page.close()
+                        except Exception:
+                            pass
+                        page = browser.new_page()
+                        if store_name == "nordstrom":
+                            setup_camoufox_route_blocking(page)
+                        items_since_recycle = 0
 
                     results.append(res)
                     log_info(f"[{store_name.upper()} {idx:2d}/{len(store_items)}] {res.get('handle', item.get('id'))[:28]:28s} | {res.get('status', 'unknown'):7s} | {res.get('availability', 'unknown'):12s} | ${res.get('current_source_price')} | {res.get('elapsed_ms', 0):.0f}ms")
-                    time.sleep(delay_sec)
+                    # Only sleep if network I/O took place (> 500ms), avoid idle delay on fast-path memory lookups
+                    if res.get("elapsed_ms", 0) > 500:
+                        time.sleep(delay_sec)
         except Exception as b_exc:
             log_error(f"[{store_name.upper()}] Camoufox worker error: {b_exc}")
         finally:
@@ -381,6 +427,7 @@ def run_catalog_sync(
     store_filter: Optional[str] = None,
     force: bool = False,
     limit: Optional[int] = None,
+    per_store_limit: Optional[int] = None,
     dry_run: bool = False,
     config_path: str = DEFAULT_CONFIG_PATH
 ) -> Dict[str, Any]:
@@ -471,7 +518,12 @@ def run_catalog_sync(
         s = p.get("store") or p.get("source_store", "default")
         by_store.setdefault(s, []).append(p)
 
-    total_due = len(due_products)
+    if per_store_limit and per_store_limit > 0:
+        for s in by_store:
+            by_store[s] = by_store[s][:per_store_limit]
+        log_info(f"Per-Store Limit Applied: Processing up to {per_store_limit} products per store across {len(by_store)} stores")
+
+    total_due = sum(len(items) for items in by_store.values())
     completed = 0
 
     log_info(f"Launching parallel store sync across {len(by_store)} active stores: {list(by_store.keys())}")
@@ -535,6 +587,10 @@ def run_catalog_sync(
                     if res.get("stock_changed"):
                         stock_shifts += 1
                         log_delta("STOCK", res.get('handle', 'unknown'), f"{res.get('old_availability')} -> {avail}")
+                    elif res.get("variant_stock_changed"):
+                        stock_shifts += 1
+                        n_changed = len(res.get('changed_variants', []))
+                        log_delta("VARIANT", res.get('handle', 'unknown'), f"{n_changed} variant(s) changed (top-level: {avail})")
 
     total_time = time.time() - start_time
     avg_latency = sum(latencies) / len(latencies) if latencies else 0.0
@@ -580,7 +636,7 @@ def run_catalog_sync(
     if not dry_run:
         log_info("Logged to storage/db/history/delta_log.json")
         if price_shifts > 0 or stock_shifts > 0:
-            log_info("Events queued in storage/db/history/delta_events.json (ready for Shopify sync)")
+            log_info("Events queued in storage/db/history/delta_events.jsonl (ready for Shopify sync)")
     log_info("=" * 72)
 
     return {
@@ -602,6 +658,7 @@ def main():
     parser.add_argument("--store", type=str, help="Target specific store (e.g. jwpei)")
     parser.add_argument("--force", action="store_true", help="Force check all products bypassing last_verified_at")
     parser.add_argument("--limit", type=int, help="Limit number of checked products")
+    parser.add_argument("--per-store-limit", type=int, help="Limit number of checked products per store for parallel testing")
     parser.add_argument("--dry-run", action="store_true", help="Inspect live status without writing mutations to disk")
     parser.add_argument("--config", type=str, default=DEFAULT_CONFIG_PATH, help="Path to delta config JSON")
 
@@ -612,6 +669,7 @@ def main():
         store_filter=args.store,
         force=args.force,
         limit=args.limit,
+        per_store_limit=args.per_store_limit,
         dry_run=args.dry_run,
         config_path=args.config
     )

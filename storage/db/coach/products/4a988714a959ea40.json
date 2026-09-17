@@ -144,7 +144,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cz112_b4nv_a0",
       "option_values": [
         {
@@ -163,7 +163,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cz112_b4yth_a0",
       "option_values": [
         {
@@ -229,9 +229,10 @@
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:41:21Z",
-  "last_verified_at": "2026-09-15T17:57:01Z",
+  "last_verified_at": "2026-09-17T17:18:22Z",
   "id": "4a988714a959ea40",
   "product_id": "4a988714a959ea40",
   "store": "coach",
-  "updated_at": "2026-09-15T17:57:01Z"
+  "updated_at": "2026-09-17T17:18:22Z",
+  "shopify_sync_pending": true
 }

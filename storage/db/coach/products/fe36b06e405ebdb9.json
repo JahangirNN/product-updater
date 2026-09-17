@@ -149,7 +149,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdv24_oy2_a0",
       "option_values": [
         {
@@ -190,9 +190,10 @@
     "men_bags"
   ],
   "created_at": "2026-09-13T00:49:15Z",
-  "last_verified_at": "2026-09-15T18:05:35Z",
+  "last_verified_at": "2026-09-17T15:20:39Z",
   "id": "fe36b06e405ebdb9",
   "product_id": "fe36b06e405ebdb9",
   "store": "coach",
-  "updated_at": "2026-09-15T18:05:35Z"
+  "updated_at": "2026-09-17T15:20:39Z",
+  "shopify_sync_pending": true
 }

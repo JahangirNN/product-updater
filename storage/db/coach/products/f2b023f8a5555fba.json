@@ -88,7 +88,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfa92_y5i_a0",
       "option_values": [
         {
@@ -211,9 +211,10 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:48:26Z",
-  "last_verified_at": "2026-09-15T18:04:42Z",
+  "last_verified_at": "2026-09-17T15:20:18Z",
   "id": "f2b023f8a5555fba",
   "product_id": "f2b023f8a5555fba",
   "store": "coach",
-  "updated_at": "2026-09-15T18:04:42Z"
+  "updated_at": "2026-09-17T15:20:18Z",
+  "shopify_sync_pending": true
 }

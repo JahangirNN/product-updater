@@ -52,7 +52,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cee12_blk_a0",
       "option_values": [
         {
@@ -323,9 +323,10 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:44:20Z",
-  "last_verified_at": "2026-09-15T18:00:17Z",
+  "last_verified_at": "2026-09-17T17:22:31Z",
   "id": "9543e2f267fe1ca0",
   "product_id": "9543e2f267fe1ca0",
   "store": "coach",
-  "updated_at": "2026-09-15T18:00:17Z"
+  "updated_at": "2026-09-17T17:22:31Z",
+  "shopify_sync_pending": true
 }

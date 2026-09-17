@@ -34,7 +34,7 @@ def check_price_and_stock(
     old_source_price = float(product.get("source_price") or 0.0)
     old_availability = product.get("availability", "unknown")
 
-    url = f"https://www.jwpei.com/products/{handle}.js"
+    url = f"https://www.jwpei.com/products/{handle}.js?_cb={int(time.time())}"
 
     for attempt in range(3):
         try:

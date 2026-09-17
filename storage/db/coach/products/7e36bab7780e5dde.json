@@ -63,7 +63,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccn67_cqbk_a0",
       "option_values": [
         {
@@ -82,7 +82,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccn67_cqbk_a0",
       "option_values": [
         {
@@ -101,7 +101,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccn67_cqbk_a0",
       "option_values": [
         {
@@ -120,7 +120,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccn67_cqbk_a0",
       "option_values": [
         {
@@ -253,7 +253,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccn67_cqbk_a0",
       "option_values": [
         {
@@ -272,7 +272,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccn67_cqbk_a0",
       "option_values": [
         {
@@ -334,9 +334,10 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:43:18Z",
-  "last_verified_at": "2026-09-15T17:59:12Z",
+  "last_verified_at": "2026-09-17T17:20:56Z",
   "id": "7e36bab7780e5dde",
   "product_id": "7e36bab7780e5dde",
   "store": "coach",
-  "updated_at": "2026-09-15T17:59:12Z"
+  "updated_at": "2026-09-17T17:20:56Z",
+  "shopify_sync_pending": true
 }

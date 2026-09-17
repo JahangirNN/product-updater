@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Raffia and leather upper",
   "specifications": {
     "Heel Height": "Heel Height: 3.5\"",
@@ -58,7 +58,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef20_mpl_a0",
       "option_values": [
         {
@@ -248,7 +248,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef20_mpl_a0",
       "option_values": [
         {
@@ -267,7 +267,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef20_mpl_a0",
       "option_values": [
         {
@@ -329,9 +329,11 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:38:38Z",
-  "last_verified_at": "2026-09-15T17:54:06Z",
+  "last_verified_at": "2026-09-17T16:17:04Z",
   "id": "0d6deb159162191c",
   "product_id": "0d6deb159162191c",
   "store": "coach",
-  "updated_at": "2026-09-15T17:54:06Z"
+  "updated_at": "2026-09-17T16:17:04Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

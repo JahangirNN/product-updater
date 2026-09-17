@@ -90,7 +90,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cew99_imchk_a0",
       "option_values": [
         {
@@ -210,9 +210,10 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:44:57Z",
-  "last_verified_at": "2026-09-15T18:00:59Z",
+  "last_verified_at": "2026-09-17T15:18:46Z",
   "id": "a23ee23d0039bfcf",
   "product_id": "a23ee23d0039bfcf",
   "store": "coach",
-  "updated_at": "2026-09-15T18:00:59Z"
+  "updated_at": "2026-09-17T15:18:46Z",
+  "shopify_sync_pending": true
 }

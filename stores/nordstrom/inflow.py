@@ -171,17 +171,17 @@ def parse_product_payload(
     raw_data: Dict[str, Any],
     usd_to_inr_rate: float,
     group_name: str = "shoes",
-    min_size_variants: int = 7,
+    min_size_variants: int = 1,
     min_us_size: Optional[float] = None
 ) -> Optional[Dict[str, Any]]:
     """
     Transform raw Nordstrom product data into canonical Shopify product dictionary.
-    Enforces strict filter: ONLY products that offer at least min_size_variants (default 7) distinct size variants.
+    Enforces category boundary (adult footwear only).
     Includes all available sizes for matching products, mapping each US size to its UK equivalent.
     Returns None if product has fewer than min_size_variants distinct sizes or is a kids/toddler category leak.
     """
     title = clean_title(raw_data.get("title", "") or raw_data.get("productTitle", ""))
-    if not title or title.strip() == "On":
+    if not title or title.strip().lower() in ("on", "hoka"):
         return None
 
     url = raw_data.get("url") or raw_data.get("source_url") or raw_data.get("sourceURL") or ""
@@ -237,8 +237,8 @@ def parse_product_payload(
         if us_val is not None:
             if min_us_size is not None and us_val < min_us_size:
                 continue
-            resolved_uk = convert_us_to_uk(us_val, gender)
-            resolved_eu = convert_us_to_eu(us_val, gender)
+            resolved_uk = str(uk_val).strip() if uk_val else convert_us_to_uk(us_val, gender)
+            resolved_eu = str(eu_val).strip() if eu_val else convert_us_to_eu(us_val, gender)
             valid_sizes.append({
                 "us_size": us_val,
                 "us_str": f"{us_val:g}",
@@ -258,7 +258,7 @@ def parse_product_payload(
                 size_map[val]["in_stock"] = True
     deduped_sizes = [size_map[k] for k in sorted(size_map.keys())]
 
-    # Strict constraint: Must offer at least min_size_variants (default 7) distinct size options
+    # Strict constraint: Must offer at least min_size_variants distinct size options
     if len(deduped_sizes) < min_size_variants:
         return None
 
@@ -273,7 +273,17 @@ def parse_product_payload(
     images = clean_images(raw_data)
     featured_image = images[0] if images else None
 
-    # 4. Handle and Style ID
+    # 4. Handle, Brand, and Style ID
+    raw_brand = str(raw_data.get("brand") or "").strip()
+    if "hoka" in raw_brand.lower() or "hoka" in title.lower() or "hoka" in url.lower():
+        brand = "HOKA"
+        brand_sku_prefix = "HOKA"
+        default_cushioning = "Plush maximal buoyant cushioning"
+    else:
+        brand = "On"
+        brand_sku_prefix = "ON"
+        default_cushioning = "CloudTec buoyant cushioning"
+
     details = raw_data.get("details") or {}
     item_num = details.get("item_number") or raw_data.get("item_number") or ""
     style_id = details.get("style_id") or raw_data.get("style_id") or ""
@@ -286,9 +296,9 @@ def parse_product_payload(
         handle = re.sub(r'[^a-zA-Z0-9]+', '-', title.lower()).strip('-')
         source_id = style_id or item_num or "7897718"
 
-    sku_root = f"ON-{source_id}"
+    sku_root = f"{brand_sku_prefix}-{source_id}"
 
-    # 5. Variants Construction (one variant per size >= 7.0, carrying US and UK size)
+    # 5. Variants Construction (one variant per size, carrying US and UK size)
     variants = []
     for idx, s in enumerate(deduped_sizes):
         var_sku = f"{sku_root}-{s['us_str']}"
@@ -317,12 +327,12 @@ def parse_product_payload(
         materials = " / ".join(materials)
     
     specs = {
-        "Brand": "On",
+        "Brand": brand,
         "Gender": gender,
         "Category": "Footwear",
         "Material": materials,
         "Midsole Drop": details.get("midsole_drop", "8mm"),
-        "Cushioning": details.get("cushioning", "CloudTec buoyant cushioning"),
+        "Cushioning": details.get("cushioning") or default_cushioning,
         "Item Number": item_num or source_id,
         "Available Sizes (US)": ", ".join(f"US {s['us_str']}" for s in deduped_sizes),
         "Available Sizes (UK)": ", ".join(f"UK {s['uk_str']}" for s in deduped_sizes)
@@ -361,7 +371,7 @@ def parse_product_payload(
         "source_url": url,
         "handle": handle,
         "title": title,
-        "vendor": "On",
+        "vendor": brand,
         "product_type": "Athletic Shoes",
         "source_sku": primary_sku,
         "source_price": source_price_usd,

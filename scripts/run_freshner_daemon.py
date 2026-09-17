@@ -26,6 +26,12 @@ from storage.logger import (
     log_error,
     log_critical
 )
+from storage.daemon_lock import (
+    acquire_daemon_lock,
+    release_daemon_lock,
+    terminate_orphan_daemons,
+    DEFAULT_PID_PATH
+)
 
 _SHUTDOWN_REQUESTED = False
 
@@ -54,80 +60,101 @@ def run_daemon_loop(
     store_filter: Optional[str] = None,
     force_first_cycle: bool = False,
     once: bool = False,
-    config_path: str = DEFAULT_CONFIG_PATH
+    config_path: str = DEFAULT_CONFIG_PATH,
+    pid_path: str = DEFAULT_PID_PATH
 ) -> None:
     """
     Main daemon loop executing run_catalog_sync() periodically.
+    Enforces singleton execution via OS file lock mutex and terminates orphan processes.
     """
     global _SHUTDOWN_REQUESTED
-    register_signal_handlers()
 
-    config = load_delta_config(config_path)
-    effective_interval = interval_minutes if interval_minutes is not None else config.get("check_interval_minutes", 60)
-
-    log_info("=" * 72)
-    log_info("DROPSHIP CATALOG BACKGROUND FRESHNER DAEMON STARTED")
-    log_info("=" * 72)
-    log_info(f"PID:                   {os.getpid()}")
-    log_info(f"Schedule Interval:     {effective_interval:.1f} minutes ({effective_interval * 60:.0f} seconds)")
-    log_info(f"Single Cycle Mode:     {once}")
-    if store_filter:
-        log_info(f"Store Filter:          {store_filter}")
-    log_info(f"Operational Log:       logs/freshner.log")
-    log_info(f"Error Diagnostic Log:  logs/errors.log")
-    log_info("=" * 72)
-
-    cycle_count = 1
-
-    while not _SHUTDOWN_REQUESTED:
-        cycle_start_time = time.time()
-        log_info(f"\n>>> Starting Sync Cycle #{cycle_count} at {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-
-        # In cycle 1, apply force_first_cycle if specified
-        is_force = force_first_cycle if cycle_count == 1 else False
-
-        try:
-            results = run_catalog_sync(
-                interval_override=effective_interval,
-                store_filter=store_filter,
-                force=is_force,
-                config_path=config_path
-            )
-
-            scanned = results.get("scanned", 0)
-            skipped = results.get("skipped", 0)
-            p_shifts = results.get("price_changes", 0)
-            s_shifts = results.get("stock_changes", 0)
-            errs = results.get("errors", 0)
-
-            log_success(
-                f"Sync Cycle #{cycle_count} Completed | "
-                f"Scanned: {scanned}, Skipped: {skipped}, "
-                f"Price Shifts: {p_shifts}, Stock Shifts: {s_shifts}, "
-                f"Errors: {errs}"
-            )
-
-        except Exception as exc:
-            log_error(f"Unhandled exception during Sync Cycle #{cycle_count}", exc=exc)
-
-        if once or _SHUTDOWN_REQUESTED:
-            log_info(f"Exiting daemon loop ({'single-run --once completed' if once else 'shutdown requested'}).")
-            break
-
-        cycle_duration = time.time() - cycle_start_time
-        target_sleep = max(10.0, (effective_interval * 60.0) - cycle_duration)
-        next_wake = datetime.datetime.now() + datetime.timedelta(seconds=target_sleep)
-
-        log_info(
-            f"Cycle #{cycle_count} sweep took {cycle_duration:.1f}s. "
-            f"Daemon sleeping for {target_sleep:.0f}s. "
-            f"Next cycle #{cycle_count + 1} scheduled at {next_wake.strftime('%Y-%m-%d %H:%M:%S')}."
+    # 1. Acquire non-blocking exclusive singleton lock FIRST
+    acquired, lock_handle, active_pid = acquire_daemon_lock(pid_path=pid_path)
+    if not acquired:
+        log_warning(
+            f"Another daemon instance is already active (PID: {active_pid}). "
+            f"Refusing duplicate startup."
         )
+        sys.exit(1)
 
-        sleep_with_heartbeat(target_sleep)
-        cycle_count += 1
+    # 2. ONLY the confirmed lock holder (singleton leader) cleans up orphan/zombie processes
+    terminated_orphans = terminate_orphan_daemons(current_pid=active_pid, pid_path=pid_path)
+    if terminated_orphans > 0:
+        log_info(f"Cleaned up {terminated_orphans} orphan or zombie daemon process(es).")
 
-    log_info("Background Freshner Daemon has stopped cleanly.")
+    try:
+        register_signal_handlers()
+
+        config = load_delta_config(config_path)
+        effective_interval = interval_minutes if interval_minutes is not None else config.get("check_interval_minutes", 60)
+
+        log_info("=" * 72)
+        log_info("DROPSHIP CATALOG BACKGROUND FRESHNER DAEMON STARTED")
+        log_info("=" * 72)
+        log_info(f"PID:                   {os.getpid()}")
+        log_info(f"Schedule Interval:     {effective_interval:.1f} minutes ({effective_interval * 60:.0f} seconds)")
+        log_info(f"Single Cycle Mode:     {once}")
+        if store_filter:
+            log_info(f"Store Filter:          {store_filter}")
+        log_info(f"Operational Log:       logs/freshner.log")
+        log_info(f"Error Diagnostic Log:  logs/errors.log")
+        log_info(f"Lock File:             {pid_path}")
+        log_info("=" * 72)
+
+        cycle_count = 1
+
+        while not _SHUTDOWN_REQUESTED:
+            cycle_start_time = time.time()
+            log_info(f"\n>>> Starting Sync Cycle #{cycle_count} at {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
+            # In cycle 1, apply force_first_cycle if specified
+            is_force = force_first_cycle if cycle_count == 1 else False
+
+            try:
+                results = run_catalog_sync(
+                    interval_override=effective_interval,
+                    store_filter=store_filter,
+                    force=is_force,
+                    config_path=config_path
+                )
+
+                scanned = results.get("scanned", 0)
+                skipped = results.get("skipped", 0)
+                p_shifts = results.get("price_changes", 0)
+                s_shifts = results.get("stock_changes", 0)
+                errs = results.get("errors", 0)
+
+                log_success(
+                    f"Sync Cycle #{cycle_count} Completed | "
+                    f"Scanned: {scanned}, Skipped: {skipped}, "
+                    f"Price Shifts: {p_shifts}, Stock Shifts: {s_shifts}, "
+                    f"Errors: {errs}"
+                )
+
+            except Exception as exc:
+                log_error(f"Unhandled exception during Sync Cycle #{cycle_count}", exc=exc)
+
+            if once or _SHUTDOWN_REQUESTED:
+                log_info(f"Exiting daemon loop ({'single-run --once completed' if once else 'shutdown requested'}).")
+                break
+
+            cycle_duration = time.time() - cycle_start_time
+            target_sleep = max(10.0, (effective_interval * 60.0) - cycle_duration)
+            next_wake = datetime.datetime.now() + datetime.timedelta(seconds=target_sleep)
+
+            log_info(
+                f"Cycle #{cycle_count} sweep took {cycle_duration:.1f}s. "
+                f"Daemon sleeping for {target_sleep:.0f}s. "
+                f"Next cycle #{cycle_count + 1} scheduled at {next_wake.strftime('%Y-%m-%d %H:%M:%S')}."
+            )
+
+            sleep_with_heartbeat(target_sleep)
+            cycle_count += 1
+
+        log_info("Background Freshner Daemon has stopped cleanly.")
+    finally:
+        release_daemon_lock(lock_handle, pid_path=pid_path)
 
 
 def main():
@@ -158,6 +185,12 @@ def main():
         default=DEFAULT_CONFIG_PATH,
         help="Path to delta config JSON"
     )
+    parser.add_argument(
+        "--pid-file",
+        type=str,
+        default=DEFAULT_PID_PATH,
+        help="Path to daemon PID lock file"
+    )
 
     args = parser.parse_args()
 
@@ -166,9 +199,11 @@ def main():
         store_filter=args.store,
         force_first_cycle=args.force_first,
         once=args.once,
-        config_path=args.config
+        config_path=args.config,
+        pid_path=args.pid_file
     )
 
 
 if __name__ == "__main__":
     main()
+

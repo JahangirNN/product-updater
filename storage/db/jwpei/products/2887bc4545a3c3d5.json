@@ -8,12 +8,12 @@
   "source_sku": "2T192X010-4",
   "source_price": 159.0,
   "source_compare_at_price": 159.0,
-  "current_price": 15080.0,
-  "compare_at_price": 15080.0,
+  "current_price": 15212.0,
+  "compare_at_price": 15212.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Vegan Leather",
   "specifications": {
     "Main Material": "Vegan Leather",
@@ -51,7 +51,9 @@
           "option_name": "Color",
           "name": "Standard"
         }
-      ]
+      ],
+      "is_available": false,
+      "price_current": 15212.0
     }
   ],
   "product_options": [
@@ -77,6 +79,8 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:35:43Z",
-  "updated_at": "2026-09-13T07:39:23Z",
-  "last_verified_at": "2026-09-13T07:39:23Z"
+  "updated_at": "2026-09-17T17:17:37Z",
+  "last_verified_at": "2026-09-17T17:17:37Z",
+  "is_active": false,
+  "shopify_sync_pending": true
 }

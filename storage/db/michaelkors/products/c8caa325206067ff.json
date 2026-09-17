@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 10411,
+  "current_price": 10463,
   "source_price": 109.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/3c739bf7-78c9-4b70-ab77-efbe0c0f2244/30T5G3XB3C-001-0001_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/3c739bf7-78c9-4b70-ab77-efbe0c0f2244/30T5G3XB3C-001-0001_1-tif",
@@ -23,12 +23,12 @@
     {
       "sku": "30T5G3XB3C",
       "title": "0001",
-      "price": "10411.00",
-      "compare_at_price": "26696.00",
+      "price": "10463.00",
+      "compare_at_price": "26829.00",
       "source_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/3c739bf7-78c9-4b70-ab77-efbe0c0f2244/30T5G3XB3C-001-0001_1-tif",
       "option_values": [
         {
@@ -77,12 +77,13 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-13T07:08:50Z",
+  "last_verified_at": "2026-09-17T17:20:03Z",
   "id": "c8caa325206067ff",
   "created_at": "2026-09-11T18:30:35Z",
-  "updated_at": "2026-09-13T07:08:50Z",
+  "updated_at": "2026-09-17T17:20:03Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Sable Large Nylon Backpack by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 10.75”W X 15.5”H X 5.25”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 2&quot;</li>\n      <li><strong>Material:</strong> The main material of this product contains at least 85% recycled nylon., Nylon</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 279.5,
-  "compare_at_price": 26696,
-  "material": "The main material of this product contains at least 85% recycled nylon., Nylon"
+  "compare_at_price": 26829,
+  "material": "The main material of this product contains at least 85% recycled nylon., Nylon",
+  "shopify_sync_pending": true
 }

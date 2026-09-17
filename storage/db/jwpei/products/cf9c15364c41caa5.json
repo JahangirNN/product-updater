@@ -8,8 +8,8 @@
   "source_sku": "2T318-1",
   "source_price": 149.0,
   "source_compare_at_price": 149.0,
-  "current_price": 14132.0,
-  "compare_at_price": 14132.0,
+  "current_price": 14256.0,
+  "compare_at_price": 14256.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -52,7 +52,9 @@
           "option_name": "Color",
           "name": "Black"
         }
-      ]
+      ],
+      "is_available": true,
+      "price_current": 14256.0
     }
   ],
   "product_options": [
@@ -84,6 +86,8 @@
   "validation_warnings": [],
   "id": "cf9c15364c41caa5",
   "created_at": "2026-09-09T15:47:40Z",
-  "updated_at": "2026-09-13T07:09:40Z",
-  "last_verified_at": "2026-09-13T07:09:40Z"
+  "updated_at": "2026-09-17T17:21:55Z",
+  "last_verified_at": "2026-09-17T17:21:55Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }
