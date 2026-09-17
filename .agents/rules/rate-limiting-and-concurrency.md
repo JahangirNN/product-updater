@@ -60,3 +60,16 @@ Never fire unpaced outbound requests against retailer storefronts, never use OOP
 - Stored variants must update their `in_stock` boolean per individual size independently.
 - Top-level product `availability` is `in_stock` if and only if `any(v["in_stock"] for v in variants)`.
 
+### 2.11 Two-Tier Collection Fast-Sweeps for Browser-Driven Stores (ADR 0014)
+- When monitoring retailers protected by client-side anti-bot challenges (e.g. Kasada), never visit dozens of PDPs serially if collection/search listing pages embed multi-product pricing and availability.
+- Implement a **Two-Tier Engine**:
+  1. **Tier 1 (Collection Sweep)**: Harvest collection search pages to populate an in-memory catalog cache with live retail price ranges and stock quantities.
+  2. **In-Memory Fast-Path**: Products whose stored price and stock status match live collection data resolve in `< 1ms` in memory. Bypass idle delay sleeps on cache hits.
+  3. **Tier 2 (Targeted PDP Visit)**: Only navigate to a specific product's PDP if a price change, markdown, or stockout (`shipQuantity == 0`) is detected, updating granular variants without loading the rest of the catalog.
+
+### 2.12 Mandatory Route Aborting for Stealth Browsers
+- All stealth browser workers (Camoufox/Playwright) MUST attach route interception filters (`page.route("**/*", handler)`).
+- Abort all heavy non-essential assets (`image`, `media`, `font`, `stylesheet`) and third-party trackers (`doubleclick`, `google-analytics`, `quantummetric`, `branch.io`, `facebook`).
+- Only allow documents and primary scripts necessary for anti-bot proof-of-work and React/Next.js hydration.
+
+
