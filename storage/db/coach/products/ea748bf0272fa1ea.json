@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Leather upper",
   "specifications": {
     "Heel Height": "Heel Height: 2.5\"",
@@ -242,7 +242,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdg08_upz_a0",
       "option_values": [
         {
@@ -261,7 +261,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdg08_upz_a0",
       "option_values": [
         {
@@ -323,9 +323,11 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:48:01Z",
-  "last_verified_at": "2026-09-17T15:20:06Z",
+  "last_verified_at": "2026-09-17T17:27:14Z",
   "id": "ea748bf0272fa1ea",
   "product_id": "ea748bf0272fa1ea",
   "store": "coach",
-  "updated_at": "2026-09-17T15:20:06Z"
+  "updated_at": "2026-09-17T17:27:14Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

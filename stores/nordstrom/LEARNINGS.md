@@ -1,4 +1,4 @@
-# Store Knowledge Base: Nordstrom (On & HOKA Footwear Collections)
+# Store Knowledge Base: Nordstrom (On, HOKA & Salomon Footwear Collections)
 
 > **Purpose**: Document retailer-specific quirks, query parameter mechanics, size conversion matrices, DOM structures, bot mitigation handling, and delta monitoring patterns for Nordstrom (`nordstrom.com`).
 
@@ -11,7 +11,8 @@
 - **Brands Under Scope**:
   - `On` (On Running athletic footwear: 93 styles)
   - `HOKA` (Hoka maximum-cushioned footwear: 89 styles)
-  - **Total Nordstrom Partition**: 182 styles
+  - `Salomon` (Salomon technical trail and outdoor footwear: 56 styles)
+  - **Total Nordstrom Partition**: 238 styles
 - **Default Currency**: `USD` (Converted to whole `INR` rupees using cached daily exchange rate)
 - **E-Commerce Architecture**: Single-Page App (React / Next.js) protected by Imperva / Incapsula / Kasada bot mitigation.
 
@@ -29,7 +30,12 @@
   `https://www.nordstrom.com/sr?origin=keywordsearch&keyword=hoka%20shoes&filterByGenderAge=men&filterByGenderAge=unisex&filterByGenderAge=women&filterByProductType=shoes_boots&filterByProductType=shoes_sandals&filterByProductType=shoes_sneakers`
 - **Catalog Size**: 89 adult footwear products (13 kids styles cleanly excluded).
 
-### 2.3 Universal Footwear Scope Boundaries
+### 2.3 Salomon Footwear Collection
+- **Target URL**:
+  `https://www.nordstrom.com/sr?origin=keywordsearch&keyword=salomon%20shoes`
+- **Catalog Size**: 56 adult footwear products.
+
+### 2.4 Universal Footwear Scope Boundaries
 - Footwear only (strictly reject any apparel, socks, accessories, or clothing; reject kids/youth category leaks).
 - Accepts all adult footwear products offering valid size variants (`len(size_variants) >= 1`).
 - All available sizes are stored with granular per-variant US, UK, and EU size mappings.
@@ -119,3 +125,11 @@ Derived directly from the official Nordstrom On shoe conversion guides:
   2. **In-Memory Cache & Fast-Path**: Products whose stored price and stock status match the live collection data resolve in `< 1ms` in memory.
   3. **Tier 2 (Targeted PDP Visit)**: If, and only if, a product indicates a price change, markdown, or goes out of stock (`shipQuantity == 0`), Camoufox visits only that specific product's PDP to synchronize granular per-size variants.
 - **Performance Impact**: Reduced full 57-product Nordstrom sweep duration from **~15.6 minutes down to ~2.6 minutes (158s)** with zero API cost and 100% accuracy.
+
+### 5.4 Salomon Footwear Onboarding & Single-Width LLM Fallback Quirk
+- **Catalog Size**: 56 adult footwear models (XT-6, XT-4, Speedcross, ACS Pro, RX Moc/Slide, X-Alp, Snowclog).
+- **Brand Handling**: Vendor is dynamically set to `Salomon` with SKU prefix `SALOMON-{styleId}-{size}`, EnergyCell / Contagrip cushioning specifications, and Salomon size guide accordion.
+- **Single-Width Extractor Quirk**:
+  - For footwear with single-width options, LLM extractors can mistakenly parse the width ("M" or "W") instead of the numeric shoe sizes.
+  - **Resolution**: Seamless Camoufox hydration directly queries Nordstrom's `window.__INITIAL_CONFIG__["productDisplay"]["productDisplaysById"]["entities"]` `items` where `concatenatedDisplaySize` and `sizeDimension1.label` provide true US numeric sizes (e.g. US 5 through 15) and per-variant stock (`shipQuantity > 0`).
+- **Parity Verification**: 100% Tier A static schema compliance and 100% live Tier B parity achieved across sample PDPs.

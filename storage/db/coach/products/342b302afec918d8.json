@@ -260,7 +260,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cex40_blk_a0",
       "option_values": [
         {
@@ -322,9 +322,10 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:40:39Z",
-  "last_verified_at": "2026-09-17T16:18:23Z",
+  "last_verified_at": "2026-09-17T18:20:30Z",
   "id": "342b302afec918d8",
   "product_id": "342b302afec918d8",
   "store": "coach",
-  "updated_at": "2026-09-17T16:18:23Z"
+  "updated_at": "2026-09-17T18:20:30Z",
+  "shopify_sync_pending": true
 }

@@ -603,7 +603,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw883_imqrx_a0",
       "option_values": [
         {
@@ -801,9 +801,10 @@
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:48:59Z",
-  "last_verified_at": "2026-09-17T15:20:32Z",
+  "last_verified_at": "2026-09-17T17:28:29Z",
   "id": "fa623eed3fe90b64",
   "product_id": "fa623eed3fe90b64",
   "store": "coach",
-  "updated_at": "2026-09-17T15:20:32Z"
+  "updated_at": "2026-09-17T17:28:29Z",
+  "shopify_sync_pending": true
 }

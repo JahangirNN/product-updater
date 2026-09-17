@@ -65,6 +65,36 @@ MEN_US_TO_EU = {
     "15": "50", "15.0": "50"
 }
 
+SALOMON_WOMEN_US_TO_UK = {
+    "5": "3.5", "5.0": "3.5", "5.5": "4",
+    "6": "4.5", "6.0": "4.5", "6.5": "5",
+    "7": "5.5", "7.0": "5.5", "7.5": "6",
+    "8": "6.5", "8.0": "6.5", "8.5": "7",
+    "9": "7.5", "9.0": "7.5", "9.5": "8",
+    "10": "8.5", "10.0": "8.5", "10.5": "9",
+    "11": "9.5", "11.0": "9.5", "12": "10.5", "12.0": "10.5"
+}
+
+SALOMON_WOMEN_US_TO_EU = {
+    "5": "36", "5.0": "36", "5.5": "36 2/3",
+    "6": "37 1/3", "6.0": "37 1/3", "6.5": "38",
+    "7": "38 2/3", "7.0": "38 2/3", "7.5": "39 1/3",
+    "8": "40", "8.0": "40", "8.5": "40 2/3",
+    "9": "41 1/3", "9.0": "41 1/3", "9.5": "42",
+    "10": "42 2/3", "10.0": "42 2/3", "10.5": "43 1/3",
+    "11": "44", "11.0": "44", "12": "45 1/3", "12.0": "45 1/3"
+}
+
+SALOMON_MEN_US_TO_EU = {
+    "7": "40", "7.0": "40", "7.5": "40 2/3",
+    "8": "41 1/3", "8.0": "41 1/3", "8.5": "42",
+    "9": "42 2/3", "9.0": "42 2/3", "9.5": "43 1/3",
+    "10": "44", "10.0": "44", "10.5": "44 2/3",
+    "11": "45 1/3", "11.0": "45 1/3", "11.5": "46",
+    "12": "46 2/3", "12.0": "46 2/3", "12.5": "47 1/3",
+    "13": "48", "13.0": "48", "14": "49 1/3", "14.0": "49 1/3"
+}
+
 
 def parse_numeric_size(size_str: str) -> Optional[float]:
     """Parse numeric US shoe size float from strings like '7', '8.5', '7 1/2', 'US 9.5', '10.5US - 44 EU'."""
@@ -92,10 +122,17 @@ def parse_numeric_size(size_str: str) -> Optional[float]:
     return None
 
 
-def convert_us_to_uk(us_size: float, gender: str) -> str:
-    """Convert US shoe size to UK shoe size for On running footwear."""
+def convert_us_to_uk(us_size: float, gender: str, brand: str = "On") -> str:
+    """Convert US shoe size to UK shoe size."""
     key = f"{us_size:g}"
     gender_lower = gender.lower()
+    if brand.lower() == "salomon":
+        if "women" in gender_lower:
+            return SALOMON_WOMEN_US_TO_UK.get(key, f"{max(0.0, us_size - 1.5):g}")
+        if key in MEN_US_TO_UK:
+            return MEN_US_TO_UK[key]
+        return f"{max(0.0, us_size - 0.5):g}"
+
     if "women" in gender_lower:
         if key in WOMEN_US_TO_UK:
             return WOMEN_US_TO_UK[key]
@@ -109,10 +146,17 @@ def convert_us_to_uk(us_size: float, gender: str) -> str:
         return f"{max(0.0, us_size - 0.5):g}"
 
 
-def convert_us_to_eu(us_size: float, gender: str) -> str:
-    """Convert US shoe size to EU shoe size for On running footwear."""
+def convert_us_to_eu(us_size: float, gender: str, brand: str = "On") -> str:
+    """Convert US shoe size to EU shoe size."""
     key = f"{us_size:g}"
     gender_lower = gender.lower()
+    if brand.lower() == "salomon":
+        if "women" in gender_lower:
+            return SALOMON_WOMEN_US_TO_EU.get(key, f"{31.0 + (us_size * 1.0):g}")
+        if key in SALOMON_MEN_US_TO_EU:
+            return SALOMON_MEN_US_TO_EU[key]
+        return f"{33.0 + (us_size * 1.0):g}"
+
     if "women" in gender_lower:
         if key in WOMEN_US_TO_EU:
             return WOMEN_US_TO_EU[key]
@@ -181,7 +225,7 @@ def parse_product_payload(
     Returns None if product has fewer than min_size_variants distinct sizes or is a kids/toddler category leak.
     """
     title = clean_title(raw_data.get("title", "") or raw_data.get("productTitle", ""))
-    if not title or title.strip().lower() in ("on", "hoka"):
+    if not title or title.strip().lower() in ("on", "hoka", "salomon"):
         return None
 
     url = raw_data.get("url") or raw_data.get("source_url") or raw_data.get("sourceURL") or ""
@@ -216,6 +260,30 @@ def parse_product_payload(
     price_inr = convert_usd_to_inr(source_price_usd, usd_to_inr_rate)
     compare_inr = convert_usd_to_inr(compare_price_usd, usd_to_inr_rate) if compare_price_usd else None
 
+    # Dynamic Brand & Style ID Identification
+    raw_brand = str(raw_data.get("brand") or "").strip()
+    brand_combined = f"{raw_brand} {title} {url}".lower()
+    if "salomon" in brand_combined:
+        brand = "Salomon"
+        brand_sku_prefix = "SALOMON"
+        default_cushioning = "EnergyCell / Contagrip technical cushioning"
+    elif "hoka" in brand_combined:
+        brand = "HOKA"
+        brand_sku_prefix = "HOKA"
+        default_cushioning = "Plush maximal buoyant cushioning"
+    elif "on " in brand_combined or " on" in brand_combined or "cloud" in brand_combined:
+        brand = "On"
+        brand_sku_prefix = "ON"
+        default_cushioning = "CloudTec buoyant cushioning"
+    elif raw_brand:
+        brand = raw_brand
+        brand_sku_prefix = re.sub(r'[^A-Z0-9]', '', raw_brand.upper())[:10] or "NORD"
+        default_cushioning = "Cushioned athletic sole"
+    else:
+        brand = "On"
+        brand_sku_prefix = "ON"
+        default_cushioning = "CloudTec buoyant cushioning"
+
     # 2. Extract and resolve all available sizes
     raw_sizes = raw_data.get("sizes", [])
     valid_sizes = []
@@ -237,8 +305,8 @@ def parse_product_payload(
         if us_val is not None:
             if min_us_size is not None and us_val < min_us_size:
                 continue
-            resolved_uk = str(uk_val).strip() if uk_val else convert_us_to_uk(us_val, gender)
-            resolved_eu = str(eu_val).strip() if eu_val else convert_us_to_eu(us_val, gender)
+            resolved_uk = str(uk_val).strip() if uk_val else convert_us_to_uk(us_val, gender, brand=brand)
+            resolved_eu = str(eu_val).strip() if eu_val else convert_us_to_eu(us_val, gender, brand=brand)
             valid_sizes.append({
                 "us_size": us_val,
                 "us_str": f"{us_val:g}",
@@ -273,17 +341,7 @@ def parse_product_payload(
     images = clean_images(raw_data)
     featured_image = images[0] if images else None
 
-    # 4. Handle, Brand, and Style ID
-    raw_brand = str(raw_data.get("brand") or "").strip()
-    if "hoka" in raw_brand.lower() or "hoka" in title.lower() or "hoka" in url.lower():
-        brand = "HOKA"
-        brand_sku_prefix = "HOKA"
-        default_cushioning = "Plush maximal buoyant cushioning"
-    else:
-        brand = "On"
-        brand_sku_prefix = "ON"
-        default_cushioning = "CloudTec buoyant cushioning"
-
+    # 4. Handle and Style ID
     details = raw_data.get("details") or {}
     item_num = details.get("item_number") or raw_data.get("item_number") or ""
     style_id = details.get("style_id") or raw_data.get("style_id") or ""
@@ -389,7 +447,7 @@ def parse_product_payload(
         "variants": variants,
         "product_options": product_options,
         "tags": [
-            "on-shoes", "footwear", "sneakers", "running",
+            f"{brand.lower().replace(' ', '-')}-shoes", "footwear", "sneakers", "running",
             gender.lower(), f"sizes-{len(deduped_sizes)}"
         ],
         "groups": [group_name],
@@ -442,6 +500,7 @@ def generate_description_html(
     material = specs.get("Material", "Textile and synthetic upper")
     drop = specs.get("Midsole Drop", "8mm")
     cushioning = specs.get("Cushioning", "CloudTec buoyant cushioning")
+    brand_display = specs.get("Brand", "Footwear")
 
     rows_html = ""
     for s in sizes:
@@ -458,7 +517,7 @@ def generate_description_html(
   <div class="product-highlights">
     <h4>Performance Specifications</h4>
     <ul>
-      <li><strong>Brand:</strong> On Running</li>
+      <li><strong>Brand:</strong> {html.escape(brand_display)}</li>
       <li><strong>Gender:</strong> {html.escape(gender)}</li>
       <li><strong>Material:</strong> {html.escape(material)}</li>
       <li><strong>Midsole Drop:</strong> {html.escape(drop)}</li>
@@ -467,7 +526,7 @@ def generate_description_html(
   </div>
 
   <details class="size-guide-accordion" style="margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;">
-    <summary style="font-weight: bold; cursor: pointer;">📏 On Running Shoe Size & Conversion Guide ({html.escape(gender)})</summary>
+    <summary style="font-weight: bold; cursor: pointer;">📏 {html.escape(brand_display)} Shoe Size &amp; Conversion Guide ({html.escape(gender)})</summary>
     <p style="font-size: 13px; color: #666; margin: 8px 0 4px 0;">Official size conversion guide. Showing all available shoe sizes.</p>
     <table style="width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;">
       <thead>

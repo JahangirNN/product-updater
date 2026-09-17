@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Natural grain leather",
   "specifications": {
     "Material": "Natural grain leather",
@@ -77,7 +77,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdy81_b4z0g_a0",
       "option_values": [
         {
@@ -175,11 +175,11 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:48:55Z",
-  "last_verified_at": "2026-09-17T15:20:30Z",
+  "last_verified_at": "2026-09-17T17:28:20Z",
   "id": "f90e36f109d5ec03",
   "product_id": "f90e36f109d5ec03",
   "store": "coach",
   "is_active": false,
   "shopify_sync_pending": true,
-  "updated_at": "2026-09-17T15:20:30Z"
+  "updated_at": "2026-09-17T17:28:20Z"
 }

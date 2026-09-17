@@ -197,17 +197,17 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
             return "Designer Sunglasses"
         return "Women's Luxury"
 
-    # Footwear taxonomy for Nordstrom / On Running
+    # Footwear taxonomy for Nordstrom (On, HOKA, Salomon)
     if source_store == "nordstrom" or "shoes" in groups or "footwear" in product.get("tags", []):
-        if "waterproof" in title_lower or "waterproof" in handle_lower:
+        if "waterproof" in title_lower or "waterproof" in handle_lower or "gtx" in title_lower or "gore-tex" in title_lower:
             return "Waterproof Footwear"
-        elif "trail" in title_lower or "hiking" in title_lower or "hike" in handle_lower:
+        elif "trail" in title_lower or "hiking" in title_lower or "hike" in handle_lower or "speedcross" in title_lower:
             return "Trail & Outdoor"
         elif "roger" in title_lower or "tennis" in title_lower or "court" in title_lower:
             return "Tennis & Court"
         elif "training" in title_lower or "pulse" in title_lower or "cloud x" in title_lower:
             return "Training & Gym"
-        elif "mule" in title_lower or "slide" in title_lower:
+        elif "mule" in title_lower or "slide" in title_lower or "clog" in title_lower or "slip on" in title_lower or "slip-on" in title_lower or "moc" in title_lower:
             return "Mules & Slides"
         elif "surfer" in title_lower or "runner" in title_lower or "monster" in title_lower or "running" in title_lower or "boom" in title_lower:
             return "Running Shoes"
