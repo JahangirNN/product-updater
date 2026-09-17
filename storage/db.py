@@ -7,6 +7,7 @@ import os
 import json
 import hashlib
 import time
+import threading
 from typing import Any, Dict, List, Optional
 
 
@@ -24,6 +25,38 @@ def generate_product_id(store: str, sku: str) -> str:
 def get_product_file_path(store: str, product_id: str, base_dir: str = "storage/db") -> str:
     """Get absolute or relative path to partitioned product file."""
     return os.path.join(base_dir, store, "products", f"{product_id}.json")
+
+
+def _atomic_write_json_with_retry(target_file: str, data: Any, max_retries: int = 5) -> None:
+    """
+    Atomically write data to target_file using a process/thread-unique temp file.
+    Includes a retry loop to handle Windows filesystem file contention.
+    """
+    target_dir = os.path.dirname(target_file)
+    if target_dir:
+        os.makedirs(target_dir, exist_ok=True)
+
+    unique_suffix = f"{os.getpid()}_{threading.get_ident()}_{int(time.perf_counter()*1000000)}"
+    tmp_file = f"{target_file}.{unique_suffix}.tmp"
+
+    with open(tmp_file, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+    for attempt in range(max_retries):
+        try:
+            os.replace(tmp_file, target_file)
+            return
+        except (PermissionError, OSError):
+            if attempt == max_retries - 1:
+                try:
+                    if os.path.exists(tmp_file):
+                        os.remove(tmp_file)
+                except Exception:
+                    pass
+                with open(target_file, "w", encoding="utf-8") as f:
+                    json.dump(data, f, indent=2, ensure_ascii=False)
+                return
+            time.sleep(0.05 * (2 ** attempt))
 
 
 def save_product(product: Dict[str, Any], base_dir: str = "storage/db") -> Dict[str, Any]:
@@ -62,11 +95,8 @@ def save_product(product: Dict[str, Any], base_dir: str = "storage/db") -> Dict[
 
     product["updated_at"] = now_iso
 
-    # Atomic write
-    tmp_path = f"{file_path}.tmp"
-    with open(tmp_path, "w", encoding="utf-8") as f:
-        json.dump(product, f, indent=2, ensure_ascii=False)
-    os.replace(tmp_path, file_path)
+    # Resilient atomic write with retry for Windows concurrency
+    _atomic_write_json_with_retry(file_path, product)
 
     return product
 
@@ -125,60 +155,106 @@ def build_and_save_index(base_dir: str = "storage/db") -> Dict[str, Any]:
                 print(f"[WARN] Failed to read {p_path}: {err}")
 
     index_path = os.path.join(base_dir, "index.json")
-    tmp_path = f"{index_path}.tmp"
-    with open(tmp_path, "w", encoding="utf-8") as f:
-        json.dump(index_map, f, indent=2, ensure_ascii=False)
-    os.replace(tmp_path, index_path)
+    _atomic_write_json_with_retry(index_path, index_map)
 
     return index_map
 
 
+_delta_log_lock = threading.Lock()
+_delta_event_lock = threading.Lock()
+
+
 def append_delta_log(delta_entry: Dict[str, Any], base_dir: str = "storage/db") -> None:
-    """Append a price or stock delta record to history/delta_log.json."""
+    """Append a price or stock delta record to history/delta_log.json in a thread-safe manner."""
     history_dir = os.path.join(base_dir, "history")
     os.makedirs(history_dir, exist_ok=True)
     log_file = os.path.join(history_dir, "delta_log.json")
 
-    existing_logs = []
-    if os.path.exists(log_file):
-        try:
-            with open(log_file, "r", encoding="utf-8") as f:
-                existing_logs = json.load(f)
-        except Exception:
-            existing_logs = []
+    with _delta_log_lock:
+        existing_logs = []
+        if os.path.exists(log_file):
+            try:
+                with open(log_file, "r", encoding="utf-8") as f:
+                    existing_logs = json.load(f)
+            except Exception:
+                existing_logs = []
 
-    if "timestamp" not in delta_entry:
-        delta_entry["timestamp"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+        if "timestamp" not in delta_entry:
+            delta_entry["timestamp"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
 
-    existing_logs.append(delta_entry)
-    tmp_log = f"{log_file}.tmp"
-    with open(tmp_log, "w", encoding="utf-8") as f:
-        json.dump(existing_logs, f, indent=2, ensure_ascii=False)
-    os.replace(tmp_log, log_file)
+        existing_logs.append(delta_entry)
+        _atomic_write_json_with_retry(log_file, existing_logs)
 
 
-def append_delta_event(event_entry: Dict[str, Any], queue_file: str = "storage/db/history/delta_events.json") -> None:
+def append_delta_event(event_entry: Dict[str, Any], queue_file: str = "storage/db/history/delta_events.jsonl") -> None:
     """
     Append an individual price or stock shift event to the Shopify sync queue.
-    Future Shopify Admin API worker will consume and process items from this queue.
+    Uses O(1) append-only JSON Lines format with cross-process OS file locking
+    (msvcrt byte-range on Windows, fcntl on POSIX) to eliminate WinError 32/5 collisions.
     """
-    queue_dir = os.path.dirname(queue_file)
-    if queue_dir:
-        os.makedirs(queue_dir, exist_ok=True)
-
-    events = []
-    if os.path.exists(queue_file):
-        try:
-            with open(queue_file, "r", encoding="utf-8") as f:
-                events = json.load(f)
-        except Exception:
-            events = []
+    import sys
 
     if "timestamp" not in event_entry:
         event_entry["timestamp"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
 
-    events.append(event_entry)
-    tmp_queue = f"{queue_file}.tmp"
-    with open(tmp_queue, "w", encoding="utf-8") as f:
-        json.dump(events, f, indent=2, ensure_ascii=False)
-    os.replace(tmp_queue, queue_file)
+    line = json.dumps(event_entry, ensure_ascii=False) + "\n"
+
+    queue_dir = os.path.dirname(queue_file)
+    if queue_dir:
+        os.makedirs(queue_dir, exist_ok=True)
+
+    with _delta_event_lock:
+        lock_path = queue_file + ".lock"
+        lock_f = None
+        try:
+            # Acquire cross-process OS file lock via dedicated lock file
+            lock_f = open(lock_path, "a+b")
+            if sys.platform == "win32":
+                import msvcrt
+                # Seek to offset 0 for consistent byte-range locking
+                lock_f.seek(0)
+                msvcrt.locking(lock_f.fileno(), msvcrt.LK_LOCK, 1)
+            else:
+                import fcntl
+                fcntl.flock(lock_f.fileno(), fcntl.LOCK_EX)
+
+            # Append event line to JSONL queue
+            with open(queue_file, "a", encoding="utf-8") as qf:
+                qf.write(line)
+                qf.flush()
+
+            # Release cross-process lock
+            if sys.platform == "win32":
+                lock_f.seek(0)
+                msvcrt.locking(lock_f.fileno(), msvcrt.LK_UNLCK, 1)
+            else:
+                fcntl.flock(lock_f.fileno(), fcntl.LOCK_UN)
+        finally:
+            if lock_f is not None:
+                try:
+                    lock_f.close()
+                except Exception:
+                    pass
+
+
+def read_delta_events(queue_file: str = "storage/db/history/delta_events.jsonl") -> List[Dict[str, Any]]:
+    """
+    Read all delta events from the JSONL queue file.
+    Returns a list of event dicts for backward compatibility with consumers.
+    """
+    events = []
+    if not os.path.exists(queue_file):
+        return events
+    try:
+        with open(queue_file, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    try:
+                        events.append(json.loads(line))
+                    except json.JSONDecodeError:
+                        continue
+    except Exception:
+        pass
+    return events
+

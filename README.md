@@ -106,6 +106,8 @@ All engineering decisions are recorded and immutably numbered in [`docs/adr/`](.
 | **[0010](./docs/adr/0010-store-agnostic-rate-limiting-circuit-breaker-and-browser-fingerprinting.md)** | Store-Agnostic Rate Limiting, Circuit Breakers & Browser Fingerprinting | Accepted |
 | **[0011](./docs/adr/0011-zero-cost-local-stealth-browser-kasada-solving-and-parallel-multi-store-scheduling.md)** | Zero-Cost Local Stealth Browser Kasada Solving & Parallel Multi-Store Delta Scheduling | Accepted |
 | **[0012](./docs/adr/0012-michaelkors-store-onboarding-and-sfcc-demandware-integration.md)** | Michael Kors Store Onboarding, SFCC Demandware Ingestion & Multi-Category Pipeline Architecture | Accepted |
+| **[0013](./docs/adr/0013-coach-brand-onboarding-and-sfcc-scene7-integration.md)** | Coach Brand Onboarding, SFCC Scene7 Integration & Multi-Color Variant Architecture | Accepted |
+| **[0014](./docs/adr/0014-two-tier-collection-fast-sweep-and-route-blocked-pdp-delta-engine.md)** | Two-Tier Collection Fast-Sweep & Route-Blocked PDP Delta Engine | Accepted |
 
 ---
 
@@ -118,5 +120,7 @@ All engineering decisions are recorded and immutably numbered in [`docs/adr/`](.
 - [`docs/SHOPIFY_INTEGRATION_SPEC.md`](./docs/SHOPIFY_INTEGRATION_SPEC.md): GraphQL `productSet` mutation contracts and Size Guide tables.
 - [`docs/CODING_STANDARDS.md`](./docs/CODING_STANDARDS.md): Pure functions, typing standards, and atomic file writes.
 - `stores/jwpei/LEARNINGS.md`: Living retailer knowledge base for JW PEI (query filters, swatch IDs, fast endpoints).
-- `stores/nordstrom/LEARNINGS.md`: Living retailer knowledge base for Nordstrom (On shoes DOM, size conversion matrix, query filters).
+- `stores/nordstrom/LEARNINGS.md`: Living retailer knowledge base for Nordstrom (On shoes DOM, size conversion matrix, query filters, two-tier sweep).
 - `stores/michaelkors/LEARNINGS.md`: Living retailer knowledge base for Michael Kors (SFCC Demandware, geolocation pinning, multi-category taxonomy).
+- `stores/coach/LEARNINGS.md`: Living retailer knowledge base for Coach (SFCC Scene7, multi-color variants, sizing extraction, filename alignment).
+
