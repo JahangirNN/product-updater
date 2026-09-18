@@ -7,7 +7,7 @@ interface ProductCardProps {
   onSelect: (product: CatalogProduct) => void;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) => {
+const ProductCardComponent: React.FC<ProductCardProps> = ({ product, onSelect }) => {
   const [imgLoaded, setImgLoaded] = useState(false);
   const primaryImg = product.images && product.images.length > 0
     ? product.images[0]
@@ -63,6 +63,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
           src={primaryImg}
           alt={product.title}
           loading="lazy"
+          decoding="async"
           onLoad={() => setImgLoaded(true)}
           className={`h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105 ${
             imgLoaded ? 'opacity-100' : 'opacity-0'
@@ -218,3 +219,5 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
     </div>
   );
 };
+
+export const ProductCard = React.memo<ProductCardProps>(ProductCardComponent);

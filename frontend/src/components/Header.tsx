@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search, X, Sparkles, RefreshCw } from 'lucide-react';
 import { CatalogMeta } from '../types';
 
@@ -15,6 +15,26 @@ export const Header: React.FC<HeaderProps> = ({
   onSearchChange,
   filteredCount,
 }) => {
+  const [localQuery, setLocalQuery] = useState(searchQuery);
+
+  useEffect(() => {
+    setLocalQuery(searchQuery);
+  }, [searchQuery]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (localQuery !== searchQuery) {
+        onSearchChange(localQuery);
+      }
+    }, 150);
+    return () => clearTimeout(timer);
+  }, [localQuery, searchQuery, onSearchChange]);
+
+  const handleClear = () => {
+    setLocalQuery('');
+    onSearchChange('');
+  };
+
   return (
     <header className="sticky top-0 z-40 glass-panel border-b border-zinc-800/80 px-4 py-3 sm:px-6">
       <div className="max-w-7xl mx-auto flex flex-col gap-3">
@@ -59,14 +79,14 @@ export const Header: React.FC<HeaderProps> = ({
             <Search className="w-4 h-4 text-zinc-400 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
-              value={searchQuery}
-              onChange={(e) => onSearchChange(e.target.value)}
+              value={localQuery}
+              onChange={(e) => setLocalQuery(e.target.value)}
               placeholder="Search title, SKU, color, or material..."
               className="w-full bg-zinc-900/90 text-white placeholder-zinc-500 text-sm rounded-xl pl-9 pr-9 py-2 border border-zinc-700/60 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400/30 transition-all"
             />
-            {searchQuery && (
+            {localQuery && (
               <button
-                onClick={() => onSearchChange('')}
+                onClick={handleClear}
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white p-0.5"
               >
                 <X className="w-3.5 h-3.5" />

@@ -341,6 +341,47 @@ def run_live_pdp_sampling_audit(catalog: Dict[str, List[Dict[str, Any]]], sample
     }
 
 
+def reconcile_catalog_stock_synchronization(catalog: Dict[str, List[Dict[str, Any]]]) -> int:
+    """
+    Reconcile parent-variant stock synchronization across all stores in storage/db/.
+    Ensures parent availability accurately reflects child variant availability:
+    - If a product has variants and any variant is in stock, parent availability is set to 'in_stock' (is_active=True).
+    - If all variants are out of stock, parent availability is set to 'out_of_stock' (is_active=False).
+    Persists reconciled records to storage/db/ if modified.
+    """
+    reconciled_count = 0
+    for store, prods in catalog.items():
+        for p in prods:
+            variants = p.get('variants') or []
+            if not variants:
+                continue
+            in_stock_variants = [v for v in variants if v.get('in_stock') is True or v.get('is_available') is True]
+            avail = p.get('availability')
+            modified = False
+
+            if avail in ('out_of_stock', 'delisted') and in_stock_variants:
+                p['availability'] = 'in_stock'
+                p['is_active'] = True
+                modified = True
+            elif avail == 'in_stock' and len(variants) > 0 and len(in_stock_variants) == 0:
+                p['availability'] = 'out_of_stock'
+                p['is_active'] = False
+                modified = True
+
+            if modified:
+                reconciled_count += 1
+                p_id = p.get('id') or p.get('product_id')
+                if p_id:
+                    fpath = os.path.join(DB_BASE, store, 'products', f"{p_id}.json")
+                    if os.path.exists(fpath):
+                        with open(fpath, 'w', encoding='utf-8') as fp:
+                            json.dump(p, fp, indent=2, ensure_ascii=False)
+                            fp.write('\n')
+    if reconciled_count > 0:
+        print(f"  [*] Reconciled and saved {reconciled_count} stock-desynchronized products to storage/db/")
+    return reconciled_count
+
+
 def main():
     print('=' * 70)
     print('MULTI-STORE CROSS-BRAND CATALOG AUDIT & LIVE PDP PARITY SUITE')
@@ -351,6 +392,9 @@ def main():
     print(f"Loaded total {sum(len(v) for v in catalog.values())} products across {len(catalog)} brands:")
     for store, prods in catalog.items():
         print(f"  - {store:12}: {len(prods)} products")
+
+    # Reconcile parent-variant stock synchronization across database records
+    reconcile_catalog_stock_synchronization(catalog)
 
     # Execute Audits
     res1 = audit_footwear_and_apparel_sizing(catalog)

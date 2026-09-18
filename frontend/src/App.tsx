@@ -7,12 +7,17 @@ import { ProductCard } from './components/ProductCard';
 import { ProductDetailModal } from './components/ProductDetailModal';
 import { Sparkles, AlertCircle, RefreshCw } from 'lucide-react';
 
+const INITIAL_BATCH_SIZE = 40;
+const BATCH_INCREMENT = 40;
+
 export const App: React.FC = () => {
   const [products, setProducts] = useState<CatalogProduct[]>([]);
   const [meta, setMeta] = useState<CatalogMeta | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [visibleCount, setVisibleCount] = useState<number>(INITIAL_BATCH_SIZE);
 
+  const observerTarget = React.useRef<HTMLDivElement>(null);
   const [selectedProduct, setSelectedProduct] = useState<CatalogProduct | null>(null);
 
   const [filters, setFilters] = useState<FilterState>({
@@ -40,6 +45,7 @@ export const App: React.FC = () => {
   }, []);
 
   const handleFilterChange = (newFilters: Partial<FilterState>) => {
+    setVisibleCount(INITIAL_BATCH_SIZE);
     setFilters((prev) => {
       const next = { ...prev, ...newFilters };
       // When switching store or department, reset group if incompatible
@@ -74,6 +80,29 @@ export const App: React.FC = () => {
   const filteredProducts = useMemo(() => {
     return filterAndSortProducts(products, filters);
   }, [products, filters]);
+
+  // Slice visible products for buttery-smooth rendering
+  const visibleProducts = useMemo(() => {
+    return filteredProducts.slice(0, visibleCount);
+  }, [filteredProducts, visibleCount]);
+
+  // Infinite scroll intersection observer
+  useEffect(() => {
+    const target = observerTarget.current;
+    if (!target) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && visibleCount < filteredProducts.length) {
+          setVisibleCount((prev) => Math.min(prev + BATCH_INCREMENT, filteredProducts.length));
+        }
+      },
+      { threshold: 0.1, rootMargin: '300px' }
+    );
+
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, [visibleCount, filteredProducts.length]);
 
   const stores = useMemo(() => {
     return meta?.stores || [];
@@ -229,15 +258,38 @@ export const App: React.FC = () => {
 
         {/* Mobile-First Responsive Product Grid */}
         {!loading && !error && filteredProducts.length > 0 && (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-            {filteredProducts.map((prod) => (
-              <ProductCard
-                key={prod.id}
-                product={prod}
-                onSelect={(p) => setSelectedProduct(p)}
-              />
-            ))}
-          </div>
+          <>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+              {visibleProducts.map((prod) => (
+                <ProductCard
+                  key={prod.id}
+                  product={prod}
+                  onSelect={(p) => setSelectedProduct(p)}
+                />
+              ))}
+            </div>
+
+            {/* Incremental Loading Trigger / Load More Button */}
+            {visibleCount < filteredProducts.length && (
+              <div
+                ref={observerTarget}
+                className="mt-8 py-6 flex flex-col items-center justify-center gap-2"
+              >
+                <button
+                  onClick={() => setVisibleCount((prev) => Math.min(prev + BATCH_INCREMENT, filteredProducts.length))}
+                  className="px-6 py-2.5 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 text-xs sm:text-sm font-semibold text-zinc-200 border border-zinc-700/80 hover:border-amber-500/50 transition-all shadow-md hover:shadow-glow-gold active:scale-95 flex items-center gap-2"
+                >
+                  <span>Load More Products</span>
+                  <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-zinc-800 text-amber-400">
+                    +{Math.min(BATCH_INCREMENT, filteredProducts.length - visibleCount)}
+                  </span>
+                </button>
+                <span className="text-[11px] text-zinc-500 font-mono">
+                  Showing {visibleProducts.length} of {filteredProducts.length} products
+                </span>
+              </div>
+            )}
+          </>
         )}
       </main>
 

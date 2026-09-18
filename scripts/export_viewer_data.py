@@ -237,6 +237,67 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
     return "Classic Handbags"
 
 
+def format_viewer_product(prod: Dict[str, Any], store_display: str, group_display: str, subgroup_display: str) -> Dict[str, Any]:
+    """Format and streamline product record for high-speed frontend catalog viewer consumption."""
+    variants = []
+    for v in prod.get("variants", []):
+        if not isinstance(v, dict):
+            continue
+        v_entry = {
+            "sku": v.get("sku", ""),
+            "title": v.get("title", ""),
+            "price": str(v.get("price", "")),
+            "source_price": float(v.get("source_price") or 0.0),
+            "in_stock": bool(v.get("in_stock", False) or v.get("is_available", False)),
+        }
+        if v.get("image_url"):
+            v_entry["image_url"] = v["image_url"]
+        if v.get("option_values"):
+            v_entry["option_values"] = v["option_values"]
+        variants.append(v_entry)
+
+    raw_desc = prod.get("descriptionHtml") or prod.get("description_html") or ""
+    desc_html = raw_desc.strip()
+
+    images = prod.get("images", [])
+    if isinstance(images, list):
+        images = images[:5]
+    else:
+        images = []
+
+    return {
+        "id": str(prod.get("id") or prod.get("product_id") or ""),
+        "source_store": prod.get("source_store", ""),
+        "source_url": prod.get("source_url", ""),
+        "handle": prod.get("handle", ""),
+        "title": prod.get("title", ""),
+        "vendor": prod.get("vendor", ""),
+        "product_type": prod.get("product_type", ""),
+        "source_sku": prod.get("source_sku") or prod.get("sku") or "",
+        "source_price": float(prod.get("source_price") or 0.0),
+        "source_compare_at_price": prod.get("source_compare_at_price"),
+        "current_price": float(prod.get("current_price") or 0.0),
+        "compare_at_price": prod.get("compare_at_price"),
+        "currency": "INR",
+        "source_currency": "USD",
+        "availability": "in_stock" if prod.get("availability") == "in_stock" else "out_of_stock",
+        "status": prod.get("status", "ACTIVE"),
+        "material": prod.get("material") or prod.get("specifications", {}).get("Material"),
+        "specifications": prod.get("specifications") or {},
+        "descriptionHtml": desc_html,
+        "images": images,
+        "variants": variants,
+        "product_options": prod.get("product_options") or [],
+        "tags": prod.get("tags") or [],
+        "groups": prod.get("groups") or [],
+        "store_display": store_display,
+        "group_display": group_display,
+        "subgroup_display": subgroup_display,
+        "gender": prod.get("gender") or prod.get("specifications", {}).get("Gender"),
+        "updated_at": prod.get("updated_at") or prod.get("last_verified_at") or "",
+    }
+
+
 def export_catalog(
     db_dir: str = "storage/db",
     output_dir: str = "frontend/public/data"
@@ -331,11 +392,8 @@ def export_catalog(
                     group_display = prod.get("product_type", "Handbags")
                 subgroup_display = classify_subgroup(prod)
 
-                prod["store_display"] = store_display
-                prod["group_display"] = group_display
-                prod["subgroup_display"] = subgroup_display
-
-                all_products.append(prod)
+                formatted = format_viewer_product(prod, store_display, group_display, subgroup_display)
+                all_products.append(formatted)
             except Exception as err:
                 print(f"[WARN] Failed to load {p_path}: {err}")
 

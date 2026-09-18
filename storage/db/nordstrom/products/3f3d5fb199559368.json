@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Synthetic and textile upper/textile lining/rubber sole",
   "specifications": {
     "Brand": "On",
@@ -262,7 +262,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/cfb6a8ba-f422-4576-8791-e40639cacccf.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -500,7 +500,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T14:27:03Z",
+  "last_verified_at": "2026-09-18T16:25:39Z",
   "created_at": "2026-09-18T06:43:13Z",
-  "updated_at": "2026-09-18T14:27:03Z"
+  "updated_at": "2026-09-18T16:25:39Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }
