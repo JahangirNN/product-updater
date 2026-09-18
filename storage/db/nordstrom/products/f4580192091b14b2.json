@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-8416464-5",
   "source_price": 160.0,
   "source_compare_at_price": 165.0,
-  "current_price": 15363.0,
-  "compare_at_price": 15844.0,
+  "current_price": 15353.0,
+  "compare_at_price": 15833.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -47,7 +47,7 @@
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ada1578c-af42-4833-98bc-24d5322efdf6.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -74,7 +74,7 @@
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ada1578c-af42-4833-98bc-24d5322efdf6.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -101,7 +101,7 @@
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ada1578c-af42-4833-98bc-24d5322efdf6.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -317,7 +317,7 @@
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ada1578c-af42-4833-98bc-24d5322efdf6.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -441,9 +441,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T16:37:39Z",
+  "last_verified_at": "2026-09-18T18:39:59Z",
   "created_at": "2026-09-17T18:54:06Z",
-  "updated_at": "2026-09-18T16:37:39Z",
+  "updated_at": "2026-09-18T18:39:59Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,

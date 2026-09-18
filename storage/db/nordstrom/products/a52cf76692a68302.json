@@ -9,8 +9,8 @@
   "source_sku": "HOKA-7039216-4",
   "source_price": 60.0,
   "source_compare_at_price": 60.0,
-  "current_price": 5761.0,
-  "compare_at_price": 5761.0,
+  "current_price": 5757.0,
+  "compare_at_price": 5757.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -208,7 +208,7 @@
       "source_compare_at_price": 60.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/468633ba-cc0b-4414-a266-ae85ef1727f7.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -443,7 +443,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T16:32:22Z",
+  "last_verified_at": "2026-09-18T18:34:36Z",
   "created_at": "2026-09-18T07:00:02Z",
-  "updated_at": "2026-09-18T16:32:22Z"
+  "updated_at": "2026-09-18T18:34:36Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

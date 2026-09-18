@@ -9,12 +9,12 @@
   "source_sku": "HOKA-8428286-7",
   "source_price": 124.0,
   "source_compare_at_price": 155.0,
-  "current_price": 11903.0,
-  "compare_at_price": 14878.0,
+  "current_price": 11899.0,
+  "compare_at_price": 14873.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Synthetic and textile upper, rubber sole",
   "specifications": {
     "Brand": "HOKA",
@@ -128,7 +128,7 @@
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/e45168a1-a97d-491e-aa5f-001a822a08ef.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -309,11 +309,11 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T16:29:16Z",
+  "last_verified_at": "2026-09-18T18:29:22Z",
   "created_at": "2026-09-17T15:00:58Z",
-  "updated_at": "2026-09-18T16:29:16Z",
+  "updated_at": "2026-09-18T18:29:22Z",
   "status": "ACTIVE",
   "validation_warnings": [],
-  "is_active": false,
+  "is_active": true,
   "shopify_sync_pending": true
 }
