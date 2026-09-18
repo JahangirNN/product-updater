@@ -9,7 +9,7 @@
   "source_price": 89.0,
   "source_compare_at_price": 89.0,
   "current_price": 8441.0,
-  "compare_at_price": 8441.0,
+  "compare_at_price": 8546.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -39,7 +39,7 @@
       "id": 44289848049698,
       "sku": "2T33-17",
       "title": "Black Croc",
-      "price": "8441.00",
+      "price": "8546.00",
       "compare_at_price": null,
       "source_price": 89.0,
       "source_compare_at_price": 89.0,
@@ -52,7 +52,8 @@
           "option_name": "Color",
           "name": "Black Croc"
         }
-      ]
+      ],
+      "price_current": 8546.0
     }
   ],
   "product_options": [
@@ -89,6 +90,8 @@
   "validation_warnings": [],
   "id": "fecedc97b5da0c20",
   "created_at": "2026-09-09T15:48:21Z",
-  "updated_at": "2026-09-18T07:23:05Z",
-  "last_verified_at": "2026-09-18T07:23:05Z"
+  "updated_at": "2026-09-18T11:22:30Z",
+  "last_verified_at": "2026-09-18T11:22:30Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

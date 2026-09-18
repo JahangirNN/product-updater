@@ -9,7 +9,7 @@
   "source_price": 189.0,
   "source_compare_at_price": 189.0,
   "current_price": 17925.0,
-  "compare_at_price": 17925.0,
+  "compare_at_price": 18148.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -40,7 +40,7 @@
       "id": 44396566773794,
       "sku": "JH306E07-90",
       "title": "Taupe",
-      "price": "17925.00",
+      "price": "18148.00",
       "compare_at_price": null,
       "source_price": 189.0,
       "source_compare_at_price": 189.0,
@@ -53,7 +53,8 @@
           "option_name": "Color",
           "name": "Taupe"
         }
-      ]
+      ],
+      "price_current": 18148.0
     }
   ],
   "product_options": [
@@ -86,6 +87,8 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:32:41Z",
-  "updated_at": "2026-09-18T07:19:24Z",
-  "last_verified_at": "2026-09-18T07:19:24Z"
+  "updated_at": "2026-09-18T11:19:21Z",
+  "last_verified_at": "2026-09-18T11:19:21Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

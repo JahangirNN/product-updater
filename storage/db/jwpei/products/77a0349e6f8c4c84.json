@@ -9,7 +9,7 @@
   "source_price": 229.0,
   "source_compare_at_price": 229.0,
   "current_price": 21719.0,
-  "compare_at_price": 21719.0,
+  "compare_at_price": 21989.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -38,7 +38,7 @@
       "id": 44160468090914,
       "sku": "JH306C05-5",
       "title": "Navy",
-      "price": "21719.00",
+      "price": "21989.00",
       "compare_at_price": null,
       "source_price": 229.0,
       "source_compare_at_price": 229.0,
@@ -51,7 +51,8 @@
           "option_name": "Color",
           "name": "Navy"
         }
-      ]
+      ],
+      "price_current": 21989.0
     }
   ],
   "product_options": [
@@ -85,6 +86,8 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:22:52Z",
-  "updated_at": "2026-09-18T07:19:10Z",
-  "last_verified_at": "2026-09-18T07:19:10Z"
+  "updated_at": "2026-09-18T11:19:07Z",
+  "last_verified_at": "2026-09-18T11:19:07Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

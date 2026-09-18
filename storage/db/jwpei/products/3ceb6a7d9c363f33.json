@@ -9,7 +9,7 @@
   "source_price": 119.0,
   "source_compare_at_price": 119.0,
   "current_price": 11286.0,
-  "compare_at_price": 11286.0,
+  "compare_at_price": 11427.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -42,7 +42,7 @@
       "id": 45484851626018,
       "sku": "2T321-74",
       "title": "Forest Green Croc",
-      "price": "11286.00",
+      "price": "11427.00",
       "compare_at_price": null,
       "source_price": 119.0,
       "source_compare_at_price": 119.0,
@@ -55,7 +55,8 @@
           "option_name": "Color",
           "name": "Forest Green Croc"
         }
-      ]
+      ],
+      "price_current": 11427.0
     }
   ],
   "product_options": [
@@ -91,6 +92,8 @@
   "validation_warnings": [],
   "id": "3ceb6a7d9c363f33",
   "created_at": "2026-09-09T15:49:36Z",
-  "updated_at": "2026-09-18T07:17:23Z",
-  "last_verified_at": "2026-09-18T07:17:23Z"
+  "updated_at": "2026-09-18T11:17:20Z",
+  "last_verified_at": "2026-09-18T11:17:20Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

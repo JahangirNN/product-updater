@@ -9,7 +9,7 @@
   "source_price": 119.0,
   "source_compare_at_price": 119.0,
   "current_price": 11286.0,
-  "compare_at_price": 11286.0,
+  "compare_at_price": 11427.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -41,7 +41,7 @@
       "id": 45261754499106,
       "sku": "7C471-72",
       "title": "Light Green",
-      "price": "11286.00",
+      "price": "11427.00",
       "compare_at_price": null,
       "source_price": 119.0,
       "source_compare_at_price": 119.0,
@@ -54,7 +54,8 @@
           "option_name": "Color",
           "name": "Light Green"
         }
-      ]
+      ],
+      "price_current": 11427.0
     }
   ],
   "product_options": [
@@ -85,6 +86,8 @@
   "validation_warnings": [],
   "id": "d68670cbffdb241d",
   "created_at": "2026-09-09T15:48:35Z",
-  "updated_at": "2026-09-18T07:21:34Z",
-  "last_verified_at": "2026-09-18T07:21:34Z"
+  "updated_at": "2026-09-18T11:22:03Z",
+  "last_verified_at": "2026-09-18T11:22:03Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

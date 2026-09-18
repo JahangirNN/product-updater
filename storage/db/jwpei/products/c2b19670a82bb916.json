@@ -9,7 +9,7 @@
   "source_price": 129.0,
   "source_compare_at_price": 129.0,
   "current_price": 12235.0,
-  "compare_at_price": 12235.0,
+  "compare_at_price": 12387.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -44,7 +44,7 @@
       "id": 46106206109730,
       "sku": "2T68X014-9",
       "title": "Slate Gray",
-      "price": "12235.00",
+      "price": "12387.00",
       "compare_at_price": null,
       "source_price": 129.0,
       "source_compare_at_price": 129.0,
@@ -57,7 +57,8 @@
           "option_name": "Color",
           "name": "Slate Gray"
         }
-      ]
+      ],
+      "price_current": 12387.0
     }
   ],
   "product_options": [
@@ -86,6 +87,8 @@
   "validation_warnings": [],
   "id": "c2b19670a82bb916",
   "created_at": "2026-09-09T15:50:57Z",
-  "updated_at": "2026-09-18T07:21:11Z",
-  "last_verified_at": "2026-09-18T07:21:11Z"
+  "updated_at": "2026-09-18T11:21:08Z",
+  "last_verified_at": "2026-09-18T11:21:08Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

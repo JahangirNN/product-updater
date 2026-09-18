@@ -9,7 +9,7 @@
   "source_price": 119.0,
   "source_compare_at_price": 119.0,
   "current_price": 11286.0,
-  "compare_at_price": 11286.0,
+  "compare_at_price": 11427.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -40,7 +40,7 @@
       "id": 43359631835170,
       "sku": "2T68-13",
       "title": "Black Croc",
-      "price": "11286.00",
+      "price": "11427.00",
       "compare_at_price": null,
       "source_price": 119.0,
       "source_compare_at_price": 119.0,
@@ -53,7 +53,8 @@
           "option_name": "Color",
           "name": "Black Croc"
         }
-      ]
+      ],
+      "price_current": 11427.0
     }
   ],
   "product_options": [
@@ -95,6 +96,8 @@
   "validation_warnings": [],
   "id": "ccab2a3238ba0d5d",
   "created_at": "2026-09-09T15:46:54Z",
-  "updated_at": "2026-09-18T07:21:21Z",
-  "last_verified_at": "2026-09-18T07:21:21Z"
+  "updated_at": "2026-09-18T11:21:18Z",
+  "last_verified_at": "2026-09-18T11:21:18Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

@@ -9,7 +9,7 @@
   "source_price": 149.0,
   "source_compare_at_price": 149.0,
   "current_price": 14132.0,
-  "compare_at_price": 14132.0,
+  "compare_at_price": 14307.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -39,7 +39,7 @@
       "id": 42804786462754,
       "sku": "2T38-42",
       "title": "Claret",
-      "price": "14132.00",
+      "price": "14307.00",
       "compare_at_price": null,
       "source_price": 149.0,
       "source_compare_at_price": 149.0,
@@ -52,7 +52,8 @@
           "option_name": "Color",
           "name": "Claret"
         }
-      ]
+      ],
+      "price_current": 14307.0
     }
   ],
   "product_options": [
@@ -94,6 +95,8 @@
   "validation_warnings": [],
   "id": "2c4baa69480be779",
   "created_at": "2026-09-09T15:44:58Z",
-  "updated_at": "2026-09-18T07:17:09Z",
-  "last_verified_at": "2026-09-18T07:17:09Z"
+  "updated_at": "2026-09-18T11:17:07Z",
+  "last_verified_at": "2026-09-18T11:17:07Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

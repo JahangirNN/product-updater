@@ -9,7 +9,7 @@
   "source_price": 139.0,
   "source_compare_at_price": 139.0,
   "current_price": 13183.0,
-  "compare_at_price": 13183.0,
+  "compare_at_price": 13347.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -40,7 +40,7 @@
       "id": 46553528107042,
       "sku": "MHB129-5",
       "title": "Dark Blue",
-      "price": "13183.00",
+      "price": "13347.00",
       "compare_at_price": null,
       "source_price": 139.0,
       "source_compare_at_price": 139.0,
@@ -53,7 +53,8 @@
           "option_name": "Color",
           "name": "Dark Blue"
         }
-      ]
+      ],
+      "price_current": 13347.0
     }
   ],
   "product_options": [
@@ -80,6 +81,8 @@
   "validation_warnings": [],
   "id": "68f841f768cdaba2",
   "created_at": "2026-09-09T15:51:09Z",
-  "updated_at": "2026-09-18T07:18:26Z",
-  "last_verified_at": "2026-09-18T07:18:26Z"
+  "updated_at": "2026-09-18T11:18:23Z",
+  "last_verified_at": "2026-09-18T11:18:23Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

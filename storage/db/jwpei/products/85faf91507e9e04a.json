@@ -9,7 +9,7 @@
   "source_price": 109.0,
   "source_compare_at_price": 109.0,
   "current_price": 10338.0,
-  "compare_at_price": 10338.0,
+  "compare_at_price": 10466.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -42,7 +42,7 @@
       "id": 45484959432738,
       "sku": "2T321-39",
       "title": "Chocolate Brown",
-      "price": "10338.00",
+      "price": "10466.00",
       "compare_at_price": null,
       "source_price": 109.0,
       "source_compare_at_price": 109.0,
@@ -55,7 +55,8 @@
           "option_name": "Color",
           "name": "Chocolate Brown"
         }
-      ]
+      ],
+      "price_current": 10466.0
     }
   ],
   "product_options": [
@@ -90,6 +91,8 @@
   "validation_warnings": [],
   "id": "85faf91507e9e04a",
   "created_at": "2026-09-09T15:49:40Z",
-  "updated_at": "2026-09-18T07:19:24Z",
-  "last_verified_at": "2026-09-18T07:19:24Z"
+  "updated_at": "2026-09-18T11:19:21Z",
+  "last_verified_at": "2026-09-18T11:19:21Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

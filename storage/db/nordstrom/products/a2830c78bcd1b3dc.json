@@ -7,7 +7,7 @@
   "vendor": "HOKA",
   "product_type": "Athletic Shoes",
   "source_sku": "HOKA-8435031-7",
-  "source_price": 175.0,
+  "source_price": 0.0,
   "source_compare_at_price": 175.0,
   "current_price": 16804.0,
   "compare_at_price": 16804.0,
@@ -498,7 +498,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T07:21:16Z",
+  "last_verified_at": "2026-09-18T11:21:38Z",
   "created_at": "2026-09-18T05:50:30Z",
-  "updated_at": "2026-09-18T07:21:16Z"
+  "updated_at": "2026-09-18T11:21:38Z",
+  "is_active": false,
+  "shopify_sync_pending": true
 }

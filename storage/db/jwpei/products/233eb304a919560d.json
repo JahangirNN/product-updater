@@ -9,7 +9,7 @@
   "source_price": 139.0,
   "source_compare_at_price": 139.0,
   "current_price": 13183.0,
-  "compare_at_price": 13183.0,
+  "compare_at_price": 13347.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -43,7 +43,7 @@
       "id": 44686416478242,
       "sku": "2T325-4",
       "title": "Wine Red",
-      "price": "13183.00",
+      "price": "13347.00",
       "compare_at_price": null,
       "source_price": 139.0,
       "source_compare_at_price": 139.0,
@@ -56,7 +56,8 @@
           "option_name": "Color",
           "name": "Wine Red"
         }
-      ]
+      ],
+      "price_current": 13347.0
     }
   ],
   "product_options": [
@@ -86,6 +87,8 @@
   "validation_warnings": [],
   "id": "233eb304a919560d",
   "created_at": "2026-09-09T15:48:40Z",
-  "updated_at": "2026-09-18T07:16:59Z",
-  "last_verified_at": "2026-09-18T07:16:59Z"
+  "updated_at": "2026-09-18T11:16:57Z",
+  "last_verified_at": "2026-09-18T11:16:57Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

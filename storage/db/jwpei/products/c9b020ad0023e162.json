@@ -9,7 +9,7 @@
   "source_price": 119.0,
   "source_compare_at_price": 119.0,
   "current_price": 11286.0,
-  "compare_at_price": 11286.0,
+  "compare_at_price": 11427.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -42,7 +42,7 @@
       "id": 45119383044130,
       "sku": "2T276-5",
       "title": "BLue Denim",
-      "price": "11286.00",
+      "price": "11427.00",
       "compare_at_price": null,
       "source_price": 119.0,
       "source_compare_at_price": 119.0,
@@ -55,7 +55,8 @@
           "option_name": "Color",
           "name": "BLue Denim"
         }
-      ]
+      ],
+      "price_current": 11427.0
     }
   ],
   "product_options": [
@@ -85,6 +86,8 @@
   "validation_warnings": [],
   "id": "c9b020ad0023e162",
   "created_at": "2026-09-09T15:50:02Z",
-  "updated_at": "2026-09-18T07:21:19Z",
-  "last_verified_at": "2026-09-18T07:21:19Z"
+  "updated_at": "2026-09-18T11:21:16Z",
+  "last_verified_at": "2026-09-18T11:21:16Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

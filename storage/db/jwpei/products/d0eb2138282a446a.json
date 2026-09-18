@@ -9,7 +9,7 @@
   "source_price": 99.0,
   "source_compare_at_price": 99.0,
   "current_price": 9389.0,
-  "compare_at_price": 9389.0,
+  "compare_at_price": 9506.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -40,7 +40,7 @@
       "id": 43359644811298,
       "sku": "2T68-71",
       "title": "Dark Green",
-      "price": "9389.00",
+      "price": "9506.00",
       "compare_at_price": null,
       "source_price": 99.0,
       "source_compare_at_price": 99.0,
@@ -53,7 +53,8 @@
           "option_name": "Color",
           "name": "Dark Green"
         }
-      ]
+      ],
+      "price_current": 9506.0
     }
   ],
   "product_options": [
@@ -95,6 +96,8 @@
   "validation_warnings": [],
   "id": "d0eb2138282a446a",
   "created_at": "2026-09-09T15:46:54Z",
-  "updated_at": "2026-09-18T07:21:26Z",
-  "last_verified_at": "2026-09-18T07:21:26Z"
+  "updated_at": "2026-09-18T11:21:23Z",
+  "last_verified_at": "2026-09-18T11:21:23Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

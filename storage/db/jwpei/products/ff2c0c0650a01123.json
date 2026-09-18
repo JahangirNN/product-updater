@@ -9,7 +9,7 @@
   "source_price": 149.0,
   "source_compare_at_price": 149.0,
   "current_price": 14132.0,
-  "compare_at_price": 14132.0,
+  "compare_at_price": 14307.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -39,7 +39,7 @@
       "id": 45063966326818,
       "sku": "2T318-4",
       "title": "Burgundy",
-      "price": "14132.00",
+      "price": "14307.00",
       "compare_at_price": null,
       "source_price": 149.0,
       "source_compare_at_price": 149.0,
@@ -52,7 +52,8 @@
           "option_name": "Color",
           "name": "Burgundy"
         }
-      ]
+      ],
+      "price_current": 14307.0
     }
   ],
   "product_options": [
@@ -85,6 +86,8 @@
   "validation_warnings": [],
   "id": "ff2c0c0650a01123",
   "created_at": "2026-09-09T15:48:26Z",
-  "updated_at": "2026-09-18T07:23:06Z",
-  "last_verified_at": "2026-09-18T07:23:06Z"
+  "updated_at": "2026-09-18T11:22:31Z",
+  "last_verified_at": "2026-09-18T11:22:31Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

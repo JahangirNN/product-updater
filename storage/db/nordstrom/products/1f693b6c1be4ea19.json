@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Textile and synthetic/textile lining/rubber sole",
   "specifications": {
     "Brand": "HOKA",
@@ -47,7 +47,7 @@
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/f7faccf6-35ba-4615-a61f-0f28c899aeb0.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -74,7 +74,7 @@
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/f7faccf6-35ba-4615-a61f-0f28c899aeb0.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -263,7 +263,7 @@
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/f7faccf6-35ba-4615-a61f-0f28c899aeb0.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -317,7 +317,7 @@
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/f7faccf6-35ba-4615-a61f-0f28c899aeb0.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -344,7 +344,7 @@
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/f7faccf6-35ba-4615-a61f-0f28c899aeb0.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -371,7 +371,7 @@
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/f7faccf6-35ba-4615-a61f-0f28c899aeb0.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -540,7 +540,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T07:09:12Z",
+  "last_verified_at": "2026-09-18T10:26:09Z",
   "created_at": "2026-09-18T07:09:12Z",
-  "updated_at": "2026-09-18T07:09:12Z"
+  "updated_at": "2026-09-18T10:26:09Z",
+  "is_active": false,
+  "shopify_sync_pending": true
 }

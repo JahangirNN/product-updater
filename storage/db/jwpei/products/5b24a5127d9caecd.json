@@ -9,7 +9,7 @@
   "source_price": 129.0,
   "source_compare_at_price": 129.0,
   "current_price": 12235.0,
-  "compare_at_price": 12235.0,
+  "compare_at_price": 12387.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -39,7 +39,7 @@
       "id": 43226573209634,
       "sku": "8T030-3",
       "title": "Mocha Brown",
-      "price": "12235.00",
+      "price": "12387.00",
       "compare_at_price": null,
       "source_price": 129.0,
       "source_compare_at_price": 129.0,
@@ -52,7 +52,8 @@
           "option_name": "Color",
           "name": "Mocha Brown"
         }
-      ]
+      ],
+      "price_current": 12387.0
     }
   ],
   "product_options": [
@@ -94,6 +95,8 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:35:30Z",
-  "updated_at": "2026-09-18T07:18:16Z",
-  "last_verified_at": "2026-09-18T07:18:16Z"
+  "updated_at": "2026-09-18T11:18:13Z",
+  "last_verified_at": "2026-09-18T11:18:13Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

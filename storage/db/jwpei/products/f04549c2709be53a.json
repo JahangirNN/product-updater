@@ -9,7 +9,7 @@
   "source_price": 109.0,
   "source_compare_at_price": 109.0,
   "current_price": 10338.0,
-  "compare_at_price": 10338.0,
+  "compare_at_price": 10466.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -44,7 +44,7 @@
       "id": 44015748448290,
       "sku": "2T47-35",
       "title": "Taupe",
-      "price": "10338.00",
+      "price": "10466.00",
       "compare_at_price": null,
       "source_price": 109.0,
       "source_compare_at_price": 109.0,
@@ -57,7 +57,8 @@
           "option_name": "Color",
           "name": "Taupe"
         }
-      ]
+      ],
+      "price_current": 10466.0
     }
   ],
   "product_options": [
@@ -94,6 +95,8 @@
   "validation_warnings": [],
   "id": "f04549c2709be53a",
   "created_at": "2026-09-09T15:48:14Z",
-  "updated_at": "2026-09-18T07:22:20Z",
-  "last_verified_at": "2026-09-18T07:22:20Z"
+  "updated_at": "2026-09-18T11:22:17Z",
+  "last_verified_at": "2026-09-18T11:22:17Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

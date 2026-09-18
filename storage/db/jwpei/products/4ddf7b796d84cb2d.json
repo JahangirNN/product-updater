@@ -9,7 +9,7 @@
   "source_price": 139.0,
   "source_compare_at_price": 139.0,
   "current_price": 13183.0,
-  "compare_at_price": 13183.0,
+  "compare_at_price": 13347.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -41,7 +41,7 @@
       "id": 45306580074530,
       "sku": "2T68-310",
       "title": "Taupe",
-      "price": "13183.00",
+      "price": "13347.00",
       "compare_at_price": null,
       "source_price": 139.0,
       "source_compare_at_price": 139.0,
@@ -54,7 +54,8 @@
           "option_name": "Color",
           "name": "Taupe"
         }
-      ]
+      ],
+      "price_current": 13347.0
     }
   ],
   "product_options": [
@@ -88,6 +89,8 @@
   "validation_warnings": [],
   "id": "4ddf7b796d84cb2d",
   "created_at": "2026-09-09T15:49:05Z",
-  "updated_at": "2026-09-18T07:17:34Z",
-  "last_verified_at": "2026-09-18T07:17:34Z"
+  "updated_at": "2026-09-18T11:17:31Z",
+  "last_verified_at": "2026-09-18T11:17:31Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

@@ -140,7 +140,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cbh06_imzbc_a0",
       "option_values": [
         {
@@ -178,9 +178,10 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:47:21Z",
-  "last_verified_at": "2026-09-18T07:19:51Z",
+  "last_verified_at": "2026-09-18T11:24:19Z",
   "id": "da66d68f3f4cab69",
   "product_id": "da66d68f3f4cab69",
   "store": "coach",
-  "updated_at": "2026-09-18T07:19:51Z"
+  "updated_at": "2026-09-18T11:24:19Z",
+  "shopify_sync_pending": true
 }

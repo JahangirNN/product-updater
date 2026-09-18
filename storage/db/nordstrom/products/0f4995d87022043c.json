@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Synthetic and textile upper and lining/rubber sole",
   "specifications": {
     "Brand": "Salomon",
@@ -209,7 +209,7 @@
       "source_compare_at_price": 230.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/6171b90d-c059-46fa-9e72-b7b5e6c349cd.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -435,7 +435,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T05:44:37Z",
+  "last_verified_at": "2026-09-18T10:22:10Z",
   "created_at": "2026-09-18T05:44:37Z",
-  "updated_at": "2026-09-18T05:44:37Z"
+  "updated_at": "2026-09-18T10:22:10Z",
+  "is_active": false,
+  "shopify_sync_pending": true
 }

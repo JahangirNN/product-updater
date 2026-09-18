@@ -9,7 +9,7 @@
   "source_price": 129.0,
   "source_compare_at_price": 129.0,
   "current_price": 12235.0,
-  "compare_at_price": 12235.0,
+  "compare_at_price": 12387.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -42,7 +42,7 @@
       "id": 43953517658146,
       "sku": "2T276-35",
       "title": "Dark Red",
-      "price": "12235.00",
+      "price": "12387.00",
       "compare_at_price": null,
       "source_price": 129.0,
       "source_compare_at_price": 129.0,
@@ -55,7 +55,8 @@
           "option_name": "Color",
           "name": "Dark Red"
         }
-      ]
+      ],
+      "price_current": 12387.0
     }
   ],
   "product_options": [
@@ -88,6 +89,8 @@
   "validation_warnings": [],
   "id": "ba00bb312241847c",
   "created_at": "2026-09-09T15:47:50Z",
-  "updated_at": "2026-09-18T07:21:05Z",
-  "last_verified_at": "2026-09-18T07:21:05Z"
+  "updated_at": "2026-09-18T11:21:02Z",
+  "last_verified_at": "2026-09-18T11:21:02Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

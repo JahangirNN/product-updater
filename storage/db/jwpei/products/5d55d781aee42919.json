@@ -9,7 +9,7 @@
   "source_price": 199.0,
   "source_compare_at_price": 199.0,
   "current_price": 18874.0,
-  "compare_at_price": 18874.0,
+  "compare_at_price": 19108.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -40,7 +40,7 @@
       "id": 45247747915810,
       "sku": "JH306B04-36",
       "title": "Brown",
-      "price": "18874.00",
+      "price": "19108.00",
       "compare_at_price": null,
       "source_price": 199.0,
       "source_compare_at_price": 199.0,
@@ -53,7 +53,8 @@
           "option_name": "Color",
           "name": "Brown"
         }
-      ]
+      ],
+      "price_current": 19108.0
     }
   ],
   "product_options": [
@@ -91,6 +92,8 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:34:07Z",
-  "updated_at": "2026-09-18T07:18:17Z",
-  "last_verified_at": "2026-09-18T07:18:17Z"
+  "updated_at": "2026-09-18T11:18:14Z",
+  "last_verified_at": "2026-09-18T11:18:14Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

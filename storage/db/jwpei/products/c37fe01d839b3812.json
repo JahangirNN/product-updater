@@ -9,7 +9,7 @@
   "source_price": 229.0,
   "source_compare_at_price": 229.0,
   "current_price": 21719.0,
-  "compare_at_price": 21719.0,
+  "compare_at_price": 21989.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -39,7 +39,7 @@
       "id": 45416083685410,
       "sku": "JH306C05-20",
       "title": "White",
-      "price": "21719.00",
+      "price": "21989.00",
       "compare_at_price": null,
       "source_price": 229.0,
       "source_compare_at_price": 229.0,
@@ -52,7 +52,8 @@
           "option_name": "Color",
           "name": "White"
         }
-      ]
+      ],
+      "price_current": 21989.0
     }
   ],
   "product_options": [
@@ -86,6 +87,8 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:31:04Z",
-  "updated_at": "2026-09-18T07:21:11Z",
-  "last_verified_at": "2026-09-18T07:21:11Z"
+  "updated_at": "2026-09-18T11:21:09Z",
+  "last_verified_at": "2026-09-18T11:21:09Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

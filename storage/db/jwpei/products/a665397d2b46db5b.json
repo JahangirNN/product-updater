@@ -9,7 +9,7 @@
   "source_price": 139.0,
   "source_compare_at_price": 139.0,
   "current_price": 13183.0,
-  "compare_at_price": 13183.0,
+  "compare_at_price": 13347.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -39,7 +39,7 @@
       "id": 45300254769186,
       "sku": "JH306B04-50",
       "title": "Navy Blue",
-      "price": "13183.00",
+      "price": "13347.00",
       "compare_at_price": null,
       "source_price": 139.0,
       "source_compare_at_price": 139.0,
@@ -52,7 +52,8 @@
           "option_name": "Color",
           "name": "Navy Blue"
         }
-      ]
+      ],
+      "price_current": 13347.0
     }
   ],
   "product_options": [
@@ -89,6 +90,8 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:21:55Z",
-  "updated_at": "2026-09-18T07:20:21Z",
-  "last_verified_at": "2026-09-18T07:20:21Z"
+  "updated_at": "2026-09-18T11:20:19Z",
+  "last_verified_at": "2026-09-18T11:20:19Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

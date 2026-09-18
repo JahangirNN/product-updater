@@ -9,7 +9,7 @@
   "source_price": 139.0,
   "source_compare_at_price": 139.0,
   "current_price": 13183.0,
-  "compare_at_price": 13183.0,
+  "compare_at_price": 13347.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -41,7 +41,7 @@
       "id": 43359628754978,
       "sku": "2T68-11",
       "title": "Black",
-      "price": "13183.00",
+      "price": "13347.00",
       "compare_at_price": null,
       "source_price": 139.0,
       "source_compare_at_price": 139.0,
@@ -54,7 +54,8 @@
           "option_name": "Color",
           "name": "Black"
         }
-      ]
+      ],
+      "price_current": 13347.0
     }
   ],
   "product_options": [
@@ -96,6 +97,8 @@
   "validation_warnings": [],
   "id": "8359228ffbaf51e9",
   "created_at": "2026-09-09T15:44:58Z",
-  "updated_at": "2026-09-18T07:19:20Z",
-  "last_verified_at": "2026-09-18T07:19:20Z"
+  "updated_at": "2026-09-18T11:19:17Z",
+  "last_verified_at": "2026-09-18T11:19:17Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

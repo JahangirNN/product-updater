@@ -9,7 +9,7 @@
   "source_price": 249.0,
   "source_compare_at_price": 249.0,
   "current_price": 23616.0,
-  "compare_at_price": 23616.0,
+  "compare_at_price": 23909.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -39,7 +39,7 @@
       "id": 46442054221858,
       "sku": "8T026-39",
       "title": "Caramel Brown",
-      "price": "23616.00",
+      "price": "23909.00",
       "compare_at_price": null,
       "source_price": 249.0,
       "source_compare_at_price": 249.0,
@@ -52,7 +52,8 @@
           "option_name": "Color",
           "name": "Caramel Brown"
         }
-      ]
+      ],
+      "price_current": 23909.0
     }
   ],
   "product_options": [
@@ -83,6 +84,8 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:35:25Z",
-  "updated_at": "2026-09-18T07:21:25Z",
-  "last_verified_at": "2026-09-18T07:21:25Z"
+  "updated_at": "2026-09-18T11:21:22Z",
+  "last_verified_at": "2026-09-18T11:21:22Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

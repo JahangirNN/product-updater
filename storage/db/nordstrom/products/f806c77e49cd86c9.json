@@ -7,7 +7,7 @@
   "vendor": "On",
   "product_type": "Athletic Shoes",
   "source_sku": "ON-8482647-7",
-  "source_price": 140.0,
+  "source_price": 0.0,
   "source_compare_at_price": 140.0,
   "current_price": 13443.0,
   "compare_at_price": 13443.0,
@@ -543,7 +543,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T07:27:30Z",
+  "last_verified_at": "2026-09-18T11:25:47Z",
   "created_at": "2026-09-18T05:50:52Z",
-  "updated_at": "2026-09-18T07:27:30Z"
+  "updated_at": "2026-09-18T11:25:47Z",
+  "is_active": false,
+  "shopify_sync_pending": true
 }

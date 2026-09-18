@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Shell partially made with recycled leather fiber layer",
   "specifications": {
     "Closure": "Zip-top closure",
@@ -110,7 +110,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cey41_imylk_a0",
       "option_values": [
         {
@@ -281,7 +281,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfw90_imchk_a0",
       "option_values": [
         {
@@ -340,11 +340,11 @@
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:45:10Z",
-  "last_verified_at": "2026-09-18T07:18:53Z",
+  "last_verified_at": "2026-09-18T11:22:05Z",
   "id": "a63f6e647b17b6d9",
   "product_id": "a63f6e647b17b6d9",
   "store": "coach",
   "is_active": false,
   "shopify_sync_pending": true,
-  "updated_at": "2026-09-18T07:18:53Z"
+  "updated_at": "2026-09-18T11:22:05Z"
 }

@@ -9,7 +9,7 @@
   "source_price": 59.0,
   "source_compare_at_price": 59.0,
   "current_price": 5596.0,
-  "compare_at_price": 5596.0,
+  "compare_at_price": 5665.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -36,7 +36,7 @@
       "id": 44891342602274,
       "sku": "7X603X001-3",
       "title": "Dark Brown",
-      "price": "5596.00",
+      "price": "5665.00",
       "compare_at_price": null,
       "source_price": 59.0,
       "source_compare_at_price": 59.0,
@@ -49,7 +49,8 @@
           "option_name": "Color",
           "name": "Dark Brown"
         }
-      ]
+      ],
+      "price_current": 5665.0
     }
   ],
   "product_options": [
@@ -78,6 +79,8 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:32:45Z",
-  "updated_at": "2026-09-18T07:21:24Z",
-  "last_verified_at": "2026-09-18T07:21:24Z"
+  "updated_at": "2026-09-18T11:21:21Z",
+  "last_verified_at": "2026-09-18T11:21:21Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

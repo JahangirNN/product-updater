@@ -9,7 +9,7 @@
   "source_price": 139.0,
   "source_compare_at_price": 139.0,
   "current_price": 13183.0,
-  "compare_at_price": 13183.0,
+  "compare_at_price": 13347.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -40,7 +40,7 @@
       "id": 43907835527202,
       "sku": "2T179-2",
       "title": "White",
-      "price": "13183.00",
+      "price": "13347.00",
       "compare_at_price": null,
       "source_price": 139.0,
       "source_compare_at_price": 139.0,
@@ -53,7 +53,8 @@
           "option_name": "Color",
           "name": "White"
         }
-      ]
+      ],
+      "price_current": 13347.0
     }
   ],
   "product_options": [
@@ -85,6 +86,8 @@
   "validation_warnings": [],
   "id": "34184a71aad7e109",
   "created_at": "2026-09-09T15:49:30Z",
-  "updated_at": "2026-09-18T07:17:15Z",
-  "last_verified_at": "2026-09-18T07:17:15Z"
+  "updated_at": "2026-09-18T11:17:13Z",
+  "last_verified_at": "2026-09-18T11:17:13Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }
