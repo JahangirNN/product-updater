@@ -311,10 +311,14 @@ def apply_delta_to_product(
                     variant_modified = True
         if variant_modified:
             has_changed = True
-            # Recalculate top-level availability from variants
-            any_var_stock = any((v.get("in_stock", False) or v.get("is_available", False)) for v in product["variants"] if isinstance(v, dict))
-            product["availability"] = "in_stock" if any_var_stock else "out_of_stock"
-            product["is_active"] = (product["availability"] == "in_stock")
+
+        # Invariant: Harmonize top-level availability from variants
+        any_var_stock = any((v.get("in_stock", False) or v.get("is_available", False)) for v in product["variants"] if isinstance(v, dict))
+        expected_avail = "in_stock" if any_var_stock else "out_of_stock"
+        if product.get("availability") != expected_avail:
+            product["availability"] = expected_avail
+            product["is_active"] = (expected_avail == "in_stock")
+            has_changed = True
 
     elif not variants_delta and product.get("variants"):
         if product.get("availability") in ("out_of_stock", "delisted"):

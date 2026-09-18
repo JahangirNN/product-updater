@@ -9,7 +9,7 @@
   "source_price": 149.0,
   "source_compare_at_price": 149.0,
   "current_price": 14132.0,
-  "compare_at_price": 14132.0,
+  "compare_at_price": 14307.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -39,7 +39,7 @@
       "id": 43989095055394,
       "sku": "JH306B04-37",
       "title": "Coffee Brown",
-      "price": "14132.00",
+      "price": "14307.00",
       "compare_at_price": null,
       "source_price": 149.0,
       "source_compare_at_price": 149.0,
@@ -52,7 +52,8 @@
           "option_name": "Color",
           "name": "Coffee Brown"
         }
-      ]
+      ],
+      "price_current": 14307.0
     }
   ],
   "product_options": [
@@ -94,6 +95,8 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:33:46Z",
-  "updated_at": "2026-09-18T10:17:02Z",
-  "last_verified_at": "2026-09-18T10:17:02Z"
+  "updated_at": "2026-09-18T14:17:03Z",
+  "last_verified_at": "2026-09-18T14:17:03Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

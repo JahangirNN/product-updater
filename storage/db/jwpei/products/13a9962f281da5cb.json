@@ -9,7 +9,7 @@
   "source_price": 109.0,
   "source_compare_at_price": 109.0,
   "current_price": 10338.0,
-  "compare_at_price": 10338.0,
+  "compare_at_price": 10466.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -44,7 +44,7 @@
       "id": 45115366998050,
       "sku": "2T406-40",
       "title": "Pink",
-      "price": "10338.00",
+      "price": "10466.00",
       "compare_at_price": null,
       "source_price": 109.0,
       "source_compare_at_price": 109.0,
@@ -57,7 +57,8 @@
           "option_name": "Color",
           "name": "Pink"
         }
-      ]
+      ],
+      "price_current": 10466.0
     }
   ],
   "product_options": [
@@ -92,6 +93,8 @@
   "validation_warnings": [],
   "id": "13a9962f281da5cb",
   "created_at": "2026-09-09T15:48:04Z",
-  "updated_at": "2026-09-18T10:17:11Z",
-  "last_verified_at": "2026-09-18T10:17:11Z"
+  "updated_at": "2026-09-18T14:17:10Z",
+  "last_verified_at": "2026-09-18T14:17:10Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

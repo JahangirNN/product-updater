@@ -116,8 +116,12 @@ def check_price_and_stock(
             parsed_info = extract_coach_pdp_info(html_text, target_sku=target_sku)
 
             current_source_price = parsed_info.get("price") or old_source_price
-            current_availability = parsed_info.get("availability") or old_availability
             variants_delta = parsed_info.get("variants_delta", [])
+            if variants_delta:
+                any_var_avail = any(v.get("available") for v in variants_delta if isinstance(v, dict))
+                current_availability = "in_stock" if any_var_avail else "out_of_stock"
+            else:
+                current_availability = parsed_info.get("availability") or old_availability
 
             is_available = current_availability == "in_stock"
             price_changed = abs(current_source_price - old_source_price) > 0.01 if old_source_price > 0 else False
@@ -274,8 +278,11 @@ def extract_coach_pdp_info(html_text: str, target_sku: Optional[str] = None) -> 
                     if clean_target_sku and (clean_v_sku == clean_target_sku or clean_v_sku.startswith(clean_target_sku) or clean_target_sku.startswith(clean_v_sku)):
                         if v_price > 0:
                             info["price"] = v_price
-                        info["availability"] = "in_stock" if v_in_stock else "out_of_stock"
                         target_found = True
+
+                if info["variants_delta"]:
+                    any_group_in_stock = any(v.get("available") for v in info["variants_delta"])
+                    info["availability"] = "in_stock" if any_group_in_stock else "out_of_stock"
         except Exception:
             pass
 
@@ -295,6 +302,10 @@ def extract_coach_pdp_info(html_text: str, target_sku: Optional[str] = None) -> 
             })
         # For footwear, overall availability is true if ANY size is enabled
         info["availability"] = "in_stock" if any_in_stock else "out_of_stock"
+
+    if info["variants_delta"]:
+        any_var_avail = any(v.get("available") for v in info["variants_delta"] if isinstance(v, dict))
+        info["availability"] = "in_stock" if any_var_avail else "out_of_stock"
 
     return info
 
@@ -395,10 +406,14 @@ def apply_delta_to_product(
 
         if variant_modified:
             has_changed = True
-            # Recalculate top-level availability from variants
-            any_var_stock = any(v.get("in_stock", False) for v in product["variants"] if isinstance(v, dict))
-            product["availability"] = "in_stock" if any_var_stock else "out_of_stock"
-            product["is_active"] = (product["availability"] == "in_stock")
+
+        # Invariant: Harmonize top-level availability from variants
+        any_var_stock = any(v.get("in_stock", False) for v in product["variants"] if isinstance(v, dict))
+        expected_avail = "in_stock" if any_var_stock else "out_of_stock"
+        if product.get("availability") != expected_avail:
+            product["availability"] = expected_avail
+            product["is_active"] = (expected_avail == "in_stock")
+            has_changed = True
 
     elif not variants_delta and product.get("variants"):
         if product.get("availability") in ("out_of_stock", "delisted"):

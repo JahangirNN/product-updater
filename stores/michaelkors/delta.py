@@ -185,11 +185,17 @@ def check_price_and_stock(
             "old_source_price": old_source_price,
             "price_changed": False,
             "stock_changed": False,
+            "variant_stock_changed": False,
+            "changed_variants": [],
             "elapsed_ms": elapsed_ms,
             "message": "HTTP 429 rate limit encountered"
         }
 
     if status_code == 404:
+        changed_variants = [
+            {"sku": v.get("sku"), "old_in_stock": v.get("in_stock", True), "new_in_stock": False}
+            for v in stored_variants if v.get("in_stock", True)
+        ]
         return {
             "status": "not_found",
             "handle": handle,
@@ -200,6 +206,8 @@ def check_price_and_stock(
             "is_active": False,
             "price_changed": False,
             "stock_changed": old_availability != "out_of_stock",
+            "variant_stock_changed": bool(changed_variants),
+            "changed_variants": changed_variants,
             "variants_delta": [{"sku": v.get("sku"), "in_stock": False} for v in stored_variants],
             "elapsed_ms": elapsed_ms,
             "message": "Product delisted (HTTP 404)"
@@ -215,6 +223,8 @@ def check_price_and_stock(
             "old_source_price": old_source_price,
             "price_changed": False,
             "stock_changed": False,
+            "variant_stock_changed": False,
+            "changed_variants": [],
             "elapsed_ms": elapsed_ms,
             "message": f"SFCC query failed: {err_msg} (status {status_code})"
         }
@@ -253,6 +263,7 @@ def check_price_and_stock(
     # 7. Map variant-level stock
     variants_delta = []
     variant_stock_changed = False
+    changed_variants = []
 
     for var in stored_variants:
         v_sku = var.get("sku", "")
@@ -267,6 +278,11 @@ def check_price_and_stock(
 
         if new_v_stock != old_v_stock:
             variant_stock_changed = True
+            changed_variants.append({
+                "sku": v_sku,
+                "old_in_stock": old_v_stock,
+                "new_in_stock": new_v_stock
+            })
 
         variants_delta.append({
             "sku": v_sku,
@@ -279,7 +295,7 @@ def check_price_and_stock(
         curr_avail = "out_of_stock"
 
     price_changed = (curr_price != old_source_price)
-    stock_changed = (curr_avail != old_availability) or variant_stock_changed
+    stock_changed = (curr_avail != old_availability)
 
     return {
         "status": "success",
@@ -291,6 +307,8 @@ def check_price_and_stock(
         "current_compare_price": compare_price,
         "price_changed": price_changed,
         "stock_changed": stock_changed,
+        "variant_stock_changed": variant_stock_changed,
+        "changed_variants": changed_variants,
         "selectable_sizes": selectable_sizes,
         "all_sizes": all_sizes,
         "variants_delta": variants_delta,
@@ -322,7 +340,8 @@ def apply_delta_to_product(
 
     price_changed = bool(delta_result.get("price_changed", False))
     stock_changed = bool(delta_result.get("stock_changed", False))
-    has_changed = price_changed or stock_changed
+    variant_stock_changed = bool(delta_result.get("variant_stock_changed", False))
+    has_changed = price_changed or stock_changed or variant_stock_changed
 
     if not has_changed:
         return product, False

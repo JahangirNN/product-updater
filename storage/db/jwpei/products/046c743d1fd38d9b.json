@@ -9,7 +9,7 @@
   "source_price": 119.0,
   "source_compare_at_price": 119.0,
   "current_price": 11286.0,
-  "compare_at_price": 11286.0,
+  "compare_at_price": 11427.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -42,7 +42,7 @@
       "id": 45880692768802,
       "sku": "2T397-30",
       "title": "Dark Brown",
-      "price": "11286.00",
+      "price": "11427.00",
       "compare_at_price": null,
       "source_price": 119.0,
       "source_compare_at_price": 119.0,
@@ -55,7 +55,8 @@
           "option_name": "Color",
           "name": "Dark Brown"
         }
-      ]
+      ],
+      "price_current": 11427.0
     }
   ],
   "product_options": [
@@ -86,6 +87,8 @@
   "validation_warnings": [],
   "id": "046c743d1fd38d9b",
   "created_at": "2026-09-09T15:50:20Z",
-  "updated_at": "2026-09-18T10:16:56Z",
-  "last_verified_at": "2026-09-18T10:16:56Z"
+  "updated_at": "2026-09-18T14:16:56Z",
+  "last_verified_at": "2026-09-18T14:16:56Z",
+  "is_active": true,
+  "shopify_sync_pending": true
 }

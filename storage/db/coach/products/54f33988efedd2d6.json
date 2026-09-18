@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Suede and refined calf leather",
   "specifications": {
     "Material": "Suede and refined calf leather",
@@ -125,7 +125,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdy81_b4z5d_a0",
       "option_values": [
         {
@@ -144,7 +144,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdy81_b4pgb_a0",
       "option_values": [
         {
@@ -204,11 +204,11 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:41:44Z",
-  "last_verified_at": "2026-09-18T10:21:02Z",
+  "last_verified_at": "2026-09-18T14:19:40Z",
   "id": "54f33988efedd2d6",
   "product_id": "54f33988efedd2d6",
   "store": "coach",
   "shopify_sync_pending": true,
-  "updated_at": "2026-09-18T10:21:02Z",
-  "is_active": false
+  "updated_at": "2026-09-18T14:19:40Z",
+  "is_active": true
 }

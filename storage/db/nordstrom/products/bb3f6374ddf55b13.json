@@ -209,7 +209,7 @@
       "source_compare_at_price": 220.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/d82307c9-f8b6-4a74-a7f6-f0db52432a1a.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -303,9 +303,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T10:47:25Z",
+  "last_verified_at": "2026-09-18T14:56:44Z",
   "created_at": "2026-09-17T18:55:44Z",
-  "updated_at": "2026-09-18T10:47:25Z",
+  "updated_at": "2026-09-18T14:56:44Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,

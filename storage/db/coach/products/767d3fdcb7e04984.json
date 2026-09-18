@@ -145,7 +145,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cee80_upz_a0",
       "option_values": [
         {
@@ -183,7 +183,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cee80_upz_a0",
       "option_values": [
         {
@@ -321,11 +321,11 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:42:55Z",
-  "last_verified_at": "2026-09-18T11:19:25Z",
+  "last_verified_at": "2026-09-18T13:17:52Z",
   "id": "767d3fdcb7e04984",
   "product_id": "767d3fdcb7e04984",
   "store": "coach",
-  "updated_at": "2026-09-18T11:19:25Z",
+  "updated_at": "2026-09-18T13:17:52Z",
   "is_active": true,
   "shopify_sync_pending": true
 }
