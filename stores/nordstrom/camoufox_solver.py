@@ -249,7 +249,7 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
         except Exception:
             pass
 
-        for _ in range(10):  # up to 10 x 1000ms = 10s max
+        for _ in range(20):  # up to 20 x 1000ms = 20s max
             page.wait_for_timeout(1000)
             try:
                 html = page.content()
@@ -262,9 +262,14 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
             if "istlWas" not in html and ("__INITIAL_CONFIG__" in html or "application/ld+json" in html or len(page_title) > 3):
                 break
 
-
         # Check if still blocked
-        if "istlWas" in html or not page.title().strip():
+        if not page_title:
+            try:
+                page_title = page.title().strip()
+            except Exception:
+                page_title = ""
+
+        if "istlWas" in html or not page_title:
             elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
             return {
                 "status": "blocked",
