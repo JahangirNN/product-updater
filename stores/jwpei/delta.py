@@ -139,18 +139,52 @@ def check_price_and_stock(
                     "price_usd": round(v_cents / 100.0, 2)
                 })
 
+            # Variant delta tracking & interface contract compliance
+            changed_variants = []
+            variant_stock_changed = False
+            stored_variants = product.get("variants", [])
+            if variants_delta and stored_variants:
+                sku_map = {v["sku"]: v for v in variants_delta if v.get("sku")}
+                for var in stored_variants:
+                    v_sku = var.get("sku")
+                    old_v_stock = bool(var.get("in_stock", True) if "in_stock" in var else var.get("is_available", True))
+                    if v_sku in sku_map:
+                        new_v_stock = bool(sku_map[v_sku].get("available", False))
+                        if new_v_stock != old_v_stock:
+                            variant_stock_changed = True
+                            changed_variants.append({
+                                "sku": v_sku,
+                                "old_in_stock": old_v_stock,
+                                "new_in_stock": new_v_stock
+                            })
+            elif not variants_delta and stored_variants and current_availability in ("out_of_stock", "delisted"):
+                for var in stored_variants:
+                    old_v_stock = bool(var.get("in_stock", True) if "in_stock" in var else var.get("is_available", True))
+                    if old_v_stock:
+                        variant_stock_changed = True
+                        changed_variants.append({
+                            "sku": var.get("sku"),
+                            "old_in_stock": True,
+                            "new_in_stock": False
+                        })
+
             return {
                 "status": "success",
                 "handle": handle,
                 "current_source_price": current_source_price,
                 "old_source_price": old_source_price,
+                "new_source_price": current_source_price,
                 "current_compare_price": current_compare_price,
                 "availability": current_availability,
                 "old_availability": old_availability,
+                "new_availability": current_availability,
                 "is_active": is_available,
                 "price_changed": price_changed,
                 "stock_changed": stock_changed,
+                "variant_stock_changed": variant_stock_changed,
+                "changed_variants": changed_variants,
                 "variants_delta": variants_delta,
+                "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 "elapsed_ms": elapsed_ms
             }
 
@@ -214,19 +248,15 @@ def apply_delta_to_product(
     now_iso = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     product["last_verified_at"] = now_iso
 
+    prev_availability = product.get("availability")
     price_changed = bool(delta_result.get("price_changed", False))
     stock_changed = bool(delta_result.get("stock_changed", False))
     has_changed = price_changed or stock_changed
 
-    if not has_changed:
-        return product, False
-
     # Apply price changes
     new_source_price = delta_result.get("current_source_price", product.get("source_price", 0.0))
-    product["source_price"] = new_source_price
-
-    # Recalculate INR price
-    if new_source_price > 0:
+    if (price_changed or new_source_price != product.get("source_price")) and new_source_price > 0:
+        product["source_price"] = new_source_price
         product["current_price"] = float(round(new_source_price * forex_rate))
 
     new_compare_price = delta_result.get("current_compare_price")
@@ -234,21 +264,95 @@ def apply_delta_to_product(
         product["compare_at_price"] = float(round(new_compare_price * forex_rate))
 
     # Apply availability changes
-    product["availability"] = delta_result.get("availability", product.get("availability"))
-    product["is_active"] = delta_result.get("is_active", product.get("availability") == "in_stock")
+    if stock_changed or delta_result.get("availability") in ("out_of_stock", "delisted", "in_stock"):
+        if "availability" in delta_result:
+            if product.get("availability") != delta_result["availability"]:
+                has_changed = True
+            product["availability"] = delta_result["availability"]
+        if "is_active" in delta_result:
+            new_is_active = bool(delta_result["is_active"])
+            if product.get("is_active") != new_is_active:
+                has_changed = True
+            product["is_active"] = new_is_active
+        else:
+            new_is_active = (product.get("availability") == "in_stock")
+            if product.get("is_active") != new_is_active:
+                has_changed = True
+            product["is_active"] = new_is_active
 
     # Update variant states if available
-    variants_delta = {v["sku"]: v for v in delta_result.get("variants_delta", []) if v.get("sku")}
+    raw_variants_delta = delta_result.get("variants_delta", [])
+    variants_delta = {}
+    if isinstance(raw_variants_delta, list):
+        variants_delta = {v["sku"]: v for v in raw_variants_delta if isinstance(v, dict) and v.get("sku")}
+    elif isinstance(raw_variants_delta, dict):
+        variants_delta = raw_variants_delta
+
     if variants_delta and product.get("variants"):
+        variant_modified = False
         for var in product["variants"]:
+            if not isinstance(var, dict):
+                continue
             sku = var.get("sku")
             if sku in variants_delta:
                 v_info = variants_delta[sku]
-                var["is_available"] = v_info.get("available", False)
+                new_avail = bool(v_info.get("available", False))
+                if var.get("in_stock") != new_avail:
+                    var["in_stock"] = new_avail
+                    variant_modified = True
+                if "is_available" in var and var.get("is_available") != new_avail:
+                    var["is_available"] = new_avail
+                    variant_modified = True
                 if v_info.get("price_usd", 0) > 0:
-                    var["price_current"] = float(round(v_info["price_usd"] * forex_rate))
+                    new_v_price = float(v_info["price_usd"])
+                    var["price_current"] = float(round(new_v_price * forex_rate))
+                    if "price" in var:
+                        var["price"] = f"{round(new_v_price * forex_rate):.2f}"
+                    variant_modified = True
+        if variant_modified:
+            has_changed = True
+            # Recalculate top-level availability from variants
+            any_var_stock = any((v.get("in_stock", False) or v.get("is_available", False)) for v in product["variants"] if isinstance(v, dict))
+            product["availability"] = "in_stock" if any_var_stock else "out_of_stock"
+            product["is_active"] = (product["availability"] == "in_stock")
 
-    product["shopify_sync_pending"] = True
-    product["updated_at"] = now_iso
+    elif not variants_delta and product.get("variants"):
+        if product.get("availability") in ("out_of_stock", "delisted"):
+            # Availability Cascade:
+            # When top-level availability flips to "out_of_stock" or delisted, cascade in_stock = False and is_available = False to all child variants when variants_delta is empty.
+            product["is_active"] = False
+            cascade_modified = False
+            for var in product["variants"]:
+                if isinstance(var, dict):
+                    if var.get("in_stock") is not False:
+                        var["in_stock"] = False
+                        cascade_modified = True
+                    if var.get("is_available") is not False:
+                        var["is_available"] = False
+                        cascade_modified = True
+            if cascade_modified:
+                has_changed = True
+        elif product.get("availability") == "in_stock" and (
+            prev_availability in ("out_of_stock", "delisted")
+            or not any((v.get("in_stock", False) or v.get("is_available", False)) for v in product["variants"] if isinstance(v, dict))
+        ):
+            # Restock Cascade:
+            # When an out-of-stock or delisted product restocks to "in_stock", cascade in_stock = True and is_available = True to child variants when variants_delta is empty.
+            product["is_active"] = True
+            cascade_modified = False
+            for var in product["variants"]:
+                if isinstance(var, dict):
+                    if var.get("in_stock") is not True:
+                        var["in_stock"] = True
+                        cascade_modified = True
+                    if var.get("is_available") is not True:
+                        var["is_available"] = True
+                        cascade_modified = True
+            if cascade_modified:
+                has_changed = True
 
-    return product, True
+    if has_changed:
+        product["shopify_sync_pending"] = True
+        product["updated_at"] = now_iso
+
+    return product, has_changed
