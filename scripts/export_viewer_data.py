@@ -215,6 +215,20 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
             return "Lifestyle & Casual"
         return "Performance Footwear"
 
+    # Foot Locker Nike Vomero styles
+    if source_store == "footlocker":
+        if "roam" in text:
+            return "Vomero Roam"
+        elif "plus" in text:
+            return "Vomero Plus"
+        elif "18" in text:
+            return "Vomero 18"
+        elif "17" in text:
+            return "Vomero 17"
+        elif "5" in text or "zoom" in text:
+            return "Vomero 5"
+        return "Vomero Series"
+
     # Handbags taxonomy for JW PEI
     style = specs.get("Carrying Style", "").lower() or specs.get("Carrying Method", "").lower()
 
@@ -387,6 +401,13 @@ def export_catalog(
                             group_display = "Women's Backpacks"
                         else:
                             group_display = "Women's Handbags"
+                elif s_store == "footlocker":
+                    store_display = "Foot Locker"
+                    gender = prod.get("specifications", {}).get("Gender") or prod.get("gender", "")
+                    if "women" in str(gender).lower() or "women" in str(prod.get("title", "")).lower():
+                        group_display = "Women's Shoes"
+                    else:
+                        group_display = "Men's Shoes"
                 else:
                     store_display = prod.get("vendor", "Other")
                     group_display = prod.get("product_type", "Handbags")

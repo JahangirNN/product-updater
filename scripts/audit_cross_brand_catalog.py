@@ -24,9 +24,10 @@ sys.path.insert(0, os.getcwd())
 from stores.coach.delta import check_price_and_stock as coach_check
 from stores.michaelkors.delta import check_price_and_stock as mk_check
 from stores.jwpei.delta import check_price_and_stock as jwpei_check
+from stores.footlocker.delta import check_price_and_stock as footlocker_check
 from storage.forex import get_usd_to_inr_rate
 
-STORES = ['coach', 'michaelkors', 'jwpei', 'nordstrom']
+STORES = ['coach', 'michaelkors', 'jwpei', 'nordstrom', 'footlocker']
 DB_BASE = os.path.join('storage', 'db')
 
 
@@ -63,7 +64,7 @@ def audit_footwear_and_apparel_sizing(catalog: Dict[str, List[Dict[str, Any]]]) 
     total_truncated = 0
 
     for store in STORES:
-        store_prods = catalog[store]
+        store_prods = catalog.get(store, [])
         store_apparel_footwear = []
         store_truncated = []
 
@@ -75,7 +76,7 @@ def audit_footwear_and_apparel_sizing(catalog: Dict[str, List[Dict[str, Any]]]) 
             is_apparel_footwear = (
                 any(g in apparel_footwear_groups for g in groups) or
                 any(kw in ptype for kw in ['shoe', 'footwear', 'apparel', 'clothing', 'boot', 'sandal', 'sneaker']) or
-                (store == 'nordstrom')
+                (store in ('nordstrom', 'footlocker'))
             )
 
             if is_apparel_footwear:
@@ -225,7 +226,8 @@ def run_live_pdp_sampling_audit(catalog: Dict[str, List[Dict[str, Any]]], sample
     store_checkers = {
         'coach': coach_check,
         'michaelkors': mk_check,
-        'jwpei': jwpei_check
+        'jwpei': jwpei_check,
+        'footlocker': footlocker_check
     }
 
     random.seed(42)
@@ -234,6 +236,8 @@ def run_live_pdp_sampling_audit(catalog: Dict[str, List[Dict[str, Any]]], sample
     total_sampled = 0
 
     for store, checker in store_checkers.items():
+        if store not in catalog:
+            continue
         store_prods = catalog[store]
         eligible = [p for p in store_prods if p.get('source_url')]
         selected = random.sample(eligible, min(samples_per_store, len(eligible)))

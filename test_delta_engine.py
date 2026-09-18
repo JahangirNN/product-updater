@@ -12,6 +12,7 @@ import time
 import datetime
 import tempfile
 import threading
+import copy
 from typing import List
 import httpx
 
@@ -28,6 +29,7 @@ from sync_catalog import (
 )
 from stores.jwpei.delta import check_price_and_stock as jwpei_check, apply_delta_to_product as jwpei_apply
 from stores._template.delta import check_price_and_stock as template_check, apply_delta_to_product as template_apply
+from stores.footlocker.delta import check_price_and_stock as fl_check, apply_delta_to_product as fl_apply
 from storage.db import append_delta_event, append_delta_log, read_delta_events
 from storage.rate_limiter import (
     configure_store_rate_limits,
@@ -519,6 +521,94 @@ def test_dispatcher_resilience_and_contracts():
     print("  ✅ PASS: Dispatcher safely isolates internal store exceptions and introspects legacy and modern store module signatures.")
 
 
+def test_footlocker_delta_cascade_and_selective_timestamping():
+    print("\n[TEST 10] Verifying Foot Locker Delta Cascade, 404 Depletion & Selective Timestamping...")
+    forex_rate = 95.957
+
+    product_fl = {
+        "id": "fl_vomero_01",
+        "handle": "nike-vomero-5-mens-v1358003",
+        "source_store": "footlocker",
+        "source_sku": "V1358003",
+        "source_price": 160.0,
+        "current_price": 15353.0,
+        "availability": "in_stock",
+        "is_active": True,
+        "last_verified_at": "2026-09-01T00:00:00Z",
+        "variants": [
+            {"sku": "V1358003-8", "in_stock": True, "source_price": 160.0, "price": "15353.00", "title": "US 8 / UK 7"},
+            {"sku": "V1358003-9", "in_stock": True, "source_price": 160.0, "price": "15353.00", "title": "US 9 / UK 8"},
+            {"sku": "V1358003-10", "in_stock": True, "source_price": 160.0, "price": "15353.00", "title": "US 10 / UK 9"}
+        ]
+    }
+
+    # Case 1: Partial variant sellout (size 8 and 9 sell out, size 10 still available)
+    # Parent availability stays "in_stock", but variants must update and has_changed must be True!
+    delta_partial = {
+        "status": "success",
+        "handle": product_fl["handle"],
+        "current_source_price": 160.0,
+        "old_source_price": 160.0,
+        "availability": "in_stock",
+        "old_availability": "in_stock",
+        "price_changed": False,
+        "stock_changed": False,
+        "variant_stock_changed": True,
+        "variants_delta": [
+            {"sku": "V1358003-8", "size": "8", "available": False, "price_usd": 160.0},
+            {"sku": "V1358003-9", "size": "9", "available": False, "price_usd": 160.0},
+            {"sku": "V1358003-10", "size": "10", "available": True, "price_usd": 160.0}
+        ]
+    }
+    updated_p1, changed_p1 = fl_apply(copy.deepcopy(product_fl), delta_partial, forex_rate)
+    assert changed_p1 is True, "Partial variant sellout must report has_changed = True"
+    assert updated_p1["availability"] == "in_stock", "Parent should remain in_stock because size 10 is available"
+    assert updated_p1["is_active"] is True
+    v_map1 = {v["sku"]: v["in_stock"] for v in updated_p1["variants"]}
+    assert v_map1["V1358003-8"] is False, "Size 8 must be out_of_stock"
+    assert v_map1["V1358003-9"] is False, "Size 9 must be out_of_stock"
+    assert v_map1["V1358003-10"] is True, "Size 10 must remain in_stock"
+    assert updated_p1["last_verified_at"] != "2026-09-01T00:00:00Z"
+
+    # Case 2: Complete Depletion via 404 delisting (ADR 0015 cascade)
+    delta_404 = {
+        "status": "not_found",
+        "handle": product_fl["handle"],
+        "availability": "out_of_stock",
+        "old_availability": "in_stock",
+        "current_source_price": 160.0,
+        "old_source_price": 160.0,
+        "is_active": False,
+        "price_changed": False,
+        "stock_changed": True,
+        "variants_delta": []
+    }
+    updated_404, changed_404 = fl_apply(copy.deepcopy(product_fl), delta_404, forex_rate)
+    assert changed_404 is True, "404 delisting must trigger change"
+    assert updated_404["availability"] == "out_of_stock", "404 must set availability to out_of_stock"
+    assert updated_404["is_active"] is False, "404 must set is_active to False"
+    # CRITICAL INVARIANT: all child variants must be cascaded to in_stock = False!
+    for v in updated_404["variants"]:
+        assert v["in_stock"] is False, f"Variant {v['sku']} must be cascaded to False on 404 delisting"
+    assert updated_404["last_verified_at"] != "2026-09-01T00:00:00Z", "404 must stamp last_verified_at"
+
+    # Case 3: Rate limited (429 retries exhausted) - MUST NOT mutate and MUST NOT stamp timestamp
+    delta_429 = {
+        "status": "rate_limited",
+        "handle": product_fl["handle"],
+        "availability": "in_stock",
+        "old_availability": "in_stock",
+        "current_source_price": 160.0,
+        "old_source_price": 160.0,
+        "error": "Rate limit retries exhausted"
+    }
+    updated_429, changed_429 = fl_apply(copy.deepcopy(product_fl), delta_429, forex_rate)
+    assert changed_429 is False, "Rate limited check must report changed = False"
+    assert updated_429["last_verified_at"] == "2026-09-01T00:00:00Z", "Rate limited check MUST NOT stamp last_verified_at"
+
+    print("  ✅ PASS: Foot Locker partial variant inventory shifts update cleanly, 404 delistings cascade depletion, and rate limits maintain immutability.")
+
+
 def run_all_tests():
     print("=" * 72)
     print("DELTA ENGINE INTEGRATION & UNIT TEST SUITE (MULTI-STORE EDITION)")
@@ -533,6 +623,7 @@ def run_all_tests():
     test_live_jwpei_connectivity()
     test_multi_store_isolation_and_429_circuit_breaking()
     test_dispatcher_resilience_and_contracts()
+    test_footlocker_delta_cascade_and_selective_timestamping()
 
     print("\n" + "=" * 72)
     print("ALL TESTS PASSED WITH 100% SUCCESS")

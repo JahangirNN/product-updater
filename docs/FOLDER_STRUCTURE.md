@@ -86,7 +86,9 @@ product-updater/
 │       │   └── products/            # Individual JSON documents (e.g. 0ed43c62cfe53f48.json)
 │       ├── michaelkors/             # Michael Kors retailer partition (530 products)
 │       │   └── products/            # Individual JSON documents
-│       └── coach/                   # Coach retailer partition (573 products)
+│       ├── coach/                   # Coach retailer partition (573 products)
+│       │   └── products/            # Individual JSON documents
+│       └── footlocker/              # Foot Locker retailer partition (95 products)
 │           └── products/            # Individual JSON documents
 │
 ├── stores/                          # [SCREAMING ARCHITECTURE] Self-contained store modules
@@ -111,10 +113,15 @@ product-updater/
 │   │   ├── inflow.py                # Ingestion normalizer with dimension parsing & multi-angle galleries
 │   │   └── delta.py                 # Fast Demandware AJAX delta checker
 │   │
-│   └── coach/                       # Concrete Coach implementation
-│       ├── LEARNINGS.md             # Living notes: SFCC Scene7, multi-color variants, sizing extraction, filename alignment
-│       ├── inflow.py                # Ingestion normalizer with multi-color binding & dimension extraction
-│       └── delta.py                 # Fast JSON-LD delta checker & variant price/stock synchronizer
+│   ├── coach/                       # Concrete Coach implementation
+│   │   ├── LEARNINGS.md             # Living notes: SFCC Scene7, multi-color variants, sizing extraction, filename alignment
+│   │   ├── inflow.py                # Ingestion normalizer with multi-color binding & dimension extraction
+│   │   └── delta.py                 # Fast JSON-LD delta checker & variant price/stock synchronizer
+│   │
+│   └── footlocker/                  # Concrete Foot Locker implementation
+│       ├── LEARNINGS.md             # Living notes: Nike Vomero sizing matrix, SSR dehydrated state, width codes
+│       ├── inflow.py                # Ingestion normalizer with Nike US/UK/EU sizing & anti-truncation enforcement
+│       └── delta.py                 # Rate-limited SSR delta checker & variant inventory synchronizer
 │
 ├── sync_catalog.py                  # Universal multi-store delta engine & systematic scheduler
 ├── test_delta_engine.py             # Automated unit & integration test suite for delta engine
