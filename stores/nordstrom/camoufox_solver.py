@@ -243,15 +243,25 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
         # Ensure route blocking is active
         setup_camoufox_route_blocking(page)
 
-        # Adaptive wait for Kasada proof-of-work resolution
-        # Kasada typically takes between 3 to 6 seconds to solve client-side proof-of-work
-        html = page.content()
+        html = ""
+        try:
+            html = page.content()
+        except Exception:
+            pass
+
         for _ in range(10):  # up to 10 x 1000ms = 10s max
             page.wait_for_timeout(1000)
-            html = page.content()
-            page_title = page.title().strip()
+            try:
+                html = page.content()
+            except Exception:
+                continue
+            try:
+                page_title = page.title().strip()
+            except Exception:
+                page_title = ""
             if "istlWas" not in html and ("__INITIAL_CONFIG__" in html or "application/ld+json" in html or len(page_title) > 3):
                 break
+
 
         # Check if still blocked
         if "istlWas" in html or not page.title().strip():

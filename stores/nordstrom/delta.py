@@ -449,8 +449,24 @@ def apply_delta_to_product(
                 if old_v_stock != new_v_stock:
                     variant_changes_detected = True
                 var["in_stock"] = new_v_stock
-                if v_info.get("price_usd", 0) > 0:
-                    var["price"] = f"{float(round(v_info['price_usd'] * forex_rate)):.2f}"
+
+                # Granular per-variant pricing update
+                new_v_price = float(v_info.get("price_usd") or 0.0)
+                if new_v_price > 0:
+                    old_v_price = float(var.get("source_price") or 0.0)
+                    if abs(new_v_price - old_v_price) > 0.01:
+                        var["source_price"] = new_v_price
+                        var["price"] = f"{float(round(new_v_price * forex_rate)):.2f}"
+                        variant_changes_detected = True
+
+                new_v_comp = float(v_info.get("compare_price_usd") or 0.0)
+                if new_v_comp > 0:
+                    old_v_comp = float(var.get("source_compare_at_price") or 0.0)
+                    if abs(new_v_comp - old_v_comp) > 0.01:
+                        var["source_compare_at_price"] = new_v_comp
+                        var["compare_at_price"] = f"{float(round(new_v_comp * forex_rate)):.2f}"
+                        variant_changes_detected = True
+
 
     has_changed = price_changed or stock_changed or variant_changes_detected
 
