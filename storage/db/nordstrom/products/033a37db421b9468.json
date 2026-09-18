@@ -9,8 +9,8 @@
   "source_sku": "ON-9130531-6",
   "source_price": 180.0,
   "source_compare_at_price": 180.0,
-  "current_price": 17278.0,
-  "compare_at_price": 17278.0,
+  "current_price": 17284.0,
+  "compare_at_price": 17284.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -40,13 +40,13 @@
       "id": 913053100,
       "sku": "ON-9130531-6",
       "title": "US 6 / UK 4 - Loess Hare",
-      "price": "17278.00",
+      "price": "17284.00",
       "compare_at_price": null,
       "source_price": 180.0,
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/cfb6a8ba-f422-4576-8791-e40639cacccf.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -67,13 +67,13 @@
       "id": 913053101,
       "sku": "ON-9130531-7",
       "title": "US 7 / UK 5 - Loess Hare",
-      "price": "17278.00",
+      "price": "17284.00",
       "compare_at_price": null,
       "source_price": 180.0,
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/cfb6a8ba-f422-4576-8791-e40639cacccf.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -94,13 +94,13 @@
       "id": 913053102,
       "sku": "ON-9130531-8",
       "title": "US 8 / UK 6 - Loess Hare",
-      "price": "17278.00",
+      "price": "17284.00",
       "compare_at_price": null,
       "source_price": 180.0,
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/cfb6a8ba-f422-4576-8791-e40639cacccf.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -121,13 +121,13 @@
       "id": 913053103,
       "sku": "ON-9130531-9",
       "title": "US 9 / UK 7 - Loess Hare",
-      "price": "17278.00",
+      "price": "17284.00",
       "compare_at_price": null,
       "source_price": 180.0,
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/cfb6a8ba-f422-4576-8791-e40639cacccf.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -148,7 +148,7 @@
       "id": 913053104,
       "sku": "ON-9130531-10",
       "title": "US 10 / UK 8 - Loess Hare",
-      "price": "17278.00",
+      "price": "17284.00",
       "compare_at_price": null,
       "source_price": 180.0,
       "source_compare_at_price": 180.0,
@@ -236,9 +236,11 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-17T18:17:33Z",
+  "last_verified_at": "2026-09-18T04:18:05Z",
   "created_at": "2026-09-17T14:19:11Z",
-  "updated_at": "2026-09-17T18:17:33Z",
+  "updated_at": "2026-09-18T04:18:05Z",
   "status": "ACTIVE",
-  "validation_warnings": []
+  "validation_warnings": [],
+  "is_active": true,
+  "shopify_sync_pending": true
 }

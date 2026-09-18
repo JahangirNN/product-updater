@@ -7,14 +7,14 @@
   "vendor": "On",
   "product_type": "Athletic Shoes",
   "source_sku": "ON-8189173-8",
-  "source_price": 96.0,
+  "source_price": 88.0,
   "source_compare_at_price": 160.0,
-  "current_price": 9215.0,
-  "compare_at_price": 15358.0,
+  "current_price": 8450.0,
+  "compare_at_price": 15363.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Engineered mesh made from 100% recycled polyester, Helion Superfoam, Grip rubber compound",
   "specifications": {
     "Brand": "On",
@@ -41,13 +41,13 @@
       "id": 818917300,
       "sku": "ON-8189173-8",
       "title": "US 8 / UK 7.5 - Black Asphalt",
-      "price": "9215.00",
+      "price": "8450.00",
       "compare_at_price": "15358.00",
-      "source_price": 96.0,
+      "source_price": 88.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/d81e8c1e-e5c4-42c1-990a-07dab5de9b6b.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -68,13 +68,13 @@
       "id": 818917301,
       "sku": "ON-8189173-9",
       "title": "US 9 / UK 8.5 - Black Asphalt",
-      "price": "9215.00",
+      "price": "8450.00",
       "compare_at_price": "15358.00",
-      "source_price": 96.0,
+      "source_price": 88.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/d81e8c1e-e5c4-42c1-990a-07dab5de9b6b.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -95,13 +95,13 @@
       "id": 818917302,
       "sku": "ON-8189173-10",
       "title": "US 10 / UK 9.5 - Black Asphalt",
-      "price": "9215.00",
+      "price": "8450.00",
       "compare_at_price": "15358.00",
-      "source_price": 96.0,
+      "source_price": 88.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/d81e8c1e-e5c4-42c1-990a-07dab5de9b6b.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -122,13 +122,13 @@
       "id": 818917303,
       "sku": "ON-8189173-11",
       "title": "US 11 / UK 10.5 - Black Asphalt",
-      "price": "9215.00",
+      "price": "8450.00",
       "compare_at_price": "15358.00",
-      "source_price": 96.0,
+      "source_price": 88.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/d81e8c1e-e5c4-42c1-990a-07dab5de9b6b.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -149,13 +149,13 @@
       "id": 818917304,
       "sku": "ON-8189173-12",
       "title": "US 12 / UK 11.5 - Black Asphalt",
-      "price": "9215.00",
+      "price": "8450.00",
       "compare_at_price": "15358.00",
-      "source_price": 96.0,
+      "source_price": 88.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/d81e8c1e-e5c4-42c1-990a-07dab5de9b6b.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -234,9 +234,11 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-17T18:21:57Z",
+  "last_verified_at": "2026-09-18T04:25:40Z",
   "created_at": "2026-09-17T14:19:11Z",
-  "updated_at": "2026-09-17T18:21:57Z",
+  "updated_at": "2026-09-18T04:25:40Z",
   "status": "ACTIVE",
-  "validation_warnings": []
+  "validation_warnings": [],
+  "is_active": false,
+  "shopify_sync_pending": true
 }

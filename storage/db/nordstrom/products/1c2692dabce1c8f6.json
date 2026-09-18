@@ -9,8 +9,8 @@
   "source_sku": "ON-8190625-7",
   "source_price": 170.0,
   "source_compare_at_price": 170.0,
-  "current_price": 16318.0,
-  "compare_at_price": 16318.0,
+  "current_price": 16324.0,
+  "compare_at_price": 16324.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -38,7 +38,7 @@
       "id": 819062500,
       "sku": "ON-8190625-7",
       "title": "US 7 / UK 6.5 - Juniper Lime",
-      "price": "16318.00",
+      "price": "16324.00",
       "compare_at_price": null,
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
@@ -65,13 +65,13 @@
       "id": 819062501,
       "sku": "ON-8190625-8",
       "title": "US 8 / UK 7.5 - Juniper Lime",
-      "price": "16318.00",
+      "price": "16324.00",
       "compare_at_price": null,
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/4e6d54fc-1426-4cf0-b92f-786baeaa4ed8.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -92,7 +92,7 @@
       "id": 819062502,
       "sku": "ON-8190625-9",
       "title": "US 9 / UK 8.5 - Juniper Lime",
-      "price": "16318.00",
+      "price": "16324.00",
       "compare_at_price": null,
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
@@ -168,9 +168,11 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-17T18:18:41Z",
+  "last_verified_at": "2026-09-18T04:20:33Z",
   "created_at": "2026-09-17T14:19:11Z",
-  "updated_at": "2026-09-17T18:18:41Z",
+  "updated_at": "2026-09-18T04:20:33Z",
   "status": "ACTIVE",
-  "validation_warnings": []
+  "validation_warnings": [],
+  "is_active": true,
+  "shopify_sync_pending": true
 }

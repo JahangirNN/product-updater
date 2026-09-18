@@ -102,6 +102,9 @@ def parse_numeric_size(size_str: str) -> Optional[float]:
     # Reject explicit youth/kid indicators when parsing adult shoe sizes
     if re.search(r'(?i)\b(?:kid|kids|toddler|youth|infant|baby)\b|\b\d+\s*y\b', s):
         return None
+    # Reject standalone width indicators (e.g. '2E', '4E', 'EE', 'D', 'W', 'Extra Wide')
+    if re.search(r'^(?:\d+e|ee|d|w|wide|medium|narrow|extra wide)$', s, re.IGNORECASE):
+        return None
     clean = re.sub(r'(?i)us|eu|uk', '', s).strip()
     clean = clean.replace('½', ' 1/2')
 
@@ -109,17 +112,20 @@ def parse_numeric_size(size_str: str) -> Optional[float]:
     frac_match = re.search(r'(\d+)\s+1/2', clean)
     if frac_match:
         try:
-            return float(frac_match.group(1)) + 0.5
+            val = float(frac_match.group(1)) + 0.5
+            return val if val >= 3.5 else None
         except ValueError:
             pass
 
     match = re.search(r'(\d+(?:\.\d+)?)', clean)
     if match:
         try:
-            return float(match.group(1))
+            val = float(match.group(1))
+            return val if val >= 3.5 else None
         except ValueError:
             return None
     return None
+
 
 
 def convert_us_to_uk(us_size: float, gender: str, brand: str = "On") -> str:

@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Zip Card Case In Signature Canvas",
   "specifications": {
     "Material": "Zip Card Case In Signature Canvas",
@@ -607,7 +607,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw883_imqrx_a0",
       "option_values": [
         {
@@ -805,11 +805,11 @@
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:45:06Z",
-  "last_verified_at": "2026-09-17T17:23:35Z",
+  "last_verified_at": "2026-09-18T05:19:04Z",
   "id": "a5cace078ed0e30a",
   "product_id": "a5cace078ed0e30a",
   "store": "coach",
-  "updated_at": "2026-09-17T17:23:35Z",
-  "is_active": false,
+  "updated_at": "2026-09-18T05:19:04Z",
+  "is_active": true,
   "shopify_sync_pending": true
 }

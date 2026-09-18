@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Synthetic and textile upper, textile lining, rubber sole",
   "specifications": {
     "Brand": "Salomon",
@@ -47,7 +47,7 @@
       "source_compare_at_price": 185.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/b4ec9c2d-0e49-4763-addb-1f065226ff84.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -74,7 +74,7 @@
       "source_compare_at_price": 185.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/b4ec9c2d-0e49-4763-addb-1f065226ff84.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -101,7 +101,7 @@
       "source_compare_at_price": 185.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/b4ec9c2d-0e49-4763-addb-1f065226ff84.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -174,9 +174,11 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-17T19:00:56Z",
+  "last_verified_at": "2026-09-18T04:26:28Z",
   "created_at": "2026-09-17T18:53:56Z",
-  "updated_at": "2026-09-17T19:00:56Z",
+  "updated_at": "2026-09-18T04:26:28Z",
   "status": "ACTIVE",
-  "validation_warnings": []
+  "validation_warnings": [],
+  "is_active": false,
+  "shopify_sync_pending": true
 }
