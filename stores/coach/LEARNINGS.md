@@ -84,3 +84,15 @@
 - **Variant Delta Synchronization**:
   - In `stores/coach/delta.py`, synchronize both variant-level stock (`in_stock`) and variant-level pricing (`source_price` / `price`) when live Coach PDPs return `ProductGroup.hasVariant`.
 
+---
+
+## 7. Parent-to-Child Stock Cascade & Invariant Harmonization
+- **Availability Cascade (ADR 0015)**:
+  - When top-level availability flips to `out_of_stock` or `delisted` and `variants_delta` is empty, cascade `in_stock = False` to all child variants.
+  - When an out-of-stock product restocks, cascade `in_stock = True` to child variants.
+- **Top-Level Invariant Harmonization**:
+  - After any variant-level update, the top-level `availability` is strictly recomputed from whether ANY child variant has stock (`in_stock = True`). This guarantees 0 parent OOS items with active child variants, and 0 active products with 0 active variants.
+- **Granular Variant Stock Tracking**:
+  - Returns `variant_stock_changed: bool` and `changed_variants: List[Dict[str, Any]]` with `{sku, old_in_stock, new_in_stock}` to maintain a clean delta event queue.
+
+

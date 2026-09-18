@@ -39,7 +39,11 @@ product-updater/
 │       ├── 0008-systematic-2-hour-delta-freshner-and-timestamp-scheduling.md
 │       ├── 0009-centralized-logging-and-background-scheduler-daemon.md
 │       ├── 0010-store-agnostic-rate-limiting-circuit-breaker-and-browser-fingerprinting.md
-│       └── 0011-zero-cost-local-stealth-browser-kasada-solving-and-parallel-multi-store-scheduling.md
+│       ├── 0011-zero-cost-local-stealth-browser-kasada-solving-and-parallel-multi-store-scheduling.md
+│       ├── 0012-michaelkors-store-onboarding-and-sfcc-demandware-integration.md
+│       ├── 0013-coach-brand-onboarding-and-sfcc-scene7-integration.md
+│       ├── 0014-two-tier-collection-fast-sweep-and-route-blocked-pdp-delta-engine.md
+│       └── 0015-variant-stock-cascade-phantom-delta-elimination-and-cross-brand-integrity.md
 │
 ├── frontend/                        # Mobile-First Catalog Data Viewer (React + Vite + Tailwind)
 │   ├── public/data/

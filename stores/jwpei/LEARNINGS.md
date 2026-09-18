@@ -98,4 +98,10 @@ How we check price and stock in milliseconds without heavy HTML overhead:
 9. **Live Restock & Delta Pacing Benchmark**:
    - During live delta verification, product `mini-abacus-hs` transitioned from `out_of_stock` to `in_stock` (`available: true`, `$139.00 USD`), proving real-time availability shift detection.
    - Pacing benchmark: Running `sync_catalog.py` with 3 worker threads and 80ms polite delays achieves ~250–320ms average request latency with zero HTTP 429 rate limit drops across the entire 288-product catalog.
+10. **Availability Cascade & Double-Flag Synchronization (ADR 0015)**:
+    - Both `in_stock` and legacy `is_available` boolean flags must be maintained on variant dictionaries to prevent field desynchronization.
+    - When top-level availability flips to `out_of_stock` or `delisted` with empty `variants_delta`, cascade `False` to child variants.
+    - Top-level `availability` is derived from `any(v.get('in_stock') or v.get('is_available') for v in product['variants'])`.
+    - In `apply_delta_to_product()`, avoid premature returns when availability changes without price shifts, ensuring parent-variant stock harmony.
+
 

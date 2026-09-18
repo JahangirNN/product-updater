@@ -133,3 +133,22 @@ Derived directly from the official Nordstrom On shoe conversion guides:
   - For footwear with single-width options, LLM extractors can mistakenly parse the width ("M" or "W") instead of the numeric shoe sizes.
   - **Resolution**: Seamless Camoufox hydration directly queries Nordstrom's `window.__INITIAL_CONFIG__["productDisplay"]["productDisplaysById"]["entities"]` `items` where `concatenatedDisplaySize` and `sizeDimension1.label` provide true US numeric sizes (e.g. US 5 through 15) and per-variant stock (`shipQuantity > 0`).
 - **Parity Verification**: 100% Tier A static schema compliance and 100% live Tier B parity achieved across sample PDPs.
+
+### 5.5 Full-Catalog Variant Rehydration & Numeric Adult Shoe Sizing Matrix
+- **Problem**: 89 of 238 Nordstrom footwear products had truncated variants ($\le 6$ sizes, with 22 having only 1 variant) due to LLM extraction bounds during initial onboarding.
+- **Camoufox Rehydration Pipeline**:
+  - Leveraged Camoufox headless browsing to load PDPs and parse dehydrated entity structures:
+    `__INITIAL_CONFIG__["productDisplay"]["productDisplaysById"]["entities"][style_id]["coreProducts"][0]["coreChoices"][color_idx]["items"]`
+  - Rehydrated the entire 238-product catalog from **2,258 up to 3,040 verified sizes** (+34.6% expansion; averaging 12.77 sizes/shoe).
+  - Only 3 products remain with $\le 6$ sizes, confirmed on live Nordstrom PDPs to be genuine limited-run specialty releases.
+- **Numeric Adult Sizing Filter (`stores/nordstrom/inflow.py`)**:
+  - Must enforce `parse_numeric_size(display_size) >= 3.5` to eliminate apparel sizes, kids sizing leaks, and raw width tokens.
+  - Width indicators (`2E`, `4E`, `EE`, `D`, `W`, `M`) must be filtered out so variants reflect clean US/UK/EU numeric matrices.
+
+### 5.6 Camoufox In-Flight Page Navigation Resilience (`stores/nordstrom/camoufox_solver.py`)
+- **Quirk**: Playwright throws `Page.content: Unable to retrieve content because the page is navigating and changing the content` when Nordstrom's SPA executes internal client-side redirects after solving Kasada.
+- **Remediation**:
+  - Wrapped `page.content()` and `page.title()` in safe `try/except Error` handlers.
+  - Extended Kasada wait polling from 10 to 20 ticks.
+  - Pre-captured `page_title` in a local variable before evaluating blocked heuristics, completely eliminating in-flight navigation exceptions during background freshener cycles.
+

@@ -88,3 +88,15 @@
    - *Solution*: Tier A audit flagged single-character titles. Deep PDP scrape revealed the true title: `Goldie Faux Fur Clutch`.
 4. **Demandware URL Query Case Sensitivity**:
    - *Trap*: Query parameters `start` and `sz` must be lowercase. Using uppercase `SZ` or `START` is ignored by SFCC and returns default 24 items.
+
+---
+
+## 6. Elimination of Phantom Transitions & Decoupled Variant Deltas
+- **The Phantom Delta Trap**:
+  - Previously, `stock_changed = (curr_avail != old_availability) or variant_stock_changed`.
+  - When a product stayed in stock at the parent level while 1 size sold out, `stock_changed` was set to `True`, triggering a redundant `in_stock -> in_stock` event in logs and delta queues.
+- **Resolution (ADR 0015)**:
+  - Decoupled parent stock transitions (`stock_changed = (curr_avail != old_availability)`) from variant transitions (`variant_stock_changed = True`).
+  - Implemented granular `changed_variants` tracking with `{sku, old_in_stock, new_in_stock}`.
+  - In `apply_delta_to_product()`, mutations are triggered if `price_changed or stock_changed or variant_stock_changed`, ensuring accurate Shopify sync triggers with 0 phantom noise.
+

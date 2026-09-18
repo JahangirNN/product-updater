@@ -108,6 +108,7 @@ All engineering decisions are recorded and immutably numbered in [`docs/adr/`](.
 | **[0012](./docs/adr/0012-michaelkors-store-onboarding-and-sfcc-demandware-integration.md)** | Michael Kors Store Onboarding, SFCC Demandware Ingestion & Multi-Category Pipeline Architecture | Accepted |
 | **[0013](./docs/adr/0013-coach-brand-onboarding-and-sfcc-scene7-integration.md)** | Coach Brand Onboarding, SFCC Scene7 Integration & Multi-Color Variant Architecture | Accepted |
 | **[0014](./docs/adr/0014-two-tier-collection-fast-sweep-and-route-blocked-pdp-delta-engine.md)** | Two-Tier Collection Fast-Sweep & Route-Blocked PDP Delta Engine | Accepted |
+| **[0015](./docs/adr/0015-variant-stock-cascade-phantom-delta-elimination-and-cross-brand-integrity.md)** | Parent-Child Availability Cascade, Phantom Delta Elimination & Granular Variant State Harmonization | Accepted |
 
 ---
 
