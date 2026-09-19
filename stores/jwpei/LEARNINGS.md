@@ -103,5 +103,20 @@ How we check price and stock in milliseconds without heavy HTML overhead:
     - When top-level availability flips to `out_of_stock` or `delisted` with empty `variants_delta`, cascade `False` to child variants.
     - Top-level `availability` is derived from `any(v.get('in_stock') or v.get('is_available') for v in product['variants'])`.
     - In `apply_delta_to_product()`, avoid premature returns when availability changes without price shifts, ensuring parent-variant stock harmony.
-
-
+11. **CRITICAL TRAP: `/collections/handbags` silently omits out-of-stock colorways** (discovered Sep 2026):
+    - **Problem**: Shopify collection pages default to hiding sold-out products unless the theme explicitly enables `show_sold_out: true`. JW PEI's Shopify store does NOT enable this, so any colorway with `available: false` is invisible from collection listing pages.
+    - **Impact**: Our initial ingestion from `/collections/handbags` captured only 422 products, missing 86+ sold-out sibling colorways across 45 swatch groups (e.g., 5 of 17 Noor colorways were absent).
+    - **Solution**: Always use `https://www.jwpei.com/products.json?limit=250&page={n}` (pages 1-10) which returns ALL 2,390 products regardless of stock status. This is the canonical source for full-catalog ingestion.
+    - **Verification command**: `python scripts/ingest_missing_jwpei_siblings.py` (uses pre-cached `scratch/all_jwpei_products.json`)
+12. **products.json price format gotcha**:
+    - `products.json` returns prices as dollar-format strings in variants (e.g., `"109.00"`), NOT cents integers.
+    - The top-level `price` field in `products.json` is often `null`/`None`; the actual price is in `variants[0].price`.
+    - `stores/jwpei/inflow.parse_product_payload()` expects cent-format integers (e.g., `10900` for `$109.00`) and divides by 100 if value > 500.
+    - **Fix**: In any script that passes `products.json` data to `parse_product_payload`, convert variant prices: `int(float(price_str) * 100)` — and leave the top-level `price` as `None` (not `0`) so `inflow.py`'s fallback to `first_var.price` fires correctly.
+    - **Symptom**: If you see `source_price: 0.0` on ingested JW PEI products, the top-level price was set to `0` instead of `None`, blocking the variant fallback.
+13. **StarApps Swatch King cross-sibling enrichment**:
+    - `https://cdn.starapps.studio/apps/vsk/friday-by-jw-pei/data.js` maps each colorway group (e.g., group `2T273` = all 17 Noor colorways).
+    - Each group entry has `option_values` array with `{handle, id}` for every sibling.
+    - To show all sibling swatches in the viewer, enrich each product's `variants` array with all sibling colorways from the group, each carrying: `{sku, title: color_name, price_inr, source_price_usd, in_stock, image_url, option_values: [{option_name: 'Color', name: color_name}]}`.
+    - This enables clicking any color swatch in the UI to switch images and prices without loading a separate product.
+    - Script: the sibling enrichment loop in `scripts/ingest_missing_jwpei_siblings.py` / inline enrichment applied post-ingestion.
