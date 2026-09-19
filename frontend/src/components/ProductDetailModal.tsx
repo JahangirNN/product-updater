@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { X, ExternalLink, Ruler, ShieldCheck, Tag, Box, Info, Sparkles } from 'lucide-react';
-import { CatalogProduct } from '../types';
+import React, { useState, useEffect, useMemo } from 'react';
+import { X, ExternalLink, Ruler, ShieldCheck, Tag, Box, Info, Sparkles, Check } from 'lucide-react';
+import { CatalogProduct, ProductVariant } from '../types';
 import { RawJsonInspector } from './RawJsonInspector';
 
 interface ProductDetailModalProps {
@@ -77,10 +77,31 @@ function deriveShoeSize(rawUs: string, rawUk: string, gender: string): ShoeSizeC
 export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClose }) => {
   if (!product) return null;
 
+  // Aggregate product.images + all unique variant image_urls into a comprehensive gallery
+  const allImages = useMemo(() => {
+    const urls: string[] = [];
+    const addUrl = (u?: string | null) => {
+      if (u && typeof u === 'string' && !urls.includes(u)) {
+        urls.push(u);
+      }
+    };
+    (product.images || []).forEach(addUrl);
+    (product.variants || []).forEach((v: any) => addUrl(v.image_url));
+    return urls.length > 0
+      ? urls
+      : ['https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80'];
+  }, [product]);
+
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-  const images = product.images && product.images.length > 0
-    ? product.images
-    : ['https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80'];
+  const [selectedVariantSku, setSelectedVariantSku] = useState<string | null>(null);
+  const [selectedColor, setSelectedColor] = useState<string>('all');
+
+  // Reset variant selection & image index when product changes
+  useEffect(() => {
+    setActiveImageIndex(0);
+    setSelectedVariantSku(null);
+    setSelectedColor('all');
+  }, [product.id]);
 
   const isSoldOut = product.availability !== 'in_stock';
   const specs = product.specifications || {};
@@ -115,9 +136,6 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
   const cushioning = specs['Cushioning'] || 'CloudTec cushioning';
   const shoeMaterial = product.material || specs['Material'] || 'Textile and synthetic upper';
 
-  // Multi-colorway filtering and dynamic price resolution
-  const [selectedColor, setSelectedColor] = useState<string>('all');
-
   const availableColors = Array.from(new Set(
     (product.variants || []).map((v: any) => {
       const cOpt = v.option_values?.find((o: any) => o.option_name === 'Color')?.name;
@@ -134,6 +152,63 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
         if (cOpt) return cOpt.toLowerCase() === selectedColor.toLowerCase();
         return v.title?.toLowerCase().includes(selectedColor.toLowerCase());
       });
+
+  // Selected variant lookup
+  const selectedVariant = (product.variants || []).find((v: any) => v.sku === selectedVariantSku) || null;
+
+  // Variant click handler: updates selection and switches main image
+  const handleSelectVariant = (variant: any) => {
+    if (selectedVariantSku === variant.sku) {
+      // Clicking selected variant again unselects it
+      setSelectedVariantSku(null);
+      return;
+    }
+    setSelectedVariantSku(variant.sku);
+
+    if (variant.image_url) {
+      const idx = allImages.indexOf(variant.image_url);
+      if (idx !== -1) {
+        setActiveImageIndex(idx);
+      }
+    }
+
+    // Sync color pill if applicable
+    const cOpt = variant.option_values?.find((o: any) => o.option_name === 'Color')?.name;
+    if (cOpt) {
+      setSelectedColor(cOpt);
+    } else if (variant.title && variant.title.includes(' - ')) {
+      const colorFromTitle = variant.title.split(' - ').pop();
+      if (colorFromTitle) setSelectedColor(colorFromTitle);
+    }
+  };
+
+  // Color pill click handler
+  const handleSelectColor = (cName: string) => {
+    setSelectedColor(cName);
+    if (cName === 'all') {
+      setSelectedVariantSku(null);
+      setActiveImageIndex(0);
+      return;
+    }
+    // Find variant with this color and switch image
+    const matchVar = (product.variants || []).find((v: any) => {
+      const cOpt = v.option_values?.find((o: any) => o.option_name === 'Color')?.name;
+      return (
+        (cOpt?.toLowerCase() === cName.toLowerCase() ||
+         v.title?.toLowerCase().includes(cName.toLowerCase())) &&
+        v.image_url
+      );
+    });
+    if (matchVar) {
+      setSelectedVariantSku(matchVar.sku);
+      if (matchVar.image_url) {
+        const idx = allImages.indexOf(matchVar.image_url);
+        if (idx !== -1) {
+          setActiveImageIndex(idx);
+        }
+      }
+    }
+  };
 
   const activeColorPrices = displayedVariants.map((v: any) => parseFloat(v.price || '0')).filter(p => p > 0);
   const activeColorSourcePrices = displayedVariants.map((v: any) => v.source_price || 0).filter(p => p > 0);
@@ -177,34 +252,42 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
           <div className="space-y-2">
             <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800">
               <img
-                src={images[activeImageIndex]}
+                src={allImages[activeImageIndex] || allImages[0]}
                 alt={product.title}
-                className="w-full h-full object-contain object-center"
+                className="w-full h-full object-contain object-center transition-all duration-300"
               />
 
               {/* Status Badge */}
-              <div className="absolute top-3 left-3">
+              <div className="absolute top-3 left-3 flex items-center gap-2">
                 <span
                   className={`text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-md ${
-                    isSoldOut
+                    (selectedVariant ? !selectedVariant.in_stock : isSoldOut)
                       ? 'bg-rose-950/90 text-rose-300 border border-rose-500/30'
                       : 'bg-emerald-950/90 text-emerald-300 border border-emerald-500/30'
                   }`}
                 >
                   <span
                     className={`w-2 h-2 rounded-full ${
-                      isSoldOut ? 'bg-rose-400' : 'bg-emerald-400 animate-pulse'
+                      (selectedVariant ? !selectedVariant.in_stock : isSoldOut) ? 'bg-rose-400' : 'bg-emerald-400 animate-pulse'
                     }`}
                   />
-                  {isSoldOut ? 'Out of Stock' : 'In Stock'}
+                  {selectedVariant
+                    ? selectedVariant.in_stock ? 'Variant In Stock' : 'Variant Sold Out'
+                    : isSoldOut ? 'Out of Stock' : 'In Stock'}
                 </span>
+
+                {selectedVariant && (
+                  <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                    Active: {selectedVariant.title || selectedVariant.sku}
+                  </span>
+                )}
               </div>
             </div>
 
             {/* Thumbnail Strip */}
-            {images.length > 1 && (
+            {allImages.length > 1 && (
               <div className="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
-                {images.map((img, i) => (
+                {allImages.map((img, i) => (
                   <button
                     key={i}
                     onClick={() => setActiveImageIndex(i)}
@@ -235,11 +318,27 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
             {/* Dual Currency Display */}
             <div className="pt-2 flex flex-wrap items-baseline justify-between gap-3 bg-zinc-900/60 p-3.5 rounded-2xl border border-zinc-800">
               <div>
-                <div className="text-[10px] text-zinc-400 uppercase tracking-wider font-semibold">
-                  Shopify Storefront Price (INR)
+                <div className="text-[10px] text-zinc-400 uppercase tracking-wider font-semibold flex items-center gap-1.5">
+                  <span>Shopify Storefront Price (INR)</span>
+                  {selectedVariant && (
+                    <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                      Selected Variant
+                    </span>
+                  )}
                 </div>
                 <div className="flex items-baseline gap-2 flex-wrap">
-                  {selectedColor === 'all' && hasGlobalPriceRange ? (
+                  {selectedVariant ? (
+                    <>
+                      <span className="text-xl sm:text-2xl font-extrabold text-amber-300">
+                        ₹{parseFloat(selectedVariant.price || '0').toLocaleString('en-IN')}
+                      </span>
+                      {selectedVariant.compare_at_price && parseFloat(selectedVariant.compare_at_price) > parseFloat(selectedVariant.price) && (
+                        <span className="text-sm text-zinc-500 line-through">
+                          ₹{parseFloat(selectedVariant.compare_at_price).toLocaleString('en-IN')}
+                        </span>
+                      )}
+                    </>
+                  ) : selectedColor === 'all' && hasGlobalPriceRange ? (
                     <span className="text-lg sm:text-2xl font-extrabold text-white">
                       ₹{product.price_range_inr?.min?.toLocaleString('en-IN') || product.current_price?.toLocaleString('en-IN')} – ₹{product.price_range_inr?.max?.toLocaleString('en-IN') || product.current_price?.toLocaleString('en-IN')}
                     </span>
@@ -252,7 +351,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                       ₹{minActivePrice?.toLocaleString('en-IN')}
                     </span>
                   )}
-                  {product.compare_at_price && product.compare_at_price > minActivePrice && (
+                  {!selectedVariant && product.compare_at_price && product.compare_at_price > minActivePrice && (
                     <span className="text-sm text-zinc-500 line-through">
                       ₹{product.compare_at_price?.toLocaleString('en-IN')}
                     </span>
@@ -265,7 +364,9 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                   Original Source Price
                 </div>
                 <div className="text-sm sm:text-base font-mono font-bold text-amber-400">
-                  {selectedColor === 'all' && hasGlobalPriceRange ? (
+                  {selectedVariant ? (
+                    `$${selectedVariant.source_price?.toFixed(2)} USD`
+                  ) : selectedColor === 'all' && hasGlobalPriceRange ? (
                     `$${product.price_range_usd?.min?.toFixed(2)} – $${product.price_range_usd?.max?.toFixed(2)} USD`
                   ) : minActiveSource < maxActiveSource ? (
                     `$${minActiveSource.toFixed(2)} – $${maxActiveSource.toFixed(2)} USD`
@@ -305,7 +406,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
               <div className="flex items-center gap-1.5 flex-wrap p-2 rounded-xl bg-zinc-900/60 border border-zinc-800">
                 <span className="text-[11px] text-zinc-400 font-semibold mr-1">Color:</span>
                 <button
-                  onClick={() => setSelectedColor('all')}
+                  onClick={() => handleSelectColor('all')}
                   className={`text-xs px-2.5 py-1 rounded-lg font-medium transition-all ${
                     selectedColor === 'all'
                       ? 'bg-amber-500 text-zinc-950 font-bold shadow-sm'
@@ -324,17 +425,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                   return (
                     <button
                       key={cName}
-                      onClick={() => {
-                        setSelectedColor(cName);
-                        const varWithImg = product.variants.find((v: any) => {
-                          const cOpt = v.option_values?.find((o: any) => o.option_name === 'Color')?.name;
-                          return (cOpt?.toLowerCase() === cName.toLowerCase() || v.title?.toLowerCase().includes(cName.toLowerCase())) && v.image_url;
-                        });
-                        if (varWithImg && varWithImg.image_url) {
-                          const idx = images.indexOf(varWithImg.image_url);
-                          if (idx !== -1) setActiveImageIndex(idx);
-                        }
-                      }}
+                      onClick={() => handleSelectColor(cName)}
                       className={`text-xs px-2.5 py-1 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
                         isSelected
                           ? 'bg-amber-500 text-zinc-950 font-bold shadow-sm'
@@ -351,59 +442,110 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
 
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 overflow-hidden">
               {isShoe ? (
-                <div className="max-h-64 overflow-y-auto">
-                  <table className="w-full text-xs text-left">
-                    <thead className="bg-zinc-800/80 text-zinc-400 font-semibold sticky top-0">
-                      <tr>
-                        <th className="px-3 py-2">US Size</th>
-                        <th className="px-3 py-2">UK Size</th>
-                        <th className="px-3 py-2">EU Size</th>
-                        <th className="px-3 py-2">Color / Variant</th>
-                        <th className="px-3 py-2">Price</th>
-                        <th className="px-3 py-2 text-right">Status</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-zinc-800/60 font-mono">
-                      {displayedVariants.map((v: any, i: number) => {
-                        let us = v.size_us || '';
-                        let uk = v.size_uk || '';
-                        let eu = v.size_eu || '';
-                        let color = v.option_values?.find((o: any) => o.option_name === 'Color')?.name || '';
+                <div className="space-y-0">
+                  {/* Quick Select Size Pills */}
+                  <div className="p-2.5 bg-zinc-900/80 border-b border-zinc-800 flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+                    <span className="text-[11px] font-semibold text-zinc-400 whitespace-nowrap mr-1">Quick Size:</span>
+                    {displayedVariants.map((v: any, idx: number) => {
+                      let us = v.size_us || '';
+                      if (!us && v.title) {
+                        const m = v.title.match(/US\s*([\d.]+)/i);
+                        if (m) us = m[1];
+                      }
+                      const isVSelected = selectedVariantSku === v.sku;
+                      return (
+                        <button
+                          key={idx}
+                          onClick={() => handleSelectVariant(v)}
+                          className={`text-xs px-2.5 py-1 rounded-lg font-mono font-medium transition-all flex items-center gap-1 flex-shrink-0 ${
+                            isVSelected
+                              ? 'bg-amber-500 text-zinc-950 font-bold shadow-glow-gold scale-105'
+                              : v.in_stock
+                              ? 'bg-zinc-800 text-zinc-200 hover:bg-zinc-700 border border-zinc-700/60'
+                              : 'bg-zinc-900 text-zinc-500 line-through border border-zinc-800 opacity-60'
+                          }`}
+                        >
+                          <span>{us ? `US ${us}` : v.title}</span>
+                          <span className={`w-1.5 h-1.5 rounded-full ${v.in_stock ? (isVSelected ? 'bg-zinc-950' : 'bg-emerald-400') : 'bg-rose-500'}`} />
+                        </button>
+                      );
+                    })}
+                  </div>
 
-                        if (v.title) {
-                          const m = v.title.match(/US\s*([\d.]+)(?:\s*\/\s*UK\s*([\d.]+))?(?:\s*-\s*(.*))?/i);
-                          if (m) {
-                            us = us || m[1];
-                            uk = uk || m[2];
-                            color = color || m[3];
-                          } else {
-                            const conv = deriveShoeSize(v.title, '', gender);
-                            us = us || (gender.toLowerCase().includes('women') ? conv.usWomen : conv.usMen);
-                            uk = uk || conv.uk;
-                            eu = eu || conv.eu;
-                          }
-                          if (!color && v.title.includes(' - ')) {
-                            color = v.title.split(' - ').pop() || '';
-                          }
-                        }
+                  <div className="max-h-64 overflow-y-auto">
+                    <table className="w-full text-xs text-left">
+                      <thead className="bg-zinc-800/80 text-zinc-400 font-semibold sticky top-0">
+                        <tr>
+                          <th className="px-3 py-2">US Size</th>
+                          <th className="px-3 py-2">UK Size</th>
+                          <th className="px-3 py-2">EU Size</th>
+                          <th className="px-3 py-2">Color / Variant</th>
+                          <th className="px-3 py-2">Price</th>
+                          <th className="px-3 py-2 text-right">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-zinc-800/60 font-mono">
+                        {displayedVariants.map((v: any, i: number) => {
+                          let us = v.size_us || '';
+                          let uk = v.size_uk || '';
+                          let eu = v.size_eu || '';
+                          let color = v.option_values?.find((o: any) => o.option_name === 'Color')?.name || '';
 
-                        return (
-                          <tr key={i} className="hover:bg-zinc-800/30">
-                            <td className="px-3 py-2 font-bold text-white">{us ? `US ${us}` : '-'}</td>
-                            <td className="px-3 py-2 font-semibold text-amber-400">{uk ? `UK ${uk}` : '-'}</td>
-                            <td className="px-3 py-2 text-zinc-300">{eu ? `EU ${eu}` : '-'}</td>
-                            <td className="px-3 py-2 text-zinc-400 font-sans truncate max-w-[120px]">{color || 'Standard'}</td>
-                            <td className="px-3 py-2 text-zinc-200 whitespace-nowrap">₹{parseFloat(v.price || '0').toLocaleString('en-IN')}</td>
-                            <td className="px-3 py-2 text-right whitespace-nowrap">
-                              <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${v.in_stock ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' : 'bg-rose-500/20 text-rose-300 border border-rose-500/30'}`}>
-                                {v.in_stock ? 'In Stock' : 'Sold Out'}
-                              </span>
-                            </td>
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </table>
+                          if (v.title) {
+                            const m = v.title.match(/US\s*([\d.]+)(?:\s*\/\s*UK\s*([\d.]+))?(?:\s*-\s*(.*))?/i);
+                            if (m) {
+                              us = us || m[1];
+                              uk = uk || m[2];
+                              color = color || m[3];
+                            } else {
+                              const conv = deriveShoeSize(v.title, '', gender);
+                              us = us || (gender.toLowerCase().includes('women') ? conv.usWomen : conv.usMen);
+                              uk = uk || conv.uk;
+                              eu = eu || conv.eu;
+                            }
+                            if (!color && v.title.includes(' - ')) {
+                              color = v.title.split(' - ').pop() || '';
+                            }
+                          }
+
+                          const isVSelected = selectedVariantSku === v.sku;
+
+                          return (
+                            <tr
+                              key={i}
+                              onClick={() => handleSelectVariant(v)}
+                              className={`cursor-pointer transition-all ${
+                                isVSelected
+                                  ? 'bg-amber-500/20 text-white font-semibold ring-1 ring-inset ring-amber-500/50'
+                                  : 'hover:bg-zinc-800/40 text-zinc-300'
+                              }`}
+                            >
+                              <td className="px-3 py-2 font-bold text-white flex items-center gap-1.5">
+                                {isVSelected && <Check className="w-3.5 h-3.5 text-amber-400 flex-shrink-0" />}
+                                <span>{us ? `US ${us}` : '-'}</span>
+                              </td>
+                              <td className="px-3 py-2 font-semibold text-amber-400">{uk ? `UK ${uk}` : '-'}</td>
+                              <td className="px-3 py-2 text-zinc-300">{eu ? `EU ${eu}` : '-'}</td>
+                              <td className="px-3 py-2 text-zinc-400 font-sans truncate max-w-[120px]">
+                                <div className="flex items-center gap-1.5">
+                                  {v.image_url && (
+                                    <img src={v.image_url} alt="" className="w-4 h-4 rounded object-cover flex-shrink-0" />
+                                  )}
+                                  <span className="truncate">{color || 'Standard'}</span>
+                                </div>
+                              </td>
+                              <td className="px-3 py-2 text-zinc-200 whitespace-nowrap">₹{parseFloat(v.price || '0').toLocaleString('en-IN')}</td>
+                              <td className="px-3 py-2 text-right whitespace-nowrap">
+                                <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${v.in_stock ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' : 'bg-rose-500/20 text-rose-300 border border-rose-500/30'}`}>
+                                  {v.in_stock ? 'In Stock' : 'Sold Out'}
+                                </span>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               ) : isBelt ? (
                 <div className="max-h-64 overflow-y-auto">
@@ -435,9 +577,21 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                           else if (size === 'L') waist = '36"';
                           else if (size === 'XL') waist = '38"';
                         }
+                        const isVSelected = selectedVariantSku === v.sku;
                         return (
-                          <tr key={i} className="hover:bg-zinc-800/30">
-                            <td className="px-3 py-2 font-bold text-white">{size || title}</td>
+                          <tr
+                            key={i}
+                            onClick={() => handleSelectVariant(v)}
+                            className={`cursor-pointer transition-all ${
+                              isVSelected
+                                ? 'bg-amber-500/20 text-white font-semibold ring-1 ring-inset ring-amber-500/50'
+                                : 'hover:bg-zinc-800/30 text-zinc-300'
+                            }`}
+                          >
+                            <td className="px-3 py-2 font-bold text-white flex items-center gap-1.5">
+                              {isVSelected && <Check className="w-3.5 h-3.5 text-amber-400 flex-shrink-0" />}
+                              <span>{size || title}</span>
+                            </td>
                             <td className="px-3 py-2 text-amber-300 font-medium">{waist ? `Fits waist ${waist}` : '-'}</td>
                             <td className="px-3 py-2 text-zinc-400 font-sans">{color || 'Standard'}</td>
                             <td className="px-3 py-2 text-zinc-200 whitespace-nowrap">₹{parseFloat(v.price || '0').toLocaleString('en-IN')}</td>
@@ -453,22 +607,88 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                   </table>
                 </div>
               ) : (
-                <table className="w-full text-xs text-left">
-                  <tbody>
-                    <tr className="border-b border-zinc-800/60">
-                      <td className="px-4 py-2.5 font-semibold text-zinc-400 w-2/5">Dimensions</td>
-                      <td className="px-4 py-2.5 font-mono text-zinc-100">{dimensions}</td>
-                    </tr>
-                    <tr className="border-b border-zinc-800/60">
-                      <td className="px-4 py-2.5 font-semibold text-zinc-400">Handle Drop</td>
-                      <td className="px-4 py-2.5 font-mono text-zinc-100">{handleDrop}</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-2.5 font-semibold text-zinc-400">Shoulder Strap Drop</td>
-                      <td className="px-4 py-2.5 font-mono text-zinc-100">{strapDrop}</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="space-y-3 p-3">
+                  {/* Interactive Variant Cards for Handbags & Small Leather Goods */}
+                  {product.variants && product.variants.length > 0 && (
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between text-xs">
+                        <span className="font-bold text-zinc-200 flex items-center gap-1.5">
+                          <Tag className="w-3.5 h-3.5 text-amber-400" />
+                          Available Variants & Options ({product.variants.length})
+                        </span>
+                        <span className="text-[10px] text-zinc-400">Click a variant to switch photo</span>
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-56 overflow-y-auto pr-1">
+                        {product.variants.map((v: any, idx: number) => {
+                          const isVSelected = selectedVariantSku === v.sku;
+                          return (
+                            <button
+                              key={idx}
+                              onClick={() => handleSelectVariant(v)}
+                              className={`p-2 rounded-xl border text-left flex items-center gap-2.5 transition-all ${
+                                isVSelected
+                                  ? 'bg-amber-500/15 border-amber-500 ring-1 ring-amber-500/40 shadow-glow-gold'
+                                  : 'bg-zinc-900/70 border-zinc-800 hover:bg-zinc-800/80 hover:border-zinc-700'
+                              }`}
+                            >
+                              {v.image_url ? (
+                                <img
+                                  src={v.image_url}
+                                  alt={v.title}
+                                  className="w-11 h-11 object-cover rounded-lg bg-zinc-950 border border-zinc-800 flex-shrink-0"
+                                />
+                              ) : (
+                                <div className="w-11 h-11 rounded-lg bg-zinc-800 flex items-center justify-center text-zinc-600 flex-shrink-0">
+                                  <Box className="w-4 h-4" />
+                                </div>
+                              )}
+                              <div className="min-w-0 flex-1">
+                                <div className="text-xs font-semibold text-zinc-100 truncate flex items-center gap-1">
+                                  {isVSelected && <Check className="w-3 h-3 text-amber-400 flex-shrink-0" />}
+                                  <span>{v.title || v.sku}</span>
+                                </div>
+                                <div className="flex items-center gap-1.5 mt-0.5">
+                                  <span className="text-xs font-mono font-bold text-amber-400">
+                                    ₹{parseFloat(v.price || '0').toLocaleString('en-IN')}
+                                  </span>
+                                  <span className="text-[10px] text-zinc-500 font-mono">
+                                    (${v.source_price?.toFixed(2)})
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full flex-shrink-0 ${
+                                  v.in_stock
+                                    ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
+                                    : 'bg-rose-500/20 text-rose-300 border border-rose-500/30'
+                                }`}
+                              >
+                                {v.in_stock ? 'In Stock' : 'Sold Out'}
+                              </span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  <table className="w-full text-xs text-left border-t border-zinc-800/80 pt-2">
+                    <tbody>
+                      <tr className="border-b border-zinc-800/60">
+                        <td className="px-4 py-2 font-semibold text-zinc-400 w-2/5">Dimensions</td>
+                        <td className="px-4 py-2 font-mono text-zinc-100">{dimensions}</td>
+                      </tr>
+                      <tr className="border-b border-zinc-800/60">
+                        <td className="px-4 py-2 font-semibold text-zinc-400">Handle Drop</td>
+                        <td className="px-4 py-2 font-mono text-zinc-100">{handleDrop}</td>
+                      </tr>
+                      <tr>
+                        <td className="px-4 py-2 font-semibold text-zinc-400">Shoulder Strap Drop</td>
+                        <td className="px-4 py-2 font-mono text-zinc-100">{strapDrop}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               )}
             </div>
           </div>

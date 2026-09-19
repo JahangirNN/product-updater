@@ -9,9 +9,44 @@ interface ProductCardProps {
 
 const ProductCardComponent: React.FC<ProductCardProps> = ({ product, onSelect }) => {
   const [imgLoaded, setImgLoaded] = useState(false);
+  const [selectedVariantImg, setSelectedVariantImg] = useState<string | null>(null);
+  const [activeVariantName, setActiveVariantName] = useState<string | null>(null);
+
   const primaryImg = product.images && product.images.length > 0
     ? product.images[0]
     : 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80';
+
+  const displayImg = selectedVariantImg || primaryImg;
+
+  // Extract distinct colorways that have images
+  const distinctColorways = React.useMemo(() => {
+    const seenImgs = new Set<string>();
+    const seenNames = new Set<string>();
+    const list: Array<{ name: string; img: string; inStock: boolean; price: string }> = [];
+
+    for (const v of product.variants || []) {
+      const cOpt = v.option_values?.find((o: any) => o.option_name === 'Color')?.name;
+      let name = cOpt || '';
+      if (!name && v.title && v.title.includes(' - ')) {
+        name = v.title.split(' - ').pop() || '';
+      }
+      if (!name) name = v.title || '';
+      const img = v.image_url || '';
+
+      if (img && (!seenImgs.has(img) || !seenNames.has(name.toLowerCase()))) {
+        seenImgs.add(img);
+        seenNames.add(name.toLowerCase());
+        list.push({
+          name: name.replace(/^us\s*[\d.]+\s*(?:\/\s*uk\s*[\d.]+\s*)?/i, '').trim() || name,
+          img,
+          inStock: v.in_stock,
+          price: v.price
+        });
+      }
+      if (list.length >= 6) break;
+    }
+    return list;
+  }, [product.variants]);
 
   const isSoldOut = product.availability !== 'in_stock';
   const grp = product.group_display?.toLowerCase() || '';
@@ -60,7 +95,7 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({ product, onSelect })
           </div>
         )}
         <img
-          src={primaryImg}
+          src={displayImg}
           alt={product.title}
           loading="lazy"
           decoding="async"
@@ -136,13 +171,42 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({ product, onSelect })
             {product.title}
           </h3>
 
-          {/* Color Tag if available */}
-          {colorName && (
+          {/* Colorway Swatches / Color Tag */}
+          {distinctColorways.length > 1 ? (
+            <div className="mt-2 flex items-center gap-1.5 flex-wrap">
+              <div className="flex items-center gap-1">
+                {distinctColorways.map((cw, idx) => {
+                  const isSelected = displayImg === cw.img;
+                  return (
+                    <button
+                      key={idx}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedVariantImg(cw.img);
+                        setActiveVariantName(cw.name);
+                      }}
+                      title={cw.name}
+                      className={`relative w-4 h-4 rounded-full overflow-hidden border transition-all ${
+                        isSelected
+                          ? 'border-amber-400 ring-2 ring-amber-400/50 scale-125 shadow-glow-gold z-10'
+                          : 'border-zinc-700 opacity-70 hover:opacity-100 hover:scale-110'
+                      }`}
+                    >
+                      <img src={cw.img} alt={cw.name} className="w-full h-full object-cover" />
+                    </button>
+                  );
+                })}
+              </div>
+              <span className="text-[10px] text-zinc-400 truncate max-w-[120px]">
+                {activeVariantName || colorName || `${distinctColorways.length} Colors`}
+              </span>
+            </div>
+          ) : colorName ? (
             <div className="mt-1.5 flex items-center gap-1 text-[11px] text-zinc-400">
               <span className="w-2 h-2 rounded-full bg-zinc-400/80 inline-block" />
               <span className="truncate">{colorName}</span>
             </div>
-          )}
+          ) : null}
         </div>
 
         {/* Specification Chips */}
