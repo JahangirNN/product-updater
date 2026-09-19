@@ -290,6 +290,8 @@ def format_viewer_product(prod: Dict[str, Any], store_display: str, group_displa
         "source_sku": prod.get("source_sku") or prod.get("sku") or "",
         "source_price": float(prod.get("source_price") or 0.0),
         "source_compare_at_price": prod.get("source_compare_at_price"),
+        "price_range_usd": prod.get("price_range_usd"),
+        "price_range_inr": prod.get("price_range_inr"),
         "current_price": float(prod.get("current_price") or 0.0),
         "compare_at_price": prod.get("compare_at_price"),
         "currency": "INR",

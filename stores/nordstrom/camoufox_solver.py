@@ -219,6 +219,98 @@ def extract_size_availability(html: str) -> Dict[str, bool]:
     return size_stock
 
 
+def extract_full_pdp_matrix(html: str) -> Optional[Dict[str, Any]]:
+    """
+    Extract complete multi-colorway product matrix from window.__INITIAL_CONFIG__ in Nordstrom PDP HTML.
+    Includes all coreChoices (colorways, high-res images, per-size items with exact selling price, base price, and shipQuantity).
+    """
+    idx = html.find("window.__INITIAL_CONFIG__ =")
+    if idx == -1:
+        return None
+    raw_sub = html[idx + len("window.__INITIAL_CONFIG__ ="):].strip()
+    try:
+        decoder = json.JSONDecoder()
+        config_data, _ = decoder.raw_decode(raw_sub)
+    except Exception:
+        return None
+
+    displays = config_data.get("productDisplay", {}).get("productDisplaysById", {}).get("entities", {})
+    if not displays:
+        return None
+
+    for style_id_key, entity in displays.items():
+        core_prods = entity.get("coreProducts") or []
+        if not core_prods:
+            continue
+
+        raw_title = entity.get("productDescription") or entity.get("copyProductTitle") or ""
+        brand = entity.get("sellingBrand") or "On"
+        gender = entity.get("gender") or "Unisex"
+        item_num = entity.get("itemNumber") or ""
+        materials = entity.get("materialsAndCare") or ""
+
+        colorways = []
+        for cp in core_prods:
+            choices = cp.get("coreChoices") or []
+            for ch in choices:
+                c_name = ch.get("displayColorDescription", "").strip()
+                if not c_name:
+                    continue
+                c_code = ch.get("colorCode", "")
+                ordered_shots = ch.get("orderedShots") or []
+                c_images = []
+                for shot in ordered_shots:
+                    if shot.get("shotName") != "swatch" and shot.get("imageUrl"):
+                        u = shot.get("imageUrl")
+                        if "?crop=" not in u:
+                            u = f"{u}?crop=pad&trim=color"
+                        c_images.append(u)
+
+                c_sizes = []
+                for it in ch.get("items", []):
+                    sku_data = it.get("sku") or {}
+                    sz_raw = it.get("concatenatedDisplaySize") or it.get("sizeDimension1", {}).get("label") or ""
+                    props = sku_data.get("propositions") or [{}]
+                    prop0 = props[0] if props else {}
+                    ship_qty = int(prop0.get("availability", {}).get("shipQuantity", 0) or 0)
+                    salability = prop0.get("salability", {}).get("status", "")
+                    is_sellable = (ship_qty > 0) and (salability == "SELLABLE")
+
+                    pricings = prop0.get("pricings") or [{}]
+                    pricing0 = pricings[0] if pricings else {}
+                    selling_p = float(pricing0.get("sellingRetail", {}).get("price", 0.0) or 0.0)
+                    base_p = float(pricing0.get("baseRetail", {}).get("price", 0.0) or 0.0)
+
+                    c_sizes.append({
+                        "us_size": sz_raw,
+                        "in_stock": is_sellable,
+                        "ship_quantity": ship_qty,
+                        "price_usd": selling_p,
+                        "compare_price_usd": base_p if base_p > selling_p else None,
+                        "sku_id": str(sku_data.get("id", ""))
+                    })
+
+                colorways.append({
+                    "color_name": c_name,
+                    "color_code": c_code,
+                    "images": c_images,
+                    "featured_image": c_images[0] if c_images else None,
+                    "sizes": c_sizes
+                })
+
+        return {
+            "style_id": str(style_id_key),
+            "title": raw_title,
+            "brand": brand,
+            "gender": gender,
+            "item_number": item_num,
+            "materials": materials,
+            "colorways": colorways
+        }
+
+    return None
+
+
 def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[str, Any]:
     """
     Navigate to Nordstrom PDP using active Camoufox page, resolve Kasada proof-of-work,
@@ -236,6 +328,7 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
                 "availability": "out_of_stock",
                 "price_usd": 0.0,
                 "size_stock": {},
+                "full_matrix": None,
                 "elapsed_ms": elapsed_ms,
                 "message": "Product page returned HTTP 404"
             }
@@ -259,7 +352,7 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
                 page_title = page.title().strip()
             except Exception:
                 page_title = ""
-            if "istlWas" not in html and ("__INITIAL_CONFIG__" in html or "application/ld+json" in html or len(page_title) > 3):
+            if "istlWas" not in html and ("productDisplay" in html or ("__INITIAL_CONFIG__" in html and "coreProducts" in html)):
                 break
 
         # Check if still blocked
@@ -276,6 +369,7 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
                 "availability": "in_stock",
                 "price_usd": 0.0,
                 "size_stock": {},
+                "full_matrix": None,
                 "elapsed_ms": elapsed_ms,
                 "error": "Kasada challenge unresolved after proof-of-work window"
             }
@@ -283,16 +377,28 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
         # Extract product details and per-size stock
         product_data = extract_product_from_html(html, target_handle=target_handle)
         size_stock = extract_size_availability(html)
+        full_matrix = extract_full_pdp_matrix(html)
         elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
 
-        if product_data:
+        if product_data or full_matrix:
+            title = (full_matrix.get("title") if full_matrix else None) or (product_data.get("title") if product_data else "")
+            price_usd = (product_data.get("price_usd") if product_data else 0.0)
+            high_price_usd = (product_data.get("high_price_usd") if product_data else price_usd)
+            
+            avail = "out_of_stock"
+            if product_data and product_data.get("availability") == "in_stock":
+                avail = "in_stock"
+            elif full_matrix and any(s.get("in_stock") for cw in full_matrix.get("colorways", []) for s in cw.get("sizes", [])):
+                avail = "in_stock"
+
             return {
                 "status": "success",
-                "title": product_data["title"],
-                "price_usd": product_data["price_usd"],
-                "high_price_usd": product_data.get("high_price_usd", product_data["price_usd"]),
-                "availability": product_data["availability"],
+                "title": title,
+                "price_usd": price_usd,
+                "high_price_usd": high_price_usd,
+                "availability": avail,
                 "size_stock": size_stock,
+                "full_matrix": full_matrix,
                 "elapsed_ms": elapsed_ms
             }
 
@@ -304,6 +410,8 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
                 "title": page_title.split("|")[0].strip(),
                 "price_usd": 0.0,
                 "availability": "out_of_stock",
+                "size_stock": {},
+                "full_matrix": None,
                 "elapsed_ms": elapsed_ms
             }
 
@@ -311,6 +419,8 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
             "status": "error",
             "availability": "in_stock",
             "price_usd": 0.0,
+            "size_stock": {},
+            "full_matrix": None,
             "elapsed_ms": elapsed_ms,
             "error": f"Unable to extract product JSON-LD or pricing from rendered page: {page_title}"
         }

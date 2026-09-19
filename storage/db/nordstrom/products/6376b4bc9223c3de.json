@@ -8,9 +8,9 @@
   "product_type": "Athletic Shoes",
   "source_sku": "HOKA-8430876-4",
   "source_price": 75.0,
-  "source_compare_at_price": 150.0,
-  "current_price": 7197.0,
-  "compare_at_price": 14394.0,
+  "source_compare_at_price": null,
+  "current_price": 7202.0,
+  "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -18,515 +18,62 @@
   "material": "Synthetic and textile upper and lining, rubber and synthetic sole",
   "specifications": {
     "Brand": "HOKA",
-    "Gender": "Men",
+    "Gender": "Unisex",
     "Category": "Footwear",
     "Material": "Synthetic and textile upper and lining, rubber and synthetic sole",
-    "Midsole Drop": "unknown",
-    "Cushioning": "Removable, cushioned insole",
+    "Midsole Drop": "8mm",
+    "Cushioning": "Plush maximal buoyant cushioning",
     "Item Number": "8430876",
     "Available Sizes (US)": "US 4, US 4.5, US 5, US 5.5, US 6, US 6.5, US 7, US 7.5, US 8, US 8.5, US 9, US 9.5, US 10, US 10.5, US 11, US 11.5, US 12, US 13, US 14",
     "Available Sizes (UK)": "UK 3.5, UK 4, UK 4.5, UK 5, UK 5.5, UK 6, UK 6.5, UK 7, UK 7.5, UK 8, UK 8.5, UK 9, UK 9.5, UK 10, UK 10.5, UK 11, UK 11.5, UK 12.5, UK 13.5"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> HOKA</li>\n      <li><strong>Gender:</strong> Men</li>\n      <li><strong>Material:</strong> Synthetic and textile upper and lining, rubber and synthetic sole</li>\n      <li><strong>Midsole Drop:</strong> unknown</li>\n      <li><strong>Cushioning:</strong> Removable, cushioned insole</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 HOKA Shoe Size &amp; Conversion Guide (Men)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 4</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 4.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9</td>\n          <td style=\"padding: 6px; color: #666;\">EU 43</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 45</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 11</td>\n          <td style=\"padding: 6px; color: #666;\">EU 46</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 12</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 11.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 47</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 13</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 12.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 48</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 14</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 13.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 49</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> HOKA</li>\n      <li><strong>Gender:</strong> Unisex</li>\n      <li><strong>Material:</strong> Synthetic and textile upper and lining, rubber and synthetic sole</li>\n      <li><strong>Midsole Drop:</strong> 8mm</li>\n      <li><strong>Cushioning:</strong> Plush maximal buoyant cushioning</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 HOKA Shoe Size &amp; Conversion Guide (Unisex)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 4</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 4.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9</td>\n          <td style=\"padding: 6px; color: #666;\">EU 43</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 45</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 11</td>\n          <td style=\"padding: 6px; color: #666;\">EU 46</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 12</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 11.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 47</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 13</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 12.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 48</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 14</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 13.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 49</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/e9ac0501-cdf5-4f89-88a8-fc79bbfd01de.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/d3e19c12-cb52-4689-9846-5c6ad1322f22.jpeg?crop=pad",
     "https://n.nordstrommedia.com/it/be3c151a-b2a0-449c-ab79-57803d0dbc26.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/2e252bfa-c902-479f-a3eb-10f11fd963ab.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/c807c1fa-afa9-48da-bb55-ca5007e3572c.jpeg?crop=pad&trim=color"
+    "https://n.nordstrommedia.com/it/c807c1fa-afa9-48da-bb55-ca5007e3572c.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/ab29ef8a-6da2-4cb3-a318-fe160c80b1ac.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/de201449-5183-4466-84f3-4253428da0af.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/1f1c4650-c93a-49ce-93d3-86dee8a394ea.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/15d44560-077f-4a75-b814-b6989d8111c6.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/041d27a5-7b98-4ac5-a4e4-cc2382be386e.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/feb05b9d-e589-4907-9a9d-0bc07c919020.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/da6e6607-b959-4fb1-bb06-7a0d3e29c0f9.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/200d3add-6458-46ac-9251-a92a112fc2a9.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/92e2f841-343d-4b95-afe9-4afda57b3b0b.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/49ffc43a-06be-44c5-a53f-91661357276d.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/527f7897-9890-4336-8e41-692cd62e7f9b.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/3664211d-8b04-4725-950d-55f3064a28e0.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/791f387f-76b0-482d-9eb3-03a1ad084ad2.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/b0b24546-287e-42aa-8158-809dc39fa27f.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/9c16a1ef-c03c-466f-8469-b497849e82d0.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/5f3e39a9-5444-458d-9517-1bf956c50fc8.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/6e2936ee-0b14-406b-89ae-1b6b7f35fb13.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/8419d727-5413-4286-9968-a4b8549e9e30.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/dbf9cd14-3e79-48dd-9072-0ca97c1204d8.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/62598ba5-df81-42de-add4-4d4327260adf.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/589c8a19-b9c8-41db-bb77-966703e9d2e0.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/f6236ebc-2abb-4782-88b1-f455bf86a139.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/d0ef3921-f195-46ba-bbcb-d0c49988ccae.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/77b9232e-7b58-4c47-ab6a-c7a75f67d864.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/13bb756e-cefa-4eeb-aa09-01fc0744efdf.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/36d0385c-0c81-436a-9757-114f448d0ce2.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/6ff6fca5-f921-457b-8f7c-c9c8d56d9e34.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/28320a2a-e3b5-4276-aa2a-a3de5f56cabc.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/cb8d86a1-047a-4715-8076-a769ad23c1ce.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/06343357-6625-4a4a-8bdd-c901ee6df119.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/eec6844b-80b1-4123-9522-4268475b139d.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/ad188dee-3e73-4e2d-b040-c498fabf1dd7.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/57d24d59-7afc-4669-a16b-49dc6e652a9f.jpeg?crop=pad&trim=color"
   ],
   "variants": [
     {
       "id": 843087600,
-      "sku": "HOKA-8430876-4",
-      "title": "US 4 / UK 3.5 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 4"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 3.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087601,
-      "sku": "HOKA-8430876-4.5",
-      "title": "US 4.5 / UK 4 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 4.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 4"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087602,
-      "sku": "HOKA-8430876-5",
-      "title": "US 5 / UK 4.5 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 4.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087603,
-      "sku": "HOKA-8430876-5.5",
-      "title": "US 5.5 / UK 5 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 5.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 5"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087604,
-      "sku": "HOKA-8430876-6",
-      "title": "US 6 / UK 5.5 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 6"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 5.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087605,
-      "sku": "HOKA-8430876-6.5",
-      "title": "US 6.5 / UK 6 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 6.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 6"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087606,
-      "sku": "HOKA-8430876-7",
-      "title": "US 7 / UK 6.5 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 7"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 6.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087607,
-      "sku": "HOKA-8430876-7.5",
-      "title": "US 7.5 / UK 7 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 7.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 7"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087608,
-      "sku": "HOKA-8430876-8",
-      "title": "US 8 / UK 7.5 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 8"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 7.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087609,
-      "sku": "HOKA-8430876-8.5",
-      "title": "US 8.5 / UK 8 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 8.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 8"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087610,
-      "sku": "HOKA-8430876-9",
-      "title": "US 9 / UK 8.5 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 9"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 8.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087611,
-      "sku": "HOKA-8430876-9.5",
-      "title": "US 9.5 / UK 9 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 9.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 9"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087612,
-      "sku": "HOKA-8430876-10",
-      "title": "US 10 / UK 9.5 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 10"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 9.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087613,
-      "sku": "HOKA-8430876-10.5",
-      "title": "US 10.5 / UK 10 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 10.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 10"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087614,
-      "sku": "HOKA-8430876-11",
-      "title": "US 11 / UK 10.5 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 11"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 10.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087615,
-      "sku": "HOKA-8430876-11.5",
-      "title": "US 11.5 / UK 11 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 11.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 11"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087616,
-      "sku": "HOKA-8430876-12",
-      "title": "US 12 / UK 11.5 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 12"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 11.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087617,
-      "sku": "HOKA-8430876-13",
-      "title": "US 13 / UK 12.5 - ASH GREY/ SILVER",
-      "price": "7202.00",
-      "compare_at_price": "14403.00",
-      "source_price": 75.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 13"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 12.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
-        }
-      ]
-    },
-    {
-      "id": 843087618,
       "sku": "HOKA-8430876-14",
-      "title": "US 14 / UK 13.5 - ASH GREY/ SILVER",
+      "title": "US 14 / UK 13.5 - Ash Grey / Silver",
       "price": "7202.00",
       "compare_at_price": "14403.00",
       "source_price": 75.0,
@@ -546,7 +93,2005 @@
         },
         {
           "option_name": "Color",
-          "name": "ASH GREY/ SILVER"
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087601,
+      "sku": "HOKA-8430876-8.5",
+      "title": "US 8.5 / UK 8 - Ash Grey / Silver",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087602,
+      "sku": "HOKA-8430876-6",
+      "title": "US 6 / UK 5.5 - Ash Grey / Silver",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087603,
+      "sku": "HOKA-8430876-10",
+      "title": "US 10 / UK 9.5 - Ash Grey / Silver",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087604,
+      "sku": "HOKA-8430876-7.5",
+      "title": "US 7.5 / UK 7 - Ash Grey / Silver",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087605,
+      "sku": "HOKA-8430876-13",
+      "title": "US 13 / UK 12.5 - Ash Grey / Silver",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 13"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087606,
+      "sku": "HOKA-8430876-11.5",
+      "title": "US 11.5 / UK 11 - Ash Grey / Silver",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087607,
+      "sku": "HOKA-8430876-5.5",
+      "title": "US 5.5 / UK 5 - Ash Grey / Silver",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087608,
+      "sku": "HOKA-8430876-7",
+      "title": "US 7 / UK 6.5 - Ash Grey / Silver",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087609,
+      "sku": "HOKA-8430876-9",
+      "title": "US 9 / UK 8.5 - Ash Grey / Silver",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087610,
+      "sku": "HOKA-8430876-10.5",
+      "title": "US 10.5 / UK 10 - Ash Grey / Silver",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087611,
+      "sku": "HOKA-8430876-8",
+      "title": "US 8 / UK 7.5 - Ash Grey / Silver",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087612,
+      "sku": "HOKA-8430876-6.5",
+      "title": "US 6.5 / UK 6 - Ash Grey / Silver",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087613,
+      "sku": "HOKA-8430876-9.5",
+      "title": "US 9.5 / UK 9 - Ash Grey / Silver",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087614,
+      "sku": "HOKA-8430876-11",
+      "title": "US 11 / UK 10.5 - Ash Grey / Silver",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087615,
+      "sku": "HOKA-8430876-5",
+      "title": "US 5 / UK 4.5 - Ash Grey / Silver",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087616,
+      "sku": "HOKA-8430876-12",
+      "title": "US 12 / UK 11.5 - Ash Grey / Silver",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ash Grey / Silver"
+        }
+      ]
+    },
+    {
+      "id": 843087617,
+      "sku": "HOKA-8430876-SEDG-12",
+      "title": "US 12 / UK 11.5 - Sedge Green / Wild Rye",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/041d27a5-7b98-4ac5-a4e4-cc2382be386e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sedge Green / Wild Rye"
+        }
+      ]
+    },
+    {
+      "id": 843087618,
+      "sku": "HOKA-8430876-SEDG-14",
+      "title": "US 14 / UK 13.5 - Sedge Green / Wild Rye",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/041d27a5-7b98-4ac5-a4e4-cc2382be386e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 14"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 13.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sedge Green / Wild Rye"
+        }
+      ]
+    },
+    {
+      "id": 843087619,
+      "sku": "HOKA-8430876-SEDG-11",
+      "title": "US 11 / UK 10.5 - Sedge Green / Wild Rye",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/041d27a5-7b98-4ac5-a4e4-cc2382be386e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sedge Green / Wild Rye"
+        }
+      ]
+    },
+    {
+      "id": 843087620,
+      "sku": "HOKA-8430876-SEDG-9.5",
+      "title": "US 9.5 / UK 9 - Sedge Green / Wild Rye",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/041d27a5-7b98-4ac5-a4e4-cc2382be386e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sedge Green / Wild Rye"
+        }
+      ]
+    },
+    {
+      "id": 843087621,
+      "sku": "HOKA-8430876-SEDG-8.5",
+      "title": "US 8.5 / UK 8 - Sedge Green / Wild Rye",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/041d27a5-7b98-4ac5-a4e4-cc2382be386e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sedge Green / Wild Rye"
+        }
+      ]
+    },
+    {
+      "id": 843087622,
+      "sku": "HOKA-8430876-SEDG-10",
+      "title": "US 10 / UK 9.5 - Sedge Green / Wild Rye",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/041d27a5-7b98-4ac5-a4e4-cc2382be386e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sedge Green / Wild Rye"
+        }
+      ]
+    },
+    {
+      "id": 843087623,
+      "sku": "HOKA-8430876-SEDG-7",
+      "title": "US 7 / UK 6.5 - Sedge Green / Wild Rye",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/041d27a5-7b98-4ac5-a4e4-cc2382be386e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sedge Green / Wild Rye"
+        }
+      ]
+    },
+    {
+      "id": 843087624,
+      "sku": "HOKA-8430876-SEDG-10.5",
+      "title": "US 10.5 / UK 10 - Sedge Green / Wild Rye",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/041d27a5-7b98-4ac5-a4e4-cc2382be386e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sedge Green / Wild Rye"
+        }
+      ]
+    },
+    {
+      "id": 843087625,
+      "sku": "HOKA-8430876-SEDG-7.5",
+      "title": "US 7.5 / UK 7 - Sedge Green / Wild Rye",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/041d27a5-7b98-4ac5-a4e4-cc2382be386e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sedge Green / Wild Rye"
+        }
+      ]
+    },
+    {
+      "id": 843087626,
+      "sku": "HOKA-8430876-SEDG-9",
+      "title": "US 9 / UK 8.5 - Sedge Green / Wild Rye",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/041d27a5-7b98-4ac5-a4e4-cc2382be386e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sedge Green / Wild Rye"
+        }
+      ]
+    },
+    {
+      "id": 843087627,
+      "sku": "HOKA-8430876-SEDG-13",
+      "title": "US 13 / UK 12.5 - Sedge Green / Wild Rye",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/041d27a5-7b98-4ac5-a4e4-cc2382be386e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 13"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sedge Green / Wild Rye"
+        }
+      ]
+    },
+    {
+      "id": 843087628,
+      "sku": "HOKA-8430876-SEDG-8",
+      "title": "US 8 / UK 7.5 - Sedge Green / Wild Rye",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/041d27a5-7b98-4ac5-a4e4-cc2382be386e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sedge Green / Wild Rye"
+        }
+      ]
+    },
+    {
+      "id": 843087629,
+      "sku": "HOKA-8430876-SEDG-11.5",
+      "title": "US 11.5 / UK 11 - Sedge Green / Wild Rye",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/041d27a5-7b98-4ac5-a4e4-cc2382be386e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sedge Green / Wild Rye"
+        }
+      ]
+    },
+    {
+      "id": 843087630,
+      "sku": "HOKA-8430876-DATE-7",
+      "title": "US 7 / UK 6.5 - Date Syrup / Walnut",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/3664211d-8b04-4725-950d-55f3064a28e0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Date Syrup / Walnut"
+        }
+      ]
+    },
+    {
+      "id": 843087631,
+      "sku": "HOKA-8430876-DATE-14",
+      "title": "US 14 / UK 13.5 - Date Syrup / Walnut",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/3664211d-8b04-4725-950d-55f3064a28e0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 14"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 13.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Date Syrup / Walnut"
+        }
+      ]
+    },
+    {
+      "id": 843087632,
+      "sku": "HOKA-8430876-DATE-11",
+      "title": "US 11 / UK 10.5 - Date Syrup / Walnut",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/3664211d-8b04-4725-950d-55f3064a28e0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Date Syrup / Walnut"
+        }
+      ]
+    },
+    {
+      "id": 843087633,
+      "sku": "HOKA-8430876-DATE-8.5",
+      "title": "US 8.5 / UK 8 - Date Syrup / Walnut",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/3664211d-8b04-4725-950d-55f3064a28e0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Date Syrup / Walnut"
+        }
+      ]
+    },
+    {
+      "id": 843087634,
+      "sku": "HOKA-8430876-DATE-11.5",
+      "title": "US 11.5 / UK 11 - Date Syrup / Walnut",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/3664211d-8b04-4725-950d-55f3064a28e0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11"
+        },
+        {
+          "option_name": "Color",
+          "name": "Date Syrup / Walnut"
+        }
+      ]
+    },
+    {
+      "id": 843087635,
+      "sku": "HOKA-8430876-DATE-10.5",
+      "title": "US 10.5 / UK 10 - Date Syrup / Walnut",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/3664211d-8b04-4725-950d-55f3064a28e0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10"
+        },
+        {
+          "option_name": "Color",
+          "name": "Date Syrup / Walnut"
+        }
+      ]
+    },
+    {
+      "id": 843087636,
+      "sku": "HOKA-8430876-DATE-7.5",
+      "title": "US 7.5 / UK 7 - Date Syrup / Walnut",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/3664211d-8b04-4725-950d-55f3064a28e0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Date Syrup / Walnut"
+        }
+      ]
+    },
+    {
+      "id": 843087637,
+      "sku": "HOKA-8430876-DATE-8",
+      "title": "US 8 / UK 7.5 - Date Syrup / Walnut",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/3664211d-8b04-4725-950d-55f3064a28e0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Date Syrup / Walnut"
+        }
+      ]
+    },
+    {
+      "id": 843087638,
+      "sku": "HOKA-8430876-DATE-9.5",
+      "title": "US 9.5 / UK 9 - Date Syrup / Walnut",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/3664211d-8b04-4725-950d-55f3064a28e0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Date Syrup / Walnut"
+        }
+      ]
+    },
+    {
+      "id": 843087639,
+      "sku": "HOKA-8430876-DATE-10",
+      "title": "US 10 / UK 9.5 - Date Syrup / Walnut",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/3664211d-8b04-4725-950d-55f3064a28e0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Date Syrup / Walnut"
+        }
+      ]
+    },
+    {
+      "id": 843087640,
+      "sku": "HOKA-8430876-DATE-9",
+      "title": "US 9 / UK 8.5 - Date Syrup / Walnut",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/3664211d-8b04-4725-950d-55f3064a28e0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Date Syrup / Walnut"
+        }
+      ]
+    },
+    {
+      "id": 843087641,
+      "sku": "HOKA-8430876-DATE-12",
+      "title": "US 12 / UK 11.5 - Date Syrup / Walnut",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/3664211d-8b04-4725-950d-55f3064a28e0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Date Syrup / Walnut"
+        }
+      ]
+    },
+    {
+      "id": 843087642,
+      "sku": "HOKA-8430876-DATE-13",
+      "title": "US 13 / UK 12.5 - Date Syrup / Walnut",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/3664211d-8b04-4725-950d-55f3064a28e0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 13"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Date Syrup / Walnut"
+        }
+      ]
+    },
+    {
+      "id": 843087643,
+      "sku": "HOKA-8430876-BLAC-5",
+      "title": "US 5 / UK 4.5 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087644,
+      "sku": "HOKA-8430876-BLAC-7.5",
+      "title": "US 7.5 / UK 7 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087645,
+      "sku": "HOKA-8430876-BLAC-10.5",
+      "title": "US 10.5 / UK 10 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087646,
+      "sku": "HOKA-8430876-BLAC-10",
+      "title": "US 10 / UK 9.5 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087647,
+      "sku": "HOKA-8430876-BLAC-5.5",
+      "title": "US 5.5 / UK 5 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087648,
+      "sku": "HOKA-8430876-BLAC-11",
+      "title": "US 11 / UK 10.5 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087649,
+      "sku": "HOKA-8430876-BLAC-12",
+      "title": "US 12 / UK 11.5 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087650,
+      "sku": "HOKA-8430876-BLAC-9",
+      "title": "US 9 / UK 8.5 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087651,
+      "sku": "HOKA-8430876-BLAC-9.5",
+      "title": "US 9.5 / UK 9 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087652,
+      "sku": "HOKA-8430876-BLAC-8",
+      "title": "US 8 / UK 7.5 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087653,
+      "sku": "HOKA-8430876-BLAC-11.5",
+      "title": "US 11.5 / UK 11 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087654,
+      "sku": "HOKA-8430876-BLAC-6.5",
+      "title": "US 6.5 / UK 6 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087655,
+      "sku": "HOKA-8430876-BLAC-8.5",
+      "title": "US 8.5 / UK 8 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087656,
+      "sku": "HOKA-8430876-BLAC-4",
+      "title": "US 4 / UK 3.5 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 4"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087657,
+      "sku": "HOKA-8430876-BLAC-6",
+      "title": "US 6 / UK 5.5 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087658,
+      "sku": "HOKA-8430876-BLAC-4.5",
+      "title": "US 4.5 / UK 4 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 4.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087659,
+      "sku": "HOKA-8430876-BLAC-14",
+      "title": "US 14 / UK 13.5 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 14"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 13.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087660,
+      "sku": "HOKA-8430876-BLAC-7",
+      "title": "US 7 / UK 6.5 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087661,
+      "sku": "HOKA-8430876-BLAC-13",
+      "title": "US 13 / UK 12.5 - Black / Carbon Black",
+      "price": "7202.00",
+      "compare_at_price": "14403.00",
+      "source_price": 75.0,
+      "source_compare_at_price": 150.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 13"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 843087662,
+      "sku": "HOKA-8430876-BLAC-14",
+      "title": "US 14 / UK 13.5 - Black / Frost",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/6ff6fca5-f921-457b-8f7c-c9c8d56d9e34.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 14"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 13.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Frost"
+        }
+      ]
+    },
+    {
+      "id": 843087663,
+      "sku": "HOKA-8430876-BLAC-11",
+      "title": "US 11 / UK 10.5 - Black / Frost",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/6ff6fca5-f921-457b-8f7c-c9c8d56d9e34.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Frost"
+        }
+      ]
+    },
+    {
+      "id": 843087664,
+      "sku": "HOKA-8430876-BLAC-11.5",
+      "title": "US 11.5 / UK 11 - Black / Frost",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/6ff6fca5-f921-457b-8f7c-c9c8d56d9e34.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Frost"
+        }
+      ]
+    },
+    {
+      "id": 843087665,
+      "sku": "HOKA-8430876-BLAC-8.5",
+      "title": "US 8.5 / UK 8 - Black / Frost",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/6ff6fca5-f921-457b-8f7c-c9c8d56d9e34.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Frost"
+        }
+      ]
+    },
+    {
+      "id": 843087666,
+      "sku": "HOKA-8430876-BLAC-9.5",
+      "title": "US 9.5 / UK 9 - Black / Frost",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/6ff6fca5-f921-457b-8f7c-c9c8d56d9e34.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Frost"
+        }
+      ]
+    },
+    {
+      "id": 843087667,
+      "sku": "HOKA-8430876-BLAC-13",
+      "title": "US 13 / UK 12.5 - Black / Frost",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/6ff6fca5-f921-457b-8f7c-c9c8d56d9e34.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 13"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Frost"
+        }
+      ]
+    },
+    {
+      "id": 843087668,
+      "sku": "HOKA-8430876-BLAC-7",
+      "title": "US 7 / UK 6.5 - Black / Frost",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/6ff6fca5-f921-457b-8f7c-c9c8d56d9e34.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Frost"
+        }
+      ]
+    },
+    {
+      "id": 843087669,
+      "sku": "HOKA-8430876-BLAC-7.5",
+      "title": "US 7.5 / UK 7 - Black / Frost",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/6ff6fca5-f921-457b-8f7c-c9c8d56d9e34.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Frost"
+        }
+      ]
+    },
+    {
+      "id": 843087670,
+      "sku": "HOKA-8430876-BLAC-10",
+      "title": "US 10 / UK 9.5 - Black / Frost",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/6ff6fca5-f921-457b-8f7c-c9c8d56d9e34.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Frost"
+        }
+      ]
+    },
+    {
+      "id": 843087671,
+      "sku": "HOKA-8430876-BLAC-8",
+      "title": "US 8 / UK 7.5 - Black / Frost",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/6ff6fca5-f921-457b-8f7c-c9c8d56d9e34.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Frost"
+        }
+      ]
+    },
+    {
+      "id": 843087672,
+      "sku": "HOKA-8430876-BLAC-9",
+      "title": "US 9 / UK 8.5 - Black / Frost",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/6ff6fca5-f921-457b-8f7c-c9c8d56d9e34.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Frost"
+        }
+      ]
+    },
+    {
+      "id": 843087673,
+      "sku": "HOKA-8430876-BLAC-12",
+      "title": "US 12 / UK 11.5 - Black / Frost",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/6ff6fca5-f921-457b-8f7c-c9c8d56d9e34.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Frost"
+        }
+      ]
+    },
+    {
+      "id": 843087674,
+      "sku": "HOKA-8430876-BLAC-10.5",
+      "title": "US 10.5 / UK 10 - Black / Frost",
+      "price": "14403.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/6ff6fca5-f921-457b-8f7c-c9c8d56d9e34.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Frost"
         }
       ]
     }
@@ -680,37 +2225,46 @@
       "name": "Color",
       "values": [
         {
-          "name": "ASH GREY/ SILVER"
+          "name": "Ash Grey / Silver"
         },
         {
-          "name": "SEDGE GREEN / WILD RYE"
+          "name": "Sedge Green / Wild Rye"
         },
         {
-          "name": "DATE SYRUP / WALNUT"
+          "name": "Date Syrup / Walnut"
         },
         {
-          "name": "BLACK / CARBON BLACK"
+          "name": "Black / Carbon Black"
         },
         {
-          "name": "BLACK / FROST"
+          "name": "Black / Frost"
         }
       ]
     }
   ],
   "tags": [
-    "hoka-shoes",
     "footwear",
-    "sneakers",
-    "running",
+    "hoka-shoes",
     "men",
-    "sizes-19"
+    "running",
+    "sizes-19",
+    "sneakers",
+    "unisex"
   ],
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T20:28:11Z",
+  "last_verified_at": "2026-09-19T07:55:57Z",
   "created_at": "2026-09-18T06:45:15Z",
-  "updated_at": "2026-09-18T20:28:11Z",
-  "is_active": true,
-  "shopify_sync_pending": true
+  "updated_at": "2026-09-19T07:55:57Z",
+  "price_range_usd": {
+    "min": 75.0,
+    "max": 150.0
+  },
+  "price_range_inr": {
+    "min": 7202.0,
+    "max": 14403.0
+  },
+  "status": "ACTIVE",
+  "is_active": true
 }

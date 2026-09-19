@@ -8,9 +8,9 @@
   "product_type": "Athletic Shoes",
   "source_sku": "ON-8386142-5",
   "source_price": 150.0,
-  "source_compare_at_price": 150.0,
-  "current_price": 14398.0,
-  "compare_at_price": 14398.0,
+  "source_compare_at_price": null,
+  "current_price": 14394.0,
+  "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -21,88 +21,44 @@
     "Gender": "Women",
     "Category": "Footwear",
     "Material": "Synthetic and textile upper; rubber and synthetic sole",
-    "Midsole Drop": "Not specified",
-    "Cushioning": "Helion™ superfoam cushioning",
-    "Item Number": "10864926",
-    "Available Sizes (US)": "US 5, US 5.5, US 6, US 6.5, US 7, US 7.5, US 8, US 8.5, US 9, US 9.5",
-    "Available Sizes (UK)": "UK 3, UK 3.5, UK 4, UK 4.5, UK 5, UK 5.5, UK 6, UK 6.5, UK 7, UK 7.5"
+    "Midsole Drop": "8mm",
+    "Cushioning": "CloudTec buoyant cushioning",
+    "Item Number": "8386142",
+    "Available Sizes (US)": "US 5, US 5.5, US 6, US 6.5, US 7, US 7.5, US 8, US 8.5, US 9, US 9.5, US 10, US 10.5, US 11",
+    "Available Sizes (UK)": "UK 3, UK 3.5, UK 4, UK 4.5, UK 5, UK 5.5, UK 6, UK 6.5, UK 7, UK 7.5, UK 8, UK 8.5, UK 9"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> On Running</li>\n      <li><strong>Gender:</strong> Women</li>\n      <li><strong>Material:</strong> Synthetic and textile upper; rubber and synthetic sole</li>\n      <li><strong>Midsole Drop:</strong> Not specified</li>\n      <li><strong>Cushioning:</strong> Helion™ superfoam cushioning</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 On Running Shoe Size & Conversion Guide (Women)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> On</li>\n      <li><strong>Gender:</strong> Women</li>\n      <li><strong>Material:</strong> Synthetic and textile upper; rubber and synthetic sole</li>\n      <li><strong>Midsole Drop:</strong> 8mm</li>\n      <li><strong>Cushioning:</strong> CloudTec buoyant cushioning</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 On Shoe Size &amp; Conversion Guide (Women)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9</td>\n          <td style=\"padding: 6px; color: #666;\">EU 43</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
+    "https://n.nordstrommedia.com/it/40f1fc5c-e9f6-4ec6-861f-f39e4b621883.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/7960f05c-4e7e-4fbe-8212-221e4c5b6b72.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/8df60baa-088a-4aa6-8baa-c520d6aa543c.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/6fc13c8c-5d91-4d76-9877-474ad18c6f13.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/3db5ea2c-1f2c-4bb5-a997-d977c4d2f555.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/ab60b454-8ac5-41cf-817e-00bf98c8339b.jpeg?crop=pad",
     "https://n.nordstrommedia.com/it/ec1b50d2-f5aa-4822-a3bb-c1936198d891.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/f79d5053-867f-4066-8213-7812121d3201.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/48f4cda5-de7b-4661-b8c4-57d839f9d290.jpeg?crop=pad&trim=color"
+    "https://n.nordstrommedia.com/it/48f4cda5-de7b-4661-b8c4-57d839f9d290.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/db4eb697-f069-4329-b46d-7b8f23c67ca0.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/47213406-4a55-496a-9eeb-2c9ce7f91f26.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/abe01145-9f5c-42df-977e-5ecf79907a0f.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/44093629-f579-402a-845f-63177055d739.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/875715ac-f692-465b-9059-f20f15e3b3ae.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/77152c0a-fb5d-4fc7-bec9-0c7d66fe8310.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/48d62721-5781-407d-b499-329e952e0080.jpeg?crop=pad&trim=color"
   ],
   "variants": [
     {
       "id": 838614200,
-      "sku": "ON-8386142-5",
-      "title": "US 5 / UK 3 - White White",
-      "price": "14398.00",
-      "compare_at_price": null,
-      "source_price": 150.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 3"
-        },
-        {
-          "option_name": "Color",
-          "name": "White White"
-        }
-      ]
-    },
-    {
-      "id": 838614201,
-      "sku": "ON-8386142-5.5",
-      "title": "US 5.5 / UK 3.5 - White White",
-      "price": "14398.00",
-      "compare_at_price": null,
-      "source_price": 150.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 5.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 3.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "White White"
-        }
-      ]
-    },
-    {
-      "id": 838614202,
       "sku": "ON-8386142-6",
-      "title": "US 6 / UK 4 - White White",
+      "title": "US 6 / UK 4 - Black / Eclipse",
       "price": "14398.00",
       "compare_at_price": null,
       "source_price": 150.0,
-      "source_compare_at_price": 150.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
+      "image_url": "https://n.nordstrommedia.com/it/40f1fc5c-e9f6-4ec6-861f-f39e4b621883.jpeg?crop=pad&trim=color",
       "option_values": [
         {
           "option_name": "Size (US)",
@@ -114,103 +70,49 @@
         },
         {
           "option_name": "Color",
-          "name": "White White"
+          "name": "Black / Eclipse"
         }
       ]
     },
     {
-      "id": 838614203,
-      "sku": "ON-8386142-6.5",
-      "title": "US 6.5 / UK 4.5 - White White",
+      "id": 838614201,
+      "sku": "ON-8386142-9",
+      "title": "US 9 / UK 7 - Black / Eclipse",
       "price": "14398.00",
       "compare_at_price": null,
       "source_price": 150.0,
-      "source_compare_at_price": 150.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
+      "image_url": "https://n.nordstrommedia.com/it/40f1fc5c-e9f6-4ec6-861f-f39e4b621883.jpeg?crop=pad&trim=color",
       "option_values": [
         {
           "option_name": "Size (US)",
-          "name": "US 6.5"
+          "name": "US 9"
         },
         {
           "option_name": "Size (UK)",
-          "name": "UK 4.5"
+          "name": "UK 7"
         },
         {
           "option_name": "Color",
-          "name": "White White"
+          "name": "Black / Eclipse"
         }
       ]
     },
     {
-      "id": 838614204,
-      "sku": "ON-8386142-7",
-      "title": "US 7 / UK 5 - White White",
-      "price": "14398.00",
-      "compare_at_price": null,
-      "source_price": 150.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 7"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 5"
-        },
-        {
-          "option_name": "Color",
-          "name": "White White"
-        }
-      ]
-    },
-    {
-      "id": 838614205,
-      "sku": "ON-8386142-7.5",
-      "title": "US 7.5 / UK 5.5 - White White",
-      "price": "14398.00",
-      "compare_at_price": null,
-      "source_price": 150.0,
-      "source_compare_at_price": 150.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 7.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 5.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "White White"
-        }
-      ]
-    },
-    {
-      "id": 838614206,
+      "id": 838614202,
       "sku": "ON-8386142-8",
-      "title": "US 8 / UK 6 - White White",
+      "title": "US 8 / UK 6 - Black / Eclipse",
       "price": "14398.00",
       "compare_at_price": null,
       "source_price": 150.0,
-      "source_compare_at_price": 150.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
+      "image_url": "https://n.nordstrommedia.com/it/40f1fc5c-e9f6-4ec6-861f-f39e4b621883.jpeg?crop=pad&trim=color",
       "option_values": [
         {
           "option_name": "Size (US)",
@@ -222,22 +124,22 @@
         },
         {
           "option_name": "Color",
-          "name": "White White"
+          "name": "Black / Eclipse"
         }
       ]
     },
     {
-      "id": 838614207,
+      "id": 838614203,
       "sku": "ON-8386142-8.5",
-      "title": "US 8.5 / UK 6.5 - White White",
+      "title": "US 8.5 / UK 6.5 - Black / Eclipse",
       "price": "14398.00",
       "compare_at_price": null,
       "source_price": 150.0,
-      "source_compare_at_price": 150.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
+      "image_url": "https://n.nordstrommedia.com/it/40f1fc5c-e9f6-4ec6-861f-f39e4b621883.jpeg?crop=pad&trim=color",
       "option_values": [
         {
           "option_name": "Size (US)",
@@ -249,18 +151,261 @@
         },
         {
           "option_name": "Color",
-          "name": "White White"
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 838614204,
+      "sku": "ON-8386142-11",
+      "title": "US 11 / UK 9 - Black / Eclipse",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/40f1fc5c-e9f6-4ec6-861f-f39e4b621883.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 838614205,
+      "sku": "ON-8386142-6.5",
+      "title": "US 6.5 / UK 4.5 - Black / Eclipse",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/40f1fc5c-e9f6-4ec6-861f-f39e4b621883.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 838614206,
+      "sku": "ON-8386142-9.5",
+      "title": "US 9.5 / UK 7.5 - Black / Eclipse",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/40f1fc5c-e9f6-4ec6-861f-f39e4b621883.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 838614207,
+      "sku": "ON-8386142-5.5",
+      "title": "US 5.5 / UK 3.5 - Black / Eclipse",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/40f1fc5c-e9f6-4ec6-861f-f39e4b621883.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
         }
       ]
     },
     {
       "id": 838614208,
-      "sku": "ON-8386142-9",
-      "title": "US 9 / UK 7 - White White",
+      "sku": "ON-8386142-5",
+      "title": "US 5 / UK 3 - Black / Eclipse",
       "price": "14398.00",
       "compare_at_price": null,
       "source_price": 150.0,
-      "source_compare_at_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/40f1fc5c-e9f6-4ec6-861f-f39e4b621883.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 838614209,
+      "sku": "ON-8386142-7",
+      "title": "US 7 / UK 5 - Black / Eclipse",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/40f1fc5c-e9f6-4ec6-861f-f39e4b621883.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 838614210,
+      "sku": "ON-8386142-7.5",
+      "title": "US 7.5 / UK 5.5 - Black / Eclipse",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/40f1fc5c-e9f6-4ec6-861f-f39e4b621883.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 838614211,
+      "sku": "ON-8386142-10.5",
+      "title": "US 10.5 / UK 8.5 - Black / Eclipse",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/40f1fc5c-e9f6-4ec6-861f-f39e4b621883.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 838614212,
+      "sku": "ON-8386142-10",
+      "title": "US 10 / UK 8 - Black / Eclipse",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/40f1fc5c-e9f6-4ec6-861f-f39e4b621883.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 838614213,
+      "sku": "ON-8386142-WHIT-9",
+      "title": "US 9 / UK 7 - White / White",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -276,18 +421,261 @@
         },
         {
           "option_name": "Color",
-          "name": "White White"
+          "name": "White / White"
         }
       ]
     },
     {
-      "id": 838614209,
-      "sku": "ON-8386142-9.5",
-      "title": "US 9.5 / UK 7.5 - White White",
+      "id": 838614214,
+      "sku": "ON-8386142-WHIT-10.5",
+      "title": "US 10.5 / UK 8.5 - White / White",
       "price": "14398.00",
       "compare_at_price": null,
       "source_price": 150.0,
-      "source_compare_at_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 838614215,
+      "sku": "ON-8386142-WHIT-8.5",
+      "title": "US 8.5 / UK 6.5 - White / White",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 838614216,
+      "sku": "ON-8386142-WHIT-5",
+      "title": "US 5 / UK 3 - White / White",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 838614217,
+      "sku": "ON-8386142-WHIT-7",
+      "title": "US 7 / UK 5 - White / White",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 838614218,
+      "sku": "ON-8386142-WHIT-8",
+      "title": "US 8 / UK 6 - White / White",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 838614219,
+      "sku": "ON-8386142-WHIT-7.5",
+      "title": "US 7.5 / UK 5.5 - White / White",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 838614220,
+      "sku": "ON-8386142-WHIT-10",
+      "title": "US 10 / UK 8 - White / White",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 838614221,
+      "sku": "ON-8386142-WHIT-6.5",
+      "title": "US 6.5 / UK 4.5 - White / White",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 838614222,
+      "sku": "ON-8386142-WHIT-11",
+      "title": "US 11 / UK 9 - White / White",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 838614223,
+      "sku": "ON-8386142-WHIT-9.5",
+      "title": "US 9.5 / UK 7.5 - White / White",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -303,7 +691,412 @@
         },
         {
           "option_name": "Color",
-          "name": "White White"
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 838614224,
+      "sku": "ON-8386142-WHIT-6",
+      "title": "US 6 / UK 4 - White / White",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 838614225,
+      "sku": "ON-8386142-WHIT-5.5",
+      "title": "US 5.5 / UK 3.5 - White / White",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/c4266f77-48b0-4a2c-b820-c6225ef2d5e4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 838614226,
+      "sku": "ON-8386142-IVOR-7",
+      "title": "US 7 / UK 5 - Ivory / Dew",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/47213406-4a55-496a-9eeb-2c9ce7f91f26.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ivory / Dew"
+        }
+      ]
+    },
+    {
+      "id": 838614227,
+      "sku": "ON-8386142-IVOR-7.5",
+      "title": "US 7.5 / UK 5.5 - Ivory / Dew",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/47213406-4a55-496a-9eeb-2c9ce7f91f26.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ivory / Dew"
+        }
+      ]
+    },
+    {
+      "id": 838614228,
+      "sku": "ON-8386142-IVOR-9.5",
+      "title": "US 9.5 / UK 7.5 - Ivory / Dew",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/47213406-4a55-496a-9eeb-2c9ce7f91f26.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ivory / Dew"
+        }
+      ]
+    },
+    {
+      "id": 838614229,
+      "sku": "ON-8386142-IVOR-5.5",
+      "title": "US 5.5 / UK 3.5 - Ivory / Dew",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/47213406-4a55-496a-9eeb-2c9ce7f91f26.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ivory / Dew"
+        }
+      ]
+    },
+    {
+      "id": 838614230,
+      "sku": "ON-8386142-IVOR-6.5",
+      "title": "US 6.5 / UK 4.5 - Ivory / Dew",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/47213406-4a55-496a-9eeb-2c9ce7f91f26.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ivory / Dew"
+        }
+      ]
+    },
+    {
+      "id": 838614231,
+      "sku": "ON-8386142-IVOR-10",
+      "title": "US 10 / UK 8 - Ivory / Dew",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/47213406-4a55-496a-9eeb-2c9ce7f91f26.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ivory / Dew"
+        }
+      ]
+    },
+    {
+      "id": 838614232,
+      "sku": "ON-8386142-IVOR-6",
+      "title": "US 6 / UK 4 - Ivory / Dew",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/47213406-4a55-496a-9eeb-2c9ce7f91f26.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ivory / Dew"
+        }
+      ]
+    },
+    {
+      "id": 838614233,
+      "sku": "ON-8386142-IVOR-10.5",
+      "title": "US 10.5 / UK 8.5 - Ivory / Dew",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/47213406-4a55-496a-9eeb-2c9ce7f91f26.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ivory / Dew"
+        }
+      ]
+    },
+    {
+      "id": 838614234,
+      "sku": "ON-8386142-IVOR-11",
+      "title": "US 11 / UK 9 - Ivory / Dew",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/47213406-4a55-496a-9eeb-2c9ce7f91f26.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ivory / Dew"
+        }
+      ]
+    },
+    {
+      "id": 838614235,
+      "sku": "ON-8386142-IVOR-5",
+      "title": "US 5 / UK 3 - Ivory / Dew",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/47213406-4a55-496a-9eeb-2c9ce7f91f26.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ivory / Dew"
+        }
+      ]
+    },
+    {
+      "id": 838614236,
+      "sku": "ON-8386142-IVOR-9",
+      "title": "US 9 / UK 7 - Ivory / Dew",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/47213406-4a55-496a-9eeb-2c9ce7f91f26.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ivory / Dew"
+        }
+      ]
+    },
+    {
+      "id": 838614237,
+      "sku": "ON-8386142-IVOR-8",
+      "title": "US 8 / UK 6 - Ivory / Dew",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/47213406-4a55-496a-9eeb-2c9ce7f91f26.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ivory / Dew"
+        }
+      ]
+    },
+    {
+      "id": 838614238,
+      "sku": "ON-8386142-IVOR-8.5",
+      "title": "US 8.5 / UK 6.5 - Ivory / Dew",
+      "price": "14398.00",
+      "compare_at_price": null,
+      "source_price": 150.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/47213406-4a55-496a-9eeb-2c9ce7f91f26.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Ivory / Dew"
         }
       ]
     }
@@ -341,6 +1134,15 @@
         },
         {
           "name": "US 9.5"
+        },
+        {
+          "name": "US 10"
+        },
+        {
+          "name": "US 10.5"
+        },
+        {
+          "name": "US 11"
         }
       ]
     },
@@ -376,6 +1178,15 @@
         },
         {
           "name": "UK 7.5"
+        },
+        {
+          "name": "UK 8"
+        },
+        {
+          "name": "UK 8.5"
+        },
+        {
+          "name": "UK 9"
         }
       ]
     },
@@ -383,28 +1194,41 @@
       "name": "Color",
       "values": [
         {
-          "name": "White White"
+          "name": "Black / Eclipse"
         },
         {
-          "name": "BLACK/ ECLIPSE"
+          "name": "White / White"
+        },
+        {
+          "name": "Ivory / Dew"
         }
       ]
     }
   ],
   "tags": [
-    "on-shoes",
     "footwear",
-    "sneakers",
+    "on-shoes",
     "running",
-    "women",
-    "sizes-10"
+    "sizes-10",
+    "sizes-13",
+    "sneakers",
+    "women"
   ],
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T20:31:22Z",
+  "last_verified_at": "2026-09-19T08:26:10Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-18T20:31:22Z",
+  "updated_at": "2026-09-19T08:26:10Z",
+  "price_range_usd": {
+    "min": 150.0,
+    "max": 150.0
+  },
+  "price_range_inr": {
+    "min": 14398.0,
+    "max": 14398.0
+  },
   "status": "ACTIVE",
-  "validation_warnings": []
+  "is_active": true,
+  "shopify_sync_pending": true
 }

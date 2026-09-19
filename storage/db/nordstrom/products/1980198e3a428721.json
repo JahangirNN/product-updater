@@ -8,9 +8,9 @@
   "product_type": "Athletic Shoes",
   "source_sku": "SALOMON-7511610-5",
   "source_price": 200.0,
-  "source_compare_at_price": 200.0,
+  "source_compare_at_price": null,
   "current_price": 19204.0,
-  "compare_at_price": 19204.0,
+  "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -18,59 +18,33 @@
   "material": "Synthetic and textile upper/textile lining/rubber sole",
   "specifications": {
     "Brand": "Salomon",
-    "Gender": "Men",
+    "Gender": "Unisex",
     "Category": "Footwear",
     "Material": "Synthetic and textile upper/textile lining/rubber sole",
-    "Midsole Drop": "Not specified",
-    "Cushioning": "EVA",
+    "Midsole Drop": "8mm",
+    "Cushioning": "EnergyCell / Contagrip technical cushioning",
     "Item Number": "7511610",
     "Available Sizes (US)": "US 5, US 6, US 6.5, US 7, US 7.5, US 8, US 8.5, US 9, US 9.5, US 10, US 10.5, US 11, US 11.5, US 12, US 12.5, US 13",
     "Available Sizes (UK)": "UK 4.5, UK 5.5, UK 6, UK 6.5, UK 7, UK 7.5, UK 8, UK 8.5, UK 9, UK 9.5, UK 10, UK 10.5, UK 11, UK 11.5, UK 12, UK 12.5"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> Salomon</li>\n      <li><strong>Gender:</strong> Men</li>\n      <li><strong>Material:</strong> Synthetic and textile upper/textile lining/rubber sole</li>\n      <li><strong>Midsole Drop:</strong> Not specified</li>\n      <li><strong>Cushioning:</strong> EVA</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Salomon Shoe Size &amp; Conversion Guide (Men)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40 2/3</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41 1/3</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42 2/3</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9</td>\n          <td style=\"padding: 6px; color: #666;\">EU 43 1/3</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44 2/3</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 45 1/3</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 11</td>\n          <td style=\"padding: 6px; color: #666;\">EU 46</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 12</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 11.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 46 2/3</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 12.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 12</td>\n          <td style=\"padding: 6px; color: #666;\">EU 47 1/3</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 13</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 12.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 48</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> Salomon</li>\n      <li><strong>Gender:</strong> Unisex</li>\n      <li><strong>Material:</strong> Synthetic and textile upper/textile lining/rubber sole</li>\n      <li><strong>Midsole Drop:</strong> 8mm</li>\n      <li><strong>Cushioning:</strong> EnergyCell / Contagrip technical cushioning</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Salomon Shoe Size &amp; Conversion Guide (Unisex)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40 2/3</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41 1/3</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42 2/3</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9</td>\n          <td style=\"padding: 6px; color: #666;\">EU 43 1/3</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44 2/3</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 45 1/3</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 11</td>\n          <td style=\"padding: 6px; color: #666;\">EU 46</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 12</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 11.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 46 2/3</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 12.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 12</td>\n          <td style=\"padding: 6px; color: #666;\">EU 47 1/3</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 13</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 12.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 48</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://n.nordstrommedia.com/it/5412a792-4cea-423e-ab54-c7d3e1f03f22.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/945c8088-2d9c-4362-9cbe-8eb7c8ed3100.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/3a5e6407-dbce-4b57-9b45-e8e0d5b32dfb.jpeg?crop=pad",
     "https://n.nordstrommedia.com/it/44bab846-7f70-4e94-8104-40f03b5f835e.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/c42c4730-2a2e-4a53-b743-07e4014d262f.jpeg?crop=pad&trim=color"
+    "https://n.nordstrommedia.com/it/c42c4730-2a2e-4a53-b743-07e4014d262f.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/2b0fe429-ae51-4640-b7b1-db1a121be417.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/e42e9dfb-54cd-46e2-9ef6-a148b0aa1990.jpeg?crop=pad&trim=color"
   ],
   "variants": [
     {
       "id": 751161000,
-      "sku": "SALOMON-7511610-5",
-      "title": "US 5 / UK 4.5 - BLACK/EBONY/SILVMETAL",
-      "price": "19204.00",
-      "compare_at_price": null,
-      "source_price": 200.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/5412a792-4cea-423e-ab54-c7d3e1f03f22.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 4.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "BLACK/EBONY/SILVMETAL"
-        }
-      ]
-    },
-    {
-      "id": 751161001,
       "sku": "SALOMON-7511610-6",
-      "title": "US 6 / UK 5.5 - BLACK/EBONY/SILVMETAL",
+      "title": "US 6 / UK 5.5 - Black / Ebony / Silvmetal",
       "price": "19204.00",
       "compare_at_price": null,
       "source_price": 200.0,
-      "source_compare_at_price": 200.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -86,45 +60,18 @@
         },
         {
           "option_name": "Color",
-          "name": "BLACK/EBONY/SILVMETAL"
+          "name": "Black / Ebony / Silvmetal"
         }
       ]
     },
     {
-      "id": 751161002,
-      "sku": "SALOMON-7511610-6.5",
-      "title": "US 6.5 / UK 6 - BLACK/EBONY/SILVMETAL",
-      "price": "19204.00",
-      "compare_at_price": null,
-      "source_price": 200.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/5412a792-4cea-423e-ab54-c7d3e1f03f22.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 6.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 6"
-        },
-        {
-          "option_name": "Color",
-          "name": "BLACK/EBONY/SILVMETAL"
-        }
-      ]
-    },
-    {
-      "id": 751161003,
+      "id": 751161001,
       "sku": "SALOMON-7511610-7",
-      "title": "US 7 / UK 6.5 - BLACK/EBONY/SILVMETAL",
+      "title": "US 7 / UK 6.5 - Black / Ebony / Silvmetal",
       "price": "19204.00",
       "compare_at_price": null,
       "source_price": 200.0,
-      "source_compare_at_price": 200.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -140,45 +87,18 @@
         },
         {
           "option_name": "Color",
-          "name": "BLACK/EBONY/SILVMETAL"
+          "name": "Black / Ebony / Silvmetal"
         }
       ]
     },
     {
-      "id": 751161004,
-      "sku": "SALOMON-7511610-7.5",
-      "title": "US 7.5 / UK 7 - BLACK/EBONY/SILVMETAL",
-      "price": "19204.00",
-      "compare_at_price": null,
-      "source_price": 200.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/5412a792-4cea-423e-ab54-c7d3e1f03f22.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 7.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 7"
-        },
-        {
-          "option_name": "Color",
-          "name": "BLACK/EBONY/SILVMETAL"
-        }
-      ]
-    },
-    {
-      "id": 751161005,
+      "id": 751161002,
       "sku": "SALOMON-7511610-8",
-      "title": "US 8 / UK 7.5 - BLACK/EBONY/SILVMETAL",
+      "title": "US 8 / UK 7.5 - Black / Ebony / Silvmetal",
       "price": "19204.00",
       "compare_at_price": null,
       "source_price": 200.0,
-      "source_compare_at_price": 200.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -194,18 +114,18 @@
         },
         {
           "option_name": "Color",
-          "name": "BLACK/EBONY/SILVMETAL"
+          "name": "Black / Ebony / Silvmetal"
         }
       ]
     },
     {
-      "id": 751161006,
-      "sku": "SALOMON-7511610-8.5",
-      "title": "US 8.5 / UK 8 - BLACK/EBONY/SILVMETAL",
+      "id": 751161003,
+      "sku": "SALOMON-7511610-5",
+      "title": "US 5 / UK 4.5 - Black / Ebony / Silvmetal",
       "price": "19204.00",
       "compare_at_price": null,
       "source_price": 200.0,
-      "source_compare_at_price": 200.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -213,26 +133,26 @@
       "option_values": [
         {
           "option_name": "Size (US)",
-          "name": "US 8.5"
+          "name": "US 5"
         },
         {
           "option_name": "Size (UK)",
-          "name": "UK 8"
+          "name": "UK 4.5"
         },
         {
           "option_name": "Color",
-          "name": "BLACK/EBONY/SILVMETAL"
+          "name": "Black / Ebony / Silvmetal"
         }
       ]
     },
     {
-      "id": 751161007,
+      "id": 751161004,
       "sku": "SALOMON-7511610-9",
-      "title": "US 9 / UK 8.5 - BLACK/EBONY/SILVMETAL",
+      "title": "US 9 / UK 8.5 - Black / Ebony / Silvmetal",
       "price": "19204.00",
       "compare_at_price": null,
       "source_price": 200.0,
-      "source_compare_at_price": 200.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -248,99 +168,18 @@
         },
         {
           "option_name": "Color",
-          "name": "BLACK/EBONY/SILVMETAL"
+          "name": "Black / Ebony / Silvmetal"
         }
       ]
     },
     {
-      "id": 751161008,
-      "sku": "SALOMON-7511610-9.5",
-      "title": "US 9.5 / UK 9 - BLACK/EBONY/SILVMETAL",
-      "price": "19204.00",
-      "compare_at_price": null,
-      "source_price": 200.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/5412a792-4cea-423e-ab54-c7d3e1f03f22.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 9.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 9"
-        },
-        {
-          "option_name": "Color",
-          "name": "BLACK/EBONY/SILVMETAL"
-        }
-      ]
-    },
-    {
-      "id": 751161009,
-      "sku": "SALOMON-7511610-10",
-      "title": "US 10 / UK 9.5 - BLACK/EBONY/SILVMETAL",
-      "price": "19204.00",
-      "compare_at_price": null,
-      "source_price": 200.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/5412a792-4cea-423e-ab54-c7d3e1f03f22.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 10"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 9.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "BLACK/EBONY/SILVMETAL"
-        }
-      ]
-    },
-    {
-      "id": 751161010,
-      "sku": "SALOMON-7511610-10.5",
-      "title": "US 10.5 / UK 10 - BLACK/EBONY/SILVMETAL",
-      "price": "19204.00",
-      "compare_at_price": null,
-      "source_price": 200.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/5412a792-4cea-423e-ab54-c7d3e1f03f22.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 10.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 10"
-        },
-        {
-          "option_name": "Color",
-          "name": "BLACK/EBONY/SILVMETAL"
-        }
-      ]
-    },
-    {
-      "id": 751161011,
+      "id": 751161005,
       "sku": "SALOMON-7511610-11",
-      "title": "US 11 / UK 10.5 - BLACK/EBONY/SILVMETAL",
+      "title": "US 11 / UK 10.5 - Black / Ebony / Silvmetal",
       "price": "19204.00",
       "compare_at_price": null,
       "source_price": 200.0,
-      "source_compare_at_price": 200.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -356,18 +195,18 @@
         },
         {
           "option_name": "Color",
-          "name": "BLACK/EBONY/SILVMETAL"
+          "name": "Black / Ebony / Silvmetal"
         }
       ]
     },
     {
-      "id": 751161012,
-      "sku": "SALOMON-7511610-11.5",
-      "title": "US 11.5 / UK 11 - BLACK/EBONY/SILVMETAL",
+      "id": 751161006,
+      "sku": "SALOMON-7511610-10",
+      "title": "US 10 / UK 9.5 - Black / Ebony / Silvmetal",
       "price": "19204.00",
       "compare_at_price": null,
       "source_price": 200.0,
-      "source_compare_at_price": 200.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -375,26 +214,26 @@
       "option_values": [
         {
           "option_name": "Size (US)",
-          "name": "US 11.5"
+          "name": "US 10"
         },
         {
           "option_name": "Size (UK)",
-          "name": "UK 11"
+          "name": "UK 9.5"
         },
         {
           "option_name": "Color",
-          "name": "BLACK/EBONY/SILVMETAL"
+          "name": "Black / Ebony / Silvmetal"
         }
       ]
     },
     {
-      "id": 751161013,
+      "id": 751161007,
       "sku": "SALOMON-7511610-12",
-      "title": "US 12 / UK 11.5 - BLACK/EBONY/SILVMETAL",
+      "title": "US 12 / UK 11.5 - Black / Ebony / Silvmetal",
       "price": "19204.00",
       "compare_at_price": null,
       "source_price": 200.0,
-      "source_compare_at_price": 200.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -410,18 +249,18 @@
         },
         {
           "option_name": "Color",
-          "name": "BLACK/EBONY/SILVMETAL"
+          "name": "Black / Ebony / Silvmetal"
         }
       ]
     },
     {
-      "id": 751161014,
-      "sku": "SALOMON-7511610-12.5",
-      "title": "US 12.5 / UK 12 - BLACK/EBONY/SILVMETAL",
+      "id": 751161008,
+      "sku": "SALOMON-7511610-10.5",
+      "title": "US 10.5 / UK 10 - Black / Ebony / Silvmetal",
       "price": "19204.00",
       "compare_at_price": null,
       "source_price": 200.0,
-      "source_compare_at_price": 200.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -429,26 +268,80 @@
       "option_values": [
         {
           "option_name": "Size (US)",
-          "name": "US 12.5"
+          "name": "US 10.5"
         },
         {
           "option_name": "Size (UK)",
-          "name": "UK 12"
+          "name": "UK 10"
         },
         {
           "option_name": "Color",
-          "name": "BLACK/EBONY/SILVMETAL"
+          "name": "Black / Ebony / Silvmetal"
         }
       ]
     },
     {
-      "id": 751161015,
-      "sku": "SALOMON-7511610-13",
-      "title": "US 13 / UK 12.5 - BLACK/EBONY/SILVMETAL",
+      "id": 751161009,
+      "sku": "SALOMON-7511610-6.5",
+      "title": "US 6.5 / UK 6 - Black / Ebony / Silvmetal",
       "price": "19204.00",
       "compare_at_price": null,
       "source_price": 200.0,
-      "source_compare_at_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/5412a792-4cea-423e-ab54-c7d3e1f03f22.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Ebony / Silvmetal"
+        }
+      ]
+    },
+    {
+      "id": 751161010,
+      "sku": "SALOMON-7511610-11.5",
+      "title": "US 11.5 / UK 11 - Black / Ebony / Silvmetal",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/5412a792-4cea-423e-ab54-c7d3e1f03f22.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Ebony / Silvmetal"
+        }
+      ]
+    },
+    {
+      "id": 751161011,
+      "sku": "SALOMON-7511610-13",
+      "title": "US 13 / UK 12.5 - Black / Ebony / Silvmetal",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -464,7 +357,115 @@
         },
         {
           "option_name": "Color",
-          "name": "BLACK/EBONY/SILVMETAL"
+          "name": "Black / Ebony / Silvmetal"
+        }
+      ]
+    },
+    {
+      "id": 751161012,
+      "sku": "SALOMON-7511610-7.5",
+      "title": "US 7.5 / UK 7 - Black / Ebony / Silvmetal",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/5412a792-4cea-423e-ab54-c7d3e1f03f22.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Ebony / Silvmetal"
+        }
+      ]
+    },
+    {
+      "id": 751161013,
+      "sku": "SALOMON-7511610-12.5",
+      "title": "US 12.5 / UK 12 - Black / Ebony / Silvmetal",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/5412a792-4cea-423e-ab54-c7d3e1f03f22.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Ebony / Silvmetal"
+        }
+      ]
+    },
+    {
+      "id": 751161014,
+      "sku": "SALOMON-7511610-9.5",
+      "title": "US 9.5 / UK 9 - Black / Ebony / Silvmetal",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/5412a792-4cea-423e-ab54-c7d3e1f03f22.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Ebony / Silvmetal"
+        }
+      ]
+    },
+    {
+      "id": 751161015,
+      "sku": "SALOMON-7511610-8.5",
+      "title": "US 8.5 / UK 8 - Black / Ebony / Silvmetal",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/5412a792-4cea-423e-ab54-c7d3e1f03f22.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Ebony / Silvmetal"
         }
       ]
     }
@@ -580,23 +581,34 @@
       "name": "Color",
       "values": [
         {
-          "name": "BLACK/EBONY/SILVMETAL"
+          "name": "Black / Ebony / Silvmetal"
         }
       ]
     }
   ],
   "tags": [
-    "salomon-shoes",
     "footwear",
-    "sneakers",
-    "running",
     "men",
-    "sizes-16"
+    "running",
+    "salomon-shoes",
+    "sizes-16",
+    "sneakers",
+    "unisex"
   ],
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T19:25:36Z",
+  "last_verified_at": "2026-09-19T07:40:27Z",
   "created_at": "2026-09-18T06:51:54Z",
-  "updated_at": "2026-09-18T19:25:36Z"
+  "updated_at": "2026-09-19T07:40:27Z",
+  "price_range_usd": {
+    "min": 200.0,
+    "max": 200.0
+  },
+  "price_range_inr": {
+    "min": 19204.0,
+    "max": 19204.0
+  },
+  "status": "ACTIVE",
+  "is_active": true
 }

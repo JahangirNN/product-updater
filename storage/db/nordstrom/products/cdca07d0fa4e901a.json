@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-8841091-5.5",
   "source_price": 280.0,
   "source_compare_at_price": 280.0,
-  "current_price": 26886.0,
-  "compare_at_price": 26886.0,
+  "current_price": 26868.0,
+  "compare_at_price": 26868.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -47,7 +47,7 @@
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/01a6b44e-9c86-4a2f-a538-1439a184a108.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -74,7 +74,7 @@
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/01a6b44e-9c86-4a2f-a538-1439a184a108.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -101,7 +101,7 @@
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/01a6b44e-9c86-4a2f-a538-1439a184a108.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -128,7 +128,7 @@
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/01a6b44e-9c86-4a2f-a538-1439a184a108.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -344,7 +344,7 @@
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/01a6b44e-9c86-4a2f-a538-1439a184a108.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -398,7 +398,7 @@
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/01a6b44e-9c86-4a2f-a538-1439a184a108.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -531,9 +531,11 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T20:35:41Z",
+  "last_verified_at": "2026-09-19T08:29:58Z",
   "created_at": "2026-09-17T19:02:07Z",
-  "updated_at": "2026-09-18T20:35:41Z",
+  "updated_at": "2026-09-19T08:29:58Z",
   "status": "ACTIVE",
-  "validation_warnings": []
+  "validation_warnings": [],
+  "is_active": true,
+  "shopify_sync_pending": true
 }

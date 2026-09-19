@@ -217,6 +217,15 @@ def clean_title(title: str) -> str:
     return cleaned.strip()
 
 
+def format_colorway_name(name: str) -> str:
+    """Format colorway name cleanly: 'WHITE/ GLACIER' -> 'White / Glacier'."""
+    raw = str(name or "").strip()
+    if not raw:
+        return "Standard"
+    parts = [re.sub(r'\s+', ' ', p.strip()).title() for p in raw.split("/") if p.strip()]
+    return " / ".join(parts) if parts else raw.title()
+
+
 def parse_product_payload(
     raw_data: Dict[str, Any],
     usd_to_inr_rate: float,
@@ -245,6 +254,8 @@ def parse_product_payload(
 
     gender = determine_gender(title, url, raw_gender)
     
+    raw_colorways = raw_data.get("colorways")
+
     # 1. Price extraction
     source_price_usd = 0.0
     if "current_price" in raw_data and raw_data["current_price"]:
@@ -253,6 +264,24 @@ def parse_product_payload(
         source_price_usd = float(raw_data["prices"].get("amount", 0.0))
     elif "price" in raw_data:
         source_price_usd = float(raw_data["price"])
+
+    if source_price_usd <= 0 and raw_colorways and isinstance(raw_colorways, list):
+        in_stock_prices = [
+            float(s.get("price_usd", 0.0))
+            for cw in raw_colorways
+            for s in cw.get("sizes", [])
+            if s.get("in_stock") and s.get("price_usd") and float(s.get("price_usd", 0.0)) > 0
+        ]
+        all_cw_prices = [
+            float(s.get("price_usd", 0.0))
+            for cw in raw_colorways
+            for s in cw.get("sizes", [])
+            if s.get("price_usd") and float(s.get("price_usd", 0.0)) > 0
+        ]
+        if in_stock_prices:
+            source_price_usd = min(in_stock_prices)
+        elif all_cw_prices:
+            source_price_usd = min(all_cw_prices)
 
     if source_price_usd <= 0:
         return None
@@ -291,7 +320,12 @@ def parse_product_payload(
         default_cushioning = "CloudTec buoyant cushioning"
 
     # 2. Extract and resolve all available sizes
-    raw_sizes = raw_data.get("sizes", [])
+    raw_sizes = list(raw_data.get("sizes") or [])
+    if not raw_sizes and raw_colorways and isinstance(raw_colorways, list):
+        for cw in raw_colorways:
+            for s in cw.get("sizes", []):
+                raw_sizes.append(s)
+
     valid_sizes = []
 
     for s_entry in raw_sizes:
@@ -337,6 +371,8 @@ def parse_product_payload(
         return None
 
     # 3. Colors and Images
+    # 3. Colors and Images
+    raw_colorways = raw_data.get("colorways")
     raw_colors = raw_data.get("colors")
     if isinstance(raw_colors, list) and raw_colors:
         colors = raw_colors
@@ -362,28 +398,177 @@ def parse_product_payload(
 
     sku_root = f"{brand_sku_prefix}-{source_id}"
 
-    # 5. Variants Construction (one variant per size, carrying US and UK size)
-    variants = []
-    for idx, s in enumerate(deduped_sizes):
-        var_sku = f"{sku_root}-{s['us_str']}"
-        variants.append({
-            "id": int(f"{source_id}{idx:02d}") if source_id.isdigit() else None,
-            "sku": var_sku,
-            "title": f"US {s['us_str']} / UK {s['uk_str']} - {primary_color}",
-            "price": f"{price_inr:.2f}",
-            "compare_at_price": f"{compare_inr:.2f}" if compare_inr and compare_inr > price_inr else None,
-            "source_price": source_price_usd,
-            "source_compare_at_price": compare_price_usd,
-            "currency": "INR",
-            "source_currency": "USD",
-            "in_stock": s["in_stock"],
-            "image_url": featured_image,
-            "option_values": [
-                {"option_name": "Size (US)", "name": f"US {s['us_str']}"},
-                {"option_name": "Size (UK)", "name": f"UK {s['uk_str']}"},
-                {"option_name": "Color", "name": primary_color}
-            ]
-        })
+    # 5. Variants Construction
+    price_range_usd = None
+    price_range_inr = None
+
+    if raw_colorways and isinstance(raw_colorways, list):
+        # Multi-colorway variant matrix extraction with per-variant prices
+        variants = []
+        all_colors = []
+        all_images = []
+        size_set: Dict[float, Dict[str, Any]] = {}
+
+        for cw in raw_colorways:
+            c_name = format_colorway_name(cw.get("color_name") or "Standard")
+            if c_name not in all_colors:
+                all_colors.append(c_name)
+            for img in cw.get("images", []):
+                if img and img not in all_images:
+                    all_images.append(img)
+
+        if not all_images:
+            all_images = images
+        featured_image = all_images[0] if all_images else featured_image
+
+        var_idx = 0
+        for c_idx, cw in enumerate(raw_colorways):
+            c_name = format_colorway_name(cw.get("color_name") or f"Color {c_idx+1}")
+            c_images = cw.get("images") or []
+            c_feat_img = cw.get("featured_image") or (c_images[0] if c_images else featured_image)
+            clean_c_slug = re.sub(r'[^A-Za-z0-9]+', '', c_name).upper()[:4] or f"C{c_idx+1}"
+
+            cw_sizes = cw.get("sizes") or []
+            for s_entry in cw_sizes:
+                if isinstance(s_entry, dict):
+                    us_val = parse_numeric_size(s_entry.get("us_size") or s_entry.get("US") or "")
+                    in_stock = s_entry.get("in_stock")
+                    if in_stock is None:
+                        in_stock = s_entry.get("availability", True)
+                    uk_val = s_entry.get("uk_size") or s_entry.get("UK")
+                    eu_val = s_entry.get("eu_size") or s_entry.get("EU")
+                    v_p_usd = float(s_entry.get("price_usd") or source_price_usd)
+                    v_comp_usd = float(s_entry.get("compare_price_usd")) if s_entry.get("compare_price_usd") else compare_price_usd
+                else:
+                    us_val = parse_numeric_size(str(s_entry))
+                    in_stock = True
+                    uk_val = None
+                    eu_val = None
+                    v_p_usd = source_price_usd
+                    v_comp_usd = compare_price_usd
+
+                if us_val is None:
+                    continue
+                if min_us_size is not None and us_val < min_us_size:
+                    continue
+
+                res_uk = str(uk_val).strip() if uk_val else convert_us_to_uk(us_val, gender, brand=brand)
+                res_eu = str(eu_val).strip() if eu_val else convert_us_to_eu(us_val, gender, brand=brand)
+                us_str = f"{us_val:g}"
+
+                if us_val not in size_set:
+                    size_set[us_val] = {
+                        "us_size": us_val,
+                        "us_str": us_str,
+                        "uk_str": res_uk,
+                        "eu_str": res_eu,
+                        "in_stock": bool(in_stock)
+                    }
+                elif in_stock:
+                    size_set[us_val]["in_stock"] = True
+
+                v_price_inr = convert_usd_to_inr(v_p_usd, usd_to_inr_rate)
+                v_comp_inr = convert_usd_to_inr(v_comp_usd, usd_to_inr_rate) if v_comp_usd else None
+
+                if c_idx == 0:
+                    var_sku = f"{sku_root}-{us_str}"
+                else:
+                    var_sku = f"{sku_root}-{clean_c_slug}-{us_str}"
+
+                variants.append({
+                    "id": int(f"{source_id}{var_idx:02d}") if source_id.isdigit() else None,
+                    "sku": var_sku,
+                    "title": f"US {us_str} / UK {res_uk} - {c_name}",
+                    "price": f"{v_price_inr:.2f}",
+                    "compare_at_price": f"{v_comp_inr:.2f}" if v_comp_inr and v_comp_inr > v_price_inr else None,
+                    "source_price": v_p_usd,
+                    "source_compare_at_price": v_comp_usd,
+                    "currency": "INR",
+                    "source_currency": "USD",
+                    "in_stock": bool(in_stock),
+                    "image_url": c_feat_img,
+                    "option_values": [
+                        {"option_name": "Size (US)", "name": f"US {us_str}"},
+                        {"option_name": "Size (UK)", "name": f"UK {res_uk}"},
+                        {"option_name": "Color", "name": c_name}
+                    ]
+                })
+                var_idx += 1
+
+        deduped_sizes = [size_set[k] for k in sorted(size_set.keys())]
+        if len(deduped_sizes) < min_size_variants:
+            return None
+
+        # Re-derive product-level price from in-stock variants (or all variants if sold out)
+        in_stock_prices = [v["source_price"] for v in variants if v["in_stock"]]
+        if in_stock_prices:
+            source_price_usd = min(in_stock_prices)
+        elif variants:
+            source_price_usd = min(v["source_price"] for v in variants)
+        price_inr = convert_usd_to_inr(source_price_usd, usd_to_inr_rate)
+
+        var_prices = [v["source_price"] for v in variants]
+        if var_prices:
+            price_range_usd = {"min": min(var_prices), "max": max(var_prices)}
+            price_range_inr = {
+                "min": convert_usd_to_inr(price_range_usd["min"], usd_to_inr_rate),
+                "max": convert_usd_to_inr(price_range_usd["max"], usd_to_inr_rate)
+            }
+
+        product_options = [
+            {
+                "name": "Size (US)",
+                "values": [{"name": f"US {s['us_str']}"} for s in deduped_sizes]
+            },
+            {
+                "name": "Size (UK)",
+                "values": [{"name": f"UK {s['uk_str']}"} for s in deduped_sizes]
+            },
+            {
+                "name": "Color",
+                "values": [{"name": c} for c in all_colors]
+            }
+        ]
+        images = all_images
+
+    else:
+        # Legacy single-colorway variants construction
+        variants = []
+        for idx, s in enumerate(deduped_sizes):
+            var_sku = f"{sku_root}-{s['us_str']}"
+            variants.append({
+                "id": int(f"{source_id}{idx:02d}") if source_id.isdigit() else None,
+                "sku": var_sku,
+                "title": f"US {s['us_str']} / UK {s['uk_str']} - {primary_color}",
+                "price": f"{price_inr:.2f}",
+                "compare_at_price": f"{compare_inr:.2f}" if compare_inr and compare_inr > price_inr else None,
+                "source_price": source_price_usd,
+                "source_compare_at_price": compare_price_usd,
+                "currency": "INR",
+                "source_currency": "USD",
+                "in_stock": s["in_stock"],
+                "image_url": featured_image,
+                "option_values": [
+                    {"option_name": "Size (US)", "name": f"US {s['us_str']}"},
+                    {"option_name": "Size (UK)", "name": f"UK {s['uk_str']}"},
+                    {"option_name": "Color", "name": primary_color}
+                ]
+            })
+
+        product_options = [
+            {
+                "name": "Size (US)",
+                "values": [{"name": f"US {s['us_str']}"} for s in deduped_sizes]
+            },
+            {
+                "name": "Size (UK)",
+                "values": [{"name": f"UK {s['uk_str']}"} for s in deduped_sizes]
+            },
+            {
+                "name": "Color",
+                "values": [{"name": c} for c in colors[:5]]
+            }
+        ]
 
     # 6. Specifications and Details
     materials = details.get("materials") or raw_data.get("materials") or "Textile and synthetic upper/rubber sole"
@@ -406,30 +591,15 @@ def parse_product_payload(
     description_text = raw_data.get("description") or raw_data.get("productDescription") or ""
     description_html = generate_description_html(title, description_text, gender, specs, deduped_sizes)
 
-    # 8. Product Options
-    product_options = [
-        {
-            "name": "Size (US)",
-            "values": [{"name": f"US {s['us_str']}"} for s in deduped_sizes]
-        },
-        {
-            "name": "Size (UK)",
-            "values": [{"name": f"UK {s['uk_str']}"} for s in deduped_sizes]
-        },
-        {
-            "name": "Color",
-            "values": [{"name": c} for c in colors[:5]]
-        }
-    ]
-
     availability = "in_stock" if any(v["in_stock"] for v in variants) else "out_of_stock"
 
-    # 9. Compute Primary Key: SHA256("nordstrom::" + source_sku)[:16]
-    primary_sku = variants[0]["sku"] if variants else sku_root
-    product_id = hashlib.sha256(f"nordstrom::{primary_sku}".encode("utf-8")).hexdigest()[:16]
+    # 9. Compute or preserve Primary Key: SHA256("nordstrom::" + source_sku)[:16]
+    primary_sku = raw_data.get("source_sku") or (variants[0]["sku"] if variants else sku_root)
+    product_id = raw_data.get("id") or hashlib.sha256(f"nordstrom::{primary_sku}".encode("utf-8")).hexdigest()[:16]
     now_iso = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    created_at = raw_data.get("created_at") or now_iso
 
-    return {
+    out = {
         "id": product_id,
         "source_store": "nordstrom",
         "source_url": url,
@@ -458,9 +628,16 @@ def parse_product_payload(
         ],
         "groups": [group_name],
         "last_verified_at": now_iso,
-        "created_at": now_iso,
+        "created_at": created_at,
         "updated_at": now_iso
     }
+
+    if price_range_usd:
+        out["price_range_usd"] = price_range_usd
+    if price_range_inr:
+        out["price_range_inr"] = price_range_inr
+
+    return out
 
 
 from urllib.parse import urlparse, parse_qs, urlencode, urlunparse

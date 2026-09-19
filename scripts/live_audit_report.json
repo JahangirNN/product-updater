@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-18T21:11:02Z",
+  "timestamp": "2026-09-19T08:50:22Z",
   "total_sampled": 16,
   "divergence_count": 0,
   "concordance_rate_pct": 100.0,
@@ -47,14 +47,14 @@
       "store": "coach",
       "handle": "loafer",
       "sku": "CAP33 BLK  13  D",
-      "status": "success",
+      "status": "not_found",
       "stored_price_usd": 100.0,
       "live_price_usd": 100.0,
       "stored_price_inr": 9567.0,
-      "stored_availability": "in_stock",
-      "live_availability": "in_stock",
+      "stored_availability": "out_of_stock",
+      "live_availability": "out_of_stock",
       "diverged": false,
-      "divergence_details": "Zero Divergence (100% Parity)"
+      "divergence_details": "Product Delisted (HTTP 404): live out_of_stock vs stored out_of_stock"
     },
     {
       "store": "michaelkors",

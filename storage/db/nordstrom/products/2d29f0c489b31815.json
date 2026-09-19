@@ -8,9 +8,9 @@
   "product_type": "Athletic Shoes",
   "source_sku": "ON-8993137-7.5",
   "source_price": 150.0,
-  "source_compare_at_price": 200.0,
+  "source_compare_at_price": null,
   "current_price": 14398.0,
-  "compare_at_price": 19198.0,
+  "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -21,161 +21,66 @@
     "Gender": "Women",
     "Category": "Footwear",
     "Material": "Textile and synthetic upper and lining/rubber and synthetic sole",
-    "Midsole Drop": "7mm",
-    "Cushioning": "absorbs impact and distributes weight for consistent, buoyant comfort under each step",
-    "Item Number": "11440185",
-    "Available Sizes (US)": "US 7.5, US 8, US 8.5, US 9, US 9.5, US 10, US 10.5, US 11",
-    "Available Sizes (UK)": "UK 5.5, UK 6, UK 6.5, UK 7, UK 7.5, UK 8, UK 8.5, UK 9"
+    "Midsole Drop": "8mm",
+    "Cushioning": "CloudTec buoyant cushioning",
+    "Item Number": "8993137",
+    "Available Sizes (US)": "US 5, US 5.5, US 6, US 6.5, US 7, US 7.5, US 8, US 8.5, US 9, US 9.5, US 10, US 10.5, US 11",
+    "Available Sizes (UK)": "UK 3, UK 3.5, UK 4, UK 4.5, UK 5, UK 5.5, UK 6, UK 6.5, UK 7, UK 7.5, UK 8, UK 8.5, UK 9"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> On Running</li>\n      <li><strong>Gender:</strong> Women</li>\n      <li><strong>Material:</strong> Textile and synthetic upper and lining/rubber and synthetic sole</li>\n      <li><strong>Midsole Drop:</strong> 7mm</li>\n      <li><strong>Cushioning:</strong> absorbs impact and distributes weight for consistent, buoyant comfort under each step</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 On Running Shoe Size & Conversion Guide (Women)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9</td>\n          <td style=\"padding: 6px; color: #666;\">EU 43</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> On</li>\n      <li><strong>Gender:</strong> Women</li>\n      <li><strong>Material:</strong> Textile and synthetic upper and lining/rubber and synthetic sole</li>\n      <li><strong>Midsole Drop:</strong> 8mm</li>\n      <li><strong>Cushioning:</strong> CloudTec buoyant cushioning</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 On Shoe Size &amp; Conversion Guide (Women)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9</td>\n          <td style=\"padding: 6px; color: #666;\">EU 43</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://n.nordstrommedia.com/it/ed47366d-7132-414d-9c1e-f8ce6cba44a4.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/2d7c6029-750e-4f66-8401-c31016aae1b6.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/b21bcb73-61f4-4fd8-9add-e46d6ade0a06.jpeg?crop=pad",
     "https://n.nordstrommedia.com/it/62bf6e5d-3c98-4d8f-82d9-6484d160360c.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/855d3040-012e-4ecb-9982-2bd13ed2a40b.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/58c4e77d-da20-4dcf-a69e-0260d0a367e6.jpeg?crop=pad&trim=color"
+    "https://n.nordstrommedia.com/it/58c4e77d-da20-4dcf-a69e-0260d0a367e6.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/2a2c7f28-71b8-4074-8446-8d85d212e014.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/9497042d-7c16-4234-84ba-58de13dbc448.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/da5a12a5-62f9-4ae6-825b-2f06f2225160.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/8794f068-c39e-4b0f-816e-70508e41375d.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/e7603afd-c22e-49c2-89dc-179f9915de56.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/f9784240-37d7-4498-ad0c-d2e23cb58d90.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/6bc09e96-e4f5-42fc-bb62-29131970dfa5.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/46949bac-c0fe-4571-9b9e-c9ae06bd468a.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/bc6841e0-2834-46d8-bf7f-5eebebaef002.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/867893d7-c7fa-4ffa-be22-02f83c761da7.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/67a6930d-2a84-4a9b-80c9-65d98a15bca1.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/836ca123-2114-43cd-9bbc-b759a0feb903.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/eed9c7e5-881c-4d4e-baf5-236e76231fc9.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/186d4288-e787-4db9-87a2-67ca7a4f1b5d.jpeg?crop=pad&trim=color"
   ],
   "variants": [
     {
       "id": 899313700,
-      "sku": "ON-8993137-7.5",
-      "title": "US 7.5 / UK 5.5 - Glacier Alloy",
+      "sku": "ON-8993137-6",
+      "title": "US 6 / UK 4 - Glacier / Alloy",
       "price": "14398.00",
       "compare_at_price": "19198.00",
       "source_price": 150.0,
       "source_compare_at_price": 200.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ed47366d-7132-414d-9c1e-f8ce6cba44a4.jpeg?crop=pad&trim=color",
       "option_values": [
         {
           "option_name": "Size (US)",
-          "name": "US 7.5"
+          "name": "US 6"
         },
         {
           "option_name": "Size (UK)",
-          "name": "UK 5.5"
+          "name": "UK 4"
         },
         {
           "option_name": "Color",
-          "name": "Glacier Alloy"
+          "name": "Glacier / Alloy"
         }
       ]
     },
     {
       "id": 899313701,
-      "sku": "ON-8993137-8",
-      "title": "US 8 / UK 6 - Glacier Alloy",
-      "price": "14398.00",
-      "compare_at_price": "19198.00",
-      "source_price": 150.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/ed47366d-7132-414d-9c1e-f8ce6cba44a4.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 8"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 6"
-        },
-        {
-          "option_name": "Color",
-          "name": "Glacier Alloy"
-        }
-      ]
-    },
-    {
-      "id": 899313702,
-      "sku": "ON-8993137-8.5",
-      "title": "US 8.5 / UK 6.5 - Glacier Alloy",
-      "price": "14398.00",
-      "compare_at_price": "19198.00",
-      "source_price": 150.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/ed47366d-7132-414d-9c1e-f8ce6cba44a4.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 8.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 6.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "Glacier Alloy"
-        }
-      ]
-    },
-    {
-      "id": 899313703,
-      "sku": "ON-8993137-9",
-      "title": "US 9 / UK 7 - Glacier Alloy",
-      "price": "14398.00",
-      "compare_at_price": "19198.00",
-      "source_price": 150.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/ed47366d-7132-414d-9c1e-f8ce6cba44a4.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 9"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 7"
-        },
-        {
-          "option_name": "Color",
-          "name": "Glacier Alloy"
-        }
-      ]
-    },
-    {
-      "id": 899313704,
-      "sku": "ON-8993137-9.5",
-      "title": "US 9.5 / UK 7.5 - Glacier Alloy",
-      "price": "14398.00",
-      "compare_at_price": "19198.00",
-      "source_price": 150.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/ed47366d-7132-414d-9c1e-f8ce6cba44a4.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 9.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 7.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "Glacier Alloy"
-        }
-      ]
-    },
-    {
-      "id": 899313705,
       "sku": "ON-8993137-10",
-      "title": "US 10 / UK 8 - Glacier Alloy",
+      "title": "US 10 / UK 8 - Glacier / Alloy",
       "price": "14398.00",
       "compare_at_price": "19198.00",
       "source_price": 150.0,
@@ -195,14 +100,41 @@
         },
         {
           "option_name": "Color",
-          "name": "Glacier Alloy"
+          "name": "Glacier / Alloy"
         }
       ]
     },
     {
-      "id": 899313706,
-      "sku": "ON-8993137-10.5",
-      "title": "US 10.5 / UK 8.5 - Glacier Alloy",
+      "id": 899313702,
+      "sku": "ON-8993137-5",
+      "title": "US 5 / UK 3 - Glacier / Alloy",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed47366d-7132-414d-9c1e-f8ce6cba44a4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3"
+        },
+        {
+          "option_name": "Color",
+          "name": "Glacier / Alloy"
+        }
+      ]
+    },
+    {
+      "id": 899313703,
+      "sku": "ON-8993137-8.5",
+      "title": "US 8.5 / UK 6.5 - Glacier / Alloy",
       "price": "14398.00",
       "compare_at_price": "19198.00",
       "source_price": 150.0,
@@ -214,22 +146,103 @@
       "option_values": [
         {
           "option_name": "Size (US)",
-          "name": "US 10.5"
+          "name": "US 8.5"
         },
         {
           "option_name": "Size (UK)",
-          "name": "UK 8.5"
+          "name": "UK 6.5"
         },
         {
           "option_name": "Color",
-          "name": "Glacier Alloy"
+          "name": "Glacier / Alloy"
+        }
+      ]
+    },
+    {
+      "id": 899313704,
+      "sku": "ON-8993137-9",
+      "title": "US 9 / UK 7 - Glacier / Alloy",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/ed47366d-7132-414d-9c1e-f8ce6cba44a4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Glacier / Alloy"
+        }
+      ]
+    },
+    {
+      "id": 899313705,
+      "sku": "ON-8993137-6.5",
+      "title": "US 6.5 / UK 4.5 - Glacier / Alloy",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed47366d-7132-414d-9c1e-f8ce6cba44a4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Glacier / Alloy"
+        }
+      ]
+    },
+    {
+      "id": 899313706,
+      "sku": "ON-8993137-7.5",
+      "title": "US 7.5 / UK 5.5 - Glacier / Alloy",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed47366d-7132-414d-9c1e-f8ce6cba44a4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Glacier / Alloy"
         }
       ]
     },
     {
       "id": 899313707,
       "sku": "ON-8993137-11",
-      "title": "US 11 / UK 9 - Glacier Alloy",
+      "title": "US 11 / UK 9 - Glacier / Alloy",
       "price": "14398.00",
       "compare_at_price": "19198.00",
       "source_price": 150.0,
@@ -249,7 +262,844 @@
         },
         {
           "option_name": "Color",
-          "name": "Glacier Alloy"
+          "name": "Glacier / Alloy"
+        }
+      ]
+    },
+    {
+      "id": 899313708,
+      "sku": "ON-8993137-9.5",
+      "title": "US 9.5 / UK 7.5 - Glacier / Alloy",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/ed47366d-7132-414d-9c1e-f8ce6cba44a4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Glacier / Alloy"
+        }
+      ]
+    },
+    {
+      "id": 899313709,
+      "sku": "ON-8993137-7",
+      "title": "US 7 / UK 5 - Glacier / Alloy",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed47366d-7132-414d-9c1e-f8ce6cba44a4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Glacier / Alloy"
+        }
+      ]
+    },
+    {
+      "id": 899313710,
+      "sku": "ON-8993137-8",
+      "title": "US 8 / UK 6 - Glacier / Alloy",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed47366d-7132-414d-9c1e-f8ce6cba44a4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6"
+        },
+        {
+          "option_name": "Color",
+          "name": "Glacier / Alloy"
+        }
+      ]
+    },
+    {
+      "id": 899313711,
+      "sku": "ON-8993137-10.5",
+      "title": "US 10.5 / UK 8.5 - Glacier / Alloy",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/ed47366d-7132-414d-9c1e-f8ce6cba44a4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Glacier / Alloy"
+        }
+      ]
+    },
+    {
+      "id": 899313712,
+      "sku": "ON-8993137-5.5",
+      "title": "US 5.5 / UK 3.5 - Glacier / Alloy",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed47366d-7132-414d-9c1e-f8ce6cba44a4.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Glacier / Alloy"
+        }
+      ]
+    },
+    {
+      "id": 899313713,
+      "sku": "ON-8993137-WINT-10.5",
+      "title": "US 10.5 / UK 8.5 - Winter / Kasha",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9497042d-7c16-4234-84ba-58de13dbc448.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Winter / Kasha"
+        }
+      ]
+    },
+    {
+      "id": 899313714,
+      "sku": "ON-8993137-WINT-5",
+      "title": "US 5 / UK 3 - Winter / Kasha",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9497042d-7c16-4234-84ba-58de13dbc448.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3"
+        },
+        {
+          "option_name": "Color",
+          "name": "Winter / Kasha"
+        }
+      ]
+    },
+    {
+      "id": 899313715,
+      "sku": "ON-8993137-WINT-5.5",
+      "title": "US 5.5 / UK 3.5 - Winter / Kasha",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9497042d-7c16-4234-84ba-58de13dbc448.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Winter / Kasha"
+        }
+      ]
+    },
+    {
+      "id": 899313716,
+      "sku": "ON-8993137-WINT-9.5",
+      "title": "US 9.5 / UK 7.5 - Winter / Kasha",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9497042d-7c16-4234-84ba-58de13dbc448.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Winter / Kasha"
+        }
+      ]
+    },
+    {
+      "id": 899313717,
+      "sku": "ON-8993137-WINT-11",
+      "title": "US 11 / UK 9 - Winter / Kasha",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9497042d-7c16-4234-84ba-58de13dbc448.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Winter / Kasha"
+        }
+      ]
+    },
+    {
+      "id": 899313718,
+      "sku": "ON-8993137-WINT-7",
+      "title": "US 7 / UK 5 - Winter / Kasha",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9497042d-7c16-4234-84ba-58de13dbc448.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Winter / Kasha"
+        }
+      ]
+    },
+    {
+      "id": 899313719,
+      "sku": "ON-8993137-WINT-10",
+      "title": "US 10 / UK 8 - Winter / Kasha",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9497042d-7c16-4234-84ba-58de13dbc448.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Winter / Kasha"
+        }
+      ]
+    },
+    {
+      "id": 899313720,
+      "sku": "ON-8993137-WINT-6.5",
+      "title": "US 6.5 / UK 4.5 - Winter / Kasha",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9497042d-7c16-4234-84ba-58de13dbc448.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Winter / Kasha"
+        }
+      ]
+    },
+    {
+      "id": 899313721,
+      "sku": "ON-8993137-WINT-6",
+      "title": "US 6 / UK 4 - Winter / Kasha",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9497042d-7c16-4234-84ba-58de13dbc448.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4"
+        },
+        {
+          "option_name": "Color",
+          "name": "Winter / Kasha"
+        }
+      ]
+    },
+    {
+      "id": 899313722,
+      "sku": "ON-8993137-WINT-9",
+      "title": "US 9 / UK 7 - Winter / Kasha",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9497042d-7c16-4234-84ba-58de13dbc448.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Winter / Kasha"
+        }
+      ]
+    },
+    {
+      "id": 899313723,
+      "sku": "ON-8993137-WINT-8.5",
+      "title": "US 8.5 / UK 6.5 - Winter / Kasha",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9497042d-7c16-4234-84ba-58de13dbc448.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Winter / Kasha"
+        }
+      ]
+    },
+    {
+      "id": 899313724,
+      "sku": "ON-8993137-WINT-7.5",
+      "title": "US 7.5 / UK 5.5 - Winter / Kasha",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9497042d-7c16-4234-84ba-58de13dbc448.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Winter / Kasha"
+        }
+      ]
+    },
+    {
+      "id": 899313725,
+      "sku": "ON-8993137-WINT-8",
+      "title": "US 8 / UK 6 - Winter / Kasha",
+      "price": "14398.00",
+      "compare_at_price": "19198.00",
+      "source_price": 150.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9497042d-7c16-4234-84ba-58de13dbc448.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6"
+        },
+        {
+          "option_name": "Color",
+          "name": "Winter / Kasha"
+        }
+      ]
+    },
+    {
+      "id": 899313726,
+      "sku": "ON-8993137-GRAP-11",
+      "title": "US 11 / UK 9 - Graphite / Ink",
+      "price": "19198.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bc6841e0-2834-46d8-bf7f-5eebebaef002.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Graphite / Ink"
+        }
+      ]
+    },
+    {
+      "id": 899313727,
+      "sku": "ON-8993137-GRAP-5",
+      "title": "US 5 / UK 3 - Graphite / Ink",
+      "price": "19198.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bc6841e0-2834-46d8-bf7f-5eebebaef002.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3"
+        },
+        {
+          "option_name": "Color",
+          "name": "Graphite / Ink"
+        }
+      ]
+    },
+    {
+      "id": 899313728,
+      "sku": "ON-8993137-GRAP-6.5",
+      "title": "US 6.5 / UK 4.5 - Graphite / Ink",
+      "price": "19198.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bc6841e0-2834-46d8-bf7f-5eebebaef002.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Graphite / Ink"
+        }
+      ]
+    },
+    {
+      "id": 899313729,
+      "sku": "ON-8993137-GRAP-10",
+      "title": "US 10 / UK 8 - Graphite / Ink",
+      "price": "19198.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bc6841e0-2834-46d8-bf7f-5eebebaef002.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Graphite / Ink"
+        }
+      ]
+    },
+    {
+      "id": 899313730,
+      "sku": "ON-8993137-GRAP-8",
+      "title": "US 8 / UK 6 - Graphite / Ink",
+      "price": "19198.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bc6841e0-2834-46d8-bf7f-5eebebaef002.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6"
+        },
+        {
+          "option_name": "Color",
+          "name": "Graphite / Ink"
+        }
+      ]
+    },
+    {
+      "id": 899313731,
+      "sku": "ON-8993137-GRAP-9",
+      "title": "US 9 / UK 7 - Graphite / Ink",
+      "price": "19198.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bc6841e0-2834-46d8-bf7f-5eebebaef002.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Graphite / Ink"
+        }
+      ]
+    },
+    {
+      "id": 899313732,
+      "sku": "ON-8993137-GRAP-5.5",
+      "title": "US 5.5 / UK 3.5 - Graphite / Ink",
+      "price": "19198.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bc6841e0-2834-46d8-bf7f-5eebebaef002.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Graphite / Ink"
+        }
+      ]
+    },
+    {
+      "id": 899313733,
+      "sku": "ON-8993137-GRAP-6",
+      "title": "US 6 / UK 4 - Graphite / Ink",
+      "price": "19198.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bc6841e0-2834-46d8-bf7f-5eebebaef002.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4"
+        },
+        {
+          "option_name": "Color",
+          "name": "Graphite / Ink"
+        }
+      ]
+    },
+    {
+      "id": 899313734,
+      "sku": "ON-8993137-GRAP-10.5",
+      "title": "US 10.5 / UK 8.5 - Graphite / Ink",
+      "price": "19198.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bc6841e0-2834-46d8-bf7f-5eebebaef002.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Graphite / Ink"
+        }
+      ]
+    },
+    {
+      "id": 899313735,
+      "sku": "ON-8993137-GRAP-7",
+      "title": "US 7 / UK 5 - Graphite / Ink",
+      "price": "19198.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bc6841e0-2834-46d8-bf7f-5eebebaef002.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Graphite / Ink"
+        }
+      ]
+    },
+    {
+      "id": 899313736,
+      "sku": "ON-8993137-GRAP-9.5",
+      "title": "US 9.5 / UK 7.5 - Graphite / Ink",
+      "price": "19198.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bc6841e0-2834-46d8-bf7f-5eebebaef002.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Graphite / Ink"
+        }
+      ]
+    },
+    {
+      "id": 899313737,
+      "sku": "ON-8993137-GRAP-7.5",
+      "title": "US 7.5 / UK 5.5 - Graphite / Ink",
+      "price": "19198.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bc6841e0-2834-46d8-bf7f-5eebebaef002.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Graphite / Ink"
+        }
+      ]
+    },
+    {
+      "id": 899313738,
+      "sku": "ON-8993137-GRAP-8.5",
+      "title": "US 8.5 / UK 6.5 - Graphite / Ink",
+      "price": "19198.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bc6841e0-2834-46d8-bf7f-5eebebaef002.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Graphite / Ink"
         }
       ]
     }
@@ -258,6 +1108,21 @@
     {
       "name": "Size (US)",
       "values": [
+        {
+          "name": "US 5"
+        },
+        {
+          "name": "US 5.5"
+        },
+        {
+          "name": "US 6"
+        },
+        {
+          "name": "US 6.5"
+        },
+        {
+          "name": "US 7"
+        },
         {
           "name": "US 7.5"
         },
@@ -288,6 +1153,21 @@
       "name": "Size (UK)",
       "values": [
         {
+          "name": "UK 3"
+        },
+        {
+          "name": "UK 3.5"
+        },
+        {
+          "name": "UK 4"
+        },
+        {
+          "name": "UK 4.5"
+        },
+        {
+          "name": "UK 5"
+        },
+        {
           "name": "UK 5.5"
         },
         {
@@ -317,31 +1197,40 @@
       "name": "Color",
       "values": [
         {
-          "name": "Glacier Alloy"
+          "name": "Glacier / Alloy"
         },
         {
-          "name": "Graphite Ink"
+          "name": "Winter / Kasha"
         },
         {
-          "name": "Winter Kasha"
+          "name": "Graphite / Ink"
         }
       ]
     }
   ],
   "tags": [
-    "on-shoes",
     "footwear",
-    "sneakers",
+    "on-shoes",
     "running",
-    "women",
-    "sizes-8"
+    "sizes-13",
+    "sizes-8",
+    "sneakers",
+    "women"
   ],
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T20:24:43Z",
+  "last_verified_at": "2026-09-19T07:39:33Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-18T20:24:43Z",
+  "updated_at": "2026-09-19T07:39:33Z",
+  "price_range_usd": {
+    "min": 150.0,
+    "max": 200.0
+  },
+  "price_range_inr": {
+    "min": 14398.0,
+    "max": 19198.0
+  },
   "status": "ACTIVE",
-  "validation_warnings": []
+  "is_active": true
 }

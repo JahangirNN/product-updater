@@ -8,9 +8,9 @@
   "product_type": "Athletic Shoes",
   "source_sku": "HOKA-6962615-5",
   "source_price": 155.0,
-  "source_compare_at_price": 155.0,
+  "source_compare_at_price": null,
   "current_price": 14883.0,
-  "compare_at_price": 14883.0,
+  "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -21,245 +21,44 @@
     "Gender": "Women",
     "Category": "Footwear",
     "Material": "Leather and textile upper/ textile lining/ synthetic sole",
-    "Midsole Drop": "cushioned",
-    "Cushioning": "EVA",
+    "Midsole Drop": "8mm",
+    "Cushioning": "Plush maximal buoyant cushioning",
     "Item Number": "6962615",
     "Available Sizes (US)": "US 5, US 5.5, US 6, US 6.5, US 7, US 7.5, US 8, US 8.5, US 9, US 9.5, US 10, US 10.5, US 11",
     "Available Sizes (UK)": "UK 3, UK 3.5, UK 4, UK 4.5, UK 5, UK 5.5, UK 6, UK 6.5, UK 7, UK 7.5, UK 8, UK 8.5, UK 9"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> HOKA</li>\n      <li><strong>Gender:</strong> Women</li>\n      <li><strong>Material:</strong> Leather and textile upper/ textile lining/ synthetic sole</li>\n      <li><strong>Midsole Drop:</strong> cushioned</li>\n      <li><strong>Cushioning:</strong> EVA</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 HOKA Shoe Size &amp; Conversion Guide (Women)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9</td>\n          <td style=\"padding: 6px; color: #666;\">EU 43</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> HOKA</li>\n      <li><strong>Gender:</strong> Women</li>\n      <li><strong>Material:</strong> Leather and textile upper/ textile lining/ synthetic sole</li>\n      <li><strong>Midsole Drop:</strong> 8mm</li>\n      <li><strong>Cushioning:</strong> Plush maximal buoyant cushioning</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 HOKA Shoe Size &amp; Conversion Guide (Women)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9</td>\n          <td style=\"padding: 6px; color: #666;\">EU 43</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/b2f634af-143e-4f93-ab65-e741782ecbf6.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/ca95e2c3-a09b-43f3-ba1a-e5861b9a31fe.jpeg?crop=pad",
     "https://n.nordstrommedia.com/it/cf0bc818-d6b3-4184-9674-9f6379a2f137.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/49bdbea3-99c8-4ece-adf8-ea69a3013183.jpeg?crop=pad&trim=color"
+    "https://n.nordstrommedia.com/it/49bdbea3-99c8-4ece-adf8-ea69a3013183.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/9e260845-fbae-4ba7-b651-ccb729f9b24c.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/1365707c-bb25-4124-86fc-c372fda09eec.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/0a5ed394-eef0-4ae1-9427-73151cacec04.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/bb98e146-2045-43bd-aaf7-c30fa19d7655.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/cadb012e-9ccc-4644-bc71-a5f8dec42bc3.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/db2ab073-58b5-4b15-a297-e7b32c88b011.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/4b96fae0-a3c8-4da1-af63-66aec9e1d4f8.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/cb86c696-cddf-4279-a349-5f0d521cb634.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/429d8fe6-5afc-4922-8e19-a15ba395b517.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/3ec40c70-d326-4da6-9165-c8ae7d08f363.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/4aaacc63-ae8f-49c3-aa91-eaed20249ee7.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/632cfba9-2956-44d3-b273-e35d25e38572.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/b7754515-18bf-4d4f-bc00-9edece147cf2.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/69f5d848-b1c9-4d95-82b6-e7a59504bac9.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/3f5a19d8-ed70-452f-ae18-e86969ea383c.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/860b33f2-9dbb-445e-aff5-dd1059e25d46.jpeg?crop=pad&trim=color"
   ],
   "variants": [
     {
       "id": 696261500,
-      "sku": "HOKA-6962615-5",
-      "title": "US 5 / UK 3 - OXFORD TAN / PEACH WHIP",
-      "price": "14883.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": 155.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 3"
-        },
-        {
-          "option_name": "Color",
-          "name": "OXFORD TAN / PEACH WHIP"
-        }
-      ]
-    },
-    {
-      "id": 696261501,
-      "sku": "HOKA-6962615-5.5",
-      "title": "US 5.5 / UK 3.5 - OXFORD TAN / PEACH WHIP",
-      "price": "14883.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": 155.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 5.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 3.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "OXFORD TAN / PEACH WHIP"
-        }
-      ]
-    },
-    {
-      "id": 696261502,
-      "sku": "HOKA-6962615-6",
-      "title": "US 6 / UK 4 - OXFORD TAN / PEACH WHIP",
-      "price": "14883.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": 155.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 6"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 4"
-        },
-        {
-          "option_name": "Color",
-          "name": "OXFORD TAN / PEACH WHIP"
-        }
-      ]
-    },
-    {
-      "id": 696261503,
-      "sku": "HOKA-6962615-6.5",
-      "title": "US 6.5 / UK 4.5 - OXFORD TAN / PEACH WHIP",
-      "price": "14883.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": 155.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 6.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 4.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "OXFORD TAN / PEACH WHIP"
-        }
-      ]
-    },
-    {
-      "id": 696261504,
-      "sku": "HOKA-6962615-7",
-      "title": "US 7 / UK 5 - OXFORD TAN / PEACH WHIP",
-      "price": "14883.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": 155.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 7"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 5"
-        },
-        {
-          "option_name": "Color",
-          "name": "OXFORD TAN / PEACH WHIP"
-        }
-      ]
-    },
-    {
-      "id": 696261505,
-      "sku": "HOKA-6962615-7.5",
-      "title": "US 7.5 / UK 5.5 - OXFORD TAN / PEACH WHIP",
-      "price": "14883.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": 155.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 7.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 5.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "OXFORD TAN / PEACH WHIP"
-        }
-      ]
-    },
-    {
-      "id": 696261506,
-      "sku": "HOKA-6962615-8",
-      "title": "US 8 / UK 6 - OXFORD TAN / PEACH WHIP",
-      "price": "14883.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": 155.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 8"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 6"
-        },
-        {
-          "option_name": "Color",
-          "name": "OXFORD TAN / PEACH WHIP"
-        }
-      ]
-    },
-    {
-      "id": 696261507,
-      "sku": "HOKA-6962615-8.5",
-      "title": "US 8.5 / UK 6.5 - OXFORD TAN / PEACH WHIP",
-      "price": "14883.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": 155.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 8.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 6.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "OXFORD TAN / PEACH WHIP"
-        }
-      ]
-    },
-    {
-      "id": 696261508,
       "sku": "HOKA-6962615-9",
-      "title": "US 9 / UK 7 - OXFORD TAN / PEACH WHIP",
+      "title": "US 9 / UK 7 - Oxford Tan / Peach Whip",
       "price": "14883.00",
       "compare_at_price": null,
       "source_price": 155.0,
-      "source_compare_at_price": 155.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -275,72 +74,18 @@
         },
         {
           "option_name": "Color",
-          "name": "OXFORD TAN / PEACH WHIP"
+          "name": "Oxford Tan / Peach Whip"
         }
       ]
     },
     {
-      "id": 696261509,
-      "sku": "HOKA-6962615-9.5",
-      "title": "US 9.5 / UK 7.5 - OXFORD TAN / PEACH WHIP",
-      "price": "14883.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": 155.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 9.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 7.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "OXFORD TAN / PEACH WHIP"
-        }
-      ]
-    },
-    {
-      "id": 696261510,
-      "sku": "HOKA-6962615-10",
-      "title": "US 10 / UK 8 - OXFORD TAN / PEACH WHIP",
-      "price": "14883.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": 155.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 10"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 8"
-        },
-        {
-          "option_name": "Color",
-          "name": "OXFORD TAN / PEACH WHIP"
-        }
-      ]
-    },
-    {
-      "id": 696261511,
+      "id": 696261501,
       "sku": "HOKA-6962615-10.5",
-      "title": "US 10.5 / UK 8.5 - OXFORD TAN / PEACH WHIP",
+      "title": "US 10.5 / UK 8.5 - Oxford Tan / Peach Whip",
       "price": "14883.00",
       "compare_at_price": null,
       "source_price": 155.0,
-      "source_compare_at_price": 155.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -356,18 +101,234 @@
         },
         {
           "option_name": "Color",
-          "name": "OXFORD TAN / PEACH WHIP"
+          "name": "Oxford Tan / Peach Whip"
         }
       ]
     },
     {
-      "id": 696261512,
-      "sku": "HOKA-6962615-11",
-      "title": "US 11 / UK 9 - OXFORD TAN / PEACH WHIP",
+      "id": 696261502,
+      "sku": "HOKA-6962615-7.5",
+      "title": "US 7.5 / UK 5.5 - Oxford Tan / Peach Whip",
       "price": "14883.00",
       "compare_at_price": null,
       "source_price": 155.0,
-      "source_compare_at_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Oxford Tan / Peach Whip"
+        }
+      ]
+    },
+    {
+      "id": 696261503,
+      "sku": "HOKA-6962615-5.5",
+      "title": "US 5.5 / UK 3.5 - Oxford Tan / Peach Whip",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Oxford Tan / Peach Whip"
+        }
+      ]
+    },
+    {
+      "id": 696261504,
+      "sku": "HOKA-6962615-8",
+      "title": "US 8 / UK 6 - Oxford Tan / Peach Whip",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6"
+        },
+        {
+          "option_name": "Color",
+          "name": "Oxford Tan / Peach Whip"
+        }
+      ]
+    },
+    {
+      "id": 696261505,
+      "sku": "HOKA-6962615-5",
+      "title": "US 5 / UK 3 - Oxford Tan / Peach Whip",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3"
+        },
+        {
+          "option_name": "Color",
+          "name": "Oxford Tan / Peach Whip"
+        }
+      ]
+    },
+    {
+      "id": 696261506,
+      "sku": "HOKA-6962615-6.5",
+      "title": "US 6.5 / UK 4.5 - Oxford Tan / Peach Whip",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Oxford Tan / Peach Whip"
+        }
+      ]
+    },
+    {
+      "id": 696261507,
+      "sku": "HOKA-6962615-9.5",
+      "title": "US 9.5 / UK 7.5 - Oxford Tan / Peach Whip",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Oxford Tan / Peach Whip"
+        }
+      ]
+    },
+    {
+      "id": 696261508,
+      "sku": "HOKA-6962615-10",
+      "title": "US 10 / UK 8 - Oxford Tan / Peach Whip",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Oxford Tan / Peach Whip"
+        }
+      ]
+    },
+    {
+      "id": 696261509,
+      "sku": "HOKA-6962615-7",
+      "title": "US 7 / UK 5 - Oxford Tan / Peach Whip",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Oxford Tan / Peach Whip"
+        }
+      ]
+    },
+    {
+      "id": 696261510,
+      "sku": "HOKA-6962615-11",
+      "title": "US 11 / UK 9 - Oxford Tan / Peach Whip",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -383,7 +344,763 @@
         },
         {
           "option_name": "Color",
-          "name": "OXFORD TAN / PEACH WHIP"
+          "name": "Oxford Tan / Peach Whip"
+        }
+      ]
+    },
+    {
+      "id": 696261511,
+      "sku": "HOKA-6962615-6",
+      "title": "US 6 / UK 4 - Oxford Tan / Peach Whip",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4"
+        },
+        {
+          "option_name": "Color",
+          "name": "Oxford Tan / Peach Whip"
+        }
+      ]
+    },
+    {
+      "id": 696261512,
+      "sku": "HOKA-6962615-8.5",
+      "title": "US 8.5 / UK 6.5 - Oxford Tan / Peach Whip",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/bf6eb8c4-dc08-4dc5-8236-5b21a745b221.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Oxford Tan / Peach Whip"
+        }
+      ]
+    },
+    {
+      "id": 696261513,
+      "sku": "HOKA-6962615-FOGG-10.5",
+      "title": "US 10.5 / UK 8.5 - Foggy Night / Pale Rose",
+      "price": "8186.00",
+      "compare_at_price": "14883.00",
+      "source_price": 85.25,
+      "source_compare_at_price": 155.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/0a5ed394-eef0-4ae1-9427-73151cacec04.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Foggy Night / Pale Rose"
+        }
+      ]
+    },
+    {
+      "id": 696261514,
+      "sku": "HOKA-6962615-FOGG-6.5",
+      "title": "US 6.5 / UK 4.5 - Foggy Night / Pale Rose",
+      "price": "8186.00",
+      "compare_at_price": "14883.00",
+      "source_price": 85.25,
+      "source_compare_at_price": 155.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/0a5ed394-eef0-4ae1-9427-73151cacec04.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Foggy Night / Pale Rose"
+        }
+      ]
+    },
+    {
+      "id": 696261515,
+      "sku": "HOKA-6962615-FOGG-9",
+      "title": "US 9 / UK 7 - Foggy Night / Pale Rose",
+      "price": "8186.00",
+      "compare_at_price": "14883.00",
+      "source_price": 85.25,
+      "source_compare_at_price": 155.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/0a5ed394-eef0-4ae1-9427-73151cacec04.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Foggy Night / Pale Rose"
+        }
+      ]
+    },
+    {
+      "id": 696261516,
+      "sku": "HOKA-6962615-FOGG-6",
+      "title": "US 6 / UK 4 - Foggy Night / Pale Rose",
+      "price": "8186.00",
+      "compare_at_price": "14883.00",
+      "source_price": 85.25,
+      "source_compare_at_price": 155.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/0a5ed394-eef0-4ae1-9427-73151cacec04.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4"
+        },
+        {
+          "option_name": "Color",
+          "name": "Foggy Night / Pale Rose"
+        }
+      ]
+    },
+    {
+      "id": 696261517,
+      "sku": "HOKA-6962615-FOGG-5.5",
+      "title": "US 5.5 / UK 3.5 - Foggy Night / Pale Rose",
+      "price": "8186.00",
+      "compare_at_price": "14883.00",
+      "source_price": 85.25,
+      "source_compare_at_price": 155.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/0a5ed394-eef0-4ae1-9427-73151cacec04.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Foggy Night / Pale Rose"
+        }
+      ]
+    },
+    {
+      "id": 696261518,
+      "sku": "HOKA-6962615-FOGG-9.5",
+      "title": "US 9.5 / UK 7.5 - Foggy Night / Pale Rose",
+      "price": "8186.00",
+      "compare_at_price": "14883.00",
+      "source_price": 85.25,
+      "source_compare_at_price": 155.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/0a5ed394-eef0-4ae1-9427-73151cacec04.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Foggy Night / Pale Rose"
+        }
+      ]
+    },
+    {
+      "id": 696261519,
+      "sku": "HOKA-6962615-FOGG-8.5",
+      "title": "US 8.5 / UK 6.5 - Foggy Night / Pale Rose",
+      "price": "8186.00",
+      "compare_at_price": "14883.00",
+      "source_price": 85.25,
+      "source_compare_at_price": 155.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/0a5ed394-eef0-4ae1-9427-73151cacec04.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Foggy Night / Pale Rose"
+        }
+      ]
+    },
+    {
+      "id": 696261520,
+      "sku": "HOKA-6962615-FOGG-5",
+      "title": "US 5 / UK 3 - Foggy Night / Pale Rose",
+      "price": "8186.00",
+      "compare_at_price": "14883.00",
+      "source_price": 85.25,
+      "source_compare_at_price": 155.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/0a5ed394-eef0-4ae1-9427-73151cacec04.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3"
+        },
+        {
+          "option_name": "Color",
+          "name": "Foggy Night / Pale Rose"
+        }
+      ]
+    },
+    {
+      "id": 696261521,
+      "sku": "HOKA-6962615-FOGG-8",
+      "title": "US 8 / UK 6 - Foggy Night / Pale Rose",
+      "price": "8186.00",
+      "compare_at_price": "14883.00",
+      "source_price": 85.25,
+      "source_compare_at_price": 155.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/0a5ed394-eef0-4ae1-9427-73151cacec04.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6"
+        },
+        {
+          "option_name": "Color",
+          "name": "Foggy Night / Pale Rose"
+        }
+      ]
+    },
+    {
+      "id": 696261522,
+      "sku": "HOKA-6962615-FOGG-10",
+      "title": "US 10 / UK 8 - Foggy Night / Pale Rose",
+      "price": "8186.00",
+      "compare_at_price": "14883.00",
+      "source_price": 85.25,
+      "source_compare_at_price": 155.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/0a5ed394-eef0-4ae1-9427-73151cacec04.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Foggy Night / Pale Rose"
+        }
+      ]
+    },
+    {
+      "id": 696261523,
+      "sku": "HOKA-6962615-FOGG-7",
+      "title": "US 7 / UK 5 - Foggy Night / Pale Rose",
+      "price": "8186.00",
+      "compare_at_price": "14883.00",
+      "source_price": 85.25,
+      "source_compare_at_price": 155.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/0a5ed394-eef0-4ae1-9427-73151cacec04.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Foggy Night / Pale Rose"
+        }
+      ]
+    },
+    {
+      "id": 696261524,
+      "sku": "HOKA-6962615-FOGG-11",
+      "title": "US 11 / UK 9 - Foggy Night / Pale Rose",
+      "price": "8186.00",
+      "compare_at_price": "14883.00",
+      "source_price": 85.25,
+      "source_compare_at_price": 155.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/0a5ed394-eef0-4ae1-9427-73151cacec04.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Foggy Night / Pale Rose"
+        }
+      ]
+    },
+    {
+      "id": 696261525,
+      "sku": "HOKA-6962615-FOGG-7.5",
+      "title": "US 7.5 / UK 5.5 - Foggy Night / Pale Rose",
+      "price": "8186.00",
+      "compare_at_price": "14883.00",
+      "source_price": 85.25,
+      "source_compare_at_price": 155.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/0a5ed394-eef0-4ae1-9427-73151cacec04.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Foggy Night / Pale Rose"
+        }
+      ]
+    },
+    {
+      "id": 696261526,
+      "sku": "HOKA-6962615-ILLU-10",
+      "title": "US 10 / UK 8 - Illusion / Slate",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/429d8fe6-5afc-4922-8e19-a15ba395b517.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Illusion / Slate"
+        }
+      ]
+    },
+    {
+      "id": 696261527,
+      "sku": "HOKA-6962615-ILLU-8",
+      "title": "US 8 / UK 6 - Illusion / Slate",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/429d8fe6-5afc-4922-8e19-a15ba395b517.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6"
+        },
+        {
+          "option_name": "Color",
+          "name": "Illusion / Slate"
+        }
+      ]
+    },
+    {
+      "id": 696261528,
+      "sku": "HOKA-6962615-ILLU-6",
+      "title": "US 6 / UK 4 - Illusion / Slate",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/429d8fe6-5afc-4922-8e19-a15ba395b517.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4"
+        },
+        {
+          "option_name": "Color",
+          "name": "Illusion / Slate"
+        }
+      ]
+    },
+    {
+      "id": 696261529,
+      "sku": "HOKA-6962615-ILLU-5.5",
+      "title": "US 5.5 / UK 3.5 - Illusion / Slate",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/429d8fe6-5afc-4922-8e19-a15ba395b517.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Illusion / Slate"
+        }
+      ]
+    },
+    {
+      "id": 696261530,
+      "sku": "HOKA-6962615-ILLU-7.5",
+      "title": "US 7.5 / UK 5.5 - Illusion / Slate",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/429d8fe6-5afc-4922-8e19-a15ba395b517.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Illusion / Slate"
+        }
+      ]
+    },
+    {
+      "id": 696261531,
+      "sku": "HOKA-6962615-ILLU-8.5",
+      "title": "US 8.5 / UK 6.5 - Illusion / Slate",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/429d8fe6-5afc-4922-8e19-a15ba395b517.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Illusion / Slate"
+        }
+      ]
+    },
+    {
+      "id": 696261532,
+      "sku": "HOKA-6962615-ILLU-9.5",
+      "title": "US 9.5 / UK 7.5 - Illusion / Slate",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/429d8fe6-5afc-4922-8e19-a15ba395b517.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Illusion / Slate"
+        }
+      ]
+    },
+    {
+      "id": 696261533,
+      "sku": "HOKA-6962615-ILLU-9",
+      "title": "US 9 / UK 7 - Illusion / Slate",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/429d8fe6-5afc-4922-8e19-a15ba395b517.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Illusion / Slate"
+        }
+      ]
+    },
+    {
+      "id": 696261534,
+      "sku": "HOKA-6962615-ILLU-7",
+      "title": "US 7 / UK 5 - Illusion / Slate",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/429d8fe6-5afc-4922-8e19-a15ba395b517.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Illusion / Slate"
+        }
+      ]
+    },
+    {
+      "id": 696261535,
+      "sku": "HOKA-6962615-ILLU-5",
+      "title": "US 5 / UK 3 - Illusion / Slate",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/429d8fe6-5afc-4922-8e19-a15ba395b517.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3"
+        },
+        {
+          "option_name": "Color",
+          "name": "Illusion / Slate"
+        }
+      ]
+    },
+    {
+      "id": 696261536,
+      "sku": "HOKA-6962615-ILLU-6.5",
+      "title": "US 6.5 / UK 4.5 - Illusion / Slate",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/429d8fe6-5afc-4922-8e19-a15ba395b517.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Illusion / Slate"
+        }
+      ]
+    },
+    {
+      "id": 696261537,
+      "sku": "HOKA-6962615-ILLU-11",
+      "title": "US 11 / UK 9 - Illusion / Slate",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/429d8fe6-5afc-4922-8e19-a15ba395b517.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Illusion / Slate"
+        }
+      ]
+    },
+    {
+      "id": 696261538,
+      "sku": "HOKA-6962615-ILLU-10.5",
+      "title": "US 10.5 / UK 8.5 - Illusion / Slate",
+      "price": "14883.00",
+      "compare_at_price": null,
+      "source_price": 155.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/429d8fe6-5afc-4922-8e19-a15ba395b517.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Illusion / Slate"
         }
       ]
     }
@@ -481,31 +1198,39 @@
       "name": "Color",
       "values": [
         {
-          "name": "OXFORD TAN / PEACH WHIP"
+          "name": "Oxford Tan / Peach Whip"
         },
         {
-          "name": "FOGGY NIGHT / PALE ROSE"
+          "name": "Foggy Night / Pale Rose"
         },
         {
-          "name": "ILLUSION / SLATE"
+          "name": "Illusion / Slate"
         }
       ]
     }
   ],
   "tags": [
-    "hoka-shoes",
     "footwear",
-    "sneakers",
+    "hoka-shoes",
     "running",
-    "women",
-    "sizes-13"
+    "sizes-13",
+    "sneakers",
+    "women"
   ],
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T19:27:03Z",
+  "last_verified_at": "2026-09-19T08:17:44Z",
   "created_at": "2026-09-18T05:46:57Z",
-  "updated_at": "2026-09-18T19:27:03Z",
-  "is_active": true,
-  "shopify_sync_pending": true
+  "updated_at": "2026-09-19T08:17:44Z",
+  "price_range_usd": {
+    "min": 85.25,
+    "max": 155.0
+  },
+  "price_range_inr": {
+    "min": 8186.0,
+    "max": 14883.0
+  },
+  "status": "ACTIVE",
+  "is_active": true
 }

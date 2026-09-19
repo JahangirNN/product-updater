@@ -157,6 +157,9 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({ product, onSelect })
               {variantCount > 0 && (
                 <span className="px-2 py-0.5 rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/40 font-mono">
                   👟 {variantCount} Sizes
+                  {product.product_options?.find(o => o.name === 'Color')?.values?.length && product.product_options.find(o => o.name === 'Color')!.values.length > 1
+                    ? ` (${product.product_options.find(o => o.name === 'Color')!.values.length} Colors)`
+                    : ''}
                 </span>
               )}
             </>
@@ -195,13 +198,19 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({ product, onSelect })
         </div>
 
         {/* Pricing Area (Dual Currency) */}
-        <div className="pt-2 border-t border-zinc-800/60 flex items-baseline justify-between">
+        <div className="pt-2 border-t border-zinc-800/60 flex items-baseline justify-between gap-1">
           <div>
             {/* Primary INR Price */}
-            <div className="flex items-baseline gap-1.5">
-              <span className="text-sm sm:text-base font-bold text-white tracking-tight">
-                ₹{product.current_price?.toLocaleString('en-IN')}
-              </span>
+            <div className="flex items-baseline gap-1.5 flex-wrap">
+              {product.price_range_inr && product.price_range_inr.min < product.price_range_inr.max ? (
+                <span className="text-xs sm:text-sm font-bold text-white tracking-tight">
+                  ₹{product.price_range_inr.min.toLocaleString('en-IN')} – ₹{product.price_range_inr.max.toLocaleString('en-IN')}
+                </span>
+              ) : (
+                <span className="text-sm sm:text-base font-bold text-white tracking-tight">
+                  ₹{product.current_price?.toLocaleString('en-IN')}
+                </span>
+              )}
               {product.compare_at_price && product.compare_at_price > product.current_price && (
                 <span className="text-[11px] text-zinc-500 line-through">
                   ₹{product.compare_at_price?.toLocaleString('en-IN')}
@@ -211,8 +220,10 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({ product, onSelect })
           </div>
 
           {/* Secondary Source USD Price */}
-          <div className="text-[11px] font-mono text-amber-400/80 font-medium">
-            ${product.source_price?.toFixed(2)} USD
+          <div className="text-[11px] font-mono text-amber-400/80 font-medium whitespace-nowrap">
+            {product.price_range_usd && product.price_range_usd.min < product.price_range_usd.max
+              ? `$${product.price_range_usd.min.toFixed(0)} - $${product.price_range_usd.max.toFixed(0)} USD`
+              : `$${product.source_price?.toFixed(2)} USD`}
           </div>
         </div>
       </div>

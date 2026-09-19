@@ -115,6 +115,34 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
   const cushioning = specs['Cushioning'] || 'CloudTec cushioning';
   const shoeMaterial = product.material || specs['Material'] || 'Textile and synthetic upper';
 
+  // Multi-colorway filtering and dynamic price resolution
+  const [selectedColor, setSelectedColor] = useState<string>('all');
+
+  const availableColors = Array.from(new Set(
+    (product.variants || []).map((v: any) => {
+      const cOpt = v.option_values?.find((o: any) => o.option_name === 'Color')?.name;
+      if (cOpt) return cOpt;
+      if (v.title && v.title.includes(' - ')) return v.title.split(' - ').pop();
+      return '';
+    }).filter(Boolean)
+  )) as string[];
+
+  const displayedVariants = selectedColor === 'all'
+    ? (product.variants || [])
+    : (product.variants || []).filter((v: any) => {
+        const cOpt = v.option_values?.find((o: any) => o.option_name === 'Color')?.name;
+        if (cOpt) return cOpt.toLowerCase() === selectedColor.toLowerCase();
+        return v.title?.toLowerCase().includes(selectedColor.toLowerCase());
+      });
+
+  const activeColorPrices = displayedVariants.map((v: any) => parseFloat(v.price || '0')).filter(p => p > 0);
+  const activeColorSourcePrices = displayedVariants.map((v: any) => v.source_price || 0).filter(p => p > 0);
+  const minActivePrice = activeColorPrices.length > 0 ? Math.min(...activeColorPrices) : product.current_price;
+  const maxActivePrice = activeColorPrices.length > 0 ? Math.max(...activeColorPrices) : product.current_price;
+  const minActiveSource = activeColorSourcePrices.length > 0 ? Math.min(...activeColorSourcePrices) : product.source_price;
+  const maxActiveSource = activeColorSourcePrices.length > 0 ? Math.max(...activeColorSourcePrices) : product.source_price;
+  const hasGlobalPriceRange = product.price_range_usd && product.price_range_usd.min < product.price_range_usd.max;
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/80 backdrop-blur-md transition-opacity animate-in fade-in"
@@ -210,11 +238,21 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                 <div className="text-[10px] text-zinc-400 uppercase tracking-wider font-semibold">
                   Shopify Storefront Price (INR)
                 </div>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-xl sm:text-2xl font-extrabold text-white">
-                    ₹{product.current_price?.toLocaleString('en-IN')}
-                  </span>
-                  {product.compare_at_price && product.compare_at_price > product.current_price && (
+                <div className="flex items-baseline gap-2 flex-wrap">
+                  {selectedColor === 'all' && hasGlobalPriceRange ? (
+                    <span className="text-lg sm:text-2xl font-extrabold text-white">
+                      ₹{product.price_range_inr?.min?.toLocaleString('en-IN') || product.current_price?.toLocaleString('en-IN')} – ₹{product.price_range_inr?.max?.toLocaleString('en-IN') || product.current_price?.toLocaleString('en-IN')}
+                    </span>
+                  ) : minActivePrice < maxActivePrice ? (
+                    <span className="text-lg sm:text-2xl font-extrabold text-white">
+                      ₹{minActivePrice.toLocaleString('en-IN')} – ₹{maxActivePrice.toLocaleString('en-IN')}
+                    </span>
+                  ) : (
+                    <span className="text-xl sm:text-2xl font-extrabold text-white">
+                      ₹{minActivePrice?.toLocaleString('en-IN')}
+                    </span>
+                  )}
+                  {product.compare_at_price && product.compare_at_price > minActivePrice && (
                     <span className="text-sm text-zinc-500 line-through">
                       ₹{product.compare_at_price?.toLocaleString('en-IN')}
                     </span>
@@ -226,8 +264,14 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                 <div className="text-[10px] text-zinc-400 uppercase tracking-wider font-semibold">
                   Original Source Price
                 </div>
-                <div className="text-base font-mono font-bold text-amber-400">
-                  ${product.source_price?.toFixed(2)} USD
+                <div className="text-sm sm:text-base font-mono font-bold text-amber-400">
+                  {selectedColor === 'all' && hasGlobalPriceRange ? (
+                    `$${product.price_range_usd?.min?.toFixed(2)} – $${product.price_range_usd?.max?.toFixed(2)} USD`
+                  ) : minActiveSource < maxActiveSource ? (
+                    `$${minActiveSource.toFixed(2)} – $${maxActiveSource.toFixed(2)} USD`
+                  ) : (
+                    `$${minActiveSource.toFixed(2)} USD`
+                  )}
                 </div>
                 {product.forex_rate_used && (
                   <div className="text-[10px] text-zinc-500 font-mono">
@@ -240,16 +284,70 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
 
           {/* Interactive Size & Measurement Guide Table */}
           <div className="space-y-3">
-            <div className="flex items-center gap-2 text-sm font-bold text-zinc-200">
-              <Ruler className="w-4 h-4 text-amber-400" />
-              <span>
-                {isShoe 
-                  ? `Footwear Size & Conversion Matrix (${gender})` 
-                  : isBelt 
-                  ? `Belt Size & Measurement Guide (${gender})` 
-                  : 'Size & Measurement Guide'}
+            <div className="flex items-center justify-between gap-2 flex-wrap">
+              <div className="flex items-center gap-2 text-sm font-bold text-zinc-200">
+                <Ruler className="w-4 h-4 text-amber-400" />
+                <span>
+                  {isShoe 
+                    ? `Footwear Size & Conversion Matrix (${gender})` 
+                    : isBelt 
+                    ? `Belt Size & Measurement Guide (${gender})` 
+                    : 'Size & Measurement Guide'}
+                </span>
+              </div>
+              <span className="text-xs text-zinc-400 font-mono">
+                Showing {displayedVariants.length} of {product.variants?.length || 0} variants
               </span>
             </div>
+
+            {/* Color Swatch Filter Pills */}
+            {availableColors.length > 1 && (
+              <div className="flex items-center gap-1.5 flex-wrap p-2 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                <span className="text-[11px] text-zinc-400 font-semibold mr-1">Color:</span>
+                <button
+                  onClick={() => setSelectedColor('all')}
+                  className={`text-xs px-2.5 py-1 rounded-lg font-medium transition-all ${
+                    selectedColor === 'all'
+                      ? 'bg-amber-500 text-zinc-950 font-bold shadow-sm'
+                      : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700/80 border border-zinc-700/50'
+                  }`}
+                >
+                  All ({product.variants?.length})
+                </button>
+                {availableColors.map((cName: string) => {
+                  const isSelected = selectedColor.toLowerCase() === cName.toLowerCase();
+                  const cCount = product.variants.filter((v: any) => {
+                    const cOpt = v.option_values?.find((o: any) => o.option_name === 'Color')?.name;
+                    if (cOpt) return cOpt.toLowerCase() === cName.toLowerCase();
+                    return v.title?.toLowerCase().includes(cName.toLowerCase());
+                  }).length;
+                  return (
+                    <button
+                      key={cName}
+                      onClick={() => {
+                        setSelectedColor(cName);
+                        const varWithImg = product.variants.find((v: any) => {
+                          const cOpt = v.option_values?.find((o: any) => o.option_name === 'Color')?.name;
+                          return (cOpt?.toLowerCase() === cName.toLowerCase() || v.title?.toLowerCase().includes(cName.toLowerCase())) && v.image_url;
+                        });
+                        if (varWithImg && varWithImg.image_url) {
+                          const idx = images.indexOf(varWithImg.image_url);
+                          if (idx !== -1) setActiveImageIndex(idx);
+                        }
+                      }}
+                      className={`text-xs px-2.5 py-1 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
+                        isSelected
+                          ? 'bg-amber-500 text-zinc-950 font-bold shadow-sm'
+                          : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700/80 border border-zinc-700/50'
+                      }`}
+                    >
+                      <span>{cName}</span>
+                      <span className="text-[10px] opacity-75">({cCount})</span>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
 
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 overflow-hidden">
               {isShoe ? (
@@ -266,11 +364,11 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-zinc-800/60 font-mono">
-                      {product.variants.map((v: any, i: number) => {
+                      {displayedVariants.map((v: any, i: number) => {
                         let us = v.size_us || '';
                         let uk = v.size_uk || '';
                         let eu = v.size_eu || '';
-                        let color = '';
+                        let color = v.option_values?.find((o: any) => o.option_name === 'Color')?.name || '';
 
                         if (v.title) {
                           const m = v.title.match(/US\s*([\d.]+)(?:\s*\/\s*UK\s*([\d.]+))?(?:\s*-\s*(.*))?/i);

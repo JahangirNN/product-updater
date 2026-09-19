@@ -10,12 +10,12 @@
   "source_price": 160.0,
   "source_compare_at_price": null,
   "current_price": 15353.0,
-  "compare_at_price": null,
+  "compare_at_price": 15353.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.957344,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "color": "Black/White/Platinum Tint",
   "width": "Width - D - Medium",
   "material": "Breathable mesh upper with durable synthetic overlays and rubber traction outsole",
@@ -187,7 +187,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/F9149101_01",
       "option_values": [
         {
@@ -241,7 +241,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/F9149101_01",
       "option_values": [
         {
@@ -635,7 +635,8 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-18T20:48:10Z",
+  "last_verified_at": "2026-09-19T08:23:52Z",
   "created_at": "2026-09-18T20:48:10Z",
-  "updated_at": "2026-09-18T20:48:10Z"
+  "updated_at": "2026-09-19T08:23:52Z",
+  "shopify_sync_pending": true
 }

@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Leather upper",
   "specifications": {
     "Material": "Leather upper"
@@ -49,7 +49,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cap33_blk_a0",
       "option_values": [
         {
@@ -68,7 +68,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cap33_blk_a0",
       "option_values": [
         {
@@ -87,7 +87,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cap33_blk_a0",
       "option_values": [
         {
@@ -106,7 +106,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cap33_blk_a0",
       "option_values": [
         {
@@ -320,11 +320,11 @@
     "men_shoes"
   ],
   "created_at": "2026-09-13T00:43:06Z",
-  "last_verified_at": "2026-09-18T19:25:29Z",
+  "last_verified_at": "2026-09-19T08:42:46Z",
   "id": "7a4d78d6655f1303",
   "product_id": "7a4d78d6655f1303",
   "store": "coach",
   "shopify_sync_pending": true,
-  "updated_at": "2026-09-18T19:25:29Z",
-  "is_active": true
+  "updated_at": "2026-09-19T08:42:46Z",
+  "is_active": false
 }

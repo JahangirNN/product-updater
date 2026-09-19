@@ -14,8 +14,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.957344,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "color": "Orange/Black/Blue",
   "width": "Width - D - Medium",
   "material": "Breathable mesh upper with durable synthetic overlays and rubber traction outsole",
@@ -50,7 +50,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8150404_01",
       "option_values": [
         {
@@ -212,7 +212,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8150404_01",
       "option_values": [
         {
@@ -402,7 +402,8 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-18T20:48:16Z",
+  "last_verified_at": "2026-09-19T08:24:05Z",
   "created_at": "2026-09-18T20:48:16Z",
-  "updated_at": "2026-09-18T20:48:16Z"
+  "updated_at": "2026-09-19T08:24:05Z",
+  "shopify_sync_pending": true
 }

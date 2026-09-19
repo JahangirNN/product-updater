@@ -7,9 +7,9 @@
   "product_type": "Shoes & Footwear",
   "gender": "Men",
   "source_sku": "CEW29 Z6O  11  D",
-  "source_price": 129.5,
+  "source_price": 155.0,
   "source_compare_at_price": null,
-  "current_price": 12435.0,
+  "current_price": 14830.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -327,11 +327,19 @@
     "men_shoes"
   ],
   "created_at": "2026-09-13T00:41:34Z",
-  "last_verified_at": "2026-09-18T19:24:48Z",
+  "last_verified_at": "2026-09-19T07:24:56Z",
   "id": "4fe00422ec8fece3",
   "product_id": "4fe00422ec8fece3",
   "store": "coach",
-  "updated_at": "2026-09-18T19:24:48Z",
+  "updated_at": "2026-09-19T07:24:56Z",
   "shopify_sync_pending": true,
-  "is_active": true
+  "is_active": true,
+  "price_range_usd": {
+    "min": 155.0,
+    "max": 155.0
+  },
+  "price_range_inr": {
+    "min": 14830.0,
+    "max": 14830.0
+  }
 }

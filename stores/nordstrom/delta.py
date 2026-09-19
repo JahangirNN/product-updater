@@ -141,6 +141,18 @@ def check_price_and_stock(
                 curr_price = old_source_price
 
             size_stock = solve_res.get("size_stock", {})
+            full_matrix = solve_res.get("full_matrix")
+
+            # Build colorway item lookup: (norm_size, color_lower) -> size item dict
+            item_lookup: Dict[Any, Dict[str, Any]] = {}
+            if full_matrix:
+                for cw in full_matrix.get("colorways", []):
+                    c_low = cw.get("color_name", "").strip().lower()
+                    for sz_item in cw.get("sizes", []):
+                        s_norm = norm_size_string(str(sz_item.get("us_size", "")))
+                        item_lookup[(s_norm, c_low)] = sz_item
+                        if s_norm not in item_lookup or sz_item.get("in_stock"):
+                            item_lookup[s_norm] = sz_item
 
             # Map granular per-size stock for every variant
             variants_delta = []
@@ -151,6 +163,7 @@ def check_price_and_stock(
             for v in product.get("variants", []):
                 v_sku = v.get("sku")
                 old_v_in_stock = v.get("in_stock", True)
+                old_v_price = float(v.get("source_price") or 0.0)
 
                 # Extract US size and color
                 us_sz = ""
@@ -167,12 +180,21 @@ def check_price_and_stock(
 
                 norm_sz = norm_size_string(us_sz)
 
-                if size_stock:
+                item_match = item_lookup.get((norm_sz, v_col)) or item_lookup.get(norm_sz)
+                if item_match:
+                    var_avail = bool(item_match.get("in_stock", False))
+                    var_price = float(item_match.get("price_usd") or 0.0) or old_v_price or curr_price
+                    var_comp = item_match.get("compare_price_usd") or v.get("source_compare_at_price")
+                elif size_stock:
                     var_avail = size_stock.get((norm_sz, v_col))
                     if var_avail is None:
                         var_avail = size_stock.get(norm_sz, False)
+                    var_price = old_v_price or curr_price
+                    var_comp = v.get("source_compare_at_price")
                 else:
                     var_avail = curr_avail == "in_stock"
+                    var_price = old_v_price or curr_price
+                    var_comp = v.get("source_compare_at_price")
 
                 if var_avail:
                     has_any_variant_in_stock = True
@@ -188,12 +210,21 @@ def check_price_and_stock(
                 variants_delta.append({
                     "sku": v_sku,
                     "available": var_avail,
-                    "price_usd": curr_price
+                    "price_usd": var_price,
+                    "compare_price_usd": var_comp
                 })
 
-            # If size_stock was available, top-level availability depends on whether ANY variant is in stock
-            if size_stock:
+            # If item_lookup or size_stock was available, re-derive top-level price and availability
+            if full_matrix or size_stock:
                 curr_avail = "in_stock" if has_any_variant_in_stock else "out_of_stock"
+
+            in_stock_prices = [vd["price_usd"] for vd in variants_delta if vd["available"] and vd.get("price_usd", 0) > 0]
+            if in_stock_prices:
+                curr_price = min(in_stock_prices)
+            elif variants_delta:
+                valid_vd_prices = [vd["price_usd"] for vd in variants_delta if vd.get("price_usd", 0) > 0]
+                if valid_vd_prices:
+                    curr_price = min(valid_vd_prices)
 
             price_changed = abs(curr_price - old_source_price) > 0.01 if (old_source_price > 0 and curr_price > 0) else False
             stock_changed = (curr_avail != old_availability)
@@ -327,8 +358,8 @@ def check_price_and_stock(
             is_sold_out = bool(re.search(r'\b(?:sold out|currently unavailable|out of stock)\b', html_text, re.I))
             current_availability = "out_of_stock" if is_sold_out else "in_stock"
 
-            price_match = re.search(r'\$(\d+(?:\.\d{2})?)', html_text)
-            if not price_match and not is_sold_out:
+            p_info = extract_product_from_html(html_text, target_handle=handle)
+            if not p_info and not is_sold_out:
                 return {
                     "status": "blocked",
                     "handle": handle,
@@ -343,7 +374,10 @@ def check_price_and_stock(
                     "error": "No product pricing found in HTTP response (bot challenge or JS required)"
                 }
 
-            current_source_price = float(price_match.group(1)) if price_match else old_source_price
+            current_source_price = float(p_info.get("price_usd") or 0.0) if p_info else old_source_price
+            if current_source_price <= 0:
+                current_source_price = old_source_price
+
             price_changed = abs(current_source_price - old_source_price) > 0.01 if old_source_price > 0 else False
             stock_changed = current_availability != old_availability
 
@@ -352,7 +386,7 @@ def check_price_and_stock(
                 variants_delta.append({
                     "sku": v.get("sku"),
                     "available": current_availability == "in_stock",
-                    "price_usd": current_source_price
+                    "price_usd": float(v.get("source_price") or current_source_price)
                 })
 
             return {
@@ -473,9 +507,29 @@ def apply_delta_to_product(
     if not has_changed:
         return product, False
 
-    # Apply price changes
-    new_source_price = delta_result.get("current_source_price", product.get("source_price", 0.0))
+    # Apply price changes - synchronize with variant prices if variants present
+    vars_list = product.get("variants", [])
+    in_stock_var_prices = [float(v.get("source_price") or 0.0) for v in vars_list if v.get("in_stock") and float(v.get("source_price") or 0.0) > 0]
+    all_var_prices = [float(v.get("source_price") or 0.0) for v in vars_list if float(v.get("source_price") or 0.0) > 0]
+
+    if in_stock_var_prices:
+        new_source_price = min(in_stock_var_prices)
+    elif all_var_prices:
+        new_source_price = min(all_var_prices)
+    else:
+        new_source_price = delta_result.get("current_source_price", product.get("source_price", 0.0))
+
     product["source_price"] = new_source_price
+
+    if all_var_prices:
+        product["price_range_usd"] = {
+            "min": min(all_var_prices),
+            "max": max(all_var_prices)
+        }
+        product["price_range_inr"] = {
+            "min": float(round(product["price_range_usd"]["min"] * forex_rate)),
+            "max": float(round(product["price_range_usd"]["max"] * forex_rate))
+        }
 
     # Recalculate INR whole-rupee price
     if new_source_price > 0:

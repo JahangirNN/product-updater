@@ -34,6 +34,8 @@ export interface CatalogProduct {
   source_sku: string;
   source_price: number;
   source_compare_at_price?: number | null;
+  price_range_usd?: { min: number; max: number };
+  price_range_inr?: { min: number; max: number };
   current_price: number;
   compare_at_price?: number | null;
   currency: string;

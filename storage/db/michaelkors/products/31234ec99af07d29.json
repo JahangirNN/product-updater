@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Wallets",
   "gender": "Women",
-  "current_price": 13347,
+  "current_price": 13338,
   "source_price": 139.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/80b9668e-fc00-4906-8a5a-61261126aba1/32T2SJ6T3B-309-0321_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/80b9668e-fc00-4906-8a5a-61261126aba1/32T2SJ6T3B-309-0321_1-tif",
@@ -23,12 +23,12 @@
     {
       "sku": "32T2SJ6T3B",
       "title": "0239",
-      "price": "13347.00",
-      "compare_at_price": "15315.00",
+      "price": "13338.00",
+      "compare_at_price": "15305.00",
       "source_price": 139.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/80b9668e-fc00-4906-8a5a-61261126aba1/32T2SJ6T3B-309-0321_1-tif",
       "option_values": [
         {
@@ -77,13 +77,13 @@
     "wallets",
     "women"
   ],
-  "last_verified_at": "2026-09-18T19:24:19Z",
+  "last_verified_at": "2026-09-19T07:24:30Z",
   "id": "31234ec99af07d29",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-18T19:24:19Z",
+  "updated_at": "2026-09-19T07:24:30Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Large Logo Continental Wallet by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 8.25”W X 4” H X 1”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop 7”</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 159.5,
-  "compare_at_price": 15315,
+  "compare_at_price": 15305,
   "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
   "shopify_sync_pending": true
 }

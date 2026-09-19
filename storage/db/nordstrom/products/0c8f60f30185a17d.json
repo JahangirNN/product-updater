@@ -8,127 +8,73 @@
   "product_type": "Athletic Shoes",
   "source_sku": "HOKA-6550642-7",
   "source_price": 180.0,
-  "source_compare_at_price": 180.0,
+  "source_compare_at_price": null,
   "current_price": 17284.0,
-  "compare_at_price": 17284.0,
+  "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Synthetic upper and lining/rubber sole",
   "specifications": {
     "Brand": "HOKA",
-    "Gender": "Men",
+    "Gender": "Unisex",
     "Category": "Footwear",
     "Material": "Synthetic upper and lining/rubber sole",
-    "Midsole Drop": "5mm",
-    "Cushioning": "Cushioned EVA footbed with arch support",
+    "Midsole Drop": "8mm",
+    "Cushioning": "Plush maximal buoyant cushioning",
     "Item Number": "6550642",
     "Available Sizes (US)": "US 7, US 7.5, US 8, US 8.5, US 9, US 9.5, US 10, US 10.5, US 11, US 11.5, US 12, US 12.5, US 13, US 14, US 15",
     "Available Sizes (UK)": "UK 6.5, UK 7, UK 7.5, UK 8, UK 8.5, UK 9, UK 9.5, UK 10, UK 10.5, UK 11, UK 11.5, UK 12, UK 12.5, UK 13.5, UK 14.5"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> HOKA</li>\n      <li><strong>Gender:</strong> Men</li>\n      <li><strong>Material:</strong> Synthetic upper and lining/rubber sole</li>\n      <li><strong>Midsole Drop:</strong> 5mm</li>\n      <li><strong>Cushioning:</strong> Cushioned EVA footbed with arch support</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 HOKA Shoe Size &amp; Conversion Guide (Men)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9</td>\n          <td style=\"padding: 6px; color: #666;\">EU 43</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 45</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 11</td>\n          <td style=\"padding: 6px; color: #666;\">EU 46</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 12</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 11.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 47</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 12.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 12</td>\n          <td style=\"padding: 6px; color: #666;\">EU 47.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 13</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 12.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 48</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 14</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 13.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 49</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 15</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 14.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 50</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> HOKA</li>\n      <li><strong>Gender:</strong> Unisex</li>\n      <li><strong>Material:</strong> Synthetic upper and lining/rubber sole</li>\n      <li><strong>Midsole Drop:</strong> 8mm</li>\n      <li><strong>Cushioning:</strong> Plush maximal buoyant cushioning</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 HOKA Shoe Size &amp; Conversion Guide (Unisex)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9</td>\n          <td style=\"padding: 6px; color: #666;\">EU 43</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 45</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 11</td>\n          <td style=\"padding: 6px; color: #666;\">EU 46</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 12</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 11.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 47</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 12.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 12</td>\n          <td style=\"padding: 6px; color: #666;\">EU 47.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 13</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 12.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 48</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 14</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 13.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 49</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 15</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 14.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 50</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
+    "https://n.nordstrommedia.com/it/78eada83-4853-4b95-a916-34c9fb9ab0f1.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/b26e890a-b9ef-4ad0-86fd-220bdbea3814.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/766a7837-4ade-4023-986e-b4a0d85aa28d.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/87ec1f56-5ca9-4700-9377-53911e42a7cb.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/209d76e6-0ae7-4708-8404-885d859944d2.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/664f8b0d-673c-4352-bbc5-ccdb3865deef.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/4be6059b-0dc3-4326-a127-9a5b7e2ab408.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/a66c2278-7281-466b-86fd-0a612e0eb24d.jpeg?crop=pad",
     "https://n.nordstrommedia.com/it/06e988a3-973f-40a5-bd6a-6acd759f6686.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/0e359243-2dc0-4abd-b088-e4f71326433a.jpeg?crop=pad&trim=color"
+    "https://n.nordstrommedia.com/it/0e359243-2dc0-4abd-b088-e4f71326433a.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/f3eb9384-907b-4771-8cdd-6aee4c5f6240.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/c73e0692-6760-45b0-aa59-24386a5e1046.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/07102bf3-07c9-45ce-b819-f684d9a94246.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/05fe81d0-452a-4107-9e7c-e88da8c02e38.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/72496353-c900-42a6-acc0-08dc784f89a0.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/ca7ee61e-7679-47d2-a02e-cc0b173b7a8c.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/3fc95b02-414f-4054-89ee-ea0103db1fb0.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/156922b3-a024-4c40-a612-8ac835055a60.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/44d79478-d015-41cf-8640-b121061dee73.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/78441310-2871-48db-812d-27f5847aaadf.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/d16586c7-e6d3-4615-bdf8-7a483de9ff46.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/b7073674-9f17-4cde-94cc-922c7ae41d5d.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/64473b18-eab0-49e7-8c86-70791c964a62.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/dd2a095e-147a-4ae3-a94a-55bb026056ef.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/74b3a59e-c3ff-4b26-912d-b1a9c92618f9.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/f4ea5fbe-bb3c-4ec6-8975-65fdc26dddc0.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/47700608-ec89-42d7-9504-a15e2aa9ef16.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/9dc67228-317f-427f-843e-f549208da23e.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/18724829-45d0-42eb-a940-8103a1cebad6.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/2ebf66fa-0528-4ba7-813c-e5752934b731.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/0ffae264-3489-4749-8061-947a6ca73460.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/48eb2728-920d-4191-a3cf-d1e272b28f69.jpeg?crop=pad&trim=color"
   ],
   "variants": [
     {
       "id": 655064200,
-      "sku": "HOKA-6550642-7",
-      "title": "US 7 / UK 6.5 - BLACK/ BLACK",
-      "price": "17284.00",
-      "compare_at_price": null,
-      "source_price": 180.0,
-      "source_compare_at_price": 180.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 7"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 6.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "BLACK/ BLACK"
-        }
-      ]
-    },
-    {
-      "id": 655064201,
-      "sku": "HOKA-6550642-7.5",
-      "title": "US 7.5 / UK 7 - BLACK/ BLACK",
-      "price": "17284.00",
-      "compare_at_price": null,
-      "source_price": 180.0,
-      "source_compare_at_price": 180.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 7.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 7"
-        },
-        {
-          "option_name": "Color",
-          "name": "BLACK/ BLACK"
-        }
-      ]
-    },
-    {
-      "id": 655064202,
-      "sku": "HOKA-6550642-8",
-      "title": "US 8 / UK 7.5 - BLACK/ BLACK",
-      "price": "17284.00",
-      "compare_at_price": null,
-      "source_price": 180.0,
-      "source_compare_at_price": 180.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 8"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 7.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "BLACK/ BLACK"
-        }
-      ]
-    },
-    {
-      "id": 655064203,
       "sku": "HOKA-6550642-8.5",
-      "title": "US 8.5 / UK 8 - BLACK/ BLACK",
+      "title": "US 8.5 / UK 8 - Black / Black",
       "price": "17284.00",
       "compare_at_price": null,
       "source_price": 180.0,
-      "source_compare_at_price": 180.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
+      "image_url": "https://n.nordstrommedia.com/it/78eada83-4853-4b95-a916-34c9fb9ab0f1.jpeg?crop=pad&trim=color",
       "option_values": [
         {
           "option_name": "Size (US)",
@@ -140,22 +86,184 @@
         },
         {
           "option_name": "Color",
-          "name": "BLACK/ BLACK"
+          "name": "Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 655064201,
+      "sku": "HOKA-6550642-12.5",
+      "title": "US 12.5 / UK 12 - Black / Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/78eada83-4853-4b95-a916-34c9fb9ab0f1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 655064202,
+      "sku": "HOKA-6550642-7.5",
+      "title": "US 7.5 / UK 7 - Black / Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/78eada83-4853-4b95-a916-34c9fb9ab0f1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 655064203,
+      "sku": "HOKA-6550642-7",
+      "title": "US 7 / UK 6.5 - Black / Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/78eada83-4853-4b95-a916-34c9fb9ab0f1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black"
         }
       ]
     },
     {
       "id": 655064204,
-      "sku": "HOKA-6550642-9",
-      "title": "US 9 / UK 8.5 - BLACK/ BLACK",
+      "sku": "HOKA-6550642-8",
+      "title": "US 8 / UK 7.5 - Black / Black",
       "price": "17284.00",
       "compare_at_price": null,
       "source_price": 180.0,
-      "source_compare_at_price": 180.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
+      "image_url": "https://n.nordstrommedia.com/it/78eada83-4853-4b95-a916-34c9fb9ab0f1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 655064205,
+      "sku": "HOKA-6550642-10",
+      "title": "US 10 / UK 9.5 - Black / Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/78eada83-4853-4b95-a916-34c9fb9ab0f1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 655064206,
+      "sku": "HOKA-6550642-11.5",
+      "title": "US 11.5 / UK 11 - Black / Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/78eada83-4853-4b95-a916-34c9fb9ab0f1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 655064207,
+      "sku": "HOKA-6550642-9",
+      "title": "US 9 / UK 8.5 - Black / Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/78eada83-4853-4b95-a916-34c9fb9ab0f1.jpeg?crop=pad&trim=color",
       "option_values": [
         {
           "option_name": "Size (US)",
@@ -167,18 +275,207 @@
         },
         {
           "option_name": "Color",
-          "name": "BLACK/ BLACK"
+          "name": "Black / Black"
         }
       ]
     },
     {
-      "id": 655064205,
+      "id": 655064208,
       "sku": "HOKA-6550642-9.5",
-      "title": "US 9.5 / UK 9 - BLACK/ BLACK",
+      "title": "US 9.5 / UK 9 - Black / Black",
       "price": "17284.00",
       "compare_at_price": null,
       "source_price": 180.0,
-      "source_compare_at_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/78eada83-4853-4b95-a916-34c9fb9ab0f1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 655064209,
+      "sku": "HOKA-6550642-14",
+      "title": "US 14 / UK 13.5 - Black / Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/78eada83-4853-4b95-a916-34c9fb9ab0f1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 14"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 13.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 655064210,
+      "sku": "HOKA-6550642-15",
+      "title": "US 15 / UK 14.5 - Black / Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/78eada83-4853-4b95-a916-34c9fb9ab0f1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 15"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 14.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 655064211,
+      "sku": "HOKA-6550642-10.5",
+      "title": "US 10.5 / UK 10 - Black / Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/78eada83-4853-4b95-a916-34c9fb9ab0f1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 655064212,
+      "sku": "HOKA-6550642-11",
+      "title": "US 11 / UK 10.5 - Black / Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/78eada83-4853-4b95-a916-34c9fb9ab0f1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 655064213,
+      "sku": "HOKA-6550642-12",
+      "title": "US 12 / UK 11.5 - Black / Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/78eada83-4853-4b95-a916-34c9fb9ab0f1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 655064214,
+      "sku": "HOKA-6550642-13",
+      "title": "US 13 / UK 12.5 - Black / Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/78eada83-4853-4b95-a916-34c9fb9ab0f1.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 13"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 655064215,
+      "sku": "HOKA-6550642-HARB-9.5",
+      "title": "US 9.5 / UK 9 - Harbor Mist / Lunar Rock",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -194,75 +491,102 @@
         },
         {
           "option_name": "Color",
-          "name": "BLACK/ BLACK"
+          "name": "Harbor Mist / Lunar Rock"
         }
       ]
     },
     {
-      "id": 655064206,
-      "sku": "HOKA-6550642-10",
-      "title": "US 10 / UK 9.5 - BLACK/ BLACK",
+      "id": 655064216,
+      "sku": "HOKA-6550642-HARB-7.5",
+      "title": "US 7.5 / UK 7 - Harbor Mist / Lunar Rock",
       "price": "17284.00",
       "compare_at_price": null,
       "source_price": 180.0,
-      "source_compare_at_price": 180.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
           "option_name": "Size (US)",
-          "name": "US 10"
+          "name": "US 7.5"
         },
         {
           "option_name": "Size (UK)",
-          "name": "UK 9.5"
+          "name": "UK 7"
         },
         {
           "option_name": "Color",
-          "name": "BLACK/ BLACK"
+          "name": "Harbor Mist / Lunar Rock"
         }
       ]
     },
     {
-      "id": 655064207,
-      "sku": "HOKA-6550642-10.5",
-      "title": "US 10.5 / UK 10 - BLACK/ BLACK",
+      "id": 655064217,
+      "sku": "HOKA-6550642-HARB-9",
+      "title": "US 9 / UK 8.5 - Harbor Mist / Lunar Rock",
       "price": "17284.00",
       "compare_at_price": null,
       "source_price": 180.0,
-      "source_compare_at_price": 180.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
           "option_name": "Size (US)",
-          "name": "US 10.5"
+          "name": "US 9"
         },
         {
           "option_name": "Size (UK)",
-          "name": "UK 10"
+          "name": "UK 8.5"
         },
         {
           "option_name": "Color",
-          "name": "BLACK/ BLACK"
+          "name": "Harbor Mist / Lunar Rock"
         }
       ]
     },
     {
-      "id": 655064208,
-      "sku": "HOKA-6550642-11",
-      "title": "US 11 / UK 10.5 - BLACK/ BLACK",
+      "id": 655064218,
+      "sku": "HOKA-6550642-HARB-7",
+      "title": "US 7 / UK 6.5 - Harbor Mist / Lunar Rock",
       "price": "17284.00",
       "compare_at_price": null,
       "source_price": 180.0,
-      "source_compare_at_price": 180.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Harbor Mist / Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 655064219,
+      "sku": "HOKA-6550642-HARB-11",
+      "title": "US 11 / UK 10.5 - Harbor Mist / Lunar Rock",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -275,129 +599,48 @@
         },
         {
           "option_name": "Color",
-          "name": "BLACK/ BLACK"
+          "name": "Harbor Mist / Lunar Rock"
         }
       ]
     },
     {
-      "id": 655064209,
-      "sku": "HOKA-6550642-11.5",
-      "title": "US 11.5 / UK 11 - BLACK/ BLACK",
+      "id": 655064220,
+      "sku": "HOKA-6550642-HARB-8.5",
+      "title": "US 8.5 / UK 8 - Harbor Mist / Lunar Rock",
       "price": "17284.00",
       "compare_at_price": null,
       "source_price": 180.0,
-      "source_compare_at_price": 180.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
           "option_name": "Size (US)",
-          "name": "US 11.5"
+          "name": "US 8.5"
         },
         {
           "option_name": "Size (UK)",
-          "name": "UK 11"
+          "name": "UK 8"
         },
         {
           "option_name": "Color",
-          "name": "BLACK/ BLACK"
+          "name": "Harbor Mist / Lunar Rock"
         }
       ]
     },
     {
-      "id": 655064210,
-      "sku": "HOKA-6550642-12",
-      "title": "US 12 / UK 11.5 - BLACK/ BLACK",
+      "id": 655064221,
+      "sku": "HOKA-6550642-HARB-14",
+      "title": "US 14 / UK 13.5 - Harbor Mist / Lunar Rock",
       "price": "17284.00",
       "compare_at_price": null,
       "source_price": 180.0,
-      "source_compare_at_price": 180.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 12"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 11.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "BLACK/ BLACK"
-        }
-      ]
-    },
-    {
-      "id": 655064211,
-      "sku": "HOKA-6550642-12.5",
-      "title": "US 12.5 / UK 12 - BLACK/ BLACK",
-      "price": "17284.00",
-      "compare_at_price": null,
-      "source_price": 180.0,
-      "source_compare_at_price": 180.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 12.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 12"
-        },
-        {
-          "option_name": "Color",
-          "name": "BLACK/ BLACK"
-        }
-      ]
-    },
-    {
-      "id": 655064212,
-      "sku": "HOKA-6550642-13",
-      "title": "US 13 / UK 12.5 - BLACK/ BLACK",
-      "price": "17284.00",
-      "compare_at_price": null,
-      "source_price": 180.0,
-      "source_compare_at_price": 180.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 13"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 12.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "BLACK/ BLACK"
-        }
-      ]
-    },
-    {
-      "id": 655064213,
-      "sku": "HOKA-6550642-14",
-      "title": "US 14 / UK 13.5 - BLACK/ BLACK",
-      "price": "17284.00",
-      "compare_at_price": null,
-      "source_price": 180.0,
-      "source_compare_at_price": 180.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -410,34 +653,1276 @@
         },
         {
           "option_name": "Color",
-          "name": "BLACK/ BLACK"
+          "name": "Harbor Mist / Lunar Rock"
         }
       ]
     },
     {
-      "id": 655064214,
-      "sku": "HOKA-6550642-15",
-      "title": "US 15 / UK 14.5 - BLACK/ BLACK",
+      "id": 655064222,
+      "sku": "HOKA-6550642-HARB-10.5",
+      "title": "US 10.5 / UK 10 - Harbor Mist / Lunar Rock",
       "price": "17284.00",
       "compare_at_price": null,
       "source_price": 180.0,
-      "source_compare_at_price": 180.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
           "option_name": "Size (US)",
-          "name": "US 15"
+          "name": "US 10.5"
         },
         {
           "option_name": "Size (UK)",
-          "name": "UK 14.5"
+          "name": "UK 10"
         },
         {
           "option_name": "Color",
-          "name": "BLACK/ BLACK"
+          "name": "Harbor Mist / Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 655064223,
+      "sku": "HOKA-6550642-HARB-13",
+      "title": "US 13 / UK 12.5 - Harbor Mist / Lunar Rock",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 13"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Harbor Mist / Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 655064224,
+      "sku": "HOKA-6550642-HARB-8",
+      "title": "US 8 / UK 7.5 - Harbor Mist / Lunar Rock",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Harbor Mist / Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 655064225,
+      "sku": "HOKA-6550642-HARB-12",
+      "title": "US 12 / UK 11.5 - Harbor Mist / Lunar Rock",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Harbor Mist / Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 655064226,
+      "sku": "HOKA-6550642-HARB-10",
+      "title": "US 10 / UK 9.5 - Harbor Mist / Lunar Rock",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Harbor Mist / Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 655064227,
+      "sku": "HOKA-6550642-HARB-11.5",
+      "title": "US 11.5 / UK 11 - Harbor Mist / Lunar Rock",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11"
+        },
+        {
+          "option_name": "Color",
+          "name": "Harbor Mist / Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 655064228,
+      "sku": "HOKA-6550642-HARB-12.5",
+      "title": "US 12.5 / UK 12 - Harbor Mist / Lunar Rock",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/59190f26-55ac-48ca-964c-627dbb3e133e.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12"
+        },
+        {
+          "option_name": "Color",
+          "name": "Harbor Mist / Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 655064229,
+      "sku": "HOKA-6550642-WHIT-8.5",
+      "title": "US 8.5 / UK 8 - White / White",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/07102bf3-07c9-45ce-b819-f684d9a94246.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 655064230,
+      "sku": "HOKA-6550642-WHIT-13",
+      "title": "US 13 / UK 12.5 - White / White",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/07102bf3-07c9-45ce-b819-f684d9a94246.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 13"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 655064231,
+      "sku": "HOKA-6550642-WHIT-10.5",
+      "title": "US 10.5 / UK 10 - White / White",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/07102bf3-07c9-45ce-b819-f684d9a94246.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 655064232,
+      "sku": "HOKA-6550642-WHIT-11.5",
+      "title": "US 11.5 / UK 11 - White / White",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/07102bf3-07c9-45ce-b819-f684d9a94246.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 655064233,
+      "sku": "HOKA-6550642-WHIT-9",
+      "title": "US 9 / UK 8.5 - White / White",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/07102bf3-07c9-45ce-b819-f684d9a94246.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 655064234,
+      "sku": "HOKA-6550642-WHIT-14",
+      "title": "US 14 / UK 13.5 - White / White",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/07102bf3-07c9-45ce-b819-f684d9a94246.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 14"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 13.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 655064235,
+      "sku": "HOKA-6550642-WHIT-9.5",
+      "title": "US 9.5 / UK 9 - White / White",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/07102bf3-07c9-45ce-b819-f684d9a94246.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 655064236,
+      "sku": "HOKA-6550642-WHIT-11",
+      "title": "US 11 / UK 10.5 - White / White",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/07102bf3-07c9-45ce-b819-f684d9a94246.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 655064237,
+      "sku": "HOKA-6550642-WHIT-8",
+      "title": "US 8 / UK 7.5 - White / White",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/07102bf3-07c9-45ce-b819-f684d9a94246.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 655064238,
+      "sku": "HOKA-6550642-WHIT-12.5",
+      "title": "US 12.5 / UK 12 - White / White",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/07102bf3-07c9-45ce-b819-f684d9a94246.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 655064239,
+      "sku": "HOKA-6550642-WHIT-12",
+      "title": "US 12 / UK 11.5 - White / White",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/07102bf3-07c9-45ce-b819-f684d9a94246.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 655064240,
+      "sku": "HOKA-6550642-WHIT-10",
+      "title": "US 10 / UK 9.5 - White / White",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/07102bf3-07c9-45ce-b819-f684d9a94246.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 655064241,
+      "sku": "HOKA-6550642-WHIT-7.5",
+      "title": "US 7.5 / UK 7 - White / White",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/07102bf3-07c9-45ce-b819-f684d9a94246.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / White"
+        }
+      ]
+    },
+    {
+      "id": 655064242,
+      "sku": "HOKA-6550642-OUTE-10.5",
+      "title": "US 10.5 / UK 10 - Outerspace / White",
+      "price": "12963.00",
+      "compare_at_price": "17284.00",
+      "source_price": 135.0,
+      "source_compare_at_price": 180.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/44d79478-d015-41cf-8640-b121061dee73.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10"
+        },
+        {
+          "option_name": "Color",
+          "name": "Outerspace / White"
+        }
+      ]
+    },
+    {
+      "id": 655064243,
+      "sku": "HOKA-6550642-OUTE-11.5",
+      "title": "US 11.5 / UK 11 - Outerspace / White",
+      "price": "12963.00",
+      "compare_at_price": "17284.00",
+      "source_price": 135.0,
+      "source_compare_at_price": 180.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/44d79478-d015-41cf-8640-b121061dee73.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11"
+        },
+        {
+          "option_name": "Color",
+          "name": "Outerspace / White"
+        }
+      ]
+    },
+    {
+      "id": 655064244,
+      "sku": "HOKA-6550642-OUTE-7.5",
+      "title": "US 7.5 / UK 7 - Outerspace / White",
+      "price": "12963.00",
+      "compare_at_price": "17284.00",
+      "source_price": 135.0,
+      "source_compare_at_price": 180.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/44d79478-d015-41cf-8640-b121061dee73.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Outerspace / White"
+        }
+      ]
+    },
+    {
+      "id": 655064245,
+      "sku": "HOKA-6550642-OUTE-10",
+      "title": "US 10 / UK 9.5 - Outerspace / White",
+      "price": "12963.00",
+      "compare_at_price": "17284.00",
+      "source_price": 135.0,
+      "source_compare_at_price": 180.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/44d79478-d015-41cf-8640-b121061dee73.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Outerspace / White"
+        }
+      ]
+    },
+    {
+      "id": 655064246,
+      "sku": "HOKA-6550642-OUTE-8",
+      "title": "US 8 / UK 7.5 - Outerspace / White",
+      "price": "12963.00",
+      "compare_at_price": "17284.00",
+      "source_price": 135.0,
+      "source_compare_at_price": 180.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/44d79478-d015-41cf-8640-b121061dee73.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Outerspace / White"
+        }
+      ]
+    },
+    {
+      "id": 655064247,
+      "sku": "HOKA-6550642-OUTE-13",
+      "title": "US 13 / UK 12.5 - Outerspace / White",
+      "price": "12963.00",
+      "compare_at_price": "17284.00",
+      "source_price": 135.0,
+      "source_compare_at_price": 180.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/44d79478-d015-41cf-8640-b121061dee73.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 13"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Outerspace / White"
+        }
+      ]
+    },
+    {
+      "id": 655064248,
+      "sku": "HOKA-6550642-OUTE-11",
+      "title": "US 11 / UK 10.5 - Outerspace / White",
+      "price": "12963.00",
+      "compare_at_price": "17284.00",
+      "source_price": 135.0,
+      "source_compare_at_price": 180.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/44d79478-d015-41cf-8640-b121061dee73.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Outerspace / White"
+        }
+      ]
+    },
+    {
+      "id": 655064249,
+      "sku": "HOKA-6550642-OUTE-9.5",
+      "title": "US 9.5 / UK 9 - Outerspace / White",
+      "price": "12963.00",
+      "compare_at_price": "17284.00",
+      "source_price": 135.0,
+      "source_compare_at_price": 180.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/44d79478-d015-41cf-8640-b121061dee73.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Outerspace / White"
+        }
+      ]
+    },
+    {
+      "id": 655064250,
+      "sku": "HOKA-6550642-OUTE-14",
+      "title": "US 14 / UK 13.5 - Outerspace / White",
+      "price": "12963.00",
+      "compare_at_price": "17284.00",
+      "source_price": 135.0,
+      "source_compare_at_price": 180.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/44d79478-d015-41cf-8640-b121061dee73.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 14"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 13.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Outerspace / White"
+        }
+      ]
+    },
+    {
+      "id": 655064251,
+      "sku": "HOKA-6550642-OUTE-7",
+      "title": "US 7 / UK 6.5 - Outerspace / White",
+      "price": "12963.00",
+      "compare_at_price": "17284.00",
+      "source_price": 135.0,
+      "source_compare_at_price": 180.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/44d79478-d015-41cf-8640-b121061dee73.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Outerspace / White"
+        }
+      ]
+    },
+    {
+      "id": 655064252,
+      "sku": "HOKA-6550642-OUTE-12",
+      "title": "US 12 / UK 11.5 - Outerspace / White",
+      "price": "12963.00",
+      "compare_at_price": "17284.00",
+      "source_price": 135.0,
+      "source_compare_at_price": 180.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/44d79478-d015-41cf-8640-b121061dee73.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Outerspace / White"
+        }
+      ]
+    },
+    {
+      "id": 655064253,
+      "sku": "HOKA-6550642-OUTE-8.5",
+      "title": "US 8.5 / UK 8 - Outerspace / White",
+      "price": "12963.00",
+      "compare_at_price": "17284.00",
+      "source_price": 135.0,
+      "source_compare_at_price": 180.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/44d79478-d015-41cf-8640-b121061dee73.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Outerspace / White"
+        }
+      ]
+    },
+    {
+      "id": 655064254,
+      "sku": "HOKA-6550642-OUTE-12.5",
+      "title": "US 12.5 / UK 12 - Outerspace / White",
+      "price": "12963.00",
+      "compare_at_price": "17284.00",
+      "source_price": 135.0,
+      "source_compare_at_price": 180.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/44d79478-d015-41cf-8640-b121061dee73.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12"
+        },
+        {
+          "option_name": "Color",
+          "name": "Outerspace / White"
+        }
+      ]
+    },
+    {
+      "id": 655064255,
+      "sku": "HOKA-6550642-OUTE-9",
+      "title": "US 9 / UK 8.5 - Outerspace / White",
+      "price": "12963.00",
+      "compare_at_price": "17284.00",
+      "source_price": 135.0,
+      "source_compare_at_price": 180.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/44d79478-d015-41cf-8640-b121061dee73.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Outerspace / White"
+        }
+      ]
+    },
+    {
+      "id": 655064256,
+      "sku": "HOKA-6550642-FADE-11",
+      "title": "US 11 / UK 10.5 - Faded Navy / Carbon Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/74b3a59e-c3ff-4b26-912d-b1a9c92618f9.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Faded Navy / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 655064257,
+      "sku": "HOKA-6550642-FADE-12.5",
+      "title": "US 12.5 / UK 12 - Faded Navy / Carbon Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/74b3a59e-c3ff-4b26-912d-b1a9c92618f9.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12"
+        },
+        {
+          "option_name": "Color",
+          "name": "Faded Navy / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 655064258,
+      "sku": "HOKA-6550642-FADE-9.5",
+      "title": "US 9.5 / UK 9 - Faded Navy / Carbon Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/74b3a59e-c3ff-4b26-912d-b1a9c92618f9.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Faded Navy / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 655064259,
+      "sku": "HOKA-6550642-FADE-9",
+      "title": "US 9 / UK 8.5 - Faded Navy / Carbon Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/74b3a59e-c3ff-4b26-912d-b1a9c92618f9.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Faded Navy / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 655064260,
+      "sku": "HOKA-6550642-FADE-10.5",
+      "title": "US 10.5 / UK 10 - Faded Navy / Carbon Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/74b3a59e-c3ff-4b26-912d-b1a9c92618f9.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10"
+        },
+        {
+          "option_name": "Color",
+          "name": "Faded Navy / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 655064261,
+      "sku": "HOKA-6550642-FADE-7",
+      "title": "US 7 / UK 6.5 - Faded Navy / Carbon Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/74b3a59e-c3ff-4b26-912d-b1a9c92618f9.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Faded Navy / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 655064262,
+      "sku": "HOKA-6550642-FADE-11.5",
+      "title": "US 11.5 / UK 11 - Faded Navy / Carbon Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/74b3a59e-c3ff-4b26-912d-b1a9c92618f9.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11"
+        },
+        {
+          "option_name": "Color",
+          "name": "Faded Navy / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 655064263,
+      "sku": "HOKA-6550642-FADE-14",
+      "title": "US 14 / UK 13.5 - Faded Navy / Carbon Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/74b3a59e-c3ff-4b26-912d-b1a9c92618f9.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 14"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 13.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Faded Navy / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 655064264,
+      "sku": "HOKA-6550642-FADE-13",
+      "title": "US 13 / UK 12.5 - Faded Navy / Carbon Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/74b3a59e-c3ff-4b26-912d-b1a9c92618f9.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 13"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Faded Navy / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 655064265,
+      "sku": "HOKA-6550642-FADE-12",
+      "title": "US 12 / UK 11.5 - Faded Navy / Carbon Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/74b3a59e-c3ff-4b26-912d-b1a9c92618f9.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Faded Navy / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 655064266,
+      "sku": "HOKA-6550642-FADE-10",
+      "title": "US 10 / UK 9.5 - Faded Navy / Carbon Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/74b3a59e-c3ff-4b26-912d-b1a9c92618f9.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Faded Navy / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 655064267,
+      "sku": "HOKA-6550642-FADE-8.5",
+      "title": "US 8.5 / UK 8 - Faded Navy / Carbon Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/74b3a59e-c3ff-4b26-912d-b1a9c92618f9.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Faded Navy / Carbon Black"
+        }
+      ]
+    },
+    {
+      "id": 655064268,
+      "sku": "HOKA-6550642-FADE-7.5",
+      "title": "US 7.5 / UK 7 - Faded Navy / Carbon Black",
+      "price": "17284.00",
+      "compare_at_price": null,
+      "source_price": 180.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/74b3a59e-c3ff-4b26-912d-b1a9c92618f9.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Faded Navy / Carbon Black"
         }
       ]
     }
@@ -547,37 +2032,46 @@
       "name": "Color",
       "values": [
         {
-          "name": "BLACK/ BLACK"
+          "name": "Black / Black"
         },
         {
-          "name": "HARBOR MIST / LUNAR ROCK"
+          "name": "Harbor Mist / Lunar Rock"
         },
         {
-          "name": "WHITE/ WHITE"
+          "name": "White / White"
         },
         {
-          "name": "OUTERSPACE / WHITE"
+          "name": "Outerspace / White"
         },
         {
-          "name": "FADED NAVY / CARBON BLACK"
+          "name": "Faded Navy / Carbon Black"
         }
       ]
     }
   ],
   "tags": [
-    "hoka-shoes",
     "footwear",
-    "sneakers",
-    "running",
+    "hoka-shoes",
     "men",
-    "sizes-15"
+    "running",
+    "sizes-15",
+    "sneakers",
+    "unisex"
   ],
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T19:24:36Z",
+  "last_verified_at": "2026-09-19T07:35:17Z",
   "created_at": "2026-09-17T14:53:19Z",
-  "updated_at": "2026-09-18T19:24:36Z",
-  "is_active": false,
-  "shopify_sync_pending": true
+  "updated_at": "2026-09-19T07:35:17Z",
+  "price_range_usd": {
+    "min": 135.0,
+    "max": 180.0
+  },
+  "price_range_inr": {
+    "min": 12963.0,
+    "max": 17284.0
+  },
+  "status": "ACTIVE",
+  "is_active": true
 }

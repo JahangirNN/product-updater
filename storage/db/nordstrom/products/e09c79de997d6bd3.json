@@ -8,9 +8,9 @@
   "product_type": "Athletic Shoes",
   "source_sku": "SALOMON-7362130-5",
   "source_price": 200.0,
-  "source_compare_at_price": 200.0,
+  "source_compare_at_price": null,
   "current_price": 19204.0,
-  "compare_at_price": 19204.0,
+  "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -18,276 +18,45 @@
   "material": "Textile and synthetic upper/textile lining/rubber sole",
   "specifications": {
     "Brand": "Salomon",
-    "Gender": "Men",
+    "Gender": "Unisex",
     "Category": "Footwear",
     "Material": "Textile and synthetic upper/textile lining/rubber sole",
-    "Midsole Drop": "Not specified",
-    "Cushioning": "EnergyCell high-rebound midsole",
-    "Item Number": "7562049",
+    "Midsole Drop": "8mm",
+    "Cushioning": "EnergyCell / Contagrip technical cushioning",
+    "Item Number": "7362130",
     "Available Sizes (US)": "US 5, US 6, US 6.5, US 7, US 7.5, US 8, US 8.5, US 9, US 9.5, US 10, US 10.5, US 11, US 11.5, US 12, US 12.5, US 13",
     "Available Sizes (UK)": "UK 4.5, UK 5.5, UK 6, UK 6.5, UK 7, UK 7.5, UK 8, UK 8.5, UK 9, UK 9.5, UK 10, UK 10.5, UK 11, UK 11.5, UK 12, UK 12.5"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> Salomon</li>\n      <li><strong>Gender:</strong> Men</li>\n      <li><strong>Material:</strong> Textile and synthetic upper/textile lining/rubber sole</li>\n      <li><strong>Midsole Drop:</strong> Not specified</li>\n      <li><strong>Cushioning:</strong> EnergyCell high-rebound midsole</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Salomon Shoe Size &amp; Conversion Guide (Men)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40 2/3</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41 1/3</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42 2/3</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9</td>\n          <td style=\"padding: 6px; color: #666;\">EU 43 1/3</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44 2/3</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 45 1/3</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 11</td>\n          <td style=\"padding: 6px; color: #666;\">EU 46</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 12</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 11.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 46 2/3</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 12.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 12</td>\n          <td style=\"padding: 6px; color: #666;\">EU 47 1/3</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 13</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 12.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 48</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> Salomon</li>\n      <li><strong>Gender:</strong> Unisex</li>\n      <li><strong>Material:</strong> Textile and synthetic upper/textile lining/rubber sole</li>\n      <li><strong>Midsole Drop:</strong> 8mm</li>\n      <li><strong>Cushioning:</strong> EnergyCell / Contagrip technical cushioning</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 Salomon Shoe Size &amp; Conversion Guide (Unisex)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40 2/3</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41 1/3</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42 2/3</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9</td>\n          <td style=\"padding: 6px; color: #666;\">EU 43 1/3</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44 2/3</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 45 1/3</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 11</td>\n          <td style=\"padding: 6px; color: #666;\">EU 46</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 12</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 11.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 46 2/3</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 12.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 12</td>\n          <td style=\"padding: 6px; color: #666;\">EU 47 1/3</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 13</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 12.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 48</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
     "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/dbcfaa6a-d535-4940-9ccd-8a7919b881bb.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/1c110ff7-004a-4a90-9ed5-fee0fd352ef1.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/3d2a1cdd-7f89-4cab-bb48-22ef73b01e69.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/fe45221d-4b59-40d2-b073-140c202af936.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/2f6a409c-d146-4395-877b-50cdebf34b60.jpeg?crop=pad&trim=color"
+    "https://n.nordstrommedia.com/it/2f6a409c-d146-4395-877b-50cdebf34b60.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/ed753b98-d4a8-467a-bb8a-8eff10641e10.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/5aa7bb98-911a-417e-b213-bdd471cb7c0c.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/f6e21ca3-16ec-48f7-af26-8096b48d5a19.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/c1fdde8b-2e17-4b42-b97d-f5e5a35be9fb.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/fbcc30ea-650d-4917-b3a2-38f5f2ae2705.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/0fe2d6d0-2def-4833-bc65-fe2aba2c6a4d.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/2be967be-3bae-4609-8c69-214764699e81.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/a69f5013-0cf3-4e1c-91bf-3e737efb9787.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/20295b67-84dc-4614-80fd-afe4aeb2f519.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/a0868882-30c8-4bf9-af0d-afafb245a296.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/8482ce08-119e-42b2-adce-a542fe2be0a8.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/75bb7325-b3ae-471e-ae1c-3a8f6ccec9e1.jpeg?crop=pad&trim=color"
   ],
   "variants": [
     {
       "id": 736213000,
-      "sku": "SALOMON-7362130-5",
-      "title": "US 5 / UK 4.5 - Black Black Black",
-      "price": "19204.00",
-      "compare_at_price": null,
-      "source_price": 200.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 4.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "Black Black Black"
-        }
-      ]
-    },
-    {
-      "id": 736213001,
-      "sku": "SALOMON-7362130-6",
-      "title": "US 6 / UK 5.5 - Black Black Black",
-      "price": "19204.00",
-      "compare_at_price": null,
-      "source_price": 200.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 6"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 5.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "Black Black Black"
-        }
-      ]
-    },
-    {
-      "id": 736213002,
-      "sku": "SALOMON-7362130-6.5",
-      "title": "US 6.5 / UK 6 - Black Black Black",
-      "price": "19204.00",
-      "compare_at_price": null,
-      "source_price": 200.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 6.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 6"
-        },
-        {
-          "option_name": "Color",
-          "name": "Black Black Black"
-        }
-      ]
-    },
-    {
-      "id": 736213003,
-      "sku": "SALOMON-7362130-7",
-      "title": "US 7 / UK 6.5 - Black Black Black",
-      "price": "19204.00",
-      "compare_at_price": null,
-      "source_price": 200.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 7"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 6.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "Black Black Black"
-        }
-      ]
-    },
-    {
-      "id": 736213004,
-      "sku": "SALOMON-7362130-7.5",
-      "title": "US 7.5 / UK 7 - Black Black Black",
-      "price": "19204.00",
-      "compare_at_price": null,
-      "source_price": 200.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 7.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 7"
-        },
-        {
-          "option_name": "Color",
-          "name": "Black Black Black"
-        }
-      ]
-    },
-    {
-      "id": 736213005,
-      "sku": "SALOMON-7362130-8",
-      "title": "US 8 / UK 7.5 - Black Black Black",
-      "price": "19204.00",
-      "compare_at_price": null,
-      "source_price": 200.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 8"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 7.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "Black Black Black"
-        }
-      ]
-    },
-    {
-      "id": 736213006,
-      "sku": "SALOMON-7362130-8.5",
-      "title": "US 8.5 / UK 8 - Black Black Black",
-      "price": "19204.00",
-      "compare_at_price": null,
-      "source_price": 200.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 8.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 8"
-        },
-        {
-          "option_name": "Color",
-          "name": "Black Black Black"
-        }
-      ]
-    },
-    {
-      "id": 736213007,
-      "sku": "SALOMON-7362130-9",
-      "title": "US 9 / UK 8.5 - Black Black Black",
-      "price": "19204.00",
-      "compare_at_price": null,
-      "source_price": 200.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 9"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 8.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "Black Black Black"
-        }
-      ]
-    },
-    {
-      "id": 736213008,
-      "sku": "SALOMON-7362130-9.5",
-      "title": "US 9.5 / UK 9 - Black Black Black",
-      "price": "19204.00",
-      "compare_at_price": null,
-      "source_price": 200.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 9.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 9"
-        },
-        {
-          "option_name": "Color",
-          "name": "Black Black Black"
-        }
-      ]
-    },
-    {
-      "id": 736213009,
       "sku": "SALOMON-7362130-10",
-      "title": "US 10 / UK 9.5 - Black Black Black",
+      "title": "US 10 / UK 9.5 - Black / Black / Black",
       "price": "19204.00",
       "compare_at_price": null,
       "source_price": 200.0,
-      "source_compare_at_price": 200.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -303,45 +72,18 @@
         },
         {
           "option_name": "Color",
-          "name": "Black Black Black"
+          "name": "Black / Black / Black"
         }
       ]
     },
     {
-      "id": 736213010,
-      "sku": "SALOMON-7362130-10.5",
-      "title": "US 10.5 / UK 10 - Black Black Black",
-      "price": "19204.00",
-      "compare_at_price": null,
-      "source_price": 200.0,
-      "source_compare_at_price": 200.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 10.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 10"
-        },
-        {
-          "option_name": "Color",
-          "name": "Black Black Black"
-        }
-      ]
-    },
-    {
-      "id": 736213011,
+      "id": 736213001,
       "sku": "SALOMON-7362130-11",
-      "title": "US 11 / UK 10.5 - Black Black Black",
+      "title": "US 11 / UK 10.5 - Black / Black / Black",
       "price": "19204.00",
       "compare_at_price": null,
       "source_price": 200.0,
-      "source_compare_at_price": 200.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -357,18 +99,18 @@
         },
         {
           "option_name": "Color",
-          "name": "Black Black Black"
+          "name": "Black / Black / Black"
         }
       ]
     },
     {
-      "id": 736213012,
-      "sku": "SALOMON-7362130-11.5",
-      "title": "US 11.5 / UK 11 - Black Black Black",
+      "id": 736213002,
+      "sku": "SALOMON-7362130-6",
+      "title": "US 6 / UK 5.5 - Black / Black / Black",
       "price": "19204.00",
       "compare_at_price": null,
       "source_price": 200.0,
-      "source_compare_at_price": 200.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -376,26 +118,26 @@
       "option_values": [
         {
           "option_name": "Size (US)",
-          "name": "US 11.5"
+          "name": "US 6"
         },
         {
           "option_name": "Size (UK)",
-          "name": "UK 11"
+          "name": "UK 5.5"
         },
         {
           "option_name": "Color",
-          "name": "Black Black Black"
+          "name": "Black / Black / Black"
         }
       ]
     },
     {
-      "id": 736213013,
-      "sku": "SALOMON-7362130-12",
-      "title": "US 12 / UK 11.5 - Black Black Black",
+      "id": 736213003,
+      "sku": "SALOMON-7362130-8",
+      "title": "US 8 / UK 7.5 - Black / Black / Black",
       "price": "19204.00",
       "compare_at_price": null,
       "source_price": 200.0,
-      "source_compare_at_price": 200.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -403,26 +145,53 @@
       "option_values": [
         {
           "option_name": "Size (US)",
-          "name": "US 12"
+          "name": "US 8"
         },
         {
           "option_name": "Size (UK)",
-          "name": "UK 11.5"
+          "name": "UK 7.5"
         },
         {
           "option_name": "Color",
-          "name": "Black Black Black"
+          "name": "Black / Black / Black"
         }
       ]
     },
     {
-      "id": 736213014,
+      "id": 736213004,
+      "sku": "SALOMON-7362130-9.5",
+      "title": "US 9.5 / UK 9 - Black / Black / Black",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 736213005,
       "sku": "SALOMON-7362130-12.5",
-      "title": "US 12.5 / UK 12 - Black Black Black",
+      "title": "US 12.5 / UK 12 - Black / Black / Black",
       "price": "19204.00",
       "compare_at_price": null,
       "source_price": 200.0,
-      "source_compare_at_price": 200.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -438,18 +207,72 @@
         },
         {
           "option_name": "Color",
-          "name": "Black Black Black"
+          "name": "Black / Black / Black"
         }
       ]
     },
     {
-      "id": 736213015,
-      "sku": "SALOMON-7362130-13",
-      "title": "US 13 / UK 12.5 - Black Black Black",
+      "id": 736213006,
+      "sku": "SALOMON-7362130-12",
+      "title": "US 12 / UK 11.5 - Black / Black / Black",
       "price": "19204.00",
       "compare_at_price": null,
       "source_price": 200.0,
-      "source_compare_at_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 736213007,
+      "sku": "SALOMON-7362130-10.5",
+      "title": "US 10.5 / UK 10 - Black / Black / Black",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 736213008,
+      "sku": "SALOMON-7362130-13",
+      "title": "US 13 / UK 12.5 - Black / Black / Black",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -465,7 +288,925 @@
         },
         {
           "option_name": "Color",
-          "name": "Black Black Black"
+          "name": "Black / Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 736213009,
+      "sku": "SALOMON-7362130-11.5",
+      "title": "US 11.5 / UK 11 - Black / Black / Black",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 736213010,
+      "sku": "SALOMON-7362130-8.5",
+      "title": "US 8.5 / UK 8 - Black / Black / Black",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 736213011,
+      "sku": "SALOMON-7362130-7.5",
+      "title": "US 7.5 / UK 7 - Black / Black / Black",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 736213012,
+      "sku": "SALOMON-7362130-7",
+      "title": "US 7 / UK 6.5 - Black / Black / Black",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 736213013,
+      "sku": "SALOMON-7362130-9",
+      "title": "US 9 / UK 8.5 - Black / Black / Black",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 736213014,
+      "sku": "SALOMON-7362130-6.5",
+      "title": "US 6.5 / UK 6 - Black / Black / Black",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 736213015,
+      "sku": "SALOMON-7362130-5",
+      "title": "US 5 / UK 4.5 - Black / Black / Black",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/5fac6dd0-ab8b-4d01-bd57-7d0819818beb.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Black / Black"
+        }
+      ]
+    },
+    {
+      "id": 736213016,
+      "sku": "SALOMON-7362130-LUNA-6",
+      "title": "US 6 / UK 5.5 - Lunar Rock",
+      "price": "9602.00",
+      "compare_at_price": "19204.00",
+      "source_price": 100.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed753b98-d4a8-467a-bb8a-8eff10641e10.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 736213017,
+      "sku": "SALOMON-7362130-LUNA-13",
+      "title": "US 13 / UK 12.5 - Lunar Rock",
+      "price": "9602.00",
+      "compare_at_price": "19204.00",
+      "source_price": 100.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed753b98-d4a8-467a-bb8a-8eff10641e10.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 13"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 736213018,
+      "sku": "SALOMON-7362130-LUNA-12",
+      "title": "US 12 / UK 11.5 - Lunar Rock",
+      "price": "9602.00",
+      "compare_at_price": "19204.00",
+      "source_price": 100.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed753b98-d4a8-467a-bb8a-8eff10641e10.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 736213019,
+      "sku": "SALOMON-7362130-LUNA-9",
+      "title": "US 9 / UK 8.5 - Lunar Rock",
+      "price": "9602.00",
+      "compare_at_price": "19204.00",
+      "source_price": 100.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed753b98-d4a8-467a-bb8a-8eff10641e10.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 736213020,
+      "sku": "SALOMON-7362130-LUNA-7",
+      "title": "US 7 / UK 6.5 - Lunar Rock",
+      "price": "9602.00",
+      "compare_at_price": "19204.00",
+      "source_price": 100.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed753b98-d4a8-467a-bb8a-8eff10641e10.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 736213021,
+      "sku": "SALOMON-7362130-LUNA-11.5",
+      "title": "US 11.5 / UK 11 - Lunar Rock",
+      "price": "9602.00",
+      "compare_at_price": "19204.00",
+      "source_price": 100.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed753b98-d4a8-467a-bb8a-8eff10641e10.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11"
+        },
+        {
+          "option_name": "Color",
+          "name": "Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 736213022,
+      "sku": "SALOMON-7362130-LUNA-8",
+      "title": "US 8 / UK 7.5 - Lunar Rock",
+      "price": "9602.00",
+      "compare_at_price": "19204.00",
+      "source_price": 100.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed753b98-d4a8-467a-bb8a-8eff10641e10.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 736213023,
+      "sku": "SALOMON-7362130-LUNA-11",
+      "title": "US 11 / UK 10.5 - Lunar Rock",
+      "price": "9602.00",
+      "compare_at_price": "19204.00",
+      "source_price": 100.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed753b98-d4a8-467a-bb8a-8eff10641e10.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 736213024,
+      "sku": "SALOMON-7362130-LUNA-10",
+      "title": "US 10 / UK 9.5 - Lunar Rock",
+      "price": "9602.00",
+      "compare_at_price": "19204.00",
+      "source_price": 100.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed753b98-d4a8-467a-bb8a-8eff10641e10.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 736213025,
+      "sku": "SALOMON-7362130-LUNA-8.5",
+      "title": "US 8.5 / UK 8 - Lunar Rock",
+      "price": "9602.00",
+      "compare_at_price": "19204.00",
+      "source_price": 100.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed753b98-d4a8-467a-bb8a-8eff10641e10.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 736213026,
+      "sku": "SALOMON-7362130-LUNA-10.5",
+      "title": "US 10.5 / UK 10 - Lunar Rock",
+      "price": "9602.00",
+      "compare_at_price": "19204.00",
+      "source_price": 100.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed753b98-d4a8-467a-bb8a-8eff10641e10.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10"
+        },
+        {
+          "option_name": "Color",
+          "name": "Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 736213027,
+      "sku": "SALOMON-7362130-LUNA-7.5",
+      "title": "US 7.5 / UK 7 - Lunar Rock",
+      "price": "9602.00",
+      "compare_at_price": "19204.00",
+      "source_price": 100.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed753b98-d4a8-467a-bb8a-8eff10641e10.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 736213028,
+      "sku": "SALOMON-7362130-LUNA-9.5",
+      "title": "US 9.5 / UK 9 - Lunar Rock",
+      "price": "9602.00",
+      "compare_at_price": "19204.00",
+      "source_price": 100.0,
+      "source_compare_at_price": 200.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ed753b98-d4a8-467a-bb8a-8eff10641e10.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Lunar Rock"
+        }
+      ]
+    },
+    {
+      "id": 736213029,
+      "sku": "SALOMON-7362130-WHIT-6.5",
+      "title": "US 6.5 / UK 6 - White",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/2be967be-3bae-4609-8c69-214764699e81.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6"
+        },
+        {
+          "option_name": "Color",
+          "name": "White"
+        }
+      ]
+    },
+    {
+      "id": 736213030,
+      "sku": "SALOMON-7362130-WHIT-6",
+      "title": "US 6 / UK 5.5 - White",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/2be967be-3bae-4609-8c69-214764699e81.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White"
+        }
+      ]
+    },
+    {
+      "id": 736213031,
+      "sku": "SALOMON-7362130-WHIT-12",
+      "title": "US 12 / UK 11.5 - White",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/2be967be-3bae-4609-8c69-214764699e81.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 12"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White"
+        }
+      ]
+    },
+    {
+      "id": 736213032,
+      "sku": "SALOMON-7362130-WHIT-11",
+      "title": "US 11 / UK 10.5 - White",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/2be967be-3bae-4609-8c69-214764699e81.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White"
+        }
+      ]
+    },
+    {
+      "id": 736213033,
+      "sku": "SALOMON-7362130-WHIT-10.5",
+      "title": "US 10.5 / UK 10 - White",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/2be967be-3bae-4609-8c69-214764699e81.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 10"
+        },
+        {
+          "option_name": "Color",
+          "name": "White"
+        }
+      ]
+    },
+    {
+      "id": 736213034,
+      "sku": "SALOMON-7362130-WHIT-13",
+      "title": "US 13 / UK 12.5 - White",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/2be967be-3bae-4609-8c69-214764699e81.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 13"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 12.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White"
+        }
+      ]
+    },
+    {
+      "id": 736213035,
+      "sku": "SALOMON-7362130-WHIT-9.5",
+      "title": "US 9.5 / UK 9 - White",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/2be967be-3bae-4609-8c69-214764699e81.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "White"
+        }
+      ]
+    },
+    {
+      "id": 736213036,
+      "sku": "SALOMON-7362130-WHIT-9",
+      "title": "US 9 / UK 8.5 - White",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/2be967be-3bae-4609-8c69-214764699e81.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White"
+        }
+      ]
+    },
+    {
+      "id": 736213037,
+      "sku": "SALOMON-7362130-WHIT-11.5",
+      "title": "US 11.5 / UK 11 - White",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/2be967be-3bae-4609-8c69-214764699e81.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 11"
+        },
+        {
+          "option_name": "Color",
+          "name": "White"
+        }
+      ]
+    },
+    {
+      "id": 736213038,
+      "sku": "SALOMON-7362130-WHIT-8.5",
+      "title": "US 8.5 / UK 8 - White",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/2be967be-3bae-4609-8c69-214764699e81.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "White"
+        }
+      ]
+    },
+    {
+      "id": 736213039,
+      "sku": "SALOMON-7362130-WHIT-7",
+      "title": "US 7 / UK 6.5 - White",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/2be967be-3bae-4609-8c69-214764699e81.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White"
+        }
+      ]
+    },
+    {
+      "id": 736213040,
+      "sku": "SALOMON-7362130-WHIT-8",
+      "title": "US 8 / UK 7.5 - White",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/2be967be-3bae-4609-8c69-214764699e81.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White"
+        }
+      ]
+    },
+    {
+      "id": 736213041,
+      "sku": "SALOMON-7362130-WHIT-7.5",
+      "title": "US 7.5 / UK 7 - White",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/2be967be-3bae-4609-8c69-214764699e81.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "White"
+        }
+      ]
+    },
+    {
+      "id": 736213042,
+      "sku": "SALOMON-7362130-WHIT-10",
+      "title": "US 10 / UK 9.5 - White",
+      "price": "19204.00",
+      "compare_at_price": null,
+      "source_price": 200.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/2be967be-3bae-4609-8c69-214764699e81.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White"
         }
       ]
     }
@@ -581,27 +1322,40 @@
       "name": "Color",
       "values": [
         {
-          "name": "Black Black Black"
+          "name": "Black / Black / Black"
+        },
+        {
+          "name": "Lunar Rock"
+        },
+        {
+          "name": "White"
         }
       ]
     }
   ],
   "tags": [
-    "salomon-shoes",
     "footwear",
-    "sneakers",
-    "running",
     "men",
-    "sizes-16"
+    "running",
+    "salomon-shoes",
+    "sizes-16",
+    "sneakers",
+    "unisex"
   ],
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T20:37:13Z",
+  "last_verified_at": "2026-09-19T08:33:30Z",
   "created_at": "2026-09-17T19:01:28Z",
-  "updated_at": "2026-09-18T20:37:13Z",
+  "updated_at": "2026-09-19T08:33:30Z",
+  "price_range_usd": {
+    "min": 100.0,
+    "max": 200.0
+  },
+  "price_range_inr": {
+    "min": 9602.0,
+    "max": 19204.0
+  },
   "status": "ACTIVE",
-  "validation_warnings": [],
-  "is_active": true,
-  "shopify_sync_pending": true
+  "is_active": true
 }

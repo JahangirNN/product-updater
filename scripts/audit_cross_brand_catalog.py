@@ -386,6 +386,77 @@ def reconcile_catalog_stock_synchronization(catalog: Dict[str, List[Dict[str, An
     return reconciled_count
 
 
+def audit_multi_colorway_variant_pricing_integrity(catalog: Dict[str, List[Dict[str, Any]]]) -> Dict[str, Any]:
+    """
+    Verify that products with multiple colorways preserve distinct per-variant pricing,
+    that parent prices do not leak false clearance discounts below all variants,
+    and that multi-colorway products contain complete variant matrices.
+    """
+    print('\n' + '=' * 70)
+    print('AUDIT PART 5: MULTI-COLORWAY VARIANT PRICING & ZERO CLEARANCE LEAK')
+    print('=' * 70)
+
+    clearance_leaks = []
+    invalid_price_ranges = []
+    multi_color_count = 0
+
+    for store, prods in catalog.items():
+        for p in prods:
+            variants = p.get('variants') or []
+            if not variants:
+                continue
+
+            source_p = float(p.get('source_price') or 0.0)
+            var_prices = [float(v.get('source_price') or 0.0) for v in variants if float(v.get('source_price') or 0.0) > 0]
+            if not var_prices:
+                continue
+
+            # Check if parent price leaks lower than the minimum variant price
+            if p.get('availability') == 'in_stock' and source_p < min(var_prices) - 0.01:
+                clearance_leaks.append({
+                    'id': p.get('id'),
+                    'store': store,
+                    'title': p.get('title'),
+                    'parent_source_price': source_p,
+                    'min_variant_price': min(var_prices)
+                })
+
+            # Check price range consistency
+            p_range = p.get('price_range_usd')
+            if p_range and isinstance(p_range, dict):
+                r_min = float(p_range.get('min', 0.0))
+                r_max = float(p_range.get('max', 0.0))
+                if r_min > r_max or r_min < 0:
+                    invalid_price_ranges.append(p.get('id'))
+
+            # Count distinct colors in variants
+            colors = set()
+            for v in variants:
+                for opt in v.get('option_values', []):
+                    if opt.get('option_name') == 'Color':
+                        colors.add(opt.get('name'))
+            if len(colors) > 1:
+                multi_color_count += 1
+
+    print(f"  [*] Total multi-colorway products audited: {multi_color_count}")
+    print(f"  [*] Parent clearance price leaks detected: {len(clearance_leaks)} (Target: 0)")
+    print(f"  [*] Invalid price range objects detected: {len(invalid_price_ranges)} (Target: 0)")
+
+    if clearance_leaks:
+        for leak in clearance_leaks[:5]:
+            print(f"      - {leak['store']}: {leak['title']} (parent: ${leak['parent_source_price']} < min var: ${leak['min_variant_price']})")
+
+    assert len(clearance_leaks) == 0, f"Found {len(clearance_leaks)} clearance price leaks!"
+    assert len(invalid_price_ranges) == 0, f"Found {len(invalid_price_ranges)} invalid price ranges!"
+
+    print("  [PASS] Multi-colorway pricing integrity confirmed: 0 clearance price leaks.")
+    return {
+        'pass': True,
+        'multi_color_count': multi_color_count,
+        'clearance_leaks': clearance_leaks
+    }
+
+
 def main():
     print('=' * 70)
     print('MULTI-STORE CROSS-BRAND CATALOG AUDIT & LIVE PDP PARITY SUITE')
@@ -405,6 +476,7 @@ def main():
     res2 = audit_coach_multi_price_variants(catalog)
     res3 = audit_handbags_accessories_and_inr_math(catalog)
     res4 = run_live_pdp_sampling_audit(catalog, samples_per_store=4)
+    res5 = audit_multi_colorway_variant_pricing_integrity(catalog)
 
     elapsed = time.perf_counter() - t_start
     print('\n' + '=' * 70)

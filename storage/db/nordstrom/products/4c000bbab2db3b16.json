@@ -8,9 +8,9 @@
   "product_type": "Athletic Shoes",
   "source_sku": "ON-7894416-5",
   "source_price": 102.0,
-  "source_compare_at_price": 129.06,
+  "source_compare_at_price": null,
   "current_price": 9791.0,
-  "compare_at_price": 12388.0,
+  "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -21,33 +21,229 @@
     "Gender": "Women",
     "Category": "Footwear",
     "Material": "Synthetic upper and lining/rubber and synthetic sole",
-    "Midsole Drop": "Not specified",
-    "Cushioning": "Helion superfoam cushioning delivers lightweight energy return",
-    "Item Number": "10400045",
-    "Available Sizes (US)": "US 5, US 5.5, US 6, US 6.5, US 7, US 8, US 8.5, US 9, US 9.5, US 10",
-    "Available Sizes (UK)": "UK 3, UK 3.5, UK 4, UK 4.5, UK 5, UK 6, UK 6.5, UK 7, UK 7.5, UK 8"
+    "Midsole Drop": "8mm",
+    "Cushioning": "CloudTec buoyant cushioning",
+    "Item Number": "7894416",
+    "Available Sizes (US)": "US 5, US 5.5, US 6, US 6.5, US 7, US 7.5, US 8, US 8.5, US 9, US 9.5, US 10, US 10.5, US 11",
+    "Available Sizes (UK)": "UK 3, UK 3.5, UK 4, UK 4.5, UK 5, UK 5.5, UK 6, UK 6.5, UK 7, UK 7.5, UK 8, UK 8.5, UK 9"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> On Running</li>\n      <li><strong>Gender:</strong> Women</li>\n      <li><strong>Material:</strong> Synthetic upper and lining/rubber and synthetic sole</li>\n      <li><strong>Midsole Drop:</strong> Not specified</li>\n      <li><strong>Cushioning:</strong> Helion superfoam cushioning delivers lightweight energy return</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 On Running Shoe Size & Conversion Guide (Women)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> On</li>\n      <li><strong>Gender:</strong> Women</li>\n      <li><strong>Material:</strong> Synthetic upper and lining/rubber and synthetic sole</li>\n      <li><strong>Midsole Drop:</strong> 8mm</li>\n      <li><strong>Cushioning:</strong> CloudTec buoyant cushioning</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 On Shoe Size &amp; Conversion Guide (Women)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9</td>\n          <td style=\"padding: 6px; color: #666;\">EU 43</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
+    "https://n.nordstrommedia.com/it/9678b9b6-81cb-44a2-9644-2671408b5fd0.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/a32c61a4-3ecf-4287-9e55-1c9e7e9a3791.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/80200436-2b9e-46e4-a1d5-7e07c83b020f.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/695a82b7-20f3-45be-bc91-023d4d8943dc.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/22bfa003-f7ef-4c23-b645-c2761486f903.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/46c0d65b-c39c-40f3-9993-f869d475e4cc.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/ab682e9d-c4ed-43d1-a078-c72a5317a2ae.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/a6ff8a01-2d6b-498e-824c-bbdb10aa35e6.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/c9e91b84-0861-40e8-a737-e0d07c3cc840.jpeg?crop=pad",
     "https://n.nordstrommedia.com/it/4a8f1146-4c82-43ba-86f1-a1884398313d.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/2970826e-061a-40dc-a5a3-fa3517ab2b63.jpeg?crop=pad&trim=color"
+    "https://n.nordstrommedia.com/it/2970826e-061a-40dc-a5a3-fa3517ab2b63.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/669c2524-385b-4163-9699-2ff9d6cace40.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/e1c0136e-ceac-4876-a712-15769ce15e8f.jpeg?crop=pad&trim=color"
   ],
   "variants": [
     {
       "id": 789441600,
-      "sku": "ON-7894416-5",
-      "title": "US 5 / UK 3 - White Glacier",
-      "price": "9791.00",
-      "compare_at_price": "12388.00",
-      "source_price": 77.44,
-      "source_compare_at_price": 129.06,
+      "sku": "ON-7894416-11",
+      "title": "US 11 / UK 9 - Black / Eclipse",
+      "price": "11422.00",
+      "compare_at_price": "16318.00",
+      "source_price": 118.99,
+      "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/ab682e9d-c4ed-43d1-a078-c72a5317a2ae.jpeg?crop=pad&trim=color",
+      "image_url": "https://n.nordstrommedia.com/it/9678b9b6-81cb-44a2-9644-2671408b5fd0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 789441601,
+      "sku": "ON-7894416-8",
+      "title": "US 8 / UK 6 - Black / Eclipse",
+      "price": "11422.00",
+      "compare_at_price": "16318.00",
+      "source_price": 118.99,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9678b9b6-81cb-44a2-9644-2671408b5fd0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 789441602,
+      "sku": "ON-7894416-8.5",
+      "title": "US 8.5 / UK 6.5 - Black / Eclipse",
+      "price": "11422.00",
+      "compare_at_price": "16318.00",
+      "source_price": 118.99,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9678b9b6-81cb-44a2-9644-2671408b5fd0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 789441603,
+      "sku": "ON-7894416-7.5",
+      "title": "US 7.5 / UK 5.5 - Black / Eclipse",
+      "price": "11422.00",
+      "compare_at_price": "16318.00",
+      "source_price": 118.99,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9678b9b6-81cb-44a2-9644-2671408b5fd0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 789441604,
+      "sku": "ON-7894416-6.5",
+      "title": "US 6.5 / UK 4.5 - Black / Eclipse",
+      "price": "11422.00",
+      "compare_at_price": "16318.00",
+      "source_price": 118.99,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9678b9b6-81cb-44a2-9644-2671408b5fd0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 789441605,
+      "sku": "ON-7894416-7",
+      "title": "US 7 / UK 5 - Black / Eclipse",
+      "price": "11422.00",
+      "compare_at_price": "16318.00",
+      "source_price": 118.99,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9678b9b6-81cb-44a2-9644-2671408b5fd0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 789441606,
+      "sku": "ON-7894416-9.5",
+      "title": "US 9.5 / UK 7.5 - Black / Eclipse",
+      "price": "11422.00",
+      "compare_at_price": "16318.00",
+      "source_price": 118.99,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9678b9b6-81cb-44a2-9644-2671408b5fd0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 789441607,
+      "sku": "ON-7894416-5",
+      "title": "US 5 / UK 3 - Black / Eclipse",
+      "price": "11422.00",
+      "compare_at_price": "16318.00",
+      "source_price": 118.99,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9678b9b6-81cb-44a2-9644-2671408b5fd0.jpeg?crop=pad&trim=color",
       "option_values": [
         {
           "option_name": "Size (US)",
@@ -59,18 +255,153 @@
         },
         {
           "option_name": "Color",
-          "name": "White Glacier"
+          "name": "Black / Eclipse"
         }
       ]
     },
     {
-      "id": 789441601,
+      "id": 789441608,
+      "sku": "ON-7894416-10.5",
+      "title": "US 10.5 / UK 8.5 - Black / Eclipse",
+      "price": "11422.00",
+      "compare_at_price": "16318.00",
+      "source_price": 118.99,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9678b9b6-81cb-44a2-9644-2671408b5fd0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 789441609,
+      "sku": "ON-7894416-9",
+      "title": "US 9 / UK 7 - Black / Eclipse",
+      "price": "11422.00",
+      "compare_at_price": "16318.00",
+      "source_price": 118.99,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9678b9b6-81cb-44a2-9644-2671408b5fd0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 789441610,
       "sku": "ON-7894416-5.5",
-      "title": "US 5.5 / UK 3.5 - White Glacier",
+      "title": "US 5.5 / UK 3.5 - Black / Eclipse",
+      "price": "11422.00",
+      "compare_at_price": "16318.00",
+      "source_price": 118.99,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9678b9b6-81cb-44a2-9644-2671408b5fd0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 789441611,
+      "sku": "ON-7894416-6",
+      "title": "US 6 / UK 4 - Black / Eclipse",
+      "price": "11422.00",
+      "compare_at_price": "16318.00",
+      "source_price": 118.99,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/9678b9b6-81cb-44a2-9644-2671408b5fd0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 789441612,
+      "sku": "ON-7894416-10",
+      "title": "US 10 / UK 8 - Black / Eclipse",
+      "price": "11422.00",
+      "compare_at_price": "16318.00",
+      "source_price": 118.99,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/9678b9b6-81cb-44a2-9644-2671408b5fd0.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black / Eclipse"
+        }
+      ]
+    },
+    {
+      "id": 789441613,
+      "sku": "ON-7894416-WHIT-5.5",
+      "title": "US 5.5 / UK 3.5 - White / Glacier",
       "price": "9791.00",
-      "compare_at_price": "12388.00",
-      "source_price": 77.44,
-      "source_compare_at_price": 129.06,
+      "compare_at_price": "16318.00",
+      "source_price": 102.0,
+      "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -86,18 +417,18 @@
         },
         {
           "option_name": "Color",
-          "name": "White Glacier"
+          "name": "White / Glacier"
         }
       ]
     },
     {
-      "id": 789441602,
-      "sku": "ON-7894416-6",
-      "title": "US 6 / UK 4 - White Glacier",
+      "id": 789441614,
+      "sku": "ON-7894416-WHIT-11",
+      "title": "US 11 / UK 9 - White / Glacier",
       "price": "9791.00",
-      "compare_at_price": "12388.00",
-      "source_price": 77.44,
-      "source_compare_at_price": 129.06,
+      "compare_at_price": "16318.00",
+      "source_price": 102.0,
+      "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -105,53 +436,26 @@
       "option_values": [
         {
           "option_name": "Size (US)",
-          "name": "US 6"
+          "name": "US 11"
         },
         {
           "option_name": "Size (UK)",
-          "name": "UK 4"
+          "name": "UK 9"
         },
         {
           "option_name": "Color",
-          "name": "White Glacier"
+          "name": "White / Glacier"
         }
       ]
     },
     {
-      "id": 789441603,
-      "sku": "ON-7894416-6.5",
-      "title": "US 6.5 / UK 4.5 - White Glacier",
+      "id": 789441615,
+      "sku": "ON-7894416-WHIT-7",
+      "title": "US 7 / UK 5 - White / Glacier",
       "price": "9791.00",
-      "compare_at_price": "12388.00",
-      "source_price": 77.44,
-      "source_compare_at_price": 129.06,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/ab682e9d-c4ed-43d1-a078-c72a5317a2ae.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 6.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 4.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "White Glacier"
-        }
-      ]
-    },
-    {
-      "id": 789441604,
-      "sku": "ON-7894416-7",
-      "title": "US 7 / UK 5 - White Glacier",
-      "price": "9791.00",
-      "compare_at_price": "12388.00",
-      "source_price": 77.44,
-      "source_compare_at_price": 129.06,
+      "compare_at_price": "16318.00",
+      "source_price": 102.0,
+      "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -167,45 +471,18 @@
         },
         {
           "option_name": "Color",
-          "name": "White Glacier"
+          "name": "White / Glacier"
         }
       ]
     },
     {
-      "id": 789441605,
-      "sku": "ON-7894416-8",
-      "title": "US 8 / UK 6 - White Glacier",
+      "id": 789441616,
+      "sku": "ON-7894416-WHIT-8.5",
+      "title": "US 8.5 / UK 6.5 - White / Glacier",
       "price": "9791.00",
-      "compare_at_price": "12388.00",
-      "source_price": 77.44,
-      "source_compare_at_price": 129.06,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/ab682e9d-c4ed-43d1-a078-c72a5317a2ae.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 8"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 6"
-        },
-        {
-          "option_name": "Color",
-          "name": "White Glacier"
-        }
-      ]
-    },
-    {
-      "id": 789441606,
-      "sku": "ON-7894416-8.5",
-      "title": "US 8.5 / UK 6.5 - White Glacier",
-      "price": "9791.00",
-      "compare_at_price": "12388.00",
-      "source_price": 77.44,
-      "source_compare_at_price": 129.06,
+      "compare_at_price": "16318.00",
+      "source_price": 102.0,
+      "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -221,45 +498,72 @@
         },
         {
           "option_name": "Color",
-          "name": "White Glacier"
+          "name": "White / Glacier"
         }
       ]
     },
     {
-      "id": 789441607,
-      "sku": "ON-7894416-9",
-      "title": "US 9 / UK 7 - White Glacier",
+      "id": 789441617,
+      "sku": "ON-7894416-WHIT-7.5",
+      "title": "US 7.5 / UK 5.5 - White / Glacier",
       "price": "9791.00",
-      "compare_at_price": "12388.00",
-      "source_price": 77.44,
-      "source_compare_at_price": 129.06,
+      "compare_at_price": "16318.00",
+      "source_price": 102.0,
+      "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ab682e9d-c4ed-43d1-a078-c72a5317a2ae.jpeg?crop=pad&trim=color",
       "option_values": [
         {
           "option_name": "Size (US)",
-          "name": "US 9"
+          "name": "US 7.5"
         },
         {
           "option_name": "Size (UK)",
-          "name": "UK 7"
+          "name": "UK 5.5"
         },
         {
           "option_name": "Color",
-          "name": "White Glacier"
+          "name": "White / Glacier"
         }
       ]
     },
     {
-      "id": 789441608,
-      "sku": "ON-7894416-9.5",
-      "title": "US 9.5 / UK 7.5 - White Glacier",
+      "id": 789441618,
+      "sku": "ON-7894416-WHIT-6.5",
+      "title": "US 6.5 / UK 4.5 - White / Glacier",
       "price": "9791.00",
-      "compare_at_price": "12388.00",
-      "source_price": 77.44,
-      "source_compare_at_price": 129.06,
+      "compare_at_price": "16318.00",
+      "source_price": 102.0,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ab682e9d-c4ed-43d1-a078-c72a5317a2ae.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / Glacier"
+        }
+      ]
+    },
+    {
+      "id": 789441619,
+      "sku": "ON-7894416-WHIT-9.5",
+      "title": "US 9.5 / UK 7.5 - White / Glacier",
+      "price": "9791.00",
+      "compare_at_price": "16318.00",
+      "source_price": 102.0,
+      "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -275,21 +579,75 @@
         },
         {
           "option_name": "Color",
-          "name": "White Glacier"
+          "name": "White / Glacier"
         }
       ]
     },
     {
-      "id": 789441609,
-      "sku": "ON-7894416-10",
-      "title": "US 10 / UK 8 - White Glacier",
+      "id": 789441620,
+      "sku": "ON-7894416-WHIT-9",
+      "title": "US 9 / UK 7 - White / Glacier",
       "price": "9791.00",
-      "compare_at_price": "12388.00",
-      "source_price": 77.44,
-      "source_compare_at_price": 129.06,
+      "compare_at_price": "16318.00",
+      "source_price": 102.0,
+      "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ab682e9d-c4ed-43d1-a078-c72a5317a2ae.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / Glacier"
+        }
+      ]
+    },
+    {
+      "id": 789441621,
+      "sku": "ON-7894416-WHIT-5",
+      "title": "US 5 / UK 3 - White / Glacier",
+      "price": "9791.00",
+      "compare_at_price": "16318.00",
+      "source_price": 102.0,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ab682e9d-c4ed-43d1-a078-c72a5317a2ae.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / Glacier"
+        }
+      ]
+    },
+    {
+      "id": 789441622,
+      "sku": "ON-7894416-WHIT-10",
+      "title": "US 10 / UK 8 - White / Glacier",
+      "price": "9791.00",
+      "compare_at_price": "16318.00",
+      "source_price": 102.0,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ab682e9d-c4ed-43d1-a078-c72a5317a2ae.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -302,7 +660,88 @@
         },
         {
           "option_name": "Color",
-          "name": "White Glacier"
+          "name": "White / Glacier"
+        }
+      ]
+    },
+    {
+      "id": 789441623,
+      "sku": "ON-7894416-WHIT-8",
+      "title": "US 8 / UK 6 - White / Glacier",
+      "price": "9791.00",
+      "compare_at_price": "16318.00",
+      "source_price": 102.0,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ab682e9d-c4ed-43d1-a078-c72a5317a2ae.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / Glacier"
+        }
+      ]
+    },
+    {
+      "id": 789441624,
+      "sku": "ON-7894416-WHIT-10.5",
+      "title": "US 10.5 / UK 8.5 - White / Glacier",
+      "price": "9791.00",
+      "compare_at_price": "16318.00",
+      "source_price": 102.0,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/ab682e9d-c4ed-43d1-a078-c72a5317a2ae.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / Glacier"
+        }
+      ]
+    },
+    {
+      "id": 789441625,
+      "sku": "ON-7894416-WHIT-6",
+      "title": "US 6 / UK 4 - White / Glacier",
+      "price": "9791.00",
+      "compare_at_price": "16318.00",
+      "source_price": 102.0,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/ab682e9d-c4ed-43d1-a078-c72a5317a2ae.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4"
+        },
+        {
+          "option_name": "Color",
+          "name": "White / Glacier"
         }
       ]
     }
@@ -327,6 +766,9 @@
           "name": "US 7"
         },
         {
+          "name": "US 7.5"
+        },
+        {
           "name": "US 8"
         },
         {
@@ -340,6 +782,12 @@
         },
         {
           "name": "US 10"
+        },
+        {
+          "name": "US 10.5"
+        },
+        {
+          "name": "US 11"
         }
       ]
     },
@@ -362,6 +810,9 @@
           "name": "UK 5"
         },
         {
+          "name": "UK 5.5"
+        },
+        {
           "name": "UK 6"
         },
         {
@@ -375,6 +826,12 @@
         },
         {
           "name": "UK 8"
+        },
+        {
+          "name": "UK 8.5"
+        },
+        {
+          "name": "UK 9"
         }
       ]
     },
@@ -382,30 +839,37 @@
       "name": "Color",
       "values": [
         {
-          "name": "White Glacier"
+          "name": "Black / Eclipse"
         },
         {
-          "name": "Black Eclipse"
+          "name": "White / Glacier"
         }
       ]
     }
   ],
   "tags": [
-    "on-shoes",
     "footwear",
-    "sneakers",
+    "on-shoes",
     "running",
-    "women",
-    "sizes-10"
+    "sizes-10",
+    "sizes-13",
+    "sneakers",
+    "women"
   ],
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T20:26:24Z",
+  "last_verified_at": "2026-09-19T07:47:56Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-18T20:26:24Z",
+  "updated_at": "2026-09-19T07:47:56Z",
+  "price_range_usd": {
+    "min": 102.0,
+    "max": 118.99
+  },
+  "price_range_inr": {
+    "min": 9791.0,
+    "max": 11422.0
+  },
   "status": "ACTIVE",
-  "validation_warnings": [],
-  "is_active": true,
-  "shopify_sync_pending": true
+  "is_active": true
 }

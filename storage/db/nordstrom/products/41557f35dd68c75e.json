@@ -8,9 +8,9 @@
   "product_type": "Athletic Shoes",
   "source_sku": "ON-8191642-5",
   "source_price": 113.9,
-  "source_compare_at_price": 170.0,
+  "source_compare_at_price": null,
   "current_price": 10933.0,
-  "compare_at_price": 16318.0,
+  "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -22,28 +22,385 @@
     "Category": "Footwear",
     "Material": "Textile and synthetic",
     "Midsole Drop": "8mm",
-    "Cushioning": "absorbs impact and distributes weight for consistent, buoyant comfort",
-    "Item Number": "10677668",
-    "Available Sizes (US)": "US 5, US 5.5, US 6, US 6.5, US 7, US 7.5, US 8, US 8.5, US 9, US 9.5, US 10, US 10.5, US 11, US 11.5, US 12",
-    "Available Sizes (UK)": "UK 3, UK 3.5, UK 4, UK 4.5, UK 5, UK 5.5, UK 6, UK 6.5, UK 7, UK 7.5, UK 8, UK 8.5, UK 9, UK 9.5, UK 10"
+    "Cushioning": "CloudTec buoyant cushioning",
+    "Item Number": "8191642",
+    "Available Sizes (US)": "US 5, US 5.5, US 6, US 6.5, US 7, US 7.5, US 8, US 8.5, US 9, US 9.5, US 10, US 10.5, US 11",
+    "Available Sizes (UK)": "UK 3, UK 3.5, UK 4, UK 4.5, UK 5, UK 5.5, UK 6, UK 6.5, UK 7, UK 7.5, UK 8, UK 8.5, UK 9"
   },
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> On Running</li>\n      <li><strong>Gender:</strong> Women</li>\n      <li><strong>Material:</strong> Textile and synthetic</li>\n      <li><strong>Midsole Drop:</strong> 8mm</li>\n      <li><strong>Cushioning:</strong> absorbs impact and distributes weight for consistent, buoyant comfort</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 On Running Shoe Size & Conversion Guide (Women)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9</td>\n          <td style=\"padding: 6px; color: #666;\">EU 43</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 12</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 10</td>\n          <td style=\"padding: 6px; color: #666;\">EU 44.5</td>\n          <td style=\"padding: 6px; color: #c92a2a;\">Sold Out</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\"></p>\n  \n  <div class=\"product-highlights\">\n    <h4>Performance Specifications</h4>\n    <ul>\n      <li><strong>Brand:</strong> On</li>\n      <li><strong>Gender:</strong> Women</li>\n      <li><strong>Material:</strong> Textile and synthetic</li>\n      <li><strong>Midsole Drop:</strong> 8mm</li>\n      <li><strong>Cushioning:</strong> CloudTec buoyant cushioning</li>\n    </ul>\n  </div>\n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">📏 On Shoe Size &amp; Conversion Guide (Women)</summary>\n    <p style=\"font-size: 13px; color: #666; margin: 8px 0 4px 0;\">Official size conversion guide. Showing all available shoe sizes.</p>\n    <table style=\"width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;\">\n      <thead>\n        <tr style=\"background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;\">\n          <th style=\"padding: 6px;\">US Size</th>\n          <th style=\"padding: 6px;\">UK Size</th>\n          <th style=\"padding: 6px;\">EU Size</th>\n          <th style=\"padding: 6px;\">Availability</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 5.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 3.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 36.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 6.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 4.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 37.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 7.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 5.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 38.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6</td>\n          <td style=\"padding: 6px; color: #666;\">EU 39</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 8.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 6.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7</td>\n          <td style=\"padding: 6px; color: #666;\">EU 40.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 9.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 7.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 41</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 10.5</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 8.5</td>\n          <td style=\"padding: 6px; color: #666;\">EU 42.5</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n        <tr style=\"border-bottom: 1px solid #f0f0f0;\">\n          <td style=\"padding: 6px; font-weight: 600;\">US 11</td>\n          <td style=\"padding: 6px; color: #191a1b; font-weight: 600;\">UK 9</td>\n          <td style=\"padding: 6px; color: #666;\">EU 43</td>\n          <td style=\"padding: 6px; color: #0d8a43;\">In Stock</td>\n        </tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "images": [
+    "https://n.nordstrommedia.com/it/75e79ae7-3a75-4989-a338-1a52849bbe9a.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/a752790a-364e-4e0e-a564-d0364506002f.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/6ac62d5a-3f8c-4477-a16d-2fe4f7fb1768.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/9f9ea9c4-4906-4ce2-982b-497fe29d907f.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/4a47d378-dd27-4b2e-a2d8-dbd5c772e42b.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/00696eea-4ffa-4406-91aa-057e58e77add.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/a2ad52ab-309e-42a9-9e7e-900f75685ff5.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/993df189-e4b4-4279-8f73-0fdbbd1ec383.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/ce1db6af-ceef-44d8-be16-dc7b81d26326.jpeg?crop=pad",
     "https://n.nordstrommedia.com/it/6cf48968-8592-47fc-8106-5fe22a5fecbb.jpeg?crop=pad&trim=color",
     "https://n.nordstrommedia.com/it/921d8c2c-42cb-4f8f-b351-3d79e5c06356.jpeg?crop=pad&trim=color",
-    "https://n.nordstrommedia.com/it/d6c3e69b-a622-4192-90a9-95c9649544ac.jpeg?crop=pad&trim=color"
+    "https://n.nordstrommedia.com/it/d6c3e69b-a622-4192-90a9-95c9649544ac.jpeg?crop=pad&trim=color",
+    "https://n.nordstrommedia.com/it/608f3235-b741-4004-bf16-73282b6fee7c.jpeg?crop=pad&trim=color"
   ],
   "variants": [
     {
       "id": 819164200,
-      "sku": "ON-8191642-5",
-      "title": "US 5 / UK 3 - Sunstone Juniper",
+      "sku": "ON-8191642-5.5",
+      "title": "US 5.5 / UK 3.5 - Sand / Wolf",
       "price": "10933.00",
-      "compare_at_price": null,
-      "source_price": 170.0,
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/75e79ae7-3a75-4989-a338-1a52849bbe9a.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sand / Wolf"
+        }
+      ]
+    },
+    {
+      "id": 819164201,
+      "sku": "ON-8191642-6.5",
+      "title": "US 6.5 / UK 4.5 - Sand / Wolf",
+      "price": "10933.00",
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/75e79ae7-3a75-4989-a338-1a52849bbe9a.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sand / Wolf"
+        }
+      ]
+    },
+    {
+      "id": 819164202,
+      "sku": "ON-8191642-5",
+      "title": "US 5 / UK 3 - Sand / Wolf",
+      "price": "10933.00",
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/75e79ae7-3a75-4989-a338-1a52849bbe9a.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sand / Wolf"
+        }
+      ]
+    },
+    {
+      "id": 819164203,
+      "sku": "ON-8191642-7",
+      "title": "US 7 / UK 5 - Sand / Wolf",
+      "price": "10933.00",
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/75e79ae7-3a75-4989-a338-1a52849bbe9a.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sand / Wolf"
+        }
+      ]
+    },
+    {
+      "id": 819164204,
+      "sku": "ON-8191642-7.5",
+      "title": "US 7.5 / UK 5.5 - Sand / Wolf",
+      "price": "10933.00",
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/75e79ae7-3a75-4989-a338-1a52849bbe9a.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 7.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 5.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sand / Wolf"
+        }
+      ]
+    },
+    {
+      "id": 819164205,
+      "sku": "ON-8191642-8",
+      "title": "US 8 / UK 6 - Sand / Wolf",
+      "price": "10933.00",
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/75e79ae7-3a75-4989-a338-1a52849bbe9a.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sand / Wolf"
+        }
+      ]
+    },
+    {
+      "id": 819164206,
+      "sku": "ON-8191642-8.5",
+      "title": "US 8.5 / UK 6.5 - Sand / Wolf",
+      "price": "10933.00",
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/75e79ae7-3a75-4989-a338-1a52849bbe9a.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 8.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 6.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sand / Wolf"
+        }
+      ]
+    },
+    {
+      "id": 819164207,
+      "sku": "ON-8191642-6",
+      "title": "US 6 / UK 4 - Sand / Wolf",
+      "price": "10933.00",
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://n.nordstrommedia.com/it/75e79ae7-3a75-4989-a338-1a52849bbe9a.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sand / Wolf"
+        }
+      ]
+    },
+    {
+      "id": 819164208,
+      "sku": "ON-8191642-9",
+      "title": "US 9 / UK 7 - Sand / Wolf",
+      "price": "10933.00",
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/75e79ae7-3a75-4989-a338-1a52849bbe9a.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sand / Wolf"
+        }
+      ]
+    },
+    {
+      "id": 819164209,
+      "sku": "ON-8191642-9.5",
+      "title": "US 9.5 / UK 7.5 - Sand / Wolf",
+      "price": "10933.00",
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/75e79ae7-3a75-4989-a338-1a52849bbe9a.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 9.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sand / Wolf"
+        }
+      ]
+    },
+    {
+      "id": 819164210,
+      "sku": "ON-8191642-11",
+      "title": "US 11 / UK 9 - Sand / Wolf",
+      "price": "10933.00",
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/75e79ae7-3a75-4989-a338-1a52849bbe9a.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 11"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 9"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sand / Wolf"
+        }
+      ]
+    },
+    {
+      "id": 819164211,
+      "sku": "ON-8191642-10",
+      "title": "US 10 / UK 8 - Sand / Wolf",
+      "price": "10933.00",
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/75e79ae7-3a75-4989-a338-1a52849bbe9a.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sand / Wolf"
+        }
+      ]
+    },
+    {
+      "id": 819164212,
+      "sku": "ON-8191642-10.5",
+      "title": "US 10.5 / UK 8.5 - Sand / Wolf",
+      "price": "10933.00",
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/75e79ae7-3a75-4989-a338-1a52849bbe9a.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 10.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 8.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sand / Wolf"
+        }
+      ]
+    },
+    {
+      "id": 819164213,
+      "sku": "ON-8191642-SUNS-5",
+      "title": "US 5 / UK 3 - Sunstone / Juniper",
+      "price": "10933.00",
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -60,71 +417,17 @@
         },
         {
           "option_name": "Color",
-          "name": "Sunstone Juniper"
+          "name": "Sunstone / Juniper"
         }
       ]
     },
     {
-      "id": 819164201,
-      "sku": "ON-8191642-5.5",
-      "title": "US 5.5 / UK 3.5 - Sunstone Juniper",
+      "id": 819164214,
+      "sku": "ON-8191642-SUNS-6.5",
+      "title": "US 6.5 / UK 4.5 - Sunstone / Juniper",
       "price": "10933.00",
-      "compare_at_price": null,
-      "source_price": 170.0,
-      "source_compare_at_price": 170.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/a2ad52ab-309e-42a9-9e7e-900f75685ff5.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 5.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 3.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "Sunstone Juniper"
-        }
-      ]
-    },
-    {
-      "id": 819164202,
-      "sku": "ON-8191642-6",
-      "title": "US 6 / UK 4 - Sunstone Juniper",
-      "price": "10933.00",
-      "compare_at_price": null,
-      "source_price": 170.0,
-      "source_compare_at_price": 170.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": true,
-      "image_url": "https://n.nordstrommedia.com/it/a2ad52ab-309e-42a9-9e7e-900f75685ff5.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 6"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 4"
-        },
-        {
-          "option_name": "Color",
-          "name": "Sunstone Juniper"
-        }
-      ]
-    },
-    {
-      "id": 819164203,
-      "sku": "ON-8191642-6.5",
-      "title": "US 6.5 / UK 4.5 - Sunstone Juniper",
-      "price": "10933.00",
-      "compare_at_price": null,
-      "source_price": 170.0,
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -141,17 +444,17 @@
         },
         {
           "option_name": "Color",
-          "name": "Sunstone Juniper"
+          "name": "Sunstone / Juniper"
         }
       ]
     },
     {
-      "id": 819164204,
-      "sku": "ON-8191642-7",
-      "title": "US 7 / UK 5 - Sunstone Juniper",
+      "id": 819164215,
+      "sku": "ON-8191642-SUNS-7",
+      "title": "US 7 / UK 5 - Sunstone / Juniper",
       "price": "10933.00",
-      "compare_at_price": null,
-      "source_price": 170.0,
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -168,17 +471,17 @@
         },
         {
           "option_name": "Color",
-          "name": "Sunstone Juniper"
+          "name": "Sunstone / Juniper"
         }
       ]
     },
     {
-      "id": 819164205,
-      "sku": "ON-8191642-7.5",
-      "title": "US 7.5 / UK 5.5 - Sunstone Juniper",
+      "id": 819164216,
+      "sku": "ON-8191642-SUNS-7.5",
+      "title": "US 7.5 / UK 5.5 - Sunstone / Juniper",
       "price": "10933.00",
-      "compare_at_price": null,
-      "source_price": 170.0,
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -195,17 +498,71 @@
         },
         {
           "option_name": "Color",
-          "name": "Sunstone Juniper"
+          "name": "Sunstone / Juniper"
         }
       ]
     },
     {
-      "id": 819164206,
-      "sku": "ON-8191642-8",
-      "title": "US 8 / UK 6 - Sunstone Juniper",
+      "id": 819164217,
+      "sku": "ON-8191642-SUNS-5.5",
+      "title": "US 5.5 / UK 3.5 - Sunstone / Juniper",
       "price": "10933.00",
-      "compare_at_price": null,
-      "source_price": 170.0,
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/a2ad52ab-309e-42a9-9e7e-900f75685ff5.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 5.5"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 3.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sunstone / Juniper"
+        }
+      ]
+    },
+    {
+      "id": 819164218,
+      "sku": "ON-8191642-SUNS-6",
+      "title": "US 6 / UK 4 - Sunstone / Juniper",
+      "price": "10933.00",
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
+      "source_compare_at_price": 170.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://n.nordstrommedia.com/it/a2ad52ab-309e-42a9-9e7e-900f75685ff5.jpeg?crop=pad&trim=color",
+      "option_values": [
+        {
+          "option_name": "Size (US)",
+          "name": "US 6"
+        },
+        {
+          "option_name": "Size (UK)",
+          "name": "UK 4"
+        },
+        {
+          "option_name": "Color",
+          "name": "Sunstone / Juniper"
+        }
+      ]
+    },
+    {
+      "id": 819164219,
+      "sku": "ON-8191642-SUNS-8",
+      "title": "US 8 / UK 6 - Sunstone / Juniper",
+      "price": "10933.00",
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -222,17 +579,17 @@
         },
         {
           "option_name": "Color",
-          "name": "Sunstone Juniper"
+          "name": "Sunstone / Juniper"
         }
       ]
     },
     {
-      "id": 819164207,
-      "sku": "ON-8191642-8.5",
-      "title": "US 8.5 / UK 6.5 - Sunstone Juniper",
+      "id": 819164220,
+      "sku": "ON-8191642-SUNS-8.5",
+      "title": "US 8.5 / UK 6.5 - Sunstone / Juniper",
       "price": "10933.00",
-      "compare_at_price": null,
-      "source_price": 170.0,
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -249,17 +606,17 @@
         },
         {
           "option_name": "Color",
-          "name": "Sunstone Juniper"
+          "name": "Sunstone / Juniper"
         }
       ]
     },
     {
-      "id": 819164208,
-      "sku": "ON-8191642-9",
-      "title": "US 9 / UK 7 - Sunstone Juniper",
+      "id": 819164221,
+      "sku": "ON-8191642-SUNS-9",
+      "title": "US 9 / UK 7 - Sunstone / Juniper",
       "price": "10933.00",
-      "compare_at_price": null,
-      "source_price": 170.0,
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -276,17 +633,17 @@
         },
         {
           "option_name": "Color",
-          "name": "Sunstone Juniper"
+          "name": "Sunstone / Juniper"
         }
       ]
     },
     {
-      "id": 819164209,
-      "sku": "ON-8191642-9.5",
-      "title": "US 9.5 / UK 7.5 - Sunstone Juniper",
+      "id": 819164222,
+      "sku": "ON-8191642-SUNS-9.5",
+      "title": "US 9.5 / UK 7.5 - Sunstone / Juniper",
       "price": "10933.00",
-      "compare_at_price": null,
-      "source_price": 170.0,
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -303,17 +660,17 @@
         },
         {
           "option_name": "Color",
-          "name": "Sunstone Juniper"
+          "name": "Sunstone / Juniper"
         }
       ]
     },
     {
-      "id": 819164210,
-      "sku": "ON-8191642-10",
-      "title": "US 10 / UK 8 - Sunstone Juniper",
+      "id": 819164223,
+      "sku": "ON-8191642-SUNS-10",
+      "title": "US 10 / UK 8 - Sunstone / Juniper",
       "price": "10933.00",
-      "compare_at_price": null,
-      "source_price": 170.0,
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -330,17 +687,17 @@
         },
         {
           "option_name": "Color",
-          "name": "Sunstone Juniper"
+          "name": "Sunstone / Juniper"
         }
       ]
     },
     {
-      "id": 819164211,
-      "sku": "ON-8191642-10.5",
-      "title": "US 10.5 / UK 8.5 - Sunstone Juniper",
+      "id": 819164224,
+      "sku": "ON-8191642-SUNS-10.5",
+      "title": "US 10.5 / UK 8.5 - Sunstone / Juniper",
       "price": "10933.00",
-      "compare_at_price": null,
-      "source_price": 170.0,
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -357,17 +714,17 @@
         },
         {
           "option_name": "Color",
-          "name": "Sunstone Juniper"
+          "name": "Sunstone / Juniper"
         }
       ]
     },
     {
-      "id": 819164212,
-      "sku": "ON-8191642-11",
-      "title": "US 11 / UK 9 - Sunstone Juniper",
+      "id": 819164225,
+      "sku": "ON-8191642-SUNS-11",
+      "title": "US 11 / UK 9 - Sunstone / Juniper",
       "price": "10933.00",
-      "compare_at_price": null,
-      "source_price": 170.0,
+      "compare_at_price": "16318.00",
+      "source_price": 113.9,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -384,61 +741,7 @@
         },
         {
           "option_name": "Color",
-          "name": "Sunstone Juniper"
-        }
-      ]
-    },
-    {
-      "id": 819164213,
-      "sku": "ON-8191642-11.5",
-      "title": "US 11.5 / UK 9.5 - Sunstone Juniper",
-      "price": "10933.00",
-      "compare_at_price": null,
-      "source_price": 170.0,
-      "source_compare_at_price": 170.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/a2ad52ab-309e-42a9-9e7e-900f75685ff5.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 11.5"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 9.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "Sunstone Juniper"
-        }
-      ]
-    },
-    {
-      "id": 819164214,
-      "sku": "ON-8191642-12",
-      "title": "US 12 / UK 10 - Sunstone Juniper",
-      "price": "10933.00",
-      "compare_at_price": null,
-      "source_price": 170.0,
-      "source_compare_at_price": 170.0,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://n.nordstrommedia.com/it/a2ad52ab-309e-42a9-9e7e-900f75685ff5.jpeg?crop=pad&trim=color",
-      "option_values": [
-        {
-          "option_name": "Size (US)",
-          "name": "US 12"
-        },
-        {
-          "option_name": "Size (UK)",
-          "name": "UK 10"
-        },
-        {
-          "option_name": "Color",
-          "name": "Sunstone Juniper"
+          "name": "Sunstone / Juniper"
         }
       ]
     }
@@ -485,12 +788,6 @@
         },
         {
           "name": "US 11"
-        },
-        {
-          "name": "US 11.5"
-        },
-        {
-          "name": "US 12"
         }
       ]
     },
@@ -535,12 +832,6 @@
         },
         {
           "name": "UK 9"
-        },
-        {
-          "name": "UK 9.5"
-        },
-        {
-          "name": "UK 10"
         }
       ]
     },
@@ -548,30 +839,37 @@
       "name": "Color",
       "values": [
         {
-          "name": "Sunstone Juniper"
+          "name": "Sand / Wolf"
         },
         {
-          "name": "Sand Wolf"
+          "name": "Sunstone / Juniper"
         }
       ]
     }
   ],
   "tags": [
-    "on-shoes",
     "footwear",
-    "sneakers",
+    "on-shoes",
     "running",
-    "women",
-    "sizes-15"
+    "sizes-13",
+    "sizes-15",
+    "sneakers",
+    "women"
   ],
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-18T20:25:32Z",
+  "last_verified_at": "2026-09-19T07:44:15Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-18T20:25:32Z",
+  "updated_at": "2026-09-19T07:44:15Z",
+  "price_range_usd": {
+    "min": 113.9,
+    "max": 113.9
+  },
+  "price_range_inr": {
+    "min": 10933.0,
+    "max": 10933.0
+  },
   "status": "ACTIVE",
-  "validation_warnings": [],
-  "is_active": true,
-  "shopify_sync_pending": true
+  "is_active": true
 }

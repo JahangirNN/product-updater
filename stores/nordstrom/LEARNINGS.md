@@ -152,3 +152,23 @@ Derived directly from the official Nordstrom On shoe conversion guides:
   - Extended Kasada wait polling from 10 to 20 ticks.
   - Pre-captured `page_title` in a local variable before evaluating blocked heuristics, completely eliminating in-flight navigation exceptions during background freshener cycles.
 
+### 5.7 Multi-Colorway Variant Extraction & Clearance Price Leak Elimination
+- **Defect Discovered**:
+  1. On Nordstrom, unpopular or discontinued footwear colorways frequently have leftover clearance sizes (e.g. `$127.50` or `$99.99`), while full-run popular colorways (e.g. `White Glacier`) sell at full MSRP (`$170.00`).
+  2. Previously, the lowest markdown price leaked into the product's top-level `source_price` and corrupted full-price colorway variants into clearance pricing.
+  3. Furthermore, legacy extraction hardcoded `primary_color = colors[0]`, dropping all other 5–12 colorways present on the PDP.
+- **Root Cause Path**:
+  - Nordstrom's dehydrated entity state (`window.__INITIAL_CONFIG__["productDisplay"]["productDisplaysById"]["entities"][style_id]["coreProducts"][0]["coreChoices"]`) contains the complete variant entity graph for all active colorways.
+  - Each `coreChoice` holds its own high-resolution image gallery (`orderedShots`), color description (`displayColorDescription`), and item list with exact selling price (`sellingRetail.price`), base retail price (`baseRetail.price`), and live inventory count (`shipQuantity`).
+- **Remediation Architecture**:
+  - **Inflow Normalizer (`stores/nordstrom/inflow.py`)**:
+    - Generates multi-colorway variant matrix with unique SKUs (`{brand_prefix}-{style_id}-{clean_color}-{us_size}`), individual `source_price`, whole-rupee INR price, colorway-specific `image_url`, and option values `[Size (US), Size (UK), Color]`.
+    - Preserves deterministic product ID (`id`), avoiding record orphaning in `storage/db/index.json`.
+    - Dynamically calculates `price_range_usd` and `price_range_inr` across all active colorway variants.
+  - **Delta Engine (`stores/nordstrom/delta.py`)**:
+    - Matches variants by `(norm_size, color_lower)` against `full_matrix["colorways"]` items, strictly preventing clearance prices from overwriting full-price variants.
+    - Cascades parent availability from `any(v["in_stock"] for v in variants)` per ADR 0015.
+  - **Catalog Viewer**:
+    - Displays price range in header and product cards (`₹12,239 – ₹16,318` / `$127.50 – $170.00 USD`).
+    - Provides interactive color filter swatches above the size conversion matrix.
+
