@@ -143,3 +143,22 @@ SHA256("footlocker::" + sku)[:16]
 - Updates `var["in_stock"]` for each variant.
 - Evaluates parent `in_stock = any(v["in_stock"] for v in variants)`.
 - Only mutates `last_changed_at` if price or variant availability actually changes. Always updates `last_checked_at` and `last_verified_at`.
+
+---
+
+## 6. Subgroup Taxonomy Decoupling & Viewer Alignment
+- **Problem**: In `scripts/export_viewer_data.py`, the Nordstrom footwear branch had `if source_store == "nordstrom" or "shoes" in groups...`. Since all Foot Locker products carry `"Shoes"` in `groups`, 94 of 95 products were hijacked into generic `"Performance Footwear"`, rendering the Foot Locker model classifier (`Vomero 17`, `Vomero 18`, `Vomero 5`, `Vomero Plus`, `Vomero Roam`) dead code.
+- **Solution**: Strictly scope Nordstrom check to `if source_store == "nordstrom":`. Foot Locker models are now correctly categorized into `Vomero 17` (4), `Vomero 18` (36), `Vomero 5` (22), `Vomero Plus` (30), and `Vomero Roam` (4).
+
+---
+
+## 7. Single-Size Clearance Ingestion & Exact Size Matching
+- **Clearance Omission Trap**: The ingestion check `len(variants) <= 1` was intended to catch scraper truncation defects, but mistakenly dropped legitimate clearance items where the retailer only has 1 size left in stock (e.g., `M5973606`, Nike Vomero Premium Women's in Pearl Pink, size 8.0, $230.00). Legitimate single-size products must be canonicalized and preserved. Partition total: 96 products.
+- **Size Collision Bug**: In `delta.py`, `f"US {s_str}" in var.get("title")` caused `"US 8"` to match `"US 8.5"`, and `"US 1"` to match `"US 10"`, `"US 11"`, `"US 12"`. Fixed by using word-boundary regex: `re.search(rf"\bUS\s+{re.escape(s_str)}(\.0)?\b", var.get("title", ""))`.
+
+---
+
+## 8. Colorway Title Suffixing
+- Foot Locker uses identical model names across multiple colorways (e.g. 15 products with identical title `Nike Vomero Plus - Women's`).
+- Canonical records and catalog export format titles as `{model_name} - {color}` (e.g. `Nike Vomero 18 - Men's - Black/Summit White`), guaranteeing clear, distinct product cards across the viewer and dropship feeds.
+

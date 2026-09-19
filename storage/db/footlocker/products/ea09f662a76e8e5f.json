@@ -3,7 +3,7 @@
   "source_store": "footlocker",
   "source_url": "https://www.footlocker.com/product/nike-vomero-18-women-s/6804604.html",
   "handle": "nike-vomero-18-women-s-6804604",
-  "title": "Nike Vomero 18 - Women's",
+  "title": "Nike Vomero 18 - Women's - Sweet Beet/Bordeaux",
   "vendor": "Nike",
   "product_type": "Shoes",
   "source_sku": "6804604",
@@ -14,8 +14,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.957344,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "color": "Sweet Beet/Bordeaux",
   "width": "Width - B - Medium",
   "material": "Breathable mesh upper with durable synthetic overlays and rubber traction outsole",
@@ -104,7 +104,7 @@
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/6804604_01",
       "option_values": [
         {
@@ -131,7 +131,7 @@
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/6804604_01",
       "option_values": [
         {
@@ -567,8 +567,8 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-19T12:24:15Z",
+  "last_verified_at": "2026-09-19T16:24:14Z",
   "created_at": "2026-09-18T20:48:07Z",
-  "updated_at": "2026-09-19T12:24:15Z",
+  "updated_at": "2026-09-19T16:24:14Z",
   "shopify_sync_pending": true
 }

@@ -3,7 +3,7 @@
   "source_store": "footlocker",
   "source_url": "https://www.footlocker.com/product/nike-vomero-plus-men-s/V8150005.html",
   "handle": "nike-vomero-plus-men-s-v8150005",
-  "title": "Nike Vomero Plus - Men's",
+  "title": "Nike Vomero Plus - Men's - College Grey/Light Iron Ore/Medium Ash",
   "vendor": "Nike",
   "product_type": "Shoes",
   "source_sku": "V8150005",
@@ -14,8 +14,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.957344,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "color": "College Grey/Light Iron Ore/Medium Ash",
   "width": "Width - D - Medium",
   "material": "Breathable mesh upper with durable synthetic overlays and rubber traction outsole",
@@ -77,7 +77,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8150005_01",
       "option_values": [
         {
@@ -104,7 +104,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8150005_01",
       "option_values": [
         {
@@ -158,7 +158,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8150005_01",
       "option_values": [
         {
@@ -501,8 +501,8 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-19T12:23:46Z",
+  "last_verified_at": "2026-09-19T16:23:46Z",
   "created_at": "2026-09-18T20:48:12Z",
-  "updated_at": "2026-09-19T12:23:46Z",
+  "updated_at": "2026-09-19T16:23:46Z",
   "shopify_sync_pending": true
 }

@@ -228,7 +228,10 @@ def check_price_and_stock(
                     matched_v = v_delta_map.get(v_sku)
                     if not matched_v:
                         for s_str, sv in size_map.items():
-                            if v_sku and (v_sku.endswith(f"-{s_str}") or f"US {s_str}" in var.get("title", "")):
+                            if v_sku and v_sku.endswith(f"-{s_str}"):
+                                matched_v = sv
+                                break
+                            if re.search(rf"\bUS\s+{re.escape(s_str)}(\.0)?\b", var.get("title", "")):
                                 matched_v = sv
                                 break
                     if matched_v:
@@ -346,13 +349,19 @@ def apply_delta_to_product(
             matched_v = v_map.get(v_sku)
             if not matched_v:
                 for s_str, sv in size_map.items():
-                    if v_sku and (v_sku.endswith(f"-{s_str}") or f"US {s_str}" in var.get("title", "")):
+                    if v_sku and v_sku.endswith(f"-{s_str}"):
+                        matched_v = sv
+                        break
+                    if re.search(rf"\bUS\s+{re.escape(s_str)}(\.0)?\b", var.get("title", "")):
                         matched_v = sv
                         break
             if matched_v:
                 new_v_stock = bool(matched_v.get("available", False))
                 if var.get("in_stock") != new_v_stock:
                     var["in_stock"] = new_v_stock
+                    has_changed = True
+                if "is_available" in var and var.get("is_available") != new_v_stock:
+                    var["is_available"] = new_v_stock
                     has_changed = True
                 if new_source_price > 0:
                     var["source_price"] = new_source_price

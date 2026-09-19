@@ -198,7 +198,7 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
         return "Women's Luxury"
 
     # Footwear taxonomy for Nordstrom (On, HOKA, Salomon)
-    if source_store == "nordstrom" or "shoes" in groups or "footwear" in product.get("tags", []):
+    if source_store == "nordstrom":
         if "waterproof" in title_lower or "waterproof" in handle_lower or "gtx" in title_lower or "gore-tex" in title_lower:
             return "Waterproof Footwear"
         elif "trail" in title_lower or "hiking" in title_lower or "hike" in handle_lower or "speedcross" in title_lower:
@@ -301,12 +301,18 @@ def format_viewer_product(
     else:
         images = []
 
+    prod_title = prod.get("title", "")
+    if prod.get("source_store") == "footlocker":
+        color = (prod.get("specifications") or {}).get("Color")
+        if color and color.lower() not in prod_title.lower():
+            prod_title = f"{prod_title} - {color}"
+
     return {
         "id": str(prod.get("id") or prod.get("product_id") or ""),
         "source_store": prod.get("source_store", ""),
         "source_url": prod.get("source_url", ""),
         "handle": prod.get("handle", ""),
-        "title": prod.get("title", ""),
+        "title": prod_title,
         "vendor": prod.get("vendor", ""),
         "product_type": prod.get("product_type", ""),
         "source_sku": prod.get("source_sku") or prod.get("sku") or "",
