@@ -44,7 +44,9 @@ def check_price_and_stock(
     source_url = product.get("source_url", "")
 
     if not source_url and sku:
-        slug = re.sub(r'[^a-zA-Z0-9]+', '-', product.get("title", "nike-vomero").lower()).strip('-')
+        raw_title = product.get("title", "nike-vomero").lower()
+        cleaned_title = re.sub(r"['\u2019]s\b", "s", raw_title)
+        slug = re.sub(r'[^a-zA-Z0-9]+', '-', cleaned_title).strip('-')
         source_url = f"https://www.footlocker.com/product/{slug}/{sku}.html"
 
     for attempt in range(3):
@@ -145,7 +147,7 @@ def check_price_and_stock(
             idx = html.find('STATE_FROM_SERVER:')
             if idx == -1:
                 # Delisted or redirected to empty stub
-                if "/~/product/" in str(resp.url) or "not found" in html.lower():
+                if "/product/~/" in str(resp.url) or "/~/product/" in str(resp.url) or "not found" in html.lower():
                     variant_stock_changed = False
                     changed_variants = []
                     for var in product.get("variants", []):
@@ -178,7 +180,44 @@ def check_price_and_stock(
                 raise ValueError("STATE_FROM_SERVER not found in Foot Locker response")
 
             d, _ = json.JSONDecoder().raw_decode(html[idx + len('STATE_FROM_SERVER:'):].lstrip())
-            data = d.get('api', {}).get('productDetails', {}).get('getDetails', {}).get('data', {})
+            get_details = d.get('api', {}).get('productDetails', {}).get('getDetails', {})
+            data = get_details.get('data', {})
+            errors = get_details.get('errors', [])
+            status_code = get_details.get('statusCode')
+
+            # Dehydrated state indicates out of stock / delisted (code 20006, 404, or empty data)
+            if status_code == 404 or errors or not data or get_details.get("status") == "@api/FAILED":
+                variant_stock_changed = False
+                changed_variants = []
+                for var in product.get("variants", []):
+                    if var.get("in_stock", False):
+                        variant_stock_changed = True
+                        changed_variants.append({
+                            "sku": var.get("sku", ""),
+                            "old_in_stock": True,
+                            "new_in_stock": False
+                        })
+                err_msg = errors[0].get('message') if errors and isinstance(errors, list) and isinstance(errors[0], dict) else f"HTTP {status_code or 404}"
+                return {
+                    "status": "not_found",
+                    "handle": handle,
+                    "availability": "out_of_stock",
+                    "old_availability": old_availability,
+                    "new_availability": "out_of_stock",
+                    "current_source_price": old_source_price,
+                    "old_source_price": old_source_price,
+                    "new_source_price": old_source_price,
+                    "is_active": False,
+                    "price_changed": False,
+                    "stock_changed": old_availability != "out_of_stock",
+                    "variant_stock_changed": variant_stock_changed,
+                    "changed_variants": changed_variants,
+                    "variants_delta": [],
+                    "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                    "elapsed_ms": elapsed_ms,
+                    "message": f"Product out of stock / delisted ({err_msg})"
+                }
+
             style = data.get('style', {})
             raw_sizes = data.get('sizes', [])
 
