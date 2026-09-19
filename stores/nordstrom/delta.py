@@ -501,6 +501,19 @@ def apply_delta_to_product(
                         var["compare_at_price"] = f"{float(round(new_v_comp * forex_rate)):.2f}"
                         variant_changes_detected = True
 
+    elif not variants_delta and product.get("variants"):
+        # ADR 0015: Depletion / Restock Cascade when variants_delta is empty
+        target_avail = delta_result.get("availability") or product.get("availability")
+        if target_avail in ("out_of_stock", "delisted"):
+            for var in product["variants"]:
+                if var.get("in_stock") is not False:
+                    var["in_stock"] = False
+                    variant_changes_detected = True
+        elif target_avail == "in_stock" and not any(v.get("in_stock", False) for v in product["variants"]):
+            for var in product["variants"]:
+                if var.get("in_stock") is not True:
+                    var["in_stock"] = True
+                    variant_changes_detected = True
 
     has_changed = price_changed or stock_changed or variant_changes_detected
 

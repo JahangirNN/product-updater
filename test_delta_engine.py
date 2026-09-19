@@ -30,6 +30,8 @@ from sync_catalog import (
 from stores.jwpei.delta import check_price_and_stock as jwpei_check, apply_delta_to_product as jwpei_apply
 from stores._template.delta import check_price_and_stock as template_check, apply_delta_to_product as template_apply
 from stores.footlocker.delta import check_price_and_stock as fl_check, apply_delta_to_product as fl_apply
+from stores.nordstrom.delta import apply_delta_to_product as nordstrom_apply
+from stores.coach.delta import apply_delta_to_product as coach_apply
 from storage.db import append_delta_event, append_delta_log, read_delta_events
 from storage.rate_limiter import (
     configure_store_rate_limits,
@@ -609,6 +611,209 @@ def test_footlocker_delta_cascade_and_selective_timestamping():
     print("  ✅ PASS: Foot Locker partial variant inventory shifts update cleanly, 404 delistings cascade depletion, and rate limits maintain immutability.")
 
 
+def test_nordstrom_multicolorway_delta_and_price_range_sync():
+    print("\n[TEST 11] Verifying Nordstrom Multi-Colorway Delta Mutation & Clearance Leak Prevention...")
+    forex_rate = 95.957
+
+    # Initial product: 2 colorways (Black: $140, Coral Sale: $99.90)
+    # Lowest price is Coral $99.90.
+    product_nord = {
+        "id": "nord_cloud_5",
+        "handle": "on-cloud-5-sneaker",
+        "title": "On Cloud 5 Running Sneaker",
+        "source_store": "nordstrom",
+        "source_price": 99.90,
+        "current_price": 9586.0,
+        "availability": "in_stock",
+        "is_active": True,
+        "price_range_usd": {"min": 99.90, "max": 140.00},
+        "price_range_inr": {"min": 9586.0, "max": 13434.0},
+        "last_verified_at": "2026-09-01T00:00:00Z",
+        "variants": [
+            {"sku": "NORD-100-BLK-8", "in_stock": True, "source_price": 140.0, "price": "13434.00", "title": "Black / 8"},
+            {"sku": "NORD-100-BLK-9", "in_stock": True, "source_price": 140.0, "price": "13434.00", "title": "Black / 9"},
+            {"sku": "NORD-100-CRL-8", "in_stock": True, "source_price": 99.90, "price": "9586.00", "title": "Coral / 8"},
+            {"sku": "NORD-100-CRL-9", "in_stock": True, "source_price": 99.90, "price": "9586.00", "title": "Coral / 9"}
+        ]
+    }
+
+    # Scenario A: The sale colorway (Coral) completely sells out!
+    # Black remains in stock at $140.00.
+    # CRITICAL INVARIANT: The parent source_price MUST shift to $140.0, preventing clearance price leak!
+    delta_coral_soldout = {
+        "status": "success",
+        "handle": product_nord["handle"],
+        "availability": "in_stock",
+        "old_availability": "in_stock",
+        "price_changed": False,
+        "stock_changed": False,
+        "variants_delta": [
+            {"sku": "NORD-100-BLK-8", "available": True, "price_usd": 140.0},
+            {"sku": "NORD-100-BLK-9", "available": True, "price_usd": 140.0},
+            {"sku": "NORD-100-CRL-8", "available": False, "price_usd": 99.90},
+            {"sku": "NORD-100-CRL-9", "available": False, "price_usd": 99.90}
+        ]
+    }
+
+    updated_a, changed_a = nordstrom_apply(copy.deepcopy(product_nord), delta_coral_soldout, forex_rate)
+    assert changed_a is True, "Variant stock changes must trigger has_changed = True"
+    assert updated_a["availability"] == "in_stock", "Product should remain in stock since Black is available"
+    # Clearance price leak prevention check:
+    assert updated_a["source_price"] == 140.0, f"Parent source_price must update to lowest IN-STOCK variant ($140.0), got {updated_a['source_price']}"
+    assert updated_a["current_price"] == float(round(140.0 * forex_rate)), "Parent INR price must derive from in-stock price"
+    assert updated_a["current_price"] % 1 == 0, "INR price must be whole-rupee (no decimal paise)"
+    assert updated_a["price_range_usd"]["min"] == 99.90
+    assert updated_a["price_range_usd"]["max"] == 140.0
+    assert updated_a["price_range_inr"]["min"] == float(round(99.90 * forex_rate))
+    assert updated_a["price_range_inr"]["max"] == float(round(140.0 * forex_rate))
+    assert updated_a["last_verified_at"] != "2026-09-01T00:00:00Z"
+    assert updated_a["shopify_sync_pending"] is True
+
+    # Scenario B: HTTP 404 delisting cascades depletion to ALL variants (ADR 0015)
+    delta_404 = {
+        "status": "not_found",
+        "handle": product_nord["handle"],
+        "availability": "out_of_stock",
+        "old_availability": "in_stock",
+        "is_active": False,
+        "price_changed": False,
+        "stock_changed": True,
+        "variants_delta": []
+    }
+    updated_404, changed_404 = nordstrom_apply(copy.deepcopy(product_nord), delta_404, forex_rate)
+    assert changed_404 is True, "404 delisting must trigger change"
+    assert updated_404["availability"] == "out_of_stock"
+    assert updated_404["is_active"] is False
+    for v in updated_404["variants"]:
+        assert v["in_stock"] is False, f"Variant {v['sku']} must cascade to in_stock=False on 404"
+    assert updated_404["last_verified_at"] != "2026-09-01T00:00:00Z"
+
+    # Scenario C: Blocked/Error/429 status preserves immutability and never stamps last_verified_at
+    delta_blocked = {
+        "status": "blocked",
+        "handle": product_nord["handle"],
+        "availability": "in_stock",
+        "old_availability": "in_stock",
+        "current_source_price": 99.90,
+        "old_source_price": 99.90,
+        "error": "Kasada challenge unresolved"
+    }
+    updated_blk, changed_blk = nordstrom_apply(copy.deepcopy(product_nord), delta_blocked, forex_rate)
+    assert changed_blk is False
+    assert updated_blk["last_verified_at"] == "2026-09-01T00:00:00Z", "Blocked solver MUST NOT stamp last_verified_at"
+
+    print("  ✅ PASS: Nordstrom multi-colorway variant inventory shifts update cleanly, clearance price leaks are prevented, and 404 delistings cascade depletion.")
+
+
+def test_coach_multivariant_delta_and_scene7_integrity():
+    print("\n[TEST 12] Verifying Coach Multi-Variant Delta Mutation, Scene7 Integrity & Depletion Cascade...")
+    forex_rate = 95.957
+
+    scene7_img1 = "https://images.coach.com/is/image/Coach/ch782_b4bk_a0?fmt=jpeg&wid=1034&qlt=75"
+    scene7_img2 = "https://images.coach.com/is/image/Coach/ch782_b4ha_a0?fmt=jpeg&wid=1034&qlt=75"
+
+    product_coach = {
+        "id": "coach_tabby_26",
+        "handle": "tabby-shoulder-bag-26",
+        "title": "Tabby Shoulder Bag 26",
+        "source_store": "coach",
+        "source_sku": "CH782",
+        "source_price": 395.0,
+        "current_price": 37903.0,
+        "availability": "in_stock",
+        "is_active": True,
+        "images": [scene7_img1, scene7_img2],
+        "last_verified_at": "2026-09-01T00:00:00Z",
+        "variants": [
+            {
+                "sku": "CH782 B4/BK",
+                "in_stock": True,
+                "source_price": 450.0,
+                "price": "43181.00",
+                "title": "Black",
+                "image": scene7_img1
+            },
+            {
+                "sku": "CH782 B4/HA",
+                "in_stock": True,
+                "source_price": 395.0,
+                "price": "37903.00",
+                "title": "Chalk",
+                "image": scene7_img2
+            }
+        ]
+    }
+
+    # Scenario A: Chalk sells out and Black price increases to $475
+    delta_chalk_out = {
+        "status": "success",
+        "handle": product_coach["handle"],
+        "current_source_price": 475.0,
+        "old_source_price": 395.0,
+        "availability": "in_stock",
+        "old_availability": "in_stock",
+        "price_changed": True,
+        "stock_changed": False,
+        "variants_delta": [
+            {"sku": "CH782 B4/BK", "available": True, "price_usd": 475.0},
+            {"sku": "CH782 B4/HA", "available": False, "price_usd": 395.0}
+        ]
+    }
+
+    updated_c, changed_c = coach_apply(copy.deepcopy(product_coach), delta_chalk_out, forex_rate)
+    assert changed_c is True, "Price shift and stock mutation must trigger changed = True"
+    assert updated_c["availability"] == "in_stock"
+    assert updated_c["source_price"] == 475.0
+    assert updated_c["current_price"] == float(round(475.0 * forex_rate))
+    assert updated_c["current_price"] % 1 == 0, "INR price must be whole-rupee without paise"
+
+    v_map = {v["sku"]: v for v in updated_c["variants"]}
+    assert v_map["CH782 B4/BK"]["in_stock"] is True
+    assert v_map["CH782 B4/BK"]["source_price"] == 475.0
+    assert v_map["CH782 B4/HA"]["in_stock"] is False
+
+    # CRITICAL: Verify Scene7 image URLs were never corrupted or dropped during delta mutation
+    assert updated_c["images"][0] == scene7_img1
+    assert updated_c["images"][1] == scene7_img2
+    assert v_map["CH782 B4/BK"]["image"] == scene7_img1
+    assert v_map["CH782 B4/HA"]["image"] == scene7_img2
+    assert updated_c["last_verified_at"] != "2026-09-01T00:00:00Z"
+
+    # Scenario B: 404 delisting cascades depletion (ADR 0015)
+    delta_404 = {
+        "status": "not_found",
+        "handle": product_coach["handle"],
+        "availability": "out_of_stock",
+        "old_availability": "in_stock",
+        "current_source_price": 475.0,
+        "old_source_price": 475.0,
+        "is_active": False,
+        "price_changed": False,
+        "stock_changed": True,
+        "variants_delta": []
+    }
+    updated_404, changed_404 = coach_apply(copy.deepcopy(product_coach), delta_404, forex_rate)
+    assert changed_404 is True
+    assert updated_404["availability"] == "out_of_stock"
+    assert updated_404["is_active"] is False
+    for v in updated_404["variants"]:
+        assert v["in_stock"] is False, f"Coach variant {v['sku']} must be cascaded to in_stock=False on 404"
+
+    # Scenario C: HTTP 429 rate limit maintains strict immutability
+    delta_429 = {
+        "status": "rate_limited",
+        "handle": product_coach["handle"],
+        "availability": "in_stock",
+        "old_availability": "in_stock",
+        "error": "Rate limit retries exhausted"
+    }
+    updated_429, changed_429 = coach_apply(copy.deepcopy(product_coach), delta_429, forex_rate)
+    assert changed_429 is False
+    assert updated_429["last_verified_at"] == "2026-09-01T00:00:00Z"
+
+    print("  ✅ PASS: Coach multi-variant stock & price updates mutate cleanly, Scene7 image URLs maintain integrity, and depletion cascades safely.")
+
+
 def run_all_tests():
     print("=" * 72)
     print("DELTA ENGINE INTEGRATION & UNIT TEST SUITE (MULTI-STORE EDITION)")
@@ -624,6 +829,8 @@ def run_all_tests():
     test_multi_store_isolation_and_429_circuit_breaking()
     test_dispatcher_resilience_and_contracts()
     test_footlocker_delta_cascade_and_selective_timestamping()
+    test_nordstrom_multicolorway_delta_and_price_range_sync()
+    test_coach_multivariant_delta_and_scene7_integrity()
 
     print("\n" + "=" * 72)
     print("ALL TESTS PASSED WITH 100% SUCCESS")
