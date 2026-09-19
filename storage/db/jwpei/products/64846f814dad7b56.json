@@ -52,6 +52,46 @@
         }
       ],
       "price_current": 9500.0
+    },
+    {
+      "id": 43989025718306,
+      "sku": "7C549-1",
+      "title": "Black",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/7C549-1-FRONT.jpg?v=1755249749",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 45873701519394,
+      "sku": "7C549-8",
+      "title": "Yellow",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1786095762180-1r0kc0eznn7.jpg?v=1786097647",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Yellow"
+        }
+      ],
+      "price_current": 9500.0
     }
   ],
   "product_options": [
@@ -60,6 +100,12 @@
       "values": [
         {
           "name": "Pink"
+        },
+        {
+          "name": "Black"
+        },
+        {
+          "name": "Yellow"
         }
       ]
     }
@@ -86,8 +132,8 @@
   "validation_warnings": [],
   "id": "64846f814dad7b56",
   "created_at": "2026-09-09T15:47:54Z",
-  "updated_at": "2026-09-19T07:24:52Z",
-  "last_verified_at": "2026-09-19T07:24:52Z",
+  "updated_at": "2026-09-19T11:19:05Z",
+  "last_verified_at": "2026-09-19T09:24:50Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

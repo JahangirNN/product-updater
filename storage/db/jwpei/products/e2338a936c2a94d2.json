@@ -38,6 +38,86 @@
   ],
   "variants": [
     {
+      "id": 43713897365538,
+      "sku": "7C471-4",
+      "title": "Pink",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/7C471-4-FRONT.jpg?v=1755249518",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Pink"
+        }
+      ],
+      "price_current": 11419.0
+    },
+    {
+      "id": 44085063876642,
+      "sku": "7C471-50",
+      "title": "Blue",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779786134707-81eg3n12tdt.jpg?v=1779788611",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Blue"
+        }
+      ],
+      "price_current": 11419.0
+    },
+    {
+      "id": 44085075148834,
+      "sku": "7C471-60",
+      "title": "Purple",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779786318940-3cz4tnrf8cz.jpg?v=1779788888",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Purple"
+        }
+      ],
+      "price_current": 11419.0
+    },
+    {
+      "id": 45261754499106,
+      "sku": "7C471-72",
+      "title": "Light Green",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1780018147705-lmb9g08gzaf.jpg?v=1780018907",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Light Green"
+        }
+      ],
+      "price_current": 11419.0
+    },
+    {
       "id": 45261754564642,
       "sku": "7C471-80",
       "title": "Champagne",
@@ -56,6 +136,46 @@
         }
       ],
       "price_current": 11419.0
+    },
+    {
+      "id": 45261755744290,
+      "sku": "7C471-53",
+      "title": "Pink Blue",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1780018094973-j21kokbb5u.jpg?v=1780018880",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Pink Blue"
+        }
+      ],
+      "price_current": 11419.0
+    },
+    {
+      "id": 46406078300194,
+      "sku": "7C471-1",
+      "title": "Black White Canvas",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/ezxi6l13hhq.jpg?v=1786681327",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black White Canvas"
+        }
+      ],
+      "price_current": 13338.0
     }
   ],
   "product_options": [
@@ -63,7 +183,25 @@
       "name": "Color",
       "values": [
         {
+          "name": "Pink"
+        },
+        {
+          "name": "Blue"
+        },
+        {
+          "name": "Purple"
+        },
+        {
+          "name": "Light Green"
+        },
+        {
           "name": "Champagne"
+        },
+        {
+          "name": "Pink Blue"
+        },
+        {
+          "name": "Black White Canvas"
         }
       ]
     }
@@ -86,8 +224,8 @@
   "validation_warnings": [],
   "id": "e2338a936c2a94d2",
   "created_at": "2026-09-09T15:51:50Z",
-  "updated_at": "2026-09-19T07:26:34Z",
-  "last_verified_at": "2026-09-19T07:26:34Z",
+  "updated_at": "2026-09-19T11:19:05Z",
+  "last_verified_at": "2026-09-19T09:27:03Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

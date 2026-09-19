@@ -9,7 +9,7 @@
   "source_sku": "HOKA-9052777-7",
   "source_price": 175.0,
   "source_compare_at_price": null,
-  "current_price": 16798.0,
+  "current_price": 16793.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -47,7 +47,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/9f4a7e1b-6ba8-4ffa-a884-c73799f332b9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -74,7 +74,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/9f4a7e1b-6ba8-4ffa-a884-c73799f332b9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -101,7 +101,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9f4a7e1b-6ba8-4ffa-a884-c73799f332b9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -155,7 +155,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9f4a7e1b-6ba8-4ffa-a884-c73799f332b9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -182,7 +182,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9f4a7e1b-6ba8-4ffa-a884-c73799f332b9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -209,7 +209,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9f4a7e1b-6ba8-4ffa-a884-c73799f332b9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -236,7 +236,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9f4a7e1b-6ba8-4ffa-a884-c73799f332b9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -263,7 +263,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9f4a7e1b-6ba8-4ffa-a884-c73799f332b9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -344,7 +344,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9f4a7e1b-6ba8-4ffa-a884-c73799f332b9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -371,7 +371,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/9f4a7e1b-6ba8-4ffa-a884-c73799f332b9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -452,7 +452,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9f4a7e1b-6ba8-4ffa-a884-c73799f332b9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -479,7 +479,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/9f4a7e1b-6ba8-4ffa-a884-c73799f332b9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -912,17 +912,18 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-19T07:42:36Z",
+  "last_verified_at": "2026-09-19T09:27:32Z",
   "created_at": "2026-09-17T14:52:56Z",
-  "updated_at": "2026-09-19T07:42:36Z",
+  "updated_at": "2026-09-19T09:27:32Z",
   "price_range_usd": {
     "min": 175.0,
     "max": 175.0
   },
   "price_range_inr": {
-    "min": 16798.0,
-    "max": 16798.0
+    "min": 16793.0,
+    "max": 16793.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": true,
+  "shopify_sync_pending": true
 }

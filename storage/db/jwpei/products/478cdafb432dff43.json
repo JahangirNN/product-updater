@@ -58,6 +58,26 @@
         }
       ],
       "price_current": 13338.0
+    },
+    {
+      "id": 44637519282210,
+      "sku": "5S405-1",
+      "title": "Black",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1773135916394-ldagyt48l1.jpg?v=1773136966",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 13338.0
     }
   ],
   "product_options": [
@@ -66,6 +86,9 @@
       "values": [
         {
           "name": "Dark Brown"
+        },
+        {
+          "name": "Black"
         }
       ]
     }
@@ -88,8 +111,8 @@
   "validation_warnings": [],
   "id": "478cdafb432dff43",
   "created_at": "2026-09-09T15:50:26Z",
-  "updated_at": "2026-09-19T07:24:32Z",
-  "last_verified_at": "2026-09-19T07:24:32Z",
+  "updated_at": "2026-09-19T11:19:05Z",
+  "last_verified_at": "2026-09-19T09:24:29Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

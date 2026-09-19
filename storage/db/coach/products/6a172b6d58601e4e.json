@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Suede and smooth leather",
   "specifications": {
     "Material": "Suede and smooth leather",
@@ -59,7 +59,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceu02_imnkr_a0",
       "option_values": [
         {
@@ -88,12 +88,12 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:42:36Z",
-  "last_verified_at": "2026-09-19T07:25:25Z",
+  "last_verified_at": "2026-09-19T09:29:23Z",
   "id": "6a172b6d58601e4e",
   "product_id": "6a172b6d58601e4e",
   "store": "coach",
-  "updated_at": "2026-09-19T07:25:25Z",
-  "is_active": false,
+  "updated_at": "2026-09-19T09:29:23Z",
+  "is_active": true,
   "shopify_sync_pending": true,
   "price_range_usd": {
     "min": 219.0,

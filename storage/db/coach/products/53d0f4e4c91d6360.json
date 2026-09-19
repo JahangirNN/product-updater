@@ -7,14 +7,14 @@
   "product_type": "Shoes & Footwear",
   "gender": "Women",
   "source_sku": "CCO05 MER  10  B",
-  "source_price": 46.5,
+  "source_price": 155.0,
   "source_compare_at_price": null,
-  "current_price": 4449.0,
+  "current_price": 14873.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Suede and Signature jacquard upper",
   "specifications": {
     "Material": "Suede and Signature jacquard upper"
@@ -99,7 +99,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cco05_blk_a0",
       "option_values": [
         {
@@ -118,7 +118,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cco05_blk_a0",
       "option_values": [
         {
@@ -137,7 +137,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cco05_blk_a0",
       "option_values": [
         {
@@ -156,7 +156,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cco05_blk_a0",
       "option_values": [
         {
@@ -175,7 +175,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cco05_blk_a0",
       "option_values": [
         {
@@ -222,11 +222,11 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:41:42Z",
-  "last_verified_at": "2026-09-19T07:25:02Z",
+  "last_verified_at": "2026-09-19T09:28:10Z",
   "id": "53d0f4e4c91d6360",
   "product_id": "53d0f4e4c91d6360",
   "store": "coach",
-  "updated_at": "2026-09-19T07:25:02Z",
-  "is_active": false,
+  "updated_at": "2026-09-19T09:28:10Z",
+  "is_active": true,
   "shopify_sync_pending": true
 }

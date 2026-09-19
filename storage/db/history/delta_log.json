@@ -3086,5 +3086,37 @@
     "average_latency_ms": 21589.89,
     "total_time_seconds": 61.86,
     "timestamp": "2026-09-19T09:00:40Z"
+  },
+  {
+    "action": "global_delta_sync",
+    "interval_minutes": 60,
+    "force": false,
+    "products_checked": 1640,
+    "products_skipped": 218,
+    "in_stock": 1551,
+    "out_of_stock": 89,
+    "price_changes": 12,
+    "stock_changes": 157,
+    "errors": 0,
+    "rate_limited": 0,
+    "average_latency_ms": 1899.57,
+    "total_time_seconds": 828.74,
+    "timestamp": "2026-09-19T09:37:35Z"
+  },
+  {
+    "action": "global_delta_sync",
+    "interval_minutes": 60,
+    "force": false,
+    "products_checked": 218,
+    "products_skipped": 1640,
+    "in_stock": 210,
+    "out_of_stock": 8,
+    "price_changes": 4,
+    "stock_changes": 49,
+    "errors": 0,
+    "rate_limited": 0,
+    "average_latency_ms": 2111.93,
+    "total_time_seconds": 574.18,
+    "timestamp": "2026-09-19T10:33:01Z"
   }
 ]

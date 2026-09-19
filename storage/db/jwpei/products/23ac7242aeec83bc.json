@@ -40,6 +40,46 @@
   ],
   "variants": [
     {
+      "id": 44672740982818,
+      "sku": "8T116X001-1",
+      "title": "Black",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/unnamed_df31b535-1322-49b3-9831-59466eb58673.jpg?v=1766716155",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 44672741015586,
+      "sku": "8T116X001-31",
+      "title": "Dark Brown",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1778817636867-9pyzzp7r9qb.jpg?v=1778827224",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Dark Brown"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
       "id": 44719125561378,
       "sku": "8T116X001-2",
       "title": "Ivory",
@@ -58,6 +98,46 @@
         }
       ],
       "price_current": 12378.0
+    },
+    {
+      "id": 44754752438306,
+      "sku": "8T116X001-4",
+      "title": "Pink",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1787043243450-3kcz1kqfbyc.jpg?v=1787049023",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Pink"
+        }
+      ],
+      "price_current": 12378.0
+    },
+    {
+      "id": 44754752798754,
+      "sku": "8T116X001-6",
+      "title": "Lavender",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1773391783559-g19538zgeo.jpg?v=1773392065",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Lavender"
+        }
+      ],
+      "price_current": 12378.0
     }
   ],
   "product_options": [
@@ -65,7 +145,19 @@
       "name": "Color",
       "values": [
         {
+          "name": "Black"
+        },
+        {
+          "name": "Dark Brown"
+        },
+        {
           "name": "Ivory"
+        },
+        {
+          "name": "Pink"
+        },
+        {
+          "name": "Lavender"
         }
       ]
     }
@@ -88,8 +180,8 @@
   "validation_warnings": [],
   "id": "23ac7242aeec83bc",
   "created_at": "2026-09-09T15:48:51Z",
-  "updated_at": "2026-09-19T07:23:58Z",
-  "last_verified_at": "2026-09-19T07:23:58Z",
+  "updated_at": "2026-09-19T11:19:05Z",
+  "last_verified_at": "2026-09-19T09:23:57Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

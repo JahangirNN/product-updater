@@ -37,6 +37,86 @@
   ],
   "variants": [
     {
+      "id": 41092101341218,
+      "sku": "2T47-5",
+      "title": "Blue",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T47-5-1.jpg?v=1752239142",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Blue"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 41182199021602,
+      "sku": "2T47-1",
+      "title": "Black",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779099833892-o0se0dvsexb.jpg?v=1779101460",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 41210520240162,
+      "sku": "2T47-2",
+      "title": "White",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T47-2-1.jpg?v=1752239033",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "White"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 41210521714722,
+      "sku": "2T47-3",
+      "title": "Brown",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779704233621-0bhndcq2sie9.jpg?v=1779782083",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brown"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
       "id": 41551194423330,
       "sku": "2T47-31",
       "title": "Brown Canvas",
@@ -55,6 +135,166 @@
         }
       ],
       "price_current": 9500.0
+    },
+    {
+      "id": 41551201861666,
+      "sku": "2T47-32",
+      "title": "Brown",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T47-32_1_b54f441c-e682-4262-869a-b2908b7b0740.jpg?v=1752238746",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brown"
+        }
+      ],
+      "price_current": 11419.0
+    },
+    {
+      "id": 43677362552866,
+      "sku": "2T47-34",
+      "title": "Brown Rattan",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T47-34-FRONT_100c21ec-a21a-42f9-97c6-fb802f850eb9.jpg?v=1752235972",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brown Rattan"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 43746879275042,
+      "sku": "2T47-4",
+      "title": "Deep Burgundy",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T47-4-FRONT.jpg?v=1752235641",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Deep Burgundy"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 44015748448290,
+      "sku": "2T47-35",
+      "title": "Taupe",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T47-35-FRONT.jpg?v=1764225101",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Taupe"
+        }
+      ],
+      "price_current": 10459.0
+    },
+    {
+      "id": 44015749529634,
+      "sku": "2T47-21",
+      "title": "White Croc",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779704336064-46s8n788txf.jpg?v=1779786590",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "White Croc"
+        }
+      ],
+      "price_current": 10459.0
+    },
+    {
+      "id": 44711829864482,
+      "sku": "2T47-13",
+      "title": "Black Croc",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1778816845344-z2zjt2lhjm.jpg?v=1778826174",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black Croc"
+        }
+      ],
+      "price_current": 10459.0
+    },
+    {
+      "id": 45119383142434,
+      "sku": "2T47-50",
+      "title": "Blue Denim",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1774935571897-oxrx1t5t9rk.png?v=1775016128",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Blue Denim"
+        }
+      ],
+      "price_current": 10459.0
+    },
+    {
+      "id": 45247746015266,
+      "sku": "2T47-36",
+      "title": "Brown",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1788336680129-kh7tqer3fc.jpg?v=1788344421",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brown"
+        }
+      ],
+      "price_current": 10459.0
     }
   ],
   "product_options": [
@@ -62,7 +302,43 @@
       "name": "Color",
       "values": [
         {
+          "name": "Blue"
+        },
+        {
+          "name": "Black"
+        },
+        {
+          "name": "White"
+        },
+        {
+          "name": "Brown"
+        },
+        {
           "name": "Brown Canvas"
+        },
+        {
+          "name": "Brown"
+        },
+        {
+          "name": "Brown Rattan"
+        },
+        {
+          "name": "Deep Burgundy"
+        },
+        {
+          "name": "Taupe"
+        },
+        {
+          "name": "White Croc"
+        },
+        {
+          "name": "Black Croc"
+        },
+        {
+          "name": "Blue Denim"
+        },
+        {
+          "name": "Brown"
         }
       ]
     }
@@ -96,8 +372,8 @@
   "validation_warnings": [],
   "id": "6141efe4a22b8980",
   "created_at": "2026-09-09T15:44:58Z",
-  "updated_at": "2026-09-19T07:24:48Z",
-  "last_verified_at": "2026-09-19T07:24:48Z",
+  "updated_at": "2026-09-19T11:19:04Z",
+  "last_verified_at": "2026-09-19T09:24:46Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

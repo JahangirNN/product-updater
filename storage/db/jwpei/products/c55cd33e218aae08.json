@@ -38,6 +38,66 @@
   ],
   "variants": [
     {
+      "id": 41112504565794,
+      "sku": "2T78-7",
+      "title": "Dark Olive",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779704791883-h8szzermv1g.jpg?v=1779782306",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Dark Olive"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 42453270036514,
+      "sku": "2T78-3",
+      "title": "Brown",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779704692219-054299ymfqih.jpg?v=1779782218",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brown"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 42453271937058,
+      "sku": "2T78-1",
+      "title": "Black",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T78-1_FRONT.jpg?v=1752238577",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
       "id": 42453272297506,
       "sku": "2T78-2",
       "title": "White",
@@ -56,6 +116,326 @@
         }
       ],
       "price_current": 9500.0
+    },
+    {
+      "id": 43182643183650,
+      "sku": "2T78-41",
+      "title": "Claret",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779100992134-wtzba1zsd1a.jpg?v=1779103038",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Claret"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 43182645313570,
+      "sku": "2T78-33",
+      "title": "Almond",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T78-33-FRONT.jpg?v=1752237238",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Almond"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 43182647017506,
+      "sku": "2T78-31",
+      "title": "Brown Canvas",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779704914754-h4lx7ituv8k.jpg?v=1779782259",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brown Canvas"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 43185127522338,
+      "sku": "2T78-32",
+      "title": "Mocha Brown",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T78-32-FRONT.jpg?v=1752237235",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Mocha Brown"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 43185140269090,
+      "sku": "2T78-42",
+      "title": "Deep Claret",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T78-42-FRONT.jpg?v=1752237233",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Deep Claret"
+        }
+      ],
+      "price_current": 11419.0
+    },
+    {
+      "id": 43997181935650,
+      "sku": "2T78-35",
+      "title": "Camel",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T78-35-FRONT.jpg?v=1763609590",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Camel"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 43997183148066,
+      "sku": "2T78-71",
+      "title": "Olive Green",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T78-71-FRONT.jpg?v=1763609669",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Olive Green"
+        }
+      ],
+      "price_current": 10459.0
+    },
+    {
+      "id": 44487624130594,
+      "sku": "2T78-44",
+      "title": "Red",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1776846056001-e1yaamre4yw.jpg?v=1776927139",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Red"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 44487631470626,
+      "sku": "2T78-14",
+      "title": "Black",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1776845962075-dmufnco37kf.jpg?v=1776927082",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 45119383601186,
+      "sku": "2T78-5",
+      "title": "Blue Denim",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1785743677785-az4n6emtke7.jpg?v=1785839840",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Blue Denim"
+        }
+      ],
+      "price_current": 10459.0
+    },
+    {
+      "id": 45247747063842,
+      "sku": "2T78-39",
+      "title": "Brown",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1788336830264-aeqctfmkm97.jpg?v=1788344547",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brown"
+        }
+      ],
+      "price_current": 10459.0
+    },
+    {
+      "id": 43997193535522,
+      "sku": "2T78-37",
+      "title": "Mocha Brown",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/unnamed_6f177147-1fdd-47a7-81fc-69256f6931ac.jpg?v=1753411798",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Mocha Brown"
+        }
+      ],
+      "price_current": 10459.0
+    },
+    {
+      "id": 45443706028066,
+      "sku": "2T78-96",
+      "title": "Mocha Grey Brown",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1784273168415-fse8j6zbl4n.jpg?v=1784280332",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Mocha Grey Brown"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 45443706191906,
+      "sku": "2T78-54",
+      "title": "Light Blue",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1784273090623-mpe26kr6chj.jpg?v=1784280199",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Light Blue"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 45443706912802,
+      "sku": "2T78-91",
+      "title": "Grey Croc",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1784273119108-jipewo46mr.jpg?v=1784280280",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Grey Croc"
+        }
+      ],
+      "price_current": 10459.0
+    },
+    {
+      "id": 45443707076642,
+      "sku": "2T78-55",
+      "title": "Navy Blue",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1785493678815-9ljn5etk4m.jpg?v=1785740708",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Navy Blue"
+        }
+      ],
+      "price_current": 9500.0
     }
   ],
   "product_options": [
@@ -63,7 +443,64 @@
       "name": "Color",
       "values": [
         {
+          "name": "Dark Olive"
+        },
+        {
+          "name": "Brown"
+        },
+        {
+          "name": "Black"
+        },
+        {
           "name": "White"
+        },
+        {
+          "name": "Claret"
+        },
+        {
+          "name": "Almond"
+        },
+        {
+          "name": "Brown Canvas"
+        },
+        {
+          "name": "Mocha Brown"
+        },
+        {
+          "name": "Deep Claret"
+        },
+        {
+          "name": "Camel"
+        },
+        {
+          "name": "Olive Green"
+        },
+        {
+          "name": "Red"
+        },
+        {
+          "name": "Black"
+        },
+        {
+          "name": "Blue Denim"
+        },
+        {
+          "name": "Brown"
+        },
+        {
+          "name": "Mocha Brown"
+        },
+        {
+          "name": "Mocha Grey Brown"
+        },
+        {
+          "name": "Light Blue"
+        },
+        {
+          "name": "Grey Croc"
+        },
+        {
+          "name": "Navy Blue"
         }
       ]
     }
@@ -97,8 +534,8 @@
   "validation_warnings": [],
   "id": "c55cd33e218aae08",
   "created_at": "2026-09-09T15:44:57Z",
-  "updated_at": "2026-09-19T07:26:07Z",
-  "last_verified_at": "2026-09-19T07:26:07Z",
+  "updated_at": "2026-09-19T11:19:05Z",
+  "last_verified_at": "2026-09-19T09:26:23Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

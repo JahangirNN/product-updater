@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 19156,
+  "current_price": 19143,
   "source_price": 199.5,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/83de49f4-8661-447a-8748-9770d96c6a7b/32F6ANXC0E-230-0230_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/83de49f4-8661-447a-8748-9770d96c6a7b/32F6ANXC0E-230-0230_1-tif",
@@ -26,12 +26,12 @@
     {
       "sku": "32F6ANXC0E",
       "title": "0230",
-      "price": "19156.00",
+      "price": "19143.00",
       "compare_at_price": null,
       "source_price": 199.5,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/83de49f4-8661-447a-8748-9770d96c6a7b/32F6ANXC0E-230-0230_1-tif",
       "option_values": [
         {
@@ -65,10 +65,10 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-19T07:28:25Z",
+  "last_verified_at": "2026-09-19T09:28:37Z",
   "id": "f748d548741d1211",
   "created_at": "2026-09-11T18:30:35Z",
-  "updated_at": "2026-09-19T07:28:25Z",
+  "updated_at": "2026-09-19T09:28:37Z",
   "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Hamilton Moderne Extra-Small Textured Leather Slouchy Crossbody Bag by Michael Kors.</p></div>",
   "shopify_sync_pending": true
 }

@@ -48,6 +48,146 @@
         }
       ],
       "price_current": 13338.0
+    },
+    {
+      "id": 41105288560674,
+      "sku": "2T38-9",
+      "title": "Silver",
+      "price": "14298.00",
+      "compare_at_price": null,
+      "source_price": 149.0,
+      "source_compare_at_price": 149.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T38-9-1.jpg?v=1752239109",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Silver"
+        }
+      ],
+      "price_current": 14298.0
+    },
+    {
+      "id": 41105295179810,
+      "sku": "2T38-1",
+      "title": "Black",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T38-1-1.jpg?v=1752239106",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 41105296359458,
+      "sku": "2T38-31",
+      "title": "Brown",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T38-31-1.jpg?v=1752239103",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brown"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 42804046463010,
+      "sku": "2T38-32",
+      "title": "Almond",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T38-32-FRONT_f7cd0a7f-c0a8-4e89-a3da-1afaca3da63e.jpg?v=1752238046",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Almond"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 42804771717154,
+      "sku": "2T38-33",
+      "title": "Pink Beige",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T38-33-FRONT_c78c1194-4744-4fd4-9986-3641408c126f.jpg?v=1752238044",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Pink Beige"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 42804786462754,
+      "sku": "2T38-42",
+      "title": "Claret",
+      "price": "14298.00",
+      "compare_at_price": null,
+      "source_price": 149.0,
+      "source_compare_at_price": 149.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T38-42-FRONT_44cfa241-c1dd-42e3-aa00-0118159fe4d1.jpg?v=1784715656",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Claret"
+        }
+      ],
+      "price_current": 14298.0
+    },
+    {
+      "id": 42804796653602,
+      "sku": "2T38-7",
+      "title": "Dark Olive",
+      "price": "14298.00",
+      "compare_at_price": null,
+      "source_price": 149.0,
+      "source_compare_at_price": 149.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T38-7-FRONT_2720c75a-24c1-4552-865d-f9b4af93109a.jpg?v=1752238038",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Dark Olive"
+        }
+      ],
+      "price_current": 14298.0
     }
   ],
   "product_options": [
@@ -56,6 +196,27 @@
       "values": [
         {
           "name": "White"
+        },
+        {
+          "name": "Silver"
+        },
+        {
+          "name": "Black"
+        },
+        {
+          "name": "Brown"
+        },
+        {
+          "name": "Almond"
+        },
+        {
+          "name": "Pink Beige"
+        },
+        {
+          "name": "Claret"
+        },
+        {
+          "name": "Dark Olive"
         }
       ]
     }
@@ -89,8 +250,8 @@
   "validation_warnings": [],
   "id": "5944dea2122d796a",
   "created_at": "2026-09-09T15:44:58Z",
-  "updated_at": "2026-09-19T07:24:42Z",
-  "last_verified_at": "2026-09-19T07:24:42Z",
+  "updated_at": "2026-09-19T11:19:04Z",
+  "last_verified_at": "2026-09-19T09:24:41Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

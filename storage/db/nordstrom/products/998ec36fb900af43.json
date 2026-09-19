@@ -182,7 +182,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/3bce6aed-9abe-4299-8055-c505d67f7fb4.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -263,7 +263,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/3bce6aed-9abe-4299-8055-c505d67f7fb4.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -290,7 +290,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/3bce6aed-9abe-4299-8055-c505d67f7fb4.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -317,7 +317,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/3bce6aed-9abe-4299-8055-c505d67f7fb4.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -344,7 +344,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/3bce6aed-9abe-4299-8055-c505d67f7fb4.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -501,16 +501,16 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-19T08:26:26Z",
+  "last_verified_at": "2026-09-19T10:26:25Z",
   "created_at": "2026-09-17T14:59:58Z",
-  "updated_at": "2026-09-19T08:26:26Z",
+  "updated_at": "2026-09-19T10:26:25Z",
   "price_range_usd": {
     "min": 175.0,
     "max": 175.0
   },
   "price_range_inr": {
-    "min": 16798.0,
-    "max": 16798.0
+    "min": 16793.0,
+    "max": 16793.0
   },
   "status": "ACTIVE",
   "is_active": true,

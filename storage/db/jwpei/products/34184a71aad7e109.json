@@ -37,6 +37,26 @@
   ],
   "variants": [
     {
+      "id": 43207889158178,
+      "sku": "2T179-1",
+      "title": "Black",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T179-1-FRONT.jpg?v=1753777250",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
       "id": 43907835527202,
       "sku": "2T179-2",
       "title": "White",
@@ -62,6 +82,9 @@
       "name": "Color",
       "values": [
         {
+          "name": "Black"
+        },
+        {
           "name": "White"
         }
       ]
@@ -86,8 +109,8 @@
   "validation_warnings": [],
   "id": "34184a71aad7e109",
   "created_at": "2026-09-09T15:49:30Z",
-  "updated_at": "2026-09-19T07:24:15Z",
-  "last_verified_at": "2026-09-19T07:24:15Z",
+  "updated_at": "2026-09-19T11:19:03Z",
+  "last_verified_at": "2026-09-19T09:24:14Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

@@ -37,6 +37,26 @@
   ],
   "variants": [
     {
+      "id": 43111663697954,
+      "sku": "7C59-4",
+      "title": "Claret",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/7C59-4-FRONT_7e0a09fa-5f0c-4193-8596-552bb419ab48.jpg?v=1752237433",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Claret"
+        }
+      ],
+      "price_current": 11419.0
+    },
+    {
       "id": 43455097012258,
       "sku": "7C59-1",
       "title": "Black",
@@ -55,6 +75,26 @@
         }
       ],
       "price_current": 11419.0
+    },
+    {
+      "id": 43455097634850,
+      "sku": "7C59-2",
+      "title": "White",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/7C59-2-FRONT_b9117a7e-f1ac-444a-bf44-5967d95ff7ce.jpg?v=1752236254",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "White"
+        }
+      ],
+      "price_current": 11419.0
     }
   ],
   "product_options": [
@@ -62,7 +102,13 @@
       "name": "Color",
       "values": [
         {
+          "name": "Claret"
+        },
+        {
           "name": "Black"
+        },
+        {
+          "name": "White"
         }
       ]
     }
@@ -91,8 +137,8 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:35:18Z",
-  "updated_at": "2026-09-19T07:25:33Z",
-  "last_verified_at": "2026-09-19T07:25:33Z",
+  "updated_at": "2026-09-19T11:19:05Z",
+  "last_verified_at": "2026-09-19T09:25:31Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

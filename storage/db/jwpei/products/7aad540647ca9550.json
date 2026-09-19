@@ -41,6 +41,26 @@
   ],
   "variants": [
     {
+      "id": 43797839872034,
+      "sku": "2T320-4",
+      "title": "Burgundy",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1773042154046-w0uhys78p0m.jpg?v=1773048999",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Burgundy"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
       "id": 44496475258914,
       "sku": "2T320-31",
       "title": "Deep Brown",
@@ -59,6 +79,26 @@
         }
       ],
       "price_current": 13338.0
+    },
+    {
+      "id": 44496475455522,
+      "sku": "2T320-3",
+      "title": "Mocha Brown",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779785290219-jst6k1azvl.jpg?v=1779788545",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Mocha Brown"
+        }
+      ],
+      "price_current": 13338.0
     }
   ],
   "product_options": [
@@ -66,7 +106,13 @@
       "name": "Color",
       "values": [
         {
+          "name": "Burgundy"
+        },
+        {
           "name": "Deep Brown"
+        },
+        {
+          "name": "Mocha Brown"
         }
       ]
     }
@@ -94,8 +140,8 @@
   "validation_warnings": [],
   "id": "7aad540647ca9550",
   "created_at": "2026-09-09T15:48:44Z",
-  "updated_at": "2026-09-19T07:25:11Z",
-  "last_verified_at": "2026-09-19T07:25:11Z",
+  "updated_at": "2026-09-19T11:19:04Z",
+  "last_verified_at": "2026-09-19T09:25:09Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

@@ -33,6 +33,26 @@
   ],
   "variants": [
     {
+      "id": 44891340898338,
+      "sku": "7X603X001-1",
+      "title": "Black",
+      "price": "5661.00",
+      "compare_at_price": null,
+      "source_price": 59.0,
+      "source_compare_at_price": 59.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/7X603X001-1_2.jpg?v=1772422085",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 5661.0
+    },
+    {
       "id": 44891342602274,
       "sku": "7X603X001-3",
       "title": "Dark Brown",
@@ -58,6 +78,9 @@
       "name": "Color",
       "values": [
         {
+          "name": "Black"
+        },
+        {
           "name": "Dark Brown"
         }
       ]
@@ -79,8 +102,8 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:32:45Z",
-  "updated_at": "2026-09-19T07:26:18Z",
-  "last_verified_at": "2026-09-19T07:26:18Z",
+  "updated_at": "2026-09-19T11:19:05Z",
+  "last_verified_at": "2026-09-19T09:26:35Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

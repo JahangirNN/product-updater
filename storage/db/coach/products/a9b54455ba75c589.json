@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Refined Leather",
   "specifications": {},
   "dimensions": {
@@ -59,7 +59,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdf08_blk_a0",
       "option_values": [
         {
@@ -78,7 +78,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdf08_blk_a0",
       "option_values": [
         {
@@ -97,7 +97,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdf08_blk_a0",
       "option_values": [
         {
@@ -116,7 +116,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdf08_blk_a0",
       "option_values": [
         {
@@ -135,7 +135,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdf08_blk_a0",
       "option_values": [
         {
@@ -154,7 +154,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdf08_blk_a0",
       "option_values": [
         {
@@ -173,7 +173,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdf08_blk_a0",
       "option_values": [
         {
@@ -220,11 +220,11 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:45:27Z",
-  "last_verified_at": "2026-09-19T07:26:49Z",
+  "last_verified_at": "2026-09-19T09:33:03Z",
   "id": "a9b54455ba75c589",
   "product_id": "a9b54455ba75c589",
   "store": "coach",
-  "updated_at": "2026-09-19T07:26:49Z",
-  "is_active": true,
+  "updated_at": "2026-09-19T09:33:03Z",
+  "is_active": false,
   "shopify_sync_pending": true
 }

@@ -41,6 +41,46 @@
   ],
   "variants": [
     {
+      "id": 44394340319266,
+      "sku": "2T78X001-30",
+      "title": "Mocha Brown",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1773135871345-30bq9mzsdvu.jpg?v=1773136936",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Mocha Brown"
+        }
+      ],
+      "price_current": 12378.0
+    },
+    {
+      "id": 44394340450338,
+      "sku": "2T78X001-10",
+      "title": "Black",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1773135834408-zqj7zmi4dzr.jpg?v=1773136919",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 12378.0
+    },
+    {
       "id": 44394340581410,
       "sku": "2T78X001-40",
       "title": "Dark Red",
@@ -66,6 +106,12 @@
       "name": "Color",
       "values": [
         {
+          "name": "Mocha Brown"
+        },
+        {
+          "name": "Black"
+        },
+        {
           "name": "Dark Red"
         }
       ]
@@ -89,8 +135,8 @@
   "validation_warnings": [],
   "id": "2e19c3070ad19535",
   "created_at": "2026-09-09T15:49:21Z",
-  "updated_at": "2026-09-19T07:24:10Z",
-  "last_verified_at": "2026-09-19T07:24:10Z",
+  "updated_at": "2026-09-19T11:19:05Z",
+  "last_verified_at": "2026-09-19T09:24:08Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

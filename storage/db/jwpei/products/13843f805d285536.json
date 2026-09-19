@@ -59,6 +59,66 @@
         }
       ],
       "price_current": 12378.0
+    },
+    {
+      "id": 46106205650978,
+      "sku": "2T68X014-90",
+      "title": "Stone Gray",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1787042807499-o3e12ef60kp.jpg?v=1787048353",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Stone Gray"
+        }
+      ],
+      "price_current": 12378.0
+    },
+    {
+      "id": 46106205683746,
+      "sku": "2T68X014-1",
+      "title": "Black",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1787042704116-kuwp86wfvu.jpg?v=1787048205",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 12378.0
+    },
+    {
+      "id": 46106206109730,
+      "sku": "2T68X014-9",
+      "title": "Slate Gray",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1787042771477-j5rzaa08nkq.jpg?v=1787048287",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Slate Gray"
+        }
+      ],
+      "price_current": 12378.0
     }
   ],
   "product_options": [
@@ -67,6 +127,15 @@
       "values": [
         {
           "name": "Dark Brown"
+        },
+        {
+          "name": "Stone Gray"
+        },
+        {
+          "name": "Black"
+        },
+        {
+          "name": "Slate Gray"
         }
       ]
     }
@@ -86,8 +155,8 @@
   "validation_warnings": [],
   "id": "13843f805d285536",
   "created_at": "2026-09-09T15:50:08Z",
-  "updated_at": "2026-09-19T07:23:41Z",
-  "last_verified_at": "2026-09-19T07:23:41Z",
+  "updated_at": "2026-09-19T11:19:05Z",
+  "last_verified_at": "2026-09-19T09:23:40Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

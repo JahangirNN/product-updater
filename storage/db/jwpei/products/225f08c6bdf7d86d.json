@@ -38,6 +38,46 @@
   ],
   "variants": [
     {
+      "id": 43759714205730,
+      "sku": "2T310-1",
+      "title": "Black",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1783071012370-na4lcshpy2k.jpg?v=1783310160",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 11419.0
+    },
+    {
+      "id": 44818645745698,
+      "sku": "2T310-5",
+      "title": "Navy",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1783507664476-gi3wnpk97w6.jpg?v=1783591753",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Navy"
+        }
+      ],
+      "price_current": 11419.0
+    },
+    {
       "id": 44818645778466,
       "sku": "2T310-4",
       "title": "Burgundy",
@@ -56,6 +96,26 @@
         }
       ],
       "price_current": 11419.0
+    },
+    {
+      "id": 44818647842850,
+      "sku": "2T310-30",
+      "title": "Dark Brown",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1783507728401-a2bc334ivt.jpg?v=1783591995",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Dark Brown"
+        }
+      ],
+      "price_current": 11419.0
     }
   ],
   "product_options": [
@@ -63,7 +123,16 @@
       "name": "Color",
       "values": [
         {
+          "name": "Black"
+        },
+        {
+          "name": "Navy"
+        },
+        {
           "name": "Burgundy"
+        },
+        {
+          "name": "Dark Brown"
         }
       ]
     }
@@ -86,8 +155,8 @@
   "validation_warnings": [],
   "id": "225f08c6bdf7d86d",
   "created_at": "2026-09-09T15:50:03Z",
-  "updated_at": "2026-09-19T07:23:55Z",
-  "last_verified_at": "2026-09-19T07:23:55Z",
+  "updated_at": "2026-09-19T11:19:04Z",
+  "last_verified_at": "2026-09-19T09:23:54Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

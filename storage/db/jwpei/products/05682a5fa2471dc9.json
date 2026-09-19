@@ -38,6 +38,86 @@
   ],
   "variants": [
     {
+      "id": 45785847300130,
+      "sku": "MHB129-3",
+      "title": "Dark Brown",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1781518535367-bnygh1q4808.jpg?v=1781579526",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Dark Brown"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 46553372229666,
+      "sku": "MHB129-41",
+      "title": "Berry Red",
+      "price": "14298.00",
+      "compare_at_price": null,
+      "source_price": 149.0,
+      "source_compare_at_price": 149.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/fi5argg4jxo.jpg?v=1787726527",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Berry Red"
+        }
+      ],
+      "price_current": 14298.0
+    },
+    {
+      "id": 46553374359586,
+      "sku": "MHB129-34",
+      "title": "Dark Brown",
+      "price": "14298.00",
+      "compare_at_price": null,
+      "source_price": 149.0,
+      "source_compare_at_price": 149.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/nn2mso31ce.jpg?v=1787726550",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Dark Brown"
+        }
+      ],
+      "price_current": 14298.0
+    },
+    {
+      "id": 46553376227362,
+      "sku": "MHB129-36",
+      "title": "Dark Khaki",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/n8evxuddn6b.jpg?v=1787726573",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Dark Khaki"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
       "id": 46553376358434,
       "sku": "MHB129-31",
       "title": "Brown",
@@ -56,6 +136,66 @@
         }
       ],
       "price_current": 14298.0
+    },
+    {
+      "id": 46553435537442,
+      "sku": "MHB129-40",
+      "title": "Burgundy",
+      "price": "14298.00",
+      "compare_at_price": null,
+      "source_price": 149.0,
+      "source_compare_at_price": 149.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/hp5ph3z4154.jpg?v=1787727127",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Burgundy"
+        }
+      ],
+      "price_current": 14298.0
+    },
+    {
+      "id": 46553437044770,
+      "sku": "MHB129-1",
+      "title": "Black",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/h2u8duy3pj.jpg?v=1787727150",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 46553528107042,
+      "sku": "MHB129-5",
+      "title": "Dark Blue",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/7nej3cp864a.jpg?v=1787727726",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Dark Blue"
+        }
+      ],
+      "price_current": 13338.0
     }
   ],
   "product_options": [
@@ -63,7 +203,28 @@
       "name": "Color",
       "values": [
         {
+          "name": "Dark Brown"
+        },
+        {
+          "name": "Berry Red"
+        },
+        {
+          "name": "Dark Brown"
+        },
+        {
+          "name": "Dark Khaki"
+        },
+        {
           "name": "Brown"
+        },
+        {
+          "name": "Burgundy"
+        },
+        {
+          "name": "Black"
+        },
+        {
+          "name": "Dark Blue"
         }
       ]
     }
@@ -82,8 +243,8 @@
   "validation_warnings": [],
   "id": "05682a5fa2471dc9",
   "created_at": "2026-09-09T15:50:50Z",
-  "updated_at": "2026-09-19T07:23:27Z",
-  "last_verified_at": "2026-09-19T07:23:27Z",
+  "updated_at": "2026-09-19T11:19:05Z",
+  "last_verified_at": "2026-09-19T09:23:26Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

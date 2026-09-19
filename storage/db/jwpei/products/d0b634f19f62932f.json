@@ -40,6 +40,26 @@
   ],
   "variants": [
     {
+      "id": 45442627141666,
+      "sku": "EWT302-1",
+      "title": "Black",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1788169811069-pih5wgczs3h.jpg?v=1788172063",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 10459.0
+    },
+    {
       "id": 46389108899874,
       "sku": "EWT302-10",
       "title": "Black",
@@ -58,6 +78,26 @@
         }
       ],
       "price_current": 10459.0
+    },
+    {
+      "id": 46389268545570,
+      "sku": "EWT302-4",
+      "title": "Deep Burgundy",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1788170016007-3j3fhxc8ez7.jpg?v=1788171564",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Deep Burgundy"
+        }
+      ],
+      "price_current": 10459.0
     }
   ],
   "product_options": [
@@ -66,6 +106,12 @@
       "values": [
         {
           "name": "Black"
+        },
+        {
+          "name": "Black"
+        },
+        {
+          "name": "Deep Burgundy"
         }
       ]
     }
@@ -88,8 +134,8 @@
   "validation_warnings": [],
   "id": "d0b634f19f62932f",
   "created_at": "2026-09-09T15:50:44Z",
-  "updated_at": "2026-09-19T07:26:19Z",
-  "last_verified_at": "2026-09-19T07:26:19Z",
+  "updated_at": "2026-09-19T11:19:05Z",
+  "last_verified_at": "2026-09-19T09:26:37Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

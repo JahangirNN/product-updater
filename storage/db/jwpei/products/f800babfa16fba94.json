@@ -37,6 +37,206 @@
   ],
   "variants": [
     {
+      "id": 42720349323298,
+      "sku": "2T68-1",
+      "title": "Black",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-1-FRONT_1a5775d4-5187-4719-8b70-dced53c71a3c.jpg?v=1752238278",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 43067056422946,
+      "sku": "2T68-2",
+      "title": "White",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-2-FRONT_adf4c453-2231-4b15-be71-3b24e0c999de.jpg?v=1752237593",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "White"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 43067058880546,
+      "sku": "2T68-3",
+      "title": "Brown",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-3-FRONT_a1b82aef-1b80-44da-948b-ce0048f8d605.jpg?v=1752237583",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brown"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 43067059470370,
+      "sku": "2T68-4",
+      "title": "Claret",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-4--FRONT.jpg?v=1752237576",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Claret"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 43359601033250,
+      "sku": "2T68-32",
+      "title": "Brown Canvas",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-32-FRONT.jpg?v=1752236600",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brown Canvas"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 43359628754978,
+      "sku": "2T68-11",
+      "title": "Black",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-11-FRONT.jpg?v=1752236598",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 43359631835170,
+      "sku": "2T68-13",
+      "title": "Black Croc",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-13-FRONT.jpg?v=1752236597",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black Croc"
+        }
+      ],
+      "price_current": 11419.0
+    },
+    {
+      "id": 43359637045282,
+      "sku": "2T68-7",
+      "title": "Green Croc",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-7-FRONT.jpg?v=1752236595",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Green Croc"
+        }
+      ],
+      "price_current": 11419.0
+    },
+    {
+      "id": 43359641174050,
+      "sku": "2T68-31",
+      "title": "Dark Brown",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1778843240575-7zzprf0qki2.jpg?v=1778855083",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Dark Brown"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 43359644811298,
+      "sku": "2T68-71",
+      "title": "Dark Green",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-71-FRONT.jpg?v=1752236592",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Dark Green"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
       "id": 43762892210210,
       "sku": "2T68-21",
       "title": "White",
@@ -55,6 +255,626 @@
         }
       ],
       "price_current": 13338.0
+    },
+    {
+      "id": 43763108773922,
+      "sku": "2T68-34",
+      "title": "Brown",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-34-FRONT.jpg?v=1752235561",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Brown"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 43763114704930,
+      "sku": "2T68-35",
+      "title": "Dark Brown",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-35-FRONT.jpg?v=1752235551",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Dark Brown"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 43989067628578,
+      "sku": "2T68-5",
+      "title": "Navy Blue",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-5-FRONT.jpg?v=1765957125",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Navy Blue"
+        }
+      ],
+      "price_current": 12378.0
+    },
+    {
+      "id": 43989068349474,
+      "sku": "2T68-8",
+      "title": "Yellow",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-8-FRONT.jpg?v=1765957193",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Yellow"
+        }
+      ],
+      "price_current": 12378.0
+    },
+    {
+      "id": 43989068644386,
+      "sku": "2T68-9",
+      "title": "Light Gray",
+      "price": "9500.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": 99.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-9-FRONT.jpg?v=1765957243",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Light Gray"
+        }
+      ],
+      "price_current": 9500.0
+    },
+    {
+      "id": 43989073002530,
+      "sku": "2T68-38",
+      "title": "Taupe",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-38-FRONT.jpg?v=1765957288",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Taupe"
+        }
+      ],
+      "price_current": 11419.0
+    },
+    {
+      "id": 43989075951650,
+      "sku": "2T68-73",
+      "title": "Matcha Green",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-73-FRONT.jpg?v=1765957407",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Matcha Green"
+        }
+      ],
+      "price_current": 12378.0
+    },
+    {
+      "id": 43989077622818,
+      "sku": "2T68-392",
+      "title": "Coffee Brown",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-39-FRONT.jpg?v=1766472667",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Coffee Brown"
+        }
+      ],
+      "price_current": 11419.0
+    },
+    {
+      "id": 45101321912354,
+      "sku": "2T68-50",
+      "title": "Blue Denim",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1785493855923-jwizu12bfl9.jpg?v=1785741751",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Blue Denim"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 43989077098530,
+      "sku": "2T68-391",
+      "title": "Light Beige",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T68-391_e5cb705d-581e-4954-ad6e-50a5c11300e1.jpg?v=1778036540",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Light Beige"
+        }
+      ],
+      "price_current": 12378.0
+    },
+    {
+      "id": 45306547109922,
+      "sku": "2T68-12",
+      "title": "Black",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1777106475609-7oc3rfl1x1b.jpg?v=1777443726",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 12378.0
+    },
+    {
+      "id": 45306547142690,
+      "sku": "2T68-81",
+      "title": "Light Yellow",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1785137267862-k4imrfk7l4e.jpg?v=1785225947",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Light Yellow"
+        }
+      ],
+      "price_current": 10459.0
+    },
+    {
+      "id": 45306547896354,
+      "sku": "2T68-47",
+      "title": "Deep Burgundy",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1777106075586-93u7uk7nacc.jpg?v=1777443749",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Deep Burgundy"
+        }
+      ],
+      "price_current": 10459.0
+    },
+    {
+      "id": 45306547961890,
+      "sku": "2T68-313",
+      "title": "Dark Brown",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1784025263032-jokcddh6p9.jpg?v=1784107773",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Dark Brown"
+        }
+      ],
+      "price_current": 12378.0
+    },
+    {
+      "id": 45306547994658,
+      "sku": "2T68-20",
+      "title": "Off White Croc",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1783584813977-m2xbooqvkk.jpg?v=1783591958",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Off White Croc"
+        }
+      ],
+      "price_current": 12378.0
+    },
+    {
+      "id": 45306548715554,
+      "sku": "2T68-91",
+      "title": "Mud Gray",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1783584889751-7sa9wjrofo.jpg?v=1783592016",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Mud Gray"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 45306548781090,
+      "sku": "2T68-44",
+      "title": "Deep Burgundy",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1784025128012-evl6mms3gjb.jpg?v=1784107679",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Deep Burgundy"
+        }
+      ],
+      "price_current": 12378.0
+    },
+    {
+      "id": 45306548846626,
+      "sku": "2T68-42",
+      "title": "Burgundy Croc",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1783584850938-xh3rd7cm2k.jpg?v=1783591916",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Burgundy Croc"
+        }
+      ],
+      "price_current": 11419.0
+    },
+    {
+      "id": 45306550878242,
+      "sku": "2T68-54",
+      "title": "Navy Blue",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1785137213455-nm9uqe2wt2f.jpg?v=1785147330",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Navy Blue"
+        }
+      ],
+      "price_current": 10459.0
+    },
+    {
+      "id": 45306550911010,
+      "sku": "2T68-411",
+      "title": "Pink",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1777106841594-jp8zgzxcnrp.jpg?v=1777443795",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Pink"
+        }
+      ],
+      "price_current": 10459.0
+    },
+    {
+      "id": 45306580074530,
+      "sku": "2T68-310",
+      "title": "Taupe",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1783584922508-54lk0r1i8yu.jpg?v=1783591086",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Taupe"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 45306580205602,
+      "sku": "2T68-75",
+      "title": "Dark Olive Green",
+      "price": "10459.00",
+      "compare_at_price": null,
+      "source_price": 109.0,
+      "source_compare_at_price": 109.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1785137248987-r1iczp1bqi.jpg?v=1785211200",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Dark Olive Green"
+        }
+      ],
+      "price_current": 10459.0
+    },
+    {
+      "id": 45306580172834,
+      "sku": "2T68-74",
+      "title": "Forest Green",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1785137230240-slq439q1dyk.jpg?v=1785211053",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Forest Green"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 45306580992034,
+      "sku": "2T68-92",
+      "title": "Grey Croc",
+      "price": "11419.00",
+      "compare_at_price": null,
+      "source_price": 119.0,
+      "source_compare_at_price": 119.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1784025154365-myr68darnb.jpg?v=1784107715",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Grey Croc"
+        }
+      ],
+      "price_current": 11419.0
+    },
+    {
+      "id": 45306582564898,
+      "sku": "2T68-52",
+      "title": "Light Blue",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1784538091673-pofn4do84el.jpg?v=1784541462",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Light Blue"
+        }
+      ],
+      "price_current": 12378.0
+    },
+    {
+      "id": 45306582597666,
+      "sku": "2T68-40",
+      "title": "Dark Burgundy",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1785745271429-uydx0txjbb.jpg?v=1785841463",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Dark Burgundy"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 45306582630434,
+      "sku": "2T68-410",
+      "title": "Pink",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1785137284407-uo5ree59qr.jpg?v=1785211095",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Pink"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 45306582794274,
+      "sku": "2T68-312",
+      "title": "Dark Red Brown",
+      "price": "12378.00",
+      "compare_at_price": null,
+      "source_price": 129.0,
+      "source_compare_at_price": 129.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1784025232951-d2m36cjqgw.jpg?v=1784107748",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Dark Red Brown"
+        }
+      ],
+      "price_current": 12378.0
+    },
+    {
+      "id": 45748481359906,
+      "sku": "2T68-17",
+      "title": "Black",
+      "price": "16217.00",
+      "compare_at_price": null,
+      "source_price": 169.0,
+      "source_compare_at_price": 169.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1783585298820-y733vgps2c.jpg?v=1783590874",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 16217.0
+    },
+    {
+      "id": 45748489158690,
+      "sku": "2T68-16",
+      "title": "Jet Black",
+      "price": "13338.00",
+      "compare_at_price": null,
+      "source_price": 139.0,
+      "source_compare_at_price": 139.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1785137366794-5deuw4mmfqt.jpg?v=1785210792",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Jet Black"
+        }
+      ],
+      "price_current": 13338.0
+    },
+    {
+      "id": 45748489125922,
+      "sku": "2T68-82",
+      "title": "Champagne",
+      "price": "16217.00",
+      "compare_at_price": null,
+      "source_price": 169.0,
+      "source_compare_at_price": 169.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1784538578970-mzc86nkioo9.jpg?v=1784541401",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Champagne"
+        }
+      ],
+      "price_current": 16217.0
     }
   ],
   "product_options": [
@@ -62,7 +882,130 @@
       "name": "Color",
       "values": [
         {
+          "name": "Black"
+        },
+        {
           "name": "White"
+        },
+        {
+          "name": "Brown"
+        },
+        {
+          "name": "Claret"
+        },
+        {
+          "name": "Brown Canvas"
+        },
+        {
+          "name": "Black"
+        },
+        {
+          "name": "Black Croc"
+        },
+        {
+          "name": "Green Croc"
+        },
+        {
+          "name": "Dark Brown"
+        },
+        {
+          "name": "Dark Green"
+        },
+        {
+          "name": "White"
+        },
+        {
+          "name": "Brown"
+        },
+        {
+          "name": "Dark Brown"
+        },
+        {
+          "name": "Navy Blue"
+        },
+        {
+          "name": "Yellow"
+        },
+        {
+          "name": "Light Gray"
+        },
+        {
+          "name": "Taupe"
+        },
+        {
+          "name": "Matcha Green"
+        },
+        {
+          "name": "Coffee Brown"
+        },
+        {
+          "name": "Blue Denim"
+        },
+        {
+          "name": "Light Beige"
+        },
+        {
+          "name": "Black"
+        },
+        {
+          "name": "Light Yellow"
+        },
+        {
+          "name": "Deep Burgundy"
+        },
+        {
+          "name": "Dark Brown"
+        },
+        {
+          "name": "Off White Croc"
+        },
+        {
+          "name": "Mud Gray"
+        },
+        {
+          "name": "Deep Burgundy"
+        },
+        {
+          "name": "Burgundy Croc"
+        },
+        {
+          "name": "Navy Blue"
+        },
+        {
+          "name": "Pink"
+        },
+        {
+          "name": "Taupe"
+        },
+        {
+          "name": "Dark Olive Green"
+        },
+        {
+          "name": "Forest Green"
+        },
+        {
+          "name": "Grey Croc"
+        },
+        {
+          "name": "Light Blue"
+        },
+        {
+          "name": "Dark Burgundy"
+        },
+        {
+          "name": "Pink"
+        },
+        {
+          "name": "Dark Red Brown"
+        },
+        {
+          "name": "Black"
+        },
+        {
+          "name": "Jet Black"
+        },
+        {
+          "name": "Champagne"
         }
       ]
     }
@@ -90,8 +1033,8 @@
   "validation_warnings": [],
   "id": "f800babfa16fba94",
   "created_at": "2026-09-09T15:47:30Z",
-  "updated_at": "2026-09-19T07:26:50Z",
-  "last_verified_at": "2026-09-19T07:26:50Z",
+  "updated_at": "2026-09-19T11:19:04Z",
+  "last_verified_at": "2026-09-19T09:27:21Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

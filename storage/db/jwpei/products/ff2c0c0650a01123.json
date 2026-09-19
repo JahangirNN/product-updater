@@ -36,6 +36,66 @@
   ],
   "variants": [
     {
+      "id": 43797839773730,
+      "sku": "2T318-0",
+      "title": "Orange",
+      "price": "14298.00",
+      "compare_at_price": null,
+      "source_price": 149.0,
+      "source_compare_at_price": 149.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1789636686247-1jojwk6n525.jpg?v=1789641246",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Orange"
+        }
+      ],
+      "price_current": 14298.0
+    },
+    {
+      "id": 44891339456546,
+      "sku": "2T318-1",
+      "title": "Black",
+      "price": "14298.00",
+      "compare_at_price": null,
+      "source_price": 149.0,
+      "source_compare_at_price": 149.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1788336939687-sbhpwidhdlb.jpg?v=1788345110",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "price_current": 14298.0
+    },
+    {
+      "id": 45063966294050,
+      "sku": "2T318-5",
+      "title": "Light Blue",
+      "price": "14298.00",
+      "compare_at_price": null,
+      "source_price": 149.0,
+      "source_compare_at_price": 149.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1773380534033-rk47ecahgw.jpg?v=1773387755",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Light Blue"
+        }
+      ],
+      "price_current": 14298.0
+    },
+    {
       "id": 45063966326818,
       "sku": "2T318-4",
       "title": "Burgundy",
@@ -60,6 +120,15 @@
     {
       "name": "Color",
       "values": [
+        {
+          "name": "Orange"
+        },
+        {
+          "name": "Black"
+        },
+        {
+          "name": "Light Blue"
+        },
         {
           "name": "Burgundy"
         }
@@ -86,8 +155,8 @@
   "validation_warnings": [],
   "id": "ff2c0c0650a01123",
   "created_at": "2026-09-09T15:48:26Z",
-  "updated_at": "2026-09-19T07:26:55Z",
-  "last_verified_at": "2026-09-19T07:26:55Z",
+  "updated_at": "2026-09-19T11:19:04Z",
+  "last_verified_at": "2026-09-19T09:27:27Z",
   "is_active": true,
   "shopify_sync_pending": true
 }
