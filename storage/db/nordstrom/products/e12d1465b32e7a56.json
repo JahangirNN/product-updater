@@ -9,7 +9,7 @@
   "source_sku": "SALOMON-8841084-5.5",
   "source_price": 190.0,
   "source_compare_at_price": null,
-  "current_price": 18244.0,
+  "current_price": 18238.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -290,7 +290,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/cd385a34-1cd0-4024-a4e1-d5183ea0236f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -533,17 +533,18 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-19T16:31:10Z",
+  "last_verified_at": "2026-09-19T18:33:42Z",
   "created_at": "2026-09-18T06:58:43Z",
-  "updated_at": "2026-09-19T16:31:10Z",
+  "updated_at": "2026-09-19T18:33:42Z",
   "price_range_usd": {
     "min": 190.0,
     "max": 190.0
   },
   "price_range_inr": {
-    "min": 18244.0,
-    "max": 18244.0
+    "min": 18238.0,
+    "max": 18238.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": true,
+  "shopify_sync_pending": true
 }

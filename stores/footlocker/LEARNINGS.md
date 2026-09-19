@@ -162,3 +162,18 @@ SHA256("footlocker::" + sku)[:16]
 - Foot Locker uses identical model names across multiple colorways (e.g. 15 products with identical title `Nike Vomero Plus - Women's`).
 - Canonical records and catalog export format titles as `{model_name} - {color}` (e.g. `Nike Vomero 18 - Men's - Black/Summit White`), guaranteeing clear, distinct product cards across the viewer and dropship feeds.
 
+---
+
+## 9. Clearance Colorway Drop & Sibling Price Misattribution Trap
+- **The Phenomenon**: Users viewing the frontend viewer saw a $77.49 Nike Vomero 18 Women's displaying the `Sweet Beet/Bordeaux` (magenta, SKU `6804604`) photo and believed the scraper had corrupted or altered the color of the shoe from `Pale Ivory/Dark Team Red`.
+- **Root Cause Analysis**:
+  1. Foot Locker had TWO distinct colorways on sale for $77.49:
+     - `Sweet Beet/Bordeaux` (`6804604`): Authentic sale price $77.49, sizes 6.0 and 6.5 in stock.
+     - `Pale Ivory/Dark Team Red` (`M6804108`): Clearance item on sale for $77.49 with only size 7.0 left.
+  2. When size 7.0 depleted on Foot Locker, direct SSR requests to `https://www.footlocker.com/product/nike-vomero-18-womens/M6804108.html` returned HTTP 404 with `@api/FAILED: Product is out of stock` (`code: 20006`).
+  3. Because `ingest_footlocker.py` dropped 404 responses during initial collection, `M6804108` was omitted from the database entirely, leaving `Sweet Beet/Bordeaux` as the sole $77.49 Vomero 18 in the catalog.
+- **Resolution**:
+  - Ingested canonical product record `storage/db/footlocker/products/a9eea6573ba2636e.json` for `M6804108` (`Nike Vomero 18 - Women's - Pale Ivory/Dark Team Red`) with all 5 high-resolution CDN images, 15-size matrix, and accurate pricing ($77.49 USD / ₹7,436 INR).
+  - Delta engine (`stores/footlocker/delta.py`) automatically polls live Foot Locker SSR state, cascades stock depletion on 404/OOS responses, and preserves product history and pricing integrity without dropping the item.
+  - Foot Locker catalog now consists of 97 products (total system catalog: 1,929 products across 4 retailers).
+
