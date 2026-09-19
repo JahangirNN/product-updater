@@ -7,7 +7,7 @@ import os
 import sys
 import json
 import time
-from typing import Dict, Any, List, Tuple
+from typing import Dict, Any, List, Tuple, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 if sys.stdout.encoding != 'utf-8':
@@ -251,18 +251,40 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
     return "Classic Handbags"
 
 
-def format_viewer_product(prod: Dict[str, Any], store_display: str, group_display: str, subgroup_display: str) -> Dict[str, Any]:
+def format_viewer_product(
+    prod: Dict[str, Any],
+    store_display: str,
+    group_display: str,
+    subgroup_display: str,
+    canonical_variant_map: Optional[Dict[str, Dict[str, Any]]] = None
+) -> Dict[str, Any]:
     """Format and streamline product record for high-speed frontend catalog viewer consumption."""
     variants = []
     for v in prod.get("variants", []):
         if not isinstance(v, dict):
             continue
+        v_sku = v.get("sku", "")
+        in_stock_val = bool(v.get("in_stock", False) or v.get("is_available", False))
+        price_val = str(v.get("price", ""))
+        source_price_val = float(v.get("source_price") or 0.0)
+
+        # Cross-sibling canonical reconciliation:
+        # If this variant corresponds to a sibling product in the catalog, always
+        # reflect the sibling's exact, live stock and price state.
+        if canonical_variant_map and v_sku in canonical_variant_map:
+            canon = canonical_variant_map[v_sku]
+            in_stock_val = canon["in_stock"]
+            if canon.get("price"):
+                price_val = canon["price"]
+            if canon.get("source_price"):
+                source_price_val = canon["source_price"]
+
         v_entry = {
-            "sku": v.get("sku", ""),
+            "sku": v_sku,
             "title": v.get("title", ""),
-            "price": str(v.get("price", "")),
-            "source_price": float(v.get("source_price") or 0.0),
-            "in_stock": bool(v.get("in_stock", False) or v.get("is_available", False)),
+            "price": price_val,
+            "source_price": source_price_val,
+            "in_stock": in_stock_val,
         }
         if v.get("image_url"):
             v_entry["image_url"] = v["image_url"]
@@ -323,8 +345,10 @@ def export_catalog(
     """
     os.makedirs(output_dir, exist_ok=True)
     all_products: List[Dict[str, Any]] = []
+    raw_products: List[Dict[str, Any]] = []
+    canonical_variant_map: Dict[str, Dict[str, Any]] = {}
 
-    # 1. Scan store directories
+    # 1. Scan store directories and read raw JSONs
     for entry in os.listdir(db_dir):
         store_path = os.path.join(db_dir, entry)
         if not os.path.isdir(store_path) or entry in ("history", "index.json"):
@@ -341,84 +365,103 @@ def export_catalog(
             try:
                 with open(p_path, "r", encoding="utf-8") as f:
                     prod = json.load(f)
-
-                # Ensure Level 1 Store, Level 2 Group, Level 3 Subgroup mapping
-                s_store = prod.get("source_store", "").lower()
-                if s_store == "jwpei":
-                    store_display = "JW PEI"
-                    group_display = "Handbags"
-                elif s_store == "nordstrom":
-                    store_display = "Nordstrom"
-                    group_display = "Shoes"
-                elif s_store == "michaelkors":
-                    store_display = "Michael Kors"
-                    gender = prod.get("gender", "Women")
-                    pt = prod.get("product_type", "Handbags")
-                    if gender == "Men":
-                        if pt == "Shoes":
-                            group_display = "Men's Shoes"
-                        elif pt == "Belts":
-                            group_display = "Men's Belts"
-                        else:
-                            group_display = "Men's Wallets"
-                    else:
-                        if pt == "Handbags":
-                            group_display = "Women's Handbags"
-                        elif pt == "Wallets":
-                            group_display = "Women's Wallets"
-                        elif pt == "Sneakers":
-                            group_display = "Women's Sneakers"
-                        elif pt == "Flats":
-                            group_display = "Women's Flats & Mules"
-                        elif pt == "Sandals":
-                            group_display = "Women's Sandals"
-                        elif pt == "Boots":
-                            group_display = "Women's Boots"
-                        elif pt == "Sunglasses":
-                            group_display = "Women's Sunglasses"
-                elif s_store == "coach":
-                    store_display = "COACH"
-                    gender = prod.get("gender", "Women")
-                    pt = prod.get("product_type", "Handbags")
-                    t_chk = (prod.get("title", "") + " " + prod.get("handle", "")).lower()
-                    if gender == "Men":
-                        if pt == "Shoes & Footwear":
-                            group_display = "Men's Shoes"
-                        elif pt == "Wallets & Small Goods":
-                            group_display = "Men's Wallets"
-                        elif pt == "Backpacks":
-                            group_display = "Men's Backpacks"
-                        else:
-                            group_display = "Men's Bags"
-                    else:
-                        if pt == "Shoes & Footwear":
-                            group_display = "Women's Shoes"
-                        elif pt == "Wristlets" and "wristlet" in t_chk:
-                            group_display = "Women's Wristlets"
-                        elif pt in ("Wallets & Small Goods", "Wristlets") and "wristlet" not in t_chk and any(w in t_chk for w in ["bag", "plaza"]):
-                            group_display = "Women's Handbags"
-                        elif pt == "Wallets & Small Goods":
-                            group_display = "Women's Wallets"
-                        elif pt == "Backpacks":
-                            group_display = "Women's Backpacks"
-                        else:
-                            group_display = "Women's Handbags"
-                elif s_store == "footlocker":
-                    store_display = "Foot Locker"
-                    gender = prod.get("specifications", {}).get("Gender") or prod.get("gender", "")
-                    if "women" in str(gender).lower() or "women" in str(prod.get("title", "")).lower():
-                        group_display = "Women's Shoes"
-                    else:
-                        group_display = "Men's Shoes"
-                else:
-                    store_display = prod.get("vendor", "Other")
-                    group_display = prod.get("product_type", "Handbags")
-                subgroup_display = classify_subgroup(prod)
-
-                formatted = format_viewer_product(prod, store_display, group_display, subgroup_display)
-                all_products.append(formatted)
+                    raw_products.append(prod)
+                    sku = prod.get("source_sku")
+                    if sku:
+                        canonical_variant_map[sku] = {
+                            "in_stock": prod.get("availability") == "in_stock",
+                            "price": str(prod.get("current_price", "")),
+                            "source_price": float(prod.get("source_price") or 0.0)
+                        }
             except Exception as err:
                 print(f"[WARN] Failed to load {p_path}: {err}")
+
+    # 2. Format products with canonical cross-variant reconciliation
+    for prod in raw_products:
+        try:
+            # Ensure Level 1 Store, Level 2 Group, Level 3 Subgroup mapping
+            s_store = prod.get("source_store", "").lower()
+            if s_store == "jwpei":
+                store_display = "JW PEI"
+                group_display = "Handbags"
+            elif s_store == "nordstrom":
+                store_display = "Nordstrom"
+                group_display = "Shoes"
+            elif s_store == "michaelkors":
+                store_display = "Michael Kors"
+                gender = prod.get("gender", "Women")
+                pt = prod.get("product_type", "Handbags")
+                if gender == "Men":
+                    if pt == "Shoes":
+                        group_display = "Men's Shoes"
+                    elif pt == "Belts":
+                        group_display = "Men's Belts"
+                    else:
+                        group_display = "Men's Wallets"
+                else:
+                    if pt == "Handbags":
+                        group_display = "Women's Handbags"
+                    elif pt == "Wallets":
+                        group_display = "Women's Wallets"
+                    elif pt == "Sneakers":
+                        group_display = "Women's Sneakers"
+                    elif pt == "Flats":
+                        group_display = "Women's Flats & Mules"
+                    elif pt == "Sandals":
+                        group_display = "Women's Sandals"
+                    elif pt == "Boots":
+                        group_display = "Women's Boots"
+                    elif pt == "Sunglasses":
+                        group_display = "Women's Sunglasses"
+            elif s_store == "coach":
+                store_display = "COACH"
+                gender = prod.get("gender", "Women")
+                pt = prod.get("product_type", "Handbags")
+                t_chk = (prod.get("title", "") + " " + prod.get("handle", "")).lower()
+                if gender == "Men":
+                    if pt == "Shoes & Footwear":
+                        group_display = "Men's Shoes"
+                    elif pt == "Wallets & Small Goods":
+                        group_display = "Men's Wallets"
+                    elif pt == "Backpacks":
+                        group_display = "Men's Backpacks"
+                    else:
+                        group_display = "Men's Bags"
+                else:
+                    if pt == "Shoes & Footwear":
+                        group_display = "Women's Shoes"
+                    elif pt == "Wristlets" and "wristlet" in t_chk:
+                        group_display = "Women's Wristlets"
+                    elif pt in ("Wallets & Small Goods", "Wristlets") and "wristlet" not in t_chk and any(w in t_chk for w in ["bag", "plaza"]):
+                        group_display = "Women's Handbags"
+                    elif pt == "Wallets & Small Goods":
+                        group_display = "Women's Wallets"
+                    elif pt == "Backpacks":
+                        group_display = "Women's Backpacks"
+                    else:
+                        group_display = "Women's Handbags"
+            elif s_store == "footlocker":
+                store_display = "Foot Locker"
+                gender = prod.get("specifications", {}).get("Gender") or prod.get("gender", "")
+                if "women" in str(gender).lower() or "women" in str(prod.get("title", "")).lower():
+                    group_display = "Women's Shoes"
+                else:
+                    group_display = "Men's Shoes"
+            else:
+                store_display = prod.get("vendor", "Other")
+                group_display = prod.get("product_type", "Handbags")
+            subgroup_display = classify_subgroup(prod)
+
+            formatted = format_viewer_product(
+                prod,
+                store_display,
+                group_display,
+                subgroup_display,
+                canonical_variant_map=canonical_variant_map
+            )
+            all_products.append(formatted)
+        except Exception as err:
+            print(f"[WARN] Failed to format product {prod.get('id', 'unknown')}: {err}")
 
     # Sort products: in stock first, then by title
     all_products.sort(key=lambda p: (0 if p.get("availability") == "in_stock" else 1, p.get("title", "")))

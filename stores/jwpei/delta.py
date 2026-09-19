@@ -312,46 +312,85 @@ def apply_delta_to_product(
         if variant_modified:
             has_changed = True
 
-        # Invariant: Harmonize top-level availability from variants
-        any_var_stock = any((v.get("in_stock", False) or v.get("is_available", False)) for v in product["variants"] if isinstance(v, dict))
-        expected_avail = "in_stock" if any_var_stock else "out_of_stock"
-        if product.get("availability") != expected_avail:
-            product["availability"] = expected_avail
-            product["is_active"] = (expected_avail == "in_stock")
-            has_changed = True
+        # Invariant: Harmonize top-level availability from variants.
+        # CRITICAL — For products with cross-sibling colorway variants (e.g. JW PEI
+        # StarApps groups), the variants array contains ALL sibling skus, not just the
+        # product's own. We MUST derive availability from the product's OWN variant only
+        # (identified via source_sku), otherwise sibling in-stock status will wrongly
+        # flip an OOS product back to in_stock.
+        own_sku = product.get("source_sku")
+        if own_sku:
+            own_var = next((v for v in product["variants"] if isinstance(v, dict) and v.get("sku") == own_sku), None)
+            if own_var is not None:
+                own_in_stock = bool(own_var.get("in_stock", False) or own_var.get("is_available", False))
+                expected_avail = "in_stock" if own_in_stock else "out_of_stock"
+                if product.get("availability") != expected_avail:
+                    product["availability"] = expected_avail
+                    product["is_active"] = own_in_stock
+                    has_changed = True
+            else:
+                # Fallback: own SKU not found in variants (shouldn't happen), use any variant
+                any_var_stock = any((v.get("in_stock", False) or v.get("is_available", False)) for v in product["variants"] if isinstance(v, dict))
+                expected_avail = "in_stock" if any_var_stock else "out_of_stock"
+                if product.get("availability") != expected_avail:
+                    product["availability"] = expected_avail
+                    product["is_active"] = (expected_avail == "in_stock")
+                    has_changed = True
+        else:
+            # No source_sku = single-variant product, use any variant (original behaviour)
+            any_var_stock = any((v.get("in_stock", False) or v.get("is_available", False)) for v in product["variants"] if isinstance(v, dict))
+            expected_avail = "in_stock" if any_var_stock else "out_of_stock"
+            if product.get("availability") != expected_avail:
+                product["availability"] = expected_avail
+                product["is_active"] = (expected_avail == "in_stock")
+                has_changed = True
 
     elif not variants_delta and product.get("variants"):
         if product.get("availability") in ("out_of_stock", "delisted"):
             # Availability Cascade:
-            # When top-level availability flips to "out_of_stock" or delisted, cascade in_stock = False and is_available = False to all child variants when variants_delta is empty.
+            # When top-level availability flips to "out_of_stock" or delisted,
+            # cascade in_stock = False ONLY to the product's own variant.
+            # Sibling cross-linked variants must NOT be touched — they have their own
+            # independent stock state that gets updated when their own handle is freshed.
             product["is_active"] = False
             cascade_modified = False
+            own_sku = product.get("source_sku")
             for var in product["variants"]:
-                if isinstance(var, dict):
-                    if var.get("in_stock") is not False:
-                        var["in_stock"] = False
-                        cascade_modified = True
-                    if var.get("is_available") is not False:
-                        var["is_available"] = False
-                        cascade_modified = True
+                if not isinstance(var, dict):
+                    continue
+                # Only cascade to own variant; skip siblings
+                if own_sku and var.get("sku") != own_sku:
+                    continue
+                if var.get("in_stock") is not False:
+                    var["in_stock"] = False
+                    cascade_modified = True
+                if var.get("is_available") is not False:
+                    var["is_available"] = False
+                    cascade_modified = True
             if cascade_modified:
                 has_changed = True
         elif product.get("availability") == "in_stock" and (
             prev_availability in ("out_of_stock", "delisted")
-            or not any((v.get("in_stock", False) or v.get("is_available", False)) for v in product["variants"] if isinstance(v, dict))
+            or not any((v.get("in_stock", False) or v.get("is_available", False)) for v in product["variants"] if isinstance(v, dict) and v.get("sku") == product.get("source_sku"))
         ):
             # Restock Cascade:
-            # When an out-of-stock or delisted product restocks to "in_stock", cascade in_stock = True and is_available = True to child variants when variants_delta is empty.
+            # When an out-of-stock or delisted product restocks to "in_stock",
+            # cascade in_stock = True ONLY to the product's own variant.
             product["is_active"] = True
             cascade_modified = False
+            own_sku = product.get("source_sku")
             for var in product["variants"]:
-                if isinstance(var, dict):
-                    if var.get("in_stock") is not True:
-                        var["in_stock"] = True
-                        cascade_modified = True
-                    if var.get("is_available") is not True:
-                        var["is_available"] = True
-                        cascade_modified = True
+                if not isinstance(var, dict):
+                    continue
+                # Only cascade to own variant; skip siblings
+                if own_sku and var.get("sku") != own_sku:
+                    continue
+                if var.get("in_stock") is not True:
+                    var["in_stock"] = True
+                    cascade_modified = True
+                if var.get("is_available") is not True:
+                    var["is_available"] = True
+                    cascade_modified = True
             if cascade_modified:
                 has_changed = True
 
