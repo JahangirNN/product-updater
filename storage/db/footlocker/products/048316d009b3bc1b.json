@@ -293,7 +293,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42150702_01",
       "option_values": [
         {
@@ -347,7 +347,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42150702_01",
       "option_values": [
         {
@@ -374,7 +374,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42150702_01",
       "option_values": [
         {
@@ -534,7 +534,8 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-19T18:23:25Z",
+  "last_verified_at": "2026-09-20T04:23:25Z",
   "created_at": "2026-09-18T20:48:02Z",
-  "updated_at": "2026-09-19T18:23:25Z"
+  "updated_at": "2026-09-20T04:23:25Z",
+  "shopify_sync_pending": true
 }

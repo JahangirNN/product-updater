@@ -49,6 +49,15 @@
       "delay_seconds": 0.5,
       "timeout_seconds": 15.0,
       "endpoint_pattern": "https://www.footlocker.com/product/{handle}/{id}.html"
+    },
+    "jdsports": {
+      "check_interval_minutes": 60,
+      "engine": "http",
+      "max_workers": 2,
+      "requests_per_second": 2.0,
+      "delay_seconds": 0.5,
+      "timeout_seconds": 12.0,
+      "endpoint_pattern": "https://www.jdsports.com/pdp/{handle}/{id}"
     }
   },
   "shopify_sync": {

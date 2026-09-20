@@ -51,9 +51,14 @@ Whenever a user provides a collection URL and activates X Mode, execute the foll
 1. **Scraping & Discovery**:
    - Crawl/scrape all collection pages politely using Firecrawl MCP, SFCC storefront APIs, or Camoufox stealth browser.
    - Extract raw product handles, canonical URLs, and full metadata.
+   - **Cross-Sibling Colorway Discovery (Anti-Omission Standard)**:
+     - Retailer collection and search grids often only display 1 or 2 featured colorways per model, hiding up to 10+ sibling colorways behind interactive PDP swatches (`styleVariants` in Foot Locker, StarApps swatches in JW PEI, `colorway` arrays in Nordstrom).
+     - Phase 2 ingestion must traverse and reconcile all sibling style SKUs discovered in PDP hydrated states so 100% of colorways are captured, not just the search page subset.
 
 2. **Canonical Normalization (Pure Functions, ADR 0005)**:
    - **Title & Color Separation**: Separate model name from color suffix (e.g. `Title: "Noor Top Handle Bag"`, `Color: "Burgundy"`).
+   - **Colorway Title Suffixing Invariant**:
+     - When retailers share identical model names across multiple distinct colorways (e.g. 15 products all named `Nike Vomero 18 - Women's`), product titles in canonical storage and viewer feeds MUST be enriched as `{model_name} - {color}` (e.g. `Nike Vomero 18 - Women's - Sweet Beet/Bordeaux`). This eliminates duplicate generic cards and prevents sibling colorway confusion.
    - **Media Gallery**: Collect all high-resolution CDN images and bind the primary variant image.
    - **Size Guide & Accordion (ADR 0006)**:
      - **Handbags / Accessories**: Extract dimensions (W x H x D), handle drop, strap drop, and materials. Generate `<details class="size-guide-accordion">` table inside `descriptionHtml`.
@@ -61,9 +66,14 @@ Whenever a user provides a collection URL and activates X Mode, execute the foll
    - **Forex Conversion (ADR 0006)**: Convert source currency (USD/EUR/GBP) to whole INR rupees (`round(source_price * forex_rate)`) using `storage/forex.py`. Zero fractional paise allowed.
    - **Shopify Readiness (ADR 0004)**: Ensure all mandatory Shopify fields are satisfied (`title`, `vendor`, `body_html`, `variants`).
 
-3. **Variant Matrix Extraction Invariants (Anti-Truncation Standard)**:
-   - **Zero 1-Size Truncation**: For footwear, clothing, or multi-size goods, never accept a single variant placeholder or top-level summary when multiple sizes exist.
-   - **Dehydrated State Extraction**: Extract the complete variant matrix directly from hydrated client states (`window.__INITIAL_CONFIG__`, SFCC product objects, or Shopify `.js` items).
+3. **Variant Matrix Extraction & Clearance Invariants**:
+   - **Zero 1-Size Truncation vs Clearance Preservation**:
+     - For footwear, clothing, or multi-size goods, never accept a single variant placeholder or top-level summary when multiple sizes exist.
+     - **Crucial Distinction**: Differentiate between *scraper defect truncation* (where a multi-size shoe was truncated because of a broken selector) vs *genuine retailer clearance* (where the retailer genuinely only has 1 remaining size in stock, e.g. size 7.0 or 8.0).
+     - Legitimate clearance products with 1 size in stock must **never** be dropped or skipped. Build the full size matrix for the model (e.g. US 5.0–12.0) with only the active clearance size marked `in_stock: true`, or canonicalize the clearance item with verified single-size inventory.
+   - **Out-of-Stock / Delisted Ingestion Resilience**:
+     - If a known or harvested SKU returns HTTP 404 or SSR errors (`@api/FAILED: Product is out of stock`, `code: 20006`), never silently discard it during ingestion or catalog rebuilds. Ingest it canonically as `availability: "out_of_stock"` with all variants `in_stock: false`. This prevents catalog holes and eliminates user confusion where a missing clearance product is mistaken for a color swap or corrupted data.
+   - **Dehydrated State Extraction**: Extract the complete variant matrix directly from hydrated client states (`window.footlocker.STATE_FROM_SERVER`, `window.__INITIAL_CONFIG__`, SFCC product objects, or Shopify `.js` items).
    - **Width vs Sizing Separation**: Standalone shoe width codes (`2E`, `4E`, `EE`, `D`, `W`, `M`, `Wide`, `Medium`) must **never** be parsed as numeric sizes. Use regex exclusion rules to isolate true US numeric sizes.
    - **Multi-Price Preservation**: Multi-material or multi-colorway items with different prices (e.g. Coach Scene7 or MK styles) must preserve their respective `source_price`, whole-rupee INR price, and unique SKU on each variant.
 
@@ -73,7 +83,7 @@ Whenever a user provides a collection URL and activates X Mode, execute the foll
 
 ---
 
-## Phase 3: Rigorous Four-Part Quality Audit Suite
+## Phase 3: Rigorous Five-Part Quality Audit Suite
 
 Data integrity is the highest project priority. Do NOT skip this phase.
 Run the automated cross-brand audit suite:
@@ -81,12 +91,13 @@ Run the automated cross-brand audit suite:
 python scripts/audit_cross_brand_catalog.py
 ```
 
-The suite validates four critical integrity dimensions across 100% of the catalog:
+The suite validates five critical integrity dimensions across 100% of the catalog:
 
-### Part 1: Sizing Integrity (Zero Truncation)
+### Part 1: Sizing Integrity (Zero Truncation vs Clearance Verification)
 - Audits 100% of footwear and apparel across all brands.
-- **Invariant**: Exactly **0 products with $\le 1$ variant** in multi-size categories.
-- Guarantees full size runs across all footwear styles (averaging 10–14 sizes per model).
+- **Invariant**: Exactly **0 unverified products with $\le 1$ variant** in multi-size categories.
+- Legitimate clearance items with 1 size remaining must have explicit clearance validation metadata recorded in store learnings.
+- Guarantees full size runs across all footwear styles (averaging 10–17 sizes per model).
 
 ### Part 2: Multi-Price & Unique Variant Attributes
 - Audits styles featuring multi-material or multi-colorway pricing differentials (e.g. Coach & Michael Kors).
@@ -104,7 +115,11 @@ The suite validates four critical integrity dimensions across 100% of the catalo
     - If any child variant is `in_stock`, parent `availability` must be `in_stock` (`is_active = True`).
     - If all child variants are out of stock, parent `availability` must be `out_of_stock` (`is_active = False`).
 
-### Part 4: Live Retailer PDP Parity Sampling
+### Part 4: Cross-Sibling Coverage & Sibling Inventory Audit
+- Cross-references all sibling style SKUs discovered in PDP hydrated states (`styleVariants`, swatch Metaobjects) against `storage/db/{brand_slug}/products/`.
+- **Invariant**: Exactly **0 missing sibling styles**. Every discovered colorway must exist as a canonical record in the database.
+
+### Part 5: Live Retailer PDP Parity Sampling
 - Randomly samples products across all onboarded brands against live retailer endpoints.
 - Verifies 1-to-1 parity for: Title, SKU, Source Price, Availability, and Granular Variant Stock.
 - **Success Criteria**: 100.0% concordance rate with zero unaccounted divergences.
@@ -169,10 +184,12 @@ if resp.status_code == 429:
     break
 ```
 
-### 4.4 HTTP 404 Delisting State Preservation
-When a product is delisted (HTTP 404), the return dictionary **must preserve previous values** so delta logs and Shopify events never receive `null` states:
+### 4.4 HTTP 404 Delisting & Dehydrated SSR Error Handling
+When a product is delisted (HTTP 404) or when a retailer's hydrated server state returns an out-of-stock error (e.g. Foot Locker `@api/FAILED`, `statusCode: 404`, `errors: [{"code": "20006", "message": "Product is out of stock"}]`, or empty data object), the delta engine must handle it gracefully:
+- **Preserve Previous Pricing & Attributes**: The return dictionary **must preserve previous values** so delta logs and Shopify events never receive `null` states.
+- **Stock Depletion Cascade (ADR 0015)**: Automatically cascade depletion to all child variants (`in_stock: False`) and set parent `availability: "out_of_stock"` (`is_active: False`).
 ```python
-if resp.status_code == 404:
+if resp.status_code == 404 or status_code == 404 or errors or get_details.get("status") == "@api/FAILED":
     return {
         "status": "not_found",
         "handle": handle,
@@ -184,16 +201,24 @@ if resp.status_code == 404:
         "price_changed": False,
         "stock_changed": old_availability != "out_of_stock",
         "elapsed_ms": elapsed_ms,
-        "message": "Product delisted (HTTP 404)"
+        "message": f"Product delisted or out of stock (HTTP {status_code or 404})"
     }
 ```
 
-### 4.5 Selective Timestamp Stamping Invariant
+### 4.5 Canonical URL Slug Normalization
+Apostrophes in model names (e.g. `Women's`, `Men's`, `Girls'`, `Boys'`) must be normalized prior to hyphen replacement:
+```python
+cleaned_title = re.sub(r"['\u2019]s\b", "s", raw_title.lower())
+slug = re.sub(r'[^a-zA-Z0-9]+', '-', cleaned_title).strip('-')
+```
+This generates the retailer's true canonical slug (e.g. `nike-vomero-18-womens`), preventing unnecessary HTTP 301 redirects to unhydrated `/~/SKU.html` stubs.
+
+### 4.6 Selective Timestamp Stamping Invariant
 In `apply_delta_to_product()`:
 - **Rule**: ONLY stamp `product["last_verified_at"] = now_iso` if `delta_result.get("status") in ("success", "not_found")`.
 - **Reason**: If a product check fails or is rate-limited (`status == "rate_limited"` or `"error"`), stamping `last_verified_at` causes the scheduler to skip it for 60 minutes. Leaving `last_verified_at` untouched ensures it is retried in the next cycle.
 
-### 4.6 Variant Price Differential & Stock Cascade Tracking
+### 4.7 Variant Price Differential & Stock Cascade Tracking
 - When applying deltas, check both top-level and variant-level pricing:
   ```python
   if abs(new_v_price - old_v_price) > 0.01:
@@ -208,20 +233,20 @@ In `apply_delta_to_product()`:
   product["is_active"] = (product["availability"] == "in_stock")
   ```
 
-### 4.7 Stealth Browser & Anti-Bot Optimization (`camoufox_solver.py`)
+### 4.8 Stealth Browser & Anti-Bot Optimization (`camoufox_solver.py`)
 When a retailer employs client-side bot management (Kasada, Akamai, Imperva):
 - **Zero API Fees**: Use local headless stealth engine (`camoufox` + `playwright`).
 - **Route-Level Resource Aborting**: Abort images, fonts, media, and third-party trackers before page load to cut sweep latencies by >50%.
 - **Safe Navigation Handling**: Wrap `page.content()` and `page.title()` in safe `try/except Error` handlers to gracefully handle client-side SPA navigation redirects after challenge solving.
 - **Two-Tier Collection Fast Sweep**: Load collection listings first to harvest hydrated entity state for all items in bulk (<40s for ~100 products), only visiting individual PDPs when price or stock shifts are detected.
 
-### 4.8 Dual-Sink Structured Logging (`storage/logger.py`)
+### 4.9 Dual-Sink Structured Logging (`storage/logger.py`)
 All sync activity routes through Loguru dual sinks:
 - `logs/freshner.log`: Operational logs, product statuses, and `[DELTA:PRICE]` / `[DELTA:STOCK]` event tags (`INFO+`, 20 MB rotation, 14 days retention).
 - `logs/errors.log`: Error forensic sink strictly capturing `ERROR` and `CRITICAL` events with full diagnostic stack traces (`backtrace=True, diagnose=True`, 10 MB rotation, 30 days retention).
 - Delta events are queued into `storage/db/history/delta_events.jsonl` (ready for Shopify sync).
 
-### 4.9 Continuous Background Freshner Daemon (`scripts/run_freshner_daemon.py`)
+### 4.10 Continuous Background Freshner Daemon (`scripts/run_freshner_daemon.py`)
 - The daemon runs persistently in the background (`IsDaemon=true`).
 - Calculates dynamic sleep intervals: `sleep_seconds = (interval * 60) - cycle_duration`.
 - Sleeps using a 1-second heartbeat loop to respond immediately to `SIGINT` (Ctrl+C) and `SIGTERM`.
@@ -243,6 +268,7 @@ All sync activity routes through Loguru dual sinks:
 
 2. **Lean Static Catalog Export (`scripts/export_viewer_data.py`)**:
    - Compile `frontend/public/data/catalog.json` and `meta.json`.
+   - **Colorway Enrichment**: Ensure exported titles append `- {color}` when multiple colorway styles share a base model name.
    - **Payload Lean Pruning**:
      - Strip redundant `description_html` (retain only `descriptionHtml`).
      - Limit `images` array in `catalog.json` to top 5 thumbnail URLs (full galleries load in product modal).
@@ -250,6 +276,11 @@ All sync activity routes through Loguru dual sinks:
    - Sync files: `Copy-Item frontend/public/data/* frontend/dist/data/ -Force`.
 
 3. **High-Speed Frontend Rendering Architecture (`frontend/src/`)**:
+   - **Dynamic Variant Swatch Switching (`ProductModal.tsx`)**:
+     - When a user selects or clicks a variant (size or sibling colorway swatch), the viewer modal must dynamically switch:
+       1. Hero image and thumbnail gallery to match the selected variant's `image_url` or colorway photo set.
+       2. Display price and compare-at price to reflect the variant's specific pricing.
+       3. Real-time availability badge (`In Stock` vs `Out of Stock`).
    - **Incremental Card Batching & Virtual Scroll (`App.tsx`)**:
      - Never mount thousands of card DOM nodes at once.
      - Render products in initial batches of 40 cards with 40-card increments via an `IntersectionObserver` sentinel.

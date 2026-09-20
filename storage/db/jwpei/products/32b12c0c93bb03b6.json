@@ -9,11 +9,11 @@
   "source_price": 119.0,
   "source_compare_at_price": 119.0,
   "current_price": 11419.0,
-  "compare_at_price": 11419.0,
+  "compare_at_price": 11423.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.957344,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Faux Suede",
   "specifications": {
     "Main Material": "Faux Suede",
@@ -280,7 +280,7 @@
       "id": 45300602372130,
       "sku": "2T273-48",
       "title": "Pink",
-      "price": "11419.00",
+      "price": "11423.00",
       "compare_at_price": null,
       "source_price": 119.0,
       "source_compare_at_price": 119.0,
@@ -294,7 +294,7 @@
           "name": "Pink"
         }
       ],
-      "price_current": 11419.0
+      "price_current": 11423.0
     },
     {
       "id": 45300676689954,
@@ -448,12 +448,12 @@
   "groups": [
     "handbags"
   ],
-  "is_active": false,
+  "is_active": true,
   "shopify_sync_pending": true,
   "status": "DRAFT",
   "validation_warnings": [],
   "id": "32b12c0c93bb03b6",
   "created_at": "2026-09-19T11:15:34Z",
-  "updated_at": "2026-09-19T17:24:18Z",
-  "last_verified_at": "2026-09-19T17:24:18Z"
+  "updated_at": "2026-09-20T05:24:19Z",
+  "last_verified_at": "2026-09-20T05:24:19Z"
 }

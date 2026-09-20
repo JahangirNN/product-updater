@@ -15,8 +15,8 @@
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "gender": "Women's",
   "material": "Mesh and synthetic upper, ZoomX foam, Rubber outsole",
   "specifications": {
@@ -52,7 +52,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/M5973606_01",
       "option_values": [
         {
@@ -94,6 +94,7 @@
   ],
   "status": "ACTIVE",
   "created_at": "2026-09-19T18:05:49Z",
-  "last_verified_at": "2026-09-19T18:05:49Z",
-  "updated_at": "2026-09-19T18:05:49Z"
+  "last_verified_at": "2026-09-20T05:23:26Z",
+  "updated_at": "2026-09-20T05:23:26Z",
+  "shopify_sync_pending": true
 }

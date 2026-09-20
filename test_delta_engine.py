@@ -32,6 +32,7 @@ from stores._template.delta import check_price_and_stock as template_check, appl
 from stores.footlocker.delta import check_price_and_stock as fl_check, apply_delta_to_product as fl_apply
 from stores.nordstrom.delta import apply_delta_to_product as nordstrom_apply
 from stores.coach.delta import apply_delta_to_product as coach_apply
+from stores.jdsports.delta import check_price_and_stock as jdsports_check, apply_delta_to_product as jdsports_apply
 from storage.db import append_delta_event, append_delta_log, read_delta_events
 from storage.rate_limiter import (
     configure_store_rate_limits,
@@ -814,6 +815,103 @@ def test_coach_multivariant_delta_and_scene7_integrity():
     print("  ✅ PASS: Coach multi-variant stock & price updates mutate cleanly, Scene7 image URLs maintain integrity, and depletion cascades safely.")
 
 
+def test_jdsports_multitier_delta_and_depletion_cascade():
+    print("\n[TEST 13] Verifying JD Sports Multi-Tier Sizing Delta Mutation, 404 Cascade & Rate Limit Resilience...")
+    forex_rate = 95.989567
+
+    product_jds = {
+        "id": "jds_air_max_90",
+        "handle": "mens-nike-air-max-90-casual-shoes-ib7680-001",
+        "title": "Men's Nike Air Max 90 Casual Shoes - Black/Buff Gold/Anthracite",
+        "source_store": "jdsports",
+        "source_sku": "IB7680-001",
+        "source_price": 120.0,
+        "current_price": 11519.0,
+        "availability": "in_stock",
+        "is_active": True,
+        "sizing_category": "Adult",
+        "last_verified_at": "2026-09-01T00:00:00Z",
+        "variants": [
+            {"sku": "IB7680-001-8.0", "in_stock": True, "source_price": 120.0, "price": "11519.00", "title": "US 8.0 / UK 7 - Black/Buff Gold/Anthracite"},
+            {"sku": "IB7680-001-9.0", "in_stock": True, "source_price": 120.0, "price": "11519.00", "title": "US 9.0 / UK 8 - Black/Buff Gold/Anthracite"},
+            {"sku": "IB7680-001-10.0", "in_stock": True, "source_price": 120.0, "price": "11519.00", "title": "US 10.0 / UK 9 - Black/Buff Gold/Anthracite"}
+        ]
+    }
+
+    # Scenario A: Partial variant inventory update + price increase ($120 -> $130)
+    delta_success = {
+        "status": "success",
+        "handle": product_jds["handle"],
+        "current_source_price": 130.0,
+        "old_source_price": 120.0,
+        "availability": "in_stock",
+        "old_availability": "in_stock",
+        "price_changed": True,
+        "stock_changed": False,
+        "variant_stock_changed": True,
+        "variants_delta": [
+            {"sku": "IB7680-001-8.0", "size": "8.0", "available": False, "price_usd": 130.0},
+            {"sku": "IB7680-001-9.0", "size": "9.0", "available": True, "price_usd": 130.0},
+            {"sku": "IB7680-001-10.0", "size": "10.0", "available": False, "price_usd": 130.0}
+        ]
+    }
+    updated_a, changed_a = jdsports_apply(copy.deepcopy(product_jds), delta_success, forex_rate)
+    assert changed_a is True, "Price and variant stock changes must return has_changed = True"
+    assert updated_a["source_price"] == 130.0
+    assert updated_a["current_price"] == float(round(130.0 * forex_rate))
+    assert updated_a["current_price"] % 1 == 0, "INR price must be whole-rupee (no fractional paise)"
+    assert updated_a["availability"] == "in_stock", "Parent must remain in_stock because size 9.0 is available"
+    assert updated_a["is_active"] is True
+    v_map = {v["sku"]: v["in_stock"] for v in updated_a["variants"]}
+    assert v_map["IB7680-001-8.0"] is False
+    assert v_map["IB7680-001-9.0"] is True
+    assert v_map["IB7680-001-10.0"] is False
+    assert updated_a["last_verified_at"] != "2026-09-01T00:00:00Z", "Success must advance last_verified_at"
+    assert updated_a["shopify_sync_pending"] is True
+
+    # Scenario B: 404 delisting cascades depletion to all child variants (ADR 0015)
+    delta_404 = {
+        "status": "not_found",
+        "handle": product_jds["handle"],
+        "availability": "out_of_stock",
+        "old_availability": "in_stock",
+        "current_source_price": 120.0,
+        "old_source_price": 120.0,
+        "is_active": False,
+        "price_changed": False,
+        "stock_changed": True,
+        "variant_stock_changed": True,
+        "variants_delta": []
+    }
+    updated_404, changed_404 = jdsports_apply(copy.deepcopy(product_jds), delta_404, forex_rate)
+    assert changed_404 is True
+    assert updated_404["availability"] == "out_of_stock"
+    assert updated_404["is_active"] is False
+    for v in updated_404["variants"]:
+        assert v["in_stock"] is False, f"JD Sports variant {v['sku']} must be cascaded to in_stock=False on 404"
+    assert updated_404["last_verified_at"] != "2026-09-01T00:00:00Z", "404 must advance last_verified_at"
+
+    # Scenario C: HTTP 429 / 403 Rate Limit maintains strict immutability (ADR 0008)
+    delta_429 = {
+        "status": "rate_limited",
+        "handle": product_jds["handle"],
+        "availability": "in_stock",
+        "old_availability": "in_stock",
+        "current_source_price": 120.0,
+        "old_source_price": 120.0,
+        "is_active": True,
+        "price_changed": False,
+        "stock_changed": False,
+        "variant_stock_changed": False,
+        "error": "Rate limit retries exhausted"
+    }
+    updated_429, changed_429 = jdsports_apply(copy.deepcopy(product_jds), delta_429, forex_rate)
+    assert changed_429 is False, "Rate limited delta must return has_changed = False"
+    assert updated_429["last_verified_at"] == "2026-09-01T00:00:00Z", "Rate limited delta must NOT advance last_verified_at"
+
+    print("  ✅ PASS: JD Sports multi-tier variant inventory shifts mutate cleanly, whole-rupee math is enforced, 404 delistings cascade depletion, and rate limits maintain immutability.")
+
+
 def run_all_tests():
     print("=" * 72)
     print("DELTA ENGINE INTEGRATION & UNIT TEST SUITE (MULTI-STORE EDITION)")
@@ -831,6 +929,7 @@ def run_all_tests():
     test_footlocker_delta_cascade_and_selective_timestamping()
     test_nordstrom_multicolorway_delta_and_price_range_sync()
     test_coach_multivariant_delta_and_scene7_integrity()
+    test_jdsports_multitier_delta_and_depletion_cascade()
 
     print("\n" + "=" * 72)
     print("ALL TESTS PASSED WITH 100% SUCCESS")

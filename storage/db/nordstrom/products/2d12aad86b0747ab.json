@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Textile and synthetic upper and lining, rubber and synthetic sole",
   "specifications": {
     "Brand": "On",
@@ -438,7 +438,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/e692a6ad-8d16-4093-958a-5cc8b3370ff0.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -573,7 +573,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/9eea6820-ea80-4e11-a247-1a27d62400a7.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -681,7 +681,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/9eea6820-ea80-4e11-a247-1a27d62400a7.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -977,9 +977,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-19T17:26:18Z",
+  "last_verified_at": "2026-09-20T05:30:04Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-19T17:26:18Z",
+  "updated_at": "2026-09-20T05:30:04Z",
   "price_range_usd": {
     "min": 99.99,
     "max": 160.0
@@ -989,5 +989,6 @@
     "max": 15358.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": false,
+  "shopify_sync_pending": true
 }

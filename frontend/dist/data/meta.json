@@ -1,16 +1,18 @@
 {
-  "total_products": 1928,
-  "in_stock": 1811,
-  "out_of_stock": 117,
+  "total_products": 1941,
+  "in_stock": 1805,
+  "out_of_stock": 136,
   "stores": [
     "COACH",
     "Foot Locker",
+    "JD Sports",
     "JW PEI",
     "Michael Kors",
     "Nordstrom"
   ],
   "groups": [
     "Handbags",
+    "Kids' Shoes",
     "Men's Backpacks",
     "Men's Bags",
     "Men's Belts",
@@ -30,10 +32,15 @@
   ],
   "subgroups": [
     "Acetate Frame Sunglasses",
+    "Air Max 270",
+    "Air Max 90",
+    "Air Max 95",
+    "Air Max Plus",
     "Ankle Boots & Booties",
     "Backpacks",
     "Ballet Flats",
     "Belt & Sling Bags",
+    "Big Kids (Grade School)",
     "Billfolds",
     "Billfolds & Passcases",
     "Boots & Booties",
@@ -104,6 +111,6 @@
     "min": 573.0,
     "max": 90891.0
   },
-  "last_updated": "2026-09-19T18:06:21Z",
+  "last_updated": "2026-09-20T05:01:04Z",
   "generated_by": "product-updater-export-pipeline"
 }

@@ -9,7 +9,7 @@
   "source_sku": "HOKA-8433794-5.5",
   "source_price": 75.0,
   "source_compare_at_price": null,
-  "current_price": 7197.0,
+  "current_price": 7199.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -74,7 +74,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/7e25cae6-f256-4e25-bd19-c80157829bf3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -776,7 +776,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/1d7a705a-3e4c-4a2e-9b77-1e4880a06159.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -830,7 +830,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/1d7a705a-3e4c-4a2e-9b77-1e4880a06159.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1100,7 +1100,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/446e46b3-4afc-4e0f-bdc6-8d5827b722bd.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1235,7 +1235,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/446e46b3-4afc-4e0f-bdc6-8d5827b722bd.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2138,16 +2138,16 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-19T17:26:46Z",
+  "last_verified_at": "2026-09-20T05:30:46Z",
   "created_at": "2026-09-17T14:54:13Z",
-  "updated_at": "2026-09-19T17:26:46Z",
+  "updated_at": "2026-09-20T05:30:46Z",
   "price_range_usd": {
     "min": 75.0,
     "max": 150.0
   },
   "price_range_inr": {
-    "min": 7197.0,
-    "max": 14394.0
+    "min": 7199.0,
+    "max": 14398.0
   },
   "status": "ACTIVE",
   "is_active": true,

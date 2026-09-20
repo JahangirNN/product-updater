@@ -229,6 +229,37 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
             return "Vomero 5"
         return "Vomero Series"
 
+    # JD Sports Nike Footwear Collections
+    if source_store == "jdsports":
+        sizing_cat = product.get("sizing_category", "Adult")
+        if sizing_cat == "Toddler":
+            return "Toddler & Infant"
+        elif sizing_cat == "Preschool":
+            return "Little Kids (Preschool)"
+        elif sizing_cat == "Grade School":
+            return "Big Kids (Grade School)"
+
+        t_check = f"{title_lower} {handle_lower}"
+        if "air max" in t_check or "vapormax" in t_check:
+            if "90" in t_check:
+                return "Air Max 90"
+            elif "95" in t_check:
+                return "Air Max 95"
+            elif "97" in t_check:
+                return "Air Max 97"
+            elif "270" in t_check:
+                return "Air Max 270"
+            elif "plus" in t_check:
+                return "Air Max Plus"
+            elif "vapormax" in t_check:
+                return "Air VaporMax"
+            return "Air Max Classics"
+        elif "air force" in t_check:
+            return "Air Force 1"
+        elif "dunk" in t_check:
+            return "Dunk Low"
+        return "Nike Footwear"
+
     # Handbags taxonomy for JW PEI
     style = specs.get("Carrying Style", "").lower() or specs.get("Carrying Method", "").lower()
 
@@ -302,7 +333,7 @@ def format_viewer_product(
         images = []
 
     prod_title = prod.get("title", "")
-    if prod.get("source_store") == "footlocker":
+    if prod.get("source_store") in ("footlocker", "jdsports"):
         color = (prod.get("specifications") or {}).get("Color")
         if color and color.lower() not in prod_title.lower():
             prod_title = f"{prod_title} - {color}"
@@ -450,6 +481,16 @@ def export_catalog(
                 store_display = "Foot Locker"
                 gender = prod.get("specifications", {}).get("Gender") or prod.get("gender", "")
                 if "women" in str(gender).lower() or "women" in str(prod.get("title", "")).lower():
+                    group_display = "Women's Shoes"
+                else:
+                    group_display = "Men's Shoes"
+            elif s_store == "jdsports":
+                store_display = "JD Sports"
+                gender = prod.get("gender") or prod.get("specifications", {}).get("Gender", "")
+                sizing_cat = prod.get("sizing_category", "Adult")
+                if sizing_cat in ("Grade School", "Preschool", "Toddler"):
+                    group_display = "Kids' Shoes"
+                elif "women" in str(gender).lower():
                     group_display = "Women's Shoes"
                 else:
                     group_display = "Men's Shoes"

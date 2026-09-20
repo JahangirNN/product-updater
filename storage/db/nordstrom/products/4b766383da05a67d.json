@@ -9,7 +9,7 @@
   "source_sku": "SALOMON-7096630-5.5",
   "source_price": 120.0,
   "source_compare_at_price": null,
-  "current_price": 11515.0,
+  "current_price": 11519.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -2228,7 +2228,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/919d08ef-687a-4392-ac42-8afe3c586b3d.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -3821,16 +3821,16 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-19T17:27:41Z",
+  "last_verified_at": "2026-09-20T05:32:22Z",
   "created_at": "2026-09-17T18:51:45Z",
-  "updated_at": "2026-09-19T17:27:41Z",
+  "updated_at": "2026-09-20T05:32:22Z",
   "price_range_usd": {
     "min": 120.0,
     "max": 200.0
   },
   "price_range_inr": {
-    "min": 11515.0,
-    "max": 19191.0
+    "min": 11519.0,
+    "max": 19198.0
   },
   "status": "ACTIVE",
   "is_active": true,

@@ -429,7 +429,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/F0731007_01",
       "option_values": [
         {
@@ -634,7 +634,8 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-19T18:23:37Z",
+  "last_verified_at": "2026-09-20T04:23:38Z",
   "created_at": "2026-09-18T20:48:02Z",
-  "updated_at": "2026-09-19T18:23:37Z"
+  "updated_at": "2026-09-20T04:23:38Z",
+  "shopify_sync_pending": true
 }

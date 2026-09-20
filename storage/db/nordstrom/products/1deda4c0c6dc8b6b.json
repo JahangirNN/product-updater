@@ -9,12 +9,12 @@
   "source_sku": "HOKA-7260957-5",
   "source_price": 99.0,
   "source_compare_at_price": null,
-  "current_price": 9500.0,
+  "current_price": 9503.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Textile upper and lining/rubber sole",
   "specifications": {
     "Brand": "On",
@@ -2854,18 +2854,18 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-19T17:25:34Z",
+  "last_verified_at": "2026-09-20T05:28:04Z",
   "created_at": "2026-09-17T14:52:12Z",
-  "updated_at": "2026-09-19T17:25:34Z",
+  "updated_at": "2026-09-20T05:28:04Z",
   "price_range_usd": {
     "min": 99.0,
     "max": 165.0
   },
   "price_range_inr": {
-    "min": 9500.0,
-    "max": 15833.0
+    "min": 9503.0,
+    "max": 15838.0
   },
   "status": "ACTIVE",
-  "is_active": true,
+  "is_active": false,
   "shopify_sync_pending": true
 }

@@ -109,6 +109,7 @@ All engineering decisions are recorded and immutably numbered in [`docs/adr/`](.
 | **[0013](./docs/adr/0013-coach-brand-onboarding-and-sfcc-scene7-integration.md)** | Coach Brand Onboarding, SFCC Scene7 Integration & Multi-Color Variant Architecture | Accepted |
 | **[0014](./docs/adr/0014-two-tier-collection-fast-sweep-and-route-blocked-pdp-delta-engine.md)** | Two-Tier Collection Fast-Sweep & Route-Blocked PDP Delta Engine | Accepted |
 | **[0015](./docs/adr/0015-variant-stock-cascade-phantom-delta-elimination-and-cross-brand-integrity.md)** | Parent-Child Availability Cascade, Phantom Delta Elimination & Granular Variant State Harmonization | Accepted |
+| **[0016](./docs/adr/0016-jdsports-store-onboarding-and-multi-tier-footwear-sizing.md)** | JD Sports Store Onboarding, Multi-Tier Footwear Sizing Architecture & Cross-Sibling Swatch Ingestion | Accepted |
 
 ---
 
@@ -124,4 +125,7 @@ All engineering decisions are recorded and immutably numbered in [`docs/adr/`](.
 - `stores/nordstrom/LEARNINGS.md`: Living retailer knowledge base for Nordstrom (On shoes DOM, size conversion matrix, query filters, two-tier sweep).
 - `stores/michaelkors/LEARNINGS.md`: Living retailer knowledge base for Michael Kors (SFCC Demandware, geolocation pinning, multi-category taxonomy).
 - `stores/coach/LEARNINGS.md`: Living retailer knowledge base for Coach (SFCC Scene7, multi-color variants, sizing extraction, filename alignment).
+- `stores/footlocker/LEARNINGS.md`: Living retailer knowledge base for Foot Locker (Nike Vomero, hydrated SSR, width codes).
+- `stores/jdsports/LEARNINGS.md`: Living retailer knowledge base for JD Sports (Nike collections, Akamai WAF, multi-tier sizing taxonomy, JSON-LD ProductGroup).
+
 

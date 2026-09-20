@@ -43,7 +43,8 @@ product-updater/
 │       ├── 0012-michaelkors-store-onboarding-and-sfcc-demandware-integration.md
 │       ├── 0013-coach-brand-onboarding-and-sfcc-scene7-integration.md
 │       ├── 0014-two-tier-collection-fast-sweep-and-route-blocked-pdp-delta-engine.md
-│       └── 0015-variant-stock-cascade-phantom-delta-elimination-and-cross-brand-integrity.md
+│       ├── 0015-variant-stock-cascade-phantom-delta-elimination-and-cross-brand-integrity.md
+│       └── 0016-jdsports-store-onboarding-and-multi-tier-footwear-sizing.md
 │
 ├── frontend/                        # Mobile-First Catalog Data Viewer (React + Vite + Tailwind)
 │   ├── public/data/
@@ -88,7 +89,9 @@ product-updater/
 │       │   └── products/            # Individual JSON documents
 │       ├── coach/                   # Coach retailer partition (573 products)
 │       │   └── products/            # Individual JSON documents
-│       └── footlocker/              # Foot Locker retailer partition (95 products)
+│       ├── footlocker/              # Foot Locker retailer partition (95 products)
+│       │   └── products/            # Individual JSON documents
+│       └── jdsports/                # JD Sports retailer partition (~514 products)
 │           └── products/            # Individual JSON documents
 │
 ├── stores/                          # [SCREAMING ARCHITECTURE] Self-contained store modules
@@ -118,10 +121,15 @@ product-updater/
 │   │   ├── inflow.py                # Ingestion normalizer with multi-color binding & dimension extraction
 │   │   └── delta.py                 # Fast JSON-LD delta checker & variant price/stock synchronizer
 │   │
-│   └── footlocker/                  # Concrete Foot Locker implementation
-│       ├── LEARNINGS.md             # Living notes: Nike Vomero sizing matrix, SSR dehydrated state, width codes
-│       ├── inflow.py                # Ingestion normalizer with Nike US/UK/EU sizing & anti-truncation enforcement
-│       └── delta.py                 # Rate-limited SSR delta checker & variant inventory synchronizer
+│   ├── footlocker/                  # Concrete Foot Locker implementation
+│   │   ├── LEARNINGS.md             # Living notes: Nike Vomero sizing matrix, SSR dehydrated state, width codes
+│   │   ├── inflow.py                # Ingestion normalizer with Nike US/UK/EU sizing & anti-truncation enforcement
+│   │   └── delta.py                 # Rate-limited SSR delta checker & variant inventory synchronizer
+│   │
+│   └── jdsports/                    # Concrete JD Sports implementation
+│       ├── LEARNINGS.md             # Living notes: Nike collections, Akamai WAF, multi-tier sizing, JSON-LD
+│       ├── inflow.py                # Ingestion normalizer with multi-tier sizing classification & conversion
+│       └── delta.py                 # Pure delta checker & variant inventory synchronizer
 │
 ├── sync_catalog.py                  # Universal multi-store delta engine & systematic scheduler
 ├── test_delta_engine.py             # Automated unit & integration test suite for delta engine
