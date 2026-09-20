@@ -99,30 +99,52 @@ def parse_numeric_size(size_str: str) -> Optional[float]:
     return None
 
 
-def convert_us_to_uk(us_size: float, gender: str) -> str:
-    """Convert US shoe size to official Nike UK shoe size."""
+def convert_us_to_uk(us_size: float, gender: str, brand: str = "Nike") -> str:
+    """Convert US shoe size to brand-appropriate UK shoe size."""
     key = f"{us_size:g}"
-    if "women" in gender.lower():
-        if key in NIKE_WOMEN_US_TO_UK:
-            return NIKE_WOMEN_US_TO_UK[key]
-        return f"{max(0.0, us_size - 2.5):g}"
-    else:
-        if key in NIKE_MEN_US_TO_UK:
-            return NIKE_MEN_US_TO_UK[key]
+    b_lower = brand.lower()
+    if "adidas" in b_lower:
+        if "women" in gender.lower():
+            return f"{max(0.0, us_size - 1.5):g}"
+        return f"{max(0.0, us_size - 0.5):g}"
+    elif "asics" in b_lower:
+        if "women" in gender.lower():
+            return f"{max(0.0, us_size - 2.0):g}"
         return f"{max(0.0, us_size - 1.0):g}"
-
-
-def convert_us_to_eu(us_size: float, gender: str) -> str:
-    """Convert US shoe size to official Nike EU shoe size."""
-    key = f"{us_size:g}"
-    if "women" in gender.lower():
-        if key in NIKE_WOMEN_US_TO_EU:
-            return NIKE_WOMEN_US_TO_EU[key]
-        return f"{30.5 + (us_size * 1.25):.1f}"
     else:
-        if key in NIKE_MEN_US_TO_EU:
-            return NIKE_MEN_US_TO_EU[key]
-        return f"{32.5 + (us_size * 1.25):.1f}"
+        # Nike and standard footwear default
+        if "women" in gender.lower():
+            if key in NIKE_WOMEN_US_TO_UK:
+                return NIKE_WOMEN_US_TO_UK[key]
+            return f"{max(0.0, us_size - 2.5):g}"
+        else:
+            if key in NIKE_MEN_US_TO_UK:
+                return NIKE_MEN_US_TO_UK[key]
+            return f"{max(0.0, us_size - 1.0):g}"
+
+
+def convert_us_to_eu(us_size: float, gender: str, brand: str = "Nike") -> str:
+    """Convert US shoe size to brand-appropriate EU shoe size."""
+    key = f"{us_size:g}"
+    b_lower = brand.lower()
+    if "adidas" in b_lower:
+        if "women" in gender.lower():
+            return f"{34.0 + (us_size * 1.33):.1f}"
+        return f"{35.0 + (us_size * 1.33):.1f}"
+    elif "asics" in b_lower:
+        if "women" in gender.lower():
+            return f"{32.0 + (us_size * 1.25):.1f}"
+        return f"{33.0 + (us_size * 1.25):.1f}"
+    else:
+        # Nike and standard footwear default
+        if "women" in gender.lower():
+            if key in NIKE_WOMEN_US_TO_EU:
+                return NIKE_WOMEN_US_TO_EU[key]
+            return f"{30.5 + (us_size * 1.25):.1f}"
+        else:
+            if key in NIKE_MEN_US_TO_EU:
+                return NIKE_MEN_US_TO_EU[key]
+            return f"{32.5 + (us_size * 1.25):.1f}"
 
 
 def determine_gender(name: str, model_gender: Optional[List[str]] = None) -> str:
@@ -146,7 +168,8 @@ def generate_description_html(
     desc_html: str,
     gender: str,
     specs: Dict[str, Any],
-    sizes: List[Dict[str, Any]]
+    sizes: List[Dict[str, Any]],
+    brand: str = "Nike"
 ) -> str:
     """
     Generate rich HTML body with specs table and shoe size guide accordion (ADR 0006).
@@ -183,9 +206,9 @@ def generate_description_html(
 
     accordion_html = f"""
 <details class="size-guide-accordion" style="margin: 20px 0; padding: 12px; border: 1px solid #e0e0e0; border-radius: 6px;">
-  <summary style="font-weight: 600; cursor: pointer; font-size: 15px;">Nike Size Guide &amp; Conversions ({gender})</summary>
+  <summary style="font-weight: 600; cursor: pointer; font-size: 15px;">{brand} Size Guide &amp; Conversions ({gender})</summary>
   <div style="margin-top: 12px;">
-    <p style="font-size: 13px; color: #666; margin-bottom: 8px;">Official Nike shoe size conversion matrix (US / UK / EU):</p>
+    <p style="font-size: 13px; color: #666; margin-bottom: 8px;">Official {brand} shoe size conversion matrix (US / UK / EU):</p>
     <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
       <thead>
         <tr style="background-color: #f5f5f5;">
@@ -206,7 +229,7 @@ def generate_description_html(
 def parse_product_payload(
     raw_pdp_data: Dict[str, Any],
     forex_rate: Optional[float] = None,
-    group_name: Optional[str] = "Nike Vomero"
+    group_name: Optional[str] = None
 ) -> Optional[Dict[str, Any]]:
     """
     Pure functional parser transforming raw Foot Locker PDP payload into canonical product format.
@@ -221,13 +244,14 @@ def parse_product_payload(
     if not sku:
         return None
 
-    model_name = str(model.get("name") or style.get("name") or "Nike Vomero").strip()
+    brand = str(model.get("brand") or style.get("brand") or "Nike").strip()
+    model_name = str(model.get("name") or style.get("name") or "Shoes").strip()
     gender = determine_gender(model_name, model.get("genders"))
     color = str(style.get("color") or "").strip()
     width_raw = str(style.get("width") or "Width - D - Medium").strip()
 
-    # Title: Clean model name (model + gender)
-    title = model_name
+    # Title: Clean model name + color suffix for clear differentiation
+    title = f"{model_name} - {color}" if color and color.lower() != "standard" and color.lower() not in model_name.lower() else model_name
 
     # 1. Pricing Extraction & Whole-Rupee INR Conversion (ADR 0006)
     price_obj = style.get("price") or {}
@@ -248,8 +272,8 @@ def parse_product_payload(
         if numeric_sz is None:
             continue
         in_stock = bool(s_entry.get("active", False))
-        uk_sz = convert_us_to_uk(numeric_sz, gender)
-        eu_sz = convert_us_to_eu(numeric_sz, gender)
+        uk_sz = convert_us_to_uk(numeric_sz, gender, brand)
+        eu_sz = convert_us_to_eu(numeric_sz, gender, brand)
         valid_sizes.append({
             "us_size": numeric_sz,
             "us_str": f"{numeric_sz:g}",
@@ -327,10 +351,10 @@ def parse_product_payload(
     # 6. Specifications & Enrichment
     supplier_skus = style.get("vendorAttributes", {}).get("supplierSkus") or []
     mfg_sku = supplier_skus[0] if supplier_skus else sku
-    material = "Breathable mesh upper with durable synthetic overlays and rubber traction outsole"
+    material = "Premium upper with durable overlays and responsive traction outsole"
 
     specs = {
-        "Brand": "Nike",
+        "Brand": brand,
         "Model": model_name,
         "Gender": gender,
         "Color": color or "Standard",
@@ -343,7 +367,7 @@ def parse_product_payload(
     }
 
     raw_desc = model.get("description") or style.get("description") or ""
-    description_html = generate_description_html(title, raw_desc, gender, specs, deduped_sizes)
+    description_html = generate_description_html(title, raw_desc, gender, specs, deduped_sizes, brand)
 
     product_options = [
         {
@@ -370,7 +394,7 @@ def parse_product_payload(
         "source_url": canonical_url,
         "handle": handle,
         "title": title,
-        "vendor": "Nike",
+        "vendor": brand,
         "product_type": "Shoes",
         "source_sku": sku,
         "source_price": source_price_usd,
@@ -391,10 +415,10 @@ def parse_product_payload(
         "variants": variants,
         "product_options": product_options,
         "tags": [
-            "nike", "vomero", "footwear", "running-shoes",
+            brand.lower(), "footwear", "shoes",
             gender.lower(), f"sizes-{len(deduped_sizes)}"
         ],
-        "groups": [group_name or "Nike Vomero"],
+        "groups": [group_name or f"{brand} Shoes"],
         "last_verified_at": now_iso,
         "created_at": now_iso,
         "updated_at": now_iso
