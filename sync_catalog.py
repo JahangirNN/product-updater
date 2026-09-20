@@ -246,6 +246,8 @@ def poll_single_product(
                     "new_availability": delta_res.get("availability"),
                     "variant_stock_changed": delta_res.get("variant_stock_changed", False),
                     "changed_variants": delta_res.get("changed_variants", []),
+                    "variant_price_changed": delta_res.get("variant_price_changed", False),
+                    "changed_variant_prices": delta_res.get("changed_variant_prices", []),
                     "shopify_sync_pending": True
                 }
                 append_delta_event(event_entry)

@@ -134,6 +134,8 @@ def check_price_and_stock(
                     "stock_changed": old_availability != "out_of_stock",
                     "variant_stock_changed": variant_stock_changed,
                     "changed_variants": changed_variants,
+                    "variant_price_changed": False,
+                    "changed_variant_prices": [],
                     "variants_delta": [],
                     "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                     "elapsed_ms": elapsed_ms,
@@ -236,11 +238,27 @@ def check_price_and_stock(
                     clean_sz = f"{numeric_sz:g}"
                     is_sz_active = bool(s_entry.get('active', False))
                     var_sku = f"{sku}-{clean_sz}"
+
+                    # Extract size-specific price if available, fallback to current_source_price
+                    sz_price = current_source_price
+                    s_price_obj = s_entry.get('price') if isinstance(s_entry.get('price'), dict) else {}
+                    if s_price_obj:
+                        p_val = float(s_price_obj.get('salePrice') or s_price_obj.get('listPrice') or 0.0)
+                        if p_val > 0:
+                            sz_price = p_val
+                    elif s_entry.get('salePrice') or s_entry.get('price'):
+                        try:
+                            p_val = float(s_entry.get('salePrice') or s_entry.get('price') or 0.0)
+                            if p_val > 0:
+                                sz_price = p_val
+                        except (ValueError, TypeError):
+                            pass
+
                     variants_delta.append({
                         "sku": var_sku,
                         "size": clean_sz,
                         "available": is_sz_active,
-                        "price_usd": current_source_price
+                        "price_usd": sz_price
                     })
 
             # Check if any variant is in stock
@@ -255,9 +273,11 @@ def check_price_and_stock(
             price_changed = abs(current_source_price - old_source_price) > 0.01 if old_source_price > 0 else False
             stock_changed = (current_availability != old_availability)
 
-            # Track variant-level stock shifts (ADR 0015)
+            # Track variant-level stock shifts (ADR 0015) and price shifts (R1)
             variant_stock_changed = False
             changed_variants = []
+            variant_price_changed = False
+            changed_variant_prices = []
             prod_variants = product.get("variants") or []
             if prod_variants and variants_delta:
                 v_delta_map = {v["sku"]: v for v in variants_delta if v.get("sku")}
@@ -283,6 +303,16 @@ def check_price_and_stock(
                                 "old_in_stock": old_v_stock,
                                 "new_in_stock": new_v_stock
                             })
+                        old_v_price = float(var.get("source_price") or 0.0)
+                        new_v_price = float(matched_v.get("price_usd") or 0.0)
+                        if new_v_price > 0 and old_v_price > 0 and abs(new_v_price - old_v_price) > 0.01:
+                            variant_price_changed = True
+                            changed_variant_prices.append({
+                                "sku": v_sku,
+                                "size": var.get("size") or var.get("title") or "",
+                                "old_source_price": old_v_price,
+                                "new_source_price": new_v_price
+                            })
 
             return {
                 "status": "success",
@@ -299,6 +329,8 @@ def check_price_and_stock(
                 "stock_changed": stock_changed,
                 "variant_stock_changed": variant_stock_changed,
                 "changed_variants": changed_variants,
+                "variant_price_changed": variant_price_changed,
+                "changed_variant_prices": changed_variant_prices,
                 "variants_delta": variants_delta,
                 "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 "elapsed_ms": elapsed_ms
@@ -317,6 +349,11 @@ def check_price_and_stock(
                     "is_active": old_availability == "in_stock",
                     "price_changed": False,
                     "stock_changed": False,
+                    "variant_stock_changed": False,
+                    "changed_variants": [],
+                    "variant_price_changed": False,
+                    "changed_variant_prices": [],
+                    "variants_delta": [],
                     "elapsed_ms": elapsed_ms,
                     "error": str(err)
                 }
@@ -333,6 +370,11 @@ def check_price_and_stock(
         "is_active": old_availability == "in_stock",
         "price_changed": False,
         "stock_changed": False,
+        "variant_stock_changed": False,
+        "changed_variants": [],
+        "variant_price_changed": False,
+        "changed_variant_prices": [],
+        "variants_delta": [],
         "elapsed_ms": elapsed_ms,
         "error": "Rate limit retries exhausted (HTTP 429)"
     }
@@ -362,8 +404,9 @@ def apply_delta_to_product(
     price_changed = bool(delta_result.get("price_changed", False))
     stock_changed = bool(delta_result.get("stock_changed", False))
     variant_stock_changed = bool(delta_result.get("variant_stock_changed", False))
+    variant_price_changed = bool(delta_result.get("variant_price_changed", False))
 
-    if price_changed or stock_changed or variant_stock_changed:
+    if price_changed or stock_changed or variant_stock_changed or variant_price_changed:
         has_changed = True
 
     # 1. Price updates
@@ -379,6 +422,10 @@ def apply_delta_to_product(
 
     # 2. Availability & Variants
     variants_delta = delta_result.get("variants_delta", [])
+    has_explicit_variant_pricing = any(
+        float(v.get("price_usd") or 0.0) > 0 for v in variants_delta if isinstance(v, dict)
+    )
+
     if variants_delta and product.get("variants"):
         v_map = {v["sku"]: v for v in variants_delta if v.get("sku")}
         size_map = {str(v.get("size")).strip(): v for v in variants_delta if v.get("size")}
@@ -402,9 +449,35 @@ def apply_delta_to_product(
                 if "is_available" in var and var.get("is_available") != new_v_stock:
                     var["is_available"] = new_v_stock
                     has_changed = True
-                if new_source_price > 0:
+
+                new_v_price = float(matched_v.get("price_usd") or 0.0)
+                if new_v_price > 0:
+                    old_v_price = float(var.get("source_price") or 0.0)
+                    if abs(new_v_price - old_v_price) > 0.01:
+                        var["source_price"] = new_v_price
+                        var["price"] = f"{round(new_v_price * forex_rate):.2f}"
+                        var["price_current"] = float(round(new_v_price * forex_rate))
+                        has_changed = True
+                    else:
+                        if "price_current" not in var:
+                            var["price_current"] = float(round(new_v_price * forex_rate))
+                elif price_changed and new_source_price > 0 and not has_explicit_variant_pricing:
+                    old_v_price = float(var.get("source_price") or 0.0)
+                    if abs(new_source_price - old_v_price) > 0.01:
+                        var["source_price"] = new_source_price
+                        var["price"] = f"{round(new_source_price * forex_rate):.2f}"
+                        var["price_current"] = float(round(new_source_price * forex_rate))
+                        has_changed = True
+
+        # Uniform fallback sync when parent price changed and variants omit individual prices
+        if price_changed and new_source_price > 0 and not has_explicit_variant_pricing:
+            for var in product.get("variants", []):
+                old_v_price = float(var.get("source_price") or 0.0)
+                if abs(new_source_price - old_v_price) > 0.01:
                     var["source_price"] = new_source_price
-                    var["price"] = f"{float(round(new_source_price * forex_rate)):.2f}"
+                    var["price"] = f"{round(new_source_price * forex_rate):.2f}"
+                    var["price_current"] = float(round(new_source_price * forex_rate))
+                    has_changed = True
 
         # ADR 0015: Derive parent availability strictly from child variant states
         has_any_variant_stock = any(v.get("in_stock", False) for v in product.get("variants", []))
@@ -415,6 +488,15 @@ def apply_delta_to_product(
         product["is_active"] = (expected_avail == "in_stock")
 
     elif not variants_delta and product.get("variants"):
+        if price_changed and new_source_price > 0:
+            for var in product.get("variants", []):
+                old_v_price = float(var.get("source_price") or 0.0)
+                if abs(new_source_price - old_v_price) > 0.01:
+                    var["source_price"] = new_source_price
+                    var["price"] = f"{round(new_source_price * forex_rate):.2f}"
+                    var["price_current"] = float(round(new_source_price * forex_rate))
+                    has_changed = True
+
         # ADR 0015 Depletion / Restock Cascade
         target_avail = delta_result.get("availability") or product.get("availability")
         if target_avail in ("out_of_stock", "delisted"):

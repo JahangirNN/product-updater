@@ -16,6 +16,41 @@ from storage.rate_limiter import acquire_permit, trip_circuit_breaker, parse_ret
 DEFAULT_HEADERS = get_browser_headers({"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"})
 
 
+def matches_coach_size(s_key: Any, v_title: str, v_sku: str = "") -> bool:
+    """
+    Match a size string from Coach size buttons (e.g. '7', '7.5', '7D', '8')
+    against variant title and SKU with robust support for width suffixes (e.g. 'D', 'B'),
+    compound titles like 'US 7D / UK 7D', 'CFZ93 BLK  8   D-7D', etc.
+    """
+    s_clean = str(s_key or "").strip().upper()
+    if not s_clean:
+        return False
+    t_clean = str(v_title or "").strip().upper()
+    k_clean = str(v_sku or "").strip().upper()
+    if t_clean == s_clean or k_clean == s_clean:
+        return True
+
+    m = re.match(r'^([\d\.]+)([A-Z]*)$', s_clean)
+    if m:
+        s_num, s_width = m.group(1), m.group(2)
+    else:
+        s_num, s_width = s_clean, ""
+
+    num_pattern = re.escape(s_num) + r'[A-Z]?(?![.\d])'
+    # Check title: e.g. 'US 7D / UK 7D', 'US 7 / UK 5', '7D', '7'
+    if re.search(r'(?<![.\d])US\s+' + num_pattern, t_clean):
+        return True
+    if re.search(r'^' + num_pattern + r'$', t_clean):
+        return True
+    if re.search(r'(?<![.\d])' + num_pattern + r'\b', t_clean):
+        return True
+
+    # Check SKU: e.g. 'CFZ93 BLK  8   D-7D', 'CFX45-7', 'CFX45-7D'
+    if re.search(r'[-_\s]' + num_pattern + r'$', k_clean):
+        return True
+    return False
+
+
 def check_price_and_stock(
     product: Dict[str, Any],
     client: Optional[httpx.Client] = None,
@@ -104,6 +139,11 @@ def check_price_and_stock(
                     "is_active": False,
                     "price_changed": False,
                     "stock_changed": old_availability != "out_of_stock",
+                    "variant_stock_changed": False,
+                    "changed_variants": [],
+                    "variant_price_changed": False,
+                    "changed_variant_prices": [],
+                    "variants_delta": [],
                     "elapsed_ms": elapsed_ms,
                     "message": "Product delisted (HTTP 404)"
                 }
@@ -118,6 +158,11 @@ def check_price_and_stock(
             current_source_price = parsed_info.get("price") or old_source_price
             variants_delta = parsed_info.get("variants_delta", [])
             if variants_delta:
+                # Ensure granular price_usd is populated across all variants_delta
+                if current_source_price > 0:
+                    for vd in variants_delta:
+                        if isinstance(vd, dict) and float(vd.get("price_usd") or 0.0) <= 0:
+                            vd["price_usd"] = current_source_price
                 any_var_avail = any(v.get("available") for v in variants_delta if isinstance(v, dict))
                 current_availability = "in_stock" if any_var_avail else "out_of_stock"
             else:
@@ -127,34 +172,63 @@ def check_price_and_stock(
             price_changed = abs(current_source_price - old_source_price) > 0.01 if old_source_price > 0 else False
             stock_changed = current_availability != old_availability
 
-            # Variant delta tracking & interface contract compliance
+            # Variant delta tracking & interface contract compliance (R1)
             changed_variants = []
             variant_stock_changed = False
+            variant_price_changed = False
+            changed_variant_prices = []
             if variants_delta and product.get("variants"):
-                sku_map = {re.sub(r'\s+', ' ', v["sku"]).strip().upper(): v for v in variants_delta if v.get("sku")}
-                size_map = {str(v["size"]).strip(): v for v in variants_delta if v.get("size")}
+                sku_map = {re.sub(r'\s+', ' ', v["sku"]).strip().upper(): v for v in variants_delta if isinstance(v, dict) and v.get("sku")}
+                size_map = {str(v["size"]).strip(): v for v in variants_delta if isinstance(v, dict) and v.get("size")}
                 for var in product["variants"]:
+                    if not isinstance(var, dict):
+                        continue
                     v_sku = var.get("sku", "")
                     clean_var_sku = re.sub(r'\s+', ' ', v_sku).strip().upper() if v_sku else ""
                     old_v_stock = bool(var.get("in_stock", False))
+                    old_v_price = float(var.get("source_price") or 0.0)
                     new_v_stock = old_v_stock
+                    new_v_price = old_v_price
+                    matched = False
+
                     if clean_var_sku in sku_map:
-                        new_v_stock = bool(sku_map[clean_var_sku].get("available", False))
+                        v_info = sku_map[clean_var_sku]
+                        new_v_stock = bool(v_info.get("available", False))
+                        cand_p = float(v_info.get("price_usd") or 0.0)
+                        if cand_p > 0:
+                            new_v_price = cand_p
+                        matched = True
                     else:
                         v_title = var.get("title", "")
                         for s_key, s_info in size_map.items():
-                            if f"US {s_key} " in v_title or v_title == s_key or v_sku.endswith(f"-{s_key}") or v_sku.endswith(f" {s_key} D"):
+                            if matches_coach_size(s_key, v_title, v_sku):
                                 new_v_stock = bool(s_info.get("available", False))
+                                cand_p = float(s_info.get("price_usd") or 0.0)
+                                if cand_p > 0:
+                                    new_v_price = cand_p
+                                matched = True
                                 break
-                    if new_v_stock != old_v_stock:
-                        variant_stock_changed = True
-                        changed_variants.append({
-                            "sku": v_sku,
-                            "old_in_stock": old_v_stock,
-                            "new_in_stock": new_v_stock
-                        })
+
+                    if matched:
+                        if new_v_stock != old_v_stock:
+                            variant_stock_changed = True
+                            changed_variants.append({
+                                "sku": v_sku,
+                                "old_in_stock": old_v_stock,
+                                "new_in_stock": new_v_stock
+                            })
+                        if new_v_price > 0 and old_v_price > 0 and abs(new_v_price - old_v_price) > 0.01:
+                            variant_price_changed = True
+                            changed_variant_prices.append({
+                                "sku": v_sku,
+                                "size": var.get("size") or var.get("title") or "",
+                                "old_source_price": old_v_price,
+                                "new_source_price": new_v_price
+                            })
             elif not variants_delta and product.get("variants") and current_availability in ("out_of_stock", "delisted"):
                 for var in product["variants"]:
+                    if not isinstance(var, dict):
+                        continue
                     old_v_stock = bool(var.get("in_stock", False))
                     if old_v_stock:
                         variant_stock_changed = True
@@ -179,6 +253,8 @@ def check_price_and_stock(
                 "stock_changed": stock_changed,
                 "variant_stock_changed": variant_stock_changed,
                 "changed_variants": changed_variants,
+                "variant_price_changed": variant_price_changed,
+                "changed_variant_prices": changed_variant_prices,
                 "variants_delta": variants_delta,
                 "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 "elapsed_ms": elapsed_ms
@@ -197,6 +273,11 @@ def check_price_and_stock(
                     "is_active": old_availability == "in_stock",
                     "price_changed": False,
                     "stock_changed": False,
+                    "variant_stock_changed": False,
+                    "changed_variants": [],
+                    "variant_price_changed": False,
+                    "changed_variant_prices": [],
+                    "variants_delta": [],
                     "elapsed_ms": elapsed_ms,
                     "error": str(err)
                 }
@@ -213,6 +294,11 @@ def check_price_and_stock(
         "is_active": old_availability == "in_stock",
         "price_changed": False,
         "stock_changed": False,
+        "variant_stock_changed": False,
+        "changed_variants": [],
+        "variant_price_changed": False,
+        "changed_variant_prices": [],
+        "variants_delta": [],
         "elapsed_ms": elapsed_ms,
         "error": "Rate limit retries exhausted (HTTP 429)"
     }
@@ -288,18 +374,49 @@ def extract_coach_pdp_info(html_text: str, target_sku: Optional[str] = None) -> 
 
     # 2. Parse Shoe Size Buttons if present
     # <button class="chakra-button variation-option variation-size css-1bhu9le" data-qa="cm_link_size_swatch_enbld">7</button>
-    size_matches = re.findall(r'<button[^>]*class="[^"]*variation-size[^"]*"[^>]*data-qa="([^"]+)"[^>]*>([^<]+)</button>', html_text)
-    if size_matches:
+    size_btn_pattern = re.compile(
+        r'<button([^>]*class="[^"]*variation-size[^"]*"[^>]*)>([\s\S]*?)</button>',
+        re.IGNORECASE
+    )
+    btn_matches = list(size_btn_pattern.finditer(html_text))
+    if btn_matches:
         any_in_stock = False
-        for data_qa, size_text in size_matches:
+        pdp_price = float(info.get("price") or 0.0)
+        for bm in btn_matches:
+            btn_attrs = bm.group(1)
+            size_text = re.sub(r'<[^>]+>', '', bm.group(2)).strip()
             s_clean = size_text.strip()
+            data_qa_m = re.search(r'data-qa="([^"]+)"', btn_attrs, re.IGNORECASE)
+            data_qa = data_qa_m.group(1) if data_qa_m else ""
             in_stock = "enbld" in data_qa.lower()
             if in_stock:
                 any_in_stock = True
-            info["variants_delta"].append({
+
+            # Extract button price if present (data-price or inner text), else fallback to PDP price
+            btn_price = 0.0
+            price_attr_m = re.search(r'data-price="([\d\.]+)"', btn_attrs, re.IGNORECASE)
+            if price_attr_m:
+                try:
+                    btn_price = float(price_attr_m.group(1))
+                except ValueError:
+                    btn_price = 0.0
+            if btn_price <= 0:
+                inner_price_m = re.search(r'\$\s*([\d\.]+)', bm.group(2))
+                if inner_price_m:
+                    try:
+                        btn_price = float(inner_price_m.group(1))
+                    except ValueError:
+                        btn_price = 0.0
+            if btn_price <= 0 and pdp_price > 0:
+                btn_price = pdp_price
+
+            v_entry: Dict[str, Any] = {
                 "size": s_clean,
                 "available": in_stock
-            })
+            }
+            if btn_price > 0:
+                v_entry["price_usd"] = btn_price
+            info["variants_delta"].append(v_entry)
         # For footwear, overall availability is true if ANY size is enabled
         info["availability"] = "in_stock" if any_in_stock else "out_of_stock"
 
@@ -336,17 +453,22 @@ def apply_delta_to_product(
     prev_availability = product.get("availability")
     price_changed = bool(delta_result.get("price_changed", False))
     stock_changed = bool(delta_result.get("stock_changed", False))
-    has_changed = price_changed or stock_changed
+    variant_stock_changed = bool(delta_result.get("variant_stock_changed", False))
+    variant_price_changed = bool(delta_result.get("variant_price_changed", False))
+    has_changed = price_changed or stock_changed or variant_stock_changed or variant_price_changed
 
     # Apply price changes
-    new_source_price = delta_result.get("current_source_price", product.get("source_price", 0.0))
+    new_source_price = float(delta_result.get("current_source_price", product.get("source_price", 0.0)) or 0.0)
     if price_changed and new_source_price > 0:
         product["source_price"] = new_source_price
         product["current_price"] = float(round(new_source_price * forex_rate))
 
     new_compare_price = delta_result.get("current_compare_price")
     if new_compare_price is not None:
-        product["compare_at_price"] = float(round(new_compare_price * forex_rate))
+        try:
+            product["compare_at_price"] = float(round(float(new_compare_price) * forex_rate))
+        except (ValueError, TypeError):
+            pass
 
     # Apply availability changes
     if stock_changed or delta_result.get("availability") in ("out_of_stock", "delisted", "in_stock"):
@@ -367,42 +489,72 @@ def apply_delta_to_product(
 
     # Update variant states if available
     variants_delta = delta_result.get("variants_delta", [])
+    variant_modified = False
+
+    has_explicit_variant_pricing = any(
+        float(v.get("price_usd") or 0.0) > 0 for v in variants_delta if isinstance(v, dict)
+    )
+
     if variants_delta and product.get("variants"):
         sku_map = {re.sub(r'\s+', ' ', v["sku"]).strip().upper(): v for v in variants_delta if isinstance(v, dict) and v.get("sku")}
         size_map = {str(v["size"]).strip(): v for v in variants_delta if isinstance(v, dict) and v.get("size")}
-        
-        variant_modified = False
+
         for var in product["variants"]:
             if not isinstance(var, dict):
                 continue
             v_sku = var.get("sku", "")
             clean_var_sku = re.sub(r'\s+', ' ', v_sku).strip().upper() if v_sku else ""
-            
+
+            matched_v = None
             # 1. Match by SKU (Color Variants or Sized SKUs)
             if clean_var_sku in sku_map:
-                v_info = sku_map[clean_var_sku]
-                new_stock = bool(v_info.get("available", False))
+                matched_v = sku_map[clean_var_sku]
+            else:
+                # 2. Match by Size (Footwear)
+                v_title = var.get("title", "")
+                for s_key, s_info in size_map.items():
+                    if matches_coach_size(s_key, v_title, v_sku):
+                        matched_v = s_info
+                        break
+
+            if matched_v:
+                new_stock = bool(matched_v.get("available", False))
                 if var.get("in_stock") != new_stock:
                     var["in_stock"] = new_stock
                     variant_modified = True
+                if "is_available" in var and var.get("is_available") != new_stock:
+                    var["is_available"] = new_stock
+                    variant_modified = True
 
-                new_v_price = float(v_info.get("price_usd") or 0.0)
+                new_v_price = float(matched_v.get("price_usd") or 0.0)
                 if new_v_price > 0:
                     old_v_price = float(var.get("source_price") or 0.0)
                     if abs(new_v_price - old_v_price) > 0.01:
                         var["source_price"] = new_v_price
                         var["price"] = f"{round(new_v_price * forex_rate):.2f}"
+                        var["price_current"] = float(round(new_v_price * forex_rate))
                         variant_modified = True
-            else:
-                # 2. Match by Size (Footwear)
-                v_title = var.get("title", "")
-                for s_key, s_info in size_map.items():
-                    if f"US {s_key} " in v_title or v_title == s_key or v_sku.endswith(f"-{s_key}") or v_sku.endswith(f" {s_key} D"):
-                        new_stock = bool(s_info.get("available", False))
-                        if var.get("in_stock") != new_stock:
-                            var["in_stock"] = new_stock
-                            variant_modified = True
-                        break
+                    else:
+                        if "price_current" not in var:
+                            var["price_current"] = float(round(new_v_price * forex_rate))
+                elif price_changed and new_source_price > 0 and not has_explicit_variant_pricing:
+                    old_v_price = float(var.get("source_price") or 0.0)
+                    if abs(new_source_price - old_v_price) > 0.01:
+                        var["source_price"] = new_source_price
+                        var["price"] = f"{round(new_source_price * forex_rate):.2f}"
+                        var["price_current"] = float(round(new_source_price * forex_rate))
+                        variant_modified = True
+
+        # Fallback: if top-level price changed and child variants lack explicit individual prices, uniform sync
+        if price_changed and new_source_price > 0 and not has_explicit_variant_pricing:
+            for var in product["variants"]:
+                if isinstance(var, dict):
+                    old_v_price = float(var.get("source_price") or 0.0)
+                    if abs(new_source_price - old_v_price) > 0.01:
+                        var["source_price"] = new_source_price
+                        var["price"] = f"{round(new_source_price * forex_rate):.2f}"
+                        var["price_current"] = float(round(new_source_price * forex_rate))
+                        variant_modified = True
 
         if variant_modified:
             has_changed = True
@@ -416,6 +568,16 @@ def apply_delta_to_product(
             has_changed = True
 
     elif not variants_delta and product.get("variants"):
+        if price_changed and new_source_price > 0:
+            for var in product["variants"]:
+                if isinstance(var, dict):
+                    old_v_price = float(var.get("source_price") or 0.0)
+                    if abs(new_source_price - old_v_price) > 0.01:
+                        var["source_price"] = new_source_price
+                        var["price"] = f"{round(new_source_price * forex_rate):.2f}"
+                        var["price_current"] = float(round(new_source_price * forex_rate))
+                        has_changed = True
+
         if product.get("availability") in ("out_of_stock", "delisted"):
             # Availability Cascade:
             # When top-level availability flips to "out_of_stock" or delisted, cascade in_stock = False to all child variants when variants_delta is empty.
