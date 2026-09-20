@@ -30,8 +30,9 @@ from sync_catalog import (
 from stores.jwpei.delta import check_price_and_stock as jwpei_check, apply_delta_to_product as jwpei_apply
 from stores._template.delta import check_price_and_stock as template_check, apply_delta_to_product as template_apply
 from stores.footlocker.delta import check_price_and_stock as fl_check, apply_delta_to_product as fl_apply
-from stores.nordstrom.delta import apply_delta_to_product as nordstrom_apply
-from stores.coach.delta import apply_delta_to_product as coach_apply
+from stores.nordstrom.delta import check_price_and_stock as nordstrom_check, apply_delta_to_product as nordstrom_apply
+from stores.coach.delta import check_price_and_stock as coach_check, apply_delta_to_product as coach_apply, matches_coach_size
+from stores.michaelkors.delta import check_price_and_stock as mk_check, apply_delta_to_product as mk_apply
 from stores.jdsports.delta import check_price_and_stock as jdsports_check, apply_delta_to_product as jdsports_apply
 from storage.db import append_delta_event, append_delta_log, read_delta_events
 from storage.rate_limiter import (
@@ -912,6 +913,215 @@ def test_jdsports_multitier_delta_and_depletion_cascade():
     print("  ✅ PASS: JD Sports multi-tier variant inventory shifts mutate cleanly, whole-rupee math is enforced, 404 delistings cascade depletion, and rate limits maintain immutability.")
 
 
+def test_cross_store_granular_variant_price_and_stock_invariants():
+    print("\n[TEST 14] Verifying Cross-Store Granular Variant Price, Anti-Flattening & Fallback Invariants...")
+    forex_rate = 95.989567
+
+    stores_to_test = [
+        ("coach", coach_apply),
+        ("jdsports", jdsports_apply),
+        ("footlocker", fl_apply),
+        ("jwpei", jwpei_apply),
+        ("michaelkors", mk_apply),
+        ("nordstrom", nordstrom_apply),
+        ("_template", template_apply)
+    ]
+
+    for store_name, apply_fn in stores_to_test:
+        # 1. Anti-Flattening & Granular Mutation Verification
+        prod = {
+            "id": f"{store_name}_prod_01",
+            "handle": f"{store_name}-test-product",
+            "title": f"{store_name.title()} Test Product",
+            "source_store": store_name,
+            "source_price": 100.0,
+            "current_price": float(round(100.0 * forex_rate)),
+            "availability": "in_stock",
+            "is_active": True,
+            "last_verified_at": "2026-09-01T00:00:00Z",
+            "variants": [
+                {
+                    "sku": f"{store_name.upper()}-V1-8",
+                    "size": "8",
+                    "title": "US 8",
+                    "in_stock": True,
+                    "source_price": 100.0,
+                    "price": f"{round(100.0 * forex_rate):.2f}",
+                    "price_current": float(round(100.0 * forex_rate))
+                },
+                {
+                    "sku": f"{store_name.upper()}-V2-9",
+                    "size": "9",
+                    "title": "US 9",
+                    "in_stock": True,
+                    "source_price": 100.0,
+                    "price": f"{round(100.0 * forex_rate):.2f}",
+                    "price_current": float(round(100.0 * forex_rate))
+                }
+            ]
+        }
+
+        # Size 8 drops to $80.0, Size 9 remains at $100.0. Parent remains $100.0.
+        delta_variant_only = {
+            "status": "success",
+            "handle": prod["handle"],
+            "current_source_price": 100.0,
+            "old_source_price": 100.0,
+            "price_changed": False,
+            "stock_changed": False,
+            "variant_stock_changed": False,
+            "variant_price_changed": True,
+            "changed_variant_prices": [
+                {
+                    "sku": f"{store_name.upper()}-V1-8",
+                    "size": "8",
+                    "old_source_price": 100.0,
+                    "new_source_price": 80.0
+                }
+            ],
+            "availability": "in_stock",
+            "variants_delta": [
+                {"sku": f"{store_name.upper()}-V1-8", "size": "8", "available": True, "price_usd": 80.0},
+                {"sku": f"{store_name.upper()}-V2-9", "size": "9", "available": True, "price_usd": 100.0}
+            ]
+        }
+
+        updated, has_changed = apply_fn(copy.deepcopy(prod), delta_variant_only, forex_rate)
+        assert has_changed is True, f"[{store_name}] Variant-only price shift must set has_changed = True"
+        if store_name == "nordstrom":
+            assert updated["source_price"] == 80.0, f"[{store_name}] Parent source_price should synchronize to min variant price 80.0"
+            assert updated.get("price_range_usd") == {"min": 80.0, "max": 100.0}, f"[{store_name}] price_range_usd mismatch"
+        else:
+            assert updated["source_price"] == 100.0, f"[{store_name}] Parent source_price must remain 100.0"
+
+        v1 = [v for v in updated["variants"] if "V1-8" in v["sku"] or v.get("size") == "8"][0]
+        v2 = [v for v in updated["variants"] if "V2-9" in v["sku"] or v.get("size") == "9"][0]
+
+        # Check Variant 1: Mutated to 80.0
+        assert v1["source_price"] == 80.0, f"[{store_name}] Variant 1 source_price should be 80.0, got {v1.get('source_price')}"
+        expected_v1_inr = float(round(80.0 * forex_rate))
+        assert v1["price_current"] == expected_v1_inr, f"[{store_name}] Variant 1 price_current mismatch: {v1.get('price_current')} vs {expected_v1_inr}"
+        assert v1["price"] == f"{expected_v1_inr:.2f}", f"[{store_name}] Variant 1 price string mismatch: {v1.get('price')} vs {expected_v1_inr:.2f}"
+
+        # Check Variant 2: Unchanged at 100.0 (Anti-flattening invariant)
+        assert v2["source_price"] == 100.0, f"[{store_name}] Variant 2 source_price flattened/corrupted: {v2.get('source_price')}"
+        expected_v2_inr = float(round(100.0 * forex_rate))
+        assert v2["price_current"] == expected_v2_inr, f"[{store_name}] Variant 2 price_current corrupted: {v2.get('price_current')}"
+
+        # 2. Uniform Fallback Synchronization Verification
+        # When parent source_price shifts to $150.0 with no explicit per-variant delta
+        delta_parent_uniform = {
+            "status": "success",
+            "handle": prod["handle"],
+            "current_source_price": 150.0,
+            "old_source_price": 100.0,
+            "price_changed": True,
+            "stock_changed": False,
+            "availability": "in_stock",
+            "variants_delta": []
+        }
+
+        updated_uniform, has_changed_uniform = apply_fn(copy.deepcopy(prod), delta_parent_uniform, forex_rate)
+        assert has_changed_uniform is True, f"[{store_name}] Parent price shift must return has_changed = True"
+        assert updated_uniform["source_price"] == 150.0
+        expected_parent_inr = float(round(150.0 * forex_rate))
+        assert updated_uniform["current_price"] == expected_parent_inr
+
+        for v in updated_uniform["variants"]:
+            assert v["source_price"] == 150.0, f"[{store_name}] Uniform sync failed to update variant source_price to 150.0"
+            assert v["price_current"] == expected_parent_inr, f"[{store_name}] Uniform sync failed for price_current"
+            assert v["price"] == f"{expected_parent_inr:.2f}", f"[{store_name}] Uniform sync failed for price string"
+
+    print("  ✅ PASS: All 7 store delta modules preserve granular variant price anti-flattening, tri-field integrity, and uniform fallback sync.")
+
+
+def test_adversarial_variant_price_divergence_and_shopify_events():
+    print("\n[TEST 15] Verifying Adversarial Variant Matching, Coach Footwear Tokens & Shopify Event Dispatch...")
+    forex_rate = 95.989567
+
+    # 1. Coach Footwear Size Matching Adversarial Tokens
+    assert matches_coach_size("7", "US 7 / UK 5", "CFX45-7") is True
+    assert matches_coach_size("7D", "US 7D / UK 7D", "CFZ93 BLK  8   D-7D") is True
+    assert matches_coach_size("7", "7D", "CFX45-7D") is True
+    assert matches_coach_size("7", "US 7.5 / UK 5.5", "CFX45-7.5") is False
+    assert matches_coach_size("8", "US 8 / UK 6", "CFX45-8") is True
+    assert matches_coach_size("8.5", "US 8 / UK 6", "CFX45-8") is False
+
+    # 2. Dispatcher Integration & Shopify Delta Event Enqueue Contract
+    # Test that poll_single_product records variant_price_changed and changed_variant_prices
+    prod_dispatch_stub = {
+        "id": "172567dc87d36e1b",
+        "handle": "big-kids-nike-air-force-1-low-casual-shoes-white-pink-rise-ct3839_124",
+        "source_store": "jdsports"
+    }
+
+    # Mock dynamic dispatcher store module returning variant price divergence
+    class MockVariantStoreModule:
+        @staticmethod
+        def check_price_and_stock(product, client=None, store_name="jdsports", rate_limiter=None):
+            return {
+                "status": "success",
+                "handle": product.get("handle"),
+                "current_source_price": 90.0,
+                "old_source_price": 90.0,
+                "availability": "in_stock",
+                "old_availability": "in_stock",
+                "price_changed": False,
+                "stock_changed": False,
+                "variant_stock_changed": False,
+                "changed_variants": [],
+                "variant_price_changed": True,
+                "changed_variant_prices": [
+                    {
+                        "sku": "CT3839_124-3.5Y",
+                        "size": "3.5Y",
+                        "old_source_price": 90.0,
+                        "new_source_price": 75.0
+                    }
+                ],
+                "variants_delta": [
+                    {"sku": "CT3839_124-3.5Y", "size": "3.5Y", "available": True, "price_usd": 75.0}
+                ],
+                "elapsed_ms": 12.0
+            }
+
+        @staticmethod
+        def apply_delta_to_product(product, delta_result, forex_rate):
+            return jdsports_apply(product, delta_result, forex_rate)
+
+    mock_client = httpx.Client()
+    # Execute poll_single_product in dry_run=False mode to test event persistence
+    res = poll_single_product(
+        product_stub=prod_dispatch_stub,
+        store_mod=MockVariantStoreModule,
+        client=mock_client,
+        forex_rate=forex_rate,
+        delay_seconds=0.0,
+        dry_run=False,
+        store_name="jdsports"
+    )
+    mock_client.close()
+
+    assert res["status"] == "success"
+    assert res["has_changed"] is True
+    assert res["variant_price_changed"] is True
+    assert len(res["changed_variant_prices"]) == 1
+    assert res["changed_variant_prices"][0]["sku"] == "CT3839_124-3.5Y"
+    assert res["changed_variant_prices"][0]["new_source_price"] == 75.0
+
+    # Read the emitted event from delta events queue
+    events = read_delta_events()
+    matching_events = [e for e in events if e.get("product_id") == "172567dc87d36e1b"]
+    assert len(matching_events) >= 1, "Shopify delta event must be enqueued on variant price change"
+    latest_evt = matching_events[-1]
+    assert latest_evt["variant_price_changed"] is True, "Shopify event must record variant_price_changed=True"
+    assert len(latest_evt["changed_variant_prices"]) == 1, "Shopify event must capture changed_variant_prices list"
+    assert latest_evt["changed_variant_prices"][0]["new_source_price"] == 75.0
+    assert latest_evt["shopify_sync_pending"] is True
+
+    print("  ✅ PASS: Coach footwear size matching regex and Shopify delta event queue for variant pricing verified.")
+
+
 def run_all_tests():
     print("=" * 72)
     print("DELTA ENGINE INTEGRATION & UNIT TEST SUITE (MULTI-STORE EDITION)")
@@ -930,6 +1140,8 @@ def run_all_tests():
     test_nordstrom_multicolorway_delta_and_price_range_sync()
     test_coach_multivariant_delta_and_scene7_integrity()
     test_jdsports_multitier_delta_and_depletion_cascade()
+    test_cross_store_granular_variant_price_and_stock_invariants()
+    test_adversarial_variant_price_divergence_and_shopify_events()
 
     print("\n" + "=" * 72)
     print("ALL TESTS PASSED WITH 100% SUCCESS")
@@ -938,3 +1150,4 @@ def run_all_tests():
 
 if __name__ == "__main__":
     run_all_tests()
+
