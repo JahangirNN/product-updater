@@ -16,8 +16,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -44,13 +44,13 @@
       "id": null,
       "sku": "CT3839_124-3.5",
       "title": "US 3.5Y / UK 3 - White/Pink Rise",
-      "price": "8639.00",
+      "price": "7199.00",
       "compare_at_price": null,
-      "source_price": 90.0,
+      "source_price": 75.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/CT3839_124_P1?bg=rgb(237,237,237)&fmt=auto&w=1200&h=1200",
       "option_values": [
         {
@@ -65,7 +65,8 @@
           "option_name": "Color",
           "name": "White/Pink Rise"
         }
-      ]
+      ],
+      "price_current": 7199.0
     },
     {
       "id": null,
@@ -92,7 +93,8 @@
           "option_name": "Color",
           "name": "White/Pink Rise"
         }
-      ]
+      ],
+      "price_current": 8639.0
     },
     {
       "id": null,
@@ -119,7 +121,8 @@
           "option_name": "Color",
           "name": "White/Pink Rise"
         }
-      ]
+      ],
+      "price_current": 8639.0
     },
     {
       "id": null,
@@ -146,7 +149,8 @@
           "option_name": "Color",
           "name": "White/Pink Rise"
         }
-      ]
+      ],
+      "price_current": 8639.0
     },
     {
       "id": null,
@@ -173,7 +177,8 @@
           "option_name": "Color",
           "name": "White/Pink Rise"
         }
-      ]
+      ],
+      "price_current": 8639.0
     },
     {
       "id": null,
@@ -200,7 +205,8 @@
           "option_name": "Color",
           "name": "White/Pink Rise"
         }
-      ]
+      ],
+      "price_current": 8639.0
     },
     {
       "id": null,
@@ -227,7 +233,8 @@
           "option_name": "Color",
           "name": "White/Pink Rise"
         }
-      ]
+      ],
+      "price_current": 8639.0
     },
     {
       "id": null,
@@ -254,7 +261,8 @@
           "option_name": "Color",
           "name": "White/Pink Rise"
         }
-      ]
+      ],
+      "price_current": 8639.0
     }
   ],
   "product_options": [
@@ -334,12 +342,13 @@
     "Nike Air Force"
   ],
   "groups": [
+    "footwear",
     "kids'-shoes",
-    "shoes",
     "nike-air-force",
-    "footwear"
+    "shoes"
   ],
   "created_at": "2026-09-20T04:58:14Z",
-  "updated_at": "2026-09-20T04:58:14Z",
-  "last_verified_at": "2026-09-20T04:58:14Z"
+  "updated_at": "2026-09-20T10:48:41Z",
+  "last_verified_at": "2026-09-20T10:48:41Z",
+  "shopify_sync_pending": true
 }

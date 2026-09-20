@@ -612,6 +612,7 @@ def parse_product_payload(
             "sku": var_sku,
             "title": f"{s['size_label']} / UK {s['uk_str']} - {color or 'Standard'}",
             "price": f"{v_inr_p:.2f}",
+            "price_current": v_inr_p,
             "compare_at_price": f"{compare_inr:.2f}" if compare_inr else None,
             "source_price": v_source_p,
             "source_compare_at_price": source_compare_price,

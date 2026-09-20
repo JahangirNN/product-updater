@@ -16,8 +16,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -50,7 +50,7 @@
       "source_compare_at_price": 92.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/FB9109_119_P1?bg=rgb%28237%2C237%2C237%29&fmt=auto&w=1200&h=1200",
       "option_values": [
         {
@@ -65,7 +65,8 @@
           "option_name": "Color",
           "name": "White/University Red"
         }
-      ]
+      ],
+      "price_current": 7199.0
     },
     {
       "id": null,
@@ -77,7 +78,7 @@
       "source_compare_at_price": 92.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/FB9109_119_P1?bg=rgb%28237%2C237%2C237%29&fmt=auto&w=1200&h=1200",
       "option_values": [
         {
@@ -92,7 +93,8 @@
           "option_name": "Color",
           "name": "White/University Red"
         }
-      ]
+      ],
+      "price_current": 7199.0
     },
     {
       "id": null,
@@ -104,7 +106,7 @@
       "source_compare_at_price": 92.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/FB9109_119_P1?bg=rgb%28237%2C237%2C237%29&fmt=auto&w=1200&h=1200",
       "option_values": [
         {
@@ -119,7 +121,8 @@
           "option_name": "Color",
           "name": "White/University Red"
         }
-      ]
+      ],
+      "price_current": 7199.0
     },
     {
       "id": null,
@@ -131,7 +134,7 @@
       "source_compare_at_price": 92.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/FB9109_119_P1?bg=rgb%28237%2C237%2C237%29&fmt=auto&w=1200&h=1200",
       "option_values": [
         {
@@ -146,7 +149,8 @@
           "option_name": "Color",
           "name": "White/University Red"
         }
-      ]
+      ],
+      "price_current": 7199.0
     },
     {
       "id": null,
@@ -158,7 +162,7 @@
       "source_compare_at_price": 92.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/FB9109_119_P1?bg=rgb%28237%2C237%2C237%29&fmt=auto&w=1200&h=1200",
       "option_values": [
         {
@@ -173,7 +177,8 @@
           "option_name": "Color",
           "name": "White/University Red"
         }
-      ]
+      ],
+      "price_current": 7199.0
     },
     {
       "id": null,
@@ -185,7 +190,7 @@
       "source_compare_at_price": 92.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/FB9109_119_P1?bg=rgb%28237%2C237%2C237%29&fmt=auto&w=1200&h=1200",
       "option_values": [
         {
@@ -200,7 +205,8 @@
           "option_name": "Color",
           "name": "White/University Red"
         }
-      ]
+      ],
+      "price_current": 7199.0
     },
     {
       "id": null,
@@ -212,7 +218,7 @@
       "source_compare_at_price": 92.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/FB9109_119_P1?bg=rgb%28237%2C237%2C237%29&fmt=auto&w=1200&h=1200",
       "option_values": [
         {
@@ -227,7 +233,8 @@
           "option_name": "Color",
           "name": "White/University Red"
         }
-      ]
+      ],
+      "price_current": 7199.0
     },
     {
       "id": null,
@@ -239,7 +246,7 @@
       "source_compare_at_price": 92.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/FB9109_119_P1?bg=rgb%28237%2C237%2C237%29&fmt=auto&w=1200&h=1200",
       "option_values": [
         {
@@ -254,7 +261,8 @@
           "option_name": "Color",
           "name": "White/University Red"
         }
-      ]
+      ],
+      "price_current": 7199.0
     }
   ],
   "product_options": [
@@ -334,12 +342,13 @@
     "Nike Dunk Low"
   ],
   "groups": [
+    "footwear",
     "kids'-shoes",
-    "shoes",
     "nike-dunk",
-    "footwear"
+    "shoes"
   ],
   "created_at": "2026-09-20T04:58:14Z",
-  "updated_at": "2026-09-20T04:58:14Z",
-  "last_verified_at": "2026-09-20T04:58:14Z"
+  "updated_at": "2026-09-20T15:23:26Z",
+  "last_verified_at": "2026-09-20T15:23:26Z",
+  "shopify_sync_pending": true
 }
