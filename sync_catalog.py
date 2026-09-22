@@ -297,6 +297,8 @@ def sync_store_batch(
             from stores.nordstrom.camoufox_solver import create_nordstrom_browser as create_store_browser
         elif store_name == "michaelkors":
             from stores.michaelkors.camoufox_solver import create_michaelkors_browser as create_store_browser
+        elif store_name == "jdsports":
+            from stores.jdsports.camoufox_solver import create_jdsports_browser as create_store_browser
         else:
             from camoufox.sync_api import Camoufox
             create_store_browser = lambda headless=True: Camoufox(headless=headless)
@@ -308,6 +310,9 @@ def sync_store_batch(
                 page = browser.new_page()
                 if store_name == "nordstrom":
                     from stores.nordstrom.camoufox_solver import setup_camoufox_route_blocking
+                    setup_camoufox_route_blocking(page)
+                elif store_name == "jdsports":
+                    from stores.jdsports.camoufox_solver import setup_camoufox_route_blocking
                     setup_camoufox_route_blocking(page)
 
                 items_since_recycle = 0
@@ -322,6 +327,9 @@ def sync_store_batch(
                         page = browser.new_page()
                         if store_name == "nordstrom":
                             setup_camoufox_route_blocking(page)
+                        elif store_name == "jdsports":
+                            from stores.jdsports.camoufox_solver import setup_camoufox_route_blocking
+                            setup_camoufox_route_blocking(page)
                         items_since_recycle = 0
                         log_info(f"[{store_name.upper()}] Page recycled after {BROWSER_RECYCLE_INTERVAL} items to prevent memory bloat.")
 
@@ -331,10 +339,16 @@ def sync_store_batch(
                             page = browser.new_page()
                             if store_name == "nordstrom":
                                 setup_camoufox_route_blocking(page)
+                            elif store_name == "jdsports":
+                                from stores.jdsports.camoufox_solver import setup_camoufox_route_blocking
+                                setup_camoufox_route_blocking(page)
                             items_since_recycle = 0
                     except Exception:
                         page = browser.new_page()
                         if store_name == "nordstrom":
+                            setup_camoufox_route_blocking(page)
+                        elif store_name == "jdsports":
+                            from stores.jdsports.camoufox_solver import setup_camoufox_route_blocking
                             setup_camoufox_route_blocking(page)
                         items_since_recycle = 0
 
@@ -372,6 +386,9 @@ def sync_store_batch(
                             pass
                         page = browser.new_page()
                         if store_name == "nordstrom":
+                            setup_camoufox_route_blocking(page)
+                        elif store_name == "jdsports":
+                            from stores.jdsports.camoufox_solver import setup_camoufox_route_blocking
                             setup_camoufox_route_blocking(page)
                         items_since_recycle = 0
 

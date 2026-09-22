@@ -9,12 +9,12 @@
   "source_sku": "SALOMON-7938104-5",
   "source_price": 220.0,
   "source_compare_at_price": null,
-  "current_price": 21125.0,
+  "current_price": 21107.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Synthetic and textile upper, textile lining, rubber sole",
   "specifications": {
     "Brand": "NORDSTROM",
@@ -74,7 +74,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/4b7bbf44-d1e3-4d8e-ad1b-f33297945647.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -632,17 +632,19 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-20T05:31:41Z",
+  "last_verified_at": "2026-09-22T05:27:28Z",
   "created_at": "2026-09-18T05:45:40Z",
-  "updated_at": "2026-09-20T05:31:41Z",
+  "updated_at": "2026-09-22T05:27:28Z",
   "price_range_usd": {
     "min": 220.0,
     "max": 220.0
   },
   "price_range_inr": {
-    "min": 21125.0,
-    "max": 21125.0
+    "min": 21107.0,
+    "max": 21107.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": false,
+  "price": "21107.00",
+  "shopify_sync_pending": true
 }

@@ -77,7 +77,8 @@
           "option_name": "Color",
           "name": "Black"
         }
-      ]
+      ],
+      "price_current": 62393.0
     },
     {
       "id": null,
@@ -96,7 +97,8 @@
           "option_name": "Color",
           "name": "Black/Light Tan"
         }
-      ]
+      ],
+      "price_current": 57114.0
     },
     {
       "id": null,
@@ -115,7 +117,8 @@
           "option_name": "Color",
           "name": "Saddle/Burnt Sienna"
         }
-      ]
+      ],
+      "price_current": 57114.0
     },
     {
       "id": null,
@@ -134,7 +137,8 @@
           "option_name": "Color",
           "name": "Olive"
         }
-      ]
+      ],
+      "price_current": 52794.0
     },
     {
       "id": null,
@@ -153,7 +157,8 @@
           "option_name": "Color",
           "name": "Warm Brown"
         }
-      ]
+      ],
+      "price_current": 52794.0
     },
     {
       "id": null,
@@ -172,7 +177,8 @@
           "option_name": "Color",
           "name": "Dark Chocolate Suede"
         }
-      ]
+      ],
+      "price_current": 52794.0
     },
     {
       "id": null,
@@ -191,7 +197,8 @@
           "option_name": "Color",
           "name": "Black"
         }
-      ]
+      ],
+      "price_current": 52794.0
     },
     {
       "id": null,
@@ -210,7 +217,8 @@
           "option_name": "Color",
           "name": "Maple"
         }
-      ]
+      ],
+      "price_current": 52794.0
     },
     {
       "id": null,
@@ -222,14 +230,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccb56_rf2_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Navy"
         }
-      ]
+      ],
+      "price_current": 52794.0
     }
   ],
   "product_options": [
@@ -272,11 +281,11 @@
     "men_bags"
   ],
   "created_at": "2026-09-13T00:41:32Z",
-  "last_verified_at": "2026-09-20T05:24:49Z",
+  "last_verified_at": "2026-09-22T05:25:00Z",
   "id": "4f366def2b071450",
   "product_id": "4f366def2b071450",
   "store": "coach",
-  "updated_at": "2026-09-20T05:24:49Z",
+  "updated_at": "2026-09-22T05:25:00Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

@@ -70,7 +70,8 @@
           "option_name": "Color",
           "name": "Tan & Black"
         }
-      ]
+      ],
+      "price_current": 3744.0
     },
     {
       "id": null,
@@ -89,7 +90,8 @@
           "option_name": "Color",
           "name": "Charcoal/Black"
         }
-      ]
+      ],
+      "price_current": 3744.0
     },
     {
       "id": null,
@@ -108,7 +110,8 @@
           "option_name": "Color",
           "name": "Chalk & Black"
         }
-      ]
+      ],
+      "price_current": 3744.0
     },
     {
       "id": null,
@@ -127,7 +130,8 @@
           "option_name": "Color",
           "name": "Grey/Charcoal"
         }
-      ]
+      ],
+      "price_current": 3744.0
     },
     {
       "id": null,
@@ -158,14 +162,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw366_z0g_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Light Citron"
         }
-      ]
+      ],
+      "price_current": 3744.0
     },
     {
       "id": null,
@@ -184,7 +189,8 @@
           "option_name": "Color",
           "name": "Ink Blue"
         }
-      ]
+      ],
+      "price_current": 3744.0
     },
     {
       "id": null,
@@ -203,7 +209,8 @@
           "option_name": "Color",
           "name": "Black Signature"
         }
-      ]
+      ],
+      "price_current": 3744.0
     },
     {
       "id": null,
@@ -222,7 +229,8 @@
           "option_name": "Color",
           "name": "Black Currant"
         }
-      ]
+      ],
+      "price_current": 3744.0
     }
   ],
   "product_options": [
@@ -268,11 +276,11 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:47:19Z",
-  "last_verified_at": "2026-09-20T05:27:25Z",
+  "last_verified_at": "2026-09-22T05:29:54Z",
   "id": "d8228d7956052b77",
   "product_id": "d8228d7956052b77",
   "store": "coach",
-  "updated_at": "2026-09-20T05:27:25Z",
+  "updated_at": "2026-09-22T05:29:54Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

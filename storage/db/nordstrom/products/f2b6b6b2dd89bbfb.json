@@ -9,7 +9,7 @@
   "source_sku": "HOKA-9052798-7",
   "source_price": 170.0,
   "source_compare_at_price": null,
-  "current_price": 16324.0,
+  "current_price": 16310.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -155,7 +155,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/021bfd3f-55bd-4b7a-a164-8c7bb4aeca53.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -500,17 +500,19 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-20T06:38:39Z",
+  "last_verified_at": "2026-09-22T04:34:23Z",
   "created_at": "2026-09-17T14:58:48Z",
-  "updated_at": "2026-09-20T06:38:39Z",
+  "updated_at": "2026-09-22T04:34:23Z",
   "price_range_usd": {
     "min": 170.0,
     "max": 170.0
   },
   "price_range_inr": {
-    "min": 16324.0,
-    "max": 16324.0
+    "min": 16310.0,
+    "max": 16310.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": true,
+  "price": "16310.00",
+  "shopify_sync_pending": true
 }

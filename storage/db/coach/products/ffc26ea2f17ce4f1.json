@@ -59,7 +59,8 @@
           "option_name": "Size",
           "name": "US 5 / UK 3"
         }
-      ]
+      ],
+      "price_current": 14878.0
     },
     {
       "id": null,
@@ -78,7 +79,8 @@
           "option_name": "Size",
           "name": "US 6 / UK 4"
         }
-      ]
+      ],
+      "price_current": 14878.0
     },
     {
       "id": null,
@@ -97,7 +99,8 @@
           "option_name": "Size",
           "name": "US 7 / UK 5"
         }
-      ]
+      ],
+      "price_current": 14878.0
     },
     {
       "id": null,
@@ -109,14 +112,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx81_a7u_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 8 / UK 6"
         }
-      ]
+      ],
+      "price_current": 14878.0
     },
     {
       "id": null,
@@ -128,14 +132,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx81_a7u_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 9 / UK 7"
         }
-      ]
+      ],
+      "price_current": 14878.0
     },
     {
       "id": null,
@@ -147,14 +152,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx81_a7u_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 10 / UK 8"
         }
-      ]
+      ],
+      "price_current": 14878.0
     },
     {
       "id": null,
@@ -166,14 +172,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx81_a7u_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 11 / UK 9"
         }
-      ]
+      ],
+      "price_current": 14878.0
     }
   ],
   "product_options": [
@@ -213,11 +220,11 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:49:22Z",
-  "last_verified_at": "2026-09-20T05:28:17Z",
+  "last_verified_at": "2026-09-22T05:30:55Z",
   "id": "ffc26ea2f17ce4f1",
   "product_id": "ffc26ea2f17ce4f1",
   "store": "coach",
-  "updated_at": "2026-09-20T05:28:17Z",
+  "updated_at": "2026-09-22T05:30:55Z",
   "shopify_sync_pending": true,
   "is_active": true
 }

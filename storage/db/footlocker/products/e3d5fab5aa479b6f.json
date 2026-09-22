@@ -10,7 +10,7 @@
   "source_price": 150.0,
   "source_compare_at_price": null,
   "current_price": 14398.0,
-  "compare_at_price": null,
+  "compare_at_price": 14406.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -66,7 +66,8 @@
           "option_name": "Color",
           "name": "Cream/White"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -93,7 +94,8 @@
           "option_name": "Color",
           "name": "Cream/White"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -120,7 +122,8 @@
           "option_name": "Color",
           "name": "Cream/White"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -147,7 +150,8 @@
           "option_name": "Color",
           "name": "Cream/White"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -174,7 +178,8 @@
           "option_name": "Color",
           "name": "Cream/White"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -201,7 +206,8 @@
           "option_name": "Color",
           "name": "Cream/White"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -213,7 +219,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42120383_01",
       "option_values": [
         {
@@ -228,7 +234,8 @@
           "option_name": "Color",
           "name": "Cream/White"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -255,7 +262,8 @@
           "option_name": "Color",
           "name": "Cream/White"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -282,7 +290,8 @@
           "option_name": "Color",
           "name": "Cream/White"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -309,7 +318,8 @@
           "option_name": "Color",
           "name": "Cream/White"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -336,7 +346,8 @@
           "option_name": "Color",
           "name": "Cream/White"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -363,7 +374,8 @@
           "option_name": "Color",
           "name": "Cream/White"
         }
-      ]
+      ],
+      "price_current": 14398.0
     }
   ],
   "product_options": [
@@ -468,7 +480,8 @@
   "groups": [
     "ASICS Shoes"
   ],
-  "last_verified_at": "2026-09-20T10:38:24Z",
+  "last_verified_at": "2026-09-22T06:26:24Z",
   "created_at": "2026-09-20T10:38:24Z",
-  "updated_at": "2026-09-20T10:38:24Z"
+  "updated_at": "2026-09-22T06:26:24Z",
+  "shopify_sync_pending": true
 }

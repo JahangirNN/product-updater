@@ -56,7 +56,8 @@
           "option_name": "Color",
           "name": "Gold/Walnut/Black"
         }
-      ]
+      ],
+      "price_current": 5663.0
     },
     {
       "id": null,
@@ -75,7 +76,8 @@
           "option_name": "Color",
           "name": "Silver/Sand/Taupe"
         }
-      ]
+      ],
+      "price_current": 5663.0
     },
     {
       "id": null,
@@ -94,7 +96,8 @@
           "option_name": "Color",
           "name": "Silver/Black Brown"
         }
-      ]
+      ],
+      "price_current": 5663.0
     },
     {
       "id": null,
@@ -106,14 +109,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfa40_imxum_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Gold/Light Blue"
         }
-      ]
+      ],
+      "price_current": 2880.0
     }
   ],
   "product_options": [
@@ -144,11 +148,11 @@
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:47:49Z",
-  "last_verified_at": "2026-09-20T05:27:37Z",
+  "last_verified_at": "2026-09-22T05:30:11Z",
   "id": "e78aae8e76eadac2",
   "product_id": "e78aae8e76eadac2",
   "store": "coach",
-  "updated_at": "2026-09-20T05:27:37Z",
+  "updated_at": "2026-09-22T05:30:11Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

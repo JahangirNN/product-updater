@@ -7,9 +7,9 @@
   "vendor": "HOKA",
   "product_type": "Athletic Shoes",
   "source_sku": "HOKA-6550642-7",
-  "source_price": 135.0,
+  "source_price": 180.0,
   "source_compare_at_price": null,
-  "current_price": 12959.0,
+  "current_price": 17287.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -1261,7 +1261,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/44d79478-d015-41cf-8640-b121061dee73.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1747,7 +1747,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/74b3a59e-c3ff-4b26-912d-b1a9c92618f9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2061,18 +2061,19 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-20T05:25:24Z",
+  "last_verified_at": "2026-09-22T06:24:25Z",
   "created_at": "2026-09-17T14:53:19Z",
-  "updated_at": "2026-09-20T05:25:24Z",
+  "updated_at": "2026-09-22T06:24:25Z",
   "price_range_usd": {
     "min": 135.0,
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 12959.0,
-    "max": 17278.0
+    "min": 12965.0,
+    "max": 17287.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": true,
+  "price": "17287.00"
 }

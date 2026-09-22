@@ -10,7 +10,7 @@
   "source_price": 84.99,
   "source_compare_at_price": 170.0,
   "current_price": 8158.0,
-  "compare_at_price": 16318.0,
+  "compare_at_price": 16326.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -67,7 +67,8 @@
           "option_name": "Color",
           "name": "Summit White/Hyper Pink"
         }
-      ]
+      ],
+      "price_current": 8158.0
     },
     {
       "id": null,
@@ -94,7 +95,8 @@
           "option_name": "Color",
           "name": "Summit White/Hyper Pink"
         }
-      ]
+      ],
+      "price_current": 8158.0
     },
     {
       "id": null,
@@ -121,7 +123,8 @@
           "option_name": "Color",
           "name": "Summit White/Hyper Pink"
         }
-      ]
+      ],
+      "price_current": 8158.0
     },
     {
       "id": null,
@@ -148,7 +151,8 @@
           "option_name": "Color",
           "name": "Summit White/Hyper Pink"
         }
-      ]
+      ],
+      "price_current": 8158.0
     },
     {
       "id": null,
@@ -160,7 +164,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/M2404645_01",
       "option_values": [
         {
@@ -175,7 +179,8 @@
           "option_name": "Color",
           "name": "Summit White/Hyper Pink"
         }
-      ]
+      ],
+      "price_current": 8158.0
     },
     {
       "id": null,
@@ -187,7 +192,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/M2404645_01",
       "option_values": [
         {
@@ -202,7 +207,8 @@
           "option_name": "Color",
           "name": "Summit White/Hyper Pink"
         }
-      ]
+      ],
+      "price_current": 8158.0
     },
     {
       "id": null,
@@ -229,7 +235,8 @@
           "option_name": "Color",
           "name": "Summit White/Hyper Pink"
         }
-      ]
+      ],
+      "price_current": 8158.0
     },
     {
       "id": null,
@@ -241,7 +248,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/M2404645_01",
       "option_values": [
         {
@@ -256,7 +263,8 @@
           "option_name": "Color",
           "name": "Summit White/Hyper Pink"
         }
-      ]
+      ],
+      "price_current": 8158.0
     },
     {
       "id": null,
@@ -283,7 +291,8 @@
           "option_name": "Color",
           "name": "Summit White/Hyper Pink"
         }
-      ]
+      ],
+      "price_current": 8158.0
     },
     {
       "id": null,
@@ -310,7 +319,8 @@
           "option_name": "Color",
           "name": "Summit White/Hyper Pink"
         }
-      ]
+      ],
+      "price_current": 8158.0
     },
     {
       "id": null,
@@ -337,7 +347,8 @@
           "option_name": "Color",
           "name": "Summit White/Hyper Pink"
         }
-      ]
+      ],
+      "price_current": 8158.0
     },
     {
       "id": null,
@@ -364,7 +375,8 @@
           "option_name": "Color",
           "name": "Summit White/Hyper Pink"
         }
-      ]
+      ],
+      "price_current": 8158.0
     },
     {
       "id": null,
@@ -391,7 +403,8 @@
           "option_name": "Color",
           "name": "Summit White/Hyper Pink"
         }
-      ]
+      ],
+      "price_current": 8158.0
     }
   ],
   "product_options": [
@@ -502,7 +515,8 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-20T10:38:21Z",
+  "last_verified_at": "2026-09-22T06:24:06Z",
   "created_at": "2026-09-18T20:48:08Z",
-  "updated_at": "2026-09-20T10:38:21Z"
+  "updated_at": "2026-09-22T06:24:06Z",
+  "shopify_sync_pending": true
 }

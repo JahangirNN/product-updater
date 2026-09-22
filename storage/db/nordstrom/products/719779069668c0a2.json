@@ -9,8 +9,8 @@
   "source_sku": "HOKA-7374042-7",
   "source_price": 180.0,
   "source_compare_at_price": 180.0,
-  "current_price": 17284.0,
-  "compare_at_price": 17284.0,
+  "current_price": 17287.0,
+  "compare_at_price": 17287.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -570,9 +570,18 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-20T05:36:56Z",
+  "last_verified_at": "2026-09-22T05:31:49Z",
   "created_at": "2026-09-18T05:44:46Z",
-  "updated_at": "2026-09-20T05:36:56Z",
+  "updated_at": "2026-09-22T05:31:49Z",
   "is_active": false,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": true,
+  "price_range_usd": {
+    "min": 180.0,
+    "max": 180.0
+  },
+  "price_range_inr": {
+    "min": 17287.0,
+    "max": 17287.0
+  },
+  "price": "17287.00"
 }

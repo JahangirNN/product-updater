@@ -9,7 +9,7 @@
   "source_sku": "SALOMON-8841084-5.5",
   "source_price": 190.0,
   "source_compare_at_price": null,
-  "current_price": 18238.0,
+  "current_price": 18229.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -533,18 +533,19 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-20T06:36:35Z",
+  "last_verified_at": "2026-09-22T04:33:08Z",
   "created_at": "2026-09-18T06:58:43Z",
-  "updated_at": "2026-09-20T06:36:35Z",
+  "updated_at": "2026-09-22T04:33:08Z",
   "price_range_usd": {
     "min": 190.0,
     "max": 190.0
   },
   "price_range_inr": {
-    "min": 18238.0,
-    "max": 18238.0
+    "min": 18229.0,
+    "max": 18229.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": true,
+  "price": "18229.00"
 }

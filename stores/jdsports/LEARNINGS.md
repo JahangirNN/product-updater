@@ -27,14 +27,16 @@ Scraped live search queries reveal the inventory distribution:
 
 ---
 
-## 3. Bot Protection & Akamai WAF Shield Handling
+## 3. Bot Protection & Zero-Token Akamai Bypass
 
 - **WAF Engine**: Akamai Bot Manager (`server-timing: cdn-cache; desc=HIT, edge; dur=1, ak_p; ...`).
-- **Behavior**: Direct unauthenticated HTTP requests (`curl`, `httpx`) from local datacenter IPs return HTTP 403 Forbidden with Finish Line / JD Sports access denial HTML. Local headless `Camoufox` without residential proxies encounters the same IP-level challenge.
-- **Mitigation Strategy**:
-  1. **Catalog Ingestion & Sweeps (Tier 1)**: Use Firecrawl MCP (`firecrawl_scrape`), which reliably bypasses Akamai Bot Manager and delivers complete SSR HTML with hydrated JSON-LD.
-  2. **Delta Polling (Tier 2)**: For fast HTTP checks in `stores/jdsports/delta.py`, use Chrome 133 Client Hints headers and cooperative rate limiting (`requests_per_second: 2.0`, `delay_seconds: 0.5`). On HTTP 403 or 429, trip the store circuit breaker (`trip_circuit_breaker`) and return `status: "rate_limited"`.
-  3. **Selective Timestamp Invariant (ADR 0008)**: Never stamp `last_verified_at` on HTTP 403 or 429, allowing the background daemon to retry on the next sweep cycle without waiting 60 minutes.
+- **Behavior**: Direct unauthenticated HTTP requests (`httpx`) return HTTP 403 Forbidden with Finish Line / JD Sports access denial HTML.
+- **Zero-Token Local Mitigation Architecture**:
+  1. **Catalog Ingestion & Sweeps (Tier 1)**: Firecrawl MCP (`firecrawl_scrape`) was used for initial bulk collection ingestion.
+  2. **Zero-Token Delta Polling (Tier 2)**: All recurring scheduled daemon sweeps use the **local Camoufox stealth browser worker** (`stores/jdsports/camoufox_solver.py`), which executes the Akamai JS challenge locally at **$0.00 cost / 0 API tokens**.
+  3. **High-Performance Route Blocking**: Attaches route filters blocking heavy media, fonts, and tracking scripts while allowing Akamai telemetry and React hydration, achieving ~5-7s per-product sweep times.
+  4. **React Hydration Handling**: Waits specifically for `ProductGroup` JSON-LD injection by Next.js client-side streaming (distinguishing from static `BreadcrumbList`).
+  5. **Selective Timestamp Invariant (ADR 0008)**: Never stamp `last_verified_at` on HTTP 403 or 429, allowing the background daemon to retry without waiting 60 minutes.
 
 ---
 

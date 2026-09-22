@@ -9,7 +9,7 @@
   "source_sku": "HOKA-7501129-10",
   "source_price": 136.0,
   "source_compare_at_price": null,
-  "current_price": 13055.0,
+  "current_price": 13061.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -3483,17 +3483,19 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-20T05:35:58Z",
+  "last_verified_at": "2026-09-22T05:30:56Z",
   "created_at": "2026-09-17T14:55:30Z",
-  "updated_at": "2026-09-20T05:35:58Z",
+  "updated_at": "2026-09-22T05:30:56Z",
   "price_range_usd": {
     "min": 68.0,
     "max": 170.0
   },
   "price_range_inr": {
-    "min": 6527.0,
-    "max": 16318.0
+    "min": 6531.0,
+    "max": 16326.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": true,
+  "price": "13061.00",
+  "shopify_sync_pending": true
 }

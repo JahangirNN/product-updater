@@ -73,7 +73,8 @@
           "option_name": "Color",
           "name": "Brass/Muted Olive"
         }
-      ]
+      ],
+      "price_current": 19006.0
     },
     {
       "id": null,
@@ -85,14 +86,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdz28_b4mpl_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Brass/Maple"
         }
-      ]
+      ],
+      "price_current": 19006.0
     }
   ],
   "product_options": [
@@ -117,11 +119,11 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:42:36Z",
-  "last_verified_at": "2026-09-20T05:25:17Z",
+  "last_verified_at": "2026-09-22T05:25:31Z",
   "id": "6b5c7805306ae67c",
   "product_id": "6b5c7805306ae67c",
   "store": "coach",
-  "updated_at": "2026-09-20T05:25:17Z",
+  "updated_at": "2026-09-22T05:25:31Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

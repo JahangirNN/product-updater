@@ -98,14 +98,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cer63_b4pgb_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Brass/Dark Fuchsia"
         }
-      ]
+      ],
+      "price_current": 9119.0
     },
     {
       "id": null,
@@ -124,7 +125,8 @@
           "option_name": "Color",
           "name": "Brass/Black"
         }
-      ]
+      ],
+      "price_current": 9119.0
     },
     {
       "id": null,
@@ -143,7 +145,8 @@
           "option_name": "Color",
           "name": "Brass/Navy"
         }
-      ]
+      ],
+      "price_current": 5471.0
     },
     {
       "id": null,
@@ -181,7 +184,8 @@
           "option_name": "Color",
           "name": "Brass/Maple"
         }
-      ]
+      ],
+      "price_current": 9119.0
     },
     {
       "id": null,
@@ -200,7 +204,8 @@
           "option_name": "Color",
           "name": "Brass/Scarlet"
         }
-      ]
+      ],
+      "price_current": 9119.0
     },
     {
       "id": null,
@@ -219,7 +224,8 @@
           "option_name": "Color",
           "name": "Brass/Black Brown Multi"
         }
-      ]
+      ],
+      "price_current": 8399.0
     },
     {
       "id": null,
@@ -238,7 +244,8 @@
           "option_name": "Color",
           "name": "Brass/Melon Pink"
         }
-      ]
+      ],
+      "price_current": 5471.0
     },
     {
       "id": null,
@@ -257,7 +264,8 @@
           "option_name": "Color",
           "name": "Brass/Maple"
         }
-      ]
+      ],
+      "price_current": 9119.0
     }
   ],
   "product_options": [
@@ -300,11 +308,11 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:45:50Z",
-  "last_verified_at": "2026-09-20T05:26:46Z",
+  "last_verified_at": "2026-09-22T05:27:19Z",
   "id": "b477707c1c6bb872",
   "product_id": "b477707c1c6bb872",
   "store": "coach",
-  "updated_at": "2026-09-20T05:26:46Z",
+  "updated_at": "2026-09-22T05:27:19Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

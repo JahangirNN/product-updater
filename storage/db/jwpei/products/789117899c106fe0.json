@@ -9,11 +9,11 @@
   "source_price": 149.0,
   "source_compare_at_price": 149.0,
   "current_price": 14298.0,
-  "compare_at_price": 14302.0,
+  "compare_at_price": 14310.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.957344,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Vegan Leather",
   "specifications": {
     "Bag Dimensions": "9.45\" W × 7.09\" H × 3.54\" D (24cm x 18cm x 9cm)",
@@ -248,12 +248,12 @@
   "groups": [
     "handbags"
   ],
-  "is_active": true,
+  "is_active": false,
   "shopify_sync_pending": true,
   "status": "DRAFT",
   "validation_warnings": [],
   "id": "789117899c106fe0",
   "created_at": "2026-09-19T11:15:34Z",
-  "updated_at": "2026-09-20T05:25:24Z",
-  "last_verified_at": "2026-09-20T05:25:24Z"
+  "updated_at": "2026-09-22T05:25:19Z",
+  "last_verified_at": "2026-09-22T05:25:19Z"
 }

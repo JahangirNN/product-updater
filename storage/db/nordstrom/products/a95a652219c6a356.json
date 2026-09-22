@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-7722675-4",
   "source_price": 130.0,
   "source_compare_at_price": 130.0,
-  "current_price": 12479.0,
-  "compare_at_price": 12479.0,
+  "current_price": 12472.0,
+  "compare_at_price": 12472.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -155,7 +155,7 @@
       "source_compare_at_price": 130.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/c0e62db5-c3a8-4430-9b55-f3ef8595d1fe.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -236,7 +236,7 @@
       "source_compare_at_price": 130.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/c0e62db5-c3a8-4430-9b55-f3ef8595d1fe.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -696,9 +696,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-20T06:30:34Z",
+  "last_verified_at": "2026-09-22T06:29:59Z",
   "created_at": "2026-09-17T19:01:41Z",
-  "updated_at": "2026-09-20T06:30:34Z",
+  "updated_at": "2026-09-22T06:29:59Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -708,7 +708,8 @@
     "max": 130.0
   },
   "price_range_inr": {
-    "min": 12479.0,
-    "max": 12479.0
-  }
+    "min": 12472.0,
+    "max": 12472.0
+  },
+  "price": "12472.00"
 }

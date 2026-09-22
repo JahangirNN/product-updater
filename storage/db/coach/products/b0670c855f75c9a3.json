@@ -56,7 +56,8 @@
           "option_name": "Size",
           "name": "US 7 / UK 6.5"
         }
-      ]
+      ],
+      "price_current": 7439.0
     },
     {
       "id": null,
@@ -75,7 +76,8 @@
           "option_name": "Size",
           "name": "US 8 / UK 7.5"
         }
-      ]
+      ],
+      "price_current": 7439.0
     },
     {
       "id": null,
@@ -94,7 +96,8 @@
           "option_name": "Size",
           "name": "US 9 / UK 8.5"
         }
-      ]
+      ],
+      "price_current": 7439.0
     },
     {
       "id": null,
@@ -106,14 +109,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccn21_blk_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 10 / UK 9.5"
         }
-      ]
+      ],
+      "price_current": 7439.0
     },
     {
       "id": null,
@@ -132,7 +136,8 @@
           "option_name": "Size",
           "name": "US 11 / UK 10.5"
         }
-      ]
+      ],
+      "price_current": 7439.0
     },
     {
       "id": null,
@@ -144,14 +149,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccn21_blk_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 12 / UK 11.5"
         }
-      ]
+      ],
+      "price_current": 7439.0
     },
     {
       "id": null,
@@ -163,14 +169,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccn21_blk_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 13 / UK 12.5"
         }
-      ]
+      ],
+      "price_current": 7439.0
     }
   ],
   "product_options": [
@@ -210,11 +217,11 @@
     "men_shoes"
   ],
   "created_at": "2026-09-13T00:45:40Z",
-  "last_verified_at": "2026-09-20T05:26:40Z",
+  "last_verified_at": "2026-09-22T05:27:13Z",
   "id": "b0670c855f75c9a3",
   "product_id": "b0670c855f75c9a3",
   "store": "coach",
-  "updated_at": "2026-09-20T05:26:40Z",
+  "updated_at": "2026-09-22T05:27:13Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

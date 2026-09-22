@@ -56,30 +56,189 @@ def check_price_and_stock(
         slug = re.sub(r'[^a-zA-Z0-9]+', '-', cleaned_title).strip('-')
         source_url = f"https://www.jdsports.com/pdp/{slug}/{sku}"
 
+    # 1. Thread-safe rate limiter permit acquisition
+    if rate_limiter and callable(getattr(rate_limiter, "acquire_permit", None)):
+        try:
+            rate_limiter.acquire_permit(resolved_store)
+        except TypeError:
+            rate_limiter.acquire_permit()
+    elif isinstance(rate_limiter, dict):
+        acquire_fn = rate_limiter.get("acquire_permit")
+        if callable(acquire_fn):
+            try:
+                acquire_fn(resolved_store)
+            except TypeError:
+                acquire_fn()
+        else:
+            acquire_permit(
+                resolved_store,
+                requests_per_second=rate_limiter.get("requests_per_second"),
+                delay_seconds=rate_limiter.get("delay_seconds")
+            )
+    else:
+        acquire_permit(resolved_store)
+
+    # 2. Browser solver mode (Camoufox zero-token local Akamai solver)
+    if browser_page is not None:
+        from stores.jdsports.camoufox_solver import solve_and_extract_pdp
+        solve_res = solve_and_extract_pdp(browser_page, source_url, target_handle=handle)
+        status = solve_res.get("status")
+        elapsed_ms = solve_res.get("elapsed_ms", round((time.perf_counter() - t_start) * 1000, 2))
+
+        if status == "success":
+            raw_extracted_variants = solve_res.get("variants", [])
+            new_source_price = float(solve_res.get("price_usd") or 0.0)
+            if new_source_price <= 0.0:
+                new_source_price = old_source_price
+
+            variants_delta = []
+            changed_variants = []
+            variant_stock_changed = False
+            variant_price_changed = False
+            changed_variant_prices = []
+
+            stored_variants = {str(v.get("sku", "")).strip(): v for v in product.get("variants", [])}
+            stored_by_size = {str(v.get("title", "")).split("/")[0].strip(): v for v in product.get("variants", [])}
+
+            for v in raw_extracted_variants:
+                v_sku = str(v.get("sku") or "").strip()
+                v_size = str(v.get("size") or "").strip()
+                v_price = float(v.get("price_usd") or 0.0)
+                v_in_stock = bool(v.get("available", False))
+
+                matched_v = stored_variants.get(v_sku)
+                if not matched_v and v_size:
+                    for s_k, s_v in stored_by_size.items():
+                        if re.search(rf"\b{re.escape(v_size)}\b", s_k):
+                            matched_v = s_v
+                            break
+
+                if matched_v:
+                    old_v_stock = bool(matched_v.get("in_stock", False))
+                    old_v_price = float(matched_v.get("source_price") or 0.0)
+                    if old_v_stock != v_in_stock:
+                        variant_stock_changed = True
+                        changed_variants.append({
+                            "sku": matched_v.get("sku", v_sku),
+                            "old_in_stock": old_v_stock,
+                            "new_in_stock": v_in_stock
+                        })
+                    new_v_p = v_price if v_price > 0 else new_source_price
+                    if new_v_p > 0 and old_v_price > 0 and abs(new_v_p - old_v_price) > 0.01:
+                        variant_price_changed = True
+                        changed_variant_prices.append({
+                            "sku": matched_v.get("sku", v_sku),
+                            "size": matched_v.get("size") or v_size or "",
+                            "old_source_price": old_v_price,
+                            "new_source_price": new_v_p
+                        })
+
+                variants_delta.append({
+                    "sku": v_sku,
+                    "size": v_size,
+                    "available": v_in_stock,
+                    "price_usd": v_price if v_price > 0 else new_source_price
+                })
+
+            curr_avail = "in_stock" if any(vd["available"] for vd in variants_delta) else "out_of_stock"
+            stock_changed = (curr_avail != old_availability)
+            price_changed = abs(new_source_price - old_source_price) > 0.01 if (old_source_price > 0 and new_source_price > 0) else False
+
+            return {
+                "status": "success",
+                "handle": handle,
+                "current_source_price": new_source_price,
+                "old_source_price": old_source_price,
+                "current_compare_price": product.get("source_compare_at_price"),
+                "availability": curr_avail,
+                "old_availability": old_availability,
+                "is_active": (curr_avail == "in_stock"),
+                "price_changed": price_changed,
+                "stock_changed": stock_changed,
+                "variant_stock_changed": variant_stock_changed,
+                "changed_variants": changed_variants,
+                "variant_price_changed": variant_price_changed,
+                "changed_variant_prices": changed_variant_prices,
+                "variants_delta": variants_delta,
+                "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                "elapsed_ms": elapsed_ms,
+                "message": "Polled successfully via Camoufox"
+            }
+
+        elif status == "not_found":
+            variant_stock_changed = False
+            changed_variants = []
+            for var in product.get("variants", []):
+                if var.get("in_stock", False):
+                    variant_stock_changed = True
+                    changed_variants.append({
+                        "sku": var.get("sku", ""),
+                        "old_in_stock": True,
+                        "new_in_stock": False
+                    })
+            return {
+                "status": "not_found",
+                "handle": handle,
+                "availability": "out_of_stock",
+                "old_availability": old_availability,
+                "new_availability": "out_of_stock",
+                "current_source_price": old_source_price,
+                "old_source_price": old_source_price,
+                "new_source_price": old_source_price,
+                "is_active": False,
+                "price_changed": False,
+                "stock_changed": old_availability != "out_of_stock",
+                "variant_stock_changed": variant_stock_changed,
+                "changed_variants": changed_variants,
+                "variants_delta": [],
+                "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                "elapsed_ms": elapsed_ms,
+                "message": "Product delisted (HTTP 404)"
+            }
+
+        elif status in ("rate_limited", "blocked"):
+            return {
+                "status": "rate_limited",
+                "handle": handle,
+                "availability": old_availability,
+                "old_availability": old_availability,
+                "current_source_price": old_source_price,
+                "old_source_price": old_source_price,
+                "is_active": (old_availability == "in_stock"),
+                "price_changed": False,
+                "stock_changed": False,
+                "variant_stock_changed": False,
+                "changed_variants": [],
+                "variants_delta": [],
+                "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                "elapsed_ms": elapsed_ms,
+                "message": solve_res.get("error", "Akamai challenge unresolved in browser")
+            }
+
+        else:
+            return {
+                "status": "error",
+                "handle": handle,
+                "current_source_price": old_source_price,
+                "old_source_price": old_source_price,
+                "availability": old_availability,
+                "old_availability": old_availability,
+                "is_active": (old_availability == "in_stock"),
+                "price_changed": False,
+                "stock_changed": False,
+                "variant_stock_changed": False,
+                "changed_variants": [],
+                "variant_price_changed": False,
+                "changed_variant_prices": [],
+                "variants_delta": [],
+                "error": solve_res.get("error", "Camoufox extraction error"),
+                "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                "elapsed_ms": elapsed_ms
+            }
+
+    # 3. HTTP Fallback Mode
     for attempt in range(3):
         try:
-            # 1. Thread-safe rate limiter permit acquisition
-            if rate_limiter and callable(getattr(rate_limiter, "acquire_permit", None)):
-                try:
-                    rate_limiter.acquire_permit(resolved_store)
-                except TypeError:
-                    rate_limiter.acquire_permit()
-            elif isinstance(rate_limiter, dict):
-                acquire_fn = rate_limiter.get("acquire_permit")
-                if callable(acquire_fn):
-                    try:
-                        acquire_fn(resolved_store)
-                    except TypeError:
-                        acquire_fn()
-                else:
-                    acquire_permit(
-                        resolved_store,
-                        requests_per_second=rate_limiter.get("requests_per_second"),
-                        delay_seconds=rate_limiter.get("delay_seconds")
-                    )
-            else:
-                acquire_permit(resolved_store)
-
             # 2. Outbound Network Request
             resp = None
             if client:

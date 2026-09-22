@@ -9,8 +9,8 @@
   "source_sku": "HOKA-8735210-7",
   "source_price": 125.0,
   "source_compare_at_price": 125.0,
-  "current_price": 11995.0,
-  "compare_at_price": 11995.0,
+  "current_price": 11993.0,
+  "compare_at_price": 11993.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -537,9 +537,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-20T06:32:50Z",
+  "last_verified_at": "2026-09-22T06:31:57Z",
   "created_at": "2026-09-17T14:59:50Z",
-  "updated_at": "2026-09-20T06:32:50Z",
+  "updated_at": "2026-09-22T06:31:57Z",
   "is_active": true,
   "shopify_sync_pending": true,
   "price_range_usd": {
@@ -547,7 +547,8 @@
     "max": 125.0
   },
   "price_range_inr": {
-    "min": 11995.0,
-    "max": 11995.0
-  }
+    "min": 11993.0,
+    "max": 11993.0
+  },
+  "price": "11993.00"
 }

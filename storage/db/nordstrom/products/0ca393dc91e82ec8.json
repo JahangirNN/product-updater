@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Engineered mesh made from 100% recycled polyester, Helion Superfoam, Grip rubber compound",
   "specifications": {
     "Brand": "On",
@@ -206,7 +206,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/d81e8c1e-e5c4-42c1-990a-07dab5de9b6b.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -719,7 +719,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/c2fc50fb-2539-4ce4-9acd-5f8857203a93.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -989,7 +989,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/33250142-5867-43de-81d1-44f081f99cad.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1313,7 +1313,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/3edbb2cc-d75e-457d-8574-11cfcf95d343.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1826,7 +1826,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/86620103-7060-41f7-865f-e74f03ce3da3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1999,9 +1999,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-20T05:25:26Z",
+  "last_verified_at": "2026-09-22T06:24:31Z",
   "created_at": "2026-09-18T06:51:36Z",
-  "updated_at": "2026-09-20T05:25:26Z",
+  "updated_at": "2026-09-22T06:24:31Z",
   "price_range_usd": {
     "min": 88.0,
     "max": 160.0
@@ -2011,6 +2011,7 @@
     "max": 15358.0
   },
   "status": "OUT_OF_STOCK",
-  "is_active": true,
-  "shopify_sync_pending": true
+  "is_active": false,
+  "shopify_sync_pending": true,
+  "price": "8447.00"
 }

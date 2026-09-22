@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-8170755-7",
   "source_price": 200.0,
   "source_compare_at_price": 200.0,
-  "current_price": 19191.0,
-  "compare_at_price": 19191.0,
+  "current_price": 19188.0,
+  "compare_at_price": 19188.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -435,9 +435,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-20T06:35:23Z",
+  "last_verified_at": "2026-09-22T06:33:55Z",
   "created_at": "2026-09-17T18:58:39Z",
-  "updated_at": "2026-09-20T06:35:23Z",
+  "updated_at": "2026-09-22T06:33:55Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -447,7 +447,8 @@
     "max": 200.0
   },
   "price_range_inr": {
-    "min": 19191.0,
-    "max": 19191.0
-  }
+    "min": 19188.0,
+    "max": 19188.0
+  },
+  "price": "19188.00"
 }

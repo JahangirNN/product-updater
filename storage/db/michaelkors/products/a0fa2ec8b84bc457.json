@@ -11,8 +11,8 @@
   "source_price": 359.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/75907a78-7fe0-4951-b4be-f1eda76506dc/30T6AZVH1L-165-0106_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/75907a78-7fe0-4951-b4be-f1eda76506dc/30T6AZVH1L-165-0106_1-tif",
@@ -29,14 +29,15 @@
       "source_price": 359.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/75907a78-7fe0-4951-b4be-f1eda76506dc/30T6AZVH1L-165-0106_1-tif",
       "option_values": [
         {
           "option_name": "Color",
           "name": "0106"
         }
-      ]
+      ],
+      "price_current": 34460.0
     }
   ],
   "options": [
@@ -77,13 +78,13 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-20T05:26:20Z",
+  "last_verified_at": "2026-09-22T05:26:07Z",
   "id": "a0fa2ec8b84bc457",
   "created_at": "2026-09-11T18:30:35Z",
-  "updated_at": "2026-09-20T05:26:20Z",
+  "updated_at": "2026-09-22T05:26:07Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Limited Edition Gwen Small Studded Hand Woven Leather Hobo Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Handle Drop:</strong> Handle drop: 10”(25.4cm)</li>\n      <li><strong>Material:</strong> Leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Antique gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Drawstring fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 599.5,
-  "compare_at_price": 57546,
+  "compare_at_price": 57574.0,
   "material": "Leather, 100% leather",
   "shopify_sync_pending": true
 }

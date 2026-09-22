@@ -57,7 +57,8 @@
           "option_name": "Size",
           "name": "US 5 / UK 3"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -76,7 +77,8 @@
           "option_name": "Size",
           "name": "US 5.5 / UK 3.5"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -95,7 +97,8 @@
           "option_name": "Size",
           "name": "US 6 / UK 4"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -114,7 +117,8 @@
           "option_name": "Size",
           "name": "US 6.5 / UK 4.5"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -126,14 +130,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef14_dei_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 7 / UK 5"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -145,14 +150,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef14_dei_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 7.5 / UK 5.5"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -164,14 +170,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef14_dei_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 8 / UK 6"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -183,14 +190,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef14_dei_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 8.5 / UK 6.5"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -209,7 +217,8 @@
           "option_name": "Size",
           "name": "US 9 / UK 7"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -228,7 +237,8 @@
           "option_name": "Size",
           "name": "US 9.5 / UK 7.5"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -247,7 +257,8 @@
           "option_name": "Size",
           "name": "US 10 / UK 8"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -266,7 +277,8 @@
           "option_name": "Size",
           "name": "US 11 / UK 9"
         }
-      ]
+      ],
+      "price_current": 14398.0
     }
   ],
   "product_options": [
@@ -321,11 +333,11 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:39:35Z",
-  "last_verified_at": "2026-09-20T05:23:58Z",
+  "last_verified_at": "2026-09-22T05:24:03Z",
   "id": "24309442ccd9460c",
   "product_id": "24309442ccd9460c",
   "store": "coach",
-  "updated_at": "2026-09-20T05:23:58Z",
+  "updated_at": "2026-09-22T05:24:03Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

@@ -10,7 +10,7 @@
   "source_price": 100.0,
   "source_compare_at_price": null,
   "current_price": 9599.0,
-  "compare_at_price": null,
+  "compare_at_price": 9604.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -66,7 +66,8 @@
           "option_name": "Color",
           "name": "Off White/Preloved Brown/Aurora Coffee"
         }
-      ]
+      ],
+      "price_current": 9599.0
     },
     {
       "id": null,
@@ -78,7 +79,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KI0404_01",
       "option_values": [
         {
@@ -93,7 +94,8 @@
           "option_name": "Color",
           "name": "Off White/Preloved Brown/Aurora Coffee"
         }
-      ]
+      ],
+      "price_current": 9599.0
     },
     {
       "id": null,
@@ -120,7 +122,8 @@
           "option_name": "Color",
           "name": "Off White/Preloved Brown/Aurora Coffee"
         }
-      ]
+      ],
+      "price_current": 9599.0
     },
     {
       "id": null,
@@ -147,7 +150,8 @@
           "option_name": "Color",
           "name": "Off White/Preloved Brown/Aurora Coffee"
         }
-      ]
+      ],
+      "price_current": 9599.0
     },
     {
       "id": null,
@@ -174,7 +178,8 @@
           "option_name": "Color",
           "name": "Off White/Preloved Brown/Aurora Coffee"
         }
-      ]
+      ],
+      "price_current": 9599.0
     },
     {
       "id": null,
@@ -201,7 +206,8 @@
           "option_name": "Color",
           "name": "Off White/Preloved Brown/Aurora Coffee"
         }
-      ]
+      ],
+      "price_current": 9599.0
     },
     {
       "id": null,
@@ -228,7 +234,8 @@
           "option_name": "Color",
           "name": "Off White/Preloved Brown/Aurora Coffee"
         }
-      ]
+      ],
+      "price_current": 9599.0
     }
   ],
   "product_options": [
@@ -303,7 +310,8 @@
   "groups": [
     "Nike Mind"
   ],
-  "last_verified_at": "2026-09-20T10:38:22Z",
+  "last_verified_at": "2026-09-22T06:23:47Z",
   "created_at": "2026-09-20T10:34:56Z",
-  "updated_at": "2026-09-20T10:38:22Z"
+  "updated_at": "2026-09-22T06:23:47Z",
+  "shopify_sync_pending": true
 }

@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-7329428-5",
   "source_price": 67.5,
   "source_compare_at_price": 90.0,
-  "current_price": 6477.0,
-  "compare_at_price": 8636.0,
+  "current_price": 6476.0,
+  "compare_at_price": 8635.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -182,7 +182,7 @@
       "source_compare_at_price": 90.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/28dc7806-dc7a-40f1-9d2e-a2e347ccab4d.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -531,9 +531,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-20T06:25:58Z",
+  "last_verified_at": "2026-09-22T06:26:40Z",
   "created_at": "2026-09-17T19:01:23Z",
-  "updated_at": "2026-09-20T06:25:58Z",
+  "updated_at": "2026-09-22T06:26:40Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -543,7 +543,8 @@
     "max": 67.5
   },
   "price_range_inr": {
-    "min": 6477.0,
-    "max": 6477.0
-  }
+    "min": 6476.0,
+    "max": 6476.0
+  },
+  "price": "6476.00"
 }

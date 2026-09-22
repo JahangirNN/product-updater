@@ -16,8 +16,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -74,7 +74,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IH8654_001_P1",
       "option_values": [
         {
@@ -343,6 +343,7 @@
     "shoes"
   ],
   "created_at": "2026-09-20T15:48:32Z",
-  "updated_at": "2026-09-20T15:54:17Z",
-  "last_verified_at": "2026-09-20T15:54:17Z"
+  "updated_at": "2026-09-21T22:23:44Z",
+  "last_verified_at": "2026-09-21T22:23:44Z",
+  "shopify_sync_pending": true
 }

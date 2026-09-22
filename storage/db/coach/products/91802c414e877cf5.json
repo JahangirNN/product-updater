@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Smooth calf leather",
   "specifications": {
     "Material": "Smooth calf leather",
@@ -52,14 +52,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cbi47_svsmu_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Silver/Deep Blue"
         }
-      ]
+      ],
+      "price_current": 9445.0
     }
   ],
   "product_options": [
@@ -81,11 +82,11 @@
     "men_bags"
   ],
   "created_at": "2026-09-13T00:44:06Z",
-  "last_verified_at": "2026-09-20T05:25:59Z",
+  "last_verified_at": "2026-09-22T05:26:22Z",
   "id": "91802c414e877cf5",
   "product_id": "91802c414e877cf5",
   "store": "coach",
-  "updated_at": "2026-09-20T05:25:59Z",
-  "is_active": false,
+  "updated_at": "2026-09-22T05:26:22Z",
+  "is_active": true,
   "shopify_sync_pending": true
 }

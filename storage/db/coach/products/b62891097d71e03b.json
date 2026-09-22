@@ -71,7 +71,8 @@
           "option_name": "Color",
           "name": "Silver/Tan Black"
         }
-      ]
+      ],
+      "price_current": 13343.0
     },
     {
       "id": null,
@@ -90,7 +91,8 @@
           "option_name": "Color",
           "name": "Silver/Black Signature"
         }
-      ]
+      ],
+      "price_current": 13343.0
     },
     {
       "id": null,
@@ -102,14 +104,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cey42_svyed_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Sv/Black Currant"
         }
-      ]
+      ],
+      "price_current": 13343.0
     }
   ],
   "product_options": [
@@ -137,11 +140,11 @@
     "men_bags"
   ],
   "created_at": "2026-09-13T00:45:52Z",
-  "last_verified_at": "2026-09-20T05:26:47Z",
+  "last_verified_at": "2026-09-22T05:27:21Z",
   "id": "b62891097d71e03b",
   "product_id": "b62891097d71e03b",
   "store": "coach",
-  "updated_at": "2026-09-20T05:26:47Z",
+  "updated_at": "2026-09-22T05:27:21Z",
   "is_active": true,
   "shopify_sync_pending": true
 }

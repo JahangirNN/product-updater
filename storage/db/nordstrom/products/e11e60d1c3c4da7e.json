@@ -9,8 +9,8 @@
   "source_sku": "ON-8899602-6",
   "source_price": 112.0,
   "source_compare_at_price": 160.0,
-  "current_price": 10754.0,
-  "compare_at_price": 15363.0,
+  "current_price": 10756.0,
+  "compare_at_price": 15366.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -46,7 +46,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/8c21a002-4e2b-47c7-954e-ad69e89601c2.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -100,7 +100,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/8c21a002-4e2b-47c7-954e-ad69e89601c2.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -127,7 +127,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/8c21a002-4e2b-47c7-954e-ad69e89601c2.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -154,7 +154,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/8c21a002-4e2b-47c7-954e-ad69e89601c2.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -181,7 +181,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/8c21a002-4e2b-47c7-954e-ad69e89601c2.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -431,11 +431,20 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-20T06:36:27Z",
+  "last_verified_at": "2026-09-22T04:32:57Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-20T06:36:27Z",
+  "updated_at": "2026-09-22T04:32:57Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": true,
+  "price_range_usd": {
+    "min": 112.0,
+    "max": 112.0
+  },
+  "price_range_inr": {
+    "min": 10756.0,
+    "max": 10756.0
+  },
+  "price": "10756.00"
 }

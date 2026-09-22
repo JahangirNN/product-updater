@@ -10,7 +10,7 @@
   "source_price": 155.0,
   "source_compare_at_price": null,
   "current_price": 14878.0,
-  "compare_at_price": null,
+  "compare_at_price": 14886.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -61,7 +61,8 @@
           "option_name": "Color",
           "name": "Black/Black"
         }
-      ]
+      ],
+      "price_current": 14878.0
     },
     {
       "id": null,
@@ -88,7 +89,8 @@
           "option_name": "Color",
           "name": "Black/Black"
         }
-      ]
+      ],
+      "price_current": 14878.0
     }
   ],
   "product_options": [
@@ -133,7 +135,7 @@
   "groups": [
     "ASICS Shoes"
   ],
-  "last_verified_at": "2026-09-20T10:38:23Z",
+  "last_verified_at": "2026-09-22T06:26:07Z",
   "created_at": "2026-09-20T10:34:57Z",
-  "updated_at": "2026-09-20T10:38:23Z"
+  "updated_at": "2026-09-22T06:26:07Z"
 }

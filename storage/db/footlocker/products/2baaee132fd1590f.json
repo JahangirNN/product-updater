@@ -10,12 +10,12 @@
   "source_price": 150.0,
   "source_compare_at_price": null,
   "current_price": 14398.0,
-  "compare_at_price": null,
+  "compare_at_price": 14406.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "color": "White/Black/Blue",
   "width": "Width - D - Medium",
   "material": "Premium upper with durable overlays and responsive traction outsole",
@@ -67,7 +67,8 @@
           "option_name": "Color",
           "name": "White/Black/Blue"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -94,7 +95,8 @@
           "option_name": "Color",
           "name": "White/Black/Blue"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -106,7 +108,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/1B974001_01",
       "option_values": [
         {
@@ -121,7 +123,8 @@
           "option_name": "Color",
           "name": "White/Black/Blue"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -148,7 +151,8 @@
           "option_name": "Color",
           "name": "White/Black/Blue"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -175,7 +179,8 @@
           "option_name": "Color",
           "name": "White/Black/Blue"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -202,7 +207,8 @@
           "option_name": "Color",
           "name": "White/Black/Blue"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -229,7 +235,8 @@
           "option_name": "Color",
           "name": "White/Black/Blue"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -256,7 +263,8 @@
           "option_name": "Color",
           "name": "White/Black/Blue"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -283,7 +291,8 @@
           "option_name": "Color",
           "name": "White/Black/Blue"
         }
-      ]
+      ],
+      "price_current": 14398.0
     },
     {
       "id": null,
@@ -310,7 +319,8 @@
           "option_name": "Color",
           "name": "White/Black/Blue"
         }
-      ]
+      ],
+      "price_current": 14398.0
     }
   ],
   "product_options": [
@@ -403,7 +413,8 @@
   "groups": [
     "ASICS Shoes"
   ],
-  "last_verified_at": "2026-09-20T10:38:23Z",
+  "last_verified_at": "2026-09-22T06:23:57Z",
   "created_at": "2026-09-20T10:34:57Z",
-  "updated_at": "2026-09-20T10:38:23Z"
+  "updated_at": "2026-09-22T06:23:57Z",
+  "shopify_sync_pending": true
 }

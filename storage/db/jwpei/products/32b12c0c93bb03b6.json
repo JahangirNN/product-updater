@@ -9,11 +9,11 @@
   "source_price": 119.0,
   "source_compare_at_price": 119.0,
   "current_price": 11419.0,
-  "compare_at_price": 11423.0,
+  "compare_at_price": 11428.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.957344,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Faux Suede",
   "specifications": {
     "Main Material": "Faux Suede",
@@ -448,12 +448,12 @@
   "groups": [
     "handbags"
   ],
-  "is_active": true,
+  "is_active": false,
   "shopify_sync_pending": true,
   "status": "DRAFT",
   "validation_warnings": [],
   "id": "32b12c0c93bb03b6",
   "created_at": "2026-09-19T11:15:34Z",
-  "updated_at": "2026-09-20T05:24:19Z",
-  "last_verified_at": "2026-09-20T05:24:19Z"
+  "updated_at": "2026-09-22T05:24:18Z",
+  "last_verified_at": "2026-09-22T05:24:18Z"
 }

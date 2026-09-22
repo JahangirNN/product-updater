@@ -57,7 +57,8 @@
           "option_name": "Size",
           "name": "US 5 / UK 3"
         }
-      ]
+      ],
+      "price_current": 3744.0
     },
     {
       "id": null,
@@ -76,7 +77,8 @@
           "option_name": "Size",
           "name": "US 6 / UK 4"
         }
-      ]
+      ],
+      "price_current": 3744.0
     },
     {
       "id": null,
@@ -88,14 +90,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cco02_blk_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 7 / UK 5"
         }
-      ]
+      ],
+      "price_current": 3744.0
     },
     {
       "id": null,
@@ -107,14 +110,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cco02_blk_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 8 / UK 6"
         }
-      ]
+      ],
+      "price_current": 3744.0
     },
     {
       "id": null,
@@ -133,7 +137,8 @@
           "option_name": "Size",
           "name": "US 9 / UK 7"
         }
-      ]
+      ],
+      "price_current": 3744.0
     },
     {
       "id": null,
@@ -145,14 +150,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cco02_blk_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 10 / UK 8"
         }
-      ]
+      ],
+      "price_current": 3744.0
     },
     {
       "id": null,
@@ -164,14 +170,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cco02_blk_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 11 / UK 9"
         }
-      ]
+      ],
+      "price_current": 3744.0
     }
   ],
   "product_options": [
@@ -211,11 +218,11 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:41:43Z",
-  "last_verified_at": "2026-09-20T05:24:54Z",
+  "last_verified_at": "2026-09-22T05:25:05Z",
   "id": "54124a1609f48bbe",
   "product_id": "54124a1609f48bbe",
   "store": "coach",
-  "updated_at": "2026-09-20T05:24:54Z",
+  "updated_at": "2026-09-22T05:25:05Z",
   "shopify_sync_pending": true,
   "is_active": true
 }

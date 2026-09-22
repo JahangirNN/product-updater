@@ -9,9 +9,9 @@
   "gender": "Men's",
   "sizing_category": "Adult",
   "source_sku": "3331871",
-  "source_price": 80.0,
+  "source_price": 120.0,
   "source_compare_at_price": null,
-  "current_price": 7679.0,
+  "current_price": 11524.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -102,7 +102,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/HF5441_118_P1",
       "option_values": [
         {
@@ -186,7 +186,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/HF5441_118_P1",
       "option_values": [
         {
@@ -214,7 +214,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/HF5441_118_P1",
       "option_values": [
         {
@@ -479,6 +479,7 @@
     "shoes"
   ],
   "created_at": "2026-09-20T16:06:31Z",
-  "updated_at": "2026-09-20T16:11:03Z",
-  "last_verified_at": "2026-09-20T16:11:03Z"
+  "updated_at": "2026-09-21T22:23:32Z",
+  "last_verified_at": "2026-09-21T22:23:32Z",
+  "shopify_sync_pending": true
 }

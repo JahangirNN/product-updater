@@ -16,8 +16,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -186,7 +186,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IF2624_100_P1",
       "option_values": [
         {
@@ -513,6 +513,7 @@
     "shoes"
   ],
   "created_at": "2026-09-20T15:46:22Z",
-  "updated_at": "2026-09-20T15:52:40Z",
-  "last_verified_at": "2026-09-20T15:52:40Z"
+  "updated_at": "2026-09-21T20:23:27Z",
+  "last_verified_at": "2026-09-21T20:23:27Z",
+  "shopify_sync_pending": true
 }

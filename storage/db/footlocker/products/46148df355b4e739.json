@@ -10,7 +10,7 @@
   "source_price": 180.0,
   "source_compare_at_price": null,
   "current_price": 17278.0,
-  "compare_at_price": null,
+  "compare_at_price": 17287.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -46,9 +46,9 @@
       "id": null,
       "sku": "203A5910-7.5",
       "title": "US 7.5 / UK 6.5 - Black/Black/Gold",
-      "price": "17278.00",
+      "price": "8638.00",
       "compare_at_price": null,
-      "source_price": 180.0,
+      "source_price": 89.99,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -67,15 +67,16 @@
           "option_name": "Color",
           "name": "Black/Black/Gold"
         }
-      ]
+      ],
+      "price_current": 8638.0
     },
     {
       "id": null,
       "sku": "203A5910-8",
       "title": "US 8 / UK 7 - Black/Black/Gold",
-      "price": "17278.00",
+      "price": "8638.00",
       "compare_at_price": null,
-      "source_price": 180.0,
+      "source_price": 89.99,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -94,7 +95,8 @@
           "option_name": "Color",
           "name": "Black/Black/Gold"
         }
-      ]
+      ],
+      "price_current": 8638.0
     },
     {
       "id": null,
@@ -121,7 +123,8 @@
           "option_name": "Color",
           "name": "Black/Black/Gold"
         }
-      ]
+      ],
+      "price_current": 17278.0
     },
     {
       "id": null,
@@ -148,15 +151,16 @@
           "option_name": "Color",
           "name": "Black/Black/Gold"
         }
-      ]
+      ],
+      "price_current": 17278.0
     },
     {
       "id": null,
       "sku": "203A5910-9.5",
       "title": "US 9.5 / UK 8.5 - Black/Black/Gold",
-      "price": "17278.00",
+      "price": "8638.00",
       "compare_at_price": null,
-      "source_price": 180.0,
+      "source_price": 89.99,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -175,7 +179,8 @@
           "option_name": "Color",
           "name": "Black/Black/Gold"
         }
-      ]
+      ],
+      "price_current": 8638.0
     },
     {
       "id": null,
@@ -202,15 +207,16 @@
           "option_name": "Color",
           "name": "Black/Black/Gold"
         }
-      ]
+      ],
+      "price_current": 17278.0
     },
     {
       "id": null,
       "sku": "203A5910-10.5",
       "title": "US 10.5 / UK 9.5 - Black/Black/Gold",
-      "price": "17278.00",
+      "price": "8638.00",
       "compare_at_price": null,
-      "source_price": 180.0,
+      "source_price": 89.99,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -229,15 +235,16 @@
           "option_name": "Color",
           "name": "Black/Black/Gold"
         }
-      ]
+      ],
+      "price_current": 8638.0
     },
     {
       "id": null,
       "sku": "203A5910-11",
       "title": "US 11 / UK 10 - Black/Black/Gold",
-      "price": "17278.00",
+      "price": "8638.00",
       "compare_at_price": null,
-      "source_price": 180.0,
+      "source_price": 89.99,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -256,15 +263,16 @@
           "option_name": "Color",
           "name": "Black/Black/Gold"
         }
-      ]
+      ],
+      "price_current": 8638.0
     },
     {
       "id": null,
       "sku": "203A5910-11.5",
       "title": "US 11.5 / UK 10.5 - Black/Black/Gold",
-      "price": "17278.00",
+      "price": "8638.00",
       "compare_at_price": null,
-      "source_price": 180.0,
+      "source_price": 89.99,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -283,7 +291,8 @@
           "option_name": "Color",
           "name": "Black/Black/Gold"
         }
-      ]
+      ],
+      "price_current": 8638.0
     },
     {
       "id": null,
@@ -310,15 +319,16 @@
           "option_name": "Color",
           "name": "Black/Black/Gold"
         }
-      ]
+      ],
+      "price_current": 17278.0
     },
     {
       "id": null,
       "sku": "203A5910-13",
       "title": "US 13 / UK 12 - Black/Black/Gold",
-      "price": "17278.00",
+      "price": "8638.00",
       "compare_at_price": null,
-      "source_price": 180.0,
+      "source_price": 89.99,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -337,7 +347,8 @@
           "option_name": "Color",
           "name": "Black/Black/Gold"
         }
-      ]
+      ],
+      "price_current": 8638.0
     }
   ],
   "product_options": [
@@ -436,7 +447,8 @@
   "groups": [
     "ASICS Shoes"
   ],
-  "last_verified_at": "2026-09-20T10:38:23Z",
+  "last_verified_at": "2026-09-22T06:24:13Z",
   "created_at": "2026-09-20T10:34:57Z",
-  "updated_at": "2026-09-20T10:38:23Z"
+  "updated_at": "2026-09-22T06:24:13Z",
+  "shopify_sync_pending": true
 }

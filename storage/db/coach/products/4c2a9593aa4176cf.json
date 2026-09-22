@@ -64,7 +64,8 @@
           "option_name": "Color",
           "name": "Silver/Black"
         }
-      ]
+      ],
+      "price_current": 17182.0
     },
     {
       "id": null,
@@ -83,7 +84,8 @@
           "option_name": "Color",
           "name": "Silver/Maple"
         }
-      ]
+      ],
+      "price_current": 17182.0
     },
     {
       "id": null,
@@ -102,7 +104,8 @@
           "option_name": "Color",
           "name": "Gunmetal/Tan/Black"
         }
-      ]
+      ],
+      "price_current": 17182.0
     },
     {
       "id": null,
@@ -114,14 +117,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdx87_svyzk_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Silver/Black Signature"
         }
-      ]
+      ],
+      "price_current": 17182.0
     },
     {
       "id": null,
@@ -140,7 +144,8 @@
           "option_name": "Color",
           "name": "Silver/Blue"
         }
-      ]
+      ],
+      "price_current": 15282.0
     }
   ],
   "product_options": [
@@ -174,11 +179,11 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:41:26Z",
-  "last_verified_at": "2026-09-20T05:24:46Z",
+  "last_verified_at": "2026-09-22T05:24:57Z",
   "id": "4c2a9593aa4176cf",
   "product_id": "4c2a9593aa4176cf",
   "store": "coach",
-  "updated_at": "2026-09-20T05:24:46Z",
+  "updated_at": "2026-09-22T05:24:57Z",
   "shopify_sync_pending": true,
   "is_active": true
 }

@@ -16,8 +16,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -270,7 +270,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IH2479_101_P1",
       "option_values": [
         {
@@ -581,6 +581,7 @@
     "women's-shoes"
   ],
   "created_at": "2026-09-20T16:10:35Z",
-  "updated_at": "2026-09-20T16:10:35Z",
-  "last_verified_at": "2026-09-20T16:10:35Z"
+  "updated_at": "2026-09-21T22:23:41Z",
+  "last_verified_at": "2026-09-21T22:23:41Z",
+  "shopify_sync_pending": true
 }

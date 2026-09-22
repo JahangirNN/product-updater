@@ -63,7 +63,8 @@
           "option_name": "Size",
           "name": "US 7 / UK 6.5"
         }
-      ]
+      ],
+      "price_current": 5951.0
     },
     {
       "id": null,
@@ -75,14 +76,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceg18_l77_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 7.5 / UK 7"
         }
-      ]
+      ],
+      "price_current": 5951.0
     },
     {
       "id": null,
@@ -94,14 +96,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceg18_l77_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 8 / UK 7.5"
         }
-      ]
+      ],
+      "price_current": 5951.0
     },
     {
       "id": null,
@@ -113,14 +116,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceg18_l77_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 8.5 / UK 8"
         }
-      ]
+      ],
+      "price_current": 5951.0
     },
     {
       "id": null,
@@ -139,7 +143,8 @@
           "option_name": "Size",
           "name": "US 9 / UK 8.5"
         }
-      ]
+      ],
+      "price_current": 5951.0
     },
     {
       "id": null,
@@ -151,14 +156,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceg18_l77_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 9.5 / UK 9"
         }
-      ]
+      ],
+      "price_current": 5951.0
     },
     {
       "id": null,
@@ -177,7 +183,8 @@
           "option_name": "Size",
           "name": "US 10 / UK 9.5"
         }
-      ]
+      ],
+      "price_current": 5951.0
     },
     {
       "id": null,
@@ -196,7 +203,8 @@
           "option_name": "Size",
           "name": "US 10.5 / UK 10"
         }
-      ]
+      ],
+      "price_current": 5951.0
     },
     {
       "id": null,
@@ -215,7 +223,8 @@
           "option_name": "Size",
           "name": "US 11 / UK 10.5"
         }
-      ]
+      ],
+      "price_current": 5951.0
     },
     {
       "id": null,
@@ -234,7 +243,8 @@
           "option_name": "Size",
           "name": "US 11.5 / UK 11"
         }
-      ]
+      ],
+      "price_current": 5951.0
     },
     {
       "id": null,
@@ -253,7 +263,8 @@
           "option_name": "Size",
           "name": "US 12 / UK 11.5"
         }
-      ]
+      ],
+      "price_current": 5951.0
     },
     {
       "id": null,
@@ -272,7 +283,8 @@
           "option_name": "Size",
           "name": "US 13 / UK 12.5"
         }
-      ]
+      ],
+      "price_current": 5951.0
     }
   ],
   "product_options": [
@@ -327,11 +339,11 @@
     "men_shoes"
   ],
   "created_at": "2026-09-12T22:59:58Z",
-  "last_verified_at": "2026-09-20T05:23:26Z",
+  "last_verified_at": "2026-09-22T05:23:26Z",
   "id": "01788df80c2760d4",
   "product_id": "01788df80c2760d4",
   "store": "coach",
-  "updated_at": "2026-09-20T05:23:26Z",
+  "updated_at": "2026-09-22T05:23:26Z",
   "shopify_sync_pending": true,
   "is_active": true
 }

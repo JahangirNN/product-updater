@@ -9,8 +9,8 @@
   "source_sku": "ON-8772935-7",
   "source_price": 160.0,
   "source_compare_at_price": 160.0,
-  "current_price": 15353.0,
-  "compare_at_price": 15353.0,
+  "current_price": 15366.0,
+  "compare_at_price": 15366.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -371,7 +371,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/df852b80-cbd8-4b60-be55-5d62ec706b3d.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -540,9 +540,18 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-20T06:32:02Z",
+  "last_verified_at": "2026-09-22T06:31:07Z",
   "created_at": "2026-09-17T14:19:11Z",
-  "updated_at": "2026-09-20T06:32:02Z",
+  "updated_at": "2026-09-22T06:31:07Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": true,
+  "price_range_usd": {
+    "min": 160.0,
+    "max": 160.0
+  },
+  "price_range_inr": {
+    "min": 15366.0,
+    "max": 15366.0
+  },
+  "price": "15366.00"
 }

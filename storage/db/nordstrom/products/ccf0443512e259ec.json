@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-8841027-10",
   "source_price": 190.0,
   "source_compare_at_price": 200.0,
-  "current_price": 18232.0,
-  "compare_at_price": 19191.0,
+  "current_price": 18229.0,
+  "compare_at_price": 19188.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -378,9 +378,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-20T05:40:25Z",
+  "last_verified_at": "2026-09-22T05:33:39Z",
   "created_at": "2026-09-17T18:55:08Z",
-  "updated_at": "2026-09-20T05:40:25Z",
+  "updated_at": "2026-09-22T05:33:39Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -390,7 +390,8 @@
     "max": 190.0
   },
   "price_range_inr": {
-    "min": 18232.0,
-    "max": 18232.0
-  }
+    "min": 18229.0,
+    "max": 18229.0
+  },
+  "price": "18229.00"
 }

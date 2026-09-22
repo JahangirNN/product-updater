@@ -10,12 +10,12 @@
   "source_price": 110.0,
   "source_compare_at_price": null,
   "current_price": 10559.0,
-  "compare_at_price": null,
+  "compare_at_price": 10564.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "color": "Grey/Black",
   "width": "Width - D - Medium",
   "material": "Premium upper with durable overlays and responsive traction outsole",
@@ -66,7 +66,8 @@
           "option_name": "Color",
           "name": "Grey/Black"
         }
-      ]
+      ],
+      "price_current": 10559.0
     },
     {
       "id": null,
@@ -93,7 +94,8 @@
           "option_name": "Color",
           "name": "Grey/Black"
         }
-      ]
+      ],
+      "price_current": 10559.0
     },
     {
       "id": null,
@@ -120,7 +122,8 @@
           "option_name": "Color",
           "name": "Grey/Black"
         }
-      ]
+      ],
+      "price_current": 10559.0
     },
     {
       "id": null,
@@ -147,7 +150,8 @@
           "option_name": "Color",
           "name": "Grey/Black"
         }
-      ]
+      ],
+      "price_current": 10559.0
     },
     {
       "id": null,
@@ -174,7 +178,8 @@
           "option_name": "Color",
           "name": "Grey/Black"
         }
-      ]
+      ],
+      "price_current": 10559.0
     },
     {
       "id": null,
@@ -201,7 +206,8 @@
           "option_name": "Color",
           "name": "Grey/Black"
         }
-      ]
+      ],
+      "price_current": 10559.0
     },
     {
       "id": null,
@@ -213,7 +219,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/3B045020_01",
       "option_values": [
         {
@@ -228,7 +234,8 @@
           "option_name": "Color",
           "name": "Grey/Black"
         }
-      ]
+      ],
+      "price_current": 10559.0
     },
     {
       "id": null,
@@ -255,7 +262,8 @@
           "option_name": "Color",
           "name": "Grey/Black"
         }
-      ]
+      ],
+      "price_current": 10559.0
     },
     {
       "id": null,
@@ -282,7 +290,8 @@
           "option_name": "Color",
           "name": "Grey/Black"
         }
-      ]
+      ],
+      "price_current": 10559.0
     },
     {
       "id": null,
@@ -309,7 +318,8 @@
           "option_name": "Color",
           "name": "Grey/Black"
         }
-      ]
+      ],
+      "price_current": 10559.0
     },
     {
       "id": null,
@@ -336,7 +346,8 @@
           "option_name": "Color",
           "name": "Grey/Black"
         }
-      ]
+      ],
+      "price_current": 10559.0
     }
   ],
   "product_options": [
@@ -435,7 +446,8 @@
   "groups": [
     "ASICS Shoes"
   ],
-  "last_verified_at": "2026-09-20T10:38:23Z",
+  "last_verified_at": "2026-09-22T06:24:22Z",
   "created_at": "2026-09-20T10:34:57Z",
-  "updated_at": "2026-09-20T10:38:23Z"
+  "updated_at": "2026-09-22T06:24:22Z",
+  "shopify_sync_pending": true
 }

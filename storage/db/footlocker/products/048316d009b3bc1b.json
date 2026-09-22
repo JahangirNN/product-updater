@@ -10,7 +10,7 @@
   "source_price": 162.49,
   "source_compare_at_price": 180.0,
   "current_price": 15597.0,
-  "compare_at_price": 17278.0,
+  "compare_at_price": 17287.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -50,7 +50,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42150702_01",
       "option_values": [
         {
@@ -65,7 +65,8 @@
           "option_name": "Color",
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
-      ]
+      ],
+      "price_current": 15597.0
     },
     {
       "id": null,
@@ -92,13 +93,14 @@
           "option_name": "Color",
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
-      ]
+      ],
+      "price_current": 15597.0
     },
     {
       "id": null,
       "sku": "42150702-8.5",
       "title": "US 8.5 / UK 7.5 - Black Spruce/Volt Tint/Lime Blast",
-      "price": "15597.00",
+      "price": "15605.00",
       "compare_at_price": "17278.00",
       "source_price": 162.49,
       "source_compare_at_price": 180.0,
@@ -119,7 +121,8 @@
           "option_name": "Color",
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
-      ]
+      ],
+      "price_current": 15605.0
     },
     {
       "id": null,
@@ -146,15 +149,16 @@
           "option_name": "Color",
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
-      ]
+      ],
+      "price_current": 15597.0
     },
     {
       "id": null,
       "sku": "42150702-9.5",
       "title": "US 9.5 / UK 8.5 - Black Spruce/Volt Tint/Lime Blast",
-      "price": "15597.00",
+      "price": "12478.00",
       "compare_at_price": "17278.00",
-      "source_price": 162.49,
+      "source_price": 129.99,
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -173,19 +177,20 @@
           "option_name": "Color",
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
-      ]
+      ],
+      "price_current": 12478.0
     },
     {
       "id": null,
       "sku": "42150702-10",
       "title": "US 10 / UK 9 - Black Spruce/Volt Tint/Lime Blast",
-      "price": "15597.00",
+      "price": "15605.00",
       "compare_at_price": "17278.00",
       "source_price": 162.49,
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42150702_01",
       "option_values": [
         {
@@ -200,7 +205,8 @@
           "option_name": "Color",
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
-      ]
+      ],
+      "price_current": 15605.0
     },
     {
       "id": null,
@@ -227,7 +233,8 @@
           "option_name": "Color",
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
-      ]
+      ],
+      "price_current": 15597.0
     },
     {
       "id": null,
@@ -239,7 +246,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42150702_01",
       "option_values": [
         {
@@ -254,15 +261,16 @@
           "option_name": "Color",
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
-      ]
+      ],
+      "price_current": 15597.0
     },
     {
       "id": null,
       "sku": "42150702-11.5",
       "title": "US 11.5 / UK 10.5 - Black Spruce/Volt Tint/Lime Blast",
-      "price": "15597.00",
+      "price": "12478.00",
       "compare_at_price": "17278.00",
-      "source_price": 162.49,
+      "source_price": 129.99,
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -281,7 +289,8 @@
           "option_name": "Color",
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
-      ]
+      ],
+      "price_current": 12478.0
     },
     {
       "id": null,
@@ -293,7 +302,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42150702_01",
       "option_values": [
         {
@@ -308,15 +317,16 @@
           "option_name": "Color",
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
-      ]
+      ],
+      "price_current": 15597.0
     },
     {
       "id": null,
       "sku": "42150702-12.5",
       "title": "US 12.5 / UK 11.5 - Black Spruce/Volt Tint/Lime Blast",
-      "price": "15597.00",
+      "price": "17278.00",
       "compare_at_price": "17278.00",
-      "source_price": 162.49,
+      "source_price": 180.0,
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -335,7 +345,8 @@
           "option_name": "Color",
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
-      ]
+      ],
+      "price_current": 17278.0
     },
     {
       "id": null,
@@ -362,7 +373,8 @@
           "option_name": "Color",
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
-      ]
+      ],
+      "price_current": 15597.0
     },
     {
       "id": null,
@@ -374,7 +386,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42150702_01",
       "option_values": [
         {
@@ -389,15 +401,16 @@
           "option_name": "Color",
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
-      ]
+      ],
+      "price_current": 15597.0
     },
     {
       "id": null,
       "sku": "42150702-15",
       "title": "US 15 / UK 14 - Black Spruce/Volt Tint/Lime Blast",
-      "price": "15597.00",
+      "price": "17278.00",
       "compare_at_price": "17278.00",
-      "source_price": 162.49,
+      "source_price": 180.0,
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -416,7 +429,8 @@
           "option_name": "Color",
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
-      ]
+      ],
+      "price_current": 17278.0
     }
   ],
   "product_options": [
@@ -533,7 +547,8 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-20T10:38:21Z",
+  "last_verified_at": "2026-09-22T06:23:25Z",
   "created_at": "2026-09-18T20:48:02Z",
-  "updated_at": "2026-09-20T10:38:21Z"
+  "updated_at": "2026-09-22T06:23:25Z",
+  "shopify_sync_pending": true
 }

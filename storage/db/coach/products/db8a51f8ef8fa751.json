@@ -58,7 +58,8 @@
           "option_name": "Color",
           "name": "Brass/Black"
         }
-      ]
+      ],
+      "price_current": 9119.0
     },
     {
       "id": null,
@@ -77,7 +78,8 @@
           "option_name": "Color",
           "name": "Brass/Chalk"
         }
-      ]
+      ],
+      "price_current": 9119.0
     },
     {
       "id": null,
@@ -96,7 +98,8 @@
           "option_name": "Color",
           "name": "Brass/Maple"
         }
-      ]
+      ],
+      "price_current": 9119.0
     },
     {
       "id": null,
@@ -115,7 +118,8 @@
           "option_name": "Color",
           "name": "Brass/Black Currant"
         }
-      ]
+      ],
+      "price_current": 9119.0
     },
     {
       "id": null,
@@ -134,7 +138,8 @@
           "option_name": "Color",
           "name": "Brass/Vanilla"
         }
-      ]
+      ],
+      "price_current": 4560.0
     },
     {
       "id": null,
@@ -153,7 +158,8 @@
           "option_name": "Color",
           "name": "Brass/Dark Peach"
         }
-      ]
+      ],
+      "price_current": 4560.0
     },
     {
       "id": null,
@@ -172,7 +178,8 @@
           "option_name": "Color",
           "name": "Brass/Dark Fuchsia"
         }
-      ]
+      ],
+      "price_current": 9119.0
     },
     {
       "id": null,
@@ -191,7 +198,8 @@
           "option_name": "Color",
           "name": "Silver/Burnished Amber"
         }
-      ]
+      ],
+      "price_current": 9119.0
     },
     {
       "id": null,
@@ -210,7 +218,8 @@
           "option_name": "Color",
           "name": "Silver/Black"
         }
-      ]
+      ],
+      "price_current": 9119.0
     },
     {
       "id": null,
@@ -229,7 +238,8 @@
           "option_name": "Color",
           "name": "Brass/Maple"
         }
-      ]
+      ],
+      "price_current": 7199.0
     },
     {
       "id": null,
@@ -248,7 +258,8 @@
           "option_name": "Color",
           "name": "Brass/Tan Caramel"
         }
-      ]
+      ],
+      "price_current": 7199.0
     },
     {
       "id": null,
@@ -267,7 +278,8 @@
           "option_name": "Color",
           "name": "Brass/Denim"
         }
-      ]
+      ],
+      "price_current": 9119.0
     },
     {
       "id": null,
@@ -305,7 +317,8 @@
           "option_name": "Color",
           "name": "Black Signature"
         }
-      ]
+      ],
+      "price_current": 7199.0
     },
     {
       "id": null,
@@ -324,7 +337,8 @@
           "option_name": "Color",
           "name": "Grey Signature"
         }
-      ]
+      ],
+      "price_current": 7199.0
     },
     {
       "id": null,
@@ -343,7 +357,8 @@
           "option_name": "Color",
           "name": "Brass/Chalk"
         }
-      ]
+      ],
+      "price_current": 7199.0
     },
     {
       "id": null,
@@ -362,7 +377,8 @@
           "option_name": "Color",
           "name": "Brass/Black"
         }
-      ]
+      ],
+      "price_current": 7199.0
     },
     {
       "id": null,
@@ -381,7 +397,8 @@
           "option_name": "Color",
           "name": "Black"
         }
-      ]
+      ],
+      "price_current": 7199.0
     },
     {
       "id": null,
@@ -393,14 +410,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cu220_chk_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Chalk"
         }
-      ]
+      ],
+      "price_current": 4320.0
     }
   ],
   "product_options": [
@@ -467,11 +485,11 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:47:27Z",
-  "last_verified_at": "2026-09-20T05:27:28Z",
+  "last_verified_at": "2026-09-22T05:29:57Z",
   "id": "db8a51f8ef8fa751",
   "product_id": "db8a51f8ef8fa751",
   "store": "coach",
-  "updated_at": "2026-09-20T05:27:28Z",
+  "updated_at": "2026-09-22T05:29:57Z",
   "shopify_sync_pending": true,
   "is_active": true
 }

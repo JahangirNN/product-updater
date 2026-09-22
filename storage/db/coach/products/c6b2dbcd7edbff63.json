@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Rubber lining, coated Signature jacquard canvas footbed",
   "specifications": {
     "Heel Height": "Heel Height: 0.25\"",
@@ -70,7 +70,8 @@
           "option_name": "Size",
           "name": "US 5 / UK 3"
         }
-      ]
+      ],
+      "price_current": 3648.0
     },
     {
       "id": null,
@@ -89,7 +90,8 @@
           "option_name": "Size",
           "name": "US 6 / UK 4"
         }
-      ]
+      ],
+      "price_current": 3648.0
     },
     {
       "id": null,
@@ -108,7 +110,8 @@
           "option_name": "Size",
           "name": "US 7 / UK 5"
         }
-      ]
+      ],
+      "price_current": 3648.0
     },
     {
       "id": null,
@@ -127,7 +130,8 @@
           "option_name": "Size",
           "name": "US 8 / UK 6"
         }
-      ]
+      ],
+      "price_current": 3648.0
     },
     {
       "id": null,
@@ -146,7 +150,8 @@
           "option_name": "Size",
           "name": "US 9 / UK 7"
         }
-      ]
+      ],
+      "price_current": 3648.0
     },
     {
       "id": null,
@@ -165,7 +170,8 @@
           "option_name": "Size",
           "name": "US 10 / UK 8"
         }
-      ]
+      ],
+      "price_current": 3648.0
     },
     {
       "id": null,
@@ -177,14 +183,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef39_ckj_a0",
       "option_values": [
         {
           "option_name": "Size",
           "name": "US 11 / UK 9"
         }
-      ]
+      ],
+      "price_current": 3648.0
     }
   ],
   "product_options": [
@@ -224,11 +231,11 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:46:29Z",
-  "last_verified_at": "2026-09-20T05:27:05Z",
+  "last_verified_at": "2026-09-22T05:28:09Z",
   "id": "c6b2dbcd7edbff63",
   "product_id": "c6b2dbcd7edbff63",
   "store": "coach",
-  "updated_at": "2026-09-20T05:27:05Z",
+  "updated_at": "2026-09-22T05:28:09Z",
   "shopify_sync_pending": true,
-  "is_active": true
+  "is_active": false
 }

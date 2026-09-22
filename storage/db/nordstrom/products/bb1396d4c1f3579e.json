@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-8077406-7",
   "source_price": 140.0,
   "source_compare_at_price": 140.0,
-  "current_price": 13434.0,
-  "compare_at_price": 13434.0,
+  "current_price": 13439.0,
+  "compare_at_price": 13439.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -432,9 +432,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-20T06:32:23Z",
+  "last_verified_at": "2026-09-22T06:31:32Z",
   "created_at": "2026-09-18T06:49:28Z",
-  "updated_at": "2026-09-20T06:32:23Z",
+  "updated_at": "2026-09-22T06:31:32Z",
   "is_active": true,
   "shopify_sync_pending": true,
   "price_range_usd": {
@@ -442,7 +442,8 @@
     "max": 140.0
   },
   "price_range_inr": {
-    "min": 13434.0,
-    "max": 13434.0
-  }
+    "min": 13439.0,
+    "max": 13439.0
+  },
+  "price": "13439.00"
 }

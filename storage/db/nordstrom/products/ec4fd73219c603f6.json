@@ -9,12 +9,12 @@
   "source_sku": "ON-9009492-6",
   "source_price": 84.0,
   "source_compare_at_price": null,
-  "current_price": 8063.0,
+  "current_price": 8059.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Synthetic and textile upper and lining, rubber sole",
   "specifications": {
     "Brand": "NORDSTROM",
@@ -131,7 +131,7 @@
       "source_compare_at_price": 140.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/fb2560fb-f556-44b6-a0d0-106c445ac043.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -320,7 +320,7 @@
       "source_compare_at_price": 140.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/fb2560fb-f556-44b6-a0d0-106c445ac043.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -502,18 +502,19 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-20T06:38:08Z",
+  "last_verified_at": "2026-09-22T04:34:07Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-20T06:38:08Z",
+  "updated_at": "2026-09-22T04:34:07Z",
   "price_range_usd": {
     "min": 84.0,
     "max": 84.0
   },
   "price_range_inr": {
-    "min": 8063.0,
-    "max": 8063.0
+    "min": 8059.0,
+    "max": 8059.0
   },
   "status": "ACTIVE",
-  "is_active": true,
-  "shopify_sync_pending": true
+  "is_active": false,
+  "shopify_sync_pending": true,
+  "price": "8059.00"
 }
