@@ -110,6 +110,7 @@ All engineering decisions are recorded and immutably numbered in [`docs/adr/`](.
 | **[0014](./docs/adr/0014-two-tier-collection-fast-sweep-and-route-blocked-pdp-delta-engine.md)** | Two-Tier Collection Fast-Sweep & Route-Blocked PDP Delta Engine | Accepted |
 | **[0015](./docs/adr/0015-variant-stock-cascade-phantom-delta-elimination-and-cross-brand-integrity.md)** | Parent-Child Availability Cascade, Phantom Delta Elimination & Granular Variant State Harmonization | Accepted |
 | **[0016](./docs/adr/0016-jdsports-store-onboarding-and-multi-tier-footwear-sizing.md)** | JD Sports Store Onboarding, Multi-Tier Footwear Sizing Architecture & Cross-Sibling Swatch Ingestion | Accepted |
+| **[0017](./docs/adr/0017-zero-token-local-camoufox-stealth-browser-akamai-solver-and-early-cooldown-resilience.md)** | Zero-Token Local Camoufox Stealth Browser Akamai Solver, DOM-Level React Hydration Sync & Cooldown Resilience | Accepted |
 
 ---
 
