@@ -60,6 +60,17 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
                 "message": "Product delisted (HTTP 404)"
             }
 
+        if status_code in (403, 429):
+            elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
+            return {
+                "status": "rate_limited",
+                "price_usd": 0.0,
+                "availability": "unknown",
+                "variants": [],
+                "elapsed_ms": elapsed_ms,
+                "error": f"Akamai Bot Manager Rate Limit (HTTP {status_code} - temporary IP cooldown)"
+            }
+
         # Poll live DOM for ProductGroup / Product JSON-LD
         pg = None
         for _ in range(24):  # up to 12 seconds max wait for React hydration
