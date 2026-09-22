@@ -7,6 +7,7 @@ import os
 import sys
 import json
 import time
+import re
 from typing import Dict, Any, List, Tuple, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -260,6 +261,70 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
             return "Dunk Low"
         return "Nike Footwear"
 
+    # Jomashop Luxury & Designer Watches Taxonomy (ADR 0018)
+    if source_store == "jomashop":
+        vendor = str(product.get("vendor") or "").lower()
+        series = str(specs.get("Series") or "").lower()
+        t_check = f"{vendor} {series} {title_lower} {handle_lower}"
+
+        # 1. Versace: Chrono, Greca, Hellenyium, V-Chrono/Contempo
+        if "versace" in vendor or "versace" in t_check:
+            if any(w in t_check for w in ["v-chrono", "v-contempo", "contempo"]):
+                return "V-Chrono/Contempo"
+            if "hellenyium" in t_check:
+                return "Hellenyium"
+            if any(w in t_check for w in ["greca", "greek"]):
+                return "Greca"
+            if any(w in t_check for w in ["sport chrono", "chrono master", "chrono"]):
+                return "Chrono"
+            return "Greca"
+
+        # 2. Tissot: PRX, Seastar, Chronograph / Sports, Classic / Powermatic 80
+        if "tissot" in vendor or "tissot" in t_check:
+            if "prx" in t_check:
+                return "PRX"
+            if "seastar" in t_check:
+                return "Seastar"
+            if any(w in t_check for w in ["pr516", "chronograph", "chrono"]):
+                return "Chronograph / Sports"
+            if any(w in t_check for w in ["chemin des tourelles", "carson", "le locle", "powermatic 80", "t-classic", "lady heart"]):
+                return "Classic / Powermatic 80"
+            return "Classic / Powermatic 80"
+
+        # 3. Seiko: 5 Sports, Prospex, Presage, Chronograph / Essentials
+        if "seiko" in vendor or "seiko" in t_check:
+            if any(w in t_check for w in ["5 sports", "seiko 5", "5 sport"]):
+                return "5 Sports"
+            if "prospex" in t_check:
+                return "Prospex"
+            if "presage" in t_check:
+                return "Presage"
+            if any(w in t_check for w in ["chronograph", "essentials", "quartz", "sport"]):
+                return "Chronograph / Essentials"
+            return "Chronograph / Essentials"
+
+        # 4. Citizen: Promaster, Tsuyosa, Sport Luxury / Navihawk
+        if "citizen" in vendor or "citizen" in t_check:
+            if "tsuyosa" in t_check:
+                return "Tsuyosa"
+            if any(w in t_check for w in ["navihawk", "skyhawk", "sport luxury", "sport automatic", "sports"]):
+                return "Sport Luxury / Navihawk"
+            if "promaster" in t_check:
+                return "Promaster"
+            return "Sport Luxury / Navihawk"
+
+        # 5. Michael Kors: Runway / Slim Runway, Lexington / Bradshaw, Parker / Corey
+        if "michael kors" in vendor or "michael kors" in t_check or "mk" in t_check:
+            if any(w in t_check for w in ["slim runway", "runway"]):
+                return "Runway / Slim Runway"
+            if any(w in t_check for w in ["lexington", "petite lexington", "bradshaw", "billie"]):
+                return "Lexington / Bradshaw"
+            if any(w in t_check for w in ["parker", "corey"]):
+                return "Parker / Corey"
+            return "Runway / Slim Runway"
+
+        return "Watches"
+
     # Handbags taxonomy for JW PEI
     style = specs.get("Carrying Style", "").lower() or specs.get("Carrying Method", "").lower()
 
@@ -494,6 +559,16 @@ def export_catalog(
                     group_display = "Women's Shoes"
                 else:
                     group_display = "Men's Shoes"
+            elif s_store == "jomashop":
+                store_display = "Jomashop"
+                gender = prod.get("gender") or (prod.get("specifications") or {}).get("Gender") or ""
+                gender_text = f"{str(gender)} {str(prod.get('title', ''))}".lower()
+                if re.search(r"\b(women|womens|women\'s|ladies|lady)\b", gender_text):
+                    group_display = "Women's Watches"
+                elif re.search(r"\bunisex\b", gender_text):
+                    group_display = "Unisex Watches"
+                else:
+                    group_display = "Men's Watches"
             else:
                 store_display = prod.get("vendor", "Other")
                 group_display = prod.get("product_type", "Handbags")

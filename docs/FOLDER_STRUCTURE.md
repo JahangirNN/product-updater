@@ -45,7 +45,8 @@ product-updater/
 │       ├── 0014-two-tier-collection-fast-sweep-and-route-blocked-pdp-delta-engine.md
 │       ├── 0015-variant-stock-cascade-phantom-delta-elimination-and-cross-brand-integrity.md
 │       ├── 0016-jdsports-store-onboarding-and-multi-tier-footwear-sizing.md
-│       └── 0017-zero-token-local-camoufox-stealth-browser-akamai-solver-and-early-cooldown-resilience.md
+│       ├── 0017-zero-token-local-camoufox-stealth-browser-akamai-solver-and-early-cooldown-resilience.md
+│       └── 0018-jomashop-xmode-onboarding.md
 │
 ├── frontend/                        # Mobile-First Catalog Data Viewer (React + Vite + Tailwind)
 │   ├── public/data/
@@ -92,7 +93,9 @@ product-updater/
 │       │   └── products/            # Individual JSON documents
 │       ├── footlocker/              # Foot Locker retailer partition (95 products)
 │       │   └── products/            # Individual JSON documents
-│       └── jdsports/                # JD Sports retailer partition (~514 products)
+│       ├── jdsports/                # JD Sports retailer partition (~514 products)
+│       │   └── products/            # Individual JSON documents
+│       └── jomashop/                # Jomashop retailer partition (456 products)
 │           └── products/            # Individual JSON documents
 │
 ├── stores/                          # [SCREAMING ARCHITECTURE] Self-contained store modules
@@ -127,11 +130,16 @@ product-updater/
 │   │   ├── inflow.py                # Ingestion normalizer with Nike US/UK/EU sizing & anti-truncation enforcement
 │   │   └── delta.py                 # Rate-limited SSR delta checker & variant inventory synchronizer
 │   │
-│   └── jdsports/                    # Concrete JD Sports implementation
-│       ├── LEARNINGS.md             # Living notes: Nike collections, Akamai WAF, multi-tier sizing, JSON-LD
-│       ├── camoufox_solver.py       # Zero-cost local stealth browser Akamai solver & DOM hydration extractor
-│       ├── inflow.py                # Ingestion normalizer with multi-tier sizing classification & conversion
-│       └── delta.py                 # Pure delta checker & variant inventory synchronizer
+│   ├── jdsports/                    # Concrete JD Sports implementation
+│   │   ├── LEARNINGS.md             # Living notes: Nike collections, Akamai WAF, multi-tier sizing, JSON-LD
+│   │   ├── camoufox_solver.py       # Zero-cost local stealth browser Akamai solver & DOM hydration extractor
+│   │   ├── inflow.py                # Ingestion normalizer with multi-tier sizing classification & conversion
+│   │   └── delta.py                 # Pure delta checker & variant inventory synchronizer
+│   │
+│   └── jomashop/                    # Concrete Jomashop implementation
+│       ├── LEARNINGS.md             # Living notes: Magento 2 GraphQL, case diameter sizing, tech specs
+│       ├── inflow.py                # Ingestion normalizer with GraphQL harvesting & watch spec builder
+│       └── delta.py                 # Zero-token Apollo GraphQL delta checker & stock cascade engine
 │
 ├── sync_catalog.py                  # Universal multi-store delta engine & systematic scheduler
 ├── test_delta_engine.py             # Automated unit & integration test suite for delta engine

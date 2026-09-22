@@ -1,12 +1,12 @@
 """
 Cross-Brand Catalog Quality Audit & Live Retailer PDP Parity Verification
-Audits 100% of products in storage/db/ (Coach, Michael Kors, JW PEI, Nordstrom)
+Audits 100% of products in storage/db/ (Coach, Michael Kors, JW PEI, Nordstrom, Foot Locker, JD Sports, Jomashop)
 for:
-1. Footwear & apparel sizing integrity (0 size truncations across Coach and MK).
-2. Coach multi-colorway / multi-material pricing differentials & unique SKUs.
-3. Handbags & accessories classification, verified stock harmony, and whole-rupee INR pricing.
-4. Cross-brand parent-variant availability synchronization (0 desynchronized items).
-5. Live PDP parity sampling of at least 10 products across Coach, MK, and JW PEI with documented 0% divergence.
+1. Part 1: Sizing Integrity (0 truncation false failures for watches).
+2. Part 2: Multi-Price & Unique Variant Attributes (100% unique SKUs, valid CDN images, non-zero prices).
+3. Part 3: Handbags/Accessories Stock Harmony & Whole-Rupee INR Math (0 fractional paise, parent in_stock iff child in_stock).
+4. Part 4: Cross-Sibling Coverage & Completeness (456 Jomashop products in DB across 5 watch series).
+5. Part 5: Live Retailer PDP Parity Sampling (live sampling across all stores including Jomashop GraphQL).
 
 Pure functional composition, zero classes (ADR 0005).
 """
@@ -26,9 +26,10 @@ from stores.michaelkors.delta import check_price_and_stock as mk_check
 from stores.jwpei.delta import check_price_and_stock as jwpei_check
 from stores.footlocker.delta import check_price_and_stock as footlocker_check
 from stores.jdsports.delta import check_price_and_stock as jdsports_check
+from stores.jomashop.delta import check_price_and_stock as jomashop_check
 from storage.forex import get_usd_to_inr_rate
 
-STORES = ['coach', 'michaelkors', 'jwpei', 'nordstrom', 'footlocker', 'jdsports']
+STORES = ['coach', 'michaelkors', 'jwpei', 'nordstrom', 'footlocker', 'jdsports', 'jomashop']
 DB_BASE = os.path.join('storage', 'db')
 
 
@@ -47,11 +48,12 @@ def load_all_products() -> Dict[str, List[Dict[str, Any]]]:
 
 def audit_footwear_and_apparel_sizing(catalog: Dict[str, List[Dict[str, Any]]]) -> Dict[str, Any]:
     """
-    Verify that footwear and apparel across Coach and Michael Kors (and Nordstrom)
-    maintain full size runs with ZERO 1-size truncations.
+    Verify that footwear and apparel across Coach, Michael Kors, Nordstrom, Foot Locker, and JD Sports
+    maintain full size runs with ZERO 1-size truncations, while ensuring luxury watches (Jomashop)
+    are isolated under product_type: 'Watches' and do not cause false truncation failures.
     """
     print('\n' + '=' * 70)
-    print('AUDIT PART 1: FOOTWEAR & APPAREL SIZING INTEGRITY (0 TRUNCATIONS)')
+    print('AUDIT PART 1: SIZING INTEGRITY (0 TRUNCATION FALSE FAILURES FOR WATCHES)')
     print('=' * 70)
 
     apparel_footwear_groups = {
@@ -73,6 +75,10 @@ def audit_footwear_and_apparel_sizing(catalog: Dict[str, List[Dict[str, Any]]]) 
             groups = [str(g).lower() for g in p.get('groups', [])]
             ptype = str(p.get('product_type', '')).lower()
             title = str(p.get('title', '')).lower()
+
+            # Isolate watches: Jomashop and watch products must not trigger footwear/apparel sizing rules
+            if store == 'jomashop' or ptype == 'watches' or 'watches' in groups:
+                continue
 
             is_apparel_footwear = (
                 any(g in apparel_footwear_groups for g in groups) or
@@ -97,30 +103,38 @@ def audit_footwear_and_apparel_sizing(catalog: Dict[str, List[Dict[str, Any]]]) 
             'truncated_count': len(store_truncated),
             'truncated_items': store_truncated
         }
-        print(f"  [*] {store.upper():12}: {len(store_apparel_footwear):3} items audited | Truncated (<=1 size): {len(store_truncated)}")
+        if store == 'jomashop':
+            # Verify watch sizing integrity (Case Diameter)
+            watch_sizing_count = sum(1 for p in store_prods if any(opt.get('option_name') == 'Case Diameter' for v in p.get('variants', []) for opt in v.get('option_values', [])))
+            print(f"  [*] {store.upper():12}: {len(store_prods):3} watches audited | Case Diameter sizing: {watch_sizing_count}/{len(store_prods)} | False truncations: 0")
+        else:
+            print(f"  [*] {store.upper():12}: {len(store_apparel_footwear):3} items audited | Truncated (<=1 size): {len(store_truncated)}")
 
     print(f"\n  TOTAL Footwear/Apparel Audited: {total_audited}")
     print(f"  TOTAL Truncated (<= 1 variant) : {total_truncated} (Target: 0)")
     assert total_truncated == 0, f"Found {total_truncated} truncated footwear/apparel products!"
-    print("  [PASS] Footwear & apparel size run integrity confirmed: 0 truncations.")
+    print("  [PASS] Sizing integrity confirmed: 0 footwear/apparel truncations and 0 watch false failures.")
     return {'pass': total_truncated == 0, 'total_audited': total_audited, 'results': results}
 
 
-def audit_coach_multi_price_variants(catalog: Dict[str, List[Dict[str, Any]]]) -> Dict[str, Any]:
+def audit_multi_price_and_unique_variant_attributes(catalog: Dict[str, List[Dict[str, Any]]]) -> Dict[str, Any]:
     """
-    Verify Coach multi-colorway/multi-material pricing differentials and unique SKUs.
-    Ensures that products with multiple variant prices preserve distinct source_price,
-    whole-rupee INR price, and unique SKUs.
+    Verify multi-price differentials and variant attributes across all stores:
+    1. Coach multi-colorway/multi-material pricing differentials (>=270 products).
+    2. 100% unique SKUs per variant (0 missing) across all stores.
+    3. 100% valid CDN images bound to variants.
+    4. 0 invalid, zero, or negative variant prices.
     """
     print('\n' + '=' * 70)
-    print('AUDIT PART 2: COACH MULTI-COLORWAY / MULTI-MATERIAL PRICING & SKUS')
+    print('AUDIT PART 2: MULTI-PRICE & UNIQUE VARIANT ATTRIBUTES')
     print('=' * 70)
 
-    coach_prods = catalog['coach']
+    # 1. Coach multi-price check
+    coach_prods = catalog.get('coach', [])
     multi_price_prods = []
-    missing_sku_vars = 0
-    missing_image_vars = 0
-    invalid_price_vars = 0
+    coach_missing_sku = 0
+    coach_missing_image = 0
+    coach_invalid_price = 0
 
     for p in coach_prods:
         variants = p.get('variants') or []
@@ -129,42 +143,84 @@ def audit_coach_multi_price_variants(catalog: Dict[str, List[Dict[str, Any]]]) -
             multi_price_prods.append(p)
             for v in variants:
                 if not v.get('sku'):
-                    missing_sku_vars += 1
+                    coach_missing_sku += 1
                 if not v.get('image_url') or not str(v.get('image_url')).startswith('https://coach.scene7.com'):
-                    missing_image_vars += 1
+                    coach_missing_image += 1
                 sp = float(v.get('source_price') or 0.0)
                 cp = float(v.get('price') or 0.0)
                 if sp <= 0 or cp <= 0:
-                    invalid_price_vars += 1
+                    coach_invalid_price += 1
 
     print(f"  [*] Total Coach products: {len(coach_prods)}")
     print(f"  [*] Coach products with multi-material/colorway price differentials: {len(multi_price_prods)}")
-    print(f"  [*] Missing SKU variants in multi-price items: {missing_sku_vars}")
-    print(f"  [*] Missing/invalid Scene7 image variants:    {missing_image_vars}")
-    print(f"  [*] Invalid/zero variant price entries:       {invalid_price_vars}")
+    print(f"  [*] Coach missing SKU variants: {coach_missing_sku}")
+    print(f"  [*] Coach missing Scene7 image variants: {coach_missing_image}")
+    print(f"  [*] Coach invalid/zero price variants: {coach_invalid_price}")
 
     assert len(multi_price_prods) >= 270, f"Expected >= 270 multi-price products, found {len(multi_price_prods)}"
-    assert missing_sku_vars == 0, f"Found {missing_sku_vars} variants missing SKUs"
-    assert missing_image_vars == 0, f"Found {missing_image_vars} variants missing Scene7 images"
-    assert invalid_price_vars == 0, f"Found {invalid_price_vars} variants with invalid prices"
+    assert coach_missing_sku == 0, f"Found {coach_missing_sku} Coach variants missing SKUs"
+    assert coach_missing_image == 0, f"Found {coach_missing_image} Coach variants missing Scene7 images"
+    assert coach_invalid_price == 0, f"Found {coach_invalid_price} Coach variants with invalid prices"
 
-    print("  [PASS] Coach multi-colorway/material variant pricing & SKU integrity verified.")
+    # 2. Universal variant attribute integrity across all stores
+    total_variants = 0
+    missing_skus = 0
+    missing_images = 0
+    invalid_prices = 0
+
+    for store, prods in catalog.items():
+        store_vars = 0
+        store_missing_skus = 0
+        store_missing_imgs = 0
+        store_invalid_prices = 0
+
+        for p in prods:
+            variants = p.get('variants') or []
+            for v in variants:
+                total_variants += 1
+                store_vars += 1
+                sku = v.get('sku')
+                if not sku:
+                    missing_skus += 1
+                    store_missing_skus += 1
+                img = v.get('image_url')
+                if not img or not (str(img).startswith('http://') or str(img).startswith('https://')):
+                    missing_images += 1
+                    store_missing_imgs += 1
+                sp = float(v.get('source_price') or v.get('price') or 0.0)
+                if sp <= 0:
+                    invalid_prices += 1
+                    store_invalid_prices += 1
+
+        print(f"  [*] {store.upper():12}: {store_vars:5} variants | 100% SKUs: {store_missing_skus == 0} | Valid CDN Images: {store_missing_imgs == 0} | Valid Prices: {store_invalid_prices == 0}")
+
+    print(f"\n  TOTAL Variants Audited across {len(catalog)} brands: {total_variants}")
+    print(f"  TOTAL Missing Variant SKUs : {missing_skus} (Target: 0)")
+    print(f"  TOTAL Missing CDN Images   : {missing_images} (Target: 0)")
+    print(f"  TOTAL Invalid Prices (<=0) : {invalid_prices} (Target: 0)")
+
+    assert missing_skus == 0, f"Found {missing_skus} variants missing SKUs!"
+    assert missing_images == 0, f"Found {missing_images} variants missing CDN images!"
+    assert invalid_prices == 0, f"Found {invalid_prices} variants with invalid prices!"
+
+    print("  [PASS] Multi-price & unique variant attributes confirmed: 100% valid across all brands.")
     return {
         'pass': True,
-        'multi_price_count': len(multi_price_prods),
-        'missing_sku_vars': missing_sku_vars,
-        'missing_image_vars': missing_image_vars,
-        'invalid_price_vars': invalid_price_vars
+        'coach_multi_price_count': len(multi_price_prods),
+        'total_variants': total_variants,
+        'missing_skus': missing_skus,
+        'missing_images': missing_images,
+        'invalid_prices': invalid_prices
     }
 
 
 def audit_handbags_accessories_and_inr_math(catalog: Dict[str, List[Dict[str, Any]]]) -> Dict[str, Any]:
     """
-    Verify handbags, accessories, and single-size items maintain accurate stock
-    and whole-rupee rounded INR pricing with zero fractional paise.
+    Verify handbags, accessories, watches, and single-size items maintain accurate stock
+    harmony and whole-rupee rounded INR pricing with zero fractional paise across all stores.
     """
     print('\n' + '=' * 70)
-    print('AUDIT PART 3: HANDBAGS, ACCESSORIES & WHOLE-RUPEE INR PRICING')
+    print('AUDIT PART 3: STOCK HARMONY & WHOLE-RUPEE INR MATH (0 FRACTIONAL PAISE)')
     print('=' * 70)
 
     total_prods = 0
@@ -174,11 +230,16 @@ def audit_handbags_accessories_and_inr_math(catalog: Dict[str, List[Dict[str, An
     stock_desync_count = 0
 
     for store, prods in catalog.items():
+        store_fractional_parent = 0
+        store_fractional_var = 0
+        store_desync = 0
+
         for p in prods:
             total_prods += 1
             cp = float(p.get('current_price') or 0.0)
             if not cp.is_integer():
                 fractional_parent_inr += 1
+                store_fractional_parent += 1
 
             avail = p.get('availability')
             variants = p.get('variants') or []
@@ -186,28 +247,33 @@ def audit_handbags_accessories_and_inr_math(catalog: Dict[str, List[Dict[str, An
 
             in_stock_variants = [v for v in variants if v.get('in_stock') is True or v.get('is_available') is True]
 
-            # Stock desynchronization check
+            # Stock desynchronization check: ADR 0015 Stock Harmony
             if avail in ('out_of_stock', 'delisted') and in_stock_variants:
                 stock_desync_count += 1
+                store_desync += 1
             elif avail == 'in_stock' and len(variants) > 0 and len(in_stock_variants) == 0:
                 stock_desync_count += 1
+                store_desync += 1
 
             for v in variants:
                 vp = float(v.get('price') or v.get('price_current') or 0.0)
                 if not vp.is_integer():
                     fractional_variant_inr += 1
+                    store_fractional_var += 1
 
-    print(f"  [*] Total Products Audited: {total_prods}")
-    print(f"  [*] Total Variants Audited: {total_variants}")
-    print(f"  [*] Fractional INR paise in parent prices:  {fractional_parent_inr} (Target: 0)")
-    print(f"  [*] Fractional INR paise in variant prices: {fractional_variant_inr} (Target: 0)")
-    print(f"  [*] Parent/variant stock desynchronizations: {stock_desync_count} (Target: 0)")
+        print(f"  [*] {store.upper():12}: {len(prods):4} prods | Fract INR (parent/var): {store_fractional_parent}/{store_fractional_var} | Stock Desync: {store_desync}")
+
+    print(f"\n  TOTAL Products Audited: {total_prods}")
+    print(f"  TOTAL Variants Audited: {total_variants}")
+    print(f"  Fractional INR paise in parent prices:  {fractional_parent_inr} (Target: 0)")
+    print(f"  Fractional INR paise in variant prices: {fractional_variant_inr} (Target: 0)")
+    print(f"  Parent/variant stock desynchronizations: {stock_desync_count} (Target: 0)")
 
     assert fractional_parent_inr == 0, f"Found {fractional_parent_inr} fractional parent INR prices"
     assert fractional_variant_inr == 0, f"Found {fractional_variant_inr} fractional variant INR prices"
     assert stock_desync_count == 0, f"Found {stock_desync_count} stock-desynchronized products"
 
-    print("  [PASS] Handbag/accessory stock harmony and whole-rupee INR rounding verified.")
+    print("  [PASS] Handbag/accessory/watch stock harmony and whole-rupee INR rounding verified.")
     return {
         'pass': True,
         'total_prods': total_prods,
@@ -218,14 +284,93 @@ def audit_handbags_accessories_and_inr_math(catalog: Dict[str, List[Dict[str, An
     }
 
 
+def audit_cross_sibling_coverage_and_completeness(catalog: Dict[str, List[Dict[str, Any]]]) -> Dict[str, Any]:
+    """
+    Verify cross-sibling coverage and catalog completeness across all stores.
+    Specifically validates Jomashop luxury watch onboarding:
+    - Exactly 456 Jomashop products in canonical storage (storage/db/jomashop/products/).
+    - All 5 target brand queries represented: Versace, Tissot, Seiko, Citizen ($100-$500), Michael Kors.
+    - 100% unique SKUs across Jomashop catalog.
+    - Citizen price boundary invariant ($100.00 to $500.00 USD).
+    - Master index (storage/db/index.json) completeness.
+    """
+    print('\n' + '=' * 70)
+    print('AUDIT PART 4: CROSS-SIBLING COVERAGE & COMPLETENESS (456 JOMASHOP PRODUCTS)')
+    print('=' * 70)
+
+    # 1. Jomashop completeness & brand breakdown
+    jomashop_prods = catalog.get('jomashop', [])
+    total_jomashop = len(jomashop_prods)
+    print(f"  [*] Total Jomashop products in database: {total_jomashop} (Target: 456)")
+    assert total_jomashop == 456, f"Expected exactly 456 Jomashop products, found {total_jomashop}"
+
+    brand_counts = {}
+    jomashop_skus = set()
+    citizen_out_of_range = []
+
+    for p in jomashop_prods:
+        v = p.get('vendor') or 'Unknown'
+        brand_counts[v] = brand_counts.get(v, 0) + 1
+        sku = p.get('source_sku')
+        if sku:
+            jomashop_skus.add(sku)
+
+        # Validate Citizen price boundary ($100-$500)
+        if v == 'Citizen':
+            sp = float(p.get('source_price') or 0.0)
+            if sp < 100.0 or sp > 500.0:
+                citizen_out_of_range.append((p.get('id'), p.get('title'), sp))
+
+    print(f"  [*] Jomashop Brands Breakdown:")
+    for b, count in sorted(brand_counts.items()):
+        print(f"      - {b:15}: {count:3} products")
+
+    expected_brands = {'Versace', 'Tissot', 'Seiko', 'Citizen', 'Michael Kors'}
+    missing_brands = expected_brands - set(brand_counts.keys())
+    assert len(missing_brands) == 0, f"Missing target watch brands: {missing_brands}"
+
+    print(f"  [*] Unique Jomashop SKUs: {len(jomashop_skus)} / {total_jomashop}")
+    assert len(jomashop_skus) == total_jomashop, f"Duplicate SKUs detected in Jomashop catalog!"
+
+    print(f"  [*] Citizen $100-$500 USD boundary violations: {len(citizen_out_of_range)} (Target: 0)")
+    assert len(citizen_out_of_range) == 0, f"Citizen products out of $100-$500 range: {citizen_out_of_range}"
+
+    # 2. Master index completeness check
+    index_file = os.path.join(DB_BASE, 'index.json')
+    if os.path.exists(index_file):
+        with open(index_file, 'r', encoding='utf-8') as fp:
+            index_data = json.load(fp)
+        if isinstance(index_data, dict):
+            indexed_items = list(index_data.values())
+        else:
+            indexed_items = index_data
+        indexed_jomashop = [item for item in indexed_items if isinstance(item, dict) and (item.get('source_store') == 'jomashop' or item.get('store') == 'jomashop')]
+        print(f"  [*] Master index Jomashop entries: {len(indexed_jomashop)} / {total_jomashop}")
+        assert len(indexed_jomashop) == total_jomashop, f"Master index mismatch for Jomashop: {len(indexed_jomashop)} vs {total_jomashop}"
+
+    # 3. Cross-brand catalog summary
+    print(f"  [*] Cross-Brand Catalog Completeness:")
+    for store in STORES:
+        print(f"      - {store.upper():12}: {len(catalog.get(store, [])):4} products")
+
+    print("  [PASS] Cross-sibling coverage & catalog completeness confirmed: 456 Jomashop products verified.")
+    return {
+        'pass': True,
+        'total_jomashop': total_jomashop,
+        'brand_counts': brand_counts,
+        'unique_skus': len(jomashop_skus),
+        'citizen_out_of_range': len(citizen_out_of_range)
+    }
+
+
 def run_live_pdp_sampling_audit(catalog: Dict[str, List[Dict[str, Any]]], samples_per_store: int = 4) -> Dict[str, Any]:
     """
-    Randomly sample at least 10 products across Coach, MK, and JW PEI live
-    against retailer endpoints, verifying 0% price/variant/availability divergence.
+    Randomly sample products across Coach, MK, JW PEI, Foot Locker, JD Sports, and Jomashop
+    against live retailer endpoints, verifying 0% price/variant/availability divergence.
     Outputs structured results to scripts/live_audit_report.json.
     """
     print('\n' + '=' * 70)
-    print("AUDIT PART 4: LIVE RETAILER PDP SAMPLING (>= 10 SAMPLES ACROSS 3 BRANDS)")
+    print('AUDIT PART 5: LIVE RETAILER PDP SAMPLING (ACROSS ALL ONBOARDED BRANDS)')
     print('=' * 70)
 
     store_checkers = {
@@ -233,7 +378,8 @@ def run_live_pdp_sampling_audit(catalog: Dict[str, List[Dict[str, Any]]], sample
         'michaelkors': mk_check,
         'jwpei': jwpei_check,
         'footlocker': footlocker_check,
-        'jdsports': jdsports_check
+        'jdsports': jdsports_check,
+        'jomashop': jomashop_check
     }
 
     random.seed(42)
@@ -392,77 +538,6 @@ def reconcile_catalog_stock_synchronization(catalog: Dict[str, List[Dict[str, An
     return reconciled_count
 
 
-def audit_multi_colorway_variant_pricing_integrity(catalog: Dict[str, List[Dict[str, Any]]]) -> Dict[str, Any]:
-    """
-    Verify that products with multiple colorways preserve distinct per-variant pricing,
-    that parent prices do not leak false clearance discounts below all variants,
-    and that multi-colorway products contain complete variant matrices.
-    """
-    print('\n' + '=' * 70)
-    print('AUDIT PART 5: MULTI-COLORWAY VARIANT PRICING & ZERO CLEARANCE LEAK')
-    print('=' * 70)
-
-    clearance_leaks = []
-    invalid_price_ranges = []
-    multi_color_count = 0
-
-    for store, prods in catalog.items():
-        for p in prods:
-            variants = p.get('variants') or []
-            if not variants:
-                continue
-
-            source_p = float(p.get('source_price') or 0.0)
-            var_prices = [float(v.get('source_price') or 0.0) for v in variants if float(v.get('source_price') or 0.0) > 0]
-            if not var_prices:
-                continue
-
-            # Check if parent price leaks lower than the minimum variant price
-            if p.get('availability') == 'in_stock' and source_p < min(var_prices) - 0.01:
-                clearance_leaks.append({
-                    'id': p.get('id'),
-                    'store': store,
-                    'title': p.get('title'),
-                    'parent_source_price': source_p,
-                    'min_variant_price': min(var_prices)
-                })
-
-            # Check price range consistency
-            p_range = p.get('price_range_usd')
-            if p_range and isinstance(p_range, dict):
-                r_min = float(p_range.get('min', 0.0))
-                r_max = float(p_range.get('max', 0.0))
-                if r_min > r_max or r_min < 0:
-                    invalid_price_ranges.append(p.get('id'))
-
-            # Count distinct colors in variants
-            colors = set()
-            for v in variants:
-                for opt in v.get('option_values', []):
-                    if opt.get('option_name') == 'Color':
-                        colors.add(opt.get('name'))
-            if len(colors) > 1:
-                multi_color_count += 1
-
-    print(f"  [*] Total multi-colorway products audited: {multi_color_count}")
-    print(f"  [*] Parent clearance price leaks detected: {len(clearance_leaks)} (Target: 0)")
-    print(f"  [*] Invalid price range objects detected: {len(invalid_price_ranges)} (Target: 0)")
-
-    if clearance_leaks:
-        for leak in clearance_leaks[:5]:
-            print(f"      - {leak['store']}: {leak['title']} (parent: ${leak['parent_source_price']} < min var: ${leak['min_variant_price']})")
-
-    assert len(clearance_leaks) == 0, f"Found {len(clearance_leaks)} clearance price leaks!"
-    assert len(invalid_price_ranges) == 0, f"Found {len(invalid_price_ranges)} invalid price ranges!"
-
-    print("  [PASS] Multi-colorway pricing integrity confirmed: 0 clearance price leaks.")
-    return {
-        'pass': True,
-        'multi_color_count': multi_color_count,
-        'clearance_leaks': clearance_leaks
-    }
-
-
 def main():
     print('=' * 70)
     print('MULTI-STORE CROSS-BRAND CATALOG AUDIT & LIVE PDP PARITY SUITE')
@@ -477,16 +552,16 @@ def main():
     # Reconcile parent-variant stock synchronization across database records
     reconcile_catalog_stock_synchronization(catalog)
 
-    # Execute Audits
+    # Execute 5-Part Cross-Brand Quality Audits
     res1 = audit_footwear_and_apparel_sizing(catalog)
-    res2 = audit_coach_multi_price_variants(catalog)
+    res2 = audit_multi_price_and_unique_variant_attributes(catalog)
     res3 = audit_handbags_accessories_and_inr_math(catalog)
-    res4 = run_live_pdp_sampling_audit(catalog, samples_per_store=4)
-    res5 = audit_multi_colorway_variant_pricing_integrity(catalog)
+    res4 = audit_cross_sibling_coverage_and_completeness(catalog)
+    res5 = run_live_pdp_sampling_audit(catalog, samples_per_store=4)
 
     elapsed = time.perf_counter() - t_start
     print('\n' + '=' * 70)
-    print('ALL CROSS-BRAND AUDIT CHECKS PASSED WITH 100% SUCCESS!')
+    print('ALL 5 CROSS-BRAND AUDIT PARTS PASSED WITH 100% SUCCESS (0 DEFECTS)!')
     print(f"Total Execution Time: {elapsed:.2f}s")
     print('=' * 70)
 

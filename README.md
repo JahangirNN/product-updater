@@ -111,6 +111,7 @@ All engineering decisions are recorded and immutably numbered in [`docs/adr/`](.
 | **[0015](./docs/adr/0015-variant-stock-cascade-phantom-delta-elimination-and-cross-brand-integrity.md)** | Parent-Child Availability Cascade, Phantom Delta Elimination & Granular Variant State Harmonization | Accepted |
 | **[0016](./docs/adr/0016-jdsports-store-onboarding-and-multi-tier-footwear-sizing.md)** | JD Sports Store Onboarding, Multi-Tier Footwear Sizing Architecture & Cross-Sibling Swatch Ingestion | Accepted |
 | **[0017](./docs/adr/0017-zero-token-local-camoufox-stealth-browser-akamai-solver-and-early-cooldown-resilience.md)** | Zero-Token Local Camoufox Stealth Browser Akamai Solver, DOM-Level React Hydration Sync & Cooldown Resilience | Accepted |
+| **[0018](./docs/adr/0018-jomashop-xmode-onboarding.md)** | Jomashop Luxury & Designer Watches Onboarding, Apollo GraphQL Ingestion & Zero-Token Delta Polling | Accepted |
 
 ---
 
@@ -128,5 +129,7 @@ All engineering decisions are recorded and immutably numbered in [`docs/adr/`](.
 - `stores/coach/LEARNINGS.md`: Living retailer knowledge base for Coach (SFCC Scene7, multi-color variants, sizing extraction, filename alignment).
 - `stores/footlocker/LEARNINGS.md`: Living retailer knowledge base for Foot Locker (Nike Vomero, hydrated SSR, width codes).
 - `stores/jdsports/LEARNINGS.md`: Living retailer knowledge base for JD Sports (Nike collections, Akamai WAF, multi-tier sizing taxonomy, JSON-LD ProductGroup).
+- `stores/jomashop/LEARNINGS.md`: Living retailer knowledge base for Jomashop (Luxury watches, Apollo GraphQL, technical specifications, case diameter sizing).
+
 
 

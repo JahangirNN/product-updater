@@ -34,6 +34,7 @@ from stores.nordstrom.delta import check_price_and_stock as nordstrom_check, app
 from stores.coach.delta import check_price_and_stock as coach_check, apply_delta_to_product as coach_apply, matches_coach_size
 from stores.michaelkors.delta import check_price_and_stock as mk_check, apply_delta_to_product as mk_apply
 from stores.jdsports.delta import check_price_and_stock as jdsports_check, apply_delta_to_product as jdsports_apply
+from stores.jomashop.delta import check_price_and_stock as jomashop_check, apply_delta_to_product as jomashop_apply
 from storage.db import append_delta_event, append_delta_log, read_delta_events
 from storage.rate_limiter import (
     configure_store_rate_limits,
@@ -924,6 +925,7 @@ def test_cross_store_granular_variant_price_and_stock_invariants():
         ("jwpei", jwpei_apply),
         ("michaelkors", mk_apply),
         ("nordstrom", nordstrom_apply),
+        ("jomashop", jomashop_apply),
         ("_template", template_apply)
     ]
 
@@ -1032,7 +1034,7 @@ def test_cross_store_granular_variant_price_and_stock_invariants():
             assert v["price_current"] == expected_parent_inr, f"[{store_name}] Uniform sync failed for price_current"
             assert v["price"] == f"{expected_parent_inr:.2f}", f"[{store_name}] Uniform sync failed for price string"
 
-    print("  ✅ PASS: All 7 store delta modules preserve granular variant price anti-flattening, tri-field integrity, and uniform fallback sync.")
+    print("  ✅ PASS: All 8 store delta modules preserve granular variant price anti-flattening, tri-field integrity, and uniform fallback sync.")
 
 
 def test_adversarial_variant_price_divergence_and_shopify_events():
@@ -1122,6 +1124,183 @@ def test_adversarial_variant_price_divergence_and_shopify_events():
     print("  ✅ PASS: Coach footwear size matching regex and Shopify delta event queue for variant pricing verified.")
 
 
+def test_jomashop_delta_integration():
+    print("\n[TEST 16] Verifying Jomashop Delta Engine GraphQL Polling, Stock Depletion Cascade & Circuit Breaker...")
+    forex_rate = 95.989567
+    reset_rate_limiter()
+
+    sample_product = {
+        "id": "jomashop_tissot_prx_01",
+        "handle": "tissot-prx-powermatic-80-blue-dial-watch-t1374071104100",
+        "title": "Tissot PRX Powermatic 80 Blue Dial Watch",
+        "source_store": "jomashop",
+        "vendor": "Tissot",
+        "source_sku": "T1374071104100",
+        "source_price": 725.0,
+        "current_price": float(round(725.0 * forex_rate)),
+        "availability": "out_of_stock",
+        "is_active": False,
+        "last_verified_at": "2026-09-01T00:00:00Z",
+        "variants": [
+            {
+                "sku": "T1374071104100",
+                "in_stock": False,
+                "source_price": 725.0,
+                "price": f"{round(725.0 * forex_rate):.2f}",
+                "price_current": float(round(725.0 * forex_rate)),
+                "title": "40 mm - Blue / Stainless Steel"
+            }
+        ]
+    }
+
+    # 1. Test check_price_and_stock() on 200 OK price update and stock flip (OOS -> IN_STOCK, $725 -> $595)
+    class MockGqlSuccessResponse:
+        status_code = 200
+        headers = {"content-type": "application/json"}
+        def raise_for_status(self): pass
+        def json(self):
+            return {
+                "data": {
+                    "products": {
+                        "items": [
+                            {
+                                "id": "98765",
+                                "sku": "T1374071104100",
+                                "url_key": "tissot-prx-powermatic-80-blue-dial-watch-t1374071104100",
+                                "stock_status": "IN_STOCK",
+                                "price_range": {
+                                    "minimum_price": {
+                                        "regular_price": {"value": 725.0, "currency": "USD"},
+                                        "final_price": {"value": 595.0, "currency": "USD"},
+                                        "msrp_price": {"value": 725.0, "currency": "USD"}
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+
+    class MockGqlSuccessClient:
+        def post(self, url, json=None, headers=None):
+            return MockGqlSuccessResponse()
+
+    res_success = jomashop_check(sample_product, client=MockGqlSuccessClient(), store_name="jomashop")
+    assert res_success["status"] == "success", f"Expected success, got {res_success['status']}"
+    assert res_success["current_source_price"] == 595.0, f"Expected $595.0, got {res_success['current_source_price']}"
+    assert res_success["old_source_price"] == 725.0
+    assert res_success["price_changed"] is True
+    assert res_success["stock_changed"] is True
+    assert res_success["availability"] == "in_stock"
+    assert res_success["old_availability"] == "out_of_stock"
+    assert res_success["is_active"] is True
+    assert len(res_success["variants_delta"]) == 1
+    assert res_success["variants_delta"][0]["available"] is True
+    assert res_success["variants_delta"][0]["price_usd"] == 595.0
+
+    # Test apply_delta_to_product() on 200 OK success
+    updated_prod, changed = jomashop_apply(copy.deepcopy(sample_product), res_success, forex_rate)
+    assert changed is True, "apply_delta_to_product must flag has_changed = True"
+    assert updated_prod["source_price"] == 595.0
+    expected_inr = float(round(595.0 * forex_rate))
+    assert updated_prod["current_price"] == expected_inr
+    assert updated_prod["current_price"] % 1 == 0, "INR price must be whole-rupee (no fractional paise)"
+    assert updated_prod["compare_at_price"] == float(round(725.0 * forex_rate))
+    assert updated_prod["availability"] == "in_stock"
+    assert updated_prod["is_active"] is True
+    assert updated_prod["variants"][0]["in_stock"] is True
+    assert updated_prod["variants"][0]["source_price"] == 595.0
+    assert updated_prod["variants"][0]["price_current"] == expected_inr
+    assert updated_prod["variants"][0]["price"] == f"{expected_inr:.2f}"
+    assert updated_prod["last_verified_at"] != "2026-09-01T00:00:00Z", "Success MUST stamp last_verified_at"
+    assert updated_prod["shopify_sync_pending"] is True
+
+    # 2. Test selective timestamp stamping:
+    # A. Rate limited (429 retries exhausted) -> NEVER stamp last_verified_at, has_changed = False
+    delta_429 = {
+        "status": "rate_limited",
+        "handle": sample_product["handle"],
+        "availability": "out_of_stock",
+        "old_availability": "out_of_stock",
+        "current_source_price": 725.0,
+        "old_source_price": 725.0,
+        "error": "Rate limit retries exhausted (HTTP 429)"
+    }
+    prod_429, changed_429 = jomashop_apply(copy.deepcopy(sample_product), delta_429, forex_rate)
+    assert changed_429 is False, "Rate limited delta must return has_changed = False"
+    assert prod_429["last_verified_at"] == "2026-09-01T00:00:00Z", "Rate limited check MUST NOT stamp last_verified_at"
+
+    # B. Network/5xx Error -> NEVER stamp last_verified_at, has_changed = False
+    delta_error = {
+        "status": "error",
+        "handle": sample_product["handle"],
+        "availability": "out_of_stock",
+        "old_availability": "out_of_stock",
+        "current_source_price": 725.0,
+        "old_source_price": 725.0,
+        "error": "Timeout connecting to GraphQL endpoint"
+    }
+    prod_err, changed_err = jomashop_apply(copy.deepcopy(sample_product), delta_error, forex_rate)
+    assert changed_err is False, "Error delta must return has_changed = False"
+    assert prod_err["last_verified_at"] == "2026-09-01T00:00:00Z", "Error check MUST NOT stamp last_verified_at"
+
+    # 3. Test HTTP 404 delisting stock depletion cascade (ADR 0015):
+    in_stock_watch = copy.deepcopy(updated_prod)
+    in_stock_watch["last_verified_at"] = "2026-09-01T00:00:00Z"
+
+    # A. Mock HTTP 404 client response in check_price_and_stock()
+    class Mock404Response:
+        status_code = 404
+        headers = {}
+        def raise_for_status(self): raise httpx.HTTPStatusError("Not Found", request=None, response=self)
+
+    class Mock404Client:
+        def post(self, url, json=None, headers=None):
+            return Mock404Response()
+
+    res_404 = jomashop_check(in_stock_watch, client=Mock404Client(), store_name="jomashop")
+    assert res_404["status"] == "not_found", f"Expected not_found, got {res_404['status']}"
+    assert res_404["availability"] == "out_of_stock"
+    assert res_404["old_availability"] == "in_stock", "404 check must preserve old_availability"
+    assert res_404["current_source_price"] == 595.0, "404 check must preserve current_source_price"
+    assert res_404["old_source_price"] == 595.0, "404 check must preserve old_source_price"
+    assert res_404["stock_changed"] is True
+    assert res_404["is_active"] is False
+
+    # B. Apply 404 delta to product -> Depletion cascade to all variants + stamps timestamp
+    prod_delisted, changed_delisted = jomashop_apply(copy.deepcopy(in_stock_watch), res_404, forex_rate)
+    assert changed_delisted is True, "404 delisting must flag has_changed = True"
+    assert prod_delisted["availability"] == "out_of_stock"
+    assert prod_delisted["is_active"] is False
+    # CRITICAL ADR 0015: variant stock must cascade to False
+    for v in prod_delisted["variants"]:
+        assert v["in_stock"] is False, f"Variant {v['sku']} must be depleted on 404"
+    assert prod_delisted["last_verified_at"] != "2026-09-01T00:00:00Z", "404 delisting MUST advance last_verified_at"
+    assert prod_delisted["shopify_sync_pending"] is True
+
+    # 4. Test HTTP 429 rate limit backoff and anti-thundering-herd circuit breaker tripping via trip_circuit_breaker() (ADR 0010)
+    configure_store_rate_limits("jomashop", requests_per_second=2.0, delay_seconds=0.5)
+    assert is_circuit_open("jomashop") is False
+
+    class Mock429GqlResponse:
+        status_code = 429
+        headers = {"Retry-After": "2"}
+        def raise_for_status(self): pass
+
+    class Mock429GqlClient:
+        def post(self, url, json=None, headers=None):
+            return Mock429GqlResponse()
+
+    limiter_joma = create_store_limiter("jomashop")
+    res_breaker = jomashop_check(sample_product, client=Mock429GqlClient(), store_name="jomashop", rate_limiter=limiter_joma)
+    assert res_breaker["status"] == "rate_limited"
+    assert is_circuit_open("jomashop") is True, "Circuit breaker must be open after HTTP 429 response"
+    assert get_cooldown_remaining("jomashop") > 0.0, "Cooldown must be active on circuit breaker trip"
+
+    reset_rate_limiter()
+    print("  ✅ PASS: Jomashop GraphQL 200 OK price/stock updates, selective timestamping, 404 delisting cascade, and 429 circuit tripping verified.")
+
+
 def run_all_tests():
     print("=" * 72)
     print("DELTA ENGINE INTEGRATION & UNIT TEST SUITE (MULTI-STORE EDITION)")
@@ -1142,6 +1321,7 @@ def run_all_tests():
     test_jdsports_multitier_delta_and_depletion_cascade()
     test_cross_store_granular_variant_price_and_stock_invariants()
     test_adversarial_variant_price_divergence_and_shopify_events()
+    test_jomashop_delta_integration()
 
     print("\n" + "=" * 72)
     print("ALL TESTS PASSED WITH 100% SUCCESS")
@@ -1150,4 +1330,5 @@ def run_all_tests():
 
 if __name__ == "__main__":
     run_all_tests()
+
 
