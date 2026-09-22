@@ -9,13 +9,15 @@ Accepted
 ## Context
 
 1. **Watch Category Expansion**:
-   Expanding the catalog ecosystem into luxury and designer timepieces across 5 target brand query filter URLs on Jomashop (`jomashop.com`):
+   Expanding the catalog ecosystem into luxury and designer timepieces across 7 target brand query filter URLs on Jomashop (`jomashop.com`):
    - **Versace Watches**: 11 series (Chrono, Greca Fortuna, Hellenyium, etc.), 46 products.
    - **Tissot Watches**: 13 series (PRX, Seastar, PR516, Le Locle, Powermatic 80, etc.), 157 products.
    - **Seiko Watches**: 8 series (5 Sports, Prospex, Presage, Essentials, etc.), 67 products.
    - **Citizen Watches**: 13 series (Promaster Dive, Navihawk, Tsuyosa, etc.) with strict $100–$500 USD price boundary, 119 products.
    - **Michael Kors Watches**: 8 series (Lexington, Runway, Bradshaw, Parker, etc.), 67 products.
-   - **Total Ingested Scope**: Exactly **456 products**.
+   - **Ferragamo Watches**: Unisex & Women's collections (Gancini, Vega, 1898, etc.), 15 products.
+   - **Movado Watches**: 9 series (Bold, Museum Classic, Series 800, SE, Sport, etc.), 102 products.
+   - **Total Ingested Scope**: Exactly **573 products**.
 
 2. **Cloudflare Turnstile on HTML vs Open Apollo GraphQL**:
    Standard HTML listing routes on `jomashop.com` are protected by Cloudflare Turnstile, returning HTTP 403 challenge pages to unauthenticated browser sweeps. However, the store's backend uses a Magento 2 headless architecture paired with an Apollo GraphQL API (`POST https://www.jomashop.com/graphql`) that serves product listings (`category_id: 871`) and product detail payloads directly with sub-400ms latency at **$0.00 external API cost / 0 tokens**.

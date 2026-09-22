@@ -30,7 +30,7 @@ from storage.db import save_product, build_and_save_index, generate_product_id
 GRAPHQL_URL = "https://www.jomashop.com/graphql"
 CATEGORY_ID = "871"  # Watches
 
-WHITELIST_BRANDS = ["Versace", "Tissot", "Seiko", "Citizen", "Michael Kors"]
+WHITELIST_BRANDS = ["Versace", "Tissot", "Seiko", "Citizen", "Michael Kors", "Ferragamo", "Movado"]
 
 REJECTION_PATTERNS = [
     r"\bsunglasses\b", r"\beyewear\b", r"\bframes\b", r"\bshades\b",
@@ -93,6 +93,25 @@ TARGET_COLLECTIONS = [
         ],
         "price": None,
         "expected_count": 67
+    },
+    {
+        "brand": "Ferragamo",
+        "url": "https://www.jomashop.com/filters/watches?manufacturer=Ferragamo&gender=Unisex%7CWomens",
+        "gender": ["Unisex", "Womens"],
+        "series": None,
+        "price": None,
+        "expected_count": 15
+    },
+    {
+        "brand": "Movado",
+        "url": "https://www.jomashop.com/filters/watches?manufacturer=Movado&series=Bold%7CBold+Fusion%7CMuseum+Classic%7CMuseum%7CMusem%7CSeries+800%7CSe%7CBold+Quest%7CBold+Trend%7CSport&sort=price_asc%7CASC",
+        "series": [
+            "Bold", "Bold Fusion", "Museum Classic", "Museum", "Musem",
+            "Series 800", "Se", "Bold Quest", "Bold Trend", "Sport"
+        ],
+        "gender": None,
+        "price": None,
+        "expected_count": 102
     }
 ]
 
@@ -303,6 +322,7 @@ def harvest_plp_for_collection(collection_cfg: Dict[str, Any]) -> List[Dict[str,
     """Harvest all product stubs for a single brand collection via PLP query."""
     brand = collection_cfg["brand"]
     series_list = collection_cfg.get("series")
+    gender_list = collection_cfg.get("gender")
     price_cfg = collection_cfg.get("price")
 
     filter_obj = {
@@ -311,6 +331,8 @@ def harvest_plp_for_collection(collection_cfg: Dict[str, Any]) -> List[Dict[str,
     }
     if series_list:
         filter_obj["series"] = {"in": series_list}
+    if gender_list:
+        filter_obj["gender"] = {"in": gender_list}
     if price_cfg:
         filter_obj["price"] = price_cfg
 

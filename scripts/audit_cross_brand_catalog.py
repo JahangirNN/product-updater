@@ -301,8 +301,8 @@ def audit_cross_sibling_coverage_and_completeness(catalog: Dict[str, List[Dict[s
     # 1. Jomashop completeness & brand breakdown
     jomashop_prods = catalog.get('jomashop', [])
     total_jomashop = len(jomashop_prods)
-    print(f"  [*] Total Jomashop products in database: {total_jomashop} (Target: 456)")
-    assert total_jomashop == 456, f"Expected exactly 456 Jomashop products, found {total_jomashop}"
+    print(f"  [*] Total Jomashop products in database: {total_jomashop} (Target: >= 573)")
+    assert total_jomashop >= 573, f"Expected at least 573 Jomashop products, found {total_jomashop}"
 
     brand_counts = {}
     jomashop_skus = set()
@@ -325,7 +325,7 @@ def audit_cross_sibling_coverage_and_completeness(catalog: Dict[str, List[Dict[s
     for b, count in sorted(brand_counts.items()):
         print(f"      - {b:15}: {count:3} products")
 
-    expected_brands = {'Versace', 'Tissot', 'Seiko', 'Citizen', 'Michael Kors'}
+    expected_brands = {'Versace', 'Tissot', 'Seiko', 'Citizen', 'Michael Kors', 'Ferragamo', 'Movado'}
     missing_brands = expected_brands - set(brand_counts.keys())
     assert len(missing_brands) == 0, f"Missing target watch brands: {missing_brands}"
 

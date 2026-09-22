@@ -323,6 +323,28 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
                 return "Parker / Corey"
             return "Runway / Slim Runway"
 
+        # 6. Ferragamo: Gancini / Gancino, Vega, F-80 / 1898
+        if "ferragamo" in vendor or "ferragamo" in t_check:
+            if any(w in t_check for w in ["gancini", "gancino"]):
+                return "Gancini / Gancino"
+            if "vega" in t_check:
+                return "Vega"
+            if any(w in t_check for w in ["f-80", "1898", "duo", "cuir", "ora"]):
+                return "F-80 / 1898 / Sport"
+            return "Gancini / Gancino"
+
+        # 7. Movado: Bold, Museum Classic, Series 800 / SE, Sport
+        if "movado" in vendor or "movado" in t_check:
+            if any(w in t_check for w in ["bold fusion", "bold quest", "bold trend", "bold"]):
+                return "Bold Collection"
+            if any(w in t_check for w in ["museum classic", "museum", "musem"]):
+                return "Museum Classic"
+            if any(w in t_check for w in ["series 800", "se"]):
+                return "Series 800 / SE"
+            if "sport" in t_check:
+                return "Sport"
+            return "Bold Collection"
+
         return "Watches"
 
     # Handbags taxonomy for JW PEI

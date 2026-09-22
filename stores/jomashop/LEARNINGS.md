@@ -17,7 +17,9 @@
   - `Seiko` (8 series, 67 products)
   - `Citizen` (13 series, strictly $100–$500 USD, 119 products)
   - `Michael Kors` (8 series, 67 products)
-  - **Total Scope Target**: Exactly **456 products**.
+  - `Ferragamo` (Unisex & Women's, 15 products)
+  - `Movado` (9 series, 102 products)
+  - **Total Scope Target**: Exactly **573 products**.
 - **Default Currency**: `USD` (Converted to whole `INR` rupees using cached daily exchange rate with 0 decimal paise, per ADR 0006).
 - **Front-End Architecture**: Headless Magento 2 backend paired with a client-side React Single Page Application (SPA) powered by Apollo GraphQL.
 
@@ -25,7 +27,7 @@
 
 ## 2. Target Collections & Scope Breakdown
 
-The 5 target brand query filter URLs map directly to Magento 2 GraphQL category filter inputs:
+The 7 target brand query filter URLs map directly to Magento 2 GraphQL category filter inputs:
 
 | Collection | Target Brand | Filter Query Parameters | Target Series Scope | Price Boundary | Verified Count |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -34,7 +36,9 @@ The 5 target brand query filter URLs map directly to Magento 2 GraphQL category 
 | **Seiko Watches** | `Seiko` | `category_id: 871`, `manufacturer: Seiko` | 5 Sports, Chronograph, Essentials, Presage, Prospex, Prospex Sea, Quartz, Sport | None | **67** |
 | **Citizen Watches** | `Citizen` | `category_id: 871`, `manufacturer: Citizen`, `price: {from: 100, to: 500}` | Promaster Dive, Promaster Diver, Promaster Navihawk, Promaster Sky Navihawk, Promaster Sea, Sports, Sport Luxury, Sport Automatic, Promaster Marine, Promaster Skyhawk, Tsuyosa, Promaster Dive Automatic, Promaster Skyhawk U830 | **$100.00 to $500.00 USD** | **119** |
 | **Michael Kors Watches** | `Michael Kors` | `category_id: 871`, `manufacturer: Michael Kors` | Lexington, Billie, Petite Lexington, Runway, Slim Runway, Bradshaw, Parker, Corey | None | **67** |
-| **Total Ingestion Scope** | — | — | — | — | **456 products** |
+| **Ferragamo Watches** | `Ferragamo` | `category_id: 871`, `manufacturer: Ferragamo`, `gender: {in: ["Unisex", "Womens"]}` | All (Gancini, Vega, 1898, F-80, Duo, Cuir, Ora) | None | **15** |
+| **Movado Watches** | `Movado` | `category_id: 871`, `manufacturer: Movado` | Bold, Bold Fusion, Museum Classic, Museum, Series 800, Se, Bold Quest, Bold Trend, Sport | None | **102** |
+| **Total Ingestion Scope** | — | — | — | — | **573 products** |
 
 ---
 
