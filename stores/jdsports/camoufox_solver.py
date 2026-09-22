@@ -19,6 +19,9 @@ def setup_camoufox_route_blocking(page: Any) -> None:
     Attach route filter to Camoufox page to block images, media, fonts,
     and third-party trackers, keeping only primary scripts and documents needed for Akamai + React.
     """
+    if getattr(page, "_route_blocking_active", False):
+        return
+
     def _route_filter(route):
         rt = route.request.resource_type
         u = route.request.url.lower()
@@ -31,6 +34,7 @@ def setup_camoufox_route_blocking(page: Any) -> None:
 
     try:
         page.route("**/*", _route_filter)
+        page._route_blocking_active = True
     except Exception:
         pass
 
@@ -56,46 +60,46 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
                 "message": "Product delisted (HTTP 404)"
             }
 
-        # Wait for React/Next.js hydration and ProductGroup JSON-LD injection
-        html = page.content()
-        for _ in range(24):
-            if "ProductGroup" in html or ("hasVariant" in html and "@type" in html):
+        # Poll live DOM for ProductGroup / Product JSON-LD
+        pg = None
+        for _ in range(24):  # up to 12 seconds max wait for React hydration
+            try:
+                pg = page.evaluate("""() => {
+                    const scripts = Array.from(document.querySelectorAll('script[type="application/ld+json"]'));
+                    for (const s of scripts) {
+                        try {
+                            const d = JSON.parse(s.innerText || s.textContent);
+                            if (d && (d['@type'] === 'ProductGroup' || d['@type'] === 'Product')) return d;
+                            if (Array.isArray(d)) {
+                                for (const item of d) {
+                                    if (item && (item['@type'] === 'ProductGroup' || item['@type'] === 'Product')) return item;
+                                }
+                            }
+                        } catch (e) {}
+                    }
+                    return null;
+                }""")
+            except Exception:
+                pg = None
+
+            if pg:
                 break
             time.sleep(0.5)
-            html = page.content()
-
-        if "Access Denied" in html:
-            elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
-            return {
-                "status": "rate_limited",
-                "price_usd": 0.0,
-                "availability": "unknown",
-                "variants": [],
-                "elapsed_ms": elapsed_ms,
-                "error": "Akamai Access Denied"
-            }
-
-        # Extract JSON-LD scripts
-        scripts = re.findall(r'<script[^>]*type=[\'"]application/ld\+json[\'"][^>]*>(.*?)</script>', html, re.DOTALL | re.IGNORECASE)
-        pg = None
-        for s in scripts:
-            try:
-                data = json.loads(s.strip())
-                if isinstance(data, list):
-                    for item in data:
-                        if isinstance(item, dict) and item.get("@type") in ("ProductGroup", "Product"):
-                            pg = item
-                            break
-                elif isinstance(data, dict):
-                    if data.get("@type") in ("ProductGroup", "Product"):
-                        pg = data
-                        break
-                if pg:
-                    break
-            except Exception:
-                continue
 
         if not pg:
+            # Fallback: check raw HTML content
+            html = page.content()
+            if "Access Denied" in html:
+                elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
+                return {
+                    "status": "rate_limited",
+                    "price_usd": 0.0,
+                    "availability": "unknown",
+                    "variants": [],
+                    "elapsed_ms": elapsed_ms,
+                    "error": "Akamai Access Denied"
+                }
+
             page_title = page.title()
             if "out of stock" in html.lower() or "sold out" in html.lower():
                 return {
@@ -111,7 +115,7 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
                 "availability": "unknown",
                 "variants": [],
                 "elapsed_ms": round((time.perf_counter() - t_start) * 1000, 2),
-                "error": f"ProductGroup JSON-LD not found: {page_title}"
+                "error": f"ProductGroup JSON-LD not found in DOM: {page_title}"
             }
 
         raw_variants = pg.get("hasVariant") or []
