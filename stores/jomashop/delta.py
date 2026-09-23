@@ -11,6 +11,12 @@ import re
 from typing import Any, Dict, List, Optional, Tuple
 import httpx
 
+try:
+    from curl_cffi import requests as cffi_requests
+    HAS_CURL_CFFI = True
+except ImportError:
+    HAS_CURL_CFFI = False
+
 from storage.network import create_http_client, DEFAULT_BROWSER_HEADERS
 from storage.rate_limiter import acquire_permit, trip_circuit_breaker, parse_retry_after
 
@@ -57,6 +63,77 @@ query checkPriceAndStockBySku($sku: String!) {
 """
 
 
+def _post_graphql(
+    payload: Dict[str, Any],
+    headers: Dict[str, str],
+    client: Optional[Any] = None,
+    timeout: float = 15.0
+) -> Tuple[Optional[Dict[str, Any]], int, str]:
+    """
+    Execute POST GraphQL request using injected client or curl_cffi Chrome TLS
+    impersonation to bypass Cloudflare 493 bot protection at $0.00 / 0 Firecrawl tokens.
+    Returns (json_data, status_code, error_message).
+    """
+    if client is not None:
+        try:
+            resp = client.post(GRAPHQL_URL, json=payload, headers=headers)
+            status = getattr(resp, "status_code", 200)
+            if status == 200:
+                data = resp.json()
+                errors = data.get("errors", []) if isinstance(data, dict) else []
+                if errors:
+                    for err in errors:
+                        cat = str(err.get("extensions", {}).get("category", ""))
+                        code = str(err.get("extensions", {}).get("error-code", ""))
+                        msg = str(err.get("message", ""))
+                        if "bot-protection" in cat or "bot-protection" in code or "Bot Protection" in msg:
+                            return None, 493, f"Bot protection triggered: {msg}"
+                return data, 200, ""
+            return None, status, f"HTTP status {status}"
+        except Exception as exc:
+            return None, 0, f"Injected client error: {exc}"
+
+    if HAS_CURL_CFFI:
+        try:
+            resp = cffi_requests.post(
+                GRAPHQL_URL,
+                json=payload,
+                headers=headers,
+                impersonate="chrome124",
+                timeout=timeout
+            )
+            status = resp.status_code
+            if status == 200:
+                try:
+                    data = resp.json()
+                    errors = data.get("errors", []) if isinstance(data, dict) else []
+                    if errors:
+                        for err in errors:
+                            cat = str(err.get("extensions", {}).get("category", ""))
+                            code = str(err.get("extensions", {}).get("error-code", ""))
+                            msg = str(err.get("message", ""))
+                            if "bot-protection" in cat or "bot-protection" in code or "Bot Protection" in msg:
+                                return None, 493, f"Bot protection triggered: {msg}"
+                    return data, 200, ""
+                except Exception as json_err:
+                    return None, 200, f"JSON parse error: {json_err}"
+            return None, status, f"HTTP status {status}"
+        except Exception as exc:
+            return None, 0, f"curl_cffi error: {exc}"
+
+    # Fallback to standard HTTP client
+    try:
+        with create_http_client(timeout=timeout) as c:
+            resp = c.post(GRAPHQL_URL, json=payload, headers=headers)
+        status = resp.status_code
+        if status == 200:
+            data = resp.json()
+            return data, 200, ""
+        return None, status, f"HTTP status {status}"
+    except Exception as exc:
+        return None, 0, f"HTTP client error: {exc}"
+
+
 def extract_url_key(product: Dict[str, Any]) -> str:
     """Extract canonical url_key from product record or source URL."""
     url_key = product.get("url_key")
@@ -88,8 +165,8 @@ def check_price_and_stock(
 ) -> Dict[str, Any]:
     """
     Poll live price and stock status for an existing Jomashop watch product.
-    Queries POST https://www.jomashop.com/graphql.
-    Applies per-store rate limiting and trips store circuit breaker on HTTP 429.
+    Queries POST https://www.jomashop.com/graphql with Chrome TLS impersonation.
+    Applies per-store rate limiting and trips store circuit breaker on HTTP 429/493/403.
     Preserves old_availability and price fields on 404/delisting.
     """
     t_start = time.perf_counter()
@@ -129,26 +206,20 @@ def check_price_and_stock(
             else:
                 acquire_permit(resolved_store)
 
-            # 2. Issue GraphQL request
+            # 2. Issue GraphQL request via Chrome TLS impersonation
             payload = {
                 "operationName": "checkPriceAndStock",
                 "query": CHECK_PRICE_STOCK_QUERY_URL_KEY,
                 "variables": {"urlKey": url_key}
             }
 
-            if client:
-                resp = client.post(GRAPHQL_URL, json=payload, headers=headers)
-            else:
-                with create_http_client() as c:
-                    resp = c.post(GRAPHQL_URL, json=payload, headers=headers)
-
+            data, status_code, err_msg = _post_graphql(payload, headers, client=client)
             elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
 
-            # Handle 429 rate limit
-            if resp.status_code == 429:
-                retry_after_sec = parse_retry_after(resp.headers.get("Retry-After"))
+            # Handle rate limit (429) or Cloudflare bot protection / challenge (489, 493, 403, 503)
+            if status_code in (429, 489, 493, 403, 500, 502, 503, 504):
                 jitter = random.uniform(1.0, 2.0 * (2 ** attempt))
-                backoff_duration = retry_after_sec + jitter
+                backoff_duration = 3.0 + jitter
 
                 if rate_limiter and callable(getattr(rate_limiter, "trip_circuit_breaker", None)):
                     try:
@@ -167,9 +238,26 @@ def check_price_and_stock(
                     time.sleep(backoff_duration)
                     continue
                 else:
-                    break
+                    return {
+                        "status": "rate_limited",
+                        "handle": handle,
+                        "availability": old_availability,
+                        "old_availability": old_availability,
+                        "current_source_price": old_source_price,
+                        "old_source_price": old_source_price,
+                        "is_active": old_availability == "in_stock",
+                        "price_changed": False,
+                        "stock_changed": False,
+                        "variant_stock_changed": False,
+                        "changed_variants": [],
+                        "variant_price_changed": False,
+                        "changed_variant_prices": [],
+                        "variants_delta": [],
+                        "elapsed_ms": elapsed_ms,
+                        "error": f"Rate limit / bot protection (HTTP {status_code}): {err_msg}"
+                    }
 
-            if resp.status_code == 404:
+            if status_code == 404:
                 return {
                     "status": "not_found",
                     "handle": handle,
@@ -191,8 +279,29 @@ def check_price_and_stock(
                     "message": "Product delisted (HTTP 404)"
                 }
 
-            resp.raise_for_status()
-            data = resp.json()
+            if status_code != 200 or not data:
+                if attempt < 2:
+                    time.sleep(1.0 * (2 ** attempt))
+                    continue
+                return {
+                    "status": "error",
+                    "handle": handle,
+                    "availability": old_availability,
+                    "old_availability": old_availability,
+                    "current_source_price": old_source_price,
+                    "old_source_price": old_source_price,
+                    "is_active": old_availability == "in_stock",
+                    "price_changed": False,
+                    "stock_changed": False,
+                    "variant_stock_changed": False,
+                    "changed_variants": [],
+                    "variant_price_changed": False,
+                    "changed_variant_prices": [],
+                    "variants_delta": [],
+                    "elapsed_ms": elapsed_ms,
+                    "error": f"HTTP {status_code}: {err_msg}"
+                }
+
             items = data.get("data", {}).get("products", {}).get("items", [])
 
             # If url_key query returned no items, try fallback to SKU if available
@@ -202,13 +311,8 @@ def check_price_and_stock(
                     "query": CHECK_PRICE_STOCK_QUERY_SKU,
                     "variables": {"sku": source_sku}
                 }
-                if client:
-                    fb_resp = client.post(GRAPHQL_URL, json=fallback_payload, headers=headers)
-                else:
-                    with create_http_client() as c:
-                        fb_resp = c.post(GRAPHQL_URL, json=fallback_payload, headers=headers)
-                if fb_resp.status_code == 200:
-                    fb_data = fb_resp.json()
+                fb_data, fb_status, fb_err = _post_graphql(fallback_payload, headers, client=client)
+                if fb_status == 200 and fb_data:
                     items = fb_data.get("data", {}).get("products", {}).get("items", [])
 
             if not items:

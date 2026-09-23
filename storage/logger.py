@@ -20,12 +20,15 @@ except ImportError:
     import logging as _std_logging
 
 
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
 def init_logger(
     log_dir: str = "logs",
     general_log_name: str = "freshner.log",
     error_log_name: str = "errors.log",
-    rotation_general: str = "20 MB",
-    rotation_error: str = "10 MB",
+    rotation_general: str = "50 MB",
+    rotation_error: str = "50 MB",
     retention_general: str = "14 days",
     retention_error: str = "30 days",
     console_level: str = "INFO"
@@ -38,9 +41,10 @@ def init_logger(
     if _INITIALIZED:
         return
 
-    os.makedirs(log_dir, exist_ok=True)
-    general_log_path = os.path.join(log_dir, general_log_name)
-    error_log_path = os.path.join(log_dir, error_log_name)
+    full_log_dir = os.path.join(_PROJECT_ROOT, log_dir) if not os.path.isabs(log_dir) else log_dir
+    os.makedirs(full_log_dir, exist_ok=True)
+    general_log_path = os.path.join(full_log_dir, general_log_name)
+    error_log_path = os.path.join(full_log_dir, error_log_name)
 
     if _HAS_LOGURU and _loguru_logger is not None:
         # Remove default handler
