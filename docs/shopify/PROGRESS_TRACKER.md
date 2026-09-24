@@ -39,6 +39,8 @@
 | Collection Title | Type | Rule / Filter | Handle | Shopify GID | Status |
 | :--- | :---: | :--- | :--- | :--- | :---: |
 | **Luxury Watches** | Smart | `product_type EQUALS Watches` | `luxury-watches` | `gid://shopify/Collection/693133148326` | ✅ Live (203 prods) |
+| **Men's Watches** | Smart | `product_type EQUALS Watches` AND `tag EQUALS Men's` | `mens-watches` | `gid://shopify/Collection/693144223910` | ✅ Live (118 prods) |
+| **Women's Watches** | Smart | `product_type EQUALS Watches` AND `tag EQUALS Women's` | `womens-watches` | `gid://shopify/Collection/693144256678` | ✅ Live (69 prods) |
 | **Versace** | Smart | `vendor EQUALS Versace` | `versace` | `gid://shopify/Collection/693133213862` | ✅ Live (46 prods) |
 | **Tissot** | Smart | `vendor EQUALS Tissot` | `tissot` | `gid://shopify/Collection/693133246630` | ✅ Live (157 prods) |
 | **Seiko** | Smart | `vendor EQUALS Seiko` | `seiko` | `gid://shopify/Collection/693133279398` | ✅ Live |
