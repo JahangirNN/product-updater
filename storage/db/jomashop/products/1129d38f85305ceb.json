@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Stainless Steel",
   "specifications": {
     "Jomashop Sku": "SE-SSK005K1",
@@ -79,7 +79,7 @@
       "source_compare_at_price": 495.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/s/e/seiko-5-sports-gmt-automatic-orange-dial-mens-watch-ssk005k1_1.jpg",
       "option_values": [
         {
@@ -113,7 +113,7 @@
     "watches"
   ],
   "created_at": "2026-09-22T14:52:54Z",
-  "updated_at": "2026-09-22T14:52:54Z",
-  "last_verified_at": "2026-09-22T14:52:52Z",
-  "shopify_sync_pending": false
+  "updated_at": "2026-09-22T18:25:32Z",
+  "last_verified_at": "2026-09-22T18:25:32Z",
+  "shopify_sync_pending": true
 }

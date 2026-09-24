@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "material": "Stainless Steel",
   "specifications": {
     "Jomashop Sku": "CZBN0261-51E",
@@ -75,7 +75,7 @@
       "source_compare_at_price": 495.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/c/i/citizen-promaster-dive-black-dial-mens-watch-bn026151e_1.jpg",
       "option_values": [
         {
@@ -109,7 +109,7 @@
     "watches"
   ],
   "created_at": "2026-09-22T10:48:05Z",
-  "updated_at": "2026-09-22T14:52:54Z",
-  "last_verified_at": "2026-09-22T14:52:52Z",
-  "shopify_sync_pending": false
+  "updated_at": "2026-09-22T18:26:20Z",
+  "last_verified_at": "2026-09-22T18:26:20Z",
+  "shopify_sync_pending": true
 }

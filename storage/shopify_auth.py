@@ -1,12 +1,14 @@
 """
-Shopify Authentication & Dynamic Token Management
+Shopify Authentication & Auto-Refreshing Token Management
 Dynamically resolves authenticated tokens from Shopify CLI session or config.
-Pure functions only, zero classes (ADR 0005, ADR 0019).
+Automatically triggers CLI session refresh on token expiration (ADR 0005, ADR 0019).
+Pure functions only, zero classes.
 """
 import os
 import sys
 import json
 import time
+import subprocess
 from typing import Optional, Dict, Any, Tuple
 import httpx
 
@@ -14,6 +16,20 @@ CLI_CONFIG_PATH = os.path.expandvars(r"%APPDATA%\shopify-cli-kit-nodejs\Config\c
 CONFIG_FILE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "shopify_config.json")
 DEFAULT_SHOP_DOMAIN = "hewmvw-am.myshopify.com"
 DEFAULT_API_VERSION = "2026-04"
+
+
+def refresh_cli_session(shop_domain: str = DEFAULT_SHOP_DOMAIN) -> bool:
+    """Trigger Shopify CLI to refresh session tokens silently via CLI."""
+    try:
+        res = subprocess.run(
+            ["shopify.cmd" if sys.platform == "win32" else "shopify", "theme", "list", f"--store={shop_domain}"],
+            capture_output=True,
+            text=True,
+            timeout=15
+        )
+        return res.returncode == 0
+    except Exception:
+        return False
 
 
 def get_shopify_credentials(shop_domain: str = DEFAULT_SHOP_DOMAIN) -> Tuple[str, str, str]:
@@ -62,14 +78,18 @@ def execute_shopify_graphql(
     query: str,
     variables: Optional[Dict[str, Any]] = None,
     shop_domain: str = DEFAULT_SHOP_DOMAIN,
-    timeout: float = 20.0
+    timeout: float = 20.0,
+    allow_retry: bool = True
 ) -> Tuple[Optional[Dict[str, Any]], Dict[str, Any], str]:
     """
     Execute GraphQL query or mutation against Shopify Admin GraphQL API.
+    Auto-refreshes CLI session token if expired (HTTP 401).
     Returns (data_dict, extensions_dict, error_message).
     """
     domain, token, version = get_shopify_credentials(shop_domain)
     if not token:
+        if allow_retry and refresh_cli_session(domain):
+            return execute_shopify_graphql(query, variables, shop_domain, timeout, allow_retry=False)
         return None, {}, "No valid Shopify access token found. Please authenticate via Shopify CLI."
 
     url = f"https://{domain}/admin/api/{version}/graphql.json"
@@ -85,6 +105,12 @@ def execute_shopify_graphql(
     try:
         with httpx.Client(timeout=timeout) as client:
             resp = client.post(url, json=payload, headers=headers)
+            
+            # Handle token expiration with transparent auto-refresh
+            if resp.status_code == 401 and allow_retry:
+                if refresh_cli_session(domain):
+                    return execute_shopify_graphql(query, variables, shop_domain, timeout, allow_retry=False)
+
             if resp.status_code == 200:
                 body = resp.json()
                 data = body.get("data")

@@ -42,6 +42,7 @@ from storage.network import (
     DEFAULT_BROWSER_HEADERS
 )
 import storage.rate_limiter as rate_limiter
+from storage.shopify_sync import sync_delta_to_shopify
 
 DEFAULT_CONFIG_PATH = "config/delta_config.json"
 DEFAULT_HEADERS = DEFAULT_BROWSER_HEADERS
@@ -229,7 +230,14 @@ def poll_single_product(
                 save_product(updated_product)
 
             if has_changed:
-                # Enqueue event for Shopify sync
+                shopify_synced = False
+                if updated_product.get("shopify_product_id"):
+                    try:
+                        shopify_synced = sync_delta_to_shopify(updated_product, delta_res, forex_rate)
+                    except Exception as s_err:
+                        log_error(f"Shopify live sync failed for {p_id}: {s_err}")
+                
+                # Enqueue event for Shopify sync log & audit
                 event_entry = {
                     "event_id": f"evt_{int(time.time()*1000)}_{p_id[:8]}",
                     "timestamp": now_iso,
@@ -248,7 +256,7 @@ def poll_single_product(
                     "changed_variants": delta_res.get("changed_variants", []),
                     "variant_price_changed": delta_res.get("variant_price_changed", False),
                     "changed_variant_prices": delta_res.get("changed_variant_prices", []),
-                    "shopify_sync_pending": True
+                    "shopify_sync_pending": not shopify_synced
                 }
                 append_delta_event(event_entry)
 
