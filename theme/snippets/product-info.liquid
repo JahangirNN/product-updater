@@ -117,7 +117,29 @@ Supported variables
 
           {%- when 'vendor' -%}
             {%- if product != blank -%}
-              {%- render 'vendor' with product.vendor, class: 'h6 link-faded' -%}
+              <div class="luxury-pdp-maison">
+                <span class="luxury-pdp-maison__tag">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                  {%- assign vendor_up = product.vendor | upcase -%}
+                  {%- if vendor_up contains 'TISSOT' or vendor_up contains 'MOVADO' -%}
+                    Swiss Horology
+                  {%- elsif vendor_up contains 'SEIKO' or vendor_up contains 'CITIZEN' -%}
+                    Japanese Precision
+                  {%- elsif vendor_up contains 'VERSACE' or vendor_up contains 'FERRAGAMO' -%}
+                    Italian Atelier
+                  {%- elsif vendor_up contains 'COACH' or vendor_up contains 'JW PEI' or vendor_up contains 'MICHAEL KORS' -%}
+                    Designer Leathercraft
+                  {%- elsif vendor_up contains 'SALOMON' or vendor_up contains 'ON' or vendor_up contains 'HOKA' -%}
+                    Performance Footwear
+                  {%- else -%}
+                    Curated Luxury
+                  {%- endif -%}
+                </span>
+                <span class="luxury-pdp-maison__dot"></span>
+                <a href="{{ routes.collections_url }}/{{ product.vendor | handle }}" class="luxury-pdp-maison__vendor">
+                  {{ product.vendor }}
+                </a>
+              </div>
             {%- else -%}
               {%- assign placeholder_vendor = 'general.on_boarding.product_vendor' | t -%}
               {%- render 'vendor' with placeholder_vendor, class: 'h6 link-faded' -%}
@@ -154,8 +176,30 @@ Supported variables
 
           {%- when 'price' -%}
             {%- if product.selected_or_first_available_variant != nil -%}
-              <div class="v-stack">
+              <div class="v-stack luxury-pdp-pricing">
                 {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, context: 'product' -%}
+
+                {%- assign current_var = product.selected_or_first_available_variant -%}
+                {%- if current_var.compare_at_price > current_var.price -%}
+                  {%- assign savings_amt = current_var.compare_at_price | minus: current_var.price -%}
+                  {%- assign savings_pct = savings_amt | times: 100.0 | divided_by: current_var.compare_at_price | round -%}
+                  <div class="luxury-pdp-savings-row">
+                    <span class="luxury-pdp-savings-badge">
+                      Save {{ savings_pct }}% ({{ savings_amt | money }} off)
+                    </span>
+                    <span class="luxury-pdp-tax-notice">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                      All Import Duties & Taxes Included
+                    </span>
+                  </div>
+                {%- else -%}
+                  <div class="luxury-pdp-savings-row">
+                    <span class="luxury-pdp-tax-notice">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                      Verified Authentic · Complimentary Express Delivery
+                    </span>
+                  </div>
+                {%- endif -%}
 
                 {%- if block.settings.show_taxes_notice -%}
                   <p class="text-sm text-subdued">
@@ -363,6 +407,55 @@ Supported variables
                 payment_button_background: block.settings.payment_button_background,
                 payment_button_text_color: block.settings.payment_button_text_color
             -%}
+
+            {%- if context == 'main_product' -%}
+              <div class="luxury-pdp-trust-grid">
+                <div class="luxury-pdp-trust-item">
+                  <div class="luxury-pdp-trust-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+                  </div>
+                  <div class="luxury-pdp-trust-text">
+                    <span class="luxury-pdp-trust-title">100% Authentic</span>
+                    <span class="luxury-pdp-trust-desc">Certified serials & luxury box</span>
+                  </div>
+                </div>
+
+                <div class="luxury-pdp-trust-item">
+                  <div class="luxury-pdp-trust-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                  </div>
+                  <div class="luxury-pdp-trust-text">
+                    <span class="luxury-pdp-trust-title">Insured Transit</span>
+                    <span class="luxury-pdp-trust-desc">Complimentary express air delivery</span>
+                  </div>
+                </div>
+
+                <div class="luxury-pdp-trust-item">
+                  <div class="luxury-pdp-trust-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  </div>
+                  <div class="luxury-pdp-trust-text">
+                    <span class="luxury-pdp-trust-title">2-Year Warranty</span>
+                    <span class="luxury-pdp-trust-desc">Comprehensive luxury protection</span>
+                  </div>
+                </div>
+
+                <div class="luxury-pdp-trust-item">
+                  <div class="luxury-pdp-trust-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                  </div>
+                  <div class="luxury-pdp-trust-text">
+                    <span class="luxury-pdp-trust-title">VIP Concierge</span>
+                    <span class="luxury-pdp-trust-desc">Dedicated personal client advisor</span>
+                  </div>
+                </div>
+              </div>
+
+              <a href="mailto:concierge@therareavenue.com?subject=Inquiry%20regarding%20{{ product.title | url_encode }}&body=Hello%20The%20Rare%20Avenue%20Concierge%2C%0A%0AI%20am%20interested%20in%20learning%20more%20about%20the%20following%20piece%3A%0A{{ shop.url }}{{ product.url }}" class="luxury-pdp-concierge-action">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                Inquire with a VIP Client Advisor &rarr;
+              </a>
+            {%- endif -%}
 
           {%- when 'pickup_availability' -%}
             {%- if product != blank -%}

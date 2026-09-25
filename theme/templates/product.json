@@ -39,8 +39,8 @@
         "description": {
           "type": "description",
           "settings": {
-            "collapse_content": true,
-            "show_below_gallery": false
+            "collapse_content": false,
+            "show_below_gallery": true
           }
         },
         "variant_picker": {
@@ -68,20 +68,6 @@
             "payment_button_text_color": ""
           }
         },
-        "whatsapp_button": {
-          "type": "button",
-          "settings": {
-            "link": "https://wa.me/910000000000?text=Hi%2C%20I%27m%20interested%20in%20this%20product",
-            "text": "Chat with us on WhatsApp",
-            "stretch": true,
-            "background": "#25d366",
-            "text_color": "#ffffff"
-          }
-        },
-        "pickup_availability": {
-          "type": "pickup_availability",
-          "settings": {}
-        },
         "complementary_products": {
           "type": "complementary_products",
           "settings": {
@@ -99,12 +85,10 @@
         "price",
         "payment_terms",
         "separator",
-        "description",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "whatsapp_button",
-        "pickup_availability",
+        "description",
         "complementary_products"
       ],
       "settings": {

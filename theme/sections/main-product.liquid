@@ -45,6 +45,7 @@
     <div style="margin-bottom: 1.25rem;">
       {%- render 'luxury-breadcrumbs' -%}
     </div>
+    {%- render 'luxury-pdp-enhancements', product: product -%}
     <product-rerender id="product-info-{{ product.id }}-{{ section.id }}" observe-form="{{ product_form_id }}" allow-partial-rerender>
       <div class="product">
         {%- if product.media.size > 0 -%}

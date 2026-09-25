@@ -1,0 +1,484 @@
+{%- comment -%}
+  Luxury PDP Enhancements Snippet (ADR 0022 - 2026 Minimal Modern Luxury Edition)
+  Features:
+  1. Maison Provenance & Verification Badge
+  2. Dynamic Savings Pill (Whole-rupee discount calculation)
+  3. 4-Badge Luxury Concierge Trust Grid (Authenticity, Insured Transit, 2-Year Warranty, VIP Concierge)
+  4. Discreet VIP Client Advisor Consultation Trigger
+  5. Magazine-Grade Horology & Technical Specification Styling
+  6. High-Conversion Floating Sticky Quick-Buy Bar
+{%- endcomment -%}
+
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign has_discount = false
+  if current_variant.compare_at_price > current_variant.price
+    assign has_discount = true
+    assign savings_amount = current_variant.compare_at_price | minus: current_variant.price
+    assign savings_percent = savings_amount | times: 100.0 | divided_by: current_variant.compare_at_price | round
+  endif
+
+  # Determine Maison Category Tag
+  assign vendor_up = product.vendor | upcase
+  assign category_tag = 'CURATED LUXURY'
+  if vendor_up contains 'TISSOT' or vendor_up contains 'MOVADO'
+    assign category_tag = 'SWISS HOROLOGY'
+  elsif vendor_up contains 'SEIKO' or vendor_up contains 'CITIZEN'
+    assign category_tag = 'JAPANESE HOROLOGY'
+  elsif vendor_up contains 'VERSACE' or vendor_up contains 'FERRAGAMO'
+    assign category_tag = 'MILANESE COUTURE'
+  elsif vendor_up contains 'COACH' or vendor_up contains 'JW PEI' or vendor_up contains 'MICHAEL KORS'
+    assign category_tag = 'DESIGNER LEATHERCRAFT'
+  elsif vendor_up contains 'SALOMON' or vendor_up contains 'ON' or vendor_up contains 'HOKA'
+    assign category_tag = 'PERFORMANCE INNOVATION'
+  elsif vendor_up contains 'NIKE' or vendor_up contains 'JORDAN' or vendor_up contains 'ADIDAS' or vendor_up contains 'ASICS'
+    assign category_tag = 'SNEAKER COUTURE'
+  endif
+-%}
+
+<style>
+  /* ==========================================================================
+     LUXURY PDP ENHANCEMENTS STYLING (2026 EDITION)
+     ========================================================================== */
+
+  /* Maison Provenance Badge */
+  .luxury-pdp-maison {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .luxury-pdp-maison__tag {
+    font-family: var(--text-font-family);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #c9a876;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .luxury-pdp-maison__dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #c9a876;
+    display: inline-block;
+  }
+
+  .luxury-pdp-maison__vendor {
+    font-family: var(--text-font-family);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #666666;
+  }
+
+  /* Price & Savings Enhancements */
+  .luxury-pdp-pricing {
+    margin-top: 0.35rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .luxury-pdp-savings-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+  }
+
+  .luxury-pdp-savings-badge {
+    background: #1a1a1a;
+    color: #f7f6f3;
+    font-family: var(--text-font-family);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    border-radius: 2px;
+    border-left: 2px solid #c9a876;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .luxury-pdp-tax-notice {
+    font-size: 0.75rem;
+    color: #777777;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .luxury-pdp-tax-notice svg {
+    color: #2e7d32;
+    flex-shrink: 0;
+  }
+
+  /* 4-Badge Luxury Concierge Trust Grid */
+  .luxury-pdp-trust-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin: 1.5rem 0 1rem;
+    padding: 1.15rem;
+    background: #faf9f6;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 2px;
+  }
+
+  .luxury-pdp-trust-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+  }
+
+  .luxury-pdp-trust-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    color: #c9a876;
+    margin-top: 2px;
+  }
+
+  .luxury-pdp-trust-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .luxury-pdp-trust-title {
+    font-family: var(--text-font-family);
+    font-size: 0.7188rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+  }
+
+  .luxury-pdp-trust-desc {
+    font-size: 0.6875rem;
+    line-height: 1.4;
+    color: #666666;
+  }
+
+  /* VIP Client Advisor Inquire Action */
+  .luxury-pdp-concierge-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin-top: 0.85rem;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    color: #1a1a1a;
+    font-family: var(--text-font-family);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .luxury-pdp-concierge-action:hover {
+    border-color: #c9a876;
+    color: #c9a876;
+    background: #fbfaf8;
+  }
+
+  /* Magazine-Grade Below-Gallery Styling */
+  .product-content-below-gallery {
+    margin-top: 3.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding-top: 2.5rem;
+  }
+
+  .product-content-below-gallery .watch-highlights-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.25rem !important;
+    margin: 2rem 0 !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    .product-content-below-gallery .watch-highlights-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 0.75rem !important;
+    }
+    .luxury-pdp-trust-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .product-content-below-gallery .highlight-card {
+    background: #fcfbf9 !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-top: 2px solid #c9a876 !important;
+    padding: 1.25rem 1rem !important;
+    text-align: center !important;
+    border-radius: 1px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  }
+
+  .product-content-below-gallery .highlight-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.08);
+  }
+
+  .product-content-below-gallery .highlight-card .label {
+    font-family: var(--text-font-family) !important;
+    font-size: 0.6875rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase !important;
+    color: #888888 !important;
+    margin-bottom: 0.35rem !important;
+    display: block !important;
+  }
+
+  .product-content-below-gallery .highlight-card .value {
+    font-family: var(--heading-font-family) !important;
+    font-size: 1.0625rem !important;
+    font-weight: 500 !important;
+    color: #1a1a1a !important;
+    display: block !important;
+  }
+
+  .product-content-below-gallery .specs-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 1.75rem 0 !important;
+    font-size: 0.8125rem !important;
+  }
+
+  .product-content-below-gallery .specs-table tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  }
+
+  .product-content-below-gallery .specs-table tr:nth-child(even) {
+    background: #fbfaf8 !important;
+  }
+
+  .product-content-below-gallery .specs-table td {
+    padding: 0.75rem 1rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .product-content-below-gallery .specs-table td:first-child {
+    font-family: var(--text-font-family) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.06em !important;
+    color: #555555 !important;
+    width: 35% !important;
+    text-transform: uppercase !important;
+    font-size: 0.7188rem !important;
+  }
+
+  .product-content-below-gallery .specs-table td:last-child {
+    color: #1a1a1a !important;
+    font-weight: 500 !important;
+  }
+
+  /* Floating Sticky Quick-Buy Bar */
+  .luxury-sticky-buy-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.06);
+    padding: 0.75rem 1.5rem;
+    transform: translateY(110%);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-sizing: border-box;
+  }
+
+  .luxury-sticky-buy-bar.is-visible {
+    transform: translateY(0);
+  }
+
+  .luxury-sticky-buy-bar__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .luxury-sticky-buy-bar__left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0;
+  }
+
+  .luxury-sticky-buy-bar__image {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+  }
+
+  .luxury-sticky-buy-bar__details {
+    min-width: 0;
+  }
+
+  .luxury-sticky-buy-bar__title {
+    font-family: var(--heading-font-family);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+
+  .luxury-sticky-buy-bar__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.8125rem;
+    margin-top: 0.15rem;
+  }
+
+  .luxury-sticky-buy-bar__price {
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+
+  .luxury-sticky-buy-bar__variant {
+    color: #777777;
+    font-size: 0.75rem;
+  }
+
+  .luxury-sticky-buy-bar__cta {
+    background: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #1a1a1a;
+    font-family: var(--text-font-family);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.75rem;
+    border-radius: 2px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .luxury-sticky-buy-bar__cta:hover {
+    background: #c9a876;
+    border-color: #c9a876;
+    color: #1a1a1a;
+  }
+
+  @media screen and (max-width: 600px) {
+    .luxury-sticky-buy-bar {
+      padding: 0.6rem 1rem;
+    }
+    .luxury-sticky-buy-bar__details {
+      display: none;
+    }
+    .luxury-sticky-buy-bar__cta {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+
+{%- comment -%} ==================== FLOATING STICKY QUICK-BUY BAR ==================== {%- endcomment -%}
+<div id="luxury-sticky-buy-bar" class="luxury-sticky-buy-bar" aria-hidden="true">
+  <div class="luxury-sticky-buy-bar__inner">
+    <div class="luxury-sticky-buy-bar__left">
+      {%- if product.featured_media -%}
+        <img 
+          src="{{ product.featured_media | image_url: width: 100 }}" 
+          alt="{{ product.title | escape }}" 
+          class="luxury-sticky-buy-bar__image" 
+          width="44" 
+          height="44" 
+          loading="lazy"
+        >
+      {%- endif -%}
+      <div class="luxury-sticky-buy-bar__details">
+        <p class="luxury-sticky-buy-bar__title">{{ product.title }}</p>
+        <div class="luxury-sticky-buy-bar__meta">
+          <span class="luxury-sticky-buy-bar__price">
+            {%- if settings.currency_code_enabled -%}
+              {{- current_variant.price | money_with_currency -}}
+            {%- else -%}
+              {{- current_variant.price | money -}}
+            {%- endif -%}
+          </span>
+          {%- unless product.has_only_default_variant -%}
+            <span class="luxury-sticky-buy-bar__variant">· {{ current_variant.title }}</span>
+          {%- endunless -%}
+        </div>
+      </div>
+    </div>
+    <button type="button" class="luxury-sticky-buy-bar__cta" id="luxury-sticky-buy-btn">
+      Add to Bag
+    </button>
+  </div>
+</div>
+
+<script>
+  (function() {
+    function initStickyBuyBar() {
+      var stickyBar = document.getElementById('luxury-sticky-buy-bar');
+      var mainBuyBtn = document.querySelector('.product-form form [type="submit"], .product-form button[name="add"], .buy-buttons button');
+      var stickyBtn = document.getElementById('luxury-sticky-buy-btn');
+
+      if (!stickyBar || !mainBuyBtn) return;
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!entry.isIntersecting) {
+            stickyBar.classList.add('is-visible');
+            stickyBar.setAttribute('aria-hidden', 'false');
+          } else {
+            stickyBar.classList.remove('is-visible');
+            stickyBar.setAttribute('aria-hidden', 'true');
+          }
+        });
+      }, { rootMargin: '0px 0px -100px 0px' });
+
+      observer.observe(mainBuyBtn);
+
+      if (stickyBtn) {
+        stickyBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          mainBuyBtn.click();
+        });
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initStickyBuyBar);
+    } else {
+      initStickyBuyBar();
+    }
+  })();
+</script>
