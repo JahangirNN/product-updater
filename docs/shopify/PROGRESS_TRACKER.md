@@ -23,14 +23,14 @@
 
 | Source Store | Catalog Total | Status on Shopify | Ingested Count | Ingestion Date | Notes |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| **Jomashop (Pilot)** | 574 | 🟢 Ingestion Active | 203 / 574 | 2026-09-24 | Ingested: Versace (46) + Tissot (157) Live |
+| **Jomashop (Watches Complete)** | 574 | 🟢 Ingestion Complete | 574 / 574 | 2026-09-25 | 100% of all 574 Luxury Watches Live |
 | **Nordstrom** | 238 | ⬜ Pending M4 | 0 / 238 | - | Salomon, On Running, HOKA |
 | **Foot Locker** | 307 | ⬜ Pending M4 | 0 / 307 | - | Nike, Adidas, ASICS |
 | **JW PEI** | 491 | ⬜ Pending M4 | 0 / 491 | - | Designer Vegan Leather Handbags |
 | **Michael Kors** | 530 | ⬜ Pending M4 | 0 / 530 | - | Handbags, Wallets, Sandals, Sneakers |
 | **Coach** | 573 | ⬜ Pending M4 | 0 / 573 | - | Handbags, Crossbody, Wallets, Footwear |
 | **JD Sports** | 476 | ⬜ Pending M4 | 0 / 476 | - | Nike Footwear & Streetwear |
-| **TOTAL** | **3,189** | - | **203 / 3,189** | - | **Target: 100% Ingested** |
+| **TOTAL** | **3,189** | - | **574 / 3,189** | - | **Target: 100% Ingested** |
 
 ---
 
@@ -38,14 +38,16 @@
 
 | Collection Title | Type | Rule / Filter | Handle | Shopify GID | Status |
 | :--- | :---: | :--- | :--- | :--- | :---: |
-| **Luxury Watches** | Smart | `product_type EQUALS Watches` | `luxury-watches` | `gid://shopify/Collection/693133148326` | ✅ Live (203 prods) |
-| **Men's Watches** | Smart | `product_type EQUALS Watches` AND `tag EQUALS Men's` | `mens-watches` | `gid://shopify/Collection/693144223910` | ✅ Live (118 prods) |
-| **Women's Watches** | Smart | `product_type EQUALS Watches` AND `tag EQUALS Women's` | `womens-watches` | `gid://shopify/Collection/693144256678` | ✅ Live (69 prods) |
+| **Luxury Watches** | Smart | `product_type EQUALS Watches` | `luxury-watches` | `gid://shopify/Collection/693133148326` | ✅ Live (574 prods) |
+| **Men's Watches** | Smart | `product_type EQUALS Watches` AND `tag EQUALS Men's` | `mens-watches` | `gid://shopify/Collection/693144223910` | ✅ Live (367 prods) |
+| **Women's Watches** | Smart | `product_type EQUALS Watches` AND `tag EQUALS Women's` | `womens-watches` | `gid://shopify/Collection/693144256678` | ✅ Live (207 prods) |
 | **Versace** | Smart | `vendor EQUALS Versace` | `versace` | `gid://shopify/Collection/693133213862` | ✅ Live (46 prods) |
 | **Tissot** | Smart | `vendor EQUALS Tissot` | `tissot` | `gid://shopify/Collection/693133246630` | ✅ Live (157 prods) |
-| **Seiko** | Smart | `vendor EQUALS Seiko` | `seiko` | `gid://shopify/Collection/693133279398` | ✅ Live |
-| **Citizen** | Smart | `vendor EQUALS Citizen` | `citizen` | `gid://shopify/Collection/693133312166` | ✅ Live |
-| **Movado** | Smart | `vendor EQUALS Movado` | `movado` | `gid://shopify/Collection/693133344934` | ✅ Live |
+| **Seiko** | Smart | `vendor EQUALS Seiko` | `seiko` | `gid://shopify/Collection/693133279398` | ✅ Live (68 prods) |
+| **Citizen** | Smart | `vendor EQUALS Citizen` | `citizen` | `gid://shopify/Collection/693133312166` | ✅ Live (119 prods) |
+| **Movado** | Smart | `vendor EQUALS Movado` | `movado` | `gid://shopify/Collection/693133344934` | ✅ Live (102 prods) |
+| **Ferragamo** | Smart | `vendor EQUALS Ferragamo` | `ferragamo` | `gid://shopify/Collection/693161263270` | ✅ Live (15 prods) |
+| **Michael Kors Watches** | Smart | `product_type EQUALS Watches` AND `vendor EQUALS Michael Kors` | `michael-kors-watches` | `gid://shopify/Collection/693161296038` | ✅ Live (67 prods) |
 | **Designer Bags** | Smart | `product_type IN (Handbags, Shoulder Bags, Tote Bags)` | `designer-bags` | - | ⏳ Pending |
 | **Premium Footwear** | Smart | `product_type IN (Shoes, Sneakers, Athletic Shoes)` | `premium-footwear` | - | ⏳ Pending |
 | **Men** | Smart | `tag EQUALS Gender:Men` OR `tag EQUALS Gender:Unisex` | `men` | `gid://shopify/Collection/691279659174` | ✅ Existing |
@@ -60,6 +62,6 @@
 | **2026-09-24** | Shopify Admin GraphQL Live Connectivity Test (`2026-04`) | `200 OK` (Plan: Basic, Currency: INR) | `test_cli_auth.py` |
 | **2026-09-24** | Versace Luxury Watches Pilot Ingestion (46/46 items) | `46/46 PASS` (100% Success, 0 Errors) | `upload_versace_pilot.py` |
 | **2026-09-24** | Tissot Luxury Watches Category Ingestion (157/157 items) | `157/157 PASS` (100% Success, 0 Errors) | `upload_tissot_category.py` |
-| **2026-09-24** | Smart Collection Auto-Population Verification | `46 in Versace, 157 in Tissot, 203 in Luxury Watches` | `verify_tissot_pilot.py` |
-| **2026-09-24** | Delta Freshner Real-Time Shopify Sync Bridge | `100% PASS` | `sync_catalog.py` & `shopify_sync.py` |
-| **2026-09-24** | Documentation Integrity & ADR Alignment Check | `100% PASS` | `verify_docs_alignment.py` |
+| **2026-09-25** | All Remaining Watches Batch Ingestion (371/371 items) | `371/371 PASS` (100% Success, 0 Errors) | `upload_all_remaining_watches.py` |
+| **2026-09-25** | Definitive 3-Pass Watch Catalog Audit | `100% PASS` across DB, GraphQL, & Endpoints | `run_watch_3pass_audit.py` |
+| **2026-09-25** | Documentation Integrity & ADR Alignment Check | `100% PASS` | `verify_docs_alignment.py` |
