@@ -14,38 +14,49 @@
     "text-with-icons": {
       "type": "text-with-icons",
       "blocks": {
+        "icon-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-shield",
+            "icon_width": 28,
+            "mobile_icon_width": 24,
+            "title": "100% Guaranteed Authentic",
+            "content": "<p>Every timepiece and designer piece is rigorously verified with certified serials and official documentation.</p>"
+          }
+        },
         "icon-2": {
           "type": "item",
           "settings": {
-            "icon": "picto-award-gift",
-            "icon_width": 24,
+            "icon": "picto-delivery-truck",
+            "icon_width": 28,
             "mobile_icon_width": 24,
-            "title": "Satisfied or refunded",
-            "content": "<p>Short content about your store</p>"
+            "title": "Complimentary Insured Transit",
+            "content": "<p>Dispatched via priority worldwide air transit with full transit insurance and signature verification on delivery.</p>"
           }
         },
         "icon-3": {
           "type": "item",
           "settings": {
             "icon": "picto-award-gift",
-            "icon_width": 24,
+            "icon_width": 28,
             "mobile_icon_width": 24,
-            "title": "Top-notch support",
-            "content": "<p>Short content about your store</p>"
+            "title": "2-Year Maison Warranty",
+            "content": "<p>Comprehensive 24-month protection covering mechanical movements, internal calibers, and craftsmanship.</p>"
           }
         },
         "icon-4": {
           "type": "item",
           "settings": {
-            "icon": "picto-award-gift",
-            "icon_width": 24,
+            "icon": "picto-customer-support",
+            "icon_width": 28,
             "mobile_icon_width": 24,
-            "title": "Secure payments",
-            "content": "<p>Short content about your store</p>"
+            "title": "VIP Client Advisor Concierge",
+            "content": "<p>Dedicated personal luxury advisors available 7 days a week for styling guidance, sizing, and private inquiries.</p>"
           }
         }
       },
       "block_order": [
+        "icon-1",
         "icon-2",
         "icon-3",
         "icon-4"
@@ -65,8 +76,8 @@
         "newsletter": {
           "type": "newsletter",
           "settings": {
-            "title": "Newsletter",
-            "content": "<p>Sign up to our newsletter to receive exclusive offers.</p>",
+            "title": "Collector Salon",
+            "content": "<p>Receive private invitations, rare allocation notifications, and horological releases directly to your inbox.</p>",
             "button_background": "",
             "button_text_color": ""
           }
@@ -82,8 +93,8 @@
         "text": {
           "type": "text",
           "settings": {
-            "title": "About",
-            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>",
+            "title": "About The Rare Avenue",
+            "content": "<p>The Rare Avenue is a premier global luxury destination curating exceptional Swiss &amp; Japanese horology, designer leathercraft, and performance couture. Every piece is rigorously authenticated, backed by a 2-year warranty, and delivered with white-glove insured transit worldwide.</p>",
             "enable_follow_on_shop": true
           }
         }
