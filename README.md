@@ -115,6 +115,7 @@ All engineering decisions are recorded and immutably numbered in [`docs/adr/`](.
 | **[0019](./docs/adr/0019-shopify-graphql-admin-and-mcp-integration.md)** | Shopify Admin GraphQL API Integration & Dynamic CLI Auth | Accepted |
 | **[0020](./docs/adr/0020-shopify-catalog-taxonomy-and-sync-bridge.md)** | Shopify Catalog Taxonomy, Field Distribution & Real-Time Sync Bridge | Accepted |
 | **[0021](./docs/adr/0021-distributed-shopify-connector-and-sync-architecture.md)** | Distributed Shopify Connector & Real-Time Sync Architecture | Accepted |
+| **[0022](./docs/adr/0022-hierarchical-navigation-taxonomy-and-automated-menu-provisioning.md)** | Hierarchical Navigation Taxonomy & Menu Provisioning Architecture | Accepted |
 
 ---
 

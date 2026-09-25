@@ -1,0 +1,270 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/efc44023-aa7f-421b-a1b6-01f1721542c9.png",
+            "mobile_image": "shopify://shop_images/68b969ad-371e-41db-be94-950287140dec.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-end-start text-start",
+            "desktop_text_position": "sm:place-self-end-start sm:text-start",
+            "content_max_width": 780,
+            "button_1_text": "Shop All",
+            "button_1_link": "",
+            "button_1_style": "fill",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#1c1c1c",
+            "button_2_text": "Ready to Ship",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#1c1c1c",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 100%)"
+          }
+        },
+        "slide-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6ebe917e-e20a-4ce6-b231-f862ae2f00b6.png",
+            "subheading": "Every Piece, Verified",
+            "title": "Authenticity Is Never Optional",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 400,
+            "button_1_text": "How We Authenticate",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "#ffffff",
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.1), rgba(4, 4, 4, 0.45) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "slide-1",
+        "slide-2"
+      ],
+      "settings": {
+        "allow_transparent_header": true,
+        "show_next_section_button": true,
+        "media_size": "fill",
+        "show_initial_transition": true,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff"
+      }
+    },
+    "category-tiles": {
+      "type": "media-grid",
+      "blocks": {
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/66493d7c-363c-4c3e-b1b1-9c6d3a8d4101.png",
+            "column_count": "3",
+            "row_count": 1,
+            "title": "Women",
+            "heading_tag": "h3",
+            "content": "",
+            "link_text": "Discover the Edit",
+            "link_url": "shopify://collections/women",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/fa38bc35-933f-4965-ba03-9e53daca36ae.png",
+            "column_count": "3",
+            "row_count": 1,
+            "title": "Men",
+            "heading_tag": "h3",
+            "content": "",
+            "link_text": "Explore the Range",
+            "link_url": "shopify://collections/men",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        },
+        "image-3": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/8732c475-8a37-47ed-ae7a-b1dfbf9f4b40.png",
+            "column_count": "3",
+            "row_count": 1,
+            "title": "Ready to Ship",
+            "heading_tag": "h3",
+            "content": "",
+            "link_text": "Ready When You Are",
+            "link_url": "shopify://collections/instant-ship",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        },
+        "image-4": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/0ef9b579-e631-47b9-bba0-4c0f75a3d0b5.png",
+            "column_count": "3",
+            "row_count": 1,
+            "title": "Gift Sets",
+            "heading_tag": "h3",
+            "content": "",
+            "link_text": "Find the Perfect Gift",
+            "link_url": "shopify://collections/gift-section",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        }
+      },
+      "block_order": [
+        "image-1",
+        "image-2",
+        "image-3",
+        "image-4"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "desktop_row_height": 290,
+        "mobile_row_height": 180,
+        "section_width": "lg",
+        "spacing": "md",
+        "subheading": "For Him. For Her. For Every Moment.",
+        "title": "Shop With Intention",
+        "content": ""
+      }
+    },
+    "featured-collections-1": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "women",
+            "products_count": 8,
+            "title": "For Her",
+            "link_url": "shopify://collections/women",
+            "link_text": "Shop the Women's Edit"
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "men",
+            "products_count": 8,
+            "title": "For Him",
+            "link_url": "shopify://collections/men",
+            "link_text": "Shop the Men's Edit"
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-2"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "Handpicked, Not Mass-Produced"
+      }
+    },
+    "featured-collections-2": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "instant-ship",
+            "products_count": 8,
+            "title": "Ready to Ship",
+            "link_url": "shopify://collections/instant-ship",
+            "link_text": "Shop What Ships Today"
+          }
+        }
+      },
+      "block_order": [
+        "collection-1"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "No Wait. Just Luxury."
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "separate_section_with_border": true,
+        "image_size": "md",
+        "subheading": "Never Miss a Drop",
+        "title": "Be the First to Know",
+        "content": "<p>New arrivals, restocks, and members-only offers — straight to your inbox, before anyone else.</p>",
+        "button_text": "Subscribe",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "category-tiles",
+    "featured-collections-1",
+    "featured-collections-2",
+    "newsletter"
+  ]
+}

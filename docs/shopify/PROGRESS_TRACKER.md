@@ -16,7 +16,7 @@
 | **M3: Delta Freshner Live Sync Loop** | ✅ **COMPLETED** | Connected 1-hour background daemon to push price and stock shifts directly to Shopify via `productSet` in real-time. | `storage/shopify_sync.py`, `sync_catalog.py` live delta dispatch |
 | **M4: Distributed Connector & High-Throughput Engine** | ✅ **COMPLETED** | Built distributed Shopify connector architecture: universal taxonomy normalizer with zero retailer leakage, declarative collection provisioner (27 smart collections), and high-throughput bulk uploader CLI. | `storage/shopify_taxonomy.py`, `storage/shopify_collections.py`, `scripts/shopify_bulk_uploader.py`, ADR 0021 |
 | **M5: Storewide Catalog Ingestion** | 🔄 **IN PROGRESS** | Progressively ingesting remaining 2,612 products across JW PEI, COACH, Michael Kors, Nordstrom, Foot Locker, and JD Sports via bulk uploader. | `scripts/shopify_bulk_uploader.py`, `storage/db/index.json` |
-| **M6: Code-Driven Storefront UI** | ⬜ **PENDING** | Develop custom theme using Liquid OS 2.0, Vite (`vite-plugin-shopify`), and Tailwind CSS v4 with size pills, live stock badges, and specs accordions. | `theme/`, Vite configuration, Tailwind CSS v4 components |
+| **M6: Code-Driven Storefront UI** | 🔄 **IN PROGRESS** | Prestige theme (v10.11) pulled locally; coded 3-tier luxury navigation sidebar (`snippets/luxury-sidebar-panels.liquid`) deployed directly to live theme (`#197348655270`). | `theme/`, ADR 0022, `config/shopify_navigation_manifest.json` |
 
 ---
 
@@ -85,3 +85,5 @@
 | **2026-09-25** | Live Watch Stock & Price Sync Deep Audit | `100% PASS` (Live polling, GIDs, GraphQL shift, OOS protection) | `scripts/audit_watch_live_sync.py` |
 | **2026-09-25** | Luxury Watch PDP Reformatting & Zero Leakage Sync | `574/574 PASS` (100% Live on Shopify, 0 Leaks) | `scripts/reformat_and_sync_watches.py` |
 | **2026-09-25** | Documentation Integrity & ADR Alignment Check | `100% PASS` | `verify_docs_alignment.py` |
+| **2026-09-25** | 3-Tier Navigation Architecture & Manifest Established | `ADR 0022 ACCEPTED` | `docs/adr/0022-*` |
+| **2026-09-25** | Live Theme 3-Tier Navigation Deployment (#197348655270) | `100% DEPLOYED & VERIFIED` (0 Errors) | `shopify theme push` & live curl verification |

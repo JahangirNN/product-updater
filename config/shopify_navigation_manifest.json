@@ -1,0 +1,298 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-09-25",
+  "menu_handle": "main-menu",
+  "menu_title": "Main Menu",
+  "navigation": [
+    {
+      "title": "Women",
+      "type": "department",
+      "url": "/collections/women",
+      "items": [
+        {
+          "title": "Luxury Watches",
+          "type": "category",
+          "url": "/collections/womens-watches",
+          "items": [
+            {
+              "title": "All Women's Watches",
+              "url": "/collections/womens-watches"
+            },
+            {
+              "title": "Tissot",
+              "url": "/collections/womens-watches?filter.p.vendor=Tissot"
+            },
+            {
+              "title": "Seiko",
+              "url": "/collections/womens-watches?filter.p.vendor=Seiko"
+            },
+            {
+              "title": "Citizen",
+              "url": "/collections/womens-watches?filter.p.vendor=Citizen"
+            },
+            {
+              "title": "Movado",
+              "url": "/collections/womens-watches?filter.p.vendor=Movado"
+            },
+            {
+              "title": "Versace",
+              "url": "/collections/womens-watches?filter.p.vendor=Versace"
+            },
+            {
+              "title": "Michael Kors",
+              "url": "/collections/womens-watches?filter.p.vendor=Michael+Kors"
+            }
+          ]
+        },
+        {
+          "title": "Designer Bags",
+          "type": "category",
+          "url": "/collections/womens-handbags",
+          "items": [
+            {
+              "title": "All Handbags",
+              "url": "/collections/womens-handbags"
+            },
+            {
+              "title": "JW PEI",
+              "url": "/collections/womens-handbags?filter.p.vendor=JW+PEI"
+            },
+            {
+              "title": "COACH",
+              "url": "/collections/womens-handbags?filter.p.vendor=COACH"
+            },
+            {
+              "title": "Michael Kors",
+              "url": "/collections/womens-handbags?filter.p.vendor=MICHAEL+Michael+Kors"
+            }
+          ]
+        },
+        {
+          "title": "Premium Footwear",
+          "type": "category",
+          "url": "/collections/womens-shoes",
+          "items": [
+            {
+              "title": "All Women's Shoes",
+              "url": "/collections/womens-shoes"
+            },
+            {
+              "title": "On Running",
+              "url": "/collections/womens-shoes?filter.p.vendor=On"
+            },
+            {
+              "title": "Salomon",
+              "url": "/collections/womens-shoes?filter.p.vendor=Salomon"
+            },
+            {
+              "title": "HOKA",
+              "url": "/collections/womens-shoes?filter.p.vendor=HOKA"
+            },
+            {
+              "title": "Nike",
+              "url": "/collections/womens-shoes?filter.p.vendor=Nike"
+            },
+            {
+              "title": "adidas",
+              "url": "/collections/womens-shoes?filter.p.vendor=adidas"
+            },
+            {
+              "title": "COACH Footwear",
+              "url": "/collections/womens-shoes?filter.p.vendor=COACH"
+            }
+          ]
+        },
+        {
+          "title": "Wallets & Accessories",
+          "type": "category",
+          "url": "/collections/wallets-accessories",
+          "items": [
+            {
+              "title": "All Wallets",
+              "url": "/collections/wallets-accessories"
+            },
+            {
+              "title": "COACH Wallets",
+              "url": "/collections/wallets-accessories?filter.p.vendor=COACH"
+            },
+            {
+              "title": "Michael Kors Wallets",
+              "url": "/collections/wallets-accessories?filter.p.vendor=MICHAEL+Michael+Kors"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Men",
+      "type": "department",
+      "url": "/collections/men",
+      "items": [
+        {
+          "title": "Luxury Watches",
+          "type": "category",
+          "url": "/collections/mens-watches",
+          "items": [
+            {
+              "title": "All Men's Watches",
+              "url": "/collections/mens-watches"
+            },
+            {
+              "title": "Tissot",
+              "url": "/collections/mens-watches?filter.p.vendor=Tissot"
+            },
+            {
+              "title": "Citizen",
+              "url": "/collections/mens-watches?filter.p.vendor=Citizen"
+            },
+            {
+              "title": "Movado",
+              "url": "/collections/mens-watches?filter.p.vendor=Movado"
+            },
+            {
+              "title": "Seiko",
+              "url": "/collections/mens-watches?filter.p.vendor=Seiko"
+            },
+            {
+              "title": "Versace",
+              "url": "/collections/mens-watches?filter.p.vendor=Versace"
+            },
+            {
+              "title": "Ferragamo",
+              "url": "/collections/mens-watches?filter.p.vendor=Ferragamo"
+            }
+          ]
+        },
+        {
+          "title": "Premium Footwear",
+          "type": "category",
+          "url": "/collections/mens-shoes",
+          "items": [
+            {
+              "title": "All Men's Shoes",
+              "url": "/collections/mens-shoes"
+            },
+            {
+              "title": "Salomon",
+              "url": "/collections/mens-shoes?filter.p.vendor=Salomon"
+            },
+            {
+              "title": "On Running",
+              "url": "/collections/mens-shoes?filter.p.vendor=On"
+            },
+            {
+              "title": "HOKA",
+              "url": "/collections/mens-shoes?filter.p.vendor=HOKA"
+            },
+            {
+              "title": "Nike",
+              "url": "/collections/mens-shoes?filter.p.vendor=Nike"
+            },
+            {
+              "title": "Jordan",
+              "url": "/collections/mens-shoes?filter.p.vendor=Jordan"
+            },
+            {
+              "title": "adidas",
+              "url": "/collections/mens-shoes?filter.p.vendor=adidas"
+            },
+            {
+              "title": "ASICS",
+              "url": "/collections/mens-shoes?filter.p.vendor=ASICS"
+            }
+          ]
+        },
+        {
+          "title": "Bags & Accessories",
+          "type": "category",
+          "url": "/collections/mens-bags",
+          "items": [
+            {
+              "title": "All Men's Bags",
+              "url": "/collections/mens-bags"
+            },
+            {
+              "title": "COACH Men",
+              "url": "/collections/mens-bags?filter.p.vendor=COACH"
+            },
+            {
+              "title": "Wallets & Cardholders",
+              "url": "/collections/wallets-accessories"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Designers",
+      "type": "department",
+      "url": "/collections",
+      "items": [
+        {
+          "title": "JW PEI",
+          "url": "/collections/jw-pei"
+        },
+        {
+          "title": "COACH",
+          "url": "/collections/coach"
+        },
+        {
+          "title": "Michael Kors",
+          "url": "/collections/michael-kors"
+        },
+        {
+          "title": "Tissot",
+          "url": "/collections/tissot"
+        },
+        {
+          "title": "Seiko",
+          "url": "/collections/seiko"
+        },
+        {
+          "title": "Citizen",
+          "url": "/collections/citizen"
+        },
+        {
+          "title": "Movado",
+          "url": "/collections/movado"
+        },
+        {
+          "title": "Versace",
+          "url": "/collections/versace"
+        },
+        {
+          "title": "Ferragamo",
+          "url": "/collections/ferragamo"
+        },
+        {
+          "title": "Salomon",
+          "url": "/collections/salomon"
+        },
+        {
+          "title": "On Running",
+          "url": "/collections/on-running"
+        },
+        {
+          "title": "HOKA",
+          "url": "/collections/hoka"
+        },
+        {
+          "title": "Nike",
+          "url": "/collections/nike"
+        },
+        {
+          "title": "Jordan",
+          "url": "/collections/jordan"
+        },
+        {
+          "title": "adidas",
+          "url": "/collections/adidas"
+        },
+        {
+          "title": "ASICS",
+          "url": "/collections/asics"
+        }
+      ]
+    }
+  ]
+}
