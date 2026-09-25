@@ -1,201 +1,420 @@
 {%- comment -%}
-  Luxury Desktop Navigation (ADR 0022)
-  Renders the 3-tier navigation tree (Women, Men, Designers) with multi-level dropdowns for Prestige header.
+  Luxury Desktop Mega-Menu Navigation (ADR 0022 - 2026 Minimal Modern Luxury Edition)
+  Full-width multi-column mega-menus, editorial brand spotlight cards,
+  modern geometric uppercase typography (SSENSE / Bottega Veneta / The Row aesthetic),
+  and subtle backdrop blur transitions.
 {%- endcomment -%}
 
-<li class="header__primary-nav-item">
-  <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}">
+<style>
+  /* 2026 Modern Minimal Luxury Navigation Styling */
+  .luxury-nav-item {
+    position: static !important;
+  }
+
+  .luxury-nav__trigger {
+    font-family: var(--text-font-family);
+    font-size: 0.8125rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    color: rgb(var(--text-color));
+    padding: 0.6rem 0.35rem;
+    position: relative;
+    cursor: pointer;
+    transition: opacity 0.2s ease, color 0.2s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  .luxury-nav__trigger::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 1.5px;
+    background-color: #c9a876;
+    transition: width 0.25s cubic-bezier(0.25, 1, 0.5, 1), left 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .luxury-nav-item:hover .luxury-nav__trigger::after,
+  details[open] > .luxury-nav__trigger::after {
+    width: 100%;
+    left: 0;
+  }
+
+  .luxury-mega-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.07);
+    padding: 2.75rem var(--container-gutter, 3rem) 3.25rem !important;
+    z-index: 99;
+  }
+
+  .luxury-mega-menu__inner {
+    max-width: 1360px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 3.5rem;
+    width: 100%;
+  }
+
+  .luxury-mega-menu__columns {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(160px, 1fr);
+    column-gap: 3.5rem;
+    row-gap: 2rem;
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .luxury-mega-menu__col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .luxury-mega-menu__col-title {
+    display: block;
+    font-family: var(--text-font-family);
+    font-size: 0.7188rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    padding-bottom: 0.65rem;
+    margin-bottom: 0.85rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .luxury-mega-menu__col-title:hover {
+    color: #c9a876;
+  }
+
+  .luxury-mega-menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .luxury-mega-menu__link {
+    font-family: var(--text-font-family);
+    font-size: 0.8125rem;
+    letter-spacing: 0.03em;
+    color: #555555;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.15rem 0;
+    transition: color 0.18s ease, transform 0.18s ease;
+  }
+
+  .luxury-mega-menu__link:hover {
+    color: #000000;
+    transform: translateX(3px);
+  }
+
+  .luxury-mega-menu__link--accent {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #c9a876;
+    margin-bottom: 0.35rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .luxury-mega-menu__link--accent:hover {
+    color: #1a1a1a;
+    transform: translateX(3px);
+  }
+
+  .luxury-mega-menu__promo {
+    flex: 0 0 310px !important;
+    background: #fbfaf8;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 2px solid #c9a876;
+    border-radius: 1px;
+    padding: 1.75rem;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .luxury-mega-menu__promo-tag {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9a876;
+    margin-bottom: 0.5rem;
+  }
+
+  .luxury-mega-menu__promo-heading {
+    font-family: var(--heading-font-family);
+    font-size: 1.1875rem;
+    font-weight: 400;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin: 0 0 0.75rem 0;
+  }
+
+  .luxury-mega-menu__promo-body {
+    font-size: 0.8125rem;
+    line-height: 1.55;
+    color: #666666;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .luxury-mega-menu__promo-cta {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 3px;
+    width: fit-content;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .luxury-mega-menu__promo-cta:hover {
+    color: #c9a876;
+    border-color: #c9a876;
+  }
+</style>
+
+{%- comment -%} ==================== WOMEN ==================== {%- endcomment -%}
+<li class="header__primary-nav-item luxury-nav-item">
+  <mega-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
     <details class="header__menu-disclosure">
-      <summary data-follow-link="/collections/women" class="{% if menu_text_font == 'heading' %}h6{% endif %}" data-title="Women">
+      <summary data-follow-link="{{ routes.collections_url }}/women" class="luxury-nav__trigger" data-title="Women">
         Women
       </summary>
 
-      <ul class="header__dropdown-menu unstyled-list" role="list">
-        <li>
-          <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
-            <details class="header__menu-disclosure">
-              <summary data-follow-link="/collections/womens-watches" class="link-faded-reverse">
-                <div class="h-stack gap-4 justify-between">
-                  Luxury Watches
-                  {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
-                </div>
-              </summary>
-              <ul class="header__dropdown-menu unstyled-list" role="list">
-                <li><a href="/collections/womens-watches" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Women's Watches</a></li>
-                <li><a href="/collections/womens-watches?filter.p.vendor=Tissot" class="link-faded-reverse">Tissot</a></li>
-                <li><a href="/collections/womens-watches?filter.p.vendor=Seiko" class="link-faded-reverse">Seiko</a></li>
-                <li><a href="/collections/womens-watches?filter.p.vendor=Citizen" class="link-faded-reverse">Citizen</a></li>
-                <li><a href="/collections/womens-watches?filter.p.vendor=Movado" class="link-faded-reverse">Movado</a></li>
-                <li><a href="/collections/womens-watches?filter.p.vendor=Versace" class="link-faded-reverse">Versace</a></li>
-                <li><a href="/collections/womens-watches?filter.p.vendor=Michael+Kors" class="link-faded-reverse">Michael Kors</a></li>
+      <div class="mega-menu luxury-mega-menu">
+        <div class="luxury-mega-menu__inner">
+          <ul class="mega-menu__linklist luxury-mega-menu__columns unstyled-list">
+            {%- comment -%} Luxury Watches {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/womens-watches" class="luxury-mega-menu__col-title">Luxury Watches</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/womens-watches" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Watches &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches?filter.p.vendor=Tissot" class="luxury-mega-menu__link">Tissot</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches?filter.p.vendor=Seiko" class="luxury-mega-menu__link">Seiko</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches?filter.p.vendor=Citizen" class="luxury-mega-menu__link">Citizen</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches?filter.p.vendor=Movado" class="luxury-mega-menu__link">Movado</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches?filter.p.vendor=Versace" class="luxury-mega-menu__link">Versace</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches?filter.p.vendor=Michael+Kors" class="luxury-mega-menu__link">Michael Kors</a></li>
               </ul>
-            </details>
-          </dropdown-menu-disclosure>
-        </li>
+            </li>
 
-        <li>
-          <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
-            <details class="header__menu-disclosure">
-              <summary data-follow-link="/collections/womens-handbags" class="link-faded-reverse">
-                <div class="h-stack gap-4 justify-between">
-                  Designer Bags
-                  {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
-                </div>
-              </summary>
-              <ul class="header__dropdown-menu unstyled-list" role="list">
-                <li><a href="/collections/womens-handbags" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Handbags</a></li>
-                <li><a href="/collections/womens-handbags?filter.p.vendor=JW+PEI" class="link-faded-reverse">JW PEI</a></li>
-                <li><a href="/collections/womens-handbags?filter.p.vendor=COACH" class="link-faded-reverse">COACH</a></li>
-                <li><a href="/collections/womens-handbags?filter.p.vendor=MICHAEL+Michael+Kors" class="link-faded-reverse">Michael Kors</a></li>
+            {%- comment -%} Designer Bags {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/womens-handbags" class="luxury-mega-menu__col-title">Designer Bags</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/womens-handbags" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Bags &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags?filter.p.vendor=JW+PEI" class="luxury-mega-menu__link">JW PEI</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags?filter.p.vendor=COACH" class="luxury-mega-menu__link">COACH</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags?filter.p.vendor=MICHAEL+Michael+Kors" class="luxury-mega-menu__link">Michael Kors</a></li>
               </ul>
-            </details>
-          </dropdown-menu-disclosure>
-        </li>
+            </li>
 
-        <li>
-          <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
-            <details class="header__menu-disclosure">
-              <summary data-follow-link="/collections/womens-shoes" class="link-faded-reverse">
-                <div class="h-stack gap-4 justify-between">
-                  Premium Footwear
-                  {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
-                </div>
-              </summary>
-              <ul class="header__dropdown-menu unstyled-list" role="list">
-                <li><a href="/collections/womens-shoes" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Footwear</a></li>
-                <li><a href="/collections/womens-shoes?filter.p.vendor=On" class="link-faded-reverse">On Running</a></li>
-                <li><a href="/collections/womens-shoes?filter.p.vendor=Salomon" class="link-faded-reverse">Salomon</a></li>
-                <li><a href="/collections/womens-shoes?filter.p.vendor=HOKA" class="link-faded-reverse">HOKA</a></li>
-                <li><a href="/collections/womens-shoes?filter.p.vendor=Nike" class="link-faded-reverse">Nike</a></li>
-                <li><a href="/collections/womens-shoes?filter.p.vendor=adidas" class="link-faded-reverse">adidas</a></li>
-                <li><a href="/collections/womens-shoes?filter.p.vendor=COACH" class="link-faded-reverse">COACH Footwear</a></li>
+            {%- comment -%} Premium Footwear {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/womens-shoes" class="luxury-mega-menu__col-title">Premium Footwear</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/womens-shoes" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Footwear &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-shoes?filter.p.vendor=On" class="luxury-mega-menu__link">On Running</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-shoes?filter.p.vendor=Salomon" class="luxury-mega-menu__link">Salomon</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-shoes?filter.p.vendor=HOKA" class="luxury-mega-menu__link">HOKA</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-shoes?filter.p.vendor=Nike" class="luxury-mega-menu__link">Nike</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-shoes?filter.p.vendor=adidas" class="luxury-mega-menu__link">adidas</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-shoes?filter.p.vendor=COACH" class="luxury-mega-menu__link">COACH Footwear</a></li>
               </ul>
-            </details>
-          </dropdown-menu-disclosure>
-        </li>
+            </li>
 
-        <li>
-          <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
-            <details class="header__menu-disclosure">
-              <summary data-follow-link="/collections/wallets-accessories" class="link-faded-reverse">
-                <div class="h-stack gap-4 justify-between">
-                  Wallets & Accessories
-                  {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
-                </div>
-              </summary>
-              <ul class="header__dropdown-menu unstyled-list" role="list">
-                <li><a href="/collections/wallets-accessories" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Wallets</a></li>
-                <li><a href="/collections/wallets-accessories?filter.p.vendor=COACH" class="link-faded-reverse">COACH Wallets</a></li>
-                <li><a href="/collections/wallets-accessories?filter.p.vendor=MICHAEL+Michael+Kors" class="link-faded-reverse">Michael Kors Wallets</a></li>
+            {%- comment -%} Wallets & Accessories {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/wallets-accessories" class="luxury-mega-menu__col-title">Accessories</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/wallets-accessories" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop Accessories &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-accessories?filter.p.vendor=COACH" class="luxury-mega-menu__link">COACH Wallets</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-accessories?filter.p.vendor=MICHAEL+Michael+Kors" class="luxury-mega-menu__link">Michael Kors Small Leather</a></li>
               </ul>
-            </details>
-          </dropdown-menu-disclosure>
-        </li>
-      </ul>
+            </li>
+          </ul>
+
+          {%- comment -%} Editorial Card {%- endcomment -%}
+          <div class="mega-menu__promo luxury-mega-menu__promo">
+            <div>
+              <div class="luxury-mega-menu__promo-tag">Horology & Atelier</div>
+              <h3 class="luxury-mega-menu__promo-heading">Curated Feminine Luxury</h3>
+              <p class="luxury-mega-menu__promo-body">Swiss precision timepieces, iconic designer silhouettes, and archival runway craftsmanship.</p>
+            </div>
+            <a href="{{ routes.collections_url }}/women" class="luxury-mega-menu__promo-cta">
+              Discover Women's Edit &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
     </details>
-  </dropdown-menu-disclosure>
+  </mega-menu-disclosure>
 </li>
 
-<li class="header__primary-nav-item">
-  <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}">
+{%- comment -%} ==================== MEN ==================== {%- endcomment -%}
+<li class="header__primary-nav-item luxury-nav-item">
+  <mega-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
     <details class="header__menu-disclosure">
-      <summary data-follow-link="/collections/men" class="{% if menu_text_font == 'heading' %}h6{% endif %}" data-title="Men">
+      <summary data-follow-link="{{ routes.collections_url }}/men" class="luxury-nav__trigger" data-title="Men">
         Men
       </summary>
 
-      <ul class="header__dropdown-menu unstyled-list" role="list">
-        <li>
-          <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
-            <details class="header__menu-disclosure">
-              <summary data-follow-link="/collections/mens-watches" class="link-faded-reverse">
-                <div class="h-stack gap-4 justify-between">
-                  Luxury Watches
-                  {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
-                </div>
-              </summary>
-              <ul class="header__dropdown-menu unstyled-list" role="list">
-                <li><a href="/collections/mens-watches" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Men's Watches</a></li>
-                <li><a href="/collections/mens-watches?filter.p.vendor=Tissot" class="link-faded-reverse">Tissot</a></li>
-                <li><a href="/collections/mens-watches?filter.p.vendor=Citizen" class="link-faded-reverse">Citizen</a></li>
-                <li><a href="/collections/mens-watches?filter.p.vendor=Movado" class="link-faded-reverse">Movado</a></li>
-                <li><a href="/collections/mens-watches?filter.p.vendor=Seiko" class="link-faded-reverse">Seiko</a></li>
-                <li><a href="/collections/mens-watches?filter.p.vendor=Versace" class="link-faded-reverse">Versace</a></li>
-                <li><a href="/collections/mens-watches?filter.p.vendor=Ferragamo" class="link-faded-reverse">Ferragamo</a></li>
+      <div class="mega-menu luxury-mega-menu">
+        <div class="luxury-mega-menu__inner">
+          <ul class="mega-menu__linklist luxury-mega-menu__columns unstyled-list">
+            {%- comment -%} Luxury Watches {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/mens-watches" class="luxury-mega-menu__col-title">Luxury Watches</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/mens-watches" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Watches &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches?filter.p.vendor=Tissot" class="luxury-mega-menu__link">Tissot</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches?filter.p.vendor=Citizen" class="luxury-mega-menu__link">Citizen</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches?filter.p.vendor=Movado" class="luxury-mega-menu__link">Movado</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches?filter.p.vendor=Seiko" class="luxury-mega-menu__link">Seiko</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches?filter.p.vendor=Versace" class="luxury-mega-menu__link">Versace</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches?filter.p.vendor=Ferragamo" class="luxury-mega-menu__link">Ferragamo</a></li>
               </ul>
-            </details>
-          </dropdown-menu-disclosure>
-        </li>
+            </li>
 
-        <li>
-          <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
-            <details class="header__menu-disclosure">
-              <summary data-follow-link="/collections/mens-shoes" class="link-faded-reverse">
-                <div class="h-stack gap-4 justify-between">
-                  Premium Footwear
-                  {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
-                </div>
-              </summary>
-              <ul class="header__dropdown-menu unstyled-list" role="list">
-                <li><a href="/collections/mens-shoes" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Men's Shoes</a></li>
-                <li><a href="/collections/mens-shoes?filter.p.vendor=Salomon" class="link-faded-reverse">Salomon</a></li>
-                <li><a href="/collections/mens-shoes?filter.p.vendor=On" class="link-faded-reverse">On Running</a></li>
-                <li><a href="/collections/mens-shoes?filter.p.vendor=HOKA" class="link-faded-reverse">HOKA</a></li>
-                <li><a href="/collections/mens-shoes?filter.p.vendor=Nike" class="link-faded-reverse">Nike</a></li>
-                <li><a href="/collections/mens-shoes?filter.p.vendor=Jordan" class="link-faded-reverse">Jordan</a></li>
-                <li><a href="/collections/mens-shoes?filter.p.vendor=adidas" class="link-faded-reverse">adidas</a></li>
-                <li><a href="/collections/mens-shoes?filter.p.vendor=ASICS" class="link-faded-reverse">ASICS</a></li>
+            {%- comment -%} Premium Footwear {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/mens-shoes" class="luxury-mega-menu__col-title">Premium Footwear</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/mens-shoes" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Footwear &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-shoes?filter.p.vendor=Salomon" class="luxury-mega-menu__link">Salomon</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-shoes?filter.p.vendor=On" class="luxury-mega-menu__link">On Running</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-shoes?filter.p.vendor=HOKA" class="luxury-mega-menu__link">HOKA</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-shoes?filter.p.vendor=Nike" class="luxury-mega-menu__link">Nike</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-shoes?filter.p.vendor=Jordan" class="luxury-mega-menu__link">Jordan</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-shoes?filter.p.vendor=adidas" class="luxury-mega-menu__link">adidas</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-shoes?filter.p.vendor=ASICS" class="luxury-mega-menu__link">ASICS</a></li>
               </ul>
-            </details>
-          </dropdown-menu-disclosure>
-        </li>
+            </li>
 
-        <li>
-          <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
-            <details class="header__menu-disclosure">
-              <summary data-follow-link="/collections/mens-bags" class="link-faded-reverse">
-                <div class="h-stack gap-4 justify-between">
-                  Bags & Accessories
-                  {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
-                </div>
-              </summary>
-              <ul class="header__dropdown-menu unstyled-list" role="list">
-                <li><a href="/collections/mens-bags" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Men's Bags</a></li>
-                <li><a href="/collections/mens-bags?filter.p.vendor=COACH" class="link-faded-reverse">COACH Men</a></li>
-                <li><a href="/collections/wallets-accessories" class="link-faded-reverse">Wallets & Cardholders</a></li>
+            {%- comment -%} Bags & Leather {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/mens-bags" class="luxury-mega-menu__col-title">Bags & Leather</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/mens-bags" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Bags &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-bags?filter.p.vendor=COACH" class="luxury-mega-menu__link">COACH Men</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-accessories" class="luxury-mega-menu__link">Wallets & Cardholders</a></li>
               </ul>
-            </details>
-          </dropdown-menu-disclosure>
-        </li>
-      </ul>
+            </li>
+          </ul>
+
+          {%- comment -%} Editorial Card {%- endcomment -%}
+          <div class="mega-menu__promo luxury-mega-menu__promo">
+            <div>
+              <div class="luxury-mega-menu__promo-tag">Contemporary Horology</div>
+              <h3 class="luxury-mega-menu__promo-heading">Precision & Technical Form</h3>
+              <p class="luxury-mega-menu__promo-body">Mechanical calibers, heritage chronographs, and high-performance lifestyle engineering.</p>
+            </div>
+            <a href="{{ routes.collections_url }}/men" class="luxury-mega-menu__promo-cta">
+              Discover Men's Edit &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
     </details>
-  </dropdown-menu-disclosure>
+  </mega-menu-disclosure>
 </li>
 
-<li class="header__primary-nav-item">
-  <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}">
+{%- comment -%} ==================== DESIGNERS ==================== {%- endcomment -%}
+<li class="header__primary-nav-item luxury-nav-item">
+  <mega-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
     <details class="header__menu-disclosure">
-      <summary data-follow-link="/collections" class="{% if menu_text_font == 'heading' %}h6{% endif %}" data-title="Designers">
+      <summary data-follow-link="{{ routes.collections_url }}" class="luxury-nav__trigger" data-title="Designers">
         Designers
       </summary>
 
-      <ul class="header__dropdown-menu unstyled-list" role="list" style="columns: 2; column-gap: 1.5rem; min-width: 320px;">
-        <li><a href="/collections/jw-pei" class="link-faded-reverse">JW PEI</a></li>
-        <li><a href="/collections/coach" class="link-faded-reverse">COACH</a></li>
-        <li><a href="/collections/michael-kors" class="link-faded-reverse">Michael Kors</a></li>
-        <li><a href="/collections/tissot" class="link-faded-reverse">Tissot</a></li>
-        <li><a href="/collections/seiko" class="link-faded-reverse">Seiko</a></li>
-        <li><a href="/collections/citizen" class="link-faded-reverse">Citizen</a></li>
-        <li><a href="/collections/movado" class="link-faded-reverse">Movado</a></li>
-        <li><a href="/collections/versace" class="link-faded-reverse">Versace</a></li>
-        <li><a href="/collections/ferragamo" class="link-faded-reverse">Ferragamo</a></li>
-        <li><a href="/collections/salomon" class="link-faded-reverse">Salomon</a></li>
-        <li><a href="/collections/on-running" class="link-faded-reverse">On Running</a></li>
-        <li><a href="/collections/hoka" class="link-faded-reverse">HOKA</a></li>
-        <li><a href="/collections/nike" class="link-faded-reverse">Nike</a></li>
-        <li><a href="/collections/jordan" class="link-faded-reverse">Jordan</a></li>
-        <li><a href="/collections/adidas" class="link-faded-reverse">adidas</a></li>
-        <li><a href="/collections/asics" class="link-faded-reverse">ASICS</a></li>
-      </ul>
+      <div class="mega-menu luxury-mega-menu">
+        <div class="luxury-mega-menu__inner">
+          <ul class="mega-menu__linklist luxury-mega-menu__columns unstyled-list" style="grid-auto-columns: minmax(180px, 1fr);">
+            {%- comment -%} Fine Horology {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <span class="luxury-mega-menu__col-title">Fine Horology</span>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/tissot" class="luxury-mega-menu__link">Tissot</a></li>
+                <li><a href="{{ routes.collections_url }}/seiko" class="luxury-mega-menu__link">Seiko</a></li>
+                <li><a href="{{ routes.collections_url }}/citizen" class="luxury-mega-menu__link">Citizen</a></li>
+                <li><a href="{{ routes.collections_url }}/movado" class="luxury-mega-menu__link">Movado</a></li>
+                <li><a href="{{ routes.collections_url }}/versace" class="luxury-mega-menu__link">Versace Timepieces</a></li>
+                <li><a href="{{ routes.collections_url }}/ferragamo" class="luxury-mega-menu__link">Ferragamo</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Maisons & Leather Goods {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <span class="luxury-mega-menu__col-title">Maisons & Leather</span>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/coach" class="luxury-mega-menu__link">COACH</a></li>
+                <li><a href="{{ routes.collections_url }}/jw-pei" class="luxury-mega-menu__link">JW PEI</a></li>
+                <li><a href="{{ routes.collections_url }}/michael-kors" class="luxury-mega-menu__link">Michael Kors</a></li>
+                <li><a href="{{ routes.collections_url }}/versace" class="luxury-mega-menu__link">Versace</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Performance & Sneaker Luxury {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <span class="luxury-mega-menu__col-title">Performance Footwear</span>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/salomon" class="luxury-mega-menu__link">Salomon</a></li>
+                <li><a href="{{ routes.collections_url }}/on-running" class="luxury-mega-menu__link">On Running</a></li>
+                <li><a href="{{ routes.collections_url }}/hoka" class="luxury-mega-menu__link">HOKA</a></li>
+                <li><a href="{{ routes.collections_url }}/nike" class="luxury-mega-menu__link">Nike</a></li>
+                <li><a href="{{ routes.collections_url }}/jordan" class="luxury-mega-menu__link">Jordan</a></li>
+                <li><a href="{{ routes.collections_url }}/adidas" class="luxury-mega-menu__link">adidas</a></li>
+                <li><a href="{{ routes.collections_url }}/asics" class="luxury-mega-menu__link">ASICS</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          {%- comment -%} Designers Editorial Card {%- endcomment -%}
+          <div class="mega-menu__promo luxury-mega-menu__promo">
+            <div>
+              <div class="luxury-mega-menu__promo-tag">Verified Authentic</div>
+              <h3 class="luxury-mega-menu__promo-heading">Atelier Directory</h3>
+              <p class="luxury-mega-menu__promo-body">16 prestigious global maisons and technical brands. Authenticity and provenance guaranteed on every piece.</p>
+            </div>
+            <a href="{{ routes.collections_url }}" class="luxury-mega-menu__promo-cta">
+              View All Designers &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
     </details>
-  </dropdown-menu-disclosure>
+  </mega-menu-disclosure>
 </li>
