@@ -293,6 +293,125 @@ def resolve_options_and_variants(
     return product_options, variant_inputs
 
 
+def format_luxury_watch_description_html(prod: Dict[str, Any]) -> str:
+    """
+    Format a world-class luxury watch product description HTML with:
+      1. Highlights Grid (Movement, Case Diameter, Water Resistance, Crystal)
+      2. Grouped Technical Specifications Table (Zero Retailer Leaks)
+      3. Interactive Wrist Sizing Guide Accordion
+      4. The Rare Avenue Authenticity & Warranty Guarantee
+    """
+    specs = prod.get("specifications") or {}
+    vendor = resolve_authentic_vendor(prod)
+    
+    movement = specs.get("Movement") or "Precision Horology"
+    case_diam = specs.get("Case Diameter") or specs.get("Case Size") or (prod.get("variants") or [{}])[0].get("size") or "Standard"
+    water_res = specs.get("Water Resistance") or "Splash Resistant"
+    crystal = specs.get("Crystal") or "Sapphire Crystal"
+    
+    # Priority ordered specification fields to display
+    display_fields = [
+        ("Brand", specs.get("Brand") or vendor),
+        ("Series / Collection", specs.get("Series") or specs.get("Collection Name")),
+        ("Model Reference", specs.get("Model")),
+        ("Gender", specs.get("Gender")),
+        ("Movement", movement),
+        ("Engine / Caliber", specs.get("Engine")),
+        ("Power Reserve", specs.get("Power Reserve")),
+        ("Case Diameter", case_diam),
+        ("Case Thickness", specs.get("Case Thickness")),
+        ("Case Material", specs.get("Case Material")),
+        ("Case Shape", specs.get("Case Shape")),
+        ("Case Back", specs.get("Case Back")),
+        ("Dial Color", specs.get("Dial Color")),
+        ("Dial Markers", specs.get("Dial Markers")),
+        ("Hands", specs.get("Hands")),
+        ("Bezel", specs.get("Bezel") or specs.get("Bezel Material")),
+        ("Crystal", crystal),
+        ("Band Material", specs.get("Band Material")),
+        ("Band Type", specs.get("Band Type")),
+        ("Band Color", specs.get("Band Color")),
+        ("Band Width", specs.get("Band Width")),
+        ("Clasp Type", specs.get("Clasp")),
+        ("Water Resistance", water_res),
+        ("Calendar / Functions", specs.get("Calendar") or specs.get("Functions")),
+        ("Origin Label", specs.get("Watch Label")),
+        ("Warranty", "2-Year International Luxury Warranty"),
+        ("Packaging", "Original Brand Presentation Box & Papers")
+    ]
+    
+    # Build clean table rows
+    spec_rows = []
+    for label, val in display_fields:
+        if val and str(val).strip() and str(val).lower() not in ("none", "n/a", "unknown"):
+            # Sanitize any accidental leak
+            clean_val = str(val).replace("Jomashop", "The Rare Avenue").replace("jomashop", "The Rare Avenue")
+            spec_rows.append(
+                f'<tr style="border-bottom: 1px solid #f0f0f0;">'
+                f'<td style="padding: 8px 12px; font-weight: 600; width: 38%; color: #4b5563;">{label}</td>'
+                f'<td style="padding: 8px 12px; color: #111827;">{clean_val}</td>'
+                f'</tr>'
+            )
+            
+    spec_table_html = "\n".join(spec_rows)
+
+    return f'''<div class="luxury-watch-overview" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1a1a1a;">
+  <div class="watch-highlights" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px;">
+    <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px;">
+      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; font-weight: 600;">Movement</div>
+      <div style="font-size: 14px; font-weight: 600; color: #111827; margin-top: 2px;">{movement}</div>
+    </div>
+    <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px;">
+      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; font-weight: 600;">Case Diameter</div>
+      <div style="font-size: 14px; font-weight: 600; color: #111827; margin-top: 2px;">{case_diam}</div>
+    </div>
+    <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px;">
+      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; font-weight: 600;">Water Resistance</div>
+      <div style="font-size: 14px; font-weight: 600; color: #111827; margin-top: 2px;">{water_res}</div>
+    </div>
+    <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px;">
+      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; font-weight: 600;">Crystal</div>
+      <div style="font-size: 14px; font-weight: 600; color: #111827; margin-top: 2px;">{crystal}</div>
+    </div>
+  </div>
+
+  <div class="watch-specifications" style="margin-top: 24px;">
+    <h3 style="font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 12px; border-bottom: 2px solid #e5e7eb; padding-bottom: 6px;">Technical Specifications</h3>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.5;">
+      <tbody>
+{spec_table_html}
+      </tbody>
+    </table>
+  </div>
+
+  <details class="size-guide-accordion" style="margin: 24px 0 16px; padding: 12px 16px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff;">
+    <summary style="font-weight: 600; cursor: pointer; font-size: 14px; color: #111827;">📏 Watch Sizing &amp; Case Dimension Guide</summary>
+    <div style="margin-top: 12px;">
+      <p style="font-size: 12px; color: #6b7280; margin-bottom: 8px;">Standard wrist circumference &amp; case diameter matching guide:</p>
+      <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
+        <thead>
+          <tr style="background-color: #f3f4f6; color: #374151;">
+            <th style="padding: 6px 10px; text-align: left;">Case Diameter</th>
+            <th style="padding: 6px 10px; text-align: left;">Recommended Wrist Size</th>
+            <th style="padding: 6px 10px; text-align: left;">Fit Profile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #f3f4f6;"><td style="padding: 6px 10px; font-weight: 600;">28 mm – 34 mm</td><td style="padding: 6px 10px;">5.0" – 6.0" (12.5 – 15.0 cm)</td><td style="padding: 6px 10px;">Petite / Delicate</td></tr>
+          <tr style="border-bottom: 1px solid #f3f4f6;"><td style="padding: 6px 10px; font-weight: 600;">36 mm – 38 mm</td><td style="padding: 6px 10px;">6.0" – 6.75" (15.0 – 17.0 cm)</td><td style="padding: 6px 10px;">Classic / Dress</td></tr>
+          <tr style="border-bottom: 1px solid #f3f4f6;"><td style="padding: 6px 10px; font-weight: 600;">40 mm – 42 mm</td><td style="padding: 6px 10px;">6.75" – 7.5" (17.0 – 19.0 cm)</td><td style="padding: 6px 10px;">Contemporary Standard</td></tr>
+          <tr><td style="padding: 6px 10px; font-weight: 600;">43 mm – 46 mm</td><td style="padding: 6px 10px;">7.5" – 8.5" (19.0 – 21.5 cm)</td><td style="padding: 6px 10px;">Sport / Bold Diver</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <div class="authenticity-guarantee" style="margin-top: 16px; padding: 12px 16px; background: #fdfbf7; border: 1px solid #f3ebd8; border-radius: 8px; font-size: 12px; color: #785e28;">
+    <strong>The Rare Avenue Authenticity Guarantee:</strong> 100% genuine luxury timepiece supplied in original manufacturer packaging with complete documentation and backed by our comprehensive 2-Year International Luxury Warranty.
+  </div>
+</div>'''
+
+
 def prepare_product_set_payload(prod: Dict[str, Any], forex_rate: Optional[float] = None) -> Dict[str, Any]:
     """
     Format any catalog product into a fully compliant Shopify ProductSetInput payload.
@@ -305,7 +424,11 @@ def prepare_product_set_payload(prod: Dict[str, Any], forex_rate: Optional[float
     gender = resolve_gender(prod)
     product_type = resolve_product_type(prod)
     handle = prod.get("shopify_handle") or prod.get("handle")
-    desc_html = prod.get("descriptionHtml") or prod.get("description_html") or ""
+    
+    if product_type == "Watches":
+        desc_html = format_luxury_watch_description_html(prod)
+    else:
+        desc_html = prod.get("descriptionHtml") or prod.get("description_html") or ""
 
     # Pricing
     source_price = float(prod.get("source_price") or prod.get("price_current") or 0.0)

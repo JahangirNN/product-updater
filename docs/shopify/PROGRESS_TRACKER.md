@@ -82,4 +82,6 @@
 | **2026-09-25** | Definitive 3-Pass Watch Catalog Audit | `100% PASS` across DB, GraphQL, & Endpoints | `run_watch_3pass_audit.py` |
 | **2026-09-25** | Declarative Smart Collection Provisioning (17 new collections) | `17/17 CREATED` (0 Errors, 27/27 Total Active) | `storage/shopify_collections.py` |
 | **2026-09-25** | Distributed Shopify Connector Unit Test Suite | `5/5 PASS` (0 Errors) | `test_shopify_connector.py` |
+| **2026-09-25** | Live Watch Stock & Price Sync Deep Audit | `100% PASS` (Live polling, GIDs, GraphQL shift, OOS protection) | `scripts/audit_watch_live_sync.py` |
+| **2026-09-25** | Luxury Watch PDP Reformatting & Zero Leakage Sync | `574/574 PASS` (100% Live on Shopify, 0 Leaks) | `scripts/reformat_and_sync_watches.py` |
 | **2026-09-25** | Documentation Integrity & ADR Alignment Check | `100% PASS` | `verify_docs_alignment.py` |

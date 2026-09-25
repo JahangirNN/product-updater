@@ -78,7 +78,7 @@ def execute_shopify_graphql(
     query: str,
     variables: Optional[Dict[str, Any]] = None,
     shop_domain: str = DEFAULT_SHOP_DOMAIN,
-    timeout: float = 20.0,
+    timeout: float = 35.0,
     allow_retry: bool = True
 ) -> Tuple[Optional[Dict[str, Any]], Dict[str, Any], str]:
     """
@@ -122,5 +122,10 @@ def execute_shopify_graphql(
                 return data, extensions, ""
             else:
                 return None, {}, f"HTTP {resp.status_code}: {resp.text}"
+    except (httpx.ReadTimeout, httpx.ConnectTimeout) as te:
+        if allow_retry:
+            time.sleep(1.0)
+            return execute_shopify_graphql(query, variables, shop_domain, timeout=timeout, allow_retry=False)
+        return None, {}, f"Request Timeout: {te}"
     except Exception as exc:
         return None, {}, f"Request Exception: {exc}"
