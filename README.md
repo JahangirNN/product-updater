@@ -112,6 +112,9 @@ All engineering decisions are recorded and immutably numbered in [`docs/adr/`](.
 | **[0016](./docs/adr/0016-jdsports-store-onboarding-and-multi-tier-footwear-sizing.md)** | JD Sports Store Onboarding, Multi-Tier Footwear Sizing Architecture & Cross-Sibling Swatch Ingestion | Accepted |
 | **[0017](./docs/adr/0017-zero-token-local-camoufox-stealth-browser-akamai-solver-and-early-cooldown-resilience.md)** | Zero-Token Local Camoufox Stealth Browser Akamai Solver, DOM-Level React Hydration Sync & Cooldown Resilience | Accepted |
 | **[0018](./docs/adr/0018-jomashop-xmode-onboarding.md)** | Jomashop Luxury & Designer Watches Onboarding, Apollo GraphQL Ingestion & Zero-Token Delta Polling | Accepted |
+| **[0019](./docs/adr/0019-shopify-graphql-admin-and-mcp-integration.md)** | Shopify Admin GraphQL API Integration & Dynamic CLI Auth | Accepted |
+| **[0020](./docs/adr/0020-shopify-catalog-taxonomy-and-sync-bridge.md)** | Shopify Catalog Taxonomy, Field Distribution & Real-Time Sync Bridge | Accepted |
+| **[0021](./docs/adr/0021-distributed-shopify-connector-and-sync-architecture.md)** | Distributed Shopify Connector & Real-Time Sync Architecture | Accepted |
 
 ---
 

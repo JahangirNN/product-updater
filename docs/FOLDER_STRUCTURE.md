@@ -46,7 +46,10 @@ product-updater/
 │       ├── 0015-variant-stock-cascade-phantom-delta-elimination-and-cross-brand-integrity.md
 │       ├── 0016-jdsports-store-onboarding-and-multi-tier-footwear-sizing.md
 │       ├── 0017-zero-token-local-camoufox-stealth-browser-akamai-solver-and-early-cooldown-resilience.md
-│       └── 0018-jomashop-xmode-onboarding.md
+│       ├── 0018-jomashop-xmode-onboarding.md
+│       ├── 0019-shopify-graphql-admin-and-mcp-integration.md
+│       ├── 0020-shopify-catalog-taxonomy-and-sync-bridge.md
+│       └── 0021-distributed-shopify-connector-and-sync-architecture.md
 │
 ├── frontend/                        # Mobile-First Catalog Data Viewer (React + Vite + Tailwind)
 │   ├── public/data/
@@ -65,6 +68,8 @@ product-updater/
 │
 ├── scripts/                         # Automation & Export CLI Scripts
 │   ├── run_freshner_daemon.py       # 1-hour background scheduler daemon with heartbeat sleep
+│   ├── shopify_bulk_uploader.py     # High-throughput multi-store Shopify bulk uploader CLI
+│   ├── run_watch_3pass_audit.py     # Definitive 3-pass forensic watch audit suite
 │   ├── export_viewer_data.py        # Compiles storage/db/ into frontend/public/data/catalog.json
 │   ├── publish_viewer.py            # 1-command export, Vite build, git commit & push
 │   ├── ingest_search_jwpei.py       # Scrapes and ingests search collection batches
@@ -77,6 +82,10 @@ product-updater/
 │   ├── network.py                   # def create_http_client(), get_browser_headers() (Chrome 133)
 │   ├── rate_limiter.py              # def acquire_permit(), trip_circuit_breaker() (Pure functional)
 │   ├── validator.py                 # def validate_product() against Shopify rules
+│   ├── shopify_auth.py              # def get_shopify_credentials(), execute_shopify_graphql()
+│   ├── shopify_taxonomy.py          # def resolve_authentic_vendor(), prepare_product_set_payload()
+│   ├── shopify_collections.py       # def provision_all_collections() (27 smart collections)
+│   ├── shopify_sync.py              # def upsert_product_to_shopify(), sync_delta_to_shopify()
 │   │
 │   └── db/                          # Partitioned JSON Database
 │       ├── index.json               # Fast in-memory master index { id: { sku, price, last_verified_at } }
