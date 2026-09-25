@@ -63,7 +63,10 @@
     align-items: center !important;
   }
 
-  #shopify-section-{{ section.id }} .header__primary-nav-item {
+  #shopify-section-{{ section.id }} .header__primary-nav-item > a,
+  #shopify-section-{{ section.id }} .header__primary-nav-item > .header__link,
+  #shopify-section-{{ section.id }} .header__primary-nav-item > details > summary,
+  #shopify-section-{{ section.id }} .luxury-nav__trigger {
     white-space: nowrap !important;
   }
 </style>
