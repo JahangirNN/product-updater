@@ -30,6 +30,13 @@
         --announcement-bar-font-size: {{ section.settings.desktop_font_size | divided_by: 16.0 }}rem;
       }
     }
+
+    #shopify-section-{{ section.id }} p {
+      font-family: var(--text-font-family);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
   </style>
 
   <height-observer variable="announcement-bar">

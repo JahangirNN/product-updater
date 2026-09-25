@@ -56,6 +56,16 @@
       }
     }
   {%- endif -%}
+
+  #shopify-section-{{ section.id }} .header__primary-nav {
+    flex-wrap: nowrap !important;
+    column-gap: 1.75rem !important;
+    align-items: center !important;
+  }
+
+  #shopify-section-{{ section.id }} .header__primary-nav-item {
+    white-space: nowrap !important;
+  }
 </style>
 
 <height-observer variable="header">
@@ -113,7 +123,7 @@
 
             {%- for link in menu.links -%}
               {%- assign link_title_downcase = link.title | strip | downcase -%}
-              {%- unless link_title_downcase == 'women' or link_title_downcase == 'men' or link_title_downcase == 'designers' -%}
+              {%- unless link_title_downcase == 'women' or link_title_downcase == 'men' or link_title_downcase == 'designers' or link_title_downcase contains 'watch' -%}
                 {% liquid
                   assign mega_menu_block = ''
 
@@ -130,11 +140,11 @@
 
                 <li class="header__primary-nav-item">
                   {%- if link.levels == 0 and mega_menu_block == '' -%}
-                    <a href="{{ link.url }}" data-title="{{ link.title | escape }}" class="block {% if section.settings.menu_text_font == 'heading' %}h6{% endif %}" {% if link.current %}aria-current="page"{% endif %}>{{ link.title }}</a>
+                    <a href="{{ link.url }}" data-title="{{ link.title | escape }}" class="block luxury-nav__trigger" {% if link.current %}aria-current="page"{% endif %}>{{ link.title }}</a>
                   {%- else -%}
                     {%- capture disclosure_content -%}
                       <details class="header__menu-disclosure">
-                        <summary data-follow-link="{{ link.url }}" {% if section.settings.menu_text_font == 'heading' %}class="h6"{% endif %} data-title="{{ link.title | escape }}">
+                        <summary data-follow-link="{{ link.url }}" class="luxury-nav__trigger" data-title="{{ link.title | escape }}">
                           {{- link.title -}}
                         </summary>
 

@@ -24,6 +24,8 @@
     transition: opacity 0.2s ease, color 0.2s ease;
     display: flex;
     align-items: center;
+    white-space: nowrap !important;
+    text-decoration: none !important;
   }
 
   .luxury-nav__trigger::after {
@@ -37,6 +39,7 @@
     transition: width 0.25s cubic-bezier(0.25, 1, 0.5, 1), left 0.25s cubic-bezier(0.25, 1, 0.5, 1);
   }
 
+  .header__primary-nav-item:hover .luxury-nav__trigger::after,
   .luxury-nav-item:hover .luxury-nav__trigger::after,
   details[open] > .luxury-nav__trigger::after {
     width: 100%;
