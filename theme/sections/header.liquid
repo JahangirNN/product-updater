@@ -69,6 +69,14 @@
   #shopify-section-{{ section.id }} .luxury-nav__trigger {
     white-space: nowrap !important;
   }
+
+  /* Suppress default theme duplicate underline pseudo-element */
+  #shopify-section-{{ section.id }} .header__primary-nav-item [data-title]:before,
+  #shopify-section-{{ section.id }} .header__primary-nav-item [data-title]:hover:before,
+  #shopify-section-{{ section.id }} .luxury-nav__trigger:before {
+    display: none !important;
+    content: none !important;
+  }
 </style>
 
 <height-observer variable="header">

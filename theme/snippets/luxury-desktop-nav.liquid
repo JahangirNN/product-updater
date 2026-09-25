@@ -27,10 +27,18 @@
     text-decoration: none !important;
   }
 
+  /* Suppress default theme duplicate underline pseudo-element */
+  .header__primary-nav-item [data-title]:before,
+  .header__primary-nav-item [data-title]:hover:before,
+  .luxury-nav__trigger:before {
+    display: none !important;
+    content: none !important;
+  }
+
   .luxury-nav__trigger::after {
     content: '';
     position: absolute;
-    bottom: -2px;
+    bottom: 0px;
     left: 50%;
     width: 0;
     height: 1.5px;
