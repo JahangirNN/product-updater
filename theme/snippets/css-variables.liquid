@@ -74,14 +74,14 @@ note that this may have impact on different places.
      */
 
     /* Font properties */
-    --heading-font-family: {{ settings.heading_font.family }}, {{ settings.heading_font.fallback_families }};
-    --heading-font-weight: {{ settings.heading_font.weight }};
-    --heading-font-style: {{ settings.heading_font.style }};
+    --heading-font-family: 'Instrument Sans', {{ settings.heading_font.family }}, {{ settings.heading_font.fallback_families }}, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --heading-font-weight: 500;
+    --heading-font-style: normal;
     --heading-text-transform: {{ settings.heading_text_transform }};
     --heading-letter-spacing: {% if language_code == 'ar' %}0{% else %}{{ settings.heading_letter_spacing | divided_by: 100.0 }}{% endif %}em;
-    --text-font-family: {{ settings.text_font.family }}, {{ settings.text_font.fallback_families }};
-    --text-font-weight: {{ settings.text_font.weight }};
-    --text-font-style: {{ settings.text_font.style }};
+    --text-font-family: 'Instrument Sans', {{ settings.text_font.family }}, {{ settings.text_font.fallback_families }}, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --text-font-weight: 400;
+    --text-font-style: normal;
     --text-letter-spacing: {% if language_code == 'ar' %}0{% else %}{{ settings.text_font_letter_spacing | divided_by: 100.0 }}{% endif %}em;
     --button-font: {% if settings.button_text_font == 'heading' %}var(--heading-font-style) var(--heading-font-weight) var(--text-sm) / 1.65 var(--heading-font-family){% else %}var(--text-font-style) var(--text-font-weight) var(--text-sm) / 1.65 var(--text-font-family){% endif %};
     --button-text-transform: {{ settings.button_text_transform }};

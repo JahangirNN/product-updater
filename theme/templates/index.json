@@ -22,7 +22,7 @@
             "mobile_text_position": "place-self-end-start text-start",
             "desktop_text_position": "sm:place-self-end-start sm:text-start",
             "content_max_width": 780,
-            "button_1_text": "Explore Horology",
+            "button_1_text": "Explore",
             "button_1_link": "shopify://collections/luxury-watches",
             "button_1_style": "fill",
             "button_1_background": "#ffffff",
@@ -43,18 +43,18 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/6ebe917e-e20a-4ce6-b231-f862ae2f00b6.png",
-            "subheading": "Meticulous Provenance & Verification",
-            "title": "Authenticity Is Never Optional",
+            "subheading": "",
+            "title": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "content_max_width": 500,
-            "button_1_text": "Our Standards",
+            "button_1_text": "Discover",
             "button_1_link": "shopify://collections/luxury-watches",
             "button_1_style": "solid",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#000000",
-            "button_2_text": "Discover Maisons",
-            "button_2_link": "shopify://collections",
+            "button_2_text": "",
+            "button_2_link": "",
             "button_2_style": "outline",
             "button_2_background": "#ffffff",
             "button_2_text_color": "#000000",
@@ -88,61 +88,61 @@
         "text-1": {
           "type": "text",
           "settings": {
-            "text": "TISSOT · SWISS HOROLOGY SINCE 1853"
+            "text": "TISSOT"
           }
         },
         "text-2": {
           "type": "text",
           "settings": {
-            "text": "COACH NEW YORK · ICONIC LEATHER ARCHIVE"
+            "text": "SEIKO"
           }
         },
         "text-3": {
           "type": "text",
           "settings": {
-            "text": "SEIKO · JAPANESE PRECISION & PRESAGE"
+            "text": "CITIZEN"
           }
         },
         "text-4": {
           "type": "text",
           "settings": {
-            "text": "SALOMON ADVANCED · TECHNICAL COUTURE"
+            "text": "MOVADO"
           }
         },
         "text-5": {
           "type": "text",
           "settings": {
-            "text": "MOVADO · MODERNIST MUSEUM DIALS"
+            "text": "VERSACE"
           }
         },
         "text-6": {
           "type": "text",
           "settings": {
-            "text": "JW PEI · SCULPTURAL DESIGNER HANDBAGS"
+            "text": "COACH"
           }
         },
         "text-7": {
           "type": "text",
           "settings": {
-            "text": "CITIZEN · PROMASTER & ECO-DRIVE SERIES"
+            "text": "SALOMON"
           }
         },
         "text-8": {
           "type": "text",
           "settings": {
-            "text": "VERSACE · MILANESE LUXURY & CHRONO"
+            "text": "JW PEI"
           }
         },
         "text-9": {
           "type": "text",
           "settings": {
-            "text": "★ 100% AUTHENTIC GUARANTEE & 2-YEAR WARRANTY"
+            "text": "FERRAGAMO"
           }
         },
         "text-10": {
           "type": "text",
           "settings": {
-            "text": "✈️ COMPLIMENTARY INSURED AIR EXPRESS WORLDWIDE"
+            "text": "MICHAEL KORS"
           }
         }
       },
@@ -160,65 +160,18 @@
       ],
       "settings": {
         "separate_section_with_border": true,
-        "scrolling_speed": 0.35,
+        "scrolling_speed": 0.3,
         "scroll_direction": "left",
         "pause_on_hover": true,
         "text_font": "heading",
         "text_font_size_mobile": 14,
-        "text_font_size_desktop": 18,
-        "section_vertical_spacing_mobile": 16,
-        "section_vertical_spacing_desktop": 22,
+        "text_font_size_desktop": 16,
+        "section_vertical_spacing_mobile": 14,
+        "section_vertical_spacing_desktop": 18,
         "item_horizontal_spacing_mobile": 40,
-        "item_horizontal_spacing_desktop": 70,
+        "item_horizontal_spacing_desktop": 80,
         "background": "#0a0a0a",
         "text_color": "#f0ede6"
-      }
-    },
-    "brand-manifesto": {
-      "type": "rich-text",
-      "blocks": {
-        "subheading": {
-          "type": "subheading",
-          "settings": {
-            "text": "THE RARE AVENUE · CURATED DISTINCTION"
-          }
-        },
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "text": "Curating the World's Most Coveted Luxury Creations",
-            "heading_tag": "h2"
-          }
-        },
-        "paragraph": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>From master-grade Swiss and Japanese horology to upcoming designer leathercraft and performance couture. Every piece in our vault is individually inspected, backed by our 2-year luxury warranty, and delivered with white-glove insured transit worldwide.</p>"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "text": "Explore Horology Vault",
-            "url": "shopify://collections/luxury-watches",
-            "style": "outline",
-            "background": "",
-            "text_color": ""
-          }
-        }
-      },
-      "block_order": [
-        "subheading",
-        "heading",
-        "paragraph",
-        "button"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": false,
-        "content_width": "md",
-        "text_position": "center",
-        "remove_vertical_spacing": false
       }
     },
     "category-tiles": {
@@ -231,10 +184,10 @@
             "image": "shopify://shop_images/66493d7c-363c-4c3e-b1b1-9c6d3a8d4101.png",
             "column_count": "3",
             "row_count": 1,
-            "title": "Fine Horology",
+            "title": "TIMEPIECES",
             "heading_tag": "h3",
             "content": "",
-            "link_text": "Discover 570+ Timepieces",
+            "link_text": "",
             "link_url": "shopify://collections/luxury-watches",
             "link_style": "link",
             "text_position": "place-self-center text-center",
@@ -249,10 +202,10 @@
             "image": "shopify://shop_images/fa38bc35-933f-4965-ba03-9e53daca36ae.png",
             "column_count": "3",
             "row_count": 1,
-            "title": "Men's Collection",
+            "title": "MEN",
             "heading_tag": "h3",
             "content": "",
-            "link_text": "Explore Men's Edits",
+            "link_text": "",
             "link_url": "shopify://collections/mens-watches",
             "link_style": "link",
             "text_position": "place-self-center text-center",
@@ -264,14 +217,14 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/8732c475-8a37-47ed-ae7a-b1dfbf9f4b40.png",
+            "image": "shopify://shop_images/0ef9b579-e631-47b9-bba0-4c0f75a3d0b5.png",
             "column_count": "3",
             "row_count": 1,
-            "title": "Ready to Ship",
+            "title": "WOMEN",
             "heading_tag": "h3",
             "content": "",
-            "link_text": "Dispatched in 24 Hours",
-            "link_url": "shopify://collections/instant-ship",
+            "link_text": "",
+            "link_url": "shopify://collections/womens-watches",
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
@@ -282,14 +235,14 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/0ef9b579-e631-47b9-bba0-4c0f75a3d0b5.png",
+            "image": "shopify://shop_images/8732c475-8a37-47ed-ae7a-b1dfbf9f4b40.png",
             "column_count": "3",
             "row_count": 1,
-            "title": "Women's Collection",
+            "title": "READY TO SHIP",
             "heading_tag": "h3",
             "content": "",
-            "link_text": "Explore Women's Edits",
-            "link_url": "shopify://collections/womens-watches",
+            "link_text": "",
+            "link_url": "shopify://collections/instant-ship",
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
@@ -310,8 +263,8 @@
         "mobile_row_height": 180,
         "section_width": "lg",
         "spacing": "md",
-        "subheading": "Fine Horology · Designer Leather · Performance Footwear",
-        "title": "Explore by Discipline",
+        "subheading": "",
+        "title": "",
         "content": ""
       }
     },
@@ -323,9 +276,9 @@
           "settings": {
             "collection": "luxury-watches",
             "products_count": 8,
-            "title": "Horological Icons",
+            "title": "ALL TIMEPIECES",
             "link_url": "shopify://collections/luxury-watches",
-            "link_text": "View All 570+ Timepieces"
+            "link_text": ""
           }
         },
         "collection-2": {
@@ -333,9 +286,9 @@
           "settings": {
             "collection": "mens-watches",
             "products_count": 8,
-            "title": "Men's Timepieces",
+            "title": "MEN",
             "link_url": "shopify://collections/mens-watches",
-            "link_text": "View Men's Edits"
+            "link_text": ""
           }
         },
         "collection-3": {
@@ -343,9 +296,9 @@
           "settings": {
             "collection": "womens-watches",
             "products_count": 8,
-            "title": "Women's Edits",
+            "title": "WOMEN",
             "link_url": "shopify://collections/womens-watches",
-            "link_text": "View Women's Edits"
+            "link_text": ""
           }
         },
         "collection-4": {
@@ -353,9 +306,9 @@
           "settings": {
             "collection": "tissot",
             "products_count": 8,
-            "title": "Swiss Heritage",
+            "title": "TISSOT",
             "link_url": "shopify://collections/tissot",
-            "link_text": "View Tissot Collection"
+            "link_text": ""
           }
         },
         "collection-5": {
@@ -363,9 +316,9 @@
           "settings": {
             "collection": "instant-ship",
             "products_count": 8,
-            "title": "Ready to Ship",
+            "title": "READY TO SHIP",
             "link_url": "shopify://collections/instant-ship",
-            "link_text": "View Ready to Ship"
+            "link_text": ""
           }
         }
       },
@@ -385,7 +338,7 @@
         "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
-        "subheading": "The Signature Vault · Handpicked & Certified"
+        "subheading": ""
       }
     },
     "featured-collections-2": {
@@ -396,9 +349,9 @@
           "settings": {
             "collection": "citizen",
             "products_count": 8,
-            "title": "Citizen Promaster & Tsuyosa",
+            "title": "CITIZEN",
             "link_url": "shopify://collections/citizen",
-            "link_text": "Discover Citizen (110+ Pieces)"
+            "link_text": ""
           }
         },
         "collection-2": {
@@ -406,9 +359,9 @@
           "settings": {
             "collection": "movado",
             "products_count": 8,
-            "title": "Movado Modernist Dials",
+            "title": "MOVADO",
             "link_url": "shopify://collections/movado",
-            "link_text": "Discover Movado (100+ Pieces)"
+            "link_text": ""
           }
         },
         "collection-3": {
@@ -416,9 +369,9 @@
           "settings": {
             "collection": "seiko",
             "products_count": 8,
-            "title": "Seiko 5 & Presage",
+            "title": "SEIKO",
             "link_url": "shopify://collections/seiko",
-            "link_text": "Discover Seiko (60+ Pieces)"
+            "link_text": ""
           }
         },
         "collection-4": {
@@ -426,9 +379,9 @@
           "settings": {
             "collection": "versace",
             "products_count": 8,
-            "title": "Versace Milanese Couture",
+            "title": "VERSACE",
             "link_url": "shopify://collections/versace",
-            "link_text": "Discover Versace"
+            "link_text": ""
           }
         }
       },
@@ -447,7 +400,7 @@
         "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
-        "subheading": "World-Class Heritage & Engineering"
+        "subheading": ""
       }
     },
     "newsletter": {
@@ -455,11 +408,11 @@
       "settings": {
         "color_scheme": "scheme-3",
         "separate_section_with_border": true,
-        "image_size": "md",
-        "subheading": "Private Client Salon",
-        "title": "Priority Access to Rare Allocations",
-        "content": "<p>Join an intimate circle of collectors. Receive first access to newly authenticated horological releases, designer leather drops, and private showroom previews.</p>",
-        "button_text": "Request Invitation",
+        "image_size": "sm",
+        "subheading": "",
+        "title": "NEWSLETTER",
+        "content": "",
+        "button_text": "SUBSCRIBE",
         "overlay_color": "#000000",
         "overlay_opacity": 30
       }
@@ -468,7 +421,6 @@
   "order": [
     "slideshow",
     "scrolling-marquee",
-    "brand-manifesto",
     "category-tiles",
     "featured-collections-1",
     "featured-collections-2",

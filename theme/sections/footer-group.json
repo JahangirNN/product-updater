@@ -13,6 +13,7 @@
   "sections": {
     "text-with-icons": {
       "type": "text-with-icons",
+      "disabled": true,
       "blocks": {
         "icon-1": {
           "type": "item",
@@ -73,15 +74,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "newsletter": {
-          "type": "newsletter",
-          "settings": {
-            "title": "Collector Salon",
-            "content": "<p>Receive private invitations, rare allocation notifications, and horological releases directly to your inbox.</p>",
-            "button_background": "",
-            "button_text_color": ""
-          }
-        },
         "links": {
           "type": "links",
           "settings": {
@@ -90,26 +82,26 @@
             "menu_title": ""
           }
         },
-        "text": {
-          "type": "text",
+        "newsletter": {
+          "type": "newsletter",
           "settings": {
-            "title": "About The Rare Avenue",
-            "content": "<p>The Rare Avenue is a premier global luxury destination curating exceptional Swiss &amp; Japanese horology, designer leathercraft, and performance couture. Every piece is rigorously authenticated, backed by a 2-year warranty, and delivered with white-glove insured transit worldwide.</p>",
-            "enable_follow_on_shop": true
+            "title": "NEWSLETTER",
+            "content": "",
+            "button_background": "",
+            "button_text_color": ""
           }
         }
       },
       "block_order": [
-        "newsletter",
         "links",
-        "text"
+        "newsletter"
       ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
         "show_social_media": true,
         "show_payment_icons": true,
-        "show_powered_by_shopify": true,
+        "show_powered_by_shopify": false,
         "show_country_selector": true,
         "show_country_name": true,
         "show_country_flag": true,
