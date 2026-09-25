@@ -42,6 +42,9 @@
 
 <div class="section-spacing section-spacing--tight color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
   <div class="container {% unless section.settings.container_size == 'full' %}container--{{ section.settings.container_size }}{% endunless %}">
+    <div style="margin-bottom: 1.25rem;">
+      {%- render 'luxury-breadcrumbs' -%}
+    </div>
     <product-rerender id="product-info-{{ product.id }}-{{ section.id }}" observe-form="{{ product_form_id }}" allow-partial-rerender>
       <div class="product">
         {%- if product.media.size > 0 -%}

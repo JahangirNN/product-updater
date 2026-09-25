@@ -1,0 +1,160 @@
+{%- comment -%}
+  Luxury Hierarchical Breadcrumbs (ADR 0022)
+  Renders Prestige-native, 3-tier breadcrumbs on collection and product pages.
+{%- endcomment -%}
+
+<nav class="breadcrumb {% if floating %}breadcrumb--floating{% endif %}" aria-label="{{ 'general.breadcrumb.label' | t | default: 'Breadcrumb' | escape }}">
+  <ol class="breadcrumb__list unstyled-list">
+    <li class="breadcrumb__list-item">
+      <a href="{{ routes.root_url }}" class="smallcaps {% unless show_image %}link-faded{% endunless %}">{{ 'general.breadcrumb.home' | t | default: 'Home' }}</a>
+    </li>
+
+    {%- if template.name == 'collection' and collection -%}
+      {%- assign c_handle = collection.handle -%}
+
+      {%- if c_handle == 'womens-watches' -%}
+        <li class="breadcrumb__list-item">
+          <a href="/collections/women" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Women</a>
+        </li>
+        <li class="breadcrumb__list-item">
+          <a href="/collections/womens-watches" aria-current="page" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Luxury Watches</a>
+        </li>
+
+      {%- elsif c_handle == 'womens-handbags' -%}
+        <li class="breadcrumb__list-item">
+          <a href="/collections/women" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Women</a>
+        </li>
+        <li class="breadcrumb__list-item">
+          <a href="/collections/womens-handbags" aria-current="page" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Designer Bags</a>
+        </li>
+
+      {%- elsif c_handle == 'womens-shoes' -%}
+        <li class="breadcrumb__list-item">
+          <a href="/collections/women" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Women</a>
+        </li>
+        <li class="breadcrumb__list-item">
+          <a href="/collections/womens-shoes" aria-current="page" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Premium Footwear</a>
+        </li>
+
+      {%- elsif c_handle == 'mens-watches' -%}
+        <li class="breadcrumb__list-item">
+          <a href="/collections/men" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Men</a>
+        </li>
+        <li class="breadcrumb__list-item">
+          <a href="/collections/mens-watches" aria-current="page" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Luxury Watches</a>
+        </li>
+
+      {%- elsif c_handle == 'mens-shoes' -%}
+        <li class="breadcrumb__list-item">
+          <a href="/collections/men" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Men</a>
+        </li>
+        <li class="breadcrumb__list-item">
+          <a href="/collections/mens-shoes" aria-current="page" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Premium Footwear</a>
+        </li>
+
+      {%- elsif c_handle == 'mens-bags' -%}
+        <li class="breadcrumb__list-item">
+          <a href="/collections/men" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Men</a>
+        </li>
+        <li class="breadcrumb__list-item">
+          <a href="/collections/mens-bags" aria-current="page" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Bags & Luggage</a>
+        </li>
+
+      {%- elsif c_handle == 'tissot' or c_handle == 'seiko' or c_handle == 'citizen' or c_handle == 'movado' or c_handle == 'versace' or c_handle == 'ferragamo' or c_handle == 'jw-pei' or c_handle == 'coach' or c_handle == 'michael-kors' or c_handle == 'salomon' or c_handle == 'on-running' or c_handle == 'hoka' or c_handle == 'nike' or c_handle == 'jordan' or c_handle == 'adidas' or c_handle == 'asics' or c_handle == 'michael-kors-watches' -%}
+        <li class="breadcrumb__list-item">
+          <a href="/collections" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Designers</a>
+        </li>
+        <li class="breadcrumb__list-item">
+          <a href="{{ collection.url }}" aria-current="page" class="smallcaps {% unless show_image %}link-faded{% endunless %}">{{ collection.title }}</a>
+        </li>
+
+      {%- else -%}
+        <li class="breadcrumb__list-item">
+          <a href="{{ routes.all_products_collection_url }}" class="smallcaps {% unless show_image %}link-faded{% endunless %}">{{ 'general.breadcrumb.shop' | t | default: 'Shop' }}</a>
+        </li>
+        <li class="breadcrumb__list-item">
+          <a href="{{ collection.url }}" aria-current="page" class="smallcaps {% unless show_image %}link-faded{% endunless %}">{{ collection.title }}</a>
+        </li>
+      {%- endif -%}
+
+    {%- elsif template.name == 'product' and product -%}
+      {%- if product.type == 'Watches' -%}
+        {%- if product.tags contains "Women's" -%}
+          <li class="breadcrumb__list-item">
+            <a href="/collections/women" class="smallcaps link-faded">Women</a>
+          </li>
+          <li class="breadcrumb__list-item">
+            <a href="/collections/womens-watches" class="smallcaps link-faded">Luxury Watches</a>
+          </li>
+        {%- elsif product.tags contains "Men's" -%}
+          <li class="breadcrumb__list-item">
+            <a href="/collections/men" class="smallcaps link-faded">Men</a>
+          </li>
+          <li class="breadcrumb__list-item">
+            <a href="/collections/mens-watches" class="smallcaps link-faded">Luxury Watches</a>
+          </li>
+        {%- else -%}
+          <li class="breadcrumb__list-item">
+            <a href="/collections/luxury-watches" class="smallcaps link-faded">Luxury Watches</a>
+          </li>
+        {%- endif -%}
+
+        {%- if product.vendor != blank -%}
+          <li class="breadcrumb__list-item">
+            <a href="/collections/{{ product.vendor | handleize }}" class="smallcaps link-faded">{{ product.vendor }}</a>
+          </li>
+        {%- endif -%}
+
+      {%- elsif product.tags contains 'Designer Bags' -%}
+        <li class="breadcrumb__list-item">
+          <a href="/collections/women" class="smallcaps link-faded">Women</a>
+        </li>
+        <li class="breadcrumb__list-item">
+          <a href="/collections/womens-handbags" class="smallcaps link-faded">Designer Bags</a>
+        </li>
+        {%- if product.vendor != blank -%}
+          <li class="breadcrumb__list-item">
+            <a href="/collections/{{ product.vendor | handleize }}" class="smallcaps link-faded">{{ product.vendor }}</a>
+          </li>
+        {%- endif -%}
+
+      {%- elsif product.tags contains 'Premium Footwear' -%}
+        {%- if product.tags contains 'Women' -%}
+          <li class="breadcrumb__list-item">
+            <a href="/collections/women" class="smallcaps link-faded">Women</a>
+          </li>
+          <li class="breadcrumb__list-item">
+            <a href="/collections/womens-shoes" class="smallcaps link-faded">Premium Footwear</a>
+          </li>
+        {%- else -%}
+          <li class="breadcrumb__list-item">
+            <a href="/collections/men" class="smallcaps link-faded">Men</a>
+          </li>
+          <li class="breadcrumb__list-item">
+            <a href="/collections/mens-shoes" class="smallcaps link-faded">Premium Footwear</a>
+          </li>
+        {%- endif -%}
+        {%- if product.vendor != blank -%}
+          <li class="breadcrumb__list-item">
+            <a href="/collections/{{ product.vendor | handleize }}" class="smallcaps link-faded">{{ product.vendor }}</a>
+          </li>
+        {%- endif -%}
+
+      {%- else -%}
+        <li class="breadcrumb__list-item">
+          <a href="{{ routes.all_products_collection_url }}" class="smallcaps link-faded">{{ 'general.breadcrumb.shop' | t | default: 'Shop' }}</a>
+        </li>
+        {%- if product.vendor != blank -%}
+          <li class="breadcrumb__list-item">
+            <a href="/collections/{{ product.vendor | handleize }}" class="smallcaps link-faded">{{ product.vendor }}</a>
+          </li>
+        {%- endif -%}
+      {%- endif -%}
+
+      <li class="breadcrumb__list-item">
+        <span aria-current="page" class="smallcaps" style="color: rgb(var(--text-color)); font-weight: 500;">{{ product.title | truncate: 45 }}</span>
+      </li>
+
+    {%- endif -%}
+  </ol>
+</nav>

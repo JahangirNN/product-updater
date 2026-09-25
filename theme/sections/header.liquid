@@ -107,80 +107,84 @@
           {%- render 'icon' with 'hamburger', class: 'header__nav-icon' -%}
         </button>
 
-        {%- if menu.links.size > 0 and section.settings.layout != 'drawer' -%}
+        {%- if section.settings.layout != 'drawer' -%}
           <ul class="contents unstyled-list md-max:hidden">
+            {%- render 'luxury-desktop-nav', menu_open_trigger: section.settings.menu_open_trigger, menu_text_font: section.settings.menu_text_font -%}
+
             {%- for link in menu.links -%}
-              {% liquid
-                assign link_title_downcase = link.title | strip | downcase
-                assign mega_menu_block = ''
+              {%- assign link_title_downcase = link.title | strip | downcase -%}
+              {%- unless link_title_downcase == 'women' or link_title_downcase == 'men' or link_title_downcase == 'designers' -%}
+                {% liquid
+                  assign mega_menu_block = ''
 
-                for block in section.blocks
-                  assign menu_item_downcase = block.settings.menu_item | strip | downcase
+                  for block in section.blocks
+                    assign menu_item_downcase = block.settings.menu_item | strip | downcase
 
-                  if menu_item_downcase == link_title_downcase
-                    assign mega_menu_block = block
-                    break
-                  endif
+                    if menu_item_downcase == link_title_downcase
+                      assign mega_menu_block = block
+                      break
+                    endif
 
-                endfor
-              %}
+                  endfor
+                %}
 
-              <li class="header__primary-nav-item">
-                {%- if link.levels == 0 and mega_menu_block == '' -%}
-                  <a href="{{ link.url }}" data-title="{{ link.title | escape }}" class="block {% if section.settings.menu_text_font == 'heading' %}h6{% endif %}" {% if link.current %}aria-current="page"{% endif %}>{{ link.title }}</a>
-                {%- else -%}
-                  {%- capture disclosure_content -%}
-                    <details class="header__menu-disclosure">
-                      <summary data-follow-link="{{ link.url }}" {% if section.settings.menu_text_font == 'heading' %}class="h6"{% endif %} data-title="{{ link.title | escape }}">
-                        {{- link.title -}}
-                      </summary>
-
-                      {%- if mega_menu_block != '' -%}
-                        {%- render 'mega-menu', link: link, block: mega_menu_block -%}
-                      {%- else -%}
-                        <ul class="header__dropdown-menu {% if link.levels <= 1 %}header__dropdown-menu--restrictable{% endif %} unstyled-list" role="list">
-                          {%- for sub_link in link.links -%}
-                            <li>
-                              {%- if sub_link.levels == 0 -%}
-                                <a href="{{ sub_link.url }}" class="link-faded-reverse" {% if sub_link.current %}aria-current="page"{% endif %}>{{ sub_link.title }}</a>
-                              {%- else -%}
-                                <dropdown-menu-disclosure follow-summary-link trigger="{{ section.settings.menu_open_trigger }}" class="contents">
-                                  <details class="header__menu-disclosure">
-                                    <summary data-follow-link="{{ sub_link.url }}" class="link-faded-reverse">
-                                      <div class="h-stack gap-4 justify-between">
-                                        {{- sub_link.title -}}
-                                        {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
-                                      </div>
-                                    </summary>
-
-                                    <ul class="header__dropdown-menu unstyled-list" role="list">
-                                      {%- for sub_sub_link in sub_link.links -%}
-                                        <li>
-                                          <a href="{{ sub_sub_link.url }}" class="link-faded-reverse" {% if sub_sub_link.current %}aria-current="page"{% endif %}>{{ sub_sub_link.title }}</a>
-                                        </li>
-                                      {%- endfor -%}
-                                    </ul>
-                                  </details>
-                                </dropdown-menu-disclosure>
-                              {%- endif -%}
-                            </li>
-                          {%- endfor -%}
-                        </ul>
-                      {%- endif -%}
-                    </details>
-                  {%- endcapture -%}
-
-                  {% if mega_menu_block != '' %}
-                    <mega-menu-disclosure follow-summary-link trigger="{{ section.settings.menu_open_trigger }}" class="contents">
-                      {{- disclosure_content -}}
-                    </mega-menu-disclosure>
+                <li class="header__primary-nav-item">
+                  {%- if link.levels == 0 and mega_menu_block == '' -%}
+                    <a href="{{ link.url }}" data-title="{{ link.title | escape }}" class="block {% if section.settings.menu_text_font == 'heading' %}h6{% endif %}" {% if link.current %}aria-current="page"{% endif %}>{{ link.title }}</a>
                   {%- else -%}
-                    <dropdown-menu-disclosure follow-summary-link trigger="{{ section.settings.menu_open_trigger }}">
-                      {{- disclosure_content -}}
-                    </dropdown-menu-disclosure>
+                    {%- capture disclosure_content -%}
+                      <details class="header__menu-disclosure">
+                        <summary data-follow-link="{{ link.url }}" {% if section.settings.menu_text_font == 'heading' %}class="h6"{% endif %} data-title="{{ link.title | escape }}">
+                          {{- link.title -}}
+                        </summary>
+
+                        {%- if mega_menu_block != '' -%}
+                          {%- render 'mega-menu', link: link, block: mega_menu_block -%}
+                        {%- else -%}
+                          <ul class="header__dropdown-menu {% if link.levels <= 1 %}header__dropdown-menu--restrictable{% endif %} unstyled-list" role="list">
+                            {%- for sub_link in link.links -%}
+                              <li>
+                                {%- if sub_link.levels == 0 -%}
+                                  <a href="{{ sub_link.url }}" class="link-faded-reverse" {% if sub_link.current %}aria-current="page"{% endif %}>{{ sub_link.title }}</a>
+                                {%- else -%}
+                                  <dropdown-menu-disclosure follow-summary-link trigger="{{ section.settings.menu_open_trigger }}" class="contents">
+                                    <details class="header__menu-disclosure">
+                                      <summary data-follow-link="{{ sub_link.url }}" class="link-faded-reverse">
+                                        <div class="h-stack gap-4 justify-between">
+                                          {{- sub_link.title -}}
+                                          {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
+                                        </div>
+                                      </summary>
+
+                                      <ul class="header__dropdown-menu unstyled-list" role="list">
+                                        {%- for sub_sub_link in sub_link.links -%}
+                                          <li>
+                                            <a href="{{ sub_sub_link.url }}" class="link-faded-reverse" {% if sub_sub_link.current %}aria-current="page"{% endif %}>{{ sub_sub_link.title }}</a>
+                                          </li>
+                                        {%- endfor -%}
+                                      </ul>
+                                    </details>
+                                  </dropdown-menu-disclosure>
+                                {%- endif -%}
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
+                      </details>
+                    {%- endcapture -%}
+
+                    {% if mega_menu_block != '' %}
+                      <mega-menu-disclosure follow-summary-link trigger="{{ section.settings.menu_open_trigger }}" class="contents">
+                        {{- disclosure_content -}}
+                      </mega-menu-disclosure>
+                    {%- else -%}
+                      <dropdown-menu-disclosure follow-summary-link trigger="{{ section.settings.menu_open_trigger }}">
+                        {{- disclosure_content -}}
+                      </dropdown-menu-disclosure>
+                    {%- endif -%}
                   {%- endif -%}
-                {%- endif -%}
-              </li>
+                </li>
+              {%- endunless -%}
             {%- endfor -%}
           </ul>
         {%- endif -%}

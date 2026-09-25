@@ -1,0 +1,201 @@
+{%- comment -%}
+  Luxury Desktop Navigation (ADR 0022)
+  Renders the 3-tier navigation tree (Women, Men, Designers) with multi-level dropdowns for Prestige header.
+{%- endcomment -%}
+
+<li class="header__primary-nav-item">
+  <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}">
+    <details class="header__menu-disclosure">
+      <summary data-follow-link="/collections/women" class="{% if menu_text_font == 'heading' %}h6{% endif %}" data-title="Women">
+        Women
+      </summary>
+
+      <ul class="header__dropdown-menu unstyled-list" role="list">
+        <li>
+          <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
+            <details class="header__menu-disclosure">
+              <summary data-follow-link="/collections/womens-watches" class="link-faded-reverse">
+                <div class="h-stack gap-4 justify-between">
+                  Luxury Watches
+                  {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
+                </div>
+              </summary>
+              <ul class="header__dropdown-menu unstyled-list" role="list">
+                <li><a href="/collections/womens-watches" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Women's Watches</a></li>
+                <li><a href="/collections/womens-watches?filter.p.vendor=Tissot" class="link-faded-reverse">Tissot</a></li>
+                <li><a href="/collections/womens-watches?filter.p.vendor=Seiko" class="link-faded-reverse">Seiko</a></li>
+                <li><a href="/collections/womens-watches?filter.p.vendor=Citizen" class="link-faded-reverse">Citizen</a></li>
+                <li><a href="/collections/womens-watches?filter.p.vendor=Movado" class="link-faded-reverse">Movado</a></li>
+                <li><a href="/collections/womens-watches?filter.p.vendor=Versace" class="link-faded-reverse">Versace</a></li>
+                <li><a href="/collections/womens-watches?filter.p.vendor=Michael+Kors" class="link-faded-reverse">Michael Kors</a></li>
+              </ul>
+            </details>
+          </dropdown-menu-disclosure>
+        </li>
+
+        <li>
+          <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
+            <details class="header__menu-disclosure">
+              <summary data-follow-link="/collections/womens-handbags" class="link-faded-reverse">
+                <div class="h-stack gap-4 justify-between">
+                  Designer Bags
+                  {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
+                </div>
+              </summary>
+              <ul class="header__dropdown-menu unstyled-list" role="list">
+                <li><a href="/collections/womens-handbags" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Handbags</a></li>
+                <li><a href="/collections/womens-handbags?filter.p.vendor=JW+PEI" class="link-faded-reverse">JW PEI</a></li>
+                <li><a href="/collections/womens-handbags?filter.p.vendor=COACH" class="link-faded-reverse">COACH</a></li>
+                <li><a href="/collections/womens-handbags?filter.p.vendor=MICHAEL+Michael+Kors" class="link-faded-reverse">Michael Kors</a></li>
+              </ul>
+            </details>
+          </dropdown-menu-disclosure>
+        </li>
+
+        <li>
+          <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
+            <details class="header__menu-disclosure">
+              <summary data-follow-link="/collections/womens-shoes" class="link-faded-reverse">
+                <div class="h-stack gap-4 justify-between">
+                  Premium Footwear
+                  {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
+                </div>
+              </summary>
+              <ul class="header__dropdown-menu unstyled-list" role="list">
+                <li><a href="/collections/womens-shoes" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Footwear</a></li>
+                <li><a href="/collections/womens-shoes?filter.p.vendor=On" class="link-faded-reverse">On Running</a></li>
+                <li><a href="/collections/womens-shoes?filter.p.vendor=Salomon" class="link-faded-reverse">Salomon</a></li>
+                <li><a href="/collections/womens-shoes?filter.p.vendor=HOKA" class="link-faded-reverse">HOKA</a></li>
+                <li><a href="/collections/womens-shoes?filter.p.vendor=Nike" class="link-faded-reverse">Nike</a></li>
+                <li><a href="/collections/womens-shoes?filter.p.vendor=adidas" class="link-faded-reverse">adidas</a></li>
+                <li><a href="/collections/womens-shoes?filter.p.vendor=COACH" class="link-faded-reverse">COACH Footwear</a></li>
+              </ul>
+            </details>
+          </dropdown-menu-disclosure>
+        </li>
+
+        <li>
+          <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
+            <details class="header__menu-disclosure">
+              <summary data-follow-link="/collections/wallets-accessories" class="link-faded-reverse">
+                <div class="h-stack gap-4 justify-between">
+                  Wallets & Accessories
+                  {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
+                </div>
+              </summary>
+              <ul class="header__dropdown-menu unstyled-list" role="list">
+                <li><a href="/collections/wallets-accessories" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Wallets</a></li>
+                <li><a href="/collections/wallets-accessories?filter.p.vendor=COACH" class="link-faded-reverse">COACH Wallets</a></li>
+                <li><a href="/collections/wallets-accessories?filter.p.vendor=MICHAEL+Michael+Kors" class="link-faded-reverse">Michael Kors Wallets</a></li>
+              </ul>
+            </details>
+          </dropdown-menu-disclosure>
+        </li>
+      </ul>
+    </details>
+  </dropdown-menu-disclosure>
+</li>
+
+<li class="header__primary-nav-item">
+  <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}">
+    <details class="header__menu-disclosure">
+      <summary data-follow-link="/collections/men" class="{% if menu_text_font == 'heading' %}h6{% endif %}" data-title="Men">
+        Men
+      </summary>
+
+      <ul class="header__dropdown-menu unstyled-list" role="list">
+        <li>
+          <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
+            <details class="header__menu-disclosure">
+              <summary data-follow-link="/collections/mens-watches" class="link-faded-reverse">
+                <div class="h-stack gap-4 justify-between">
+                  Luxury Watches
+                  {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
+                </div>
+              </summary>
+              <ul class="header__dropdown-menu unstyled-list" role="list">
+                <li><a href="/collections/mens-watches" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Men's Watches</a></li>
+                <li><a href="/collections/mens-watches?filter.p.vendor=Tissot" class="link-faded-reverse">Tissot</a></li>
+                <li><a href="/collections/mens-watches?filter.p.vendor=Citizen" class="link-faded-reverse">Citizen</a></li>
+                <li><a href="/collections/mens-watches?filter.p.vendor=Movado" class="link-faded-reverse">Movado</a></li>
+                <li><a href="/collections/mens-watches?filter.p.vendor=Seiko" class="link-faded-reverse">Seiko</a></li>
+                <li><a href="/collections/mens-watches?filter.p.vendor=Versace" class="link-faded-reverse">Versace</a></li>
+                <li><a href="/collections/mens-watches?filter.p.vendor=Ferragamo" class="link-faded-reverse">Ferragamo</a></li>
+              </ul>
+            </details>
+          </dropdown-menu-disclosure>
+        </li>
+
+        <li>
+          <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
+            <details class="header__menu-disclosure">
+              <summary data-follow-link="/collections/mens-shoes" class="link-faded-reverse">
+                <div class="h-stack gap-4 justify-between">
+                  Premium Footwear
+                  {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
+                </div>
+              </summary>
+              <ul class="header__dropdown-menu unstyled-list" role="list">
+                <li><a href="/collections/mens-shoes" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Men's Shoes</a></li>
+                <li><a href="/collections/mens-shoes?filter.p.vendor=Salomon" class="link-faded-reverse">Salomon</a></li>
+                <li><a href="/collections/mens-shoes?filter.p.vendor=On" class="link-faded-reverse">On Running</a></li>
+                <li><a href="/collections/mens-shoes?filter.p.vendor=HOKA" class="link-faded-reverse">HOKA</a></li>
+                <li><a href="/collections/mens-shoes?filter.p.vendor=Nike" class="link-faded-reverse">Nike</a></li>
+                <li><a href="/collections/mens-shoes?filter.p.vendor=Jordan" class="link-faded-reverse">Jordan</a></li>
+                <li><a href="/collections/mens-shoes?filter.p.vendor=adidas" class="link-faded-reverse">adidas</a></li>
+                <li><a href="/collections/mens-shoes?filter.p.vendor=ASICS" class="link-faded-reverse">ASICS</a></li>
+              </ul>
+            </details>
+          </dropdown-menu-disclosure>
+        </li>
+
+        <li>
+          <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}" class="contents">
+            <details class="header__menu-disclosure">
+              <summary data-follow-link="/collections/mens-bags" class="link-faded-reverse">
+                <div class="h-stack gap-4 justify-between">
+                  Bags & Accessories
+                  {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
+                </div>
+              </summary>
+              <ul class="header__dropdown-menu unstyled-list" role="list">
+                <li><a href="/collections/mens-bags" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Men's Bags</a></li>
+                <li><a href="/collections/mens-bags?filter.p.vendor=COACH" class="link-faded-reverse">COACH Men</a></li>
+                <li><a href="/collections/wallets-accessories" class="link-faded-reverse">Wallets & Cardholders</a></li>
+              </ul>
+            </details>
+          </dropdown-menu-disclosure>
+        </li>
+      </ul>
+    </details>
+  </dropdown-menu-disclosure>
+</li>
+
+<li class="header__primary-nav-item">
+  <dropdown-menu-disclosure follow-summary-link trigger="{{ menu_open_trigger }}">
+    <details class="header__menu-disclosure">
+      <summary data-follow-link="/collections" class="{% if menu_text_font == 'heading' %}h6{% endif %}" data-title="Designers">
+        Designers
+      </summary>
+
+      <ul class="header__dropdown-menu unstyled-list" role="list" style="columns: 2; column-gap: 1.5rem; min-width: 320px;">
+        <li><a href="/collections/jw-pei" class="link-faded-reverse">JW PEI</a></li>
+        <li><a href="/collections/coach" class="link-faded-reverse">COACH</a></li>
+        <li><a href="/collections/michael-kors" class="link-faded-reverse">Michael Kors</a></li>
+        <li><a href="/collections/tissot" class="link-faded-reverse">Tissot</a></li>
+        <li><a href="/collections/seiko" class="link-faded-reverse">Seiko</a></li>
+        <li><a href="/collections/citizen" class="link-faded-reverse">Citizen</a></li>
+        <li><a href="/collections/movado" class="link-faded-reverse">Movado</a></li>
+        <li><a href="/collections/versace" class="link-faded-reverse">Versace</a></li>
+        <li><a href="/collections/ferragamo" class="link-faded-reverse">Ferragamo</a></li>
+        <li><a href="/collections/salomon" class="link-faded-reverse">Salomon</a></li>
+        <li><a href="/collections/on-running" class="link-faded-reverse">On Running</a></li>
+        <li><a href="/collections/hoka" class="link-faded-reverse">HOKA</a></li>
+        <li><a href="/collections/nike" class="link-faded-reverse">Nike</a></li>
+        <li><a href="/collections/jordan" class="link-faded-reverse">Jordan</a></li>
+        <li><a href="/collections/adidas" class="link-faded-reverse">adidas</a></li>
+        <li><a href="/collections/asics" class="link-faded-reverse">ASICS</a></li>
+      </ul>
+    </details>
+  </dropdown-menu-disclosure>
+</li>
