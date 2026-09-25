@@ -1,7 +1,7 @@
 """
 Shopify Catalog Ingestion & Real-Time Delta Synchronization Bridge
 Pure functions for upserting products and pushing live price/stock delta shifts to Shopify Admin GraphQL.
-Adheres to ADR 0005, 0006, 0015, 0019, and 0020.
+Adheres to ADR 0005, 0006, 0015, 0019, 0020, and 0021.
 """
 import os
 import sys
@@ -12,6 +12,7 @@ from typing import Dict, Any, List, Optional, Tuple
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from storage.shopify_auth import execute_shopify_graphql
+from storage.shopify_taxonomy import prepare_product_set_payload
 from storage.forex import get_usd_to_inr_rate
 from storage.logger import log_info, log_success, log_warning, log_error
 
@@ -36,146 +37,10 @@ mutation productSet($input: ProductSetInput!, $synchronous: Boolean!) {
 """
 
 
-def prepare_product_set_payload(prod: Dict[str, Any], forex_rate: float) -> Dict[str, Any]:
-    """
-    Format a canonical product dictionary into a compliant ProductSetInput payload.
-    Enforces authentic luxury brand vendor, whole-rupee INR pricing, options, and CDN media.
-    """
-    title = prod.get("title", "")
-    vendor = prod.get("vendor") or prod.get("brand", "Rare")
-    product_type = prod.get("product_type", "Luxury")
-    handle = prod.get("handle")
-    desc_html = prod.get("descriptionHtml", "")
-    
-    # 1. Whole-rupee INR pricing
-    source_price = float(prod.get("source_price") or prod.get("price_current") or 0.0)
-    inr_price = float(round(source_price * forex_rate))
-    price_str = f"{inr_price:.2f}"
-    
-    compare_source = prod.get("source_compare_at_price")
-    compare_str = None
-    if compare_source and float(compare_source) > source_price:
-        inr_comp = float(round(float(compare_source) * forex_rate))
-        compare_str = f"{inr_comp:.2f}"
-        
-    # 2. Luxury Consumer Taxonomy Tags
-    tags = list(prod.get("tags", []))
-    if f"Brand:{vendor}" not in tags:
-        tags.append(f"Brand:{vendor}")
-    if product_type not in tags:
-        tags.append(product_type)
-        
-    # Gender tag
-    gender = prod.get("gender")
-    if not gender:
-        title_lower = title.lower()
-        if "women" in title_lower or "ladies" in title_lower:
-            gender = "Women"
-        elif "unisex" in title_lower:
-            gender = "Unisex"
-        else:
-            gender = "Men"
-    tags.append(f"Gender:{gender}")
-    tags = list(set(tags))
-    
-    # 3. Variants & Options
-    variants_raw = prod.get("variants", [])
-    option_name = "Size"
-    option_values = []
-    variant_inputs = []
-    
-    if variants_raw and isinstance(variants_raw, list) and len(variants_raw) > 0:
-        first_var = variants_raw[0]
-        # Detect option name from first variant option values
-        if "option_values" in first_var and first_var["option_values"]:
-            option_name = first_var["option_values"][0].get("option_name", "Size")
-            
-        for v in variants_raw:
-            v_val = v.get("size") or v.get("title") or "Default"
-            if "option_values" in v and v["option_values"]:
-                v_val = v["option_values"][0].get("name", v_val)
-            option_values.append(v_val)
-            
-            v_source_price = float(v.get("source_price") or source_price)
-            v_inr_price = float(round(v_source_price * forex_rate))
-            v_sku = v.get("sku") or prod.get("source_sku") or prod.get("id") or ""
-            if not v_sku.startswith("RARE-"):
-                v_sku = f"RARE-{v_sku}"
-                
-            v_compare_source = v.get("source_compare_at_price") or compare_source
-            v_compare_str = None
-            if v_compare_source and float(v_compare_source) > v_source_price:
-                v_compare_str = f"{float(round(float(v_compare_source) * forex_rate)):.2f}"
-                
-            variant_inputs.append({
-                "optionValues": [
-                    {
-                        "optionName": option_name,
-                        "name": v_val
-                    }
-                ],
-                "price": f"{v_inr_price:.2f}",
-                "compareAtPrice": v_compare_str,
-                "sku": v_sku,
-                "inventoryPolicy": "DENY"
-            })
-    else:
-        # Single default variant
-        source_sku = prod.get("source_sku") or prod.get("id") or ""
-        v_sku = f"RARE-{source_sku}" if not source_sku.startswith("RARE-") else source_sku
-        option_values = ["Default"]
-        variant_inputs = [{
-            "optionValues": [{"optionName": "Title", "name": "Default Title"}],
-            "price": price_str,
-            "compareAtPrice": compare_str,
-            "sku": v_sku,
-            "inventoryPolicy": "DENY"
-        }]
-        option_name = "Title"
-
-    # 4. Media Files (up to 8 CDN images)
-    media_files = []
-    for img_url in prod.get("images", [])[:8]:
-        if img_url and isinstance(img_url, str) and img_url.startswith("http"):
-            media_files.append({
-                "originalSource": img_url,
-                "contentType": "IMAGE"
-            })
-            
-    is_in_stock = (prod.get("availability") == "in_stock")
-    
-    # 5. Construct ProductSetInput payload
-    payload = {
-        "title": title,
-        "vendor": vendor,
-        "productType": product_type,
-        "descriptionHtml": desc_html,
-        "tags": tags,
-        "status": "ACTIVE" if is_in_stock else "DRAFT",
-        "productOptions": [
-            {
-                "name": option_name,
-                "values": [{"name": val} for val in set(option_values)]
-            }
-        ],
-        "variants": variant_inputs
-    }
-    
-    # If media files exist, attach them
-    if media_files:
-        payload["files"] = media_files
-        
-    if prod.get("shopify_product_id"):
-        payload["id"] = prod["shopify_product_id"]
-    elif handle:
-        payload["handle"] = handle
-        
-    return payload
-
-
 def upsert_product_to_shopify(prod: Dict[str, Any], forex_rate: Optional[float] = None) -> Tuple[bool, Optional[Dict[str, Any]], str]:
     """
     Upsert a product to Shopify using the productSet GraphQL mutation.
+    Transforms product into schema-compliant ProductSetInput using shopify_taxonomy.
     Returns (success, product_node, error_message).
     """
     if forex_rate is None:
@@ -220,3 +85,84 @@ def sync_delta_to_shopify(updated_product: Dict[str, Any], delta_res: Dict[str, 
     else:
         log_error(f"[SHOPIFY SYNC FAIL] Failed to sync delta for {updated_product.get('title', '')[:35]}: {err}")
         return False
+
+
+def drain_delta_events_queue(limit: int = 100, forex_rate: Optional[float] = None) -> Dict[str, Any]:
+    """
+    Process queued delta events from storage/db/history/delta_events.jsonl where shopify_sync_pending is True.
+    Upserts products to Shopify and marks shopify_sync_pending = False.
+    """
+    events_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "storage", "db", "history", "delta_events.jsonl")
+    if not os.path.exists(events_path):
+        return {"processed": 0, "success": 0, "failed": 0}
+
+    if forex_rate is None:
+        forex_rate = get_usd_to_inr_rate()
+
+    try:
+        with open(events_path, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+    except Exception as e:
+        log_error(f"Failed to read delta events queue: {e}")
+        return {"processed": 0, "success": 0, "failed": 0}
+
+    events = []
+    for line in lines:
+        if line.strip():
+            try:
+                events.append(json.loads(line.strip()))
+            except Exception:
+                pass
+
+    processed = 0
+    success_count = 0
+    fail_count = 0
+    updated = False
+
+    for evt in events:
+        if processed >= limit:
+            break
+        if evt.get("shopify_sync_pending"):
+            processed += 1
+            store = evt.get("store")
+            p_id = evt.get("product_id")
+            if not store or not p_id:
+                continue
+
+            p_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "storage", "db", store, "products", f"{p_id}.json")
+            if not os.path.exists(p_path):
+                continue
+
+            try:
+                with open(p_path, "r", encoding="utf-8") as pf:
+                    prod = json.load(pf)
+
+                ok, p_node, err = upsert_product_to_shopify(prod, forex_rate)
+                if ok and p_node:
+                    evt["shopify_sync_pending"] = False
+                    evt["shopify_synced_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+                    
+                    if not prod.get("shopify_product_id") and p_node.get("id"):
+                        prod["shopify_product_id"] = p_node.get("id")
+                        prod["shopify_handle"] = p_node.get("handle")
+                        prod["shopify_synced_at"] = evt["shopify_synced_at"]
+                        with open(p_path, "w", encoding="utf-8") as pf:
+                            json.dump(prod, pf, indent=2, ensure_ascii=False)
+                            
+                    success_count += 1
+                    updated = True
+                else:
+                    fail_count += 1
+                    log_warning(f"[QUEUE DRAIN FAIL] {p_id}: {err}")
+            except Exception as e:
+                fail_count += 1
+                log_error(f"[QUEUE DRAIN ERROR] {p_id}: {e}")
+
+    if updated:
+        tmp_path = f"{events_path}.tmp"
+        with open(tmp_path, "w", encoding="utf-8") as f:
+            for evt in events:
+                f.write(json.dumps(evt, ensure_ascii=False) + "\n")
+        os.replace(tmp_path, events_path)
+
+    return {"processed": processed, "success": success_count, "failed": fail_count}
