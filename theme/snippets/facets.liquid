@@ -89,12 +89,25 @@ Supported variables
             endif
           -%}
 
+          {%- assign active_vendor_tag = '' -%}
+          {%- for tag in current_tags -%}
+            {%- assign t_handle = tag | handleize -%}
+            {%- if t_handle == 'on-running' -%}{%- assign t_handle = 'on' -%}{%- endif -%}
+            {%- unless t_handle == 'men' or t_handle == 'mens' or t_handle == 'women' or t_handle == 'womens' -%}
+              {%- assign active_vendor_tag = t_handle -%}
+              {%- break -%}
+            {%- endunless -%}
+          {%- endfor -%}
+
           {%- capture gender_filter_content -%}
             <div class="v-stack gap-2.5">
-              {%- capture all_gender_url -%}{{ collection.url }}{% if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif %}{%- endcapture -%}
+              {%- capture all_gender_url -%}
+                {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
+                {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
+              {%- endcapture -%}
               <div class="checkbox-control">
                 <facet-link class="block w-full">
-                  <a href="{{ all_gender_url }}" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
+                  <a href="{{ all_gender_url | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                     <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
                       <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if is_all_gender_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
                       <span class="{% if is_all_gender_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">All Pieces</span>
@@ -104,12 +117,16 @@ Supported variables
               </div>
 
               {%- capture men_gender_url -%}
-                {%- if is_men_active -%}{{ collection.url }}{%- else -%}{{ collection.url }}/men{%- endif -%}
+                {%- if is_men_active -%}
+                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
+                {%- else -%}
+                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/men+{{ active_vendor_tag }}{%- else -%}{{ collection.url }}/men{%- endif -%}
+                {%- endif -%}
                 {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
               {%- endcapture -%}
               <div class="checkbox-control">
                 <facet-link class="block w-full">
-                  <a href="{{ men_gender_url }}" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
+                  <a href="{{ men_gender_url | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                     <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
                       <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if is_men_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
                       <span class="{% if is_men_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Men's</span>
@@ -119,12 +136,16 @@ Supported variables
               </div>
 
               {%- capture women_gender_url -%}
-                {%- if is_women_active -%}{{ collection.url }}{%- else -%}{{ collection.url }}/women{%- endif -%}
+                {%- if is_women_active -%}
+                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
+                {%- else -%}
+                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/women+{{ active_vendor_tag }}{%- else -%}{{ collection.url }}/women{%- endif -%}
+                {%- endif -%}
                 {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
               {%- endcapture -%}
               <div class="checkbox-control">
                 <facet-link class="block w-full">
-                  <a href="{{ women_gender_url }}" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
+                  <a href="{{ women_gender_url | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                     <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
                       <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if is_women_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
                       <span class="{% if is_women_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Women's</span>
@@ -148,13 +169,20 @@ Supported variables
         {%- if show_brand_filter -%}
           {%- capture brand_filter_content -%}
             <div class="v-stack gap-2.5">
+              {%- assign current_gender_tag = '' -%}
+              {%- if is_men_active -%}
+                {%- assign current_gender_tag = 'men' -%}
+              {%- elsif is_women_active -%}
+                {%- assign current_gender_tag = 'women' -%}
+              {%- endif -%}
+
               {%- for vendor in collection.all_vendors -%}
                 {%- liquid
                   assign vendor_handle = vendor | handleize
                   assign is_vendor_active = false
                   for tag in current_tags
                     assign tag_handle = tag | handleize
-                    if tag_handle == vendor_handle
+                    if tag_handle == vendor_handle or tag_handle == 'on' and vendor_handle == 'on-running'
                       assign is_vendor_active = true
                       break
                     endif
@@ -168,16 +196,24 @@ Supported variables
 
                 {%- capture vendor_target_url -%}
                   {%- if is_vendor_active -%}
-                    {{ collection.url }}
+                    {%- if current_gender_tag != '' -%}
+                      {{ collection.url }}/{{ current_gender_tag }}
+                    {%- else -%}
+                      {{ collection.url }}
+                    {%- endif -%}
                   {%- else -%}
-                    {{ collection.url }}/{{ filter_tag_param }}
+                    {%- if current_gender_tag != '' -%}
+                      {{ collection.url }}/{{ current_gender_tag }}+{{ filter_tag_param }}
+                    {%- else -%}
+                      {{ collection.url }}/{{ filter_tag_param }}
+                    {%- endif -%}
                   {%- endif -%}
                   {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
                 {%- endcapture -%}
 
                 <div class="checkbox-control">
                   <facet-link class="block w-full">
-                    <a href="{{ vendor_target_url }}" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
+                    <a href="{{ vendor_target_url | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                       <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
                         <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if is_vendor_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
                         <span class="{% if is_vendor_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">{{ vendor }}</span>

@@ -271,9 +271,19 @@ function cachedFetch(url, options) {
 
 // js/common/utilities/extract-section-id.js
 function extractSectionId(element) {
-  element = element.classList.contains("shopify-section") ? element : element.closest(".shopify-section");
-  return element.id.replace("shopify-section-", "");
+  if (!element) return "";
+  const section = element.classList?.contains("shopify-section") ? element : element.closest?.(".shopify-section");
+  if (section && section.id) {
+    return section.id.replace("shopify-section-", "");
+  }
+  const sectionAttr = element.closest?.("[section-id]")?.getAttribute("section-id");
+  if (sectionAttr) {
+    return sectionAttr;
+  }
+  const fallback = document.querySelector(".shopify-section--main-collection") || document.querySelector(".shopify-section");
+  return fallback?.id?.replace("shopify-section-", "") || "";
 }
+
 
 // js/common/utilities/dom.js
 function deepQuerySelector(root, selector) {
@@ -2235,12 +2245,39 @@ var FacetLink = class extends HTMLElement {
 _FacetLink_instances = new WeakSet();
 onFacetUpdate_fn = function(event) {
   event.preventDefault();
-  const sectionId = extractSectionId(event.target), url = new URL(this.firstElementChild.href);
-  url.searchParams.set("section_id", sectionId);
+  const drawer = this.closest("facets-drawer");
+  if (drawer && drawer.open) {
+    if (typeof drawer.hide === "function") {
+      drawer.hide();
+    } else {
+      drawer.removeAttribute("open");
+    }
+  }
+  const sectionId = extractSectionId(this) || extractSectionId(event.target);
+  const targetUrl = new URL(this.firstElementChild.href, window.location.origin);
+  
+  const firstEl = this.firstElementChild;
+  const isClearAll = this.classList?.contains("facets-clear-all") || firstEl?.classList?.contains("facets-clear-all");
+  const isNativeRemoval = firstEl?.getAttribute?.("data-facet-remove") === "native" || firstEl?.classList?.contains("facet-remove-native");
+  const isTagLink = firstEl?.getAttribute?.("data-tag-link") === "true" || firstEl?.getAttribute?.("data-tag-removal") === "true" || (typeof firstEl?.matches === "function" && firstEl.matches("[data-tag-link], [data-tag-removal]"));
+  const currentPathname = window.location.pathname || (window.location.href ? new URL(window.location.href).pathname : "");
+
+  if (!isClearAll && !isNativeRemoval) {
+    if (isTagLink || (currentPathname && targetUrl.pathname !== currentPathname)) {
+      const currentParams = new URLSearchParams(window.location.search);
+      currentParams.forEach((value, key) => {
+        if (key.startsWith("filter.") && !targetUrl.searchParams.getAll(key).includes(value)) {
+          targetUrl.searchParams.append(key, value);
+        }
+      });
+    }
+  }
+  
+  targetUrl.searchParams.set("section_id", sectionId);
   this.dispatchEvent(new CustomEvent("facet:update", {
     bubbles: true,
     detail: {
-      url
+      url: targetUrl
     }
   }));
 };

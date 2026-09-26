@@ -42,9 +42,30 @@ Supported variables
         endif
       -%}
 
+      {%- capture tag_removal_url -%}
+        {%- assign remaining_tags = '' -%}
+        {%- for other_tag in current_tags -%}
+          {%- unless other_tag == tag -%}
+            {%- assign other_handle = other_tag | handleize -%}
+            {%- if other_handle == 'on-running' -%}{%- assign other_handle = 'on' -%}{%- endif -%}
+            {%- if remaining_tags == '' -%}
+              {%- assign remaining_tags = other_handle -%}
+            {%- else -%}
+              {%- assign remaining_tags = remaining_tags | append: '+' | append: other_handle -%}
+            {%- endif -%}
+          {%- endunless -%}
+        {%- endfor -%}
+        {%- if remaining_tags != '' -%}
+          {{ collection.url }}/{{ remaining_tags }}
+        {%- else -%}
+          {{ collection.url }}
+        {%- endif -%}
+        {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
+      {%- endcapture -%}
+
       <div class="removable-facet">
         <facet-link>
-          <a href="{{ collection.url }}{% if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif %}" class="tap-area link-faded" aria-label="{{ 'collection.faceting.remove_filter' | t: name: tag_label }}" data-no-instant>
+          <a href="{{ tag_removal_url | strip }}" data-tag-removal="true" class="tap-area link-faded" aria-label="{{ 'collection.faceting.remove_filter' | t: name: tag_label }}" data-no-instant>
             {%- render 'icon' with 'close', width: 10 -%}
           </a>
         </facet-link>
@@ -61,7 +82,7 @@ Supported variables
       {%- if filter.max_value.value != blank or filter.min_value.value != blank -%}
         <div class="removable-facet">
           <facet-link>
-            <a href="{{ filter.url_to_remove }}" class="tap-area link-faded" aria-label="{{ 'collection.faceting.remove_filter' | t: name: filter.label }}" data-no-instant>
+            <a href="{{ filter.url_to_remove }}" data-facet-remove="native" class="tap-area link-faded facet-remove-native" aria-label="{{ 'collection.faceting.remove_filter' | t: name: filter.label }}" data-no-instant>
               {%- render 'icon' with 'close', width: 10 -%}
             </a>
           </facet-link>
@@ -79,7 +100,7 @@ Supported variables
       {%- for active_value in filter.active_values -%}
         <div class="removable-facet">
           <facet-link>
-            <a href="{{ active_value.url_to_remove }}" class="tap-area link-faded" aria-label="{{ 'collection.faceting.remove_filter' | t: name: active_value.label }}" data-no-instant>
+            <a href="{{ active_value.url_to_remove }}" data-facet-remove="native" class="tap-area link-faded facet-remove-native" aria-label="{{ 'collection.faceting.remove_filter' | t: name: active_value.label }}" data-no-instant>
               {%- render 'icon' with 'close', width: 10 -%}
             </a>
           </facet-link>

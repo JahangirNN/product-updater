@@ -218,7 +218,7 @@ LIQUID
                   {%- assign button_content = 'collection.faceting.clear_filters' | t -%}
 
                   <facet-link>
-                    {%- render 'button', href: collection.url, content: button_content -%}
+                    {%- render 'button', href: collection.url, content: button_content, class: 'facets-clear-all' -%}
                   </facet-link>
                 </div>
               </div>

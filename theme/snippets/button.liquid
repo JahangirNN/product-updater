@@ -52,6 +52,10 @@ Supported variables
         echo ' w-full'
       endif
     endif
+
+    if class != blank
+      echo ' ' | append: class
+    endif
   endcapture
 
   capture style_attribute

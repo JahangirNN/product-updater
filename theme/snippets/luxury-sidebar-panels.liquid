@@ -11,6 +11,12 @@
 
   <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list">
     <li>
+      <a href="/collections/women" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" style="font-weight: 600; color: #c9a876;">
+        Shop All Women's Boutique &rarr;
+      </a>
+    </li>
+
+    <li>
       <accordion-disclosure>
         <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
           <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
@@ -40,44 +46,6 @@
           <div class="header-sidebar__nested-linklist">
             <a href="/collections/womens-handbags" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Handbags</a>
             <a href="/collections/womens-handbags/jw-pei" class="link-faded-reverse">JW PEI</a>
-            <a href="/collections/womens-handbags/coach" class="link-faded-reverse">COACH</a>
-            <a href="/collections/womens-handbags/michael-kors" class="link-faded-reverse">Michael Kors</a>
-          </div>
-        </details>
-      </accordion-disclosure>
-    </li>
-
-    <li>
-      <accordion-disclosure>
-        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
-          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
-            Premium Footwear
-            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
-          </summary>
-          <div class="header-sidebar__nested-linklist">
-            <a href="/collections/womens-shoes" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Footwear</a>
-            <a href="/collections/womens-shoes/on" class="link-faded-reverse">On Running</a>
-            <a href="/collections/womens-shoes/salomon" class="link-faded-reverse">Salomon</a>
-            <a href="/collections/womens-shoes/hoka" class="link-faded-reverse">HOKA</a>
-            <a href="/collections/womens-shoes/nike" class="link-faded-reverse">Nike</a>
-            <a href="/collections/womens-shoes/adidas" class="link-faded-reverse">adidas</a>
-            <a href="/collections/womens-shoes/coach" class="link-faded-reverse">COACH Footwear</a>
-          </div>
-        </details>
-      </accordion-disclosure>
-    </li>
-
-    <li>
-      <accordion-disclosure>
-        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
-          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
-            Wallets & Accessories
-            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
-          </summary>
-          <div class="header-sidebar__nested-linklist">
-            <a href="/collections/wallets-accessories" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Wallets & Small Leather Goods</a>
-            <a href="/collections/wallets-accessories/coach" class="link-faded-reverse">COACH Wallets</a>
-            <a href="/collections/wallets-accessories/michael-kors" class="link-faded-reverse">Michael Kors Wallets</a>
           </div>
         </details>
       </accordion-disclosure>
@@ -92,6 +60,12 @@
   </button>
 
   <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list">
+    <li>
+      <a href="/collections/men" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" style="font-weight: 600; color: #c9a876;">
+        Shop All Men's Boutique &rarr;
+      </a>
+    </li>
+
     <li>
       <accordion-disclosure>
         <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
@@ -111,43 +85,6 @@
         </details>
       </accordion-disclosure>
     </li>
-
-    <li>
-      <accordion-disclosure>
-        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
-          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
-            Premium Footwear
-            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
-          </summary>
-          <div class="header-sidebar__nested-linklist">
-            <a href="/collections/mens-shoes" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Men's Shoes</a>
-            <a href="/collections/mens-shoes/salomon" class="link-faded-reverse">Salomon</a>
-            <a href="/collections/mens-shoes/on" class="link-faded-reverse">On Running</a>
-            <a href="/collections/mens-shoes/hoka" class="link-faded-reverse">HOKA</a>
-            <a href="/collections/mens-shoes/nike" class="link-faded-reverse">Nike</a>
-            <a href="/collections/mens-shoes/jordan" class="link-faded-reverse">Jordan</a>
-            <a href="/collections/mens-shoes/adidas" class="link-faded-reverse">adidas</a>
-            <a href="/collections/mens-shoes/asics" class="link-faded-reverse">ASICS</a>
-          </div>
-        </details>
-      </accordion-disclosure>
-    </li>
-
-    <li>
-      <accordion-disclosure>
-        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
-          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
-            Bags & Accessories
-            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
-          </summary>
-          <div class="header-sidebar__nested-linklist">
-            <a href="/collections/mens-bags" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Men's Bags</a>
-            <a href="/collections/mens-bags/coach" class="link-faded-reverse">COACH Men</a>
-            <a href="/collections/wallets-accessories" class="link-faded-reverse">Wallets & Cardholders</a>
-          </div>
-        </details>
-      </accordion-disclosure>
-    </li>
   </ul>
 </div>
 
@@ -158,21 +95,18 @@
   </button>
 
   <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list">
-    <li><a href="/collections/jw-pei" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">JW PEI</a></li>
-    <li><a href="/collections/coach" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">COACH</a></li>
-    <li><a href="/collections/michael-kors" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Michael Kors</a></li>
-    <li><a href="/collections/tissot" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Tissot</a></li>
-    <li><a href="/collections/seiko" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Seiko</a></li>
+    <li>
+      <a href="/collections" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" style="font-weight: 600; color: #c9a876;">
+        View All Maisons &rarr;
+      </a>
+    </li>
     <li><a href="/collections/citizen" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Citizen</a></li>
-    <li><a href="/collections/movado" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Movado</a></li>
-    <li><a href="/collections/versace" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Versace</a></li>
     <li><a href="/collections/ferragamo" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Ferragamo</a></li>
-    <li><a href="/collections/salomon" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Salomon</a></li>
-    <li><a href="/collections/on-running" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">On Running</a></li>
-    <li><a href="/collections/hoka" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">HOKA</a></li>
-    <li><a href="/collections/nike" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Nike</a></li>
-    <li><a href="/collections/jordan" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Jordan</a></li>
-    <li><a href="/collections/adidas" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">adidas</a></li>
-    <li><a href="/collections/asics" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">ASICS</a></li>
+    <li><a href="/collections/jw-pei" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">JW PEI</a></li>
+    <li><a href="/collections/michael-kors-watches" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Michael Kors</a></li>
+    <li><a href="/collections/movado" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Movado</a></li>
+    <li><a href="/collections/seiko" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Seiko</a></li>
+    <li><a href="/collections/tissot" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Tissot</a></li>
+    <li><a href="/collections/versace" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Versace</a></li>
   </ul>
 </div>

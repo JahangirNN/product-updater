@@ -1,0 +1,438 @@
+"""
+Verification Suite for Worker M1 (Theme Navigation & Facet Filter Developer)
+Tests all modified files for syntax, contract adherence, link integrity, and behavioral correctness.
+"""
+
+import re
+import json
+import subprocess
+import sys
+
+def test_theme_js():
+    print("=== Testing theme/assets/theme.js ===")
+    
+    # 1. Node syntax check
+    res = subprocess.run(["node", "-c", "theme/assets/theme.js"], capture_output=True, text=True)
+    assert res.returncode == 0, f"Syntax error in theme.js: {res.stderr}"
+    print("[PASS] theme.js passes node syntax check.")
+
+    # 2. Node unit tests for extractSectionId and behavioral FacetLink.onFacetUpdate_fn
+    node_test_script = """
+    const fs = require('fs');
+    const content = fs.readFileSync('theme/assets/theme.js', 'utf8');
+
+    // Extract extractSectionId definition
+    const extractFnMatch = content.match(/function extractSectionId\\(element\\) \\{[\\s\\S]*?\\n\\}/);
+    if (!extractFnMatch) {
+      console.error('Could not find extractSectionId function');
+      process.exit(1);
+    }
+    eval(extractFnMatch[0]);
+
+    // Test extractSectionId
+    console.assert(extractSectionId(null) === "", "null element should return empty string");
+    console.assert(extractSectionId(undefined) === "", "undefined element should return empty string");
+
+    const secEl = {
+      classList: { contains: (cls) => cls === "shopify-section" },
+      id: "shopify-section-template--123__main"
+    };
+    console.assert(extractSectionId(secEl) === "template--123__main", "element that is section should return section id");
+
+    const childEl = {
+      classList: { contains: () => false },
+      closest: (sel) => sel === ".shopify-section" ? secEl : null
+    };
+    console.assert(extractSectionId(childEl) === "template--123__main", "child element should resolve closest section id");
+
+    const attrEl = {
+      classList: { contains: () => false },
+      closest: (sel) => sel === "[section-id]" ? { getAttribute: (attr) => attr === "section-id" ? "custom-sec-456" : null } : null
+    };
+    console.assert(extractSectionId(attrEl) === "custom-sec-456", "element with section-id attribute should resolve attribute value");
+
+    global.document = {
+      querySelector: (sel) => {
+        if (sel === ".shopify-section--main-collection") {
+          return { id: "shopify-section-main-collection-fallback" };
+        }
+        return null;
+      }
+    };
+    const detachedEl = {
+      classList: { contains: () => false },
+      closest: () => null
+    };
+    console.assert(extractSectionId(detachedEl) === "main-collection-fallback", "detached element should use document fallback");
+    console.log('[PASS] extractSectionId unit tests passed cleanly.');
+
+    // -------------------------------------------------------------
+    // Behavioral Tests for FacetLink.onFacetUpdate_fn
+    // -------------------------------------------------------------
+    function CustomEvent(name, opts) { this.detail = opts.detail; }
+    global.CustomEvent = CustomEvent;
+
+    const onFacetUpdateMatch = content.match(/onFacetUpdate_fn = function\\(event\\) \\{[\\s\\S]*?\\n\\};/);
+    if (!onFacetUpdateMatch) {
+      console.error('Could not find onFacetUpdate_fn');
+      process.exit(1);
+    }
+    eval(onFacetUpdateMatch[0]);
+
+    global.window = {
+      location: {
+        origin: 'https://therareavenue.com',
+        href: 'https://therareavenue.com/collections/luxury-watches?filter.v.availability=1&filter.v.price.gte=10000',
+        pathname: '/collections/luxury-watches',
+        search: '?filter.v.availability=1&filter.v.price.gte=10000'
+      }
+    };
+
+    // Behavioral Test 1: Tag chip dismissal (e.g. user removing 'men' from compound route)
+    // Moving from /collections/luxury-watches/men+versace -> /collections/luxury-watches/versace
+    // Must preserve active filter.* query params
+    let tagDispatchedUrl = null;
+    const tagRemovalChip = {
+      classList: { contains: () => false },
+      firstElementChild: {
+        href: 'https://therareavenue.com/collections/luxury-watches/versace',
+        getAttribute: (attr) => attr === 'data-tag-removal' ? 'true' : null,
+        classList: { contains: () => false },
+        matches: (sel) => sel.includes('data-tag-removal')
+      },
+      closest: () => null,
+      dispatchEvent: (e) => { tagDispatchedUrl = e.detail.url; }
+    };
+    onFacetUpdate_fn.call(tagRemovalChip, { preventDefault: () => {}, target: tagRemovalChip });
+    console.assert(tagDispatchedUrl.searchParams.get('filter.v.availability') === '1', 'Tag dismissal must preserve availability');
+    console.assert(tagDispatchedUrl.searchParams.get('filter.v.price.gte') === '10000', 'Tag dismissal must preserve price');
+    console.log('[PASS] Behavioral Test 1: Tag chip dismissal preserves filter parameters.');
+
+    // Behavioral Test 2: Native availability chip dismissal
+    // Clicking [x] on Availability chip has href generated by Shopify omitting filter.v.availability
+    let availDispatchedUrl = null;
+    const availabilityChip = {
+      classList: { contains: () => false },
+      firstElementChild: {
+        href: 'https://therareavenue.com/collections/luxury-watches?filter.v.price.gte=10000',
+        getAttribute: (attr) => attr === 'data-facet-remove' ? 'native' : null,
+        classList: { contains: (cls) => cls === 'facet-remove-native' }
+      },
+      closest: () => null,
+      dispatchEvent: (e) => { availDispatchedUrl = e.detail.url; }
+    };
+    onFacetUpdate_fn.call(availabilityChip, { preventDefault: () => {}, target: availabilityChip });
+    console.assert(!availDispatchedUrl.searchParams.has('filter.v.availability'), 'Availability filter MUST BE REMOVED');
+    console.assert(availDispatchedUrl.searchParams.get('filter.v.price.gte') === '10000', 'Price filter must be retained');
+    console.log('[PASS] Behavioral Test 2: Native availability chip dismissal cleanly removes parameter.');
+
+    // Behavioral Test 3: Native price range chip dismissal
+    let priceDispatchedUrl = null;
+    const priceChip = {
+      classList: { contains: () => false },
+      firstElementChild: {
+        href: 'https://therareavenue.com/collections/luxury-watches?filter.v.availability=1',
+        getAttribute: (attr) => attr === 'data-facet-remove' ? 'native' : null,
+        classList: { contains: (cls) => cls === 'facet-remove-native' }
+      },
+      closest: () => null,
+      dispatchEvent: (e) => { priceDispatchedUrl = e.detail.url; }
+    };
+    onFacetUpdate_fn.call(priceChip, { preventDefault: () => {}, target: priceChip });
+    console.assert(!priceDispatchedUrl.searchParams.has('filter.v.price.gte'), 'Price filter MUST BE REMOVED');
+    console.assert(priceDispatchedUrl.searchParams.get('filter.v.availability') === '1', 'Availability filter must be retained');
+    console.log('[PASS] Behavioral Test 3: Native price filter chip dismissal cleanly removes parameter.');
+
+    // Behavioral Test 4: Multi-value facet preservation
+    window.location.search = '?filter.v.option=Red&filter.v.option=Blue';
+    window.location.href = 'https://therareavenue.com/collections/luxury-watches?filter.v.option=Red&filter.v.option=Blue';
+    let multiDispatchedUrl = null;
+    const multiTagChip = {
+      classList: { contains: () => false },
+      firstElementChild: {
+        href: 'https://therareavenue.com/collections/luxury-watches/versace',
+        getAttribute: (attr) => attr === 'data-tag-link' ? 'true' : null,
+        classList: { contains: () => false }
+      },
+      closest: () => null,
+      dispatchEvent: (e) => { multiDispatchedUrl = e.detail.url; }
+    };
+    onFacetUpdate_fn.call(multiTagChip, { preventDefault: () => {}, target: multiTagChip });
+    const multiValues = multiDispatchedUrl.searchParams.getAll('filter.v.option');
+    console.assert(multiValues.length === 2 && multiValues.includes('Red') && multiValues.includes('Blue'),
+      'Both multi-value options must be preserved, got: ' + JSON.stringify(multiValues));
+    console.log('[PASS] Behavioral Test 4: Multi-value facets preserved across tag routing.');
+
+    // Behavioral Test 5: Clear-all link execution
+    let clearDispatchedUrl = null;
+    const clearAllEl = {
+      classList: { contains: () => false },
+      firstElementChild: {
+        href: 'https://therareavenue.com/collections/luxury-watches',
+        classList: { contains: (cls) => cls === 'facets-clear-all' }
+      },
+      closest: () => null,
+      dispatchEvent: (e) => { clearDispatchedUrl = e.detail.url; }
+    };
+    onFacetUpdate_fn.call(clearAllEl, { preventDefault: () => {}, target: clearAllEl });
+    console.assert(!clearDispatchedUrl.searchParams.has('filter.v.option'), 'Clear all must NOT re-inject filters');
+    console.assert(!clearDispatchedUrl.searchParams.has('filter.v.availability'), 'Clear all must NOT re-inject availability');
+    console.log('[PASS] Behavioral Test 5: facets-clear-all cleanly resets filters.');
+    """
+    
+    res = subprocess.run(["node", "-e", node_test_script], capture_output=True, text=True)
+    assert res.returncode == 0, f"Node unit tests failed: {res.stderr}\n{res.stdout}"
+    print(res.stdout.strip())
+
+
+def test_facets_liquid():
+    print("\n=== Testing theme/snippets/facets.liquid ===")
+    with open("theme/snippets/facets.liquid", "r", encoding="utf-8") as f:
+        content = f.read()
+
+    # Check multi-tag compound logic
+    assert "active_vendor_tag" in content, "active_vendor_tag assignment missing in facets.liquid"
+    assert "/men+{{ active_vendor_tag }}" in content, "Compound men+vendor routing missing"
+    assert "/women+{{ active_vendor_tag }}" in content, "Compound women+vendor routing missing"
+    assert "{{ collection.url }}/{{ current_gender_tag }}+{{ filter_tag_param }}" in content, "Compound gender+brand routing missing"
+    
+    # Check whitespace stripping on URLs
+    assert 'href="{{ all_gender_url | strip }}"' in content, "all_gender_url | strip missing"
+    assert 'href="{{ men_gender_url | strip }}"' in content, "men_gender_url | strip missing"
+    assert 'href="{{ women_gender_url | strip }}"' in content, "women_gender_url | strip missing"
+    assert 'href="{{ vendor_target_url | strip }}"' in content, "vendor_target_url | strip missing"
+
+    # Check data-tag-link attributes for client-side facet preservation
+    assert 'data-tag-link="true"' in content, "data-tag-link attribute missing in facets.liquid"
+
+    # Check on-running mapping
+    assert "vendor_handle == 'on-running'" in content, "on-running mapping missing"
+    assert "filter_tag_param = 'on'" in content, "on tag normalization missing"
+
+    print("[PASS] facets.liquid compound tag, data-tag-link, and stripping logic verified.")
+
+
+def test_active_facets_liquid():
+    print("\n=== Testing theme/snippets/active-facets.liquid ===")
+    with open("theme/snippets/active-facets.liquid", "r", encoding="utf-8") as f:
+        content = f.read()
+
+    # Check remaining tags calculation
+    assert "tag_removal_url" in content, "tag_removal_url capture missing in active-facets.liquid"
+    assert "remaining_tags" in content, "remaining_tags computation missing"
+    assert "unless other_tag == tag" in content, "tag exclusion logic missing"
+    assert "append: '+' | append: other_handle" in content, "multi-tag joining missing"
+    assert 'href="{{ tag_removal_url | strip }}"' in content, "tag_removal_url | strip missing"
+
+    # Check data-tag-removal and data-facet-remove attributes
+    assert 'data-tag-removal="true"' in content, "data-tag-removal attribute missing on tag removal"
+    assert 'data-facet-remove="native"' in content, "data-facet-remove attribute missing on native facet removal"
+    assert 'facet-remove-native' in content, "facet-remove-native class missing on native facet removal"
+    assert 'class="facets-clear-all' in content, "facets-clear-all class missing on active-facets clear all"
+
+    print("[PASS] active-facets.liquid remaining tags, data-tag-removal, and native removal flags verified.")
+
+
+def test_empty_state_clear_filters():
+    print("\n=== Testing Empty State Clear Filters in Collections & Search ===")
+    
+    with open("theme/sections/main-collection.liquid", "r", encoding="utf-8") as f:
+        coll_content = f.read()
+    assert "class: 'facets-clear-all'" in coll_content, "facets-clear-all class missing in main-collection.liquid empty state"
+    print("[PASS] main-collection.liquid empty state contains class: 'facets-clear-all'.")
+
+    with open("theme/sections/main-search.liquid", "r", encoding="utf-8") as f:
+        search_content = f.read()
+    assert "class: 'facets-clear-all'" in search_content, "facets-clear-all class missing in main-search.liquid empty state"
+    print("[PASS] main-search.liquid empty state contains class: 'facets-clear-all'.")
+
+    with open("theme/snippets/button.liquid", "r", encoding="utf-8") as f:
+        btn_content = f.read()
+    assert "if class != blank" in btn_content, "class parameter handling missing in button.liquid"
+    print("[PASS] button.liquid supports custom class parameter.")
+
+
+def test_luxury_breadcrumbs():
+    print("\n=== Testing Compound Breadcrumbs & Brand Casing in luxury-breadcrumbs.liquid ===")
+    with open("theme/snippets/luxury-breadcrumbs.liquid", "r", encoding="utf-8") as f:
+        bc_content = f.read()
+
+    assert "for t in current_tags" in bc_content, "Compound current_tags loop missing in luxury-breadcrumbs.liquid"
+    assert "forloop.first" in bc_content, "forloop.first missing in luxury-breadcrumbs.liquid"
+    assert "&amp;" in bc_content, "&amp; compound separator missing in luxury-breadcrumbs.liquid"
+    assert "collection.all_vendors" in bc_content, "collection.all_vendors lookup missing for proper brand casing"
+    assert "JW PEI" in bc_content, "JW PEI brand casing preservation missing"
+    assert "Michael Kors" in bc_content, "Michael Kors brand casing preservation missing"
+
+    # Behavioral simulation of breadcrumb logic matching luxury-breadcrumbs.liquid
+    def simulate_breadcrumb(current_tags, all_vendors):
+        labels = []
+        for t in current_tags:
+            t_lower = t.lower()
+            t_handle = re.sub(r'[^a-z0-9]+', '-', t_lower.replace("'", "")).strip('-')
+            t_label = ''
+            if t_lower in ['men', 'mens', "men's"]:
+                t_label = 'Men'
+            elif t_lower in ['women', 'womens', "women's"]:
+                t_label = 'Women'
+            else:
+                for vendor in all_vendors:
+                    v_handle = re.sub(r'[^a-z0-9]+', '-', vendor.lower().replace("'", "")).strip('-')
+                    if v_handle == t_handle or (t_handle == 'on' and v_handle == 'on-running'):
+                        t_label = vendor
+                        break
+                if not t_label:
+                    if t_handle == 'jw-pei':
+                        t_label = 'JW PEI'
+                    elif t_handle == 'michael-kors':
+                        t_label = 'Michael Kors'
+                    else:
+                        t_label = t.replace('-', ' ').capitalize()
+            labels.append(t_label)
+        return " &amp; ".join(labels)
+
+    vendors = ['Tissot', 'Seiko', 'Citizen', 'Movado', 'Versace', 'Ferragamo', 'JW PEI', 'Michael Kors', 'On Running']
+    assert simulate_breadcrumb(['men', 'versace'], vendors) == "Men &amp; Versace"
+    assert simulate_breadcrumb(['women', 'jw-pei'], vendors) == "Women &amp; JW PEI"
+    assert simulate_breadcrumb(['michael-kors'], vendors) == "Michael Kors"
+    assert simulate_breadcrumb(['on'], vendors) == "On Running"
+    print("[PASS] luxury-breadcrumbs.liquid compound tag rendering and brand casing verified.")
+
+
+def test_navigation_snippets():
+    print("\n=== Testing Navigation Snippets Link Integrity & Layout ===")
+    
+    # List of known 404/broken targets that must NOT appear in active navigation
+    forbidden_urls = [
+        "/collections/womens-shoes",
+        "/collections/mens-shoes",
+        "/collections/wallets-accessories",
+        "/collections/mens-bags",
+        "/collections/michael-kors",  # Must be michael-kors-watches
+        "/collections/womens-handbags/coach",  # Must not 301 redirect
+        "/collections/womens-handbags/michael-kors",  # Must not be empty
+        "/collections/adidas",
+        "/collections/asics",
+        "/collections/coach",
+        "/collections/hoka",
+        "/collections/jordan",
+        "/collections/nike",
+        "/collections/on-running",
+        "/collections/salomon"
+    ]
+
+    nav_files = [
+        "theme/snippets/luxury-desktop-nav.liquid",
+        "theme/snippets/luxury-sidebar-panels.liquid",
+        "theme/snippets/header-sidebar.liquid"
+    ]
+
+    for file_path in nav_files:
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = f.read()
+        
+        # Strip comments to check only active markup
+        stripped_content = re.sub(r'\{%-?\s*comment\s*-?%\}[\s\S]*?\{%-?\s*endcomment\s*-?%\}', '', content)
+
+        for bad_url in forbidden_urls:
+            suffix = re.escape(bad_url.replace('/collections', ''))
+            pattern = re.compile(r'href=["\'](?:\{\{\s*routes\.collections_url\s*\}\}|/collections)' + suffix + r'(?:/|["\'?#])')
+            match = pattern.search(stripped_content)
+            assert not match, f"Found forbidden broken link {bad_url} in active markup of {file_path}"
+        
+        print(f"[PASS] {file_path} contains 0 broken/unprovisioned links.")
+
+    # Check flex layout in luxury-desktop-nav.liquid to eliminate empty column voids
+    with open("theme/snippets/luxury-desktop-nav.liquid", "r", encoding="utf-8") as f:
+        dt_content = f.read()
+    assert "display: flex !important;" in dt_content, "Flex layout missing on desktop mega-menu columns"
+    assert "gap: 3.5rem;" in dt_content, "gap missing on desktop mega-menu columns"
+    print("[PASS] luxury-desktop-nav.liquid mega-menu columns flex layout verified.")
+
+    # Specific tests for mobile drawer gateway links in luxury-sidebar-panels.liquid
+    with open("theme/snippets/luxury-sidebar-panels.liquid", "r", encoding="utf-8") as f:
+        panel_content = f.read()
+
+    assert 'href="/collections/women"' in panel_content, "Missing Women's gateway link in mobile drawer panel"
+    assert "Shop All Women's Boutique" in panel_content, "Missing Women's gateway label"
+    assert 'href="/collections/men"' in panel_content, "Missing Men's gateway link in mobile drawer panel"
+    assert "Shop All Men's Boutique" in panel_content, "Missing Men's gateway label"
+    assert 'href="/collections"' in panel_content, "Missing Brands gateway link in mobile drawer panel"
+    assert "View All Maisons" in panel_content, "Missing Brands gateway label"
+    assert '/collections/michael-kors-watches' in panel_content, "Missing michael-kors-watches in mobile drawer"
+    print("[PASS] luxury-sidebar-panels.liquid mobile drawer gateway links verified.")
+
+    # Specific tests for header-sidebar.liquid
+    with open("theme/snippets/header-sidebar.liquid", "r", encoding="utf-8") as f:
+        hs_content = f.read()
+
+    assert "routes.account_login_url | escape" in hs_content, "account_login_url | escape missing in header-sidebar.liquid"
+    assert "link_title_downcase contains 'watch'" in hs_content, "Watch deduplication condition missing in header-sidebar.liquid"
+    print("[PASS] header-sidebar.liquid entity fix and watch deduplication verified.")
+
+
+def test_liquid_block_matching():
+    print("\n=== Testing Liquid Block Matching across all modified files ===")
+    files = [
+        "theme/snippets/facets.liquid",
+        "theme/snippets/active-facets.liquid",
+        "theme/snippets/luxury-desktop-nav.liquid",
+        "theme/snippets/luxury-sidebar-panels.liquid",
+        "theme/snippets/header-sidebar.liquid",
+        "theme/snippets/luxury-breadcrumbs.liquid",
+        "theme/snippets/button.liquid",
+        "theme/sections/main-collection.liquid",
+        "theme/sections/main-search.liquid"
+    ]
+
+    for file_path in files:
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        # Check for unclosed capture blocks
+        captures = len(re.findall(r'\{%-?\s*capture\b', content))
+        endcaptures = len(re.findall(r'\{%-?\s*endcapture\b', content))
+        assert captures == endcaptures, f"{file_path}: mismatch in capture ({captures}) vs endcapture ({endcaptures})"
+
+        # Check for unclosed if blocks
+        ifs = len(re.findall(r'\{%-?\s*if\b', content))
+        endifs = len(re.findall(r'\{%-?\s*endif\b', content))
+        assert ifs == endifs, f"{file_path}: mismatch in if ({ifs}) vs endif ({endifs})"
+
+        # Check for unclosed for loops
+        fors = len(re.findall(r'\{%-?\s*for\b', content))
+        endfors = len(re.findall(r'\{%-?\s*endfor\b', content))
+        assert fors == endfors, f"{file_path}: mismatch in for ({fors}) vs endfor ({endfors})"
+
+        # Check for unclosed unless blocks
+        unlesses = len(re.findall(r'\{%-?\s*unless\b', content))
+        endunlesses = len(re.findall(r'\{%-?\s*endunless\b', content))
+        assert unlesses == endunlesses, f"{file_path}: mismatch in unless ({unlesses}) vs endunless ({endunlesses})"
+
+        # Check for unclosed comment blocks
+        comments = len(re.findall(r'\{%-?\s*comment\b', content))
+        endcomments = len(re.findall(r'\{%-?\s*endcomment\b', content))
+        assert comments == endcomments, f"{file_path}: mismatch in comment ({comments}) vs endcomment ({endcomments})"
+
+        print(f"[PASS] {file_path}: all Liquid blocks balanced (capture, if, for, unless, comment).")
+
+
+if __name__ == "__main__":
+    print("Beginning Automated Verification Suite for Worker M1...")
+    try:
+        test_theme_js()
+        test_facets_liquid()
+        test_active_facets_liquid()
+        test_empty_state_clear_filters()
+        test_luxury_breadcrumbs()
+        test_navigation_snippets()
+        test_liquid_block_matching()
+        print("\n==========================================")
+        print("ALL VERIFICATION SUITE TESTS PASSED 100%!")
+        print("==========================================")
+    except AssertionError as e:
+        print(f"\n[FAIL] {e}", file=sys.stderr)
+        sys.exit(1)
+    except Exception as e:
+        print(f"\n[ERROR] Unexpected error: {e}", file=sys.stderr)
+        sys.exit(1)

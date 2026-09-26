@@ -159,7 +159,7 @@
                               {%- capture clean_search_url -%}{{ routes.search_url }}?q={{ search.terms }}{%- endcapture -%}
 
                               <facet-link>
-                                {%- render 'button', href: clean_search_url, content: button_content -%}
+                                {%- render 'button', href: clean_search_url, content: button_content, class: 'facets-clear-all' -%}
                               </facet-link>
                             </div>
                           </div>

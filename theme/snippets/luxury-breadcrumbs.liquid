@@ -17,7 +17,7 @@
           <a href="/collections/women" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Women</a>
         </li>
         <li class="breadcrumb__list-item">
-          <a href="/collections/womens-watches" aria-current="page" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Luxury Watches</a>
+          <a href="/collections/womens-watches" {% unless current_tags.size > 0 %}aria-current="page"{% endunless %} class="smallcaps {% unless show_image %}link-faded{% endunless %}">Luxury Watches</a>
         </li>
 
       {%- elsif c_handle == 'womens-handbags' -%}
@@ -25,7 +25,7 @@
           <a href="/collections/women" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Women</a>
         </li>
         <li class="breadcrumb__list-item">
-          <a href="/collections/womens-handbags" aria-current="page" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Designer Bags</a>
+          <a href="/collections/womens-handbags" {% unless current_tags.size > 0 %}aria-current="page"{% endunless %} class="smallcaps {% unless show_image %}link-faded{% endunless %}">Designer Bags</a>
         </li>
 
       {%- elsif c_handle == 'womens-shoes' -%}
@@ -33,7 +33,7 @@
           <a href="/collections/women" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Women</a>
         </li>
         <li class="breadcrumb__list-item">
-          <a href="/collections/womens-shoes" aria-current="page" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Premium Footwear</a>
+          <a href="/collections/womens-shoes" {% unless current_tags.size > 0 %}aria-current="page"{% endunless %} class="smallcaps {% unless show_image %}link-faded{% endunless %}">Premium Footwear</a>
         </li>
 
       {%- elsif c_handle == 'mens-watches' -%}
@@ -41,7 +41,7 @@
           <a href="/collections/men" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Men</a>
         </li>
         <li class="breadcrumb__list-item">
-          <a href="/collections/mens-watches" aria-current="page" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Luxury Watches</a>
+          <a href="/collections/mens-watches" {% unless current_tags.size > 0 %}aria-current="page"{% endunless %} class="smallcaps {% unless show_image %}link-faded{% endunless %}">Luxury Watches</a>
         </li>
 
       {%- elsif c_handle == 'mens-shoes' -%}
@@ -49,7 +49,7 @@
           <a href="/collections/men" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Men</a>
         </li>
         <li class="breadcrumb__list-item">
-          <a href="/collections/mens-shoes" aria-current="page" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Premium Footwear</a>
+          <a href="/collections/mens-shoes" {% unless current_tags.size > 0 %}aria-current="page"{% endunless %} class="smallcaps {% unless show_image %}link-faded{% endunless %}">Premium Footwear</a>
         </li>
 
       {%- elsif c_handle == 'mens-bags' -%}
@@ -57,7 +57,7 @@
           <a href="/collections/men" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Men</a>
         </li>
         <li class="breadcrumb__list-item">
-          <a href="/collections/mens-bags" aria-current="page" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Bags & Luggage</a>
+          <a href="/collections/mens-bags" {% unless current_tags.size > 0 %}aria-current="page"{% endunless %} class="smallcaps {% unless show_image %}link-faded{% endunless %}">Bags & Luggage</a>
         </li>
 
       {%- elsif c_handle == 'tissot' or c_handle == 'seiko' or c_handle == 'citizen' or c_handle == 'movado' or c_handle == 'versace' or c_handle == 'ferragamo' or c_handle == 'jw-pei' or c_handle == 'coach' or c_handle == 'michael-kors' or c_handle == 'salomon' or c_handle == 'on-running' or c_handle == 'hoka' or c_handle == 'nike' or c_handle == 'jordan' or c_handle == 'adidas' or c_handle == 'asics' or c_handle == 'michael-kors-watches' -%}
@@ -65,7 +65,7 @@
           <a href="/collections" class="smallcaps {% unless show_image %}link-faded{% endunless %}">Brands</a>
         </li>
         <li class="breadcrumb__list-item">
-          <a href="{{ collection.url }}" aria-current="page" class="smallcaps {% unless show_image %}link-faded{% endunless %}">{{ collection.title }}</a>
+          <a href="{{ collection.url }}" {% unless current_tags.size > 0 %}aria-current="page"{% endunless %} class="smallcaps {% unless show_image %}link-faded{% endunless %}">{{ collection.title }}</a>
         </li>
 
       {%- else -%}
@@ -73,7 +73,44 @@
           <a href="{{ routes.all_products_collection_url }}" class="smallcaps {% unless show_image %}link-faded{% endunless %}">{{ 'general.breadcrumb.shop' | t | default: 'Shop' }}</a>
         </li>
         <li class="breadcrumb__list-item">
-          <a href="{{ collection.url }}" aria-current="page" class="smallcaps {% unless show_image %}link-faded{% endunless %}">{{ collection.title }}</a>
+          <a href="{{ collection.url }}" {% unless current_tags.size > 0 %}aria-current="page"{% endunless %} class="smallcaps {% unless show_image %}link-faded{% endunless %}">{{ collection.title }}</a>
+        </li>
+      {%- endif -%}
+
+      {%- if current_tags.size > 0 -%}
+        <li class="breadcrumb__list-item">
+          <span aria-current="page" class="smallcaps" style="color: rgb(var(--text-color)); font-weight: 500;">
+            {%- for t in current_tags -%}
+              {%- liquid
+                assign t_lower = t | downcase
+                assign t_handle = t | handleize
+                assign t_label = ''
+                if t_lower == 'men' or t_lower == 'mens' or t_lower == "men's"
+                  assign t_label = 'Men'
+                elsif t_lower == 'women' or t_lower == 'womens' or t_lower == "women's"
+                  assign t_label = 'Women'
+                else
+                  for vendor in collection.all_vendors
+                    assign v_handle = vendor | handleize
+                    if v_handle == t_handle or t_handle == 'on' and v_handle == 'on-running'
+                      assign t_label = vendor
+                      break
+                    endif
+                  endfor
+                  if t_label == ''
+                    if t_handle == 'jw-pei'
+                      assign t_label = 'JW PEI'
+                    elsif t_handle == 'michael-kors'
+                      assign t_label = 'Michael Kors'
+                    else
+                      assign t_label = t | replace: '-', ' ' | capitalize
+                    endif
+                  endif
+                endif
+              -%}
+              {%- if forloop.first -%}{{- t_label -}}{%- else -%} &amp; {{- t_label -}}{%- endif -%}
+            {%- endfor -%}
+          </span>
         </li>
       {%- endif -%}
 
