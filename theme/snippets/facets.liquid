@@ -52,6 +52,146 @@ Supported variables
       {%- endif -%}
 
       {%- if show_filters -%}
+        {%- liquid
+          assign has_native_vendor_filter = false
+          for f in results.filters
+            if f.param_name == 'filter.p.vendor'
+              assign has_native_vendor_filter = true
+            endif
+          endfor
+
+          assign show_gender_filter = false
+          if request.page_type == 'collection'
+            if collection.handle contains 'all' or collection.handle contains 'luxury-watches'
+              assign show_gender_filter = true
+            elsif collection.handle != 'womens-watches' and collection.handle != 'mens-watches' and collection.handle != 'womens-handbags' and collection.handle != 'womens-shoes' and collection.handle != 'mens-shoes' and collection.handle != 'mens-bags' and collection.handle != 'women' and collection.handle != 'men'
+              assign show_gender_filter = true
+            endif
+          endif
+        -%}
+
+        {%- if show_gender_filter -%}
+          {%- liquid
+            assign is_men_active = false
+            assign is_women_active = false
+            for tag in current_tags
+              assign tag_lower = tag | downcase
+              if tag_lower == 'men' or tag_lower == 'mens' or tag_lower == "men's"
+                assign is_men_active = true
+              elsif tag_lower == 'women' or tag_lower == 'womens' or tag_lower == "women's"
+                assign is_women_active = true
+              endif
+            endfor
+
+            assign is_all_gender_active = false
+            if is_men_active == false and is_women_active == false
+              assign is_all_gender_active = true
+            endif
+          -%}
+
+          {%- capture gender_filter_content -%}
+            <div class="v-stack gap-2.5">
+              {%- capture all_gender_url -%}{{ collection.url }}{% if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif %}{%- endcapture -%}
+              <div class="checkbox-control">
+                <facet-link class="block w-full">
+                  <a href="{{ all_gender_url }}" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
+                    <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
+                      <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if is_all_gender_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
+                      <span class="{% if is_all_gender_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">All Pieces</span>
+                    </span>
+                  </a>
+                </facet-link>
+              </div>
+
+              {%- capture men_gender_url -%}
+                {%- if is_men_active -%}{{ collection.url }}{%- else -%}{{ collection.url }}/men{%- endif -%}
+                {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
+              {%- endcapture -%}
+              <div class="checkbox-control">
+                <facet-link class="block w-full">
+                  <a href="{{ men_gender_url }}" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
+                    <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
+                      <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if is_men_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
+                      <span class="{% if is_men_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Men's</span>
+                    </span>
+                  </a>
+                </facet-link>
+              </div>
+
+              {%- capture women_gender_url -%}
+                {%- if is_women_active -%}{{ collection.url }}{%- else -%}{{ collection.url }}/women{%- endif -%}
+                {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
+              {%- endcapture -%}
+              <div class="checkbox-control">
+                <facet-link class="block w-full">
+                  <a href="{{ women_gender_url }}" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
+                    <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
+                      <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if is_women_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
+                      <span class="{% if is_women_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Women's</span>
+                    </span>
+                  </a>
+                </facet-link>
+              </div>
+            </div>
+          {%- endcapture -%}
+
+          {%- render 'accordion', title: 'Gender', content: gender_filter_content, open: open_filters_by_default, show_arrow: true -%}
+        {%- endif -%}
+
+        {%- liquid
+          assign show_brand_filter = false
+          if request.page_type == 'collection' and collection.all_vendors.size > 1 and has_native_vendor_filter == false
+            assign show_brand_filter = true
+          endif
+        -%}
+
+        {%- if show_brand_filter -%}
+          {%- capture brand_filter_content -%}
+            <div class="v-stack gap-2.5">
+              {%- for vendor in collection.all_vendors -%}
+                {%- liquid
+                  assign vendor_handle = vendor | handleize
+                  assign is_vendor_active = false
+                  for tag in current_tags
+                    assign tag_handle = tag | handleize
+                    if tag_handle == vendor_handle
+                      assign is_vendor_active = true
+                      break
+                    endif
+                  endfor
+
+                  assign filter_tag_param = vendor_handle
+                  if vendor_handle == 'on-running'
+                    assign filter_tag_param = 'on'
+                  endif
+                -%}
+
+                {%- capture vendor_target_url -%}
+                  {%- if is_vendor_active -%}
+                    {{ collection.url }}
+                  {%- else -%}
+                    {{ collection.url }}/{{ filter_tag_param }}
+                  {%- endif -%}
+                  {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
+                {%- endcapture -%}
+
+                <div class="checkbox-control">
+                  <facet-link class="block w-full">
+                    <a href="{{ vendor_target_url }}" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
+                      <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
+                        <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if is_vendor_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
+                        <span class="{% if is_vendor_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">{{ vendor }}</span>
+                      </span>
+                    </a>
+                  </facet-link>
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- endcapture -%}
+
+          {%- render 'accordion', title: 'Brand', content: brand_filter_content, open: open_filters_by_default, show_arrow: true -%}
+        {%- endif -%}
+
         {%- for filter in results.filters -%}
           {%- capture filter_content -%}
             {%- if filter.type == 'boolean' or filter.param_name == 'filter.v.availability' -%}

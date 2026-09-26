@@ -11,7 +11,11 @@
     endif
   endfor
 
-  if section.settings.quick_links_menu.links.size > 0 or section.settings.show_filters and collection.filters.size > 0
+  if current_tags.size > 0
+    assign active_values_count = active_values_count | plus: current_tags.size
+  endif
+
+  if section.settings.quick_links_menu.links.size > 0 or section.settings.show_filters and collection.filters.size > 0 or section.settings.show_filters and collection.all_vendors.size > 1 or section.settings.show_filters and collection.all_products_count > 0
     assign show_filters = true
   else
     assign show_filters = false

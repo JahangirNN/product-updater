@@ -134,7 +134,7 @@
 
             {%- for link in menu.links -%}
               {%- assign link_title_downcase = link.title | strip | downcase -%}
-              {%- unless link_title_downcase == 'women' or link_title_downcase == 'men' or link_title_downcase == 'designers' or link_title_downcase contains 'watch' -%}
+              {%- unless link_title_downcase == 'women' or link_title_downcase == 'men' or link_title_downcase == 'designers' or link_title_downcase == 'brands' or link_title_downcase contains 'watch' -%}
                 {% liquid
                   assign mega_menu_block = ''
 

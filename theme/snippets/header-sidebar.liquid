@@ -63,15 +63,15 @@ therefore using a different structure for the Shadow DOM template
           </button>
         </li>
         <li>
-          <button type="button" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" aria-controls="header-panel-designers" aria-expanded="false">
-            Designers
+          <button type="button" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" aria-controls="header-panel-brands" aria-expanded="false">
+            Brands
             {%- render 'icon' with 'chevron-right', width: 12, direction_aware: true -%}
           </button>
         </li>
 
         {%- for link in menu.links -%}
           {%- assign link_title_downcase = link.title | strip | downcase -%}
-          {%- unless link_title_downcase == 'women' or link_title_downcase == 'men' or link_title_downcase == 'designers' -%}
+          {%- unless link_title_downcase == 'women' or link_title_downcase == 'men' or link_title_downcase == 'designers' or link_title_downcase == 'brands' -%}
             <li>
               {%- if link.links.size > 0 -%}
                 <button type="button" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" aria-controls="header-panel-{{ forloop.index }}" aria-expanded="false">
@@ -139,7 +139,7 @@ therefore using a different structure for the Shadow DOM template
 
       {%- for link in menu.links -%}
         {%- assign link_title_downcase = link.title | strip | downcase -%}
-        {%- unless link_title_downcase == 'women' or link_title_downcase == 'men' or link_title_downcase == 'designers' -%}
+        {%- unless link_title_downcase == 'women' or link_title_downcase == 'men' or link_title_downcase == 'designers' or link_title_downcase == 'brands' -%}
           {%- if link.links.size > 0 -%}
             <div id="header-panel-{{ forloop.index }}" class="header-sidebar__sub-panel" hidden>
               <button type="button" class="header-sidebar__back-button link-faded {% if show_dividers %}is-divided{% endif %} text-with-icon {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %} md:hidden" data-action="close-panel">

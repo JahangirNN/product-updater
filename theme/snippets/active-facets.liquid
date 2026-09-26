@@ -16,6 +16,46 @@ Supported variables
 {%- assign active_values_count = 0 -%}
 
 {%- capture active_facets -%}
+  {%- comment -%} Tag-based active facets (Gender & Brand) {%- endcomment -%}
+  {%- if request.page_type == 'collection' and current_tags.size > 0 -%}
+    {%- for tag in current_tags -%}
+      {%- liquid
+        assign tag_lower = tag | downcase
+        if tag_lower == 'men' or tag_lower == 'mens' or tag_lower == "men's"
+          assign tag_label = "Gender: Men's"
+        elsif tag_lower == 'women' or tag_lower == 'womens' or tag_lower == "women's"
+          assign tag_label = "Gender: Women's"
+        else
+          assign is_vendor_tag = false
+          for vendor in collection.all_vendors
+            assign v_handle = vendor | handleize
+            assign t_handle = tag | handleize
+            if v_handle == t_handle or t_handle == 'on' and v_handle == 'on-running'
+              assign is_vendor_tag = true
+              assign tag_label = "Brand: " | append: vendor
+              break
+            endif
+          endfor
+          if is_vendor_tag == false
+            assign tag_label = tag | capitalize
+          endif
+        endif
+      -%}
+
+      <div class="removable-facet">
+        <facet-link>
+          <a href="{{ collection.url }}{% if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif %}" class="tap-area link-faded" aria-label="{{ 'collection.faceting.remove_filter' | t: name: tag_label }}" data-no-instant>
+            {%- render 'icon' with 'close', width: 10 -%}
+          </a>
+        </facet-link>
+
+        <span class="text-subdued">{{ tag_label }}</span>
+      </div>
+
+      {%- assign active_values_count = active_values_count | plus: 1 -%}
+    {%- endfor -%}
+  {%- endif -%}
+
   {%- for filter in results.filters -%}
     {%- if filter.type == 'price_range' -%}
       {%- if filter.max_value.value != blank or filter.min_value.value != blank -%}
