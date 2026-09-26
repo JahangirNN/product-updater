@@ -84,18 +84,38 @@ def resolve_authentic_vendor(prod: Dict[str, Any]) -> str:
 
 
 def resolve_gender(prod: Dict[str, Any]) -> str:
-    """Classify product gender into Men, Women, or Unisex."""
-    raw_g = str(prod.get("gender") or (prod.get("specifications") or {}).get("Gender") or "").lower()
-    title = str(prod.get("title", "")).lower()
-    url = str(prod.get("source_url", "")).lower()
-    text = f"{raw_g} {title} {url}"
+    """Classify product gender into Men, Women, or Unisex with title-dominant priority."""
+    title = str(prod.get("title", "")).strip().lower()
+    raw_g = str(prod.get("gender") or (prod.get("specifications") or {}).get("Gender") or "").strip().lower()
+    url = str(prod.get("source_url", "")).strip().lower()
 
-    if re.search(r"\b(women|womens|women\'s|ladies|lady)\b", text):
+    # 1. Product title is the single most authoritative customer-facing indicator
+    is_women_title = bool(re.search(r"\b(women|womens|women\'s|ladies|lady)\b", title))
+    is_men_title = bool(re.search(r"\b(men|mens|men\'s)\b", title))
+
+    if is_women_title and not is_men_title:
         return "Women"
-    elif re.search(r"\bunisex|gender inclusive\b", text):
-        return "Unisex"
-    elif re.search(r"\b(men|mens|men\'s)\b", text):
+    if is_men_title and not is_women_title:
         return "Men"
+    if re.search(r"\bunisex|gender inclusive\b", title):
+        return "Unisex"
+
+    # 2. Check structured attributes / specifications
+    if re.search(r"\b(women|womens|women\'s|ladies|lady)\b", raw_g):
+        return "Women"
+    if re.search(r"\b(men|mens|men\'s)\b", raw_g):
+        return "Men"
+    if re.search(r"\bunisex|gender inclusive\b", raw_g):
+        return "Unisex"
+
+    # 3. Fallback to URL only if title and specs are completely silent
+    if re.search(r"\b(women|womens|women\'s|ladies|lady)\b", url):
+        return "Women"
+    if re.search(r"\b(men|mens|men\'s)\b", url):
+        return "Men"
+    if re.search(r"\bunisex|gender inclusive\b", url):
+        return "Unisex"
+
     return "Women" if prod.get("source_store") == "jwpei" else "Men"
 
 
@@ -167,8 +187,10 @@ def generate_taxonomy_tags(prod: Dict[str, Any], vendor: str, product_type: str,
 
     # 2. Gender Department Tags
     if gender == "Men":
+        tags = [t for t in tags if not any(g in t.lower() for g in ["women", "ladies", "unisex"])]
         tags.extend(["Men", "Men's", "Gender:Men", "Gender:Men's"])
     elif gender == "Women":
+        tags = [t for t in tags if not any(g in t.lower() for g in ["men", "unisex"])]
         tags.extend(["Women", "Women's", "Gender:Women", "Gender:Women's", "Ladies"])
     else:
         tags.extend(["Unisex", "Gender:Unisex", "Men", "Men's", "Women", "Women's"])
