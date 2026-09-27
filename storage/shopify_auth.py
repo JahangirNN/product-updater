@@ -12,6 +12,8 @@ import subprocess
 from typing import Optional, Dict, Any, Tuple
 import httpx
 
+from storage.logger import log_shopify_error, log_shopify_warning
+
 CLI_CONFIG_PATH = os.path.expandvars(r"%APPDATA%\shopify-cli-kit-nodejs\Config\config.json")
 CONFIG_FILE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "shopify_config.json")
 DEFAULT_SHOP_DOMAIN = "hewmvw-am.myshopify.com"
@@ -27,8 +29,11 @@ def refresh_cli_session(shop_domain: str = DEFAULT_SHOP_DOMAIN) -> bool:
             text=True,
             timeout=15
         )
+        if res.returncode != 0:
+            log_shopify_warning(f"Shopify CLI token auto-refresh exited with code {res.returncode}: {res.stderr.strip()[:200]}")
         return res.returncode == 0
-    except Exception:
+    except Exception as exc:
+        log_shopify_warning(f"Shopify CLI token auto-refresh exception: {exc}")
         return False
 
 
@@ -90,7 +95,9 @@ def execute_shopify_graphql(
     if not token:
         if allow_retry and refresh_cli_session(domain):
             return execute_shopify_graphql(query, variables, shop_domain, timeout, allow_retry=False)
-        return None, {}, "No valid Shopify access token found. Please authenticate via Shopify CLI."
+        err_msg = "No valid Shopify access token found. Please authenticate via Shopify CLI."
+        log_shopify_error(err_msg)
+        return None, {}, err_msg
 
     url = f"https://{domain}/admin/api/{version}/graphql.json"
     headers = {
@@ -108,6 +115,7 @@ def execute_shopify_graphql(
             
             # Handle token expiration with transparent auto-refresh
             if resp.status_code == 401 and allow_retry:
+                log_shopify_warning(f"Shopify Admin GraphQL returned 401 Unauthorized for {domain}. Triggering CLI session auto-refresh...")
                 if refresh_cli_session(domain):
                     return execute_shopify_graphql(query, variables, shop_domain, timeout, allow_retry=False)
 
@@ -118,14 +126,21 @@ def execute_shopify_graphql(
                 errors = body.get("errors")
                 if errors:
                     err_msg = json.dumps(errors)
+                    log_shopify_error(f"Shopify Admin GraphQL returned errors: {err_msg}")
                     return data, extensions, f"GraphQL Errors: {err_msg}"
                 return data, extensions, ""
             else:
-                return None, {}, f"HTTP {resp.status_code}: {resp.text}"
+                err_msg = f"HTTP {resp.status_code}: {resp.text}"
+                log_shopify_error(f"Shopify Admin GraphQL failure: {err_msg}")
+                return None, {}, err_msg
     except (httpx.ReadTimeout, httpx.ConnectTimeout) as te:
         if allow_retry:
             time.sleep(1.0)
             return execute_shopify_graphql(query, variables, shop_domain, timeout=timeout, allow_retry=False)
-        return None, {}, f"Request Timeout: {te}"
+        err_msg = f"Request Timeout: {te}"
+        log_shopify_error(f"Shopify Admin GraphQL timeout: {err_msg}", exc=te)
+        return None, {}, err_msg
     except Exception as exc:
-        return None, {}, f"Request Exception: {exc}"
+        err_msg = f"Request Exception: {exc}"
+        log_shopify_error(f"Shopify Admin GraphQL exception: {err_msg}", exc=exc)
+        return None, {}, err_msg

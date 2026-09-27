@@ -69,6 +69,9 @@ def run_daemon_loop(
     """
     global _SHUTDOWN_REQUESTED
 
+    # Ensure logger is initialized with dedicated Shopify sink
+    init_logger()
+
     # 1. Acquire non-blocking exclusive singleton lock FIRST
     acquired, lock_handle, active_pid = acquire_daemon_lock(pid_path=pid_path)
     if not acquired:
@@ -99,6 +102,7 @@ def run_daemon_loop(
             log_info(f"Store Filter:          {store_filter}")
         log_info(f"Operational Log:       logs/freshner.log")
         log_info(f"Error Diagnostic Log:  logs/errors.log")
+        log_info(f"Shopify Error Log:     logs/shopify_errors.log")
         log_info(f"Lock File:             {pid_path}")
         log_info("=" * 72)
 

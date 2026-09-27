@@ -34,7 +34,10 @@ from storage.logger import (
     log_success,
     log_warning,
     log_error,
-    log_delta
+    log_delta,
+    log_shopify_error,
+    log_shopify_warning,
+    log_shopify_success
 )
 from storage.network import (
     create_http_client,
@@ -235,7 +238,7 @@ def poll_single_product(
                     try:
                         shopify_synced = sync_delta_to_shopify(updated_product, delta_res, forex_rate)
                     except Exception as s_err:
-                        log_error(f"Shopify live sync failed for {p_id}: {s_err}")
+                        log_shopify_error(f"Shopify live sync exception for {p_id} ({updated_product.get('title', '')[:30]}): {s_err}", exc=s_err)
                 
                 # Enqueue event for Shopify sync log & audit
                 event_entry = {

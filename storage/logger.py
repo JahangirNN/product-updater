@@ -27,14 +27,18 @@ def init_logger(
     log_dir: str = "logs",
     general_log_name: str = "freshner.log",
     error_log_name: str = "errors.log",
+    shopify_error_log_name: str = "shopify_errors.log",
     rotation_general: str = "50 MB",
     rotation_error: str = "50 MB",
+    rotation_shopify: str = "20 MB",
     retention_general: str = "14 days",
     retention_error: str = "30 days",
+    retention_shopify: str = "30 days",
     console_level: str = "INFO"
 ) -> None:
     """
-    Initialize centralized logging with dual file sinks and colorized console output.
+    Initialize centralized logging with dual file sinks, dedicated Shopify error sink,
+    and colorized console output.
     Pure functional setup. Safe to call multiple times (idempotent).
     """
     global _INITIALIZED
@@ -45,6 +49,7 @@ def init_logger(
     os.makedirs(full_log_dir, exist_ok=True)
     general_log_path = os.path.join(full_log_dir, general_log_name)
     error_log_path = os.path.join(full_log_dir, error_log_name)
+    shopify_log_path = os.path.join(full_log_dir, shopify_error_log_name)
 
     if _HAS_LOGURU and _loguru_logger is not None:
         # Remove default handler
@@ -77,7 +82,7 @@ def init_logger(
             enqueue=True
         )
 
-        # 3. Highlighted Error Isolation Sink (ERROR+ with backtrace & diagnosis)
+        # 3. Highlighted General Error Isolation Sink (ERROR+ with backtrace & diagnosis)
         error_fmt = (
             "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | {name}:{line} - {message}\n"
             "{exception}"
@@ -88,6 +93,24 @@ def init_logger(
             level="ERROR",
             rotation=rotation_error,
             retention=retention_error,
+            encoding="utf-8",
+            backtrace=True,
+            diagnose=True,
+            enqueue=True
+        )
+
+        # 4. Dedicated Shopify Error & Warning Isolation Sink (WARNING+)
+        shopify_fmt = (
+            "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | {name}:{line} - {message}\n"
+            "{exception}"
+        )
+        _loguru_logger.add(
+            shopify_log_path,
+            format=shopify_fmt,
+            level="WARNING",
+            filter=lambda record: bool(record["extra"].get("shopify")) or "shopify" in record["message"].lower(),
+            rotation=rotation_shopify,
+            retention=retention_shopify,
             encoding="utf-8",
             backtrace=True,
             diagnose=True,
@@ -112,6 +135,11 @@ def init_logger(
         fh_error.setLevel(_std_logging.ERROR)
         fh_error.setFormatter(formatter)
         root.addHandler(fh_error)
+
+        fh_shopify = _std_logging.FileHandler(shopify_log_path, encoding="utf-8")
+        fh_shopify.setLevel(_std_logging.WARNING)
+        fh_shopify.setFormatter(formatter)
+        root.addHandler(fh_shopify)
 
     _INITIALIZED = True
 
@@ -186,3 +214,50 @@ def log_delta(action: str, handle: str, details: str) -> None:
         _loguru_logger.opt(depth=1).info(msg)
     else:
         _std_logging.info(msg)
+
+
+def log_shopify_error(message: str, exc: Optional[BaseException] = None, **kwargs: Any) -> None:
+    """
+    Log Shopify-specific errors directly to logs/shopify_errors.log, errors.log, and console.
+    """
+    if not _INITIALIZED:
+        init_logger()
+    prefix = "" if message.startswith("[SHOPIFY") else "[SHOPIFY ERROR] "
+    full_msg = f"{prefix}{message}"
+    if _HAS_LOGURU and _loguru_logger is not None:
+        bound = _loguru_logger.bind(shopify=True)
+        if exc:
+            bound.opt(depth=1, exception=exc).error(full_msg, **kwargs)
+        else:
+            bound.opt(depth=1).error(full_msg, **kwargs)
+    else:
+        _std_logging.error(full_msg, exc_info=exc)
+
+
+def log_shopify_warning(message: str, **kwargs: Any) -> None:
+    """
+    Log Shopify-specific warnings directly to logs/shopify_errors.log and console.
+    """
+    if not _INITIALIZED:
+        init_logger()
+    prefix = "" if message.startswith("[SHOPIFY") else "[SHOPIFY WARN] "
+    full_msg = f"{prefix}{message}"
+    if _HAS_LOGURU and _loguru_logger is not None:
+        _loguru_logger.bind(shopify=True).opt(depth=1).warning(full_msg, **kwargs)
+    else:
+        _std_logging.warning(full_msg)
+
+
+def log_shopify_success(message: str, **kwargs: Any) -> None:
+    """
+    Log Shopify successful sync operations to freshner.log and console.
+    """
+    if not _INITIALIZED:
+        init_logger()
+    prefix = "" if message.startswith("[SHOPIFY") else "[SHOPIFY SYNC] "
+    full_msg = f"{prefix}{message}"
+    if _HAS_LOGURU and _loguru_logger is not None:
+        _loguru_logger.bind(shopify=True).opt(depth=1).success(full_msg, **kwargs)
+    else:
+        _std_logging.info(full_msg)
+

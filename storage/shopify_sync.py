@@ -14,7 +14,15 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from storage.shopify_auth import execute_shopify_graphql
 from storage.shopify_taxonomy import prepare_product_set_payload
 from storage.forex import get_usd_to_inr_rate
-from storage.logger import log_info, log_success, log_warning, log_error
+from storage.logger import (
+    log_info,
+    log_success,
+    log_warning,
+    log_error,
+    log_shopify_error,
+    log_shopify_warning,
+    log_shopify_success
+)
 
 PRODUCT_SET_MUTATION = """
 mutation productSet($input: ProductSetInput!, $synchronous: Boolean!) {
@@ -54,12 +62,15 @@ def upsert_product_to_shopify(prod: Dict[str, Any], forex_rate: Optional[float] 
     )
     
     if err or not data:
-        return False, None, f"GraphQL Error: {err}"
+        err_msg = f"GraphQL Error: {err}"
+        log_shopify_error(f"upsert_product_to_shopify failed for '{prod.get('title', '')[:35]}' (ID: {prod.get('id')}): {err_msg}")
+        return False, None, err_msg
         
     res = data.get("productSet", {})
     u_errors = res.get("userErrors", [])
     if u_errors:
         err_details = "; ".join(f"{e.get('field')}: {e.get('message')}" for e in u_errors)
+        log_shopify_error(f"productSet userErrors for '{prod.get('title', '')[:35]}' (ID: {prod.get('id')}): {err_details}")
         return False, None, f"UserErrors: {err_details}"
         
     p_node = res.get("product")
@@ -80,10 +91,10 @@ def sync_delta_to_shopify(updated_product: Dict[str, Any], delta_res: Dict[str, 
         
     success, p_node, err = upsert_product_to_shopify(updated_product, forex_rate)
     if success:
-        log_success(f"[SHOPIFY SYNC] Synced delta for {updated_product.get('title', '')[:35]} (GID: {shopify_id})")
+        log_shopify_success(f"Synced delta for {updated_product.get('title', '')[:35]} (GID: {shopify_id})")
         return True
     else:
-        log_error(f"[SHOPIFY SYNC FAIL] Failed to sync delta for {updated_product.get('title', '')[:35]}: {err}")
+        log_shopify_error(f"Failed to sync delta for {updated_product.get('title', '')[:35]} (GID: {shopify_id}): {err}")
         return False
 
 
@@ -153,10 +164,10 @@ def drain_delta_events_queue(limit: int = 100, forex_rate: Optional[float] = Non
                     updated = True
                 else:
                     fail_count += 1
-                    log_warning(f"[QUEUE DRAIN FAIL] {p_id}: {err}")
+                    log_shopify_warning(f"Queue drain failed for {p_id}: {err}")
             except Exception as e:
                 fail_count += 1
-                log_error(f"[QUEUE DRAIN ERROR] {p_id}: {e}")
+                log_shopify_error(f"Queue drain exception for {p_id}: {e}", exc=e)
 
     if updated:
         tmp_path = f"{events_path}.tmp"
