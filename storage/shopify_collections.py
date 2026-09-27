@@ -40,6 +40,62 @@ COLLECTIONS_MANIFEST: List[Dict[str, Any]] = [
         }
     },
     {
+        "title": "Luxury Bags & Leather Goods",
+        "handle": "luxury-bags",
+        "descriptionHtml": "<p>Discover our curated collection of luxury handbags, totes, crossbody bags, and finely crafted leather goods from COACH, JW PEI, and Michael Kors.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "TAG", "relation": "EQUALS", "condition": "Luxury Bags"}
+            ]
+        }
+    },
+    {
+        "title": "Women's Luxury Bags",
+        "handle": "womens-bags",
+        "descriptionHtml": "<p>Explore our coveted selection of women's designer handbags, statement totes, shoulder bags, and luxury leather accessories.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "TAG", "relation": "EQUALS", "condition": "Luxury Bags"},
+                {"column": "TAG", "relation": "EQUALS", "condition": "Women"}
+            ]
+        }
+    },
+    {
+        "title": "Crossbody & Messenger Bags",
+        "handle": "crossbody-bags",
+        "descriptionHtml": "<p>Hands-free luxury: iconic crossbody bags, camera bags, belt bags, and utilitarian messengers.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "TAG", "relation": "EQUALS", "condition": "Crossbody & Messenger Bags"}
+            ]
+        }
+    },
+    {
+        "title": "Luxury Totes & Carryalls",
+        "handle": "totes",
+        "descriptionHtml": "<p>Spacious, structured, and versatile luxury totes crafted from premium leathers and signature canvases.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "TAG", "relation": "EQUALS", "condition": "Totes"}
+            ]
+        }
+    },
+    {
+        "title": "Wallets & Leather Goods",
+        "handle": "wallets-leather-goods",
+        "descriptionHtml": "<p>Designer wallets, cardholders, wristlets, and small leather goods crafted with impeccable attention to detail.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "TAG", "relation": "EQUALS", "condition": "Wallets & Small Leather Goods"}
+            ]
+        }
+    },
+    {
         "title": "Premium Footwear",
         "handle": "premium-footwear",
         "descriptionHtml": "<p>Elevate your footwear with iconic performance runners and designer sneakers.</p>",

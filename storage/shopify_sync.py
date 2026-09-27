@@ -69,9 +69,29 @@ def upsert_product_to_shopify(prod: Dict[str, Any], forex_rate: Optional[float] 
     res = data.get("productSet", {})
     u_errors = res.get("userErrors", [])
     if u_errors:
-        err_details = "; ".join(f"{e.get('field')}: {e.get('message')}" for e in u_errors)
-        log_shopify_error(f"productSet userErrors for '{prod.get('title', '')[:35]}' (ID: {prod.get('id')}): {err_details}")
-        return False, None, f"UserErrors: {err_details}"
+        is_handle_conflict = any(
+            (e.get("field") and "handle" in e.get("field")) or "already in use" in str(e.get("message", "")).lower()
+            for e in u_errors
+        )
+        if is_handle_conflict:
+            raw_sku = str(prod.get("source_sku") or prod.get("sku") or prod.get("id") or "")
+            sku_suffix = "".join(c if c.isalnum() else "-" for c in raw_sku).strip("-").lower()
+            current_handle = payload.get("handle") or prod.get("handle") or "luxury-bag"
+            new_handle = f"{current_handle}-{sku_suffix}" if sku_suffix else f"{current_handle}-{int(time.time())}"
+            payload["handle"] = new_handle
+            
+            data, ext, err = execute_shopify_graphql(
+                PRODUCT_SET_MUTATION,
+                variables={"input": payload, "synchronous": True}
+            )
+            if data:
+                res = data.get("productSet", {})
+                u_errors = res.get("userErrors", [])
+
+        if u_errors:
+            err_details = "; ".join(f"{e.get('field')}: {e.get('message')}" for e in u_errors)
+            log_shopify_error(f"productSet userErrors for '{prod.get('title', '')[:35]}' (ID: {prod.get('id')}): {err_details}")
+            return False, None, f"UserErrors: {err_details}"
         
     p_node = res.get("product")
     return True, p_node, ""

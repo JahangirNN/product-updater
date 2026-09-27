@@ -119,6 +119,67 @@ def resolve_gender(prod: Dict[str, Any]) -> str:
     return "Women" if prod.get("source_store") == "jwpei" else "Men"
 
 
+def resolve_luxury_bag_silhouette(prod: Dict[str, Any]) -> Optional[str]:
+    """
+    Classify bags into clear luxury silhouettes (ADR 0020, ADR 0023):
+    1. Backpacks
+    2. Wallets & Small Leather Goods
+    3. Totes
+    4. Crossbody & Messenger Bags
+    5. Shoulder Bags
+    6. Clutches & Evening Bags
+    7. Satchels & Top Handles
+    Returns None if the product is not a bag / leather goods item.
+    """
+    store = (prod.get("source_store") or prod.get("store") or "").lower()
+    raw_pt = str(prod.get("product_type") or "").strip()
+    title = str(prod.get("title", "")).strip()
+    text = f"{raw_pt} {title}".lower()
+
+    if store == "jomashop" or bool(re.search(r"\bwatches?\b", raw_pt.lower())) or raw_pt in ("Sunglasses", "Shoes", "Sneakers", "Sandals", "Boots", "Flats"):
+        return None
+    if store == "coach" and raw_pt == "Shoes & Footwear":
+        return None
+    if store == "michaelkors" and (raw_pt in ("Sandals", "Sneakers", "Sunglasses", "Shoes", "Flats", "Belts", "Boots", "Apparel") or prod.get("source_sku") in ("MK0017", "MK0018")):
+        return None
+    if store not in ("coach", "jwpei", "michaelkors") and not any(k in text for k in ["bag", "tote", "crossbody", "wallet", "backpack", "clutch", "satchel", "pouch"]):
+        return None
+
+    # 1. Backpacks
+    if bool(re.search(r"\b(backpacks?|rucksacks?)\b", text)) or (bool(re.search(r"\bpack\b", text)) and "package" not in text):
+        return "Backpacks"
+
+    # 2. Wallets & Small Leather Goods
+    if any(w in text for w in ["wallet", "billfold", "card case", "cardholder", "coin purse", "money clip", "passcase", "key ring", "lanyard", "passport", "small goods"]):
+        return "Wallets & Small Leather Goods"
+
+    # 3. Totes
+    if any(w in text for w in ["tote", "carryall", "shopper", "cabas"]):
+        return "Totes"
+
+    # 4. Crossbody & Messenger Bags
+    if any(w in text for w in ["crossbody", "messenger", "camera bag", "belt bag", "waist pack", "sling", "hip pack", "saddle"]):
+        return "Crossbody & Messenger Bags"
+
+    # 5. Shoulder Bags
+    if any(w in text for w in ["shoulder", "hobo", "baguette", "swinger", "teri", "flap"]):
+        return "Shoulder Bags"
+
+    # 6. Clutches & Evening Bags
+    if any(w in text for w in ["clutch", "evening", "minaudière", "minaudiere", "wristlet", "pochette", "pouch", "vanity", "travel kit"]):
+        return "Clutches & Evening Bags"
+
+    # 7. Satchels & Top Handles
+    if any(w in text for w in ["satchel", "top handle", "top-handle", "barrel", "dome", "bowler", "briefcase", "brief", "rowan", "bucket", "duffle"]):
+        return "Satchels & Top Handles"
+
+    if store == "jwpei":
+        return "Satchels & Top Handles"
+    if "handbag" in text or "bag" in text:
+        return "Satchels & Top Handles"
+    return "Shoulder Bags"
+
+
 def resolve_product_type(prod: Dict[str, Any]) -> str:
     """Normalize raw product type into luxury customer-facing taxonomy."""
     store = (prod.get("source_store") or prod.get("store") or "").lower()
@@ -126,12 +187,17 @@ def resolve_product_type(prod: Dict[str, Any]) -> str:
     title = str(prod.get("title", "")).lower()
     text = f"{raw_pt} {title}".lower()
 
-    if "watch" in text or store == "jomashop":
+    if store == "jomashop" or (bool(re.search(r"\bwatches?\b", text)) and "watch hunger stop" not in text):
         return "Watches"
+
+    # Check luxury bag silhouette first for bag stores / bag products
+    bag_sil = resolve_luxury_bag_silhouette(prod)
+    if bag_sil:
+        return bag_sil
 
     # Footwear
     if any(w in text for w in ["shoe", "sneaker", "runner", "trainer", "footwear", "slide", "sandal", "boot", "loafer", "mule"]):
-        if any(w in text for w in ["sandal", "slide"]):
+        if any(w in text for w in ["sandal", "slide"]) and "sandalwood" not in text:
             return "Sandals"
         if any(w in text for w in ["boot", "bootie"]):
             return "Boots"
@@ -143,26 +209,28 @@ def resolve_product_type(prod: Dict[str, Any]) -> str:
 
     # Handbags & Small Goods
     if any(w in text for w in ["wallet", "billfold", "card case", "cardholder", "wristlet"]):
-        return "Wallets"
-    if "belt" in text:
+        return "Wallets & Small Leather Goods"
+    if "belt" in text and "belt bag" not in text:
         return "Belts"
     if "backpack" in text:
         return "Backpacks"
     if "sunglasses" in text or "eyewear" in text:
         return "Sunglasses"
     if any(w in text for w in ["tote", "carryall", "shopper"]):
-        return "Tote Bags"
+        return "Totes"
     if any(w in text for w in ["crossbody", "camera bag"]):
-        return "Crossbody Bags"
+        return "Crossbody & Messenger Bags"
     if any(w in text for w in ["shoulder", "hobo", "swinger", "teri"]):
         return "Shoulder Bags"
     if any(w in text for w in ["satchel", "top handle", "top-handle", "rowan", "bucket"]):
-        return "Top Handle Bags"
-    if any(w in text for w in ["bag", "clutch", "pouch", "vanity"]):
-        return "Handbags"
+        return "Satchels & Top Handles"
+    if any(w in text for w in ["clutch", "evening"]):
+        return "Clutches & Evening Bags"
+    if any(w in text for w in ["bag", "pouch", "vanity"]):
+        return "Satchels & Top Handles"
 
     if store == "jwpei":
-        return "Handbags"
+        return "Satchels & Top Handles"
     if raw_pt and not raw_pt.startswith(("JH", "2T", "8T", "4B", "7C", "5S")):
         return raw_pt
     return "Accessories"
@@ -175,11 +243,29 @@ def generate_taxonomy_tags(prod: Dict[str, Any], vendor: str, product_type: str,
     # Clean out any old retailer supplier tags
     tags = [t for t in tags if not any(leak in t.lower() for leak in ["jomashop", "nordstrom", "footlocker", "finishline", "jdsports"])]
 
-    # 1. Master Category Tags
-    if product_type == "Watches":
+    # 1. Master Category Tags & Silhouettes
+    bag_sil = resolve_luxury_bag_silhouette(prod)
+    if bag_sil or product_type in ("Totes", "Shoulder Bags", "Crossbody & Messenger Bags", "Satchels & Top Handles", "Clutches & Evening Bags", "Backpacks", "Wallets & Small Leather Goods", "Handbags", "Tote Bags", "Crossbody Bags", "Top Handle Bags", "Wallets"):
+        sil = bag_sil or product_type
+        tags.extend(["Designer Bags", "Luxury Bags", sil])
+        
+        # Add silhouette aliases and facet tags
+        if sil == "Totes":
+            tags.extend(["Tote Bags", "Totes", "Handbags"])
+        elif sil == "Shoulder Bags":
+            tags.extend(["Shoulder Bags", "Handbags"])
+        elif sil == "Crossbody & Messenger Bags":
+            tags.extend(["Crossbody Bags", "Messenger Bags", "Crossbody & Messenger Bags", "Handbags"])
+        elif sil == "Satchels & Top Handles":
+            tags.extend(["Top Handle Bags", "Satchels", "Satchels & Top Handles", "Handbags"])
+        elif sil == "Clutches & Evening Bags":
+            tags.extend(["Clutches", "Evening Bags", "Clutches & Evening Bags", "Handbags"])
+        elif sil == "Backpacks":
+            tags.extend(["Backpacks", "Handbags"])
+        elif sil == "Wallets & Small Leather Goods":
+            tags.extend(["Wallets", "Wallets & Accessories", "Wallets & Small Leather Goods", "Accessories", "Small Leather Goods"])
+    elif product_type == "Watches":
         tags.extend(["Watches", "Luxury Watches"])
-    elif product_type in ("Handbags", "Tote Bags", "Shoulder Bags", "Crossbody Bags", "Top Handle Bags", "Backpacks"):
-        tags.extend(["Handbags", "Designer Bags", product_type])
     elif product_type in ("Shoes", "Sneakers", "Sandals", "Boots", "Flats"):
         tags.extend(["Footwear", "Shoes", "Premium Footwear", product_type])
     elif product_type in ("Wallets", "Belts", "Sunglasses", "Accessories"):
@@ -197,6 +283,10 @@ def generate_taxonomy_tags(prod: Dict[str, Any], vendor: str, product_type: str,
 
     # 3. Brand Showroom Tags
     tags.extend([f"Brand:{vendor}", vendor])
+    if vendor == "COACH":
+        tags.append("Coach")
+    elif vendor in ("Michael Kors", "MICHAEL Michael Kors"):
+        tags.extend(["Michael Kors", "MICHAEL Michael Kors"])
 
     # 4. Sizing Category for Shoes
     sizing_cat = prod.get("sizing_category")

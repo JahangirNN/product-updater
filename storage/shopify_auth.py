@@ -27,7 +27,7 @@ def refresh_cli_session(shop_domain: str = DEFAULT_SHOP_DOMAIN) -> bool:
             ["shopify.cmd" if sys.platform == "win32" else "shopify", "theme", "list", f"--store={shop_domain}"],
             capture_output=True,
             text=True,
-            timeout=15
+            timeout=35
         )
         if res.returncode != 0:
             log_shopify_warning(f"Shopify CLI token auto-refresh exited with code {res.returncode}: {res.stderr.strip()[:200]}")
@@ -79,6 +79,19 @@ def get_shopify_credentials(shop_domain: str = DEFAULT_SHOP_DOMAIN) -> Tuple[str
     return env_domain, env_token, DEFAULT_API_VERSION
 
 
+_CLIENT: Optional[httpx.Client] = None
+
+
+def get_shopify_http_client() -> httpx.Client:
+    global _CLIENT
+    if _CLIENT is None or _CLIENT.is_closed:
+        _CLIENT = httpx.Client(
+            timeout=35.0,
+            limits=httpx.Limits(max_keepalive_connections=20, max_connections=50, keepalive_expiry=60.0)
+        )
+    return _CLIENT
+
+
 def execute_shopify_graphql(
     query: str,
     variables: Optional[Dict[str, Any]] = None,
@@ -110,26 +123,26 @@ def execute_shopify_graphql(
         payload["variables"] = variables
 
     try:
-        with httpx.Client(timeout=timeout) as client:
-            resp = client.post(url, json=payload, headers=headers)
-            
-            # Handle token expiration with transparent auto-refresh
-            if resp.status_code == 401 and allow_retry:
-                log_shopify_warning(f"Shopify Admin GraphQL returned 401 Unauthorized for {domain}. Triggering CLI session auto-refresh...")
-                if refresh_cli_session(domain):
-                    return execute_shopify_graphql(query, variables, shop_domain, timeout, allow_retry=False)
+        client = get_shopify_http_client()
+        resp = client.post(url, json=payload, headers=headers)
+        
+        # Handle token expiration with transparent auto-refresh
+        if resp.status_code == 401 and allow_retry:
+            log_shopify_warning(f"Shopify Admin GraphQL returned 401 Unauthorized for {domain}. Triggering CLI session auto-refresh...")
+            if refresh_cli_session(domain):
+                return execute_shopify_graphql(query, variables, shop_domain, timeout, allow_retry=False)
 
-            if resp.status_code == 200:
-                body = resp.json()
-                data = body.get("data")
-                extensions = body.get("extensions", {})
-                errors = body.get("errors")
-                if errors:
-                    err_msg = json.dumps(errors)
-                    log_shopify_error(f"Shopify Admin GraphQL returned errors: {err_msg}")
-                    return data, extensions, f"GraphQL Errors: {err_msg}"
-                return data, extensions, ""
-            else:
+        if resp.status_code == 200:
+            body = resp.json()
+            data = body.get("data")
+            extensions = body.get("extensions", {})
+            errors = body.get("errors")
+            if errors:
+                err_msg = json.dumps(errors)
+                log_shopify_error(f"Shopify Admin GraphQL returned errors: {err_msg}")
+                return data, extensions, f"GraphQL Errors: {err_msg}"
+            return data, extensions, ""
+        else:
                 err_msg = f"HTTP {resp.status_code}: {resp.text}"
                 log_shopify_error(f"Shopify Admin GraphQL failure: {err_msg}")
                 return None, {}, err_msg

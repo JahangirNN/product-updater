@@ -64,7 +64,7 @@ Supported variables
           if request.page_type == 'collection'
             if collection.handle contains 'all' or collection.handle contains 'luxury-watches' or collection.handle == 'designer-eyewear'
               assign show_gender_filter = true
-            elsif collection.handle != 'womens-watches' and collection.handle != 'mens-watches' and collection.handle != 'womens-handbags' and collection.handle != 'womens-shoes' and collection.handle != 'mens-shoes' and collection.handle != 'mens-bags' and collection.handle != 'womens-sunglasses' and collection.handle != 'mens-sunglasses' and collection.handle != 'women' and collection.handle != 'men'
+            elsif collection.handle != 'womens-watches' and collection.handle != 'mens-watches' and collection.handle != 'womens-handbags' and collection.handle != 'womens-bags' and collection.handle != 'womens-shoes' and collection.handle != 'mens-shoes' and collection.handle != 'mens-bags' and collection.handle != 'womens-sunglasses' and collection.handle != 'mens-sunglasses' and collection.handle != 'women' and collection.handle != 'men'
               assign show_gender_filter = true
             endif
           endif

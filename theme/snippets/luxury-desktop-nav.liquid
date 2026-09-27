@@ -284,8 +284,13 @@
             <li class="luxury-mega-menu__col">
               <a href="{{ routes.collections_url }}/womens-handbags" class="luxury-mega-menu__col-title">Designer Handbags</a>
               <ul class="luxury-mega-menu__list">
-                <li><a href="{{ routes.collections_url }}/womens-handbags" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Handbags &rarr;</a></li>
-                <li><a href="{{ routes.collections_url }}/womens-handbags/jw-pei" class="luxury-mega-menu__link">JW PEI Vegan Leather</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Luxury Bags &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/coach" class="luxury-mega-menu__link">COACH Leather Goods</a></li>
+                <li><a href="{{ routes.collections_url }}/jw-pei" class="luxury-mega-menu__link">JW PEI Vegan Bags</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/michael-kors" class="luxury-mega-menu__link">Michael Kors Jet Set</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/totes" class="luxury-mega-menu__link">Totes &amp; Carryalls</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/crossbody-bags" class="luxury-mega-menu__link">Crossbody Bags</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-accessories" class="luxury-mega-menu__link">Wallets &amp; Small Goods</a></li>
               </ul>
             </li>
 
@@ -344,6 +349,18 @@
               </ul>
             </li>
 
+            {%- comment -%} Men's Bags & Leather Goods {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/designer-bags/men" class="luxury-mega-menu__col-title">Bags &amp; Leather Goods</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/designer-bags/men" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Men's Bags &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/designer-bags/coach+men" class="luxury-mega-menu__link">Coach Briefs &amp; Backpacks</a></li>
+                <li><a href="{{ routes.collections_url }}/designer-bags/michael-kors+men" class="luxury-mega-menu__link">Michael Kors Men's Wallets</a></li>
+                <li><a href="{{ routes.collections_url }}/designer-bags/crossbody-bags" class="luxury-mega-menu__link">Crossbody &amp; Belt Bags</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-accessories" class="luxury-mega-menu__link">Billfolds &amp; Card Cases</a></li>
+              </ul>
+            </li>
+
             {%- comment -%} Men's Designer Eyewear {%- endcomment -%}
             <li class="luxury-mega-menu__col">
               <a href="{{ routes.collections_url }}/mens-sunglasses" class="luxury-mega-menu__col-title">Designer Eyewear</a>
@@ -390,6 +407,13 @@
               <span class="luxury-mega-menu__col-title">A &mdash; F</span>
               <ul class="luxury-mega-menu__list">
                 <li><a href="{{ routes.collections_url }}/citizen" class="luxury-mega-menu__link">Citizen Watch Co.</a></li>
+                <li style="padding-top: 0.25rem;">
+                  <a href="{{ routes.collections_url }}/designer-bags/coach" class="luxury-mega-menu__link" style="font-weight: 600;">COACH</a>
+                  <ul style="list-style: none; padding: 0.25rem 0 0 0.75rem; margin: 0;">
+                    <li><a href="{{ routes.collections_url }}/designer-bags/coach" class="luxury-mega-menu__link" style="font-size: 0.8em; opacity: 0.8;">Heritage Leather Bags</a></li>
+                    <li><a href="{{ routes.collections_url }}/designer-bags/coach+men" class="luxury-mega-menu__link" style="font-size: 0.8em; opacity: 0.8;">Men's Briefs &amp; Wallets</a></li>
+                  </ul>
+                </li>
                 <li><a href="{{ routes.collections_url }}/ferragamo" class="luxury-mega-menu__link">Ferragamo</a></li>
               </ul>
             </li>
@@ -398,13 +422,20 @@
             <li class="luxury-mega-menu__col">
               <span class="luxury-mega-menu__col-title">J &mdash; M</span>
               <ul class="luxury-mega-menu__list">
-                <li><a href="{{ routes.collections_url }}/jw-pei" class="luxury-mega-menu__link">JW PEI</a></li>
                 <li style="padding-top: 0.25rem;">
-                  <a href="{{ routes.collections_url }}/michael-kors-watches" class="luxury-mega-menu__link" style="font-weight: 600;">Michael Kors</a>
+                  <a href="{{ routes.collections_url }}/jw-pei" class="luxury-mega-menu__link" style="font-weight: 600;">JW PEI</a>
                   <ul style="list-style: none; padding: 0.25rem 0 0 0.75rem; margin: 0;">
+                    <li><a href="{{ routes.collections_url }}/jw-pei" class="luxury-mega-menu__link" style="font-size: 0.8em; opacity: 0.8;">Vegan Leather Handbags</a></li>
+                    <li><a href="{{ routes.collections_url }}/totes" class="luxury-mega-menu__link" style="font-size: 0.8em; opacity: 0.8;">Totes &amp; Carryalls</a></li>
+                  </ul>
+                </li>
+                <li style="padding-top: 0.25rem;">
+                  <a href="{{ routes.collections_url }}/michael-kors" class="luxury-mega-menu__link" style="font-weight: 600;">Michael Kors</a>
+                  <ul style="list-style: none; padding: 0.25rem 0 0 0.75rem; margin: 0;">
+                    <li><a href="{{ routes.collections_url }}/michael-kors" class="luxury-mega-menu__link" style="font-size: 0.8em; opacity: 0.8;">Luxury Handbags &amp; Wallets</a></li>
                     <li><a href="{{ routes.collections_url }}/michael-kors-watches" class="luxury-mega-menu__link" style="font-size: 0.8em; opacity: 0.8;">Luxury Watches</a></li>
                     <li><a href="{{ routes.collections_url }}/designer-eyewear" class="luxury-mega-menu__link" style="font-size: 0.8em; opacity: 0.8;">Designer Sunglasses</a></li>
-                    <li><a href="{{ routes.collections_url }}/michael-kors-watches" class="luxury-mega-menu__link" style="font-size: 0.8em; opacity: 0.8;">All MK Showroom &rarr;</a></li>
+                    <li><a href="{{ routes.collections_url }}/michael-kors" class="luxury-mega-menu__link" style="font-size: 0.8em; opacity: 0.8;">All MK Showroom &rarr;</a></li>
                   </ul>
                 </li>
                 <li><a href="{{ routes.collections_url }}/movado" class="luxury-mega-menu__link">Movado</a></li>
