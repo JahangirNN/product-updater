@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-09-26",
+  "last_updated": "2026-09-27",
   "menu_handle": "main-menu",
   "menu_title": "Main Menu",
   "navigation": [
@@ -120,6 +120,33 @@
               "url": "/collections/wallets-accessories/michael-kors"
             }
           ]
+        },
+        {
+          "title": "Designer Eyewear",
+          "type": "category",
+          "url": "/collections/womens-sunglasses",
+          "items": [
+            {
+              "title": "All Women's Sunglasses",
+              "url": "/collections/womens-sunglasses"
+            },
+            {
+              "title": "Michael Kors Eyewear",
+              "url": "/collections/womens-sunglasses/michael-kors"
+            },
+            {
+              "title": "Cat-Eye & Butterfly",
+              "url": "/collections/womens-sunglasses?filter.p.tag=Cat-Eye"
+            },
+            {
+              "title": "Aviator & Pilot",
+              "url": "/collections/womens-sunglasses?filter.p.tag=Aviator"
+            },
+            {
+              "title": "Oversized & Geometric",
+              "url": "/collections/womens-sunglasses?filter.p.tag=Oversized"
+            }
+          ]
         }
       ]
     },
@@ -220,6 +247,33 @@
               "url": "/collections/wallets-accessories"
             }
           ]
+        },
+        {
+          "title": "Designer Eyewear",
+          "type": "category",
+          "url": "/collections/mens-sunglasses",
+          "items": [
+            {
+              "title": "All Men's Sunglasses",
+              "url": "/collections/mens-sunglasses"
+            },
+            {
+              "title": "Michael Kors Eyewear",
+              "url": "/collections/mens-sunglasses/michael-kors"
+            },
+            {
+              "title": "Aviator & Pilot",
+              "url": "/collections/mens-sunglasses?filter.p.tag=Aviator"
+            },
+            {
+              "title": "Navigator & Square",
+              "url": "/collections/mens-sunglasses?filter.p.tag=Navigator"
+            },
+            {
+              "title": "Wireframe & Metal",
+              "url": "/collections/mens-sunglasses?filter.p.tag=Wireframe"
+            }
+          ]
         }
       ]
     },
@@ -238,7 +292,21 @@
         },
         {
           "title": "Michael Kors",
-          "url": "/collections/michael-kors"
+          "url": "/collections/michael-kors",
+          "items": [
+            {
+              "title": "All MK Showroom",
+              "url": "/collections/michael-kors-watches"
+            },
+            {
+              "title": "Luxury Watches",
+              "url": "/collections/michael-kors-watches"
+            },
+            {
+              "title": "Designer Sunglasses",
+              "url": "/collections/designer-eyewear"
+            }
+          ]
         },
         {
           "title": "Tissot",

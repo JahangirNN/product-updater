@@ -61,6 +61,18 @@ COLLECTIONS_MANIFEST: List[Dict[str, Any]] = [
             ]
         }
     },
+    {
+        "title": "Designer Sunglasses & Eyewear",
+        "handle": "designer-eyewear",
+        "descriptionHtml": "<p>Discover our curated collection of luxury designer sunglasses and statement eyewear, featuring 100% UV protection and signature craftsmanship.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": True,
+            "rules": [
+                {"column": "TYPE", "relation": "EQUALS", "condition": "Sunglasses"},
+                {"column": "TAG", "relation": "EQUALS", "condition": "Sunglasses"}
+            ]
+        }
+    },
 
     # --- Gender Sub-Categories ---
     {
@@ -132,6 +144,30 @@ COLLECTIONS_MANIFEST: List[Dict[str, Any]] = [
             "rules": [
                 {"column": "TAG", "relation": "EQUALS", "condition": "Premium Footwear"},
                 {"column": "TAG", "relation": "EQUALS", "condition": "Women"}
+            ]
+        }
+    },
+    {
+        "title": "Women's Sunglasses",
+        "handle": "womens-sunglasses",
+        "descriptionHtml": "<p>Discover our curated collection of luxury women's designer sunglasses and statement frames.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "TYPE", "relation": "EQUALS", "condition": "Sunglasses"},
+                {"column": "TAG", "relation": "EQUALS", "condition": "Women"}
+            ]
+        }
+    },
+    {
+        "title": "Men's Sunglasses",
+        "handle": "mens-sunglasses",
+        "descriptionHtml": "<p>Explore our distinctive edit of luxury men's designer sunglasses engineered for style, precision, and complete UV protection.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "TYPE", "relation": "EQUALS", "condition": "Sunglasses"},
+                {"column": "TAG", "relation": "EQUALS", "condition": "Men"}
             ]
         }
     },

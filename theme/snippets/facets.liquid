@@ -62,9 +62,9 @@ Supported variables
 
           assign show_gender_filter = false
           if request.page_type == 'collection'
-            if collection.handle contains 'all' or collection.handle contains 'luxury-watches'
+            if collection.handle contains 'all' or collection.handle contains 'luxury-watches' or collection.handle == 'designer-eyewear'
               assign show_gender_filter = true
-            elsif collection.handle != 'womens-watches' and collection.handle != 'mens-watches' and collection.handle != 'womens-handbags' and collection.handle != 'womens-shoes' and collection.handle != 'mens-shoes' and collection.handle != 'mens-bags' and collection.handle != 'women' and collection.handle != 'men'
+            elsif collection.handle != 'womens-watches' and collection.handle != 'mens-watches' and collection.handle != 'womens-handbags' and collection.handle != 'womens-shoes' and collection.handle != 'mens-shoes' and collection.handle != 'mens-bags' and collection.handle != 'womens-sunglasses' and collection.handle != 'mens-sunglasses' and collection.handle != 'women' and collection.handle != 'men'
               assign show_gender_filter = true
             endif
           endif
@@ -117,38 +117,42 @@ Supported variables
               </div>
 
               {%- capture men_gender_url -%}
-                {%- if is_men_active -%}
+                {%- if collection.handle == 'designer-eyewear' -%}
+                  /collections/mens-sunglasses
+                {%- elsif is_men_active -%}
                   {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
                 {%- else -%}
                   {%- if active_vendor_tag != '' -%}{{ collection.url }}/men+{{ active_vendor_tag }}{%- else -%}{{ collection.url }}/men{%- endif -%}
                 {%- endif -%}
-                {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
+                {%- if results.sort_by != blank and collection.handle != 'designer-eyewear' %}?sort_by={{ results.sort_by }}{% endif -%}
               {%- endcapture -%}
               <div class="checkbox-control">
                 <facet-link class="block w-full">
                   <a href="{{ men_gender_url | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                     <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
                       <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if is_men_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
-                      <span class="{% if is_men_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Men's</span>
+                      <span class="{% if is_men_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Men's{% if collection.handle == 'designer-eyewear' %} (25){% endif %}</span>
                     </span>
                   </a>
                 </facet-link>
               </div>
 
               {%- capture women_gender_url -%}
-                {%- if is_women_active -%}
+                {%- if collection.handle == 'designer-eyewear' -%}
+                  /collections/womens-sunglasses
+                {%- elsif is_women_active -%}
                   {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
                 {%- else -%}
                   {%- if active_vendor_tag != '' -%}{{ collection.url }}/women+{{ active_vendor_tag }}{%- else -%}{{ collection.url }}/women{%- endif -%}
                 {%- endif -%}
-                {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
+                {%- if results.sort_by != blank and collection.handle != 'designer-eyewear' %}?sort_by={{ results.sort_by }}{% endif -%}
               {%- endcapture -%}
               <div class="checkbox-control">
                 <facet-link class="block w-full">
                   <a href="{{ women_gender_url | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                     <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
                       <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if is_women_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
-                      <span class="{% if is_women_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Women's</span>
+                      <span class="{% if is_women_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Women's{% if collection.handle == 'designer-eyewear' %} (40){% endif %}</span>
                     </span>
                   </a>
                 </facet-link>
