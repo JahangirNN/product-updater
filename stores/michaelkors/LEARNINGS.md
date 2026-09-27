@@ -100,3 +100,25 @@
   - Implemented granular `changed_variants` tracking with `{sku, old_in_stock, new_in_stock}`.
   - In `apply_delta_to_product()`, mutations are triggered if `price_changed or stock_changed or variant_stock_changed`, ensuring accurate Shopify sync triggers with 0 phantom noise.
 
+---
+
+## 7. Designer Eyewear Model Classification & Gender Segregation
+*How Michael Kors sunglasses models are classified and mapped into luxury smart collections:*
+
+- **MK-9000 Series (Men's Exclusive — 6 Products)**:
+  - *Models*: City (`MK-9017`), Toledo (`MK-9018`), Bowery (`MK-9019`), Forio (`MK-9020`), Camden (`MK-9021`), Avenue (`MK-9022`).
+  - *Taxonomy*: Tagged with `Men`, `Men's`, `Gender:Men`, `Sunglasses`. Women's tags strictly forbidden to eliminate cross-gender leakage.
+- **MK-1000 Series (Unisex — 19 Products)**:
+  - *Models*: Monte Carlo, Suffolk, Biarritz, Melbourne, Gold Coast, Manchester, Patra, Cape Town, Kona, Perledo, Dana Point, Brentwood, Oxford, Key West, Mar Vista, Denver, Andros, Buenos Aires, Sea Island.
+  - *Taxonomy*: Dual tagged with both `Men` and `Women` tags. Routed to both `/collections/mens-sunglasses` and `/collections/womens-sunglasses`.
+- **MK-2000 Series (Women's Exclusive — 21 Products)**:
+  - *Models*: Andermatt, Lucerne, Edgewater, Molokai, Siesta Key, Lake Tahoe, Nagoya, Santo Domingo, Napa Valley, Grand Cayman, Atlanta, Agra, Catalina, Athens, Roanoke, Mumbai, Isle of Palms, Piedmont, Tokyo, Wilmington, Grenada.
+  - *Taxonomy*: Tagged with `Women`, `Women's`, `Gender:Women`, `Sunglasses`. Men's tags strictly forbidden.
+- **Shopify Smart Collection Mapping**:
+  - `/collections/designer-eyewear` (46 products, GID `gid://shopify/Collection/693217951910`): Master collection with interactive gender facet pills.
+  - `/collections/womens-sunglasses` (40 products, GID `gid://shopify/Collection/693229584550`): 21 Women-exclusive + 19 Unisex.
+  - `/collections/mens-sunglasses` (25 products, GID `gid://shopify/Collection/693229617318`): 6 Men-exclusive + 19 Unisex.
+- **Real-Time Delta Bridge**:
+  - Continuous freshner daemon (`scripts/run_freshner_daemon.py`, `sync_catalog.py`) polls live SFCC stock and price.
+  - Synchronous `productSet` mutation dispatches directly to Shopify Admin GraphQL on detected price or stock shift.
+

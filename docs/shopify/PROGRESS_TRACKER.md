@@ -2,8 +2,8 @@
 
 **Store URL**: `https://therareavenue.com` (`hewmvw-am.myshopify.com`)  
 **Store Currency**: Indian Rupee (INR ₹)  
-**API Protocol**: Shopify Admin GraphQL API (`2026-04`)  
-**Last Updated**: September 25, 2026  
+**Store Protocol**: Shopify Admin GraphQL API (`2026-04`)  
+**Last Updated**: September 27, 2026  
 
 ---
 
@@ -28,10 +28,10 @@
 | **JW PEI** | 491 | 🟡 Ingesting | 4 / 491 | 2026-09-25 | Designer Vegan Leather Handbags |
 | **Nordstrom** | 238 | ⬜ Ready for Ingestion | 0 / 238 | - | Salomon, On Running, HOKA |
 | **Foot Locker** | 307 | ⬜ Ready for Ingestion | 0 / 307 | - | Nike, adidas, ASICS |
-| **Michael Kors** | 530 | ⬜ Ready for Ingestion | 0 / 530 | - | Handbags, Wallets, Sandals, Sneakers |
+| **Michael Kors** | 530 | 🟡 Ingesting | 46 / 530 | 2026-09-27 | 100% of Designer Eyewear Live (46 Sunglasses: 6 Men's, 19 Unisex, 21 Women's) |
 | **Coach** | 573 | ⬜ Ready for Ingestion | 0 / 573 | - | Handbags, Crossbody, Wallets, Footwear |
 | **JD Sports** | 476 | ⬜ Ready for Ingestion | 0 / 476 | - | Nike Footwear & Streetwear |
-| **TOTAL** | **3,189** | - | **578 / 3,189** | - | **Target: 100% Ingested** |
+| **TOTAL** | **3,189** | - | **624 / 3,189** | - | **Target: 100% Ingested** |
 
 ---
 
@@ -66,6 +66,9 @@
 | **Jordan** | Smart | `VENDOR EQUALS Jordan` | `jordan` | `gid://shopify/Collection/693162508454` | ✅ Live |
 | **adidas** | Smart | `VENDOR EQUALS adidas` | `adidas` | `gid://shopify/Collection/693162541222` | ✅ Live |
 | **ASICS** | Smart | `VENDOR EQUALS ASICS` | `asics` | `gid://shopify/Collection/693162573990` | ✅ Live |
+| **Designer Sunglasses & Eyewear** | Smart | `TYPE EQUALS Sunglasses` OR `TAG EQUALS Sunglasses` | `designer-eyewear` | `gid://shopify/Collection/693217951910` | ✅ Live (46 prods) |
+| **Women's Sunglasses** | Smart | `TYPE EQUALS Sunglasses` AND `TAG EQUALS Women` | `womens-sunglasses` | `gid://shopify/Collection/693229584550` | ✅ Live (40 prods) |
+| **Men's Sunglasses** | Smart | `TYPE EQUALS Sunglasses` AND `TAG EQUALS Men` | `mens-sunglasses` | `gid://shopify/Collection/693229617318` | ✅ Live (25 prods) |
 | **Men** | Smart/Manual | Base Department | `men` | `gid://shopify/Collection/691279659174` | ✅ Existing |
 | **Women** | Smart/Manual | Base Department | `women` | `gid://shopify/Collection/691279691942` | ✅ Existing |
 
@@ -87,3 +90,9 @@
 | **2026-09-25** | Documentation Integrity & ADR Alignment Check | `100% PASS` | `verify_docs_alignment.py` |
 | **2026-09-25** | 3-Tier Navigation Architecture & Manifest Established | `ADR 0022 ACCEPTED` | `docs/adr/0022-*` |
 | **2026-09-25** | Live Theme 3-Tier Navigation Deployment (#197348655270) | `100% DEPLOYED & VERIFIED` (0 Errors) | `shopify theme push` & live curl verification |
+| **2026-09-27** | MK Eyewear Tag Alignment & Partitioning (46/46 items) | `46/46 PASS` (6 Men, 19 Unisex, 21 Women, 0 leakage) | `execute_tag_alignment.py` / `verify_m1_eyewear.py` |
+| **2026-09-27** | Eyewear Smart Collections Provisioning (3 collections) | `3/3 CREATED & PUBLISHED` (46, 40, 25 items, HTTP 200 OK) | `storage/shopify_collections.py` |
+| **2026-09-27** | Hybrid Luxury Navigation Live Theme Deployment (#197348655270) | `3/3 SNIPPETS DEPLOYED` (`luxury-desktop-nav`, `luxury-sidebar-panels`, `facets`) | GraphQL `themeFilesUpsert` |
+| **2026-09-27** | Automated Playwright Regression Verification (Tier 1 & Tier 4) | `46/46 PASS` (40 Tier 1 tests, 6 Tier 4 user journeys, 100% OK) | `scripts/test_hybrid_luxury_navigation_e2e.py` |
+| **2026-09-27** | ADR 0023 Accepted (Hybrid Luxury Navigation & Eyewear) | `ADR 0023 ACCEPTED` | `docs/adr/0023-*` |
+
