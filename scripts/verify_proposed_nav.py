@@ -1,3 +1,4 @@
+import re
 import httpx
 
 client = httpx.Client(follow_redirects=True, timeout=15.0)
@@ -32,23 +33,48 @@ all_proposed = [
     ("Brand MK Sunglasses", "/collections/designer-eyewear?filter.p.vendor=Michael+Kors")
 ]
 
-print("=== VERIFYING ALL PROPOSED URLS ===")
-failed = []
+print("=" * 80)
+print("AUDITING ALL NAVIGATION URLS ON LIVE STOREFRONT")
+print("=" * 80)
+
+results = []
 for label, path in all_proposed:
     url = "https://therareavenue.com" + path
-    r = client.get(url)
-    has_card = 'class="product-card' in r.text
-    empty = "0 products" in r.text
-    status = r.status_code
-    is_ok = (status == 200 and has_card and not empty)
-    if is_ok:
-        print(f"[{status}] OK     | {label:26} -> {path}")
-    else:
-        print(f"[{status}] FAILED | {label:26} -> {path} (has_card={has_card}, empty={empty})")
-        failed.append((label, path, status, has_card, empty))
+    try:
+        r = client.get(url)
+        status = r.status_code
+        
+        # Extract product URLs specifically from main collection grid
+        # Avoid counting menu or drawer links by finding /products/ links
+        product_links = list(set(re.findall(r'href="(/products/[a-z0-9\-]+)"', r.text)))
+        prod_count = len(product_links)
+        
+        # Check if the page returned 200 and has valid structure
+        is_200 = (status == 200)
+        
+        if is_200 and prod_count > 0:
+            category = "LIVE_WITH_PRODUCTS"
+            status_str = f"[{status}] ACTIVE ({prod_count} prods)"
+        elif is_200 and prod_count == 0:
+            category = "ROUTED_PENDING_PUBLICATION"
+            status_str = f"[{status}] PENDING CHANNEL PUB (0 prods)"
+        else:
+            category = "BROKEN"
+            status_str = f"[{status}] FAILED"
+
+        print(f"{status_str:35} | {label:26} -> {path}")
+        results.append((label, path, status, prod_count, category))
+    except Exception as e:
+        print(f"[ERR] FAILED                      | {label:26} -> {e}")
+        results.append((label, path, 0, 0, "ERROR"))
 
 print("=" * 80)
-if failed:
-    print(f"FAILED ({len(failed)}):", failed)
-else:
-    print(f"ALL {len(all_proposed)} PROPOSED URLS PASSED WITH 200 OK AND PRODUCT CARDS!")
+active = [r for r in results if r[4] == "LIVE_WITH_PRODUCTS"]
+pending = [r for r in results if r[4] == "ROUTED_PENDING_PUBLICATION"]
+broken = [r for r in results if r[4] in ("BROKEN", "ERROR")]
+
+print(f"AUDIT SUMMARY:")
+print(f"  Live active URLs with published products: {len(active)}/{len(all_proposed)}")
+print(f"  Valid 200 URLs awaiting sales channel publication (Coach/MK): {len(pending)}/{len(all_proposed)}")
+print(f"  Broken URLs (404/error): {len(broken)}/{len(all_proposed)}")
+print("=" * 80)

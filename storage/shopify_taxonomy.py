@@ -268,15 +268,17 @@ def generate_taxonomy_tags(prod: Dict[str, Any], vendor: str, product_type: str,
         tags.extend(["Watches", "Luxury Watches"])
     elif product_type in ("Shoes", "Sneakers", "Sandals", "Boots", "Flats"):
         tags.extend(["Footwear", "Shoes", "Premium Footwear", product_type])
-    elif product_type in ("Wallets", "Belts", "Sunglasses", "Accessories"):
+    elif product_type in ("Wallets", "Belts", "Accessories"):
         tags.extend(["Accessories", "Wallets & Accessories", product_type])
+    elif product_type in ("Sunglasses", "Eyewear"):
+        tags.extend(["Eyewear", "Sunglasses", "Designer Eyewear", "Designer Sunglasses"])
 
     # 2. Gender Department Tags
     if gender == "Men":
-        tags = [t for t in tags if not any(g in t.lower() for g in ["women", "ladies", "unisex"])]
+        tags = [t for t in tags if not re.search(r"\b(women|women\'s|ladies|unisex)\b", t.lower())]
         tags.extend(["Men", "Men's", "Gender:Men", "Gender:Men's"])
     elif gender == "Women":
-        tags = [t for t in tags if not any(g in t.lower() for g in ["men", "unisex"])]
+        tags = [t for t in tags if not re.search(r"\b(men|men\'s|unisex)\b", t.lower())]
         tags.extend(["Women", "Women's", "Gender:Women", "Gender:Women's", "Ladies"])
     else:
         tags.extend(["Unisex", "Gender:Unisex", "Men", "Men's", "Women", "Women's"])
@@ -304,20 +306,22 @@ def resolve_options_and_variants(
 ) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
     """
     Format Shopify ProductOptions and ProductVariants with whole-rupee INR math.
+    Dynamically discovers multi-dimensional options (e.g. Size + Color) and avoids
+    flattening or dropping variant combinations.
     """
     variants_raw = prod.get("variants") or []
     product_type = resolve_product_type(prod)
     source_sku = prod.get("source_sku") or prod.get("id") or ""
-    
+    bag_sil = resolve_luxury_bag_silhouette(prod)
+
     # 1. Single or No-Variant fallback (e.g. Bags with One Size)
     if not variants_raw or not isinstance(variants_raw, list) or len(variants_raw) == 0:
         inr_price = float(round(source_price * forex_rate))
         compare_str = None
         if compare_source and float(compare_source) > source_price:
             compare_str = f"{float(round(float(compare_source) * forex_rate)):.2f}"
-            
-        sku_val = f"RARE-{source_sku}" if not source_sku.startswith("RARE-") else source_sku
-        option_name = "Title"
+
+        sku_val = f"RARE-{source_sku}" if not str(source_sku).startswith("RARE-") else source_sku
         return (
             [{"name": "Title", "values": [{"name": "Default Title"}]}],
             [{
@@ -329,65 +333,95 @@ def resolve_options_and_variants(
             }]
         )
 
-    # 2. Detect Option Name
-    first_var = variants_raw[0] if isinstance(variants_raw[0], dict) else {}
-    first_opt_val = (first_var.get("option_values") or [{}])[0] if isinstance(first_var.get("option_values"), list) and len(first_var.get("option_values")) > 0 else {}
-    opt_val_name = first_opt_val.get("option_name")
-    
-    bag_sil = resolve_luxury_bag_silhouette(prod)
-    
-    if product_type == "Watches":
-        primary_option = "Case Diameter"
-    elif product_type in ("Shoes", "Sneakers", "Sandals", "Boots", "Flats"):
-        primary_option = "Size"
-    elif opt_val_name and opt_val_name.strip() in ("Color", "Colour", "Size", "Style", "Material"):
-        primary_option = "Color" if opt_val_name.strip() in ("Color", "Colour") else opt_val_name.strip()
-    elif any(v.get("color") for v in variants_raw if isinstance(v, dict)) or any(
-        isinstance(v.get("option_values"), list) and any(ov.get("option_name") in ("Color", "Colour") for ov in v.get("option_values", []))
-        for v in variants_raw if isinstance(v, dict)
-    ):
-        primary_option = "Color"
-    elif any(v.get("size") for v in variants_raw if isinstance(v, dict)) or any(
-        isinstance(v.get("option_values"), list) and any(ov.get("option_name") == "Size" for ov in v.get("option_values", []))
-        for v in variants_raw if isinstance(v, dict)
-    ):
-        primary_option = "Size"
-    elif bag_sil:
-        primary_option = "Color"
-    else:
-        primary_option = "Option"
+    # 2. Discover all option dimension names in order of appearance
+    ordered_dim_names: List[str] = []
+    for v in variants_raw:
+        if not isinstance(v, dict):
+            continue
+        ovs = v.get("option_values")
+        if isinstance(ovs, list) and len(ovs) > 0:
+            for ov in ovs:
+                if isinstance(ov, dict):
+                    raw_name = ov.get("option_name") or ""
+                    clean_name = "Color" if raw_name.strip() in ("Color", "Colour") else raw_name.strip()
+                    if clean_name and clean_name not in ordered_dim_names:
+                        ordered_dim_names.append(clean_name)
 
-    # Extract distinct option values and deduplicate variants by option value name
-    seen_variants: Dict[str, Dict[str, Any]] = {}
+    # If no option_values or option names discovered, infer from product attributes
+    if not ordered_dim_names:
+        has_color = any(v.get("color") for v in variants_raw if isinstance(v, dict))
+        has_size = any(v.get("size") for v in variants_raw if isinstance(v, dict))
+        if has_color and has_size:
+            ordered_dim_names = ["Size", "Color"]
+        elif has_color:
+            ordered_dim_names = ["Color"]
+        elif has_size:
+            ordered_dim_names = ["Size"]
+        elif product_type == "Watches":
+            ordered_dim_names = ["Case Diameter"]
+        elif product_type in ("Shoes", "Sneakers", "Sandals", "Boots", "Flats"):
+            ordered_dim_names = ["Size"]
+        elif bag_sil:
+            ordered_dim_names = ["Color"]
+        else:
+            ordered_dim_names = ["Option"]
+
+    # Limit to maximum 3 options (Shopify GraphQL limit)
+    ordered_dim_names = ordered_dim_names[:3]
+
+    # 3. Extract and deduplicate variant rows
+    # key: tuple of dimension values e.g. ("US 6 / UK 4", "Black")
+    seen_variants: Dict[Tuple[str, ...], Tuple[Dict[str, Any], List[Dict[str, str]]]] = {}
+    dim_values_set: Dict[str, set] = {d: set() for d in ordered_dim_names}
 
     for v in variants_raw:
         if not isinstance(v, dict):
             continue
-            
-        # Determine size/color value
-        val_name = ""
-        if v.get("option_values") and isinstance(v["option_values"], list):
-            val_name = v["option_values"][0].get("name", "")
-        if not val_name:
-            val_name = v.get("size") or v.get("title") or v.get("color") or "Default"
 
-        # Trim long strings
-        val_name = str(val_name).strip()[:40]
-        if not val_name:
-            val_name = "Default"
-            
-        if val_name not in seen_variants:
-            seen_variants[val_name] = v
+        var_opt_map: Dict[str, str] = {}
+        # Parse from option_values if present
+        if isinstance(v.get("option_values"), list):
+            for ov in v["option_values"]:
+                if isinstance(ov, dict):
+                    on = "Color" if ov.get("option_name", "").strip() in ("Color", "Colour") else ov.get("option_name", "").strip()
+                    if on:
+                        var_opt_map[on] = str(ov.get("name") or "").strip()[:40]
+
+        # Fill any missing dimensions from variant fields
+        row_values: List[str] = []
+        opt_val_list: List[Dict[str, str]] = []
+
+        for d in ordered_dim_names:
+            val = var_opt_map.get(d)
+            if not val:
+                if d == "Color":
+                    val = str(v.get("color") or (v.get("title") if not v.get("size") else "") or "Default").strip()[:40]
+                elif d == "Size":
+                    val = str(v.get("size") or v.get("title") or "Standard").strip()[:40]
+                else:
+                    val = str(v.get("title") or "Default").strip()[:40]
+            if not val:
+                val = "Default"
+
+            row_values.append(val)
+            dim_values_set[d].add(val)
+            opt_val_list.append({"optionName": d, "name": val})
+
+        row_key = tuple(row_values)
+        if row_key not in seen_variants:
+            seen_variants[row_key] = (v, opt_val_list)
         else:
             # If current variant is in stock and existing is not, prioritize current
-            if seen_variants[val_name].get("availability") != "in_stock" and v.get("availability") == "in_stock":
-                seen_variants[val_name] = v
+            existing_v = seen_variants[row_key][0]
+            if existing_v.get("availability") != "in_stock" and not existing_v.get("in_stock") and (v.get("availability") == "in_stock" or v.get("in_stock")):
+                seen_variants[row_key] = (v, opt_val_list)
 
-    variant_inputs = []
-    for val_name, v in seen_variants.items():
-        v_source_price = float(v.get("source_price") or source_price)
+    # 4. Construct ProductSet variant inputs
+    variant_inputs: List[Dict[str, Any]] = []
+    for row_key, (v, opt_val_list) in seen_variants.items():
+        v_source_price = float(v.get("source_price") or prod.get("source_price") or source_price or 0.0)
         v_inr_price = float(round(v_source_price * forex_rate))
-        
+
         v_compare_source = v.get("source_compare_at_price") or compare_source
         v_compare_str = None
         if v_compare_source and float(v_compare_source) > v_source_price:
@@ -401,12 +435,7 @@ def resolve_options_and_variants(
         v_barcode = v.get("barcode") or v.get("upc") or v.get("ean")
 
         var_dict = {
-            "optionValues": [
-                {
-                    "optionName": primary_option,
-                    "name": val_name
-                }
-            ],
+            "optionValues": opt_val_list,
             "price": f"{v_inr_price:.2f}",
             "compareAtPrice": v_compare_str,
             "sku": v_sku,
@@ -422,12 +451,14 @@ def resolve_options_and_variants(
 
         variant_inputs.append(var_dict)
 
-    product_options = [
-        {
-            "name": primary_option,
-            "values": [{"name": opt} for opt in sorted(list(seen_variants.keys()))]
-        }
-    ]
+    # 5. Build productOptions list
+    product_options = []
+    for d in ordered_dim_names:
+        sorted_vals = sorted(list(dim_values_set[d]))
+        product_options.append({
+            "name": d,
+            "values": [{"name": val} for val in sorted_vals]
+        })
 
     return product_options, variant_inputs
 
@@ -551,6 +582,61 @@ def format_luxury_watch_description_html(prod: Dict[str, Any]) -> str:
 </div>'''
 
 
+def resolve_clean_bag_material(prod: Dict[str, Any], title: str) -> str:
+    """Extract clean, authentic luxury material name without manufacturer legal disclaimers."""
+    specs = prod.get("specifications") or {}
+    raw_material = specs.get("Material") or specs.get("Main Material") or specs.get("Major Material") or prod.get("material") or ""
+    raw_mat_str = str(raw_material).strip()
+
+    # Detect manufacturer legal/environmental disclaimer paragraphs
+    if "tanneries receiving" in raw_mat_str.lower() or "leather in this product" in raw_mat_str.lower() or len(raw_mat_str) > 80:
+        bullets = specs.get("DetailsBullets") or []
+        for b in bullets:
+            b_str = str(b).strip()
+            b_low = b_str.lower()
+            if any(k in b_low for k in ["nubuck", "pebbled leather", "saffiano", "crossgrain", "calf leather", "smooth leather", "nappa", "suede"]):
+                return b_str
+            if "100% leather" in b_low:
+                return "100% Refined Leather"
+            if "canvas" in b_low:
+                return "Durable Luxury Canvas"
+
+        title_low = title.lower()
+        if "nubuck" in title_low:
+            return "Premium Nubuck Leather"
+        if "pebbled leather" in title_low:
+            return "Pebbled Leather"
+        if "saffiano" in title_low:
+            return "Saffiano Leather"
+        if "leather" in title_low:
+            return "LWG Certified Leather"
+        if "canvas" in title_low:
+            return "Signature Coated Canvas"
+        return "LWG Certified Leather"
+
+    if raw_mat_str and raw_mat_str.lower() != title.strip().lower() and not raw_mat_str.lower().startswith("http"):
+        return raw_mat_str
+
+    title_low = title.lower()
+    if "signature canvas" in title_low:
+        return "Signature Coated Canvas"
+    if "pebbled leather" in title_low:
+        return "Pebbled Leather"
+    if "saffiano" in title_low:
+        return "Saffiano Leather"
+    if "leather" in title_low:
+        return "Refined Calf Leather"
+    if "suede" in title_low:
+        return "Premium Suede"
+    if "canvas" in title_low:
+        return "Durable Luxury Canvas"
+    if "nylon" in title_low:
+        return "Technical Luxury Nylon"
+    if prod.get("source_store") == "jwpei":
+        return "Vegan Leather"
+    return "Refined Leather"
+
+
 def format_luxury_bag_description_html(prod: Dict[str, Any]) -> str:
     """
     Format a world-class luxury bag product description HTML with:
@@ -566,19 +652,7 @@ def format_luxury_bag_description_html(prod: Dict[str, Any]) -> str:
     specs = prod.get("specifications") or {}
     
     # 1. Extract and sanitize specs
-    raw_material = specs.get("Material") or specs.get("Main Material") or specs.get("Major Material") or ""
-    if raw_material and raw_material.strip().lower() != title.strip().lower() and not raw_material.strip().lower().startswith("http"):
-        material = str(raw_material).strip()
-    elif "signature canvas" in title.lower():
-        material = "Signature Coated Canvas & Smooth Leather"
-    elif "leather" in title.lower():
-        material = "Refined Calf Leather"
-    elif "suede" in title.lower():
-        material = "Premium Suede Leather"
-    elif "canvas" in title.lower():
-        material = "Durable Luxury Canvas"
-    else:
-        material = "Premium Leather"
+    material = resolve_clean_bag_material(prod, title)
         
     lining = specs.get("Lining") or specs.get("Lining Material") or ""
     hardware = specs.get("Hardware") or specs.get("Hardware Finish") or ""
@@ -668,6 +742,9 @@ def format_luxury_bag_description_html(prod: Dict[str, Any]) -> str:
         '<tr><td style="padding: 6px 10px; color: #6b7280;" colspan="2">Standard luxury sizing profile. Accommodates daily essentials.</td></tr>'
     )
 
+    highlight_mat = material.split(",")[0].strip()[:30]
+    highlight_hw = hardware.split(",")[0].strip()[:30] if hardware else 'Luxury Custom'
+
     return f'''<div class="luxury-bag-overview" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1a1a1a;">
   <p class="product-summary" style="font-size: 14px; line-height: 1.6; color: #374151; margin-bottom: 20px;">{summary_text}</p>
 
@@ -678,11 +755,11 @@ def format_luxury_bag_description_html(prod: Dict[str, Any]) -> str:
     </div>
     <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px;">
       <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; font-weight: 600;">Material</div>
-      <div style="font-size: 13px; font-weight: 600; color: #111827; margin-top: 2px;">{material[:28]}</div>
+      <div style="font-size: 13px; font-weight: 600; color: #111827; margin-top: 2px;">{highlight_mat}</div>
     </div>
     <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px;">
       <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; font-weight: 600;">Hardware</div>
-      <div style="font-size: 13px; font-weight: 600; color: #111827; margin-top: 2px;">{hardware[:28] if hardware else 'Luxury Custom'}</div>
+      <div style="font-size: 13px; font-weight: 600; color: #111827; margin-top: 2px;">{highlight_hw}</div>
     </div>
   </div>
 

@@ -25,6 +25,7 @@ def verify_all_bags():
     option_names = set()
     variants_with_files = 0
     total_variants = 0
+    multi_option_products = 0
     issues = []
 
     for brand, prods in catalog.items():
@@ -37,17 +38,31 @@ def verify_all_bags():
             title = p.get("title", "")
             payload = prepare_product_set_payload(p)
 
-            # 1. Option name
+            # 1. Product Options Architecture
             opts = payload.get("productOptions", [])
             if not opts:
                 issues.append(f"[{brand}] {pid} has no productOptions")
                 brand_issues += 1
             else:
-                opt_name = opts[0]["name"]
-                option_names.add(opt_name)
-                if opt_name == "Option":
-                    issues.append(f"[{brand}] {pid} still has generic 'Option' name instead of Color/Size: {title}")
-                    brand_issues += 1
+                for opt in opts:
+                    opt_name = opt["name"]
+                    option_names.add(opt_name)
+                    if opt_name == "Option":
+                        issues.append(f"[{brand}] {pid} still has generic 'Option' name instead of Color/Size: {title}")
+                        brand_issues += 1
+
+                # Check multi-dimension preservation
+                raw_vars = p.get("variants") or []
+                raw_dims = set()
+                for rv in raw_vars:
+                    for ov in rv.get("option_values", []):
+                        if ov.get("option_name"):
+                            raw_dims.add(ov.get("option_name"))
+                if len(raw_dims) > 1:
+                    multi_option_products += 1
+                    if len(opts) < len(raw_dims):
+                        issues.append(f"[{brand}] {pid} lost option dimensions! Raw had {raw_dims} but payload only has {[o['name'] for o in opts]}")
+                        brand_issues += 1
 
             # 2. Variants and image linkages
             vars_list = payload.get("variants", [])
@@ -55,6 +70,12 @@ def verify_all_bags():
             root_files = [f["originalSource"] for f in payload.get("files", [])]
 
             for v in vars_list:
+                # Option values completeness: variant must have option value for each option
+                v_ovs = v.get("optionValues", [])
+                if len(v_ovs) != len(opts):
+                    issues.append(f"[{brand}] {pid} variant has {len(v_ovs)} optionValues but product has {len(opts)} options")
+                    brand_issues += 1
+
                 v_file = v.get("file")
                 if v_file:
                     variants_with_files += 1
@@ -85,6 +106,18 @@ def verify_all_bags():
                     issues.append(f"[{brand}] {pid} contains unrendered 'N/A' or 'None' in description specs")
                     brand_issues += 1
 
+                # Quality: Check highlight cards for truncated sentences
+                if 'leather in this' in desc_html.lower():
+                    issues.append(f"[{brand}] {pid} contains uncleaned legal disclaimer in descriptionHtml")
+                    brand_issues += 1
+
+            # 4. Tags Integrity
+            tags = payload.get("tags", [])
+            p_type = payload.get("productType", "")
+            if p_type in ("Sunglasses", "Eyewear") and "Wallets & Accessories" in tags:
+                issues.append(f"[{brand}] {pid} sunglasses leaked into 'Wallets & Accessories' tags")
+                brand_issues += 1
+
         print(f"{brand.upper()}: {len(prods)} products checked, {brand_issues} issues found.")
 
     print("\n" + "=" * 80)
@@ -92,7 +125,8 @@ def verify_all_bags():
     print(f"  Total products checked: {total_prods}")
     print(f"  Total variants generated: {total_variants}")
     print(f"  Variants with image files attached: {variants_with_files}")
-    print(f"  Observed option names across all products: {option_names}")
+    print(f"  Multi-option products verified: {multi_option_products}")
+    print(f"  Observed option names across all products: {sorted(list(option_names))}")
     print(f"  Total issues found: {len(issues)}")
     if issues:
         for iss in issues[:20]:
