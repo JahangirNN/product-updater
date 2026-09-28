@@ -6,7 +6,83 @@
 <style>
   .header-sidebar__sub-panel .header-sidebar__linklist,
   #header-panel-brands .header-sidebar__linklist {
-    padding-bottom: max(3rem, env(safe-area-inset-bottom, 2rem)) !important;
+    padding-bottom: max(3.5rem, env(safe-area-inset-bottom, 2.5rem)) !important;
+  }
+
+  /* Luxury Mobile Brands Drawer (ADR 0022/2026) */
+  .luxury-sidebar__section-title {
+    padding: 0.9rem 1.25rem 0.45rem !important;
+    font-size: 0.6875rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase !important;
+    color: #8c827a !important;
+    background: #faf8f5 !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04) !important;
+    display: flex !important;
+    align-items: center !important;
+    list-style: none !important;
+  }
+
+  .luxury-sidebar__all-link-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0.95rem 1.25rem !important;
+    font-size: 0.8125rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.09em !important;
+    text-transform: uppercase !important;
+    color: #c9a876 !important;
+    background: #ffffff !important;
+    text-decoration: none !important;
+    transition: background 0.2s ease, color 0.2s ease !important;
+  }
+
+  .luxury-sidebar__all-link-btn:hover {
+    background: #faf8f5 !important;
+    color: #1a1a1a !important;
+  }
+
+  .luxury-sidebar__brand-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+
+  .luxury-sidebar__brand-name {
+    font-weight: 500;
+    color: #1a1a1a;
+    letter-spacing: 0.02em;
+  }
+
+  .luxury-sidebar__chip {
+    font-size: 0.625rem !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    padding: 0.2rem 0.5rem !important;
+    border-radius: 999px !important;
+    background: rgba(201, 168, 118, 0.12) !important;
+    color: #8a6c38 !important;
+    border: 1px solid rgba(201, 168, 118, 0.25) !important;
+    margin-left: auto !important;
+    margin-right: 0.75rem !important;
+    white-space: nowrap !important;
+    line-height: 1.2 !important;
+  }
+
+  .luxury-sidebar__arrow {
+    color: #bbb;
+    font-size: 0.75rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .header-sidebar__linklist-button:hover .luxury-sidebar__arrow {
+    transform: translateX(2px);
+    color: #c9a876;
   }
 </style>
 
@@ -160,18 +236,25 @@
     Brands
   </button>
 
-  <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list" style="padding-bottom: max(3rem, env(safe-area-inset-bottom, 2rem));">
+  <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list">
     <li>
-      <a href="/collections" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" style="font-weight: 600; color: #c9a876;">
-        View All Maisons &rarr;
+      <a href="/collections" class="luxury-sidebar__all-link-btn">
+        <span>View All Maisons</span>
+        <span>&rarr;</span>
       </a>
     </li>
-    <li><a href="/collections/citizen" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Citizen</a></li>
+
+    {%- comment -%} Section 1: Iconic Leather Maisons {%- endcomment -%}
+    <li class="luxury-sidebar__section-title">
+      Leather Goods &amp; Ateliers
+    </li>
+
     <li>
       <accordion-disclosure>
         <details class="accordion__disclosure group">
-          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
-            COACH
+          <summary class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            <span class="luxury-sidebar__brand-name">COACH</span>
+            <span class="luxury-sidebar__chip">Bags &amp; Leather</span>
             <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
           </summary>
           <div class="header-sidebar__nested-linklist">
@@ -182,12 +265,13 @@
         </details>
       </accordion-disclosure>
     </li>
-    <li><a href="/collections/ferragamo" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Ferragamo</a></li>
+
     <li>
       <accordion-disclosure>
         <details class="accordion__disclosure group">
-          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
-            JW PEI
+          <summary class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            <span class="luxury-sidebar__brand-name">JW PEI</span>
+            <span class="luxury-sidebar__chip">Vegan Leather</span>
             <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
           </summary>
           <div class="header-sidebar__nested-linklist">
@@ -198,11 +282,13 @@
         </details>
       </accordion-disclosure>
     </li>
+
     <li>
       <accordion-disclosure>
         <details class="accordion__disclosure group">
-          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
-            Michael Kors
+          <summary class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            <span class="luxury-sidebar__brand-name">Michael Kors</span>
+            <span class="luxury-sidebar__chip">Multi-Category</span>
             <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
           </summary>
           <div class="header-sidebar__nested-linklist">
@@ -214,9 +300,58 @@
         </details>
       </accordion-disclosure>
     </li>
-    <li><a href="/collections/movado" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Movado</a></li>
-    <li><a href="/collections/seiko" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Seiko</a></li>
-    <li><a href="/collections/tissot" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Tissot</a></li>
-    <li><a href="/collections/versace" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">Versace</a></li>
+
+    {%- comment -%} Section 2: Fine Timepieces & Horology {%- endcomment -%}
+    <li class="luxury-sidebar__section-title">
+      Fine Timepieces &amp; Horology
+    </li>
+
+    <li>
+      <a href="/collections/tissot" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">Tissot</span>
+        <span class="luxury-sidebar__chip">Swiss Watches</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/seiko" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">Seiko</span>
+        <span class="luxury-sidebar__chip">Japanese Craft</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/citizen" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">Citizen</span>
+        <span class="luxury-sidebar__chip">Eco-Drive</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/movado" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">Movado</span>
+        <span class="luxury-sidebar__chip">Modern Horology</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/versace" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">Versace</span>
+        <span class="luxury-sidebar__chip">Milano Haute</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/ferragamo" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">Ferragamo</span>
+        <span class="luxury-sidebar__chip">Swiss Made</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
   </ul>
 </div>
