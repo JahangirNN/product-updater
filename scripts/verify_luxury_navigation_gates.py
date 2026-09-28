@@ -59,7 +59,7 @@ def run_gate1():
         else:
             print(f"  [+] Clean: 0 women-specific handles detected.")
 
-    # Also verify via Shopify GraphQL that mens-bags collection has 0 Gender:Women products
+    # Deep verification via Shopify GraphQL that mens-bags collection has 0 Gender:Women products
     col_query = """
     query {
       collectionByHandle(handle: "mens-bags") {
@@ -174,10 +174,13 @@ def run_gate3():
     # 2. Check compound brand+silhouette toggling on /collections/womens-handbags/coach
     resp2 = client.get(f"{BASE_URL}/collections/womens-handbags/coach")
     assert resp2.status_code == 200
-    expected_compound_url = "/collections/womens-handbags/coach+satchels"
-    has_compound_link = expected_compound_url in resp2.text
-    print(f"[*] /collections/womens-handbags/coach compound link ({expected_compound_url}): {has_compound_link}")
-    if not has_compound_link:
+    expected_compound_satchels = "/collections/womens-handbags/coach+satchels"
+    expected_compound_backpacks = "/collections/womens-handbags/backpacks+coach"
+    has_satchels_link = expected_compound_satchels in resp2.text
+    has_backpacks_link = expected_compound_backpacks in resp2.text
+    print(f"[*] /collections/womens-handbags/coach compound link ({expected_compound_satchels}): {has_satchels_link}")
+    print(f"[*] /collections/womens-handbags/coach canonical alphabetical link ({expected_compound_backpacks}): {has_backpacks_link}")
+    if not has_satchels_link or not has_backpacks_link:
         gate3_passed = False
 
     # 3. Check active state and toggle-off on /collections/womens-handbags/coach+satchels

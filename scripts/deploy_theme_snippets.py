@@ -36,6 +36,7 @@ SNIPPETS_TO_DEPLOY = [
     ("snippets/luxury-desktop-nav.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "luxury-desktop-nav.liquid")),
     ("snippets/luxury-sidebar-panels.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "luxury-sidebar-panels.liquid")),
     ("snippets/facets.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "facets.liquid")),
+    ("snippets/active-facets.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "active-facets.liquid")),
 ]
 
 def deploy_snippets():

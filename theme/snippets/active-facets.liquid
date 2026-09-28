@@ -21,16 +21,28 @@ Supported variables
     {%- for tag in current_tags -%}
       {%- liquid
         assign tag_lower = tag | downcase
+        assign t_handle = tag | handleize
         if tag_lower == 'men' or tag_lower == 'mens' or tag_lower == "men's"
           assign tag_label = "Gender: Men's"
         elsif tag_lower == 'women' or tag_lower == 'womens' or tag_lower == "women's"
           assign tag_label = "Gender: Women's"
+        elsif t_handle == 'satchels'
+          assign tag_label = "Silhouette: Satchels & Top Handles"
+        elsif t_handle == 'crossbody-bags'
+          assign tag_label = "Silhouette: Crossbody & Messengers"
+        elsif t_handle == 'totes'
+          assign tag_label = "Silhouette: Totes & Carryalls"
+        elsif t_handle == 'shoulder-bags'
+          assign tag_label = "Silhouette: Shoulder Bags"
+        elsif t_handle == 'backpacks'
+          assign tag_label = "Silhouette: Backpacks & Rucksacks"
+        elsif t_handle == 'wallets'
+          assign tag_label = "Silhouette: Wallets & Small Goods"
         else
           assign is_vendor_tag = false
           for vendor in collection.all_vendors
             assign v_handle = vendor | handleize
-            assign t_handle = tag | handleize
-            if v_handle == t_handle or t_handle == 'on' and v_handle == 'on-running'
+            if v_handle == t_handle or t_handle == 'on' and v_handle == 'on-running' or t_handle == 'michael-kors' and v_handle == 'michael-michael-kors'
               assign is_vendor_tag = true
               assign tag_label = "Brand: " | append: vendor
               break
@@ -48,15 +60,17 @@ Supported variables
           {%- unless other_tag == tag -%}
             {%- assign other_handle = other_tag | handleize -%}
             {%- if other_handle == 'on-running' -%}{%- assign other_handle = 'on' -%}{%- endif -%}
+            {%- if other_handle == 'michael-michael-kors' -%}{%- assign other_handle = 'michael-kors' -%}{%- endif -%}
             {%- if remaining_tags == '' -%}
               {%- assign remaining_tags = other_handle -%}
             {%- else -%}
-              {%- assign remaining_tags = remaining_tags | append: '+' | append: other_handle -%}
+              {%- assign remaining_tags = remaining_tags | append: ',' | append: other_handle -%}
             {%- endif -%}
           {%- endunless -%}
         {%- endfor -%}
         {%- if remaining_tags != '' -%}
-          {{ collection.url }}/{{ remaining_tags }}
+          {%- assign sorted_remaining = remaining_tags | split: ',' | sort | join: '+' -%}
+          {{ collection.url }}/{{ sorted_remaining }}
         {%- else -%}
           {{ collection.url }}
         {%- endif -%}

@@ -195,7 +195,12 @@ Supported variables
                 {%- if sil_active -%}
                   {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
                 {%- else -%}
-                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}+satchels{%- else -%}{{ collection.url }}/satchels{%- endif -%}
+                  {%- if active_vendor_tag != '' -%}
+                    {%- assign sorted_sil_tags = active_vendor_tag | append: ',' | append: 'satchels' | split: ',' | sort | join: '+' -%}
+                    {{ collection.url }}/{{ sorted_sil_tags }}
+                  {%- else -%}
+                    {{ collection.url }}/satchels
+                  {%- endif -%}
                 {%- endif -%}
                 {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
               {%- endcapture -%}
@@ -221,7 +226,12 @@ Supported variables
                 {%- if sil_active -%}
                   {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
                 {%- else -%}
-                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}+crossbody-bags{%- else -%}{{ collection.url }}/crossbody-bags{%- endif -%}
+                  {%- if active_vendor_tag != '' -%}
+                    {%- assign sorted_sil_tags = active_vendor_tag | append: ',' | append: 'crossbody-bags' | split: ',' | sort | join: '+' -%}
+                    {{ collection.url }}/{{ sorted_sil_tags }}
+                  {%- else -%}
+                    {{ collection.url }}/crossbody-bags
+                  {%- endif -%}
                 {%- endif -%}
                 {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
               {%- endcapture -%}
@@ -247,7 +257,12 @@ Supported variables
                 {%- if sil_active -%}
                   {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
                 {%- else -%}
-                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}+totes{%- else -%}{{ collection.url }}/totes{%- endif -%}
+                  {%- if active_vendor_tag != '' -%}
+                    {%- assign sorted_sil_tags = active_vendor_tag | append: ',' | append: 'totes' | split: ',' | sort | join: '+' -%}
+                    {{ collection.url }}/{{ sorted_sil_tags }}
+                  {%- else -%}
+                    {{ collection.url }}/totes
+                  {%- endif -%}
                 {%- endif -%}
                 {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
               {%- endcapture -%}
@@ -273,7 +288,12 @@ Supported variables
                 {%- if sil_active -%}
                   {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
                 {%- else -%}
-                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}+shoulder-bags{%- else -%}{{ collection.url }}/shoulder-bags{%- endif -%}
+                  {%- if active_vendor_tag != '' -%}
+                    {%- assign sorted_sil_tags = active_vendor_tag | append: ',' | append: 'shoulder-bags' | split: ',' | sort | join: '+' -%}
+                    {{ collection.url }}/{{ sorted_sil_tags }}
+                  {%- else -%}
+                    {{ collection.url }}/shoulder-bags
+                  {%- endif -%}
                 {%- endif -%}
                 {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
               {%- endcapture -%}
@@ -299,7 +319,12 @@ Supported variables
                 {%- if sil_active -%}
                   {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
                 {%- else -%}
-                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}+backpacks{%- else -%}{{ collection.url }}/backpacks{%- endif -%}
+                  {%- if active_vendor_tag != '' -%}
+                    {%- assign sorted_sil_tags = active_vendor_tag | append: ',' | append: 'backpacks' | split: ',' | sort | join: '+' -%}
+                    {{ collection.url }}/{{ sorted_sil_tags }}
+                  {%- else -%}
+                    {{ collection.url }}/backpacks
+                  {%- endif -%}
                 {%- endif -%}
                 {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
               {%- endcapture -%}
@@ -325,7 +350,12 @@ Supported variables
                 {%- if sil_active -%}
                   {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
                 {%- else -%}
-                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}+wallets{%- else -%}{{ collection.url }}/wallets{%- endif -%}
+                  {%- if active_vendor_tag != '' -%}
+                    {%- assign sorted_sil_tags = active_vendor_tag | append: ',' | append: 'wallets' | split: ',' | sort | join: '+' -%}
+                    {{ collection.url }}/{{ sorted_sil_tags }}
+                  {%- else -%}
+                    {{ collection.url }}/wallets
+                  {%- endif -%}
                 {%- endif -%}
                 {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
               {%- endcapture -%}
@@ -386,7 +416,8 @@ Supported variables
                   {%- if is_vendor_active -%}
                     {%- if active_silhouette_tag != '' -%}
                       {%- if current_gender_tag != '' -%}
-                        {{ collection.url }}/{{ current_gender_tag }}+{{ active_silhouette_tag }}
+                        {%- assign sorted_tags = current_gender_tag | append: ',' | append: active_silhouette_tag | split: ',' | sort | join: '+' -%}
+                        {{ collection.url }}/{{ sorted_tags }}
                       {%- else -%}
                         {{ collection.url }}/{{ active_silhouette_tag }}
                       {%- endif -%}
@@ -398,12 +429,15 @@ Supported variables
                   {%- else -%}
                     {%- if active_silhouette_tag != '' -%}
                       {%- if current_gender_tag != '' -%}
-                        {{ collection.url }}/{{ current_gender_tag }}+{{ filter_tag_param }}+{{ active_silhouette_tag }}
+                        {%- assign sorted_tags = current_gender_tag | append: ',' | append: filter_tag_param | append: ',' | append: active_silhouette_tag | split: ',' | sort | join: '+' -%}
+                        {{ collection.url }}/{{ sorted_tags }}
                       {%- else -%}
-                        {{ collection.url }}/{{ filter_tag_param }}+{{ active_silhouette_tag }}
+                        {%- assign sorted_tags = filter_tag_param | append: ',' | append: active_silhouette_tag | split: ',' | sort | join: '+' -%}
+                        {{ collection.url }}/{{ sorted_tags }}
                       {%- endif -%}
                     {%- elsif current_gender_tag != '' -%}
-                      {{ collection.url }}/{{ current_gender_tag }}+{{ filter_tag_param }}
+                      {%- assign sorted_tags = current_gender_tag | append: ',' | append: filter_tag_param | split: ',' | sort | join: '+' -%}
+                      {{ collection.url }}/{{ sorted_tags }}
                     {%- else -%}
                       {{ collection.url }}/{{ filter_tag_param }}
                     {%- endif -%}
