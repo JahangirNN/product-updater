@@ -33,6 +33,7 @@ mutation themeFilesUpsert($files: [OnlineStoreThemeFilesUpsertFileInput!]!, $the
 """
 
 FILES_TO_DEPLOY = [
+    ("sections/header.liquid", os.path.join(PROJECT_ROOT, "theme", "sections", "header.liquid")),
     ("sections/collection-banner.liquid", os.path.join(PROJECT_ROOT, "theme", "sections", "collection-banner.liquid")),
     ("sections/newsletter-popup.liquid", os.path.join(PROJECT_ROOT, "theme", "sections", "newsletter-popup.liquid")),
     ("snippets/luxury-desktop-nav.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "luxury-desktop-nav.liquid")),

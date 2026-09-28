@@ -59,8 +59,16 @@
 
   #shopify-section-{{ section.id }} .header__primary-nav {
     flex-wrap: nowrap !important;
-    column-gap: 1.75rem !important;
+    column-gap: clamp(0.45rem, 1.1vw, 1.75rem) !important;
     align-items: center !important;
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1250px) {
+    #shopify-section-{{ section.id }} .luxury-nav__trigger {
+      padding: 0.45rem 0.18rem !important;
+      font-size: 0.73rem !important;
+      letter-spacing: 0.07em !important;
+    }
   }
 
   #shopify-section-{{ section.id }} .header__primary-nav-item > a,

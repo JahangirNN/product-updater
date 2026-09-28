@@ -63,6 +63,8 @@
     max-width: 100% !important;
     box-sizing: border-box !important;
     overflow-x: hidden !important;
+    max-height: calc(100vh - 120px) !important;
+    overflow-y: auto !important;
     background: rgba(255, 255, 255, 0.98) !important;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -71,6 +73,20 @@
     box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.07);
     padding: 2.25rem 2rem 2.5rem !important;
     z-index: 99;
+  }
+
+  .luxury-mega-menu::-webkit-scrollbar {
+    width: 5px;
+  }
+  .luxury-mega-menu::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .luxury-mega-menu::-webkit-scrollbar-thumb {
+    background: rgba(201, 168, 118, 0.35);
+    border-radius: 4px;
+  }
+  .luxury-mega-menu::-webkit-scrollbar-thumb:hover {
+    background: rgba(201, 168, 118, 0.7);
   }
 
   .luxury-mega-menu__inner {
@@ -264,10 +280,11 @@
     max-width: min(1280px, 95vw) !important;
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (min-width: 1000px) and (max-width: 1250px) {
     .luxury-mega-menu__inner--brands {
-      grid-template-columns: 1fr 1fr !important;
-      gap: 1.5rem !important;
+      grid-template-columns: 1.12fr 1fr 1fr 1fr !important;
+      gap: 1.1rem !important;
+      max-width: 98vw !important;
     }
   }
 
@@ -414,18 +431,22 @@
     font-weight: 400;
   }
 
-  .luxury-horology-arrow {
-    color: #ccc;
-    font-size: 0.75rem;
-    opacity: 0;
-    transform: translateX(-4px);
+  .luxury-horology-origin {
+    font-size: 0.625rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #8c827a;
+    padding: 0.15rem 0.45rem;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.035);
+    font-weight: 500;
     transition: all 0.18s ease;
+    white-space: nowrap;
   }
 
-  .luxury-horology-link:hover .luxury-horology-arrow {
-    opacity: 1;
-    color: #c9a876;
-    transform: translateX(0);
+  .luxury-horology-link:hover .luxury-horology-origin {
+    background: rgba(201, 168, 118, 0.15);
+    color: #7d6029;
   }
 
   /* Column 3: Curated Maison Directory (A - Z) */
@@ -457,10 +478,11 @@
 
   .luxury-directory-name {
     font-family: var(--text-font-family);
-    font-size: 0.78125rem;
-    font-weight: 500;
+    font-size: 0.75rem;
+    font-weight: 600;
     color: #222222;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     transition: color 0.18s ease;
   }
 
@@ -763,7 +785,7 @@
                     <span class="luxury-horology-name">Tissot</span>
                     <span class="luxury-horology-desc">Swiss Automatic &amp; PRX</span>
                   </div>
-                  <span class="luxury-horology-arrow">&rarr;</span>
+                  <span class="luxury-horology-origin">Swiss</span>
                 </a>
               </li>
               <li>
@@ -772,7 +794,7 @@
                     <span class="luxury-horology-name">Seiko</span>
                     <span class="luxury-horology-desc">Presage &amp; Prospex</span>
                   </div>
-                  <span class="luxury-horology-arrow">&rarr;</span>
+                  <span class="luxury-horology-origin">Japan</span>
                 </a>
               </li>
               <li>
@@ -781,7 +803,7 @@
                     <span class="luxury-horology-name">Citizen</span>
                     <span class="luxury-horology-desc">Promaster &amp; Tsuyosa</span>
                   </div>
-                  <span class="luxury-horology-arrow">&rarr;</span>
+                  <span class="luxury-horology-origin">Eco-Drive</span>
                 </a>
               </li>
               <li>
@@ -790,7 +812,7 @@
                     <span class="luxury-horology-name">Movado</span>
                     <span class="luxury-horology-desc">Museum Classic &amp; Modernist</span>
                   </div>
-                  <span class="luxury-horology-arrow">&rarr;</span>
+                  <span class="luxury-horology-origin">Swiss</span>
                 </a>
               </li>
               <li>
@@ -799,7 +821,7 @@
                     <span class="luxury-horology-name">Versace</span>
                     <span class="luxury-horology-desc">Milano Haute Horlogerie</span>
                   </div>
-                  <span class="luxury-horology-arrow">&rarr;</span>
+                  <span class="luxury-horology-origin">Milano</span>
                 </a>
               </li>
               <li>
@@ -808,7 +830,7 @@
                     <span class="luxury-horology-name">Ferragamo</span>
                     <span class="luxury-horology-desc">Swiss Made Craftsmanship</span>
                   </div>
-                  <span class="luxury-horology-arrow">&rarr;</span>
+                  <span class="luxury-horology-origin">Swiss Made</span>
                 </a>
               </li>
             </ul>
@@ -826,7 +848,7 @@
               </li>
               <li>
                 <a href="{{ routes.collections_url }}/coach" class="luxury-directory-link">
-                  <span class="luxury-directory-name">COACH</span>
+                  <span class="luxury-directory-name">Coach</span>
                   <span class="luxury-directory-badge">Bags &amp; Leather</span>
                 </a>
               </li>
@@ -886,7 +908,7 @@
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a876" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                   </svg>
-                  FEATURED MAISON
+                  CURATED MAISONS
                 </div>
 
                 <div class="luxury-editorial-crest">
