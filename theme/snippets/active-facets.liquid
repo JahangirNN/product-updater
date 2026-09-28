@@ -38,15 +38,39 @@ Supported variables
           assign tag_label = "Silhouette: Backpacks & Rucksacks"
         elsif t_handle == 'wallets'
           assign tag_label = "Silhouette: Wallets & Small Goods"
+        elsif t_handle == 'michael-kors' or t_handle == 'michael-michael-kors'
+          assign tag_label = "Brand: Michael Kors"
+        elsif t_handle == 'coach'
+          assign tag_label = "Brand: COACH"
+        elsif t_handle == 'marc-jacobs'
+          assign tag_label = "Brand: Marc Jacobs"
+        elsif t_handle == 'jw-pei'
+          assign tag_label = "Brand: JW PEI"
+        elsif t_handle == 'on' or t_handle == 'on-running'
+          assign tag_label = "Brand: On"
+        elsif t_handle == 'tissot'
+          assign tag_label = "Brand: Tissot"
+        elsif t_handle == 'movado'
+          assign tag_label = "Brand: Movado"
+        elsif t_handle == 'seiko'
+          assign tag_label = "Brand: Seiko"
+        elsif t_handle == 'versace'
+          assign tag_label = "Brand: Versace"
+        elsif t_handle == 'citizen'
+          assign tag_label = "Brand: Citizen"
+        elsif t_handle == 'ferragamo'
+          assign tag_label = "Brand: Ferragamo"
         else
           assign is_vendor_tag = false
           for vendor in collection.all_vendors
             assign v_handle = vendor | handleize
-            if v_handle == t_handle or t_handle == 'on' and v_handle == 'on-running' or t_handle == 'michael-kors' and v_handle == 'michael-michael-kors'
+            if v_handle == t_handle or t_handle == 'on' and v_handle == 'on-running' or t_handle == 'michael-kors' and v_handle == 'michael-michael-kors' or t_handle == 'michael-kors' and v_handle == 'michael-kors'
               assign is_vendor_tag = true
-              assign norm_vendor = vendor
-              if norm_vendor == 'MICHAEL Michael Kors' or norm_vendor == 'Michael Michael Kors' or norm_vendor == 'MICHAEL MICHAEL KORS'
+              assign vendor_lower = vendor | downcase
+              if vendor_lower == 'michael michael kors' or vendor_lower == 'michael kors'
                 assign norm_vendor = 'Michael Kors'
+              else
+                assign norm_vendor = vendor
               endif
               assign tag_label = "Brand: " | append: norm_vendor
               break

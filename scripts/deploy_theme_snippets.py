@@ -59,13 +59,21 @@ def deploy_snippets():
         })
         print(f"Prepared {rel_path} ({len(content)} bytes)")
 
-    data, ext, err = execute_shopify_graphql(
-        THEME_FILES_MUTATION,
-        variables={
-            "themeId": THEME_ID,
-            "files": files_payload
-        }
-    )
+    import time
+    data, ext, err = None, None, None
+    for attempt in range(1, 4):
+        print(f"Deploy attempt {attempt}/3...")
+        data, ext, err = execute_shopify_graphql(
+            THEME_FILES_MUTATION,
+            variables={
+                "themeId": THEME_ID,
+                "files": files_payload
+            }
+        )
+        if data and not err:
+            break
+        print(f"Attempt {attempt} failed: {err}. Retrying in 2 seconds...")
+        time.sleep(2)
 
     if err or not data:
         print(f"FAILED to deploy theme files: {err}")

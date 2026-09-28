@@ -24,15 +24,14 @@
               <p class="h4">{{ section.settings.title }}</p>
             {%- endif -%}
 
-            {%- if section.settings.content != blank -%}
-              <div class="prose">
-                {%- if section.settings.content contains 'Describe what your customers' -%}
-                  Subscribe to receive private invitations to rare archival drops, private showroom previews, and bespoke seasonal curation.
-                {%- else -%}
-                  {{ section.settings.content }}
-                {%- endif -%}
-              </div>
+            {%- assign popup_body = section.settings.content -%}
+            {%- if popup_body == blank or popup_body contains 'Describe what your customers' -%}
+              {%- assign popup_body = 'Subscribe to receive private invitations to rare archival drops, private showroom previews, and bespoke seasonal curation.' -%}
             {%- endif -%}
+
+            <div class="prose">
+              {{ popup_body }}
+            </div>
           </div>
         {%- endif -%}
 
