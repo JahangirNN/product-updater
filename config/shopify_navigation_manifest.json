@@ -50,20 +50,40 @@
           "url": "/collections/womens-handbags",
           "items": [
             {
-              "title": "All Handbags",
+              "title": "Shop All Luxury Bags",
               "url": "/collections/womens-handbags"
             },
             {
-              "title": "JW PEI",
-              "url": "/collections/womens-handbags/jw-pei"
-            },
-            {
-              "title": "COACH",
+              "title": "COACH Leather Goods",
               "url": "/collections/womens-handbags/coach"
             },
             {
-              "title": "Michael Kors",
+              "title": "JW PEI Vegan Bags",
+              "url": "/collections/womens-handbags/jw-pei"
+            },
+            {
+              "title": "Michael Kors Jet Set",
               "url": "/collections/womens-handbags/michael-kors"
+            },
+            {
+              "title": "Satchels & Top Handles",
+              "url": "/collections/womens-handbags/satchels"
+            },
+            {
+              "title": "Crossbody & Messengers",
+              "url": "/collections/womens-handbags/crossbody-bags"
+            },
+            {
+              "title": "Totes & Carryalls",
+              "url": "/collections/womens-handbags/totes"
+            },
+            {
+              "title": "Shoulder Bags",
+              "url": "/collections/womens-handbags/shoulder-bags"
+            },
+            {
+              "title": "Wallets & Small Goods",
+              "url": "/collections/womens-handbags/wallets"
             }
           ]
         },
@@ -230,21 +250,37 @@
           ]
         },
         {
-          "title": "Bags & Accessories",
+          "title": "Bags & Leather Goods",
           "type": "category",
           "url": "/collections/mens-bags",
           "items": [
             {
-              "title": "All Men's Bags",
+              "title": "Shop All Men's Bags",
               "url": "/collections/mens-bags"
             },
             {
-              "title": "COACH Men",
+              "title": "COACH Men's Collection",
               "url": "/collections/mens-bags/coach"
             },
             {
-              "title": "Wallets & Cardholders",
-              "url": "/collections/wallets-accessories"
+              "title": "Michael Kors Men",
+              "url": "/collections/mens-bags/michael-kors"
+            },
+            {
+              "title": "Messengers & Crossbody",
+              "url": "/collections/mens-bags/crossbody-bags"
+            },
+            {
+              "title": "Billfolds & Card Cases",
+              "url": "/collections/mens-bags/wallets"
+            },
+            {
+              "title": "Backpacks & Rucksacks",
+              "url": "/collections/mens-bags/backpacks"
+            },
+            {
+              "title": "Briefcases & Satchels",
+              "url": "/collections/mens-bags/satchels"
             }
           ]
         },
@@ -283,12 +319,40 @@
       "url": "/collections",
       "items": [
         {
-          "title": "JW PEI",
-          "url": "/collections/jw-pei"
+          "title": "COACH",
+          "url": "/collections/coach",
+          "items": [
+            {
+              "title": "All COACH Showroom",
+              "url": "/collections/coach"
+            },
+            {
+              "title": "Women's Handbags",
+              "url": "/collections/womens-handbags/coach"
+            },
+            {
+              "title": "Men's Collection",
+              "url": "/collections/mens-bags/coach"
+            }
+          ]
         },
         {
-          "title": "COACH",
-          "url": "/collections/coach"
+          "title": "JW PEI",
+          "url": "/collections/jw-pei",
+          "items": [
+            {
+              "title": "All JW PEI Showroom",
+              "url": "/collections/jw-pei"
+            },
+            {
+              "title": "Satchels & Top Handles",
+              "url": "/collections/jw-pei/satchels"
+            },
+            {
+              "title": "Totes & Carryalls",
+              "url": "/collections/jw-pei/totes"
+            }
+          ]
         },
         {
           "title": "Michael Kors",
@@ -296,7 +360,11 @@
           "items": [
             {
               "title": "All MK Showroom",
-              "url": "/collections/michael-kors-watches"
+              "url": "/collections/michael-kors"
+            },
+            {
+              "title": "Luxury Handbags",
+              "url": "/collections/womens-handbags/michael-kors"
             },
             {
               "title": "Luxury Watches",
@@ -304,7 +372,7 @@
             },
             {
               "title": "Designer Sunglasses",
-              "url": "/collections/designer-eyewear"
+              "url": "/collections/designer-eyewear/michael-kors"
             }
           ]
         },
