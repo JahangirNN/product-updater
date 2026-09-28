@@ -331,14 +331,29 @@ def resolve_options_and_variants(
 
     # 2. Detect Option Name
     first_var = variants_raw[0] if isinstance(variants_raw[0], dict) else {}
+    first_opt_val = (first_var.get("option_values") or [{}])[0] if isinstance(first_var.get("option_values"), list) and len(first_var.get("option_values")) > 0 else {}
+    opt_val_name = first_opt_val.get("option_name")
+    
+    bag_sil = resolve_luxury_bag_silhouette(prod)
+    
     if product_type == "Watches":
         primary_option = "Case Diameter"
     elif product_type in ("Shoes", "Sneakers", "Sandals", "Boots", "Flats"):
         primary_option = "Size"
-    elif any(v.get("color") for v in variants_raw):
+    elif opt_val_name and opt_val_name.strip() in ("Color", "Colour", "Size", "Style", "Material"):
+        primary_option = "Color" if opt_val_name.strip() in ("Color", "Colour") else opt_val_name.strip()
+    elif any(v.get("color") for v in variants_raw if isinstance(v, dict)) or any(
+        isinstance(v.get("option_values"), list) and any(ov.get("option_name") in ("Color", "Colour") for ov in v.get("option_values", []))
+        for v in variants_raw if isinstance(v, dict)
+    ):
         primary_option = "Color"
-    elif any(v.get("size") for v in variants_raw):
+    elif any(v.get("size") for v in variants_raw if isinstance(v, dict)) or any(
+        isinstance(v.get("option_values"), list) and any(ov.get("option_name") == "Size" for ov in v.get("option_values", []))
+        for v in variants_raw if isinstance(v, dict)
+    ):
         primary_option = "Size"
+    elif bag_sil:
+        primary_option = "Color"
     else:
         primary_option = "Option"
 
@@ -382,7 +397,10 @@ def resolve_options_and_variants(
         if v_sku and not v_sku.startswith("RARE-"):
             v_sku = f"RARE-{v_sku}"
 
-        variant_inputs.append({
+        v_img = v.get("image_url") or v.get("image") or (v.get("images") or [None])[0]
+        v_barcode = v.get("barcode") or v.get("upc") or v.get("ean")
+
+        var_dict = {
             "optionValues": [
                 {
                     "optionName": primary_option,
@@ -393,7 +411,16 @@ def resolve_options_and_variants(
             "compareAtPrice": v_compare_str,
             "sku": v_sku,
             "inventoryPolicy": "DENY"
-        })
+        }
+        if v_img and isinstance(v_img, str) and v_img.startswith("http"):
+            var_dict["file"] = {
+                "originalSource": v_img,
+                "contentType": "IMAGE"
+            }
+        if v_barcode:
+            var_dict["barcode"] = str(v_barcode).strip()
+
+        variant_inputs.append(var_dict)
 
     product_options = [
         {
@@ -524,6 +551,167 @@ def format_luxury_watch_description_html(prod: Dict[str, Any]) -> str:
 </div>'''
 
 
+def format_luxury_bag_description_html(prod: Dict[str, Any]) -> str:
+    """
+    Format a world-class luxury bag product description HTML with:
+      1. Refined editorial overview / product summary
+      2. Key Highlights Grid (Silhouette, Material, Hardware Finish)
+      3. Grouped Technical Specifications Table (Zero Retailer Leaks, No N/A rows)
+      4. Interactive Size, Proportions & Fit Guide Accordion
+      5. The Rare Avenue Authenticity & Craftsmanship Guarantee
+    """
+    vendor = resolve_authentic_vendor(prod)
+    title = prod.get("title", "Luxury Bag")
+    sil = resolve_luxury_bag_silhouette(prod) or "Designer Handbag"
+    specs = prod.get("specifications") or {}
+    
+    # 1. Extract and sanitize specs
+    raw_material = specs.get("Material") or specs.get("Main Material") or specs.get("Major Material") or ""
+    if raw_material and raw_material.strip().lower() != title.strip().lower() and not raw_material.strip().lower().startswith("http"):
+        material = str(raw_material).strip()
+    elif "signature canvas" in title.lower():
+        material = "Signature Coated Canvas & Smooth Leather"
+    elif "leather" in title.lower():
+        material = "Refined Calf Leather"
+    elif "suede" in title.lower():
+        material = "Premium Suede Leather"
+    elif "canvas" in title.lower():
+        material = "Durable Luxury Canvas"
+    else:
+        material = "Premium Leather"
+        
+    lining = specs.get("Lining") or specs.get("Lining Material") or ""
+    hardware = specs.get("Hardware") or specs.get("Hardware Finish") or ""
+    closure = specs.get("Closure") or ""
+    dims = specs.get("Bag Dimensions") or specs.get("Dimension") or specs.get("Dimensions") or ""
+    handle_drop = specs.get("Handle Drop") or specs.get("HandleDrop") or ""
+    strap_drop = specs.get("Shoulder Strap Drop") or specs.get("Strap Drop") or ""
+    carrying = specs.get("Carrying Method") or specs.get("Carrying Style") or ""
+    pockets = specs.get("Inner Pockets") or specs.get("Pockets") or ""
+    capacity = specs.get("Capacity") or ""
+    
+    # Scan DetailsBullets (common in Michael Kors)
+    bullets = specs.get("DetailsBullets") or []
+    if isinstance(bullets, list):
+        for b in bullets:
+            b_str = str(b).strip()
+            b_low = b_str.lower()
+            if any(h in b_low for h in ["hardware", "gold-tone", "silver-tone", "gunmetal"]) and not hardware:
+                hardware = b_str
+            elif any(c in b_low for c in ["closure", "zip fastening", "magnetic snap", "flap"]) and not closure:
+                closure = b_str
+            elif "lining:" in b_low and not lining:
+                lining = b_str.replace("Lining:", "").strip()
+            elif "handle drop:" in b_low and not handle_drop:
+                handle_drop = b_str.replace("Handle drop:", "").strip()
+            elif any(s in b_low for s in ["adjustable strap:", "strap drop:"]) and not strap_drop:
+                strap_drop = b_str
+            elif any(p in b_low for p in ["interior details:", "exterior details:"]) and not pockets:
+                pockets = b_str
+
+    # 2. Extract or synthesize product summary
+    raw_desc = prod.get("description_html") or prod.get("descriptionHtml") or ""
+    summary_match = re.search(r'<p class="product-summary">([\s\S]*?)</p>', raw_desc)
+    existing_summary = summary_match.group(1).strip() if summary_match else ""
+    
+    if existing_summary and len(existing_summary) > 20:
+        summary_text = existing_summary
+    else:
+        summary_text = (
+            f"The {title} by {vendor} exemplifies refined modern luxury and quintessential craftsmanship. "
+            f"Masterfully rendered in {material}, this versatile {sil.lower()} balances timeless elegance with effortless everyday utility."
+        )
+
+    # 3. Clean up display specs (strictly omit N/A rows)
+    clean_specs = []
+    def _add_spec(lbl, val):
+        if val and str(val).strip() and str(val).strip().lower() not in ("none", "n/a", "unknown", "null"):
+            clean_specs.append((lbl, str(val).strip()))
+            
+    _add_spec("Brand", vendor)
+    _add_spec("Silhouette", sil)
+    _add_spec("Material", material)
+    _add_spec("Lining", lining)
+    _add_spec("Hardware Finish", hardware)
+    _add_spec("Closure", closure)
+    _add_spec("Carrying Method", carrying)
+    _add_spec("Organization", pockets)
+    _add_spec("Device & Phone Fit", capacity)
+
+    spec_rows = []
+    for lbl, val in clean_specs:
+        spec_rows.append(
+            f'<tr style="border-bottom: 1px solid #f0f0f0;">'
+            f'<td style="padding: 8px 12px; font-weight: 600; width: 38%; color: #4b5563;">{lbl}</td>'
+            f'<td style="padding: 8px 12px; color: #111827;">{val}</td>'
+            f'</tr>'
+        )
+    spec_table_html = "\n".join(spec_rows)
+
+    # 4. Accordion measurement rows (strictly omit N/A)
+    dim_rows = []
+    def _add_dim(lbl, val):
+        if val and str(val).strip() and str(val).strip().lower() not in ("none", "n/a", "unknown", "null"):
+            dim_rows.append(
+                f'<tr style="border-bottom: 1px solid #f3f4f6;">'
+                f'<td style="padding: 6px 10px; font-weight: 600; width: 45%; color: #374151;">{lbl}</td>'
+                f'<td style="padding: 6px 10px; color: #111827;">{str(val).strip()}</td>'
+                f'</tr>'
+            )
+            
+    _add_dim("Exterior Dimensions", dims)
+    _add_dim("Handle Drop", handle_drop)
+    _add_dim("Shoulder / Crossbody Strap Drop", strap_drop)
+    _add_dim("Capacity Profile", capacity)
+
+    dim_table_html = "\n".join(dim_rows) if dim_rows else (
+        '<tr><td style="padding: 6px 10px; color: #6b7280;" colspan="2">Standard luxury sizing profile. Accommodates daily essentials.</td></tr>'
+    )
+
+    return f'''<div class="luxury-bag-overview" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1a1a1a;">
+  <p class="product-summary" style="font-size: 14px; line-height: 1.6; color: #374151; margin-bottom: 20px;">{summary_text}</p>
+
+  <div class="bag-highlights" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px;">
+    <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px;">
+      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; font-weight: 600;">Silhouette</div>
+      <div style="font-size: 13px; font-weight: 600; color: #111827; margin-top: 2px;">{sil}</div>
+    </div>
+    <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px;">
+      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; font-weight: 600;">Material</div>
+      <div style="font-size: 13px; font-weight: 600; color: #111827; margin-top: 2px;">{material[:28]}</div>
+    </div>
+    <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px;">
+      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; font-weight: 600;">Hardware</div>
+      <div style="font-size: 13px; font-weight: 600; color: #111827; margin-top: 2px;">{hardware[:28] if hardware else 'Luxury Custom'}</div>
+    </div>
+  </div>
+
+  <div class="bag-specifications" style="margin-top: 24px;">
+    <h3 style="font-size: 15px; font-weight: 700; color: #111827; margin-bottom: 12px; border-bottom: 2px solid #e5e7eb; padding-bottom: 6px;">Product Specifications</h3>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.5;">
+      <tbody>
+{spec_table_html}
+      </tbody>
+    </table>
+  </div>
+
+  <details class="size-guide-accordion" style="margin: 24px 0 16px; padding: 12px 16px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff;">
+    <summary style="font-weight: 600; cursor: pointer; font-size: 14px; color: #111827;">📏 Bag Dimensions &amp; Fit Guide</summary>
+    <div style="margin-top: 12px;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
+        <tbody>
+{dim_table_html}
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <div class="authenticity-guarantee" style="margin-top: 16px; padding: 12px 16px; background: #fdfbf7; border: 1px solid #f3ebd8; border-radius: 8px; font-size: 12px; color: #785e28;">
+    <strong>The Rare Avenue Authenticity Guarantee:</strong> 100% genuine luxury designer piece sourced directly from authentic manufacturer collections, accompanied by original documentation and verified authenticity guarantee.
+  </div>
+</div>'''
+
+
 def prepare_product_set_payload(prod: Dict[str, Any], forex_rate: Optional[float] = None) -> Dict[str, Any]:
     """
     Format any catalog product into a fully compliant Shopify ProductSetInput payload.
@@ -536,9 +724,12 @@ def prepare_product_set_payload(prod: Dict[str, Any], forex_rate: Optional[float
     gender = resolve_gender(prod)
     product_type = resolve_product_type(prod)
     handle = prod.get("shopify_handle") or prod.get("handle")
+    bag_sil = resolve_luxury_bag_silhouette(prod)
     
     if product_type == "Watches":
         desc_html = format_luxury_watch_description_html(prod)
+    elif bag_sil or product_type in ("Totes", "Shoulder Bags", "Crossbody & Messenger Bags", "Satchels & Top Handles", "Clutches & Evening Bags", "Backpacks", "Wallets & Small Leather Goods", "Handbags"):
+        desc_html = format_luxury_bag_description_html(prod)
     else:
         desc_html = prod.get("descriptionHtml") or prod.get("description_html") or ""
 
@@ -552,14 +743,32 @@ def prepare_product_set_payload(prod: Dict[str, Any], forex_rate: Optional[float
     # Options & Variants
     options, variants = resolve_options_and_variants(prod, forex_rate, source_price, compare_source)
 
-    # Media CDN files (up to 8 images)
+    # Collect all image URLs: ensure all variant images are included so Shopify can link them
+    all_img_urls = []
+    seen_img_urls = set()
+
+    # 1. Variant specific images first
+    for v in variants:
+        v_file = v.get("file")
+        if v_file and isinstance(v_file, dict):
+            v_src = v_file.get("originalSource")
+            if v_src and isinstance(v_src, str) and v_src.startswith("http") and v_src not in seen_img_urls:
+                all_img_urls.append(v_src)
+                seen_img_urls.add(v_src)
+
+    # 2. Product gallery images
+    for img_url in prod.get("images", []):
+        if img_url and isinstance(img_url, str) and img_url.startswith("http") and img_url not in seen_img_urls:
+            all_img_urls.append(img_url)
+            seen_img_urls.add(img_url)
+
+    # Media CDN files
     media_files = []
-    for img_url in prod.get("images", [])[:8]:
-        if img_url and isinstance(img_url, str) and img_url.startswith("http"):
-            media_files.append({
-                "originalSource": img_url,
-                "contentType": "IMAGE"
-            })
+    for img_url in all_img_urls:
+        media_files.append({
+            "originalSource": img_url,
+            "contentType": "IMAGE"
+        })
 
     is_in_stock = (prod.get("availability") == "in_stock")
 
