@@ -3,13 +3,20 @@
   Provides Women, Men, and Designers hierarchical navigation panels for Prestige theme header-sidebar.
 {%- endcomment -%}
 
+<style>
+  .header-sidebar__sub-panel .header-sidebar__linklist,
+  #header-panel-brands .header-sidebar__linklist {
+    padding-bottom: max(3rem, env(safe-area-inset-bottom, 2rem)) !important;
+  }
+</style>
+
 <div id="header-panel-women" class="header-sidebar__sub-panel" hidden>
   <button type="button" class="header-sidebar__back-button link-faded {% if show_dividers %}is-divided{% endif %} text-with-icon {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %} md:hidden" data-action="close-panel">
     {%- render 'icon' with 'chevron-left', width: 12, direction_aware: true -%}
     Women
   </button>
 
-  <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list">
+  <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list" style="padding-bottom: max(3rem, env(safe-area-inset-bottom, 2rem));">
     <li>
       <a href="/collections/women" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" style="font-weight: 600; color: #c9a876;">
         Shop All Women's Boutique &rarr;
@@ -82,7 +89,7 @@
     Men
   </button>
 
-  <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list">
+  <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list" style="padding-bottom: max(3rem, env(safe-area-inset-bottom, 2rem));">
     <li>
       <a href="/collections/men" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" style="font-weight: 600; color: #c9a876;">
         Shop All Men's Boutique &rarr;
@@ -153,7 +160,7 @@
     Brands
   </button>
 
-  <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list">
+  <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list" style="padding-bottom: max(3rem, env(safe-area-inset-bottom, 2rem));">
     <li>
       <a href="/collections" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" style="font-weight: 600; color: #c9a876;">
         View All Maisons &rarr;

@@ -32,7 +32,9 @@ mutation themeFilesUpsert($files: [OnlineStoreThemeFilesUpsertFileInput!]!, $the
 }
 """
 
-SNIPPETS_TO_DEPLOY = [
+FILES_TO_DEPLOY = [
+    ("sections/collection-banner.liquid", os.path.join(PROJECT_ROOT, "theme", "sections", "collection-banner.liquid")),
+    ("sections/newsletter-popup.liquid", os.path.join(PROJECT_ROOT, "theme", "sections", "newsletter-popup.liquid")),
     ("snippets/luxury-desktop-nav.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "luxury-desktop-nav.liquid")),
     ("snippets/luxury-sidebar-panels.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "luxury-sidebar-panels.liquid")),
     ("snippets/facets.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "facets.liquid")),
@@ -45,7 +47,7 @@ def deploy_snippets():
     print("=" * 80)
 
     files_payload = []
-    for rel_path, abs_path in SNIPPETS_TO_DEPLOY:
+    for rel_path, abs_path in FILES_TO_DEPLOY:
         with open(abs_path, "r", encoding="utf-8") as f:
             content = f.read()
         files_payload.append({

@@ -26,7 +26,11 @@
 
             {%- if section.settings.content != blank -%}
               <div class="prose">
-                {{ section.settings.content }}
+                {%- if section.settings.content contains 'Describe what your customers' -%}
+                  Subscribe to receive private invitations to rare archival drops, private showroom previews, and bespoke seasonal curation.
+                {%- else -%}
+                  {{ section.settings.content }}
+                {%- endif -%}
               </div>
             {%- endif -%}
           </div>
@@ -122,7 +126,7 @@
       "type": "inline_richtext",
       "id": "content",
       "label": "t:global.text.content",
-      "default": "Describe what your customers will receive when subscribing to your newsletter."
+      "default": "Subscribe to receive private invitations to rare archival drops, private showroom previews, and bespoke seasonal curation."
     },
     {
       "type": "text",

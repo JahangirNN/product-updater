@@ -44,7 +44,11 @@ Supported variables
             assign v_handle = vendor | handleize
             if v_handle == t_handle or t_handle == 'on' and v_handle == 'on-running' or t_handle == 'michael-kors' and v_handle == 'michael-michael-kors'
               assign is_vendor_tag = true
-              assign tag_label = "Brand: " | append: vendor
+              assign norm_vendor = vendor
+              if norm_vendor == 'MICHAEL Michael Kors' or norm_vendor == 'Michael Michael Kors' or norm_vendor == 'MICHAEL MICHAEL KORS'
+                assign norm_vendor = 'Michael Kors'
+              endif
+              assign tag_label = "Brand: " | append: norm_vendor
               break
             endif
           endfor

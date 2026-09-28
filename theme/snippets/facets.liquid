@@ -22,6 +22,36 @@ Supported variables
 {%- capture id_prefix -%}facets-{{ context }}{%- endcapture -%}
 
 <facets-form {% if update_on_change %}update-on-change{% endif %} section-id="{{ section.id }}">
+  <style>
+    .luxury-facet-checkbox {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(0, 0, 0, 0.28);
+      background-color: transparent;
+      flex-shrink: 0;
+      box-sizing: border-box;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+    .luxury-facet-checkbox--active {
+      border-color: currentColor;
+      background-color: currentColor;
+    }
+    .luxury-facet-checkbox--active::after {
+      content: "";
+      display: block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: #ffffff;
+    }
+    a:hover .luxury-facet-checkbox:not(.luxury-facet-checkbox--active) {
+      border-color: rgba(0, 0, 0, 0.65);
+    }
+  </style>
   <form method="GET" action="{{ request.path }}" class="facets">
     {%- comment -%}We always reset to the first page so that when criteria change, the page is restored to the first one{%- endcomment -%}
     <input type="hidden" name="page" value="">
@@ -123,7 +153,11 @@ Supported variables
                 <facet-link class="block w-full">
                   <a href="{{ all_gender_url | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                     <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
-                      <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if is_all_gender_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
+                      <span class="luxury-facet-checkbox {% if is_all_gender_active %}luxury-facet-checkbox--active{% endif %}" style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid {% if is_all_gender_active %}currentColor{% else %}rgba(0,0,0,0.3){% endif %}; background-color: {% if is_all_gender_active %}currentColor{% else %}transparent{% endif %}; transition: all 0.2s ease; flex-shrink: 0; box-sizing: border-box;">
+                        {%- if is_all_gender_active -%}
+                          <span style="display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #ffffff;"></span>
+                        {%- endif -%}
+                      </span>
                       <span class="{% if is_all_gender_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">All Pieces</span>
                     </span>
                   </a>
@@ -146,7 +180,11 @@ Supported variables
                 <facet-link class="block w-full">
                   <a href="{{ men_gender_url | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                     <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
-                      <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if is_men_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
+                      <span class="luxury-facet-checkbox {% if is_men_active %}luxury-facet-checkbox--active{% endif %}" style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid {% if is_men_active %}currentColor{% else %}rgba(0,0,0,0.3){% endif %}; background-color: {% if is_men_active %}currentColor{% else %}transparent{% endif %}; transition: all 0.2s ease; flex-shrink: 0; box-sizing: border-box;">
+                        {%- if is_men_active -%}
+                          <span style="display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #ffffff;"></span>
+                        {%- endif -%}
+                      </span>
                       <span class="{% if is_men_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Men's{% if collection.handle == 'designer-eyewear' %} (25){% endif %}</span>
                     </span>
                   </a>
@@ -169,7 +207,11 @@ Supported variables
                 <facet-link class="block w-full">
                   <a href="{{ women_gender_url | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                     <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
-                      <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if is_women_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
+                      <span class="luxury-facet-checkbox {% if is_women_active %}luxury-facet-checkbox--active{% endif %}" style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid {% if is_women_active %}currentColor{% else %}rgba(0,0,0,0.3){% endif %}; background-color: {% if is_women_active %}currentColor{% else %}transparent{% endif %}; transition: all 0.2s ease; flex-shrink: 0; box-sizing: border-box;">
+                        {%- if is_women_active -%}
+                          <span style="display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #ffffff;"></span>
+                        {%- endif -%}
+                      </span>
                       <span class="{% if is_women_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Women's{% if collection.handle == 'designer-eyewear' %} (40){% endif %}</span>
                     </span>
                   </a>
@@ -208,7 +250,11 @@ Supported variables
                 <facet-link class="block w-full">
                   <a href="{{ sil_url_satchels | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                     <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
-                      <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if sil_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
+                      <span class="luxury-facet-checkbox {% if sil_active %}luxury-facet-checkbox--active{% endif %}" style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid {% if sil_active %}currentColor{% else %}rgba(0,0,0,0.3){% endif %}; background-color: {% if sil_active %}currentColor{% else %}transparent{% endif %}; transition: all 0.2s ease; flex-shrink: 0; box-sizing: border-box;">
+                        {%- if sil_active -%}
+                          <span style="display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #ffffff;"></span>
+                        {%- endif -%}
+                      </span>
                       <span class="{% if sil_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Satchels &amp; Top Handles</span>
                     </span>
                   </a>
@@ -239,7 +285,11 @@ Supported variables
                 <facet-link class="block w-full">
                   <a href="{{ sil_url_crossbody | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                     <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
-                      <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if sil_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
+                      <span class="luxury-facet-checkbox {% if sil_active %}luxury-facet-checkbox--active{% endif %}" style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid {% if sil_active %}currentColor{% else %}rgba(0,0,0,0.3){% endif %}; background-color: {% if sil_active %}currentColor{% else %}transparent{% endif %}; transition: all 0.2s ease; flex-shrink: 0; box-sizing: border-box;">
+                        {%- if sil_active -%}
+                          <span style="display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #ffffff;"></span>
+                        {%- endif -%}
+                      </span>
                       <span class="{% if sil_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Crossbody &amp; Messengers</span>
                     </span>
                   </a>
@@ -270,7 +320,11 @@ Supported variables
                 <facet-link class="block w-full">
                   <a href="{{ sil_url_totes | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                     <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
-                      <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if sil_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
+                      <span class="luxury-facet-checkbox {% if sil_active %}luxury-facet-checkbox--active{% endif %}" style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid {% if sil_active %}currentColor{% else %}rgba(0,0,0,0.3){% endif %}; background-color: {% if sil_active %}currentColor{% else %}transparent{% endif %}; transition: all 0.2s ease; flex-shrink: 0; box-sizing: border-box;">
+                        {%- if sil_active -%}
+                          <span style="display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #ffffff;"></span>
+                        {%- endif -%}
+                      </span>
                       <span class="{% if sil_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Totes &amp; Carryalls</span>
                     </span>
                   </a>
@@ -301,7 +355,11 @@ Supported variables
                 <facet-link class="block w-full">
                   <a href="{{ sil_url_shoulder | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                     <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
-                      <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if sil_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
+                      <span class="luxury-facet-checkbox {% if sil_active %}luxury-facet-checkbox--active{% endif %}" style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid {% if sil_active %}currentColor{% else %}rgba(0,0,0,0.3){% endif %}; background-color: {% if sil_active %}currentColor{% else %}transparent{% endif %}; transition: all 0.2s ease; flex-shrink: 0; box-sizing: border-box;">
+                        {%- if sil_active -%}
+                          <span style="display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #ffffff;"></span>
+                        {%- endif -%}
+                      </span>
                       <span class="{% if sil_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Shoulder Bags</span>
                     </span>
                   </a>
@@ -332,7 +390,11 @@ Supported variables
                 <facet-link class="block w-full">
                   <a href="{{ sil_url_backpacks | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                     <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
-                      <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if sil_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
+                      <span class="luxury-facet-checkbox {% if sil_active %}luxury-facet-checkbox--active{% endif %}" style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid {% if sil_active %}currentColor{% else %}rgba(0,0,0,0.3){% endif %}; background-color: {% if sil_active %}currentColor{% else %}transparent{% endif %}; transition: all 0.2s ease; flex-shrink: 0; box-sizing: border-box;">
+                        {%- if sil_active -%}
+                          <span style="display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #ffffff;"></span>
+                        {%- endif -%}
+                      </span>
                       <span class="{% if sil_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Backpacks &amp; Rucksacks</span>
                     </span>
                   </a>
@@ -363,7 +425,11 @@ Supported variables
                 <facet-link class="block w-full">
                   <a href="{{ sil_url_wallets | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                     <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
-                      <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if sil_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
+                      <span class="luxury-facet-checkbox {% if sil_active %}luxury-facet-checkbox--active{% endif %}" style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid {% if sil_active %}currentColor{% else %}rgba(0,0,0,0.3){% endif %}; background-color: {% if sil_active %}currentColor{% else %}transparent{% endif %}; transition: all 0.2s ease; flex-shrink: 0; box-sizing: border-box;">
+                        {%- if sil_active -%}
+                          <span style="display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #ffffff;"></span>
+                        {%- endif -%}
+                      </span>
                       <span class="{% if sil_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Wallets &amp; Small Goods</span>
                     </span>
                   </a>
@@ -392,8 +458,20 @@ Supported variables
                 {%- assign current_gender_tag = 'women' -%}
               {%- endif -%}
 
+              {%- assign rendered_vendors = '' -%}
               {%- for vendor in collection.all_vendors -%}
                 {%- liquid
+                  assign display_vendor = vendor
+                  if vendor == 'MICHAEL Michael Kors' or vendor == 'Michael Michael Kors' or vendor == 'MICHAEL MICHAEL KORS'
+                    assign display_vendor = 'Michael Kors'
+                  endif
+
+                  assign vendor_check_token = '|' | append: display_vendor | append: '|'
+                  if rendered_vendors contains vendor_check_token
+                    continue
+                  endif
+                  assign rendered_vendors = rendered_vendors | append: '|' | append: display_vendor | append: '|'
+
                   assign vendor_handle = vendor | handleize
                   assign is_vendor_active = false
                   for tag in current_tags
@@ -449,8 +527,12 @@ Supported variables
                   <facet-link class="block w-full">
                     <a href="{{ vendor_target_url | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                       <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
-                        <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: currentColor; opacity: {% if is_vendor_active %}1{% else %}0{% endif %}; transition: opacity 0.2s;"></span>
-                        <span class="{% if is_vendor_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">{{ vendor }}</span>
+                        <span class="luxury-facet-checkbox {% if is_vendor_active %}luxury-facet-checkbox--active{% endif %}" style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid {% if is_vendor_active %}currentColor{% else %}rgba(0,0,0,0.3){% endif %}; background-color: {% if is_vendor_active %}currentColor{% else %}transparent{% endif %}; transition: all 0.2s ease; flex-shrink: 0; box-sizing: border-box;">
+                          {%- if is_vendor_active -%}
+                            <span style="display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #ffffff;"></span>
+                          {%- endif -%}
+                        </span>
+                        <span class="{% if is_vendor_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">{{ display_vendor }}</span>
                       </span>
                     </a>
                   </facet-link>
