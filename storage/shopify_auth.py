@@ -132,20 +132,30 @@ def execute_shopify_graphql(
             if refresh_cli_session(domain):
                 return execute_shopify_graphql(query, variables, shop_domain, timeout, allow_retry=False)
 
+        if resp.status_code == 429 and allow_retry:
+            log_shopify_warning(f"Shopify Admin GraphQL 429 Rate Limited for {domain}. Backing off 2.5s...")
+            time.sleep(2.5)
+            return execute_shopify_graphql(query, variables, shop_domain, timeout, allow_retry=False)
+
         if resp.status_code == 200:
             body = resp.json()
             data = body.get("data")
             extensions = body.get("extensions", {})
             errors = body.get("errors")
             if errors:
+                is_throttled = any("throttled" in str(e).lower() for e in errors)
+                if is_throttled and allow_retry:
+                    log_shopify_warning(f"Shopify Admin GraphQL THROTTLED for {domain}. Backing off 2.5s...")
+                    time.sleep(2.5)
+                    return execute_shopify_graphql(query, variables, shop_domain, timeout, allow_retry=False)
                 err_msg = json.dumps(errors)
                 log_shopify_error(f"Shopify Admin GraphQL returned errors: {err_msg}")
                 return data, extensions, f"GraphQL Errors: {err_msg}"
             return data, extensions, ""
         else:
-                err_msg = f"HTTP {resp.status_code}: {resp.text}"
-                log_shopify_error(f"Shopify Admin GraphQL failure: {err_msg}")
-                return None, {}, err_msg
+            err_msg = f"HTTP {resp.status_code}: {resp.text}"
+            log_shopify_error(f"Shopify Admin GraphQL failure: {err_msg}")
+            return None, {}, err_msg
     except (httpx.ReadTimeout, httpx.ConnectTimeout) as te:
         if allow_retry:
             time.sleep(1.0)

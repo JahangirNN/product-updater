@@ -1,0 +1,132 @@
+{
+  "total_products": 1825,
+  "total_variants": 12650,
+  "variants_missing_image": 6,
+  "color_variants_missing_image": 0,
+  "affected_products_count": 6,
+  "affected_by_vendor": {
+    "My Store": 6
+  },
+  "affected_products": [
+    {
+      "id": "gid://shopify/Product/15652495491238",
+      "handle": "cooper-logo-billfold-wallet-with-passcase",
+      "title": "Cooper Logo Billfold Wallet With Passcase",
+      "vendor": "My Store",
+      "status": "ACTIVE",
+      "has_color_option": false,
+      "total_variants": 1,
+      "missing_variants_count": 1,
+      "missing_variants": [
+        {
+          "variant_id": "gid://shopify/ProductVariant/57196714885286",
+          "variant_title": "Default Title",
+          "selected_options": {
+            "title": "Default Title"
+          },
+          "is_color": false
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/15652503748774",
+      "handle": "cooper-signature-billfold-wallet",
+      "title": "Cooper Signature Billfold Wallet",
+      "vendor": "My Store",
+      "status": "ACTIVE",
+      "has_color_option": false,
+      "total_variants": 1,
+      "missing_variants_count": 1,
+      "missing_variants": [
+        {
+          "variant_id": "gid://shopify/ProductVariant/57196730122406",
+          "variant_title": "Default Title",
+          "selected_options": {
+            "title": "Default Title"
+          },
+          "is_color": false
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/15652511547558",
+      "handle": "michael-kors-logo-print-wallet-belt-gift-set",
+      "title": "Michael Kors Logo-Print Wallet & Belt Gift Set",
+      "vendor": "My Store",
+      "status": "ACTIVE",
+      "has_color_option": false,
+      "total_variants": 1,
+      "missing_variants_count": 1,
+      "missing_variants": [
+        {
+          "variant_id": "gid://shopify/ProductVariant/57196742213798",
+          "variant_title": "Default Title",
+          "selected_options": {
+            "title": "Default Title"
+          },
+          "is_color": false
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/15652523770022",
+      "handle": "jet-set-travel-small-signature-logo-and-smooth-wristlet",
+      "title": "Jet Set Travel Small Signature Logo and Smooth Wristlet",
+      "vendor": "My Store",
+      "status": "ACTIVE",
+      "has_color_option": false,
+      "total_variants": 1,
+      "missing_variants_count": 1,
+      "missing_variants": [
+        {
+          "variant_id": "gid://shopify/ProductVariant/57196769247398",
+          "variant_title": "Default Title",
+          "selected_options": {
+            "title": "Default Title"
+          },
+          "is_color": false
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/15652529143974",
+      "handle": "jet-set-travel-small-signature-logo-and-smooth-wristlet-1",
+      "title": "Jet Set Travel Small Signature Logo and Smooth Wristlet",
+      "vendor": "My Store",
+      "status": "ACTIVE",
+      "has_color_option": false,
+      "total_variants": 1,
+      "missing_variants_count": 1,
+      "missing_variants": [
+        {
+          "variant_id": "gid://shopify/ProductVariant/57196782878886",
+          "variant_title": "Default Title",
+          "selected_options": {
+            "title": "Default Title"
+          },
+          "is_color": false
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/15652532813990",
+      "handle": "jet-set-travel-striped-signature-logo-convertible-wristlet",
+      "title": "Jet Set Travel Striped Signature Logo Convertible Wristlet",
+      "vendor": "My Store",
+      "status": "ACTIVE",
+      "has_color_option": false,
+      "total_variants": 1,
+      "missing_variants_count": 1,
+      "missing_variants": [
+        {
+          "variant_id": "gid://shopify/ProductVariant/57196787957926",
+          "variant_title": "Default Title",
+          "selected_options": {
+            "title": "Default Title"
+          },
+          "is_color": false
+        }
+      ]
+    }
+  ]
+}

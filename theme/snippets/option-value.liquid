@@ -75,6 +75,22 @@ Thumbnail specific parameters:
 {%- capture id -%}option-value-{{ id_prefix }}-{{ section.id }}-{{ param_name }}-{{ value | handle }}{%- endcapture -%}
 
 {%- liquid
+  assign fallback_variant_media = blank
+  if variant.featured_media == blank and option_value.variant.featured_media == blank
+    for prod_var in product.variants
+      for opt in prod_var.options
+        assign opt_clean = opt | strip | downcase
+        if opt_clean == downcase_label and prod_var.featured_media != blank
+          assign fallback_variant_media = prod_var.featured_media
+          break
+        endif
+      endfor
+      if fallback_variant_media != blank
+        break
+      endif
+    endfor
+  endif
+
   if type == 'swatch' or type == 'block' and show_swatch
     if swatch.image != blank
       assign swatch_image = swatch.image | image_url: width: 72
@@ -86,6 +102,9 @@ Thumbnail specific parameters:
       assign swatch_style = '--swatch-background: url(' | append: swatch_image | append: ')'
     elsif option_value.variant.featured_media != blank
       assign swatch_image = option_value.variant.featured_media | image_url: width: 72
+      assign swatch_style = '--swatch-background: url(' | append: swatch_image | append: ')'
+    elsif fallback_variant_media != blank
+      assign swatch_image = fallback_variant_media | image_url: width: 72
       assign swatch_style = '--swatch-background: url(' | append: swatch_image | append: ')'
     else
       # When color or image is not explicitly passed, we parse the config

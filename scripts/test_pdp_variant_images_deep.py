@@ -32,6 +32,16 @@ PRODUCTS_TO_TEST = [
         "handle": "nolita-19-in-signature-canvas",
         "name": "Coach Nolita 19 Bag",
         "variants_to_test": ["Gold/Walnut/Black", "Gold/Dark Stone"]
+    },
+    {
+        "handle": "teri-shoulder-bag",
+        "name": "Coach Teri Shoulder Bag",
+        "variants_to_test": ["Gold/Carnation", "Gold/Deep Blue"]
+    },
+    {
+        "handle": "teri-mini-crossbody-bag-in-signature-denim",
+        "name": "Coach Teri Mini Crossbody Denim",
+        "variants_to_test": ["Gold/Walnut/Black", "Silver/Light Sand"]
     }
 ]
 

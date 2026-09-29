@@ -298,6 +298,83 @@ def generate_taxonomy_tags(prod: Dict[str, Any], vendor: str, product_type: str,
     return sorted(list(set(tags)))
 
 
+# Known broken or 404 variant image URLs to skip during synchronization
+BROKEN_IMAGE_URLS = {
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1782552557039-gd2lat73iko.jpg?v=1787122998",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/134kzy7p88va.jpg?v=1787110927",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/ecakemkflg.jpg?v=1787110927",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/tdhylr3bfiq.jpg?v=1787110927",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/217vl4kap0i.jpg?v=1785915162",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/nn2mso31ce.jpg?v=1787726550",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/ezxi6l13hhq.jpg?v=1786681327",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/fi5argg4jxo.jpg?v=1787726527",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/n8evxuddn6b.jpg?v=1787726573",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/7nej3cp864a.jpg?v=1787727726",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/znibcgv7p4.jpg?v=1787726574",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/hp5ph3z4154.jpg?v=1787727127",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/h2u8duy3pj.jpg?v=1787727150",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1781236230586-vehklaex1ve.jpg?v=1783497127",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1781242424362-r84wns0a4r.jpg?v=1783496551",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1781775680803-ucfqb49e50c.jpg?v=1786517597",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1773380534033-rk47ecahgw.jpg?v=1773387755",
+    "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1773380505326-uhmm4qxo338.jpg?v=1773387755",
+    "https://cdn2.jomashop.com/media/catalog/product/m/i/michael-kors-billie-chronograph-quartz-mens-watch-mk9254.jpg",
+}
+
+
+def resolve_variant_image(v: Dict[str, Any], prod: Dict[str, Any], broken_urls: Optional[set] = None) -> Optional[str]:
+    """
+    Resolve an authentic image URL for a variant:
+    1. Variant's explicit image_url / image / images[0] (skipping known broken URLs).
+    2. Matching from product gallery by color slug, SKU, or alt text.
+    3. If single variant, fallback to primary product image.
+    4. If no authentic image found, returns None (allowing ghost variant pruning).
+    """
+    if broken_urls is None:
+        broken_urls = BROKEN_IMAGE_URLS
+
+    raw_img = v.get("image_url") or v.get("image") or (v.get("images") or [None])[0]
+    if raw_img and isinstance(raw_img, str) and raw_img.startswith("http") and raw_img not in broken_urls:
+        return raw_img
+
+    gallery = prod.get("images") or []
+    color_name = str(v.get("color") or v.get("title") or "").strip().lower()
+    sku = str(v.get("sku") or "").strip().lower()
+
+    # Match by SKU in filename
+    if sku and len(sku) > 3:
+        for g_img in gallery:
+            if isinstance(g_img, str) and sku in g_img.lower() and g_img not in broken_urls:
+                return g_img
+
+    # Match by color name / slug in gallery URL
+    if color_name and color_name not in ("default", "default title", "standard", "one size"):
+        clean_slugs = [
+            color_name.replace(" ", "-"),
+            color_name.replace(" ", "_"),
+            color_name.replace("/", "-"),
+            color_name.replace("/", "_")
+        ]
+        for g_img in gallery:
+            if not isinstance(g_img, str) or g_img in broken_urls:
+                continue
+            g_lower = g_img.lower()
+            if any(s in g_lower for s in clean_slugs if len(s) > 2):
+                return g_img
+
+    # If single-variant product, fallback to first gallery image
+    variants_raw = prod.get("variants") or []
+    if len(variants_raw) <= 1:
+        for g_img in gallery:
+            if isinstance(g_img, str) and g_img.startswith("http") and g_img not in broken_urls:
+                return g_img
+        primary = prod.get("image") or prod.get("image_url")
+        if primary and isinstance(primary, str) and primary.startswith("http") and primary not in broken_urls:
+            return primary
+
+    return None
+
+
 def resolve_options_and_variants(
     prod: Dict[str, Any],
     forex_rate: float,
@@ -323,16 +400,24 @@ def resolve_options_and_variants(
 
         sku_val = f"RARE-{source_sku}" if not str(source_sku).startswith("RARE-") else source_sku
         is_in_stock = (prod.get("availability") == "in_stock") or (prod.get("in_stock") is True)
+        
+        primary_img = (prod.get("images") or [None])[0] or prod.get("image") or prod.get("image_url")
+        single_var_dict = {
+            "optionValues": [{"optionName": "Title", "name": "Default Title"}],
+            "price": f"{inr_price:.2f}",
+            "compareAtPrice": compare_str,
+            "sku": sku_val,
+            "inventoryPolicy": "CONTINUE" if is_in_stock else "DENY",
+            "inventoryItem": {"tracked": False if is_in_stock else True}
+        }
+        if primary_img and isinstance(primary_img, str) and primary_img.startswith("http") and primary_img not in BROKEN_IMAGE_URLS:
+            single_var_dict["file"] = {
+                "originalSource": primary_img,
+                "contentType": "IMAGE"
+            }
         return (
             [{"name": "Title", "values": [{"name": "Default Title"}]}],
-            [{
-                "optionValues": [{"optionName": "Title", "name": "Default Title"}],
-                "price": f"{inr_price:.2f}",
-                "compareAtPrice": compare_str,
-                "sku": sku_val,
-                "inventoryPolicy": "CONTINUE" if is_in_stock else "DENY",
-                "inventoryItem": {"tracked": False if is_in_stock else True}
-            }]
+            [single_var_dict]
         )
 
     # 2. Discover all option dimension names in order of appearance
@@ -364,22 +449,42 @@ def resolve_options_and_variants(
                 ordered_dim_names = ["Size"]
             elif product_type in ("Shoes", "Sneakers", "Sandals", "Boots", "Flats"):
                 ordered_dim_names = ["Size"]
-            elif bag_sil:
+            elif bag_sil or any(b in product_type.lower() for b in ["bag", "tote", "backpack", "wallet", "clutch", "crossbody", "satchel", "shoulder", "eyewear", "sunglasses", "handbag"]):
                 ordered_dim_names = ["Color"]
             else:
-                ordered_dim_names = ["Option"]
+                has_var_imgs = any(resolve_variant_image(v, prod) for v in variants_raw if isinstance(v, dict))
+                if has_var_imgs:
+                    ordered_dim_names = ["Color"]
+                else:
+                    ordered_dim_names = ["Option"]
 
     # Limit to maximum 3 options (Shopify GraphQL limit)
     ordered_dim_names = ordered_dim_names[:3]
 
+    # Check if other variants in this product have valid photos
+    has_any_variant_photo = any(resolve_variant_image(v, prod) for v in variants_raw if isinstance(v, dict))
+
     # 3. Extract and deduplicate variant rows
     # key: tuple of dimension values e.g. ("US 6 / UK 4", "Black")
-    seen_variants: Dict[Tuple[str, ...], Tuple[Dict[str, Any], List[Dict[str, str]]]] = {}
+    seen_variants: Dict[Tuple[str, ...], Tuple[Dict[str, Any], List[Dict[str, str]], Optional[str]]] = {}
     dim_values_set: Dict[str, set] = {d: set() for d in ordered_dim_names}
 
     for v in variants_raw:
         if not isinstance(v, dict):
             continue
+
+        # Resolve authentic image for this variant
+        v_img = resolve_variant_image(v, prod)
+        if not v_img:
+            # Ghost variant: no authentic photo found anywhere
+            if len(variants_raw) > 1 and has_any_variant_photo:
+                # Prune un-photographed ghost variant so customers never see a broken swatch
+                continue
+            else:
+                # Fallback to primary product image if no variants have dedicated photos
+                v_img = (prod.get("images") or [None])[0] or prod.get("image") or prod.get("image_url")
+                if v_img in BROKEN_IMAGE_URLS:
+                    v_img = None
 
         var_opt_map: Dict[str, str] = {}
         # Parse from option_values if present
@@ -414,16 +519,16 @@ def resolve_options_and_variants(
 
         row_key = tuple(row_values)
         if row_key not in seen_variants:
-            seen_variants[row_key] = (v, opt_val_list)
+            seen_variants[row_key] = (v, opt_val_list, v_img)
         else:
             # If current variant is in stock and existing is not, prioritize current
             existing_v = seen_variants[row_key][0]
             if existing_v.get("availability") != "in_stock" and not existing_v.get("in_stock") and (v.get("availability") == "in_stock" or v.get("in_stock")):
-                seen_variants[row_key] = (v, opt_val_list)
+                seen_variants[row_key] = (v, opt_val_list, v_img)
 
     # 4. Construct ProductSet variant inputs
     variant_inputs: List[Dict[str, Any]] = []
-    for row_key, (v, opt_val_list) in seen_variants.items():
+    for row_key, (v, opt_val_list, v_img) in seen_variants.items():
         v_source_price = float(v.get("source_price") or prod.get("source_price") or source_price or 0.0)
         v_inr_price = float(round(v_source_price * forex_rate))
 
@@ -436,7 +541,6 @@ def resolve_options_and_variants(
         if v_sku and not v_sku.startswith("RARE-"):
             v_sku = f"RARE-{v_sku}"
 
-        v_img = v.get("image_url") or v.get("image") or (v.get("images") or [None])[0]
         v_barcode = v.get("barcode") or v.get("upc") or v.get("ean")
 
         v_is_stock = (v.get("availability") == "in_stock") or (v.get("in_stock") is True) or (v.get("availability") is None and ((prod.get("availability") == "in_stock") or (prod.get("in_stock") is True)))
@@ -448,7 +552,7 @@ def resolve_options_and_variants(
             "inventoryPolicy": "CONTINUE" if v_is_stock else "DENY",
             "inventoryItem": {"tracked": False if v_is_stock else True}
         }
-        if v_img and isinstance(v_img, str) and v_img.startswith("http"):
+        if v_img and isinstance(v_img, str) and v_img.startswith("http") and v_img not in BROKEN_IMAGE_URLS:
             var_dict["file"] = {
                 "originalSource": v_img,
                 "contentType": "IMAGE"
@@ -462,10 +566,33 @@ def resolve_options_and_variants(
     product_options = []
     for d in ordered_dim_names:
         sorted_vals = sorted(list(dim_values_set[d]))
-        product_options.append({
-            "name": d,
-            "values": [{"name": val} for val in sorted_vals]
-        })
+        if sorted_vals:
+            product_options.append({
+                "name": d,
+                "values": [{"name": val} for val in sorted_vals]
+            })
+
+    # Edge case: if all variants were somehow pruned, provide fallback
+    if not variant_inputs:
+        inr_price = float(round(source_price * forex_rate))
+        primary_img = (prod.get("images") or [None])[0] or prod.get("image") or prod.get("image_url")
+        var_fallback = {
+            "optionValues": [{"optionName": "Title", "name": "Default Title"}],
+            "price": f"{inr_price:.2f}",
+            "compareAtPrice": None,
+            "sku": f"RARE-{source_sku}",
+            "inventoryPolicy": "CONTINUE" if (prod.get("availability") == "in_stock") else "DENY",
+            "inventoryItem": {"tracked": False if (prod.get("availability") == "in_stock") else True}
+        }
+        if primary_img and isinstance(primary_img, str) and primary_img.startswith("http") and primary_img not in BROKEN_IMAGE_URLS:
+            var_fallback["file"] = {
+                "originalSource": primary_img,
+                "contentType": "IMAGE"
+            }
+        return (
+            [{"name": "Title", "values": [{"name": "Default Title"}]}],
+            [var_fallback]
+        )
 
     return product_options, variant_inputs
 
@@ -842,7 +969,7 @@ def prepare_product_set_payload(prod: Dict[str, Any], forex_rate: Optional[float
 
     # 2. Product gallery images
     for img_url in prod.get("images", []):
-        if img_url and isinstance(img_url, str) and img_url.startswith("http") and img_url not in seen_img_urls:
+        if img_url and isinstance(img_url, str) and img_url.startswith("http") and img_url not in seen_img_urls and img_url not in BROKEN_IMAGE_URLS:
             all_img_urls.append(img_url)
             seen_img_urls.add(img_url)
 

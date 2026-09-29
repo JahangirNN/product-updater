@@ -1,0 +1,76 @@
+{
+  "stats": {
+    "by_store": {
+      "jwpei": {
+        "total_files": 491,
+        "synced_to_shopify": 491,
+        "multi_variant_products": 466,
+        "total_variants": 9183,
+        "variants_with_image": 9183,
+        "variants_without_image": 0,
+        "color_variants_without_image": 0
+      },
+      "coach": {
+        "total_files": 573,
+        "synced_to_shopify": 414,
+        "multi_variant_products": 535,
+        "total_variants": 6281,
+        "variants_with_image": 6281,
+        "variants_without_image": 0,
+        "color_variants_without_image": 0
+      },
+      "michaelkors": {
+        "total_files": 530,
+        "synced_to_shopify": 340,
+        "multi_variant_products": 189,
+        "total_variants": 2497,
+        "variants_with_image": 2497,
+        "variants_without_image": 0,
+        "color_variants_without_image": 0
+      },
+      "jomashop": {
+        "total_files": 574,
+        "synced_to_shopify": 574,
+        "multi_variant_products": 0,
+        "total_variants": 574,
+        "variants_with_image": 574,
+        "variants_without_image": 0,
+        "color_variants_without_image": 0
+      },
+      "nordstrom": {
+        "total_files": 238,
+        "synced_to_shopify": 0,
+        "multi_variant_products": 238,
+        "total_variants": 11778,
+        "variants_with_image": 11778,
+        "variants_without_image": 0,
+        "color_variants_without_image": 0
+      },
+      "footlocker": {
+        "total_files": 307,
+        "synced_to_shopify": 0,
+        "multi_variant_products": 306,
+        "total_variants": 3778,
+        "variants_with_image": 3778,
+        "variants_without_image": 0,
+        "color_variants_without_image": 0
+      },
+      "jdsports": {
+        "total_files": 476,
+        "synced_to_shopify": 0,
+        "multi_variant_products": 476,
+        "total_variants": 5930,
+        "variants_with_image": 5930,
+        "variants_without_image": 0,
+        "color_variants_without_image": 0
+      }
+    },
+    "missing_cases": {
+      "case_a_has_image_unlinked": 14611,
+      "case_b_null_in_local": 0,
+      "case_c_gallery_matchable": 0,
+      "case_d_ghost_no_image": 0
+    }
+  },
+  "sample_cases": {}
+}
