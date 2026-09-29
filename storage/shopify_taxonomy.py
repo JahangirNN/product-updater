@@ -322,13 +322,54 @@ BROKEN_IMAGE_URLS = {
 }
 
 
+def extract_variant_color(v: Dict[str, Any]) -> Optional[str]:
+    """Extract authentic color name from variant metadata across all dropship formats."""
+    # 1. Direct color field
+    if v.get("color") and isinstance(v["color"], str) and v["color"].strip():
+        return v["color"].strip()
+
+    # 2. From option_values array
+    for ov in v.get("option_values") or []:
+        if isinstance(ov, dict):
+            opt_name = (ov.get("option_name") or ov.get("name") or "").strip().lower()
+            if opt_name in ("color", "colour"):
+                val = ov.get("name") or ov.get("value")
+                if val and isinstance(val, str) and val.strip():
+                    return val.strip()
+
+    # 3. From selectedOptions array (Shopify GraphQL format)
+    for so in v.get("selectedOptions") or []:
+        if isinstance(so, dict):
+            opt_name = (so.get("name") or "").strip().lower()
+            if opt_name in ("color", "colour"):
+                val = so.get("value")
+                if val and isinstance(val, str) and val.strip():
+                    return val.strip()
+
+    # 4. Check if title contains a color part after delimiter, e.g. "US 6 / UK 4 - Black"
+    v_title = str(v.get("title") or "").strip()
+    if " - " in v_title:
+        parts = v_title.split(" - ")
+        candidate = parts[-1].strip()
+        if candidate and not re.match(r"^(us|uk|eu)?\s*\d+(\.\d+)?", candidate, re.IGNORECASE):
+            return candidate
+
+    # 5. If title itself is not a generic size / default title, consider it
+    if v_title and not re.match(r"^(us|uk|eu)?\s*\d+(\.\d+)?", v_title, re.IGNORECASE):
+        if v_title.lower() not in ("default title", "default", "standard", "one size"):
+            return v_title
+
+    return None
+
+
 def resolve_variant_image(v: Dict[str, Any], prod: Dict[str, Any], broken_urls: Optional[set] = None) -> Optional[str]:
     """
     Resolve an authentic image URL for a variant:
     1. Variant's explicit image_url / image / images[0] (skipping known broken URLs).
-    2. Matching from product gallery by color slug, SKU, or alt text.
-    3. If single variant, fallback to primary product image.
-    4. If no authentic image found, returns None (allowing ghost variant pruning).
+    2. Sibling variant lookup: reuse authentic photo from sibling variant with identical color.
+    3. Matching from product gallery by SKU, color slug, or tokens.
+    4. If product has no color dimension or all variants share the same colorway, fallback to primary image.
+    5. If no authentic image found for a distinct colorway, returns None (allowing ghost variant pruning).
     """
     if broken_urls is None:
         broken_urls = BROKEN_IMAGE_URLS
@@ -338,23 +379,45 @@ def resolve_variant_image(v: Dict[str, Any], prod: Dict[str, Any], broken_urls: 
         return raw_img
 
     gallery = prod.get("images") or []
-    color_name = str(v.get("color") or v.get("title") or "").strip().lower()
-    sku = str(v.get("sku") or "").strip().lower()
+    v_color = extract_variant_color(v)
+    v_color_lower = v_color.strip().lower() if v_color else ""
+    raw_sku = str(v.get("sku") or "").strip().lower()
+    clean_sku = raw_sku[5:] if raw_sku.startswith("rare-") else raw_sku
 
-    # Match by SKU in filename
-    if sku and len(sku) > 3:
+    variants_raw = [var for var in (prod.get("variants") or []) if isinstance(var, dict)]
+
+    # 2. Check sibling variants with identical color for an authentic photo
+    if v_color_lower:
+        for sib in variants_raw:
+            if sib is v:
+                continue
+            sib_color = extract_variant_color(sib)
+            if sib_color and sib_color.strip().lower() == v_color_lower:
+                sib_img = sib.get("image_url") or sib.get("image") or (sib.get("images") or [None])[0]
+                if sib_img and isinstance(sib_img, str) and sib_img.startswith("http") and sib_img not in broken_urls:
+                    return sib_img
+
+    # 3. Match by SKU in gallery URLs
+    if clean_sku and len(clean_sku) >= 4:
         for g_img in gallery:
-            if isinstance(g_img, str) and sku in g_img.lower() and g_img not in broken_urls:
+            if isinstance(g_img, str) and clean_sku in g_img.lower() and g_img not in broken_urls:
                 return g_img
 
-    # Match by color name / slug in gallery URL
-    if color_name and color_name not in ("default", "default title", "standard", "one size"):
+    # 4. Match by color name / slug in gallery URL
+    if v_color_lower and v_color_lower not in ("default", "default title", "standard", "one size"):
         clean_slugs = [
-            color_name.replace(" ", "-"),
-            color_name.replace(" ", "_"),
-            color_name.replace("/", "-"),
-            color_name.replace("/", "_")
+            v_color_lower.replace(" ", "-"),
+            v_color_lower.replace(" ", "_"),
+            v_color_lower.replace(" ", ""),
+            v_color_lower.replace("/", "-"),
+            v_color_lower.replace("/", "_"),
         ]
+        # Include individual color tokens for multi-part names e.g. "Gold/Pink" -> "gold", "pink"
+        for sep in ("/", "&", "-"):
+            if sep in v_color_lower:
+                tokens = [t.strip() for t in v_color_lower.split(sep) if len(t.strip()) > 2]
+                clean_slugs.extend(tokens)
+
         for g_img in gallery:
             if not isinstance(g_img, str) or g_img in broken_urls:
                 continue
@@ -362,9 +425,10 @@ def resolve_variant_image(v: Dict[str, Any], prod: Dict[str, Any], broken_urls: 
             if any(s in g_lower for s in clean_slugs if len(s) > 2):
                 return g_img
 
-    # If single-variant product, fallback to first gallery image
-    variants_raw = prod.get("variants") or []
-    if len(variants_raw) <= 1:
+    # 5. Non-color or single-color product fallback:
+    # If there is at most one unique color across variants, all variants represent the same physical item
+    unique_colors = {extract_variant_color(var).strip().lower() for var in variants_raw if extract_variant_color(var)}
+    if len(variants_raw) <= 1 or len(unique_colors) <= 1:
         for g_img in gallery:
             if isinstance(g_img, str) and g_img.startswith("http") and g_img not in broken_urls:
                 return g_img
@@ -461,6 +525,8 @@ def resolve_options_and_variants(
     # Limit to maximum 3 options (Shopify GraphQL limit)
     ordered_dim_names = ordered_dim_names[:3]
 
+    has_color_dim = "Color" in ordered_dim_names
+
     # Check if other variants in this product have valid photos
     has_any_variant_photo = any(resolve_variant_image(v, prod) for v in variants_raw if isinstance(v, dict))
 
@@ -477,11 +543,11 @@ def resolve_options_and_variants(
         v_img = resolve_variant_image(v, prod)
         if not v_img:
             # Ghost variant: no authentic photo found anywhere
-            if len(variants_raw) > 1 and has_any_variant_photo:
-                # Prune un-photographed ghost variant so customers never see a broken swatch
+            if has_color_dim and len(variants_raw) > 1 and has_any_variant_photo:
+                # Prune un-photographed ghost color variant so customers never see a broken swatch
                 continue
             else:
-                # Fallback to primary product image if no variants have dedicated photos
+                # Non-color variant (e.g. Size, Case Diameter) or product where no variants have dedicated photos
                 v_img = (prod.get("images") or [None])[0] or prod.get("image") or prod.get("image_url")
                 if v_img in BROKEN_IMAGE_URLS:
                     v_img = None
@@ -523,8 +589,13 @@ def resolve_options_and_variants(
         else:
             # If current variant is in stock and existing is not, prioritize current
             existing_v = seen_variants[row_key][0]
-            if existing_v.get("availability") != "in_stock" and not existing_v.get("in_stock") and (v.get("availability") == "in_stock" or v.get("in_stock")):
-                seen_variants[row_key] = (v, opt_val_list, v_img)
+            existing_img = seen_variants[row_key][2]
+            v_stock = (v.get("availability") == "in_stock" or v.get("in_stock") is True)
+            ex_stock = (existing_v.get("availability") == "in_stock" or existing_v.get("in_stock") is True)
+
+            chosen_v = v if (v_stock and not ex_stock) else existing_v
+            chosen_img = v_img if (not existing_img and v_img) else (existing_img or v_img)
+            seen_variants[row_key] = (chosen_v, opt_val_list, chosen_img)
 
     # 4. Construct ProductSet variant inputs
     variant_inputs: List[Dict[str, Any]] = []
@@ -575,11 +646,14 @@ def resolve_options_and_variants(
     # Edge case: if all variants were somehow pruned, provide fallback
     if not variant_inputs:
         inr_price = float(round(source_price * forex_rate))
+        compare_str = None
+        if compare_source and float(compare_source) > source_price:
+            compare_str = f"{float(round(float(compare_source) * forex_rate)):.2f}"
         primary_img = (prod.get("images") or [None])[0] or prod.get("image") or prod.get("image_url")
         var_fallback = {
             "optionValues": [{"optionName": "Title", "name": "Default Title"}],
             "price": f"{inr_price:.2f}",
-            "compareAtPrice": None,
+            "compareAtPrice": compare_str,
             "sku": f"RARE-{source_sku}",
             "inventoryPolicy": "CONTINUE" if (prod.get("availability") == "in_stock") else "DENY",
             "inventoryItem": {"tracked": False if (prod.get("availability") == "in_stock") else True}
@@ -972,6 +1046,12 @@ def prepare_product_set_payload(prod: Dict[str, Any], forex_rate: Optional[float
         if img_url and isinstance(img_url, str) and img_url.startswith("http") and img_url not in seen_img_urls and img_url not in BROKEN_IMAGE_URLS:
             all_img_urls.append(img_url)
             seen_img_urls.add(img_url)
+
+    # 3. Primary image fallback
+    primary_prod_img = prod.get("image") or prod.get("image_url")
+    if primary_prod_img and isinstance(primary_prod_img, str) and primary_prod_img.startswith("http") and primary_prod_img not in seen_img_urls and primary_prod_img not in BROKEN_IMAGE_URLS:
+        all_img_urls.append(primary_prod_img)
+        seen_img_urls.add(primary_prod_img)
 
     # Media CDN files
     media_files = []

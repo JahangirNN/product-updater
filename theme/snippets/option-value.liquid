@@ -148,7 +148,7 @@ Thumbnail specific parameters:
   {%- capture variant_attributes -%}
     {%- if output_variant_media and option_value != blank and variant != blank -%}
       {%- liquid
-        assign variant_media = variant.featured_media
+        assign variant_media = variant.featured_media | default: fallback_variant_media
 
         if option_value.product_url != blank
           assign variant_media = variant_media | default: variant.product.featured_media

@@ -108,7 +108,7 @@ def run_deep_verification():
                     continue
 
                 swatch.scroll_into_view_if_needed()
-                swatch.click()
+                swatch.click(force=True)
                 page.wait_for_timeout(2500)
 
                 # Capture screenshot
