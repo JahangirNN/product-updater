@@ -5328,6 +5328,21 @@ var ProductStickyBar = class extends HTMLElement {
     if (__privateGet(this, _formElement)) {
       __privateGet(this, _intersectionObserver3).observe(__privateGet(this, _formElement));
       __privateGet(this, _intersectionObserver3).observe(__privateGet(this, _footerElement));
+      __privateGet(this, _formElement).addEventListener("variant:change", (e) => {
+        if (!e.detail.variant) return;
+        const variant = e.detail.variant;
+        const img = this.querySelector(".product-sticky-bar__info img");
+        const mediaSrc = variant.featured_image?.src || variant.featured_media?.preview_image?.src;
+        if (img && mediaSrc) {
+          img.src = mediaSrc;
+          img.removeAttribute("srcset");
+        }
+        const price = this.querySelector(".product-sticky-bar__info .price-list");
+        if (price && variant.price) {
+          const money = `Rs. ${(variant.price / 100).toLocaleString('en-IN', {minimumFractionDigits: 2})}`;
+          price.innerHTML = `<sale-price class="text-subdued">${money}</sale-price>`;
+        }
+      });
     }
   }
   disconnectedCallback() {
