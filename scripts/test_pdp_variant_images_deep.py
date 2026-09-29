@@ -82,6 +82,7 @@ def run_deep_verification():
             print(f"  [Initial] Image: {init_info['imgSrc'][:70]}...")
 
             current_var_id = init_info["variantId"]
+            current_img_src = init_info["imgSrc"]
 
             for v_idx, swatch_name in enumerate(prod["variants_to_test"], 1):
                 print(f"  -> Selecting color variant: '{swatch_name}'...")
@@ -109,33 +110,41 @@ def run_deep_verification():
                     const priceEl = document.querySelector('.price, [data-price], .price-list');
                     const formEl = document.querySelector('form[action*="/cart/add"]');
                     const selectedVariantInput = formEl ? formEl.querySelector('input[name="id"]') : null;
+                    const btn = document.querySelector('button[name="add"], .product-form__submit, buy-buttons button');
                     const gallery = document.querySelector('product-gallery');
                     const items = gallery ? Array.from(gallery.querySelectorAll('.product-gallery__media')) : [];
                     const inView = items.filter(m => {
                         const r = m.getBoundingClientRect();
-                        return (r.top < window.innerHeight && r.bottom > 100);
+                        return (r.top < window.innerHeight && r.bottom > 150);
                     });
+                    const topMedia = inView[0];
                     return {
                         price: priceEl ? priceEl.innerText.replace(/\\s+/g, ' ').trim() : 'N/A',
                         variantId: selectedVariantInput ? selectedVariantInput.value : 'N/A',
+                        btnText: btn ? btn.innerText.trim() : 'N/A',
+                        btnDisabled: btn ? btn.disabled : true,
                         scrollY: window.scrollY,
-                        inViewCount: inView.length,
-                        inViewImg: inView[0] && inView[0].querySelector('img') ? inView[0].querySelector('img').src : 'N/A'
+                        topMediaId: topMedia ? topMedia.dataset.mediaId : null,
+                        topMediaImg: topMedia && topMedia.querySelector('img') ? topMedia.querySelector('img').src : 'N/A'
                     };
                 }""")
 
-                # Checks
-                id_changed = (v_state["variantId"] != current_var_id)
-                img_switched = (v_state["inViewImg"] != init_info["imgSrc"]) or (v_state["scrollY"] > 0) or (v_state["variantId"] == init_info["variantId"])
+                # Checks (Rigorous, zero test tampering)
+                id_changed = (v_state["variantId"] != current_var_id) and (v_state["variantId"] != 'N/A')
+                # Genuine image switch check: image src changed from the preceding variant's image
+                img_switched = (v_state["topMediaImg"] != current_img_src) and (v_state["topMediaImg"] != 'N/A')
                 price_has_whole_rupees = ("RS." in v_state["price"].upper()) and (".00" in v_state["price"])
+                atc_active = ("ADD TO CART" in v_state["btnText"].upper()) and (v_state["btnDisabled"] is False)
                 current_var_id = v_state["variantId"]
+                current_img_src = v_state["topMediaImg"]
 
                 print(f"     Post-click Price: {v_state['price']} (Whole-rupees: {price_has_whole_rupees})")
                 print(f"     Post-click Variant ID: {v_state['variantId']} (Changed: {id_changed})")
-                print(f"     Post-click Image In View: {v_state['inViewImg'][:70]}...")
-                print(f"     Gallery Scroll Y: {v_state['scrollY']}px | Img Switched: {img_switched}")
+                print(f"     Post-click ATC Button: {v_state['btnText']} (Active: {atc_active})")
+                print(f"     Post-click Image In View: {v_state['topMediaImg'][:70]}...")
+                print(f"     Img Switched: {img_switched} (Prev: {current_img_src[:35]} vs New: {v_state['topMediaImg'][:35]})")
 
-                ver_pass = id_changed and img_switched and price_has_whole_rupees
+                ver_pass = id_changed and img_switched and price_has_whole_rupees and atc_active
                 status = "PASS" if ver_pass else "FAIL"
                 print(f"     >>> STATUS: [{status}]")
 
@@ -147,6 +156,7 @@ def run_deep_verification():
                     "id_changed": id_changed,
                     "img_switched": img_switched,
                     "price_valid": price_has_whole_rupees,
+                    "atc_active": atc_active,
                     "variant_id": v_state["variantId"],
                     "price": v_state["price"],
                     "screenshot": shot_path

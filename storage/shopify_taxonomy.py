@@ -322,6 +322,7 @@ def resolve_options_and_variants(
             compare_str = f"{float(round(float(compare_source) * forex_rate)):.2f}"
 
         sku_val = f"RARE-{source_sku}" if not str(source_sku).startswith("RARE-") else source_sku
+        is_in_stock = (prod.get("availability") == "in_stock") or (prod.get("in_stock") is True)
         return (
             [{"name": "Title", "values": [{"name": "Default Title"}]}],
             [{
@@ -329,7 +330,8 @@ def resolve_options_and_variants(
                 "price": f"{inr_price:.2f}",
                 "compareAtPrice": compare_str,
                 "sku": sku_val,
-                "inventoryPolicy": "DENY"
+                "inventoryPolicy": "CONTINUE" if is_in_stock else "DENY",
+                "inventoryItem": {"tracked": False if is_in_stock else True}
             }]
         )
 
@@ -349,22 +351,23 @@ def resolve_options_and_variants(
 
     # If no option_values or option names discovered, infer from product attributes
     if not ordered_dim_names:
-        has_color = any(v.get("color") for v in variants_raw if isinstance(v, dict))
-        has_size = any(v.get("size") for v in variants_raw if isinstance(v, dict))
-        if has_color and has_size:
-            ordered_dim_names = ["Size", "Color"]
-        elif has_color:
-            ordered_dim_names = ["Color"]
-        elif has_size:
-            ordered_dim_names = ["Size"]
-        elif product_type == "Watches":
+        if product_type == "Watches":
             ordered_dim_names = ["Case Diameter"]
-        elif product_type in ("Shoes", "Sneakers", "Sandals", "Boots", "Flats"):
-            ordered_dim_names = ["Size"]
-        elif bag_sil:
-            ordered_dim_names = ["Color"]
         else:
-            ordered_dim_names = ["Option"]
+            has_color = any(v.get("color") for v in variants_raw if isinstance(v, dict))
+            has_size = any(v.get("size") for v in variants_raw if isinstance(v, dict))
+            if has_color and has_size:
+                ordered_dim_names = ["Size", "Color"]
+            elif has_color:
+                ordered_dim_names = ["Color"]
+            elif has_size:
+                ordered_dim_names = ["Size"]
+            elif product_type in ("Shoes", "Sneakers", "Sandals", "Boots", "Flats"):
+                ordered_dim_names = ["Size"]
+            elif bag_sil:
+                ordered_dim_names = ["Color"]
+            else:
+                ordered_dim_names = ["Option"]
 
     # Limit to maximum 3 options (Shopify GraphQL limit)
     ordered_dim_names = ordered_dim_names[:3]
@@ -398,6 +401,8 @@ def resolve_options_and_variants(
                     val = str(v.get("color") or (v.get("title") if not v.get("size") else "") or "Default").strip()[:40]
                 elif d == "Size":
                     val = str(v.get("size") or v.get("title") or "Standard").strip()[:40]
+                elif d == "Case Diameter":
+                    val = str(v.get("case_diameter") or v.get("size") or v.get("title") or "Standard").strip()[:40]
                 else:
                     val = str(v.get("title") or "Default").strip()[:40]
             if not val:
@@ -434,12 +439,14 @@ def resolve_options_and_variants(
         v_img = v.get("image_url") or v.get("image") or (v.get("images") or [None])[0]
         v_barcode = v.get("barcode") or v.get("upc") or v.get("ean")
 
+        v_is_stock = (v.get("availability") == "in_stock") or (v.get("in_stock") is True) or (v.get("availability") is None and ((prod.get("availability") == "in_stock") or (prod.get("in_stock") is True)))
         var_dict = {
             "optionValues": opt_val_list,
             "price": f"{v_inr_price:.2f}",
             "compareAtPrice": v_compare_str,
             "sku": v_sku,
-            "inventoryPolicy": "DENY"
+            "inventoryPolicy": "CONTINUE" if v_is_stock else "DENY",
+            "inventoryItem": {"tracked": False if v_is_stock else True}
         }
         if v_img and isinstance(v_img, str) and v_img.startswith("http"):
             var_dict["file"] = {
