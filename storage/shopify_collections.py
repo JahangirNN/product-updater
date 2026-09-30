@@ -130,6 +130,32 @@ COLLECTIONS_MANIFEST: List[Dict[str, Any]] = [
         }
     },
 
+    # --- Master Gender Department Collections ---
+    {
+        "title": "Women's Collection",
+        "handle": "women",
+        "descriptionHtml": "<p>Explore our complete women's luxury edit featuring designer handbags, fine horology, and statement accessories.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": True,
+            "rules": [
+                {"column": "TAG", "relation": "EQUALS", "condition": "Women"},
+                {"column": "TAG", "relation": "EQUALS", "condition": "Women's"}
+            ]
+        }
+    },
+    {
+        "title": "Men's Collection",
+        "handle": "men",
+        "descriptionHtml": "<p>Explore our complete men's luxury edit featuring fine horology, designer leather goods, and premium accessories.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": True,
+            "rules": [
+                {"column": "TAG", "relation": "EQUALS", "condition": "Men"},
+                {"column": "TAG", "relation": "EQUALS", "condition": "Men's"}
+            ]
+        }
+    },
+
     # --- Gender Sub-Categories ---
     {
         "title": "Men's Watches",
