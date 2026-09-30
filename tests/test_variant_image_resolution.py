@@ -160,6 +160,71 @@ class TestVariantImageResolution(unittest.TestCase):
         file_urls = [f["originalSource"] for f in payload.get("files", [])]
         self.assertIn("https://cdn.example.com/primary-cardcase.jpg", file_urls)
 
+    def test_split_colorway_variant_zero_prioritization(self):
+        prod = {
+            "title": "Abacus Faux Snake-Effect Mini Top Handle Bag - Burgundy",
+            "product_type": "Satchels & Top Handles",
+            "images": [
+                "https://cdn.example.com/abacus-burgundy-front.jpg",
+                "https://cdn.example.com/abacus-burgundy-side.jpg"
+            ],
+            "source_price": 99.0,
+            "availability": "in_stock",
+            "variants": [
+                {
+                    "title": "Black",
+                    "image_url": "https://cdn.example.com/abacus-black-front.jpg",
+                    "option_values": [{"option_name": "Color", "name": "Black"}]
+                },
+                {
+                    "title": "Orange",
+                    "image_url": "https://cdn.example.com/abacus-orange-front.jpg",
+                    "option_values": [{"option_name": "Color", "name": "Orange"}]
+                },
+                {
+                    "title": "Burgundy",
+                    "image_url": "https://cdn.example.com/abacus-burgundy-front.jpg",
+                    "option_values": [{"option_name": "Color", "name": "Burgundy"}]
+                }
+            ]
+        }
+        payload = prepare_product_set_payload(prod, forex_rate=90.0)
+        # Variant 0 must be Burgundy
+        self.assertEqual(payload["variants"][0]["optionValues"][0]["name"], "Burgundy")
+        self.assertEqual(payload["variants"][0]["file"]["originalSource"], "https://cdn.example.com/abacus-burgundy-front.jpg")
+        # Files[0] must be Burgundy front image
+        self.assertEqual(payload["files"][0]["originalSource"], "https://cdn.example.com/abacus-burgundy-front.jpg")
+        # Files[1] must be Burgundy side image
+        self.assertEqual(payload["files"][1]["originalSource"], "https://cdn.example.com/abacus-burgundy-side.jpg")
+
+    def test_split_colorway_generic_name_refinement(self):
+        prod = {
+            "title": "Abacus Faux Fur Mini Top Handle Bag- Grass Green",
+            "product_type": "Satchels & Top Handles",
+            "images": [
+                "https://cdn.example.com/abacus-grass-green.jpg"
+            ],
+            "source_price": 99.0,
+            "availability": "in_stock",
+            "variants": [
+                {
+                    "title": "Black",
+                    "image_url": "https://cdn.example.com/abacus-black.jpg",
+                    "option_values": [{"option_name": "Color", "name": "Black"}]
+                },
+                {
+                    "title": "Standard",
+                    "image_url": "https://cdn.example.com/abacus-grass-green.jpg",
+                    "option_values": [{"option_name": "Color", "name": "Standard"}]
+                }
+            ]
+        }
+        payload = prepare_product_set_payload(prod, forex_rate=90.0)
+        # Variant 0 must be Grass Green (refined from Standard)
+        self.assertEqual(payload["variants"][0]["optionValues"][0]["name"], "Grass Green")
+        self.assertEqual(payload["variants"][0]["file"]["originalSource"], "https://cdn.example.com/abacus-grass-green.jpg")
+        self.assertEqual(payload["files"][0]["originalSource"], "https://cdn.example.com/abacus-grass-green.jpg")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -73,14 +73,16 @@ Supported variables
           if section.index > 3 or position > 3
             assign main_media_loading_strategy = 'lazy'
           endif
+
+          assign primary_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media
         -%}
 
         {%- capture main_image_classes -%}product-card__image product-card__image--primary {% if settings.product_image_aspect_ratio contains 'crop' %}object-cover{% endif %} aspect-{{ settings.product_image_aspect_ratio | split: '_' | first }}{%- endcapture -%}
-        {{- product.featured_media | image_url: width: product.featured_media.width | image_tag: loading: main_media_loading_strategy, sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', draggable: 'false', class: main_image_classes -}}
+        {{- primary_media | image_url: width: primary_media.width | image_tag: loading: main_media_loading_strategy, sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', draggable: 'false', class: main_image_classes -}}
 
         {%- liquid
           if show_secondary_image and product.media.size > 1
-            assign next_media = product.media[product.featured_media.position] | default: product.media[1]
+            assign next_media = product.media[primary_media.position] | default: product.media[1]
 
             if next_media != blank
              echo next_media | image_url: width: next_media.width | image_tag: class: 'product-card__image product-card__image--secondary', loading: 'lazy', fetchpriority: 'low', sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', draggable: 'false', aria-hidden: 'true'

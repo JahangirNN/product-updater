@@ -41,6 +41,7 @@ FILES_TO_DEPLOY = [
     ("snippets/facets.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "facets.liquid")),
     ("snippets/active-facets.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "active-facets.liquid")),
     ("snippets/option-value.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "option-value.liquid")),
+    ("snippets/product-card.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "product-card.liquid")),
     ("assets/theme.js", os.path.join(PROJECT_ROOT, "theme", "assets", "theme.js")),
 ]
 

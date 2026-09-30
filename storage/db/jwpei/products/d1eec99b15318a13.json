@@ -9,7 +9,7 @@
   "source_price": 99.0,
   "source_compare_at_price": 99.0,
   "current_price": 9389.0,
-  "compare_at_price": 9508.0,
+  "compare_at_price": 9510.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -687,8 +687,13 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:34:03Z",
-  "updated_at": "2026-09-22T05:26:45Z",
-  "last_verified_at": "2026-09-22T05:26:45Z",
+  "updated_at": "2026-09-30T08:51:01Z",
+  "last_verified_at": "2026-09-30T08:51:01Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841784496294",
+  "shopify_handle": "hana-mini-faux-suede-tote-bag-forest-green",
+  "shopify_synced_at": "2026-09-29T06:01:15Z",
+  "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1785493549634-wc0wt40a7x.jpg?v=1785740516",
+  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1785493549634-wc0wt40a7x.jpg?v=1785740516"
 }

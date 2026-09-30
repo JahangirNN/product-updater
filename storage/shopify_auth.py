@@ -97,11 +97,13 @@ def execute_shopify_graphql(
     variables: Optional[Dict[str, Any]] = None,
     shop_domain: str = DEFAULT_SHOP_DOMAIN,
     timeout: float = 35.0,
-    allow_retry: bool = True
+    allow_retry: bool = True,
+    max_retries: int = 4
 ) -> Tuple[Optional[Dict[str, Any]], Dict[str, Any], str]:
     """
     Execute GraphQL query or mutation against Shopify Admin GraphQL API.
     Auto-refreshes CLI session token if expired (HTTP 401).
+    Automatically backs off and retries on rate limits (HTTP 429 or GraphQL THROTTLED).
     Returns (data_dict, extensions_dict, error_message).
     """
     domain, token, version = get_shopify_credentials(shop_domain)
@@ -122,48 +124,52 @@ def execute_shopify_graphql(
     if variables:
         payload["variables"] = variables
 
-    try:
-        client = get_shopify_http_client()
-        resp = client.post(url, json=payload, headers=headers)
-        
-        # Handle token expiration with transparent auto-refresh
-        if resp.status_code == 401 and allow_retry:
-            log_shopify_warning(f"Shopify Admin GraphQL returned 401 Unauthorized for {domain}. Triggering CLI session auto-refresh...")
-            if refresh_cli_session(domain):
-                return execute_shopify_graphql(query, variables, shop_domain, timeout, allow_retry=False)
+    client = get_shopify_http_client()
 
-        if resp.status_code == 429 and allow_retry:
-            log_shopify_warning(f"Shopify Admin GraphQL 429 Rate Limited for {domain}. Backing off 2.5s...")
-            time.sleep(2.5)
-            return execute_shopify_graphql(query, variables, shop_domain, timeout, allow_retry=False)
+    for attempt in range(max_retries):
+        try:
+            resp = client.post(url, json=payload, headers=headers)
 
-        if resp.status_code == 200:
-            body = resp.json()
-            data = body.get("data")
-            extensions = body.get("extensions", {})
-            errors = body.get("errors")
-            if errors:
-                is_throttled = any("throttled" in str(e).lower() for e in errors)
-                if is_throttled and allow_retry:
-                    log_shopify_warning(f"Shopify Admin GraphQL THROTTLED for {domain}. Backing off 2.5s...")
-                    time.sleep(2.5)
+            # Handle token expiration with transparent auto-refresh
+            if resp.status_code == 401 and allow_retry and attempt == 0:
+                log_shopify_warning(f"Shopify Admin GraphQL returned 401 Unauthorized for {domain}. Triggering CLI session auto-refresh...")
+                if refresh_cli_session(domain):
                     return execute_shopify_graphql(query, variables, shop_domain, timeout, allow_retry=False)
-                err_msg = json.dumps(errors)
-                log_shopify_error(f"Shopify Admin GraphQL returned errors: {err_msg}")
-                return data, extensions, f"GraphQL Errors: {err_msg}"
-            return data, extensions, ""
-        else:
-            err_msg = f"HTTP {resp.status_code}: {resp.text}"
-            log_shopify_error(f"Shopify Admin GraphQL failure: {err_msg}")
+
+            if (resp.status_code == 429 or resp.status_code == 503) and attempt < max_retries - 1:
+                backoff = 2.5 * (attempt + 1)
+                log_shopify_warning(f"Shopify Admin GraphQL HTTP {resp.status_code} for {domain}. Backing off {backoff:.1f}s (attempt {attempt+1}/{max_retries})...")
+                time.sleep(backoff)
+                continue
+
+            if resp.status_code == 200:
+                body = resp.json()
+                data = body.get("data")
+                extensions = body.get("extensions", {})
+                errors = body.get("errors")
+                if errors:
+                    is_throttled = any("throttled" in str(e).lower() for e in errors)
+                    if is_throttled and attempt < max_retries - 1:
+                        backoff = 3.0 * (attempt + 1)
+                        log_shopify_warning(f"Shopify Admin GraphQL THROTTLED for {domain}. Backing off {backoff:.1f}s (attempt {attempt+1}/{max_retries})...")
+                        time.sleep(backoff)
+                        continue
+                    err_msg = json.dumps(errors)
+                    log_shopify_error(f"Shopify Admin GraphQL returned errors: {err_msg}")
+                    return data, extensions, f"GraphQL Errors: {err_msg}"
+                return data, extensions, ""
+            else:
+                err_msg = f"HTTP {resp.status_code}: {resp.text}"
+                log_shopify_error(f"Shopify Admin GraphQL failure: {err_msg}")
+                return None, {}, err_msg
+        except (httpx.ReadTimeout, httpx.ConnectTimeout) as te:
+            if attempt < max_retries - 1:
+                time.sleep(1.5 * (attempt + 1))
+                continue
+            err_msg = f"Request Timeout: {te}"
+            log_shopify_error(f"Shopify Admin GraphQL timeout: {err_msg}", exc=te)
             return None, {}, err_msg
-    except (httpx.ReadTimeout, httpx.ConnectTimeout) as te:
-        if allow_retry:
-            time.sleep(1.0)
-            return execute_shopify_graphql(query, variables, shop_domain, timeout=timeout, allow_retry=False)
-        err_msg = f"Request Timeout: {te}"
-        log_shopify_error(f"Shopify Admin GraphQL timeout: {err_msg}", exc=te)
-        return None, {}, err_msg
-    except Exception as exc:
-        err_msg = f"Request Exception: {exc}"
-        log_shopify_error(f"Shopify Admin GraphQL exception: {err_msg}", exc=exc)
-        return None, {}, err_msg
+        except Exception as exc:
+            err_msg = f"Request Exception: {exc}"
+            log_shopify_error(f"Shopify Admin GraphQL exception: {err_msg}", exc=exc)
+            return None, {}, err_msg

@@ -439,6 +439,61 @@ def resolve_variant_image(v: Dict[str, Any], prod: Dict[str, Any], broken_urls: 
     return None
 
 
+def find_matching_variant_index(
+    prod: Dict[str, Any],
+    variant_inputs: List[Dict[str, Any]]
+) -> int:
+    """
+    Find the index of the variant that best matches this product's title and primary photo.
+    Ensures that split-colorway products (e.g. 'Abacus ... - Burgundy') have the authentic
+    variant as variant 0 (Shopify default selected variant).
+    """
+    if len(variant_inputs) <= 1:
+        return 0
+
+    first_prod_img = (prod.get("images") or [None])[0] or prod.get("image") or prod.get("image_url")
+    first_img_clean = first_prod_img.split('?')[0].lower() if first_prod_img and isinstance(first_prod_img, str) else ""
+
+    # Signal 1: Variant image matches the product's primary gallery image
+    if first_img_clean:
+        for idx, var in enumerate(variant_inputs):
+            v_file = var.get("file")
+            if v_file and isinstance(v_file, dict):
+                v_src = (v_file.get("originalSource") or "").split('?')[0].lower()
+                if v_src and v_src == first_img_clean:
+                    return idx
+
+    # Signal 2: Title colorway / suffix match
+    title = prod.get("title", "")
+    parts = re.split(r'\s*[\-–—]\s*', title.strip())
+    if len(parts) > 1:
+        candidate_color = parts[-1].strip().lower()
+        # Direct exact match
+        for idx, var in enumerate(variant_inputs):
+            for ov in var.get("optionValues", []):
+                val_name = str(ov.get("name", "")).strip().lower()
+                if val_name == candidate_color:
+                    return idx
+        # Substring / partial match
+        for idx, var in enumerate(variant_inputs):
+            for ov in var.get("optionValues", []):
+                val_name = str(ov.get("name", "")).strip().lower()
+                if (len(candidate_color) >= 3 and candidate_color in val_name) or (len(val_name) >= 3 and val_name in candidate_color):
+                    return idx
+
+    # Signal 3: Variant SKU matches product's source_sku
+    prod_sku = str(prod.get("source_sku") or prod.get("sku") or "").strip().lower()
+    if prod_sku and len(prod_sku) >= 4:
+        clean_prod_sku = prod_sku[5:] if prod_sku.startswith("rare-") else prod_sku
+        for idx, var in enumerate(variant_inputs):
+            var_sku = str(var.get("sku") or "").strip().lower()
+            clean_var_sku = var_sku[5:] if var_sku.startswith("rare-") else var_sku
+            if clean_prod_sku and clean_prod_sku == clean_var_sku:
+                return idx
+
+    return 0
+
+
 def resolve_options_and_variants(
     prod: Dict[str, Any],
     forex_rate: float,
@@ -632,6 +687,28 @@ def resolve_options_and_variants(
             var_dict["barcode"] = str(v_barcode).strip()
 
         variant_inputs.append(var_dict)
+
+    # 4.5. Prioritize authentic matching variant at index 0 for split colorway products
+    primary_idx = find_matching_variant_index(prod, variant_inputs)
+    if primary_idx > 0:
+        primary_var = variant_inputs.pop(primary_idx)
+        variant_inputs.insert(0, primary_var)
+
+    # Refine generic color name (e.g. 'Standard' or 'Default Title') on variant 0 if title specifies a real color
+    if variant_inputs:
+        v0 = variant_inputs[0]
+        v0_ovs = v0.get("optionValues", [])
+        if len(v0_ovs) == 1 and v0_ovs[0].get("optionName") == "Color":
+            cur_name = v0_ovs[0].get("name", "").strip().lower()
+            if cur_name in ("standard", "default", "default title"):
+                parts = re.split(r'\s*[\-–—]\s*', prod.get("title", "").strip())
+                if len(parts) > 1:
+                    real_color = parts[-1].strip()
+                    if real_color and len(real_color) <= 40:
+                        v0_ovs[0]["name"] = real_color
+                        dim_values_set["Color"].discard(cur_name.title())
+                        dim_values_set["Color"].discard(cur_name)
+                        dim_values_set["Color"].add(real_color)
 
     # 5. Build productOptions list
     product_options = []
@@ -1028,30 +1105,55 @@ def prepare_product_set_payload(prod: Dict[str, Any], forex_rate: Optional[float
     # Options & Variants
     options, variants = resolve_options_and_variants(prod, forex_rate, source_price, compare_source)
 
-    # Collect all image URLs: ensure all variant images are included so Shopify can link them
+    # Collect all image URLs: ensure product's authentic primary image is files[0],
+    # followed by product gallery, followed by other variant images so Shopify can link them.
     all_img_urls = []
     seen_img_urls = set()
 
-    # 1. Variant specific images first
-    for v in variants:
-        v_file = v.get("file")
-        if v_file and isinstance(v_file, dict):
-            v_src = v_file.get("originalSource")
-            if v_src and isinstance(v_src, str) and v_src.startswith("http") and v_src not in seen_img_urls:
-                all_img_urls.append(v_src)
-                seen_img_urls.add(v_src)
+    # 1. Primary authentic image MUST be files[0] (Shopify's product.featuredMedia)
+    primary_img = None
+    if variants:
+        v0_file = variants[0].get("file")
+        if v0_file and isinstance(v0_file, dict):
+            src = v0_file.get("originalSource")
+            if src and isinstance(src, str) and src.startswith("http") and src not in BROKEN_IMAGE_URLS:
+                primary_img = src
 
-    # 2. Product gallery images
+    if not primary_img:
+        for img in (prod.get("images") or []):
+            if img and isinstance(img, str) and img.startswith("http") and img not in BROKEN_IMAGE_URLS:
+                primary_img = img
+                break
+
+    if not primary_img:
+        fallback = prod.get("image") or prod.get("image_url")
+        if fallback and isinstance(fallback, str) and fallback.startswith("http") and fallback not in BROKEN_IMAGE_URLS:
+            primary_img = fallback
+
+    if primary_img:
+        all_img_urls.append(primary_img)
+        seen_img_urls.add(primary_img)
+
+    # 2. Product gallery images (for multi-angle views and hover secondary image)
     for img_url in prod.get("images", []):
         if img_url and isinstance(img_url, str) and img_url.startswith("http") and img_url not in seen_img_urls and img_url not in BROKEN_IMAGE_URLS:
             all_img_urls.append(img_url)
             seen_img_urls.add(img_url)
 
-    # 3. Primary image fallback
+    # 3. Fallback product image
     primary_prod_img = prod.get("image") or prod.get("image_url")
     if primary_prod_img and isinstance(primary_prod_img, str) and primary_prod_img.startswith("http") and primary_prod_img not in seen_img_urls and primary_prod_img not in BROKEN_IMAGE_URLS:
         all_img_urls.append(primary_prod_img)
         seen_img_urls.add(primary_prod_img)
+
+    # 4. Sibling variant specific images (so Shopify can link swatches for all colors)
+    for v in variants:
+        v_file = v.get("file")
+        if v_file and isinstance(v_file, dict):
+            v_src = v_file.get("originalSource")
+            if v_src and isinstance(v_src, str) and v_src.startswith("http") and v_src not in seen_img_urls and v_src not in BROKEN_IMAGE_URLS:
+                all_img_urls.append(v_src)
+                seen_img_urls.add(v_src)
 
     # Media CDN files
     media_files = []
