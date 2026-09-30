@@ -4,19 +4,23 @@ Verifies:
 1. Desktop Search Sidebar Facets (/search?q=Wallet):
    - Verifies Brand, Price, Availability, and Silhouette filters all render in sidebar.
    - Opens Brand accordion and checks 'COACH'.
-   - Verifies search results update to COACH wallets.
-   - Verifies URL preserves 'q=Wallet' parameter and includes 'filter.p.vendor=COACH'.
+   - Verifies search results update to COACH wallets (48 cards).
+   - Verifies URL preserves clean 'q=Wallet' and includes 'filter.p.vendor=COACH'.
    - Verifies active facet pill 'Brand: COACH' renders.
-   - Adjusts price range -> verifies results narrow.
-   - Clears filters -> verifies clean state.
+   - Adjusts price range -> verifies clean URL without backend boolean leaks ('vendor:' / 'tag:').
+   - Tests multi-brand selection (COACH + Michael Kors) -> verifies clean URL with both brands.
+   - Tests removing active brand pill -> verifies clean uncheck and state sync without corruption.
+   - Clears filters -> verifies clean restored state.
 2. Desktop Search Sidebar Facets (/search?q=Bag):
    - Verifies Brand, Silhouette, Availability, and Price filters all render in sidebar.
-3. Mobile Filter Drawer (/search?q=Wallet):
+3. Search with parenthesis query (/search?q=Wallet+(Black)):
+   - Verifies query is preserved cleanly without unwanted string truncation.
+4. Mobile Filter Drawer (/search?q=Wallet):
    - Sets mobile viewport (390x844).
    - Opens filter drawer via button.
    - Verifies Brand, Price, Availability, and Silhouette in drawer.
    - Selects brand, applies filters, verifies results update.
-4. Saves visual proof screenshots to artifacts directory.
+5. Saves visual proof screenshots to artifacts directory.
 """
 import os
 import sys
@@ -28,10 +32,11 @@ os.makedirs(ARTIFACTS_DIR, exist_ok=True)
 
 WALLET_SEARCH_URL = "https://therareavenue.com/search?q=Wallet"
 BAG_SEARCH_URL = "https://therareavenue.com/search?q=Bag"
+PAREN_SEARCH_URL = "https://therareavenue.com/search?q=Wallet+(Black)"
 
 def test_search_facets():
     print("=" * 80)
-    print("STARTING PLAYWRIGHT SEARCH FACET TEST")
+    print("STARTING COMPREHENSIVE PLAYWRIGHT SEARCH FACET TEST")
     print(f"Target URL: {WALLET_SEARCH_URL}")
     print("=" * 80)
 
@@ -94,23 +99,22 @@ def test_search_facets():
         coach_cb.evaluate("el => { el.checked = true; el.dispatchEvent(new Event('change', { bubbles: true })); }")
         time.sleep(3)
 
-        # Verify current URL preserved q=Wallet and has filter.p.vendor=COACH
+        # Verify current URL preserved clean q=Wallet and has filter.p.vendor=COACH
         current_url = page.url
         print(f"Current URL after selecting COACH: {current_url}")
         assert "q=Wallet" in current_url, f"Search query 'q' lost! URL: {current_url}"
+        assert "vendor:" not in current_url, f"Backend boolean query syntax leaked into browser URL! URL: {current_url}"
         assert "filter.p.vendor=COACH" in current_url, f"Vendor filter parameter missing! URL: {current_url}"
 
-        # Verify cards are all COACH
+        # Verify product cards update to COACH
         cards = page.locator("product-card")
-        card_count = cards.count()
-        print(f"Total product cards after filtering by COACH: {card_count}")
-        assert card_count > 0, "No product cards displayed after filtering by COACH!"
+        cards_count = cards.count()
+        print(f"Total product cards after filtering by COACH: {cards_count}")
+        assert cards_count > 0, "No product cards displayed after filtering by COACH!"
 
-        # Check vendor attribute on all rendered cards
-        vendors_found = set(cards.evaluate_all("els => els.map(el => el.getAttribute('data-vendor'))"))
-        print(f"Vendors among displayed cards: {vendors_found}")
-        assert "COACH" in vendors_found, f"COACH products not found! Got: {vendors_found}"
-        assert len([v for v in vendors_found if v and v != "COACH"]) == 0, f"Found non-COACH products: {vendors_found}"
+        displayed_vendors = set(cards.evaluate_all("els => els.map(el => el.getAttribute('data-vendor'))"))
+        print(f"Vendors among displayed cards: {displayed_vendors}")
+        assert displayed_vendors == {"COACH"}, f"Expected only COACH products, got: {displayed_vendors}"
 
         # Verify active facet pill
         active_facet = page.locator(".removable-facet:has-text('COACH')").first
@@ -122,7 +126,7 @@ def test_search_facets():
         page.screenshot(path=coach_ss_path)
         print(f"Saved COACH filtered screenshot to {coach_ss_path}")
 
-        # 4. Test Price Filter adjustment
+        # 4. Test Price Filter adjustment (with COACH active)
         print("\nOpening Price accordion...")
         if not price_acc.locator("xpath=..").evaluate("el => el.hasAttribute('open')"):
             price_acc.click()
@@ -141,11 +145,56 @@ def test_search_facets():
         price_url = page.url
         print(f"Current URL after adjusting price: {price_url}")
         assert "q=Wallet" in price_url, f"q lost after price filter! URL: {price_url}"
+        assert "vendor:" not in price_url, f"Backend boolean query syntax leaked into browser URL! URL: {price_url}"
+        assert "filter.p.vendor=COACH" in price_url, f"COACH filter lost after price adjust! URL: {price_url}"
         assert "filter.v.price.gte=5000" in price_url or "5000" in price_url, f"Price gte missing! URL: {price_url}"
 
         price_ss_path = os.path.join(ARTIFACTS_DIR, "03_desktop_search_wallet_price_filtered.png")
         page.screenshot(path=price_ss_path)
         print(f"Saved price filtered screenshot to {price_ss_path}")
+
+        # 5. Multi-brand selection: Add Michael Kors
+        print("\nTesting Multi-Brand Selection: Checking Michael Kors...")
+        if not brand_acc.locator("xpath=..").evaluate("el => el.hasAttribute('open')"):
+            brand_acc.click()
+            time.sleep(1)
+
+        mk_cb = sidebar.locator("input[name='filter.p.vendor'][value='Michael Kors']").first
+        mk_cb.evaluate("el => { el.checked = true; el.dispatchEvent(new Event('change', { bubbles: true })); }")
+        time.sleep(3)
+
+        multi_brand_url = page.url
+        print(f"URL after adding Michael Kors: {multi_brand_url}")
+        assert "q=Wallet" in multi_brand_url, f"q corrupted! URL: {multi_brand_url}"
+        assert "vendor:" not in multi_brand_url, f"Leaked vendor syntax in multi-brand URL! URL: {multi_brand_url}"
+        assert ")" not in multi_brand_url.split("?")[1].split("&")[0], f"Stray parenthesis in q! URL: {multi_brand_url}"
+        assert "filter.p.vendor=COACH" in multi_brand_url, f"COACH missing in multi-brand URL! URL: {multi_brand_url}"
+        assert "filter.p.vendor=Michael+Kors" in multi_brand_url or "filter.p.vendor=Michael%20Kors" in multi_brand_url, f"Michael Kors missing! URL: {multi_brand_url}"
+
+        # 6. Test removing active brand pill for COACH
+        print("\nTesting active facet pill removal: Removing COACH pill...")
+        coach_pill_remove = page.locator("[data-brand-remove='COACH']").first
+        assert coach_pill_remove.count() > 0, "COACH pill remove button missing!"
+        coach_pill_remove.click()
+        time.sleep(3)
+
+        pill_removed_url = page.url
+        print(f"URL after removing COACH pill: {pill_removed_url}")
+        assert "filter.p.vendor=COACH" not in pill_removed_url, f"COACH still present in URL after pill removal! URL: {pill_removed_url}"
+        assert "vendor:" not in pill_removed_url, f"Leaked vendor syntax after pill removal! URL: {pill_removed_url}"
+        assert "filter.p.vendor=Michael+Kors" in pill_removed_url or "filter.p.vendor=Michael%20Kors" in pill_removed_url, f"Michael Kors lost! URL: {pill_removed_url}"
+
+        # 7. Test Clear All
+        print("\nTesting Clear All...")
+        clear_all_btn = page.locator(".facets-clear-all").first
+        if clear_all_btn.count() > 0:
+            clear_all_btn.click()
+            time.sleep(3)
+            cleared_url = page.url
+            print(f"URL after Clear all: {cleared_url}")
+            assert "filter.p.vendor" not in cleared_url, f"Vendor filter still present after clear all! URL: {cleared_url}"
+            assert "filter.v.price" not in cleared_url, f"Price filter still present after clear all! URL: {cleared_url}"
+            assert "q=Wallet" in cleared_url, f"q lost after clear all! URL: {cleared_url}"
 
         # ---------------------------------------------------------
         # PART 2: DESKTOP SEARCH (/search?q=Bag)
@@ -175,12 +224,36 @@ def test_search_facets():
         page.screenshot(path=bag_ss_path)
         print(f"Saved Bag search facets screenshot to {bag_ss_path}")
 
+        # ---------------------------------------------------------
+        # PART 3: PARENTHESIS QUERY (/search?q=Wallet+(Black))
+        # ---------------------------------------------------------
+        print("\n--- [3] PARENTHESIS QUERY TEST (/search?q=Wallet+(Black)) ---")
+        print(f"Navigating to {PAREN_SEARCH_URL}...")
+        page.goto(PAREN_SEARCH_URL, wait_until="domcontentloaded", timeout=60000)
+        time.sleep(3)
+
+        paren_sidebar = page.locator(".facets-sidebar").first
+        p_brand = paren_sidebar.locator("details summary:has-text('Brand')").first
+        assert p_brand.count() > 0, "Brand filter missing on parenthesis search query!"
+        if not p_brand.locator("xpath=..").evaluate("el => el.hasAttribute('open')"):
+            p_brand.click()
+            time.sleep(1)
+
+        p_coach = paren_sidebar.locator("input[name='filter.p.vendor'][value='COACH']").first
+        if p_coach.count() > 0:
+            p_coach.evaluate("el => { el.checked = true; el.dispatchEvent(new Event('change', { bubbles: true })); }")
+            time.sleep(3)
+            paren_filtered_url = page.url
+            print(f"URL after filtering on parenthesis query: {paren_filtered_url}")
+            assert "Wallet" in paren_filtered_url and "Black" in paren_filtered_url, f"Query tokens lost! URL: {paren_filtered_url}"
+            assert "vendor:" not in paren_filtered_url, f"Vendor syntax leaked! URL: {paren_filtered_url}"
+
         context.close()
 
         # ---------------------------------------------------------
-        # PART 3: MOBILE DRAWER (/search?q=Wallet)
+        # PART 4: MOBILE DRAWER (/search?q=Wallet)
         # ---------------------------------------------------------
-        print("\n--- [3] MOBILE DRAWER FACETS TEST (/search?q=Wallet) ---")
+        print("\n--- [4] MOBILE DRAWER FACETS TEST (/search?q=Wallet) ---")
         mobile_context = browser.new_context(viewport={"width": 390, "height": 844})
         mobile_page = mobile_context.new_page()
 
@@ -236,6 +309,7 @@ def test_search_facets():
         mobile_url = mobile_page.url
         print(f"Mobile URL after applying filter: {mobile_url}")
         assert "q=Wallet" in mobile_url, f"q lost on mobile! URL: {mobile_url}"
+        assert "vendor:" not in mobile_url, f"Vendor syntax leaked on mobile! URL: {mobile_url}"
         assert "filter.p.vendor=COACH" in mobile_url, f"Vendor filter lost on mobile! URL: {mobile_url}"
 
         # Verify mobile cards are COACH

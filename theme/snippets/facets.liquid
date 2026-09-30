@@ -150,7 +150,23 @@ Supported variables
     {%- endif -%}
 
     {%- if request.page_type == 'search' -%}
-      <input type="hidden" name="q" value="{{ results.terms | escape }}">
+      {%- liquid
+        assign clean_search_terms = results.terms
+        if clean_search_terms contains ' vendor:'
+          assign clean_search_terms = clean_search_terms | split: ' vendor:' | first
+        endif
+        if clean_search_terms contains ' tag:'
+          assign clean_search_terms = clean_search_terms | split: ' tag:' | first
+        endif
+        if clean_search_terms contains ' (vendor:'
+          assign clean_search_terms = clean_search_terms | split: ' (vendor:' | first
+        endif
+        if clean_search_terms contains ' (tag:'
+          assign clean_search_terms = clean_search_terms | split: ' (tag:' | first
+        endif
+        assign clean_search_terms = clean_search_terms | strip
+      -%}
+      <input type="hidden" name="q" value="{{ clean_search_terms | escape }}">
     {%- endif -%}
 
     <div class="accordion-list">

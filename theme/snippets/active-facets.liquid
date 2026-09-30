@@ -163,7 +163,23 @@ Supported variables
     {%- if request.page_type == 'collection' -%}
       {%- assign default_url = collection.url -%}
     {%- else -%}
-      {%- capture default_url -%}{{ routes.search_url }}?q={{ search.terms }}&type=product&sort_by={{ search.sort_by }}{%- endcapture -%}
+      {%- liquid
+        assign clean_active_terms = search.terms
+        if clean_active_terms contains ' vendor:'
+          assign clean_active_terms = clean_active_terms | split: ' vendor:' | first
+        endif
+        if clean_active_terms contains ' tag:'
+          assign clean_active_terms = clean_active_terms | split: ' tag:' | first
+        endif
+        if clean_active_terms contains ' (vendor:'
+          assign clean_active_terms = clean_active_terms | split: ' (vendor:' | first
+        endif
+        if clean_active_terms contains ' (tag:'
+          assign clean_active_terms = clean_active_terms | split: ' (tag:' | first
+        endif
+        assign clean_active_terms = clean_active_terms | strip
+      -%}
+      {%- capture default_url -%}{{ routes.search_url }}?q={{ clean_active_terms | url_encode }}&type=product&sort_by={{ search.sort_by }}{%- endcapture -%}
     {%- endif -%}
 
     <facet-link>

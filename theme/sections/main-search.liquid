@@ -18,6 +18,21 @@
         assign show_filters = true
       endif
     endif
+
+    assign clean_terms = search.terms
+    if clean_terms contains ' vendor:'
+      assign clean_terms = clean_terms | split: ' vendor:' | first
+    endif
+    if clean_terms contains ' tag:'
+      assign clean_terms = clean_terms | split: ' tag:' | first
+    endif
+    if clean_terms contains ' (vendor:'
+      assign clean_terms = clean_terms | split: ' (vendor:' | first
+    endif
+    if clean_terms contains ' (tag:'
+      assign clean_terms = clean_terms | split: ' (tag:' | first
+    endif
+    assign clean_terms = clean_terms | strip
   -%}
 
   {%- if search.results_count > 0 or active_values_count > 0 -%}
@@ -56,7 +71,6 @@
             <div class="section-header justify-self-center text-center">
               <div class="v-stack gap-4">
                 <h1 class="h2">{{ 'search.general.title' | t }}</h1>
-                {%- assign clean_terms = search.terms | split: ' vendor:' | first | split: ' tag:' | first | split: ' (' | first -%}
                 <p>{{ 'search.results_count_for_terms' | t: count: search.results_count, terms: clean_terms }}</p>
               </div>
             </div>
@@ -158,7 +172,7 @@
                               <p>{{ 'collection.faceting.no_results' | t }}</p>
 
                               {%- assign button_content = 'collection.faceting.clear_filters' | t -%}
-                              {%- capture clean_search_url -%}{{ routes.search_url }}?q={{ clean_terms }}{%- endcapture -%}
+                              {%- capture clean_search_url -%}{{ routes.search_url }}?q={{ clean_terms | url_encode }}{%- endcapture -%}
 
                               <facet-link>
                                 {%- render 'button', href: clean_search_url, content: button_content, class: 'facets-clear-all' -%}
@@ -223,7 +237,7 @@
           <div class="v-stack gap-4">
             <div class="prose">
               <h1 class="h4">{{ 'search.general.title' | t }}</h1>
-              <p>{{ 'search.general.no_results' | t: terms: search.terms }}</p>
+              <p>{{ 'search.general.no_results' | t: terms: clean_terms }}</p>
             </div>
 
             <form class="main-search-form" action="{{ routes.search_url }}" method="get" role="search">

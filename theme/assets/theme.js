@@ -1695,6 +1695,19 @@ var FacetsForm = class extends HTMLElement {
 };
 _isDirty = new WeakMap();
 _FacetsForm_instances = new WeakSet();
+function extractCleanSearchQuery(rawQ) {
+  if (!rawQ) return "";
+  let clean = rawQ.trim();
+  const idx = clean.search(/\s+(\(?vendor:|\(?tag:|\(\s*vendor:|\(\s*tag:)/i);
+  if (idx !== -1) {
+    clean = clean.slice(0, idx).trim();
+  }
+  clean = clean.replace(/\s*(?:vendor|tag):"[^"]*"/gi, "");
+  clean = clean.replace(/\s*(?:vendor|tag):[^\s\)]+/gi, "");
+  clean = clean.replace(/\(\s*\)/g, "").trim();
+  return clean;
+}
+
 form_get = function() {
   return this.querySelector("form");
 };
@@ -1707,6 +1720,15 @@ buildUrl_fn = function() {
       url.searchParams.delete(optionToClear);
     }
   });
+  if (url.pathname.includes("/search") || window.location.pathname.includes("/search")) {
+    const rawQ = url.searchParams.get("q") || "";
+    const cleanQ = extractCleanSearchQuery(rawQ);
+    if (cleanQ) {
+      url.searchParams.set("q", cleanQ);
+    } else {
+      url.searchParams.delete("q");
+    }
+  }
   url.searchParams.set("section_id", this.getAttribute("section-id"));
   return url;
 };
@@ -2248,6 +2270,10 @@ var FacetLink = class extends HTMLElement {
 };
 _FacetLink_instances = new WeakSet();
 onFacetUpdate_fn = function(event) {
+  const firstEl = this.firstElementChild;
+  if (!firstEl || !firstEl.href) {
+    return;
+  }
   event.preventDefault();
   const drawer = this.closest("facets-drawer");
   if (drawer && drawer.open) {
@@ -2258,9 +2284,8 @@ onFacetUpdate_fn = function(event) {
     }
   }
   const sectionId = extractSectionId(this) || extractSectionId(event.target);
-  const targetUrl = new URL(this.firstElementChild.href, window.location.origin);
+  const targetUrl = new URL(firstEl.href, window.location.origin);
   
-  const firstEl = this.firstElementChild;
   const isClearAll = this.classList?.contains("facets-clear-all") || firstEl?.classList?.contains("facets-clear-all");
   const isNativeRemoval = firstEl?.getAttribute?.("data-facet-remove") === "native" || firstEl?.classList?.contains("facet-remove-native");
   const isTagLink = firstEl?.getAttribute?.("data-tag-link") === "true" || firstEl?.getAttribute?.("data-tag-removal") === "true" || (typeof firstEl?.matches === "function" && firstEl.matches("[data-tag-link], [data-tag-removal]"));
@@ -2387,11 +2412,9 @@ function renderBrandActiveFacets(container, selectedVendors) {
     const facetDiv = document.createElement("div");
     facetDiv.className = "removable-facet brand-removable-facet";
     facetDiv.innerHTML = `
-      <facet-link>
-        <button type="button" class="tap-area link-faded brand-facet-remove" data-brand-remove="${encodeURIComponent(vendor)}" aria-label="Remove filter Brand: ${vendor}" style="background: none; border: none; padding: 0; cursor: pointer; display: inline-flex; align-items: center;">
-          ${closeIconSvg}
-        </button>
-      </facet-link>
+      <button type="button" class="tap-area link-faded brand-facet-remove" data-brand-remove="${encodeURIComponent(vendor)}" aria-label="Remove filter Brand: ${vendor}" style="background: none; border: none; padding: 0; cursor: pointer; display: inline-flex; align-items: center;">
+        ${closeIconSvg}
+      </button>
       <span class="text-subdued">Brand: ${vendor}</span>
     `;
     if (clearAllEl) {
@@ -2403,9 +2426,10 @@ function renderBrandActiveFacets(container, selectedVendors) {
 
   const totalRemovable = container.querySelectorAll(".removable-facet").length;
   if (totalRemovable >= 1 && !container.querySelector(".facets-clear-all")) {
-    const clearLink = document.createElement("facet-link");
-    clearLink.innerHTML = `<button type="button" class="facets-clear-all text-subdued" data-brand-clear-all="true" style="background: none; border: none; padding: 0; cursor: pointer;"><span class="link">Clear all</span></button>`;
-    container.appendChild(clearLink);
+    const clearDiv = document.createElement("div");
+    clearDiv.className = "facets-clear-all-wrapper";
+    clearDiv.innerHTML = `<button type="button" class="facets-clear-all text-subdued" data-brand-clear-all="true" style="background: none; border: none; padding: 0; cursor: pointer;"><span class="link">Clear all</span></button>`;
+    container.appendChild(clearDiv);
   }
 }
 
@@ -2421,11 +2445,9 @@ function renderSearchActiveFacets(container, selectedVendors, selectedSilhouette
     const facetDiv = document.createElement("div");
     facetDiv.className = "removable-facet brand-removable-facet";
     facetDiv.innerHTML = `
-      <facet-link>
-        <button type="button" class="tap-area link-faded brand-facet-remove" data-brand-remove="${encodeURIComponent(vendor)}" aria-label="Remove filter Brand: ${vendor}" style="background: none; border: none; padding: 0; cursor: pointer; display: inline-flex; align-items: center;">
-          ${closeIconSvg}
-        </button>
-      </facet-link>
+      <button type="button" class="tap-area link-faded brand-facet-remove" data-brand-remove="${encodeURIComponent(vendor)}" aria-label="Remove filter Brand: ${vendor}" style="background: none; border: none; padding: 0; cursor: pointer; display: inline-flex; align-items: center;">
+        ${closeIconSvg}
+      </button>
       <span class="text-subdued">Brand: ${vendor}</span>
     `;
     if (clearAllEl) {
@@ -2449,11 +2471,9 @@ function renderSearchActiveFacets(container, selectedVendors, selectedSilhouette
     const facetDiv = document.createElement("div");
     facetDiv.className = "removable-facet silhouette-removable-facet";
     facetDiv.innerHTML = `
-      <facet-link>
-        <button type="button" class="tap-area link-faded silhouette-facet-remove" data-silhouette-remove="${encodeURIComponent(sil)}" aria-label="Remove filter Silhouette: ${label}" style="background: none; border: none; padding: 0; cursor: pointer; display: inline-flex; align-items: center;">
-          ${closeIconSvg}
-        </button>
-      </facet-link>
+      <button type="button" class="tap-area link-faded silhouette-facet-remove" data-silhouette-remove="${encodeURIComponent(sil)}" aria-label="Remove filter Silhouette: ${label}" style="background: none; border: none; padding: 0; cursor: pointer; display: inline-flex; align-items: center;">
+        ${closeIconSvg}
+      </button>
       <span class="text-subdued">Silhouette: ${label}</span>
     `;
     if (clearAllEl) {
@@ -2465,9 +2485,10 @@ function renderSearchActiveFacets(container, selectedVendors, selectedSilhouette
 
   const totalRemovable = container.querySelectorAll(".removable-facet").length;
   if (totalRemovable >= 1 && !container.querySelector(".facets-clear-all")) {
-    const clearLink = document.createElement("facet-link");
-    clearLink.innerHTML = `<button type="button" class="facets-clear-all text-subdued" data-brand-clear-all="true" style="background: none; border: none; padding: 0; cursor: pointer;"><span class="link">Clear all</span></button>`;
-    container.appendChild(clearLink);
+    const clearDiv = document.createElement("div");
+    clearDiv.className = "facets-clear-all-wrapper";
+    clearDiv.innerHTML = `<button type="button" class="facets-clear-all text-subdued" data-brand-clear-all="true" style="background: none; border: none; padding: 0; cursor: pointer;"><span class="link">Clear all</span></button>`;
+    container.appendChild(clearDiv);
   }
 }
 
@@ -2490,6 +2511,15 @@ function submitFacetsForm() {
       url.searchParams.delete(optionToClear);
     }
   });
+  if (url.pathname.includes("/search") || window.location.pathname.includes("/search")) {
+    const rawQ = url.searchParams.get("q") || "";
+    const cleanQ = extractCleanSearchQuery(rawQ);
+    if (cleanQ) {
+      url.searchParams.set("q", cleanQ);
+    } else {
+      url.searchParams.delete("q");
+    }
+  }
   url.searchParams.set("section_id", sectionId);
 
   document.dispatchEvent(new CustomEvent("facet:update", {
@@ -2545,9 +2575,10 @@ document.addEventListener("click", (event) => {
     if (isSearch) {
       const currentParams = new URLSearchParams(window.location.search);
       const rawQ = currentParams.get("q") || "";
-      const baseQ = rawQ.replace(/\s*\(?vendor:[^)]+\)?/gi, "").replace(/\s*\(?tag:[^)]+\)?/gi, "").trim();
+      const baseQ = extractCleanSearchQuery(rawQ);
       const targetUrl = new URL("/search", window.location.origin);
       if (baseQ) targetUrl.searchParams.set("q", baseQ);
+      if (currentParams.get("sort_by")) targetUrl.searchParams.set("sort_by", currentParams.get("sort_by"));
       const sectionId = document.querySelector("facets-form")?.getAttribute("section-id") ||
                         document.querySelector(".shopify-section")?.id.replace("shopify-section-", "");
       if (sectionId) targetUrl.searchParams.set("section_id", sectionId);
@@ -2600,17 +2631,22 @@ document.addEventListener("facet:update", async (event) => {
     const selectedVendors = url.searchParams.getAll("filter.p.vendor");
     const selectedSilhouettes = url.searchParams.getAll("filter.p.silhouette");
 
-    // Clean browser URL: preserve q, filters, sort_by
+    const rawQ = url.searchParams.get("q") || "";
+    const baseQ = extractCleanSearchQuery(rawQ);
+
+    // Clean browser URL: preserve clean q, filters, sort_by
     const clonedUrl = new URL(url);
     clonedUrl.pathname = "/search";
     clonedUrl.searchParams.delete("section_id");
+    if (baseQ) {
+      clonedUrl.searchParams.set("q", baseQ);
+    } else {
+      clonedUrl.searchParams.delete("q");
+    }
     history.replaceState({}, "", clonedUrl.toString());
 
     try {
       document.documentElement.dispatchEvent(new CustomEvent("theme:loading:start", { bubbles: true }));
-
-      const rawQ = url.searchParams.get("q") || "";
-      const baseQ = rawQ.replace(/\s*\(?vendor:[^)]+\)?/gi, "").replace(/\s*\(?tag:[^)]+\)?/gi, "").trim();
 
       let effectiveQ = baseQ;
       if (selectedVendors.length > 0) {
@@ -2715,7 +2751,13 @@ document.addEventListener("facet:update", async (event) => {
       // Fix search header count text to not display backend syntax
       const searchHeaderTerms = newShopifySection.querySelector(".section-header p");
       if (searchHeaderTerms) {
-        searchHeaderTerms.textContent = searchHeaderTerms.textContent.replace(/\s*\(?vendor:[^)]+\)?/gi, "").replace(/\s*\(?tag:[^)]+\)?/gi, "");
+        searchHeaderTerms.textContent = searchHeaderTerms.textContent
+          .replace(/\s*\(\s*vendor:[^)]+\)/gi, "")
+          .replace(/\s*vendor:"[^"]*"/gi, "")
+          .replace(/\s*tag:"?[^"\s)]+"?/gi, "")
+          .replace(/\s*\(?vendor:[^)]+\)?/gi, "")
+          .replace(/\s*\(?tag:[^)]+\)?/gi, "")
+          .trim();
       }
 
       // Render active facets chips
