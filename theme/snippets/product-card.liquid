@@ -45,7 +45,7 @@ Supported variables
   endif
 -%}
 
-<product-card class="product-card" {% if reveal %}reveal-on-scroll="true"{% endif %} handle="{{ product.handle | escape }}">
+<product-card class="product-card" {% if reveal %}reveal-on-scroll="true"{% endif %} handle="{{ product.handle | escape }}" data-vendor="{{ product.vendor | escape }}">
   {%- comment -%}
   --------------------------------------------------------------------------------------------------------------------
   PRODUCT MEDIA

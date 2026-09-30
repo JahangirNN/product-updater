@@ -2322,40 +2322,316 @@ delegate.on("toggle", "facets-form details", (event, detailsElement) => {
     detailsElement.open ? openDetailsValues.add(inputName) : openDetailsValues.delete(inputName);
   });
 }, true);
+var KNOWN_BRAND_MAP = {
+  "coach": "coach",
+  "michael kors": "michael-kors",
+  "michael michael kors": "michael-kors",
+  "jw pei": "jw-pei",
+  "on": "on",
+  "on running": "on",
+  "tissot": "tissot",
+  "movado": "movado",
+  "seiko": "seiko",
+  "versace": "versace",
+  "citizen": "citizen",
+  "ferragamo": "ferragamo",
+  "marc jacobs": "marc-jacobs",
+  "marc by marc jacobs": "marc-jacobs"
+};
+
+function getBrandTagFromVendor(vendor) {
+  const norm = vendor.toLowerCase().trim();
+  if (KNOWN_BRAND_MAP[norm]) return KNOWN_BRAND_MAP[norm];
+  return norm.replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
+function isKnownBrandTag(tag) {
+  const t = tag.toLowerCase().trim();
+  const knownTags = Object.values(KNOWN_BRAND_MAP);
+  return knownTags.includes(t);
+}
+
+function renderBrandActiveFacets(container, selectedVendors) {
+  if (!container) return;
+  container.querySelectorAll(".removable-facet").forEach(el => {
+    if (el.textContent.includes("Brand:") || el.classList.contains("brand-removable-facet")) {
+      el.remove();
+    }
+  });
+  if (selectedVendors.length === 0) return;
+
+  const closeIconSvg = '<svg class="icon icon-close" width="10" height="10" viewBox="0 0 10 10" fill="none" style="pointer-events: none;"><path d="M1 1L9 9M9 1L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
+  const clearAllEl = container.querySelector(".facets-clear-all");
+
+  selectedVendors.forEach(vendor => {
+    const facetDiv = document.createElement("div");
+    facetDiv.className = "removable-facet brand-removable-facet";
+    facetDiv.innerHTML = `
+      <facet-link>
+        <button type="button" class="tap-area link-faded brand-facet-remove" data-brand-remove="${encodeURIComponent(vendor)}" aria-label="Remove filter Brand: ${vendor}" style="background: none; border: none; padding: 0; cursor: pointer; display: inline-flex; align-items: center;">
+          ${closeIconSvg}
+        </button>
+      </facet-link>
+      <span class="text-subdued">Brand: ${vendor}</span>
+    `;
+    if (clearAllEl) {
+      container.insertBefore(facetDiv, clearAllEl);
+    } else {
+      container.appendChild(facetDiv);
+    }
+  });
+
+  const totalRemovable = container.querySelectorAll(".removable-facet").length;
+  if (totalRemovable > 1 && !container.querySelector(".facets-clear-all")) {
+    const clearLink = document.createElement("facet-link");
+    clearLink.innerHTML = `<button type="button" class="facets-clear-all text-subdued" data-brand-clear-all="true" style="background: none; border: none; padding: 0; cursor: pointer;"><span class="link">Clear all</span></button>`;
+    container.appendChild(clearLink);
+  }
+}
+
+function submitFacetsForm() {
+  const sidebarForm = document.querySelector(".facets-sidebar facets-form form");
+  const drawerForm = document.querySelector("#facets-drawer facets-form form");
+  const form = (sidebarForm && sidebarForm.offsetParent !== null) ? sidebarForm : (drawerForm || sidebarForm);
+  if (!form) return;
+
+  const facetsForm = form.closest("facets-form");
+  const sectionId = facetsForm?.getAttribute("section-id") ||
+                    form.closest(".shopify-section")?.id.replace("shopify-section-", "");
+
+  const searchParams = new URLSearchParams(new FormData(form));
+  const url = new URL(form.action, window.location.origin);
+  url.search = "";
+  searchParams.forEach((value, key) => url.searchParams.append(key, value));
+  ["page", "filter.v.price.gte", "filter.v.price.lte"].forEach((optionToClear) => {
+    if (url.searchParams.get(optionToClear) === "") {
+      url.searchParams.delete(optionToClear);
+    }
+  });
+  url.searchParams.set("section_id", sectionId);
+
+  document.dispatchEvent(new CustomEvent("facet:update", {
+    bubbles: true,
+    detail: { url }
+  }));
+}
+
+document.addEventListener("click", (event) => {
+  const removeBtn = event.target.closest("[data-brand-remove]");
+  if (removeBtn) {
+    event.preventDefault();
+    event.stopPropagation();
+    const brand = decodeURIComponent(removeBtn.getAttribute("data-brand-remove") || "");
+    const checkboxes = document.querySelectorAll('input[name="filter.p.vendor"]');
+    checkboxes.forEach(cb => {
+      if (cb.value.toLowerCase().trim() === brand.toLowerCase().trim()) {
+        cb.checked = false;
+      }
+    });
+    submitFacetsForm();
+    return;
+  }
+
+  const clearAllBtn = event.target.closest("[data-brand-clear-all], .facets-clear-all");
+  if (clearAllBtn) {
+    event.preventDefault();
+    event.stopPropagation();
+    const checkboxes = document.querySelectorAll('input[name="filter.p.vendor"]');
+    checkboxes.forEach(cb => {
+      cb.checked = false;
+    });
+    submitFacetsForm();
+    return;
+  }
+});
+
 document.addEventListener("facet:update", async (event) => {
   if (abortController) {
     abortController.abort();
   }
   abortController = new AbortController();
-  const url = event.detail.url, shopifySection = document.getElementById(`shopify-section-${url.searchParams.get("section_id")}`);
+  const url = event.detail.url, sectionId = url.searchParams.get("section_id");
+  const shopifySection = document.getElementById(`shopify-section-${sectionId}`);
+  if (!shopifySection) return;
+
   const clonedUrl = new URL(url);
   clonedUrl.searchParams.delete("section_id");
   history.replaceState({}, "", clonedUrl.toString());
+
+  const selectedVendors = url.searchParams.getAll("filter.p.vendor");
+
   try {
     document.documentElement.dispatchEvent(new CustomEvent("theme:loading:start", { bubbles: true }));
-    const tempContent = new DOMParser().parseFromString(await (await cachedFetch(url.toString(), { signal: abortController.signal })).text(), "text/html");
+
+    let newShopifySection = null;
+
+    if (selectedVendors.length === 0) {
+      const resp = await cachedFetch(url.toString(), { signal: abortController.signal });
+      const tempContent = new DOMParser().parseFromString(await resp.text(), "text/html");
+      newShopifySection = tempContent.querySelector(".shopify-section");
+    } else {
+      const pathParts = url.pathname.split("/").filter(Boolean);
+      let baseCollectionPath = url.pathname;
+      let nonBrandTags = [];
+
+      if (pathParts.length >= 3 && pathParts[0] === "collections") {
+        baseCollectionPath = `/collections/${pathParts[1]}`;
+        const rawTags = pathParts[2].split("+");
+        nonBrandTags = rawTags.filter(t => !isKnownBrandTag(t));
+      } else if (pathParts.length === 2 && pathParts[0] === "collections") {
+        baseCollectionPath = `/collections/${pathParts[1]}`;
+      }
+
+      // Fetch each vendor section in parallel
+      const vendorHtmlList = await Promise.all(
+        selectedVendors.map(async (vendor) => {
+          const vTag = getBrandTagFromVendor(vendor);
+          const combinedTags = [vTag, ...nonBrandTags];
+          const brandPath = `${baseCollectionPath}/${combinedTags.join("+")}`;
+          const brandFetchUrl = new URL(brandPath, window.location.origin);
+          url.searchParams.forEach((val, key) => {
+            if (key !== "filter.p.vendor") {
+              brandFetchUrl.searchParams.append(key, val);
+            }
+          });
+          brandFetchUrl.searchParams.set("section_id", sectionId);
+          const r = await cachedFetch(brandFetchUrl.toString(), { signal: abortController.signal });
+          return r.text();
+        })
+      );
+
+      // Parse the first response as our base section shell
+      const baseDoc = new DOMParser().parseFromString(vendorHtmlList[0], "text/html");
+      newShopifySection = baseDoc.querySelector(".shopify-section");
+
+      // Extract all unique product cards across all responses
+      const combinedCards = [];
+      const seenHandles = new Set();
+
+      for (const html of vendorHtmlList) {
+        const doc = new DOMParser().parseFromString(html, "text/html");
+        const cards = doc.querySelectorAll("product-list > product-card, product-list > *");
+        cards.forEach((card) => {
+          const handle = card.getAttribute("handle") || card.querySelector("a[href*='/products/']")?.getAttribute("href");
+          if (!handle || !seenHandles.has(handle)) {
+            if (handle) seenHandles.add(handle);
+            combinedCards.push(document.importNode(card, true));
+          }
+        });
+      }
+
+      // If base section had empty state but other vendors had cards, use section from one with cards
+      if (combinedCards.length > 0 && !newShopifySection.querySelector("product-list")) {
+        for (const html of vendorHtmlList) {
+          const doc = new DOMParser().parseFromString(html, "text/html");
+          if (doc.querySelector("product-list")) {
+            newShopifySection = doc.querySelector(".shopify-section");
+            break;
+          }
+        }
+      }
+
+      const productList = newShopifySection.querySelector("product-list");
+      if (productList && combinedCards.length > 0) {
+        productList.replaceChildren(...combinedCards);
+      }
+
+      // Update product count if visible
+      const countEl = newShopifySection.querySelector(".collection__product-count, .collection-banner__product-count");
+      if (countEl) {
+        countEl.textContent = `${combinedCards.length} products`;
+      }
+    }
+
     document.documentElement.dispatchEvent(new CustomEvent("theme:loading:end", { bubbles: true }));
-    const newShopifySection = tempContent.querySelector(".shopify-section");
+
+    if (!newShopifySection) return;
+
+    // Preserve details open states
     newShopifySection.querySelectorAll("facets-form details").forEach((detailsElement) => {
       const inputNames = [...new Set(Array.from(detailsElement.querySelectorAll('input[name*="filter."]'), (item) => item.name))];
       inputNames.forEach((inputName) => {
         detailsElement.open = openDetailsValues.has(inputName);
       });
+      if (detailsElement.querySelector("input[name='filter.p.vendor']:checked")) {
+        detailsElement.open = true;
+      }
     });
+
+    // Ensure all checked vendors are checked in the new DOM (syncs both sidebar and drawer!)
+    newShopifySection.querySelectorAll("input[name='filter.p.vendor']").forEach((cb) => {
+      const isChecked = selectedVendors.some(v => v.toLowerCase().trim() === cb.value.toLowerCase().trim());
+      cb.checked = isChecked;
+    });
+
+    // Render active facets chips
+    let activeFacetsContainer = newShopifySection.querySelector(".active-facets");
+    if (!activeFacetsContainer && selectedVendors.length > 0) {
+      const colMain = newShopifySection.querySelector(".collection__main");
+      const prodList = newShopifySection.querySelector("product-list");
+      if (colMain && prodList) {
+        activeFacetsContainer = document.createElement("div");
+        activeFacetsContainer.className = "active-facets";
+        colMain.insertBefore(activeFacetsContainer, prodList);
+      }
+    }
+    if (activeFacetsContainer) {
+      renderBrandActiveFacets(activeFacetsContainer, selectedVendors);
+    }
+
     const focusedElement = document.activeElement;
-    shopifySection.replaceChildren(...document.importNode(tempContent.querySelector(".shopify-section"), true).childNodes);
+    shopifySection.replaceChildren(...document.importNode(newShopifySection, true).childNodes);
+
     if (focusedElement?.id && document.getElementById(focusedElement.id)) {
       document.getElementById(focusedElement.id).focus();
     }
-    const scrollToProductList = () => shopifySection.querySelector(".collection").scrollIntoView({ block: "start", behavior: "smooth" });
+
+    const scrollToProductList = () => shopifySection.querySelector(".collection")?.scrollIntoView({ block: "start", behavior: "smooth" });
     if ("requestIdleCallback" in window) {
       requestIdleCallback(scrollToProductList, { timeout: 500 });
     } else {
       requestAnimationFrame(scrollToProductList);
     }
   } catch (e) {
+    document.documentElement.dispatchEvent(new CustomEvent("theme:loading:end", { bubbles: true }));
+    console.error("Facet update error:", e);
   }
 });
+
+function initVendorFacetsOnLoad() {
+  const params = new URLSearchParams(window.location.search);
+  const vendors = params.getAll("filter.p.vendor");
+  if (vendors.length > 0) {
+    document.querySelectorAll("input[name='filter.p.vendor']").forEach(cb => {
+      if (vendors.some(v => v.toLowerCase().trim() === cb.value.toLowerCase().trim())) {
+        cb.checked = true;
+      }
+    });
+    document.querySelectorAll("facets-form details").forEach(details => {
+      if (details.querySelector("input[name='filter.p.vendor']:checked")) {
+        details.open = true;
+        openDetailsValues.add("filter.p.vendor");
+      }
+    });
+    const form = document.querySelector("facets-form form");
+    if (form) {
+      const sectionId = form.closest("facets-form")?.getAttribute("section-id") ||
+                        form.closest(".shopify-section")?.id.replace("shopify-section-", "");
+      const updateUrl = new URL(window.location.href);
+      updateUrl.searchParams.set("section_id", sectionId);
+      document.dispatchEvent(new CustomEvent("facet:update", {
+        bubbles: true,
+        detail: { url: updateUrl }
+      }));
+    }
+  }
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initVendorFacetsOnLoad);
+} else {
+  initVendorFacetsOnLoad();
+}
 
 // js/common/feedback/progress-bar.js
 import { inView as inView5 } from "vendor";

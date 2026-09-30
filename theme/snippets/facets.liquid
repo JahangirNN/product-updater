@@ -65,6 +65,35 @@ Supported variables
       background: currentColor !important;
       border-color: currentColor !important;
     }
+    .luxury-brand-checkbox {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      border: 1.5px solid rgba(0, 0, 0, 0.35);
+      background-color: transparent;
+      flex-shrink: 0;
+      box-sizing: border-box;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+      vertical-align: middle;
+    }
+    .luxury-brand-checkbox:hover {
+      border-color: rgba(0, 0, 0, 0.7);
+    }
+    .luxury-brand-checkbox:checked {
+      background-color: currentColor;
+      border-color: currentColor;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+      background-size: 10px 10px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   </style>
   <form method="GET" action="{{ request.path }}" class="facets">
     {%- comment -%}We always reset to the first page so that when criteria change, the page is restored to the first one{%- endcomment -%}
@@ -477,48 +506,10 @@ Supported variables
                   endif
                 -%}
 
-                {%- capture vendor_target_url -%}
-                  {%- if is_vendor_active -%}
-                    {%- if active_silhouette_tag != '' -%}
-                      {%- if current_gender_tag != '' -%}
-                        {%- assign sorted_tags = current_gender_tag | append: ',' | append: active_silhouette_tag | split: ',' | sort | join: '+' -%}
-                        {{ collection.url }}/{{ sorted_tags }}
-                      {%- else -%}
-                        {{ collection.url }}/{{ active_silhouette_tag }}
-                      {%- endif -%}
-                    {%- elsif current_gender_tag != '' -%}
-                      {{ collection.url }}/{{ current_gender_tag }}
-                    {%- else -%}
-                      {{ collection.url }}
-                    {%- endif -%}
-                  {%- else -%}
-                    {%- if active_silhouette_tag != '' -%}
-                      {%- if current_gender_tag != '' -%}
-                        {%- assign sorted_tags = current_gender_tag | append: ',' | append: filter_tag_param | append: ',' | append: active_silhouette_tag | split: ',' | sort | join: '+' -%}
-                        {{ collection.url }}/{{ sorted_tags }}
-                      {%- else -%}
-                        {%- assign sorted_tags = filter_tag_param | append: ',' | append: active_silhouette_tag | split: ',' | sort | join: '+' -%}
-                        {{ collection.url }}/{{ sorted_tags }}
-                      {%- endif -%}
-                    {%- elsif current_gender_tag != '' -%}
-                      {%- assign sorted_tags = current_gender_tag | append: ',' | append: filter_tag_param | split: ',' | sort | join: '+' -%}
-                      {{ collection.url }}/{{ sorted_tags }}
-                    {%- else -%}
-                      {{ collection.url }}/{{ filter_tag_param }}
-                    {%- endif -%}
-                  {%- endif -%}
-                  {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
-                {%- endcapture -%}
-
-                <div class="checkbox-control">
-                  <facet-link class="block w-full">
-                    <a href="{{ vendor_target_url | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
-                      <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
-                        <span class="luxury-facet-checkbox{% if is_vendor_active %} luxury-facet-checkbox--active{% endif %}"></span>
-                        <span class="{% if is_vendor_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">{{ display_vendor }}</span>
-                      </span>
-                    </a>
-                  </facet-link>
+                {%- capture brand_input_id -%}checkbox-{{ id_prefix }}-vendor-{{ filter_tag_param }}{%- endcapture -%}
+                <div class="checkbox-control" style="display: flex; align-items: center; gap: 0.75rem; padding: 3px 0;">
+                  <input id="{{ brand_input_id }}" class="luxury-brand-checkbox" type="checkbox" name="filter.p.vendor" value="{{ display_vendor }}" data-vendor-tag="{{ filter_tag_param }}" {% if is_vendor_active %}checked{% endif %}>
+                  <label for="{{ brand_input_id }}" class="tap-area text-subdued font-medium" style="cursor: pointer; letter-spacing: 0.02em; user-select: none;">{{ display_vendor }}</label>
                 </div>
               {%- endfor -%}
             </div>
