@@ -7,15 +7,19 @@ Verifies:
    - Checks the second brand (Michael Kors) -> verifies BOTH checkboxes remain checked.
    - Verifies product grid displays products from both vendors (disjunctive/OR vendor filtering: 96 products).
    - Verifies active filter pills reflect both selected brands ([x] Brand: COACH, [x] Brand: Michael Kors).
+   - Verifies toolbar count reflects combined product count ("96 products").
+   - Verifies pagination links retain all selected brand parameters.
    - Unchecks one brand -> verifies grid updates to only the remaining brand.
    - Tests "Clear all" button -> verifies all brand filters are dismissed cleanly.
-2. Mobile Drawer Facet Filters:
+2. Edge Case: Starting on brand tag page (/collections/womens-handbags/coach):
+   - Unchecking COACH cleanly removes brand filter and resets URL to base collection.
+3. Mobile Drawer Facet Filters:
    - Sets mobile viewport (390x844).
    - Opens drawer via button[aria-controls='facets-drawer'].
    - Opens Brand accordion in drawer.
    - Checks multiple brands (COACH and JW PEI).
    - Applies filters -> verifies grid displays both.
-3. Captures desktop & mobile visual proof screenshots to artifacts directory.
+4. Captures desktop & mobile visual proof screenshots to artifacts directory.
 """
 import os
 import sys
@@ -44,8 +48,8 @@ def test_multi_brand_facets():
         page = context.new_page()
 
         print(f"Navigating to {BASE_URL}...")
-        page.goto(BASE_URL, wait_until="domcontentloaded", timeout=30000)
-        time.sleep(2)
+        page.goto(BASE_URL, wait_until="domcontentloaded", timeout=60000)
+        time.sleep(3)
 
         # 1. Locate Brand accordion
         print("Looking for Brand accordion in desktop sidebar...")
@@ -75,8 +79,7 @@ def test_multi_brand_facets():
         # Check COACH
         print("\nAction: Checking 'COACH'...")
         coach_cb.check()
-        time.sleep(3)
-        page.wait_for_load_state("networkidle")
+        time.sleep(4)
 
         # Verify COACH is checked
         assert coach_cb.evaluate("el => el.checked"), "COACH checkbox should be checked"
@@ -95,15 +98,13 @@ def test_multi_brand_facets():
 
         # 3. Now check Michael Kors (multi-brand selection!)
         print("\nAction: Checking 'Michael Kors' (Multi-brand)...")
-        # Ensure accordion is open
         if not brand_details.evaluate("el => el.hasAttribute('open')"):
             brand_summary.click()
             time.sleep(1)
 
         mk_cb = page.locator(".facets-sidebar input[name='filter.p.vendor'][value='Michael Kors']").first
         mk_cb.check()
-        time.sleep(3)
-        page.wait_for_load_state("networkidle")
+        time.sleep(5)
 
         # Verify BOTH checkboxes are checked!
         coach_cb = page.locator(".facets-sidebar input[name='filter.p.vendor'][value='COACH']").first
@@ -124,7 +125,20 @@ def test_multi_brand_facets():
         multi_cards = page.locator("product-list product-card")
         multi_card_count = multi_cards.count()
         print(f"Products in grid after checking BOTH brands: {multi_card_count}")
-        assert multi_card_count >= card_count, "Product grid should display combined products"
+        assert multi_card_count == 96, f"Expected 96 products for combined brands, got {multi_card_count}"
+
+        # Verify toolbar product count text
+        count_text = page.locator(".collection-toolbar__products-count").text_content()
+        print(f"Toolbar product count text: '{count_text.strip()}'")
+        assert "96 products" in count_text, f"Toolbar count should reflect 96 products, got {count_text}"
+        print("PASS: Toolbar product count correctly displays '96 products'!")
+
+        # Verify pagination links carry multi-brand query
+        pagination_links = page.locator("nav.pagination a.pagination__link")
+        if pagination_links.count() > 0:
+            p_href = pagination_links.first.get_attribute("href")
+            assert "filter.p.vendor=COACH" in p_href and ("filter.p.vendor=Michael" in p_href), f"Pagination links must retain both brands, got {p_href}"
+            print("PASS: Pagination links preserve both selected brands!")
 
         # Capture multi brand screenshot
         multi_brand_path = os.path.join(ARTIFACTS_DIR, "desktop_brand_facets_multi_checked.png")
@@ -134,8 +148,7 @@ def test_multi_brand_facets():
         # 4. Deselect one brand (COACH)
         print("\nAction: Deselecting 'COACH'...")
         coach_cb.uncheck()
-        time.sleep(3)
-        page.wait_for_load_state("networkidle")
+        time.sleep(4)
 
         mk_cb = page.locator(".facets-sidebar input[name='filter.p.vendor'][value='Michael Kors']").first
         coach_cb = page.locator(".facets-sidebar input[name='filter.p.vendor'][value='COACH']").first
@@ -148,8 +161,7 @@ def test_multi_brand_facets():
         clear_btn = page.locator("[data-brand-clear-all], .facets-clear-all").first
         if clear_btn.is_visible():
             clear_btn.click()
-            time.sleep(3)
-            page.wait_for_load_state("networkidle")
+            time.sleep(4)
             
             # Check all brand checkboxes are unchecked
             all_brand_cbs = page.locator(".facets-sidebar input[name='filter.p.vendor']")
@@ -162,15 +174,36 @@ def test_multi_brand_facets():
         context.close()
 
         # ---------------------------------------------------------
-        # PART 2: MOBILE DRAWER VERIFICATION
+        # PART 2: EDGE CASE - UNCHECK FROM BRAND TAG URL
         # ---------------------------------------------------------
-        print("\n--- [2] MOBILE DRAWER MULTI-BRAND TEST ---")
+        print("\n--- [2] EDGE CASE: UNCHECK FROM BRAND TAG URL ---")
+        tag_context = browser.new_context(viewport={"width": 1440, "height": 900})
+        tag_page = tag_context.new_page()
+        tag_url = f"{BASE_URL}/coach"
+        print(f"Navigating to {tag_url}...")
+        tag_page.goto(tag_url, wait_until="domcontentloaded", timeout=60000)
+        time.sleep(3)
+
+        c_cb = tag_page.locator(".facets-sidebar input[name='filter.p.vendor'][value='COACH']").first
+        assert c_cb.evaluate("el => el.checked"), "COACH should initially be checked on /coach page"
+        print("Unchecking COACH from tag URL...")
+        c_cb.uncheck()
+        time.sleep(4)
+        print("Page URL after unchecking:", tag_page.url)
+        assert "/coach" not in tag_page.url, "URL must not contain /coach tag after unchecking"
+        print("PASS: Starting on brand tag URL and unchecking cleans URL and resets filter!")
+        tag_context.close()
+
+        # ---------------------------------------------------------
+        # PART 3: MOBILE DRAWER VERIFICATION
+        # ---------------------------------------------------------
+        print("\n--- [3] MOBILE DRAWER MULTI-BRAND TEST ---")
         mobile_context = browser.new_context(viewport={"width": 390, "height": 844}, is_mobile=True)
         mobile_page = mobile_context.new_page()
 
         print(f"Navigating to {BASE_URL} on Mobile...")
-        mobile_page.goto(BASE_URL, wait_until="domcontentloaded", timeout=30000)
-        time.sleep(2)
+        mobile_page.goto(BASE_URL, wait_until="domcontentloaded", timeout=60000)
+        time.sleep(3)
 
         # Open Filter Drawer
         filter_drawer_btn = mobile_page.locator("button[aria-controls='facets-drawer']").first
@@ -217,7 +250,7 @@ def test_multi_brand_facets():
             if apply_btn.is_visible():
                 print("Clicking Apply Filters in mobile drawer...")
                 apply_btn.click()
-                time.sleep(4)
+                time.sleep(5)
 
             # Capture mobile filtered grid
             mobile_grid_path = os.path.join(ARTIFACTS_DIR, "mobile_grid_multi_filtered.png")

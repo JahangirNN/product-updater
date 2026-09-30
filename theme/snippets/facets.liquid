@@ -95,7 +95,47 @@ Supported variables
       background-repeat: no-repeat;
     }
   </style>
-  <form method="GET" action="{{ request.path }}" class="facets">
+  {%- liquid
+    assign form_action = request.path
+    if request.page_type == 'collection' and collection.url != blank
+      assign non_brand_tags = ''
+      for tag in current_tags
+        assign t_handle = tag | handleize
+        if t_handle == 'on-running'
+          assign t_handle = 'on'
+        elsif t_handle == 'michael-michael-kors'
+          assign t_handle = 'michael-kors'
+        endif
+        assign is_brand_tag = false
+        for vendor in collection.all_vendors
+          assign v_handle = vendor | handleize
+          if v_handle == 'on-running'
+            assign v_handle = 'on'
+          elsif v_handle == 'michael-michael-kors'
+            assign v_handle = 'michael-kors'
+          endif
+          if v_handle == t_handle
+            assign is_brand_tag = true
+            break
+          endif
+        endfor
+        if is_brand_tag == false
+          if non_brand_tags == ''
+            assign non_brand_tags = t_handle
+          else
+            assign non_brand_tags = non_brand_tags | append: '+' | append: t_handle
+          endif
+        endif
+      endfor
+
+      if non_brand_tags != ''
+        assign form_action = collection.url | append: '/' | append: non_brand_tags
+      else
+        assign form_action = collection.url
+      endif
+    endif
+  -%}
+  <form method="GET" action="{{ form_action }}" class="facets">
     {%- comment -%}We always reset to the first page so that when criteria change, the page is restored to the first one{%- endcomment -%}
     <input type="hidden" name="page" value="">
 

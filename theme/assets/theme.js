@@ -2260,10 +2260,11 @@ onFacetUpdate_fn = function(event) {
   const isClearAll = this.classList?.contains("facets-clear-all") || firstEl?.classList?.contains("facets-clear-all");
   const isNativeRemoval = firstEl?.getAttribute?.("data-facet-remove") === "native" || firstEl?.classList?.contains("facet-remove-native");
   const isTagLink = firstEl?.getAttribute?.("data-tag-link") === "true" || firstEl?.getAttribute?.("data-tag-removal") === "true" || (typeof firstEl?.matches === "function" && firstEl.matches("[data-tag-link], [data-tag-removal]"));
+  const isPagination = this.classList?.contains("contents") && (firstEl?.classList?.contains("pagination__link") || Boolean(this.closest("nav.pagination")));
   const currentPathname = window.location.pathname || (window.location.href ? new URL(window.location.href).pathname : "");
 
   if (!isClearAll && !isNativeRemoval) {
-    if (isTagLink || (currentPathname && targetUrl.pathname !== currentPathname)) {
+    if (isTagLink || isPagination || (currentPathname && targetUrl.pathname !== currentPathname)) {
       const currentParams = new URLSearchParams(window.location.search);
       currentParams.forEach((value, key) => {
         if (key.startsWith("filter.") && !targetUrl.searchParams.getAll(key).includes(value)) {
@@ -2339,16 +2340,31 @@ var KNOWN_BRAND_MAP = {
   "marc by marc jacobs": "marc-jacobs"
 };
 
+function getKnownBrandTags() {
+  const tags = new Set(Object.values(KNOWN_BRAND_MAP));
+  document.querySelectorAll("input[name='filter.p.vendor'][data-vendor-tag]").forEach(cb => {
+    const t = cb.getAttribute("data-vendor-tag");
+    if (t) tags.add(t.toLowerCase().trim());
+  });
+  return tags;
+}
+
 function getBrandTagFromVendor(vendor) {
   const norm = vendor.toLowerCase().trim();
+  const checkboxes = document.querySelectorAll("input[name='filter.p.vendor']");
+  for (const cb of checkboxes) {
+    if (cb.value.toLowerCase().trim() === norm && cb.getAttribute("data-vendor-tag")) {
+      return cb.getAttribute("data-vendor-tag");
+    }
+  }
   if (KNOWN_BRAND_MAP[norm]) return KNOWN_BRAND_MAP[norm];
   return norm.replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
 function isKnownBrandTag(tag) {
   const t = tag.toLowerCase().trim();
-  const knownTags = Object.values(KNOWN_BRAND_MAP);
-  return knownTags.includes(t);
+  const knownTags = getKnownBrandTags();
+  return knownTags.has(t);
 }
 
 function renderBrandActiveFacets(container, selectedVendors) {
@@ -2382,7 +2398,7 @@ function renderBrandActiveFacets(container, selectedVendors) {
   });
 
   const totalRemovable = container.querySelectorAll(".removable-facet").length;
-  if (totalRemovable > 1 && !container.querySelector(".facets-clear-all")) {
+  if (totalRemovable >= 1 && !container.querySelector(".facets-clear-all")) {
     const clearLink = document.createElement("facet-link");
     clearLink.innerHTML = `<button type="button" class="facets-clear-all text-subdued" data-brand-clear-all="true" style="background: none; border: none; padding: 0; cursor: pointer;"><span class="link">Clear all</span></button>`;
     container.appendChild(clearLink);
@@ -2440,7 +2456,30 @@ document.addEventListener("click", (event) => {
     checkboxes.forEach(cb => {
       cb.checked = false;
     });
-    submitFacetsForm();
+
+    const sidebarForm = document.querySelector(".facets-sidebar facets-form form");
+    const drawerForm = document.querySelector("#facets-drawer facets-form form");
+    const form = (sidebarForm && sidebarForm.offsetParent !== null) ? sidebarForm : (drawerForm || sidebarForm);
+    const sectionId = form?.closest("facets-form")?.getAttribute("section-id") ||
+                      form?.closest(".shopify-section")?.id.replace("shopify-section-", "");
+
+    const pathParts = window.location.pathname.split("/").filter(Boolean);
+    let cleanPath = window.location.pathname;
+    if (pathParts.length >= 3 && pathParts[0] === "collections") {
+      const baseCollectionPath = `/collections/${pathParts[1]}`;
+      const rawTags = pathParts[2].split("+");
+      const nonBrandTags = rawTags.filter(t => !isKnownBrandTag(t));
+      cleanPath = nonBrandTags.length > 0 ? `${baseCollectionPath}/${nonBrandTags.join("+")}` : baseCollectionPath;
+    }
+
+    const targetUrl = new URL(cleanPath, window.location.origin);
+    if (sectionId) {
+      targetUrl.searchParams.set("section_id", sectionId);
+    }
+    document.dispatchEvent(new CustomEvent("facet:update", {
+      bubbles: true,
+      detail: { url: targetUrl }
+    }));
     return;
   }
 });
@@ -2454,11 +2493,27 @@ document.addEventListener("facet:update", async (event) => {
   const shopifySection = document.getElementById(`shopify-section-${sectionId}`);
   if (!shopifySection) return;
 
-  const clonedUrl = new URL(url);
-  clonedUrl.searchParams.delete("section_id");
-  history.replaceState({}, "", clonedUrl.toString());
+  const pathParts = url.pathname.split("/").filter(Boolean);
+  let baseCollectionPath = url.pathname;
+  let nonBrandTags = [];
+
+  if (pathParts.length >= 3 && pathParts[0] === "collections") {
+    baseCollectionPath = `/collections/${pathParts[1]}`;
+    const rawTags = pathParts[2].split("+");
+    nonBrandTags = rawTags.filter(t => !isKnownBrandTag(t));
+  } else if (pathParts.length === 2 && pathParts[0] === "collections") {
+    baseCollectionPath = `/collections/${pathParts[1]}`;
+  }
+
+  const cleanCollectionPath = nonBrandTags.length > 0 ? `${baseCollectionPath}/${nonBrandTags.join("+")}` : baseCollectionPath;
 
   const selectedVendors = url.searchParams.getAll("filter.p.vendor");
+
+  // Keep browser URL clean and aligned with canonical collection path
+  const clonedUrl = new URL(url);
+  clonedUrl.pathname = cleanCollectionPath;
+  clonedUrl.searchParams.delete("section_id");
+  history.replaceState({}, "", clonedUrl.toString());
 
   try {
     document.documentElement.dispatchEvent(new CustomEvent("theme:loading:start", { bubbles: true }));
@@ -2466,21 +2521,13 @@ document.addEventListener("facet:update", async (event) => {
     let newShopifySection = null;
 
     if (selectedVendors.length === 0) {
-      const resp = await cachedFetch(url.toString(), { signal: abortController.signal });
+      const fetchUrl = new URL(url.toString());
+      fetchUrl.pathname = cleanCollectionPath;
+      const resp = await cachedFetch(fetchUrl.toString(), { signal: abortController.signal });
       const tempContent = new DOMParser().parseFromString(await resp.text(), "text/html");
       newShopifySection = tempContent.querySelector(".shopify-section");
     } else {
-      const pathParts = url.pathname.split("/").filter(Boolean);
-      let baseCollectionPath = url.pathname;
-      let nonBrandTags = [];
-
-      if (pathParts.length >= 3 && pathParts[0] === "collections") {
-        baseCollectionPath = `/collections/${pathParts[1]}`;
-        const rawTags = pathParts[2].split("+");
-        nonBrandTags = rawTags.filter(t => !isKnownBrandTag(t));
-      } else if (pathParts.length === 2 && pathParts[0] === "collections") {
-        baseCollectionPath = `/collections/${pathParts[1]}`;
-      }
+      const currentPage = url.searchParams.get("page");
 
       // Fetch each vendor section in parallel
       const vendorHtmlList = await Promise.all(
@@ -2494,6 +2541,9 @@ document.addEventListener("facet:update", async (event) => {
               brandFetchUrl.searchParams.append(key, val);
             }
           });
+          if (currentPage) {
+            brandFetchUrl.searchParams.set("page", currentPage);
+          }
           brandFetchUrl.searchParams.set("section_id", sectionId);
           const r = await cachedFetch(brandFetchUrl.toString(), { signal: abortController.signal });
           return r.text();
@@ -2536,10 +2586,25 @@ document.addEventListener("facet:update", async (event) => {
         productList.replaceChildren(...combinedCards);
       }
 
-      // Update product count if visible
-      const countEl = newShopifySection.querySelector(".collection__product-count, .collection-banner__product-count");
-      if (countEl) {
-        countEl.textContent = `${combinedCards.length} products`;
+      // Update product count across all known selectors
+      const countEls = newShopifySection.querySelectorAll(".collection-toolbar__products-count, .collection__product-count, .collection-banner__product-count");
+      countEls.forEach(el => {
+        el.textContent = `${combinedCards.length} products`;
+      });
+
+      // Synchronize pagination links so they carry all selected vendors
+      const paginationNav = newShopifySection.querySelector("nav.pagination");
+      if (paginationNav) {
+        paginationNav.querySelectorAll("a.pagination__link").forEach(a => {
+          const linkUrl = new URL(a.href, window.location.origin);
+          linkUrl.pathname = cleanCollectionPath;
+          selectedVendors.forEach(v => {
+            if (!linkUrl.searchParams.getAll("filter.p.vendor").includes(v)) {
+              linkUrl.searchParams.append("filter.p.vendor", v);
+            }
+          });
+          a.href = linkUrl.toString();
+        });
       }
     }
 
