@@ -33,6 +33,24 @@ Supported variables
           <span class="badge badge--custom badge--{{ custom_badge | handle }}">{{ custom_badge }}</span>
         {%- endfor -%}
 
+        {%- assign has_ready_to_ship_badge = false -%}
+        {%- for custom_badge in custom_badges -%}
+          {%- assign cb_lower = custom_badge | downcase -%}
+          {%- if cb_lower contains 'ready to ship' or cb_lower contains 'instant ship' -%}
+            {%- assign has_ready_to_ship_badge = true -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- if has_ready_to_ship_badge == false -%}
+          {%- for tag in product.tags -%}
+            {%- assign tag_lower = tag | downcase -%}
+            {%- if tag_lower == 'ready to ship' or tag_lower == 'instant-ship' or tag_lower == 'ready-to-ship' -%}
+              <span class="badge badge--custom badge--ready-to-ship">Ready to Ship</span>
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+
       {%- when 'sold_out' -%}
         {%- if settings.show_sold_out_badge and variant.available == false -%}
           <sold-out-badge class="badge badge--sold-out">

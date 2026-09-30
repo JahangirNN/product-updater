@@ -16,6 +16,20 @@ from storage.shopify_auth import execute_shopify_graphql
 from storage.logger import log_info, log_success, log_warning, log_error
 
 COLLECTIONS_MANIFEST: List[Dict[str, Any]] = [
+    # --- Instant Dispatch & Ready to Ship ---
+    {
+        "title": "Ready to Ship",
+        "handle": "ready-to-ship",
+        "descriptionHtml": "<p>In-stock luxury designer pieces ready to ship immediately — authentic, verified, and delivered with express dispatch.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": True,
+            "rules": [
+                {"column": "TAG", "relation": "EQUALS", "condition": "Ready to Ship"},
+                {"column": "TAG", "relation": "EQUALS", "condition": "instant-ship"}
+            ]
+        }
+    },
+
     # --- Master Categories ---
     {
         "title": "Luxury Watches",
@@ -201,6 +215,30 @@ COLLECTIONS_MANIFEST: List[Dict[str, Any]] = [
             "appliedDisjunctively": False,
             "rules": [
                 {"column": "TAG", "relation": "EQUALS", "condition": "Designer Bags"},
+                {"column": "TAG", "relation": "EQUALS", "condition": "Men"}
+            ]
+        }
+    },
+    {
+        "title": "Women's Wallets & Small Leather Goods",
+        "handle": "womens-wallets",
+        "descriptionHtml": "<p>Coveted designer women's wallets, wristlets, cardholders, and luxury leather accessories from Michael Kors and COACH.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "TAG", "relation": "EQUALS", "condition": "Wallets & Small Leather Goods"},
+                {"column": "TAG", "relation": "EQUALS", "condition": "Women"}
+            ]
+        }
+    },
+    {
+        "title": "Men's Wallets & Small Leather Goods",
+        "handle": "mens-wallets",
+        "descriptionHtml": "<p>Distinguished men's leather wallets, slim billfolds, card cases, and MagSafe accessories engineered with precision.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "TAG", "relation": "EQUALS", "condition": "Wallets & Small Leather Goods"},
                 {"column": "TAG", "relation": "EQUALS", "condition": "Men"}
             ]
         }

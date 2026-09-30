@@ -102,7 +102,7 @@
 
   .luxury-mega-menu__columns {
     display: flex !important;
-    gap: 3.5rem;
+    gap: 2.25rem;
     flex-wrap: wrap;
     flex: 1 1 auto;
     margin: 0;
@@ -619,7 +619,19 @@
                 <li><a href="{{ routes.collections_url }}/womens-handbags/crossbody-bags" class="luxury-mega-menu__link">Crossbody &amp; Messengers</a></li>
                 <li><a href="{{ routes.collections_url }}/womens-handbags/totes" class="luxury-mega-menu__link">Totes &amp; Carryalls</a></li>
                 <li><a href="{{ routes.collections_url }}/womens-handbags/shoulder-bags" class="luxury-mega-menu__link">Shoulder Bags</a></li>
-                <li><a href="{{ routes.collections_url }}/womens-handbags/wallets" class="luxury-mega-menu__link">Wallets &amp; Small Goods</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Wallets & Small Leather Goods {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/wallets-leather-goods?filter.p.tag=Women" class="luxury-mega-menu__col-title">Wallets &amp; Small Goods</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods?filter.p.tag=Women" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Wallets &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods?filter.p.tag=Women&filter.p.tag=Wristlets" class="luxury-mega-menu__link">Wristlets &amp; Pouches</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods?filter.p.tag=Women&filter.p.tag=Card+Cases" class="luxury-mega-menu__link">Card Cases &amp; Holders</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods?filter.p.tag=Women&filter.p.tag=Wallets" class="luxury-mega-menu__link">Continental &amp; Zip Wallets</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods?filter.p.tag=Women&filter.p.vendor=Michael+Kors" class="luxury-mega-menu__link">Michael Kors Wallets</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods?filter.p.tag=Women&filter.p.vendor=COACH" class="luxury-mega-menu__link">COACH Leather Wallets</a></li>
               </ul>
             </li>
 
@@ -678,17 +690,29 @@
               </ul>
             </li>
 
-            {%- comment -%} Men's Bags & Leather Goods {%- endcomment -%}
+            {%- comment -%} Men's Designer Bags {%- endcomment -%}
             <li class="luxury-mega-menu__col">
-              <a href="{{ routes.collections_url }}/mens-bags" class="luxury-mega-menu__col-title">Bags &amp; Leather Goods</a>
+              <a href="{{ routes.collections_url }}/mens-bags" class="luxury-mega-menu__col-title">Designer Bags</a>
               <ul class="luxury-mega-menu__list">
                 <li><a href="{{ routes.collections_url }}/mens-bags" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Men's Bags &rarr;</a></li>
                 <li><a href="{{ routes.collections_url }}/mens-bags/coach" class="luxury-mega-menu__link">COACH Men's Collection</a></li>
                 <li><a href="{{ routes.collections_url }}/mens-bags/michael-kors" class="luxury-mega-menu__link">Michael Kors Men</a></li>
                 <li><a href="{{ routes.collections_url }}/mens-bags/crossbody-bags" class="luxury-mega-menu__link">Messengers &amp; Crossbody</a></li>
-                <li><a href="{{ routes.collections_url }}/mens-bags/wallets" class="luxury-mega-menu__link">Billfolds &amp; Card Cases</a></li>
                 <li><a href="{{ routes.collections_url }}/mens-bags/backpacks" class="luxury-mega-menu__link">Backpacks &amp; Rucksacks</a></li>
                 <li><a href="{{ routes.collections_url }}/mens-bags/satchels" class="luxury-mega-menu__link">Briefcases &amp; Satchels</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Men's Wallets & Small Leather Goods {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/wallets-leather-goods?filter.p.tag=Men" class="luxury-mega-menu__col-title">Wallets &amp; Small Goods</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods?filter.p.tag=Men" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Men's Wallets &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods?filter.p.tag=Men&filter.p.tag=Billfolds" class="luxury-mega-menu__link">Billfolds &amp; Passcases</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods?filter.p.tag=Men&filter.p.tag=Card+Cases" class="luxury-mega-menu__link">Card Cases &amp; Money Clips</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods?filter.p.tag=Men&filter.p.tag=Tech+Accessories" class="luxury-mega-menu__link">MagSafe &amp; Tech Wallets</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods?filter.p.tag=Men&filter.p.vendor=Michael+Kors" class="luxury-mega-menu__link">Michael Kors Wallets</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods?filter.p.tag=Men&filter.p.vendor=COACH" class="luxury-mega-menu__link">COACH Men's Wallets</a></li>
               </ul>
             </li>
 
