@@ -225,6 +225,102 @@ class TestVariantImageResolution(unittest.TestCase):
         self.assertEqual(payload["variants"][0]["file"]["originalSource"], "https://cdn.example.com/abacus-grass-green.jpg")
         self.assertEqual(payload["files"][0]["originalSource"], "https://cdn.example.com/abacus-grass-green.jpg")
 
+    def test_sku_match_precedence_over_generic_first_gallery_image(self):
+        # Even if images[0] is Black, source_sku matching Maple must make Maple variant 0 and files[0]
+        prod = {
+            "title": "Plaza Bag",
+            "source_sku": "CCC41 B4MPL",
+            "product_type": "Satchels & Top Handles",
+            "images": [
+                "https://coach.scene7.com/is/image/Coach/ccc41_b4bk_a0",
+                "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a0"
+            ],
+            "source_price": 350.0,
+            "availability": "in_stock",
+            "variants": [
+                {
+                    "title": "Brass/Black",
+                    "sku": "CCC41 B4/BK",
+                    "image_url": "https://coach.scene7.com/is/image/Coach/ccc41_b4bk_a0",
+                    "option_values": [{"option_name": "Color", "name": "Brass/Black"}]
+                },
+                {
+                    "title": "Brass/Maple",
+                    "sku": "CCC41 B4MPL",
+                    "image_url": "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a0",
+                    "option_values": [{"option_name": "Color", "name": "Brass/Maple"}]
+                }
+            ]
+        }
+        payload = prepare_product_set_payload(prod, forex_rate=90.0)
+        self.assertEqual(payload["variants"][0]["sku"], "RARE-CCC41 B4MPL")
+        self.assertEqual(payload["variants"][0]["optionValues"][0]["name"], "Brass/Maple")
+        self.assertEqual(payload["files"][0]["originalSource"], "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a0")
+
+    def test_title_colorway_word_boundary_avoids_substring_false_positives(self):
+        # 'red' is a substring of 'embroidered', but title colorway is Pink
+        prod = {
+            "title": "Top Handle Bag - Embroidered Pink",
+            "product_type": "Satchels & Top Handles",
+            "images": [
+                "https://cdn.example.com/bag-pink.jpg"
+            ],
+            "source_price": 120.0,
+            "availability": "in_stock",
+            "variants": [
+                {
+                    "title": "Red",
+                    "image_url": "https://cdn.example.com/bag-red.jpg",
+                    "option_values": [{"option_name": "Color", "name": "Red"}]
+                },
+                {
+                    "title": "Pink",
+                    "image_url": "https://cdn.example.com/bag-pink.jpg",
+                    "option_values": [{"option_name": "Color", "name": "Pink"}]
+                }
+            ]
+        }
+        payload = prepare_product_set_payload(prod, forex_rate=90.0)
+        self.assertEqual(payload["variants"][0]["optionValues"][0]["name"], "Pink")
+        self.assertEqual(payload["files"][0]["originalSource"], "https://cdn.example.com/bag-pink.jpg")
+
+    def test_gallery_stem_grouping_orders_colorway_multi_angles_before_siblings(self):
+        prod = {
+            "title": "Plaza Bag",
+            "source_sku": "CCC41 B4MPL",
+            "product_type": "Satchels & Top Handles",
+            "images": [
+                "https://coach.scene7.com/is/image/Coach/ccc41_b4bk_a0",
+                "https://coach.scene7.com/is/image/Coach/ccc41_b4bk_a10",
+                "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a0",
+                "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a10",
+                "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a3"
+            ],
+            "source_price": 350.0,
+            "availability": "in_stock",
+            "variants": [
+                {
+                    "title": "Brass/Black",
+                    "sku": "CCC41 B4/BK",
+                    "image_url": "https://coach.scene7.com/is/image/Coach/ccc41_b4bk_a0",
+                    "option_values": [{"option_name": "Color", "name": "Brass/Black"}]
+                },
+                {
+                    "title": "Brass/Maple",
+                    "sku": "CCC41 B4MPL",
+                    "image_url": "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a0",
+                    "option_values": [{"option_name": "Color", "name": "Brass/Maple"}]
+                }
+            ]
+        }
+        payload = prepare_product_set_payload(prod, forex_rate=90.0)
+        file_urls = [f["originalSource"] for f in payload["files"]]
+        # files[0] must be Maple front
+        self.assertEqual(file_urls[0], "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a0")
+        # files[1] and files[2] must be Maple multi-angles (not Black!)
+        self.assertIn(file_urls[1], ["https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a10", "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a3"])
+        self.assertIn(file_urls[2], ["https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a10", "https://coach.scene7.com/is/image/Coach/ccc41_b4mpl_a3"])
+
 
 if __name__ == "__main__":
     unittest.main()

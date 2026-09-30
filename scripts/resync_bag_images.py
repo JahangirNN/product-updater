@@ -33,10 +33,16 @@ def resync_products(store: str = "jwpei", filter_keyword: str = None, max_worker
             continue
 
         # Ensure top-level image / image_url is populated with authentic primary image
-        imgs = prod.get("images") or []
-        if imgs:
-            prod["image"] = imgs[0]
-            prod["image_url"] = imgs[0]
+        opts, vars = resolve_options_and_variants(prod, forex_rate, prod.get("source_price") or 100.0, None)
+        if vars and vars[0].get("file") and vars[0]["file"].get("originalSource"):
+            auth_img = vars[0]["file"]["originalSource"]
+            prod["image"] = auth_img
+            prod["image_url"] = auth_img
+            with open(fpath, "w", encoding="utf-8") as f:
+                json.dump(prod, f, indent=2, ensure_ascii=False)
+        elif prod.get("images"):
+            prod["image"] = prod["images"][0]
+            prod["image_url"] = prod["images"][0]
             with open(fpath, "w", encoding="utf-8") as f:
                 json.dump(prod, f, indent=2, ensure_ascii=False)
 

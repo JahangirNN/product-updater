@@ -444,17 +444,65 @@ def find_matching_variant_index(
     variant_inputs: List[Dict[str, Any]]
 ) -> int:
     """
-    Find the index of the variant that best matches this product's title and primary photo.
-    Ensures that split-colorway products (e.g. 'Abacus ... - Burgundy') have the authentic
-    variant as variant 0 (Shopify default selected variant).
+    Find the index of the variant that best matches this product's authentic colorway,
+    SKU, and gallery photo.
+    Ensures that split-colorway products (e.g. 'Abacus ... - Burgundy' or Coach 'Plaza Bag' SKU CCC41 B4MPL)
+    have the authentic variant as variant 0 (Shopify default selected variant).
     """
     if len(variant_inputs) <= 1:
         return 0
 
+    # Signal 1: Variant SKU matches product's source_sku or sku (100% exact identifier)
+    prod_sku = str(prod.get("source_sku") or prod.get("sku") or "").strip().lower()
+    if prod_sku.startswith("rare-"):
+        prod_sku = prod_sku[5:]
+    if prod_sku and len(prod_sku) >= 3:
+        for idx, var in enumerate(variant_inputs):
+            var_sku = str(var.get("sku") or "").strip().lower()
+            if var_sku.startswith("rare-"):
+                var_sku = var_sku[5:]
+            if prod_sku == var_sku:
+                return idx
+
+    # Signal 2: Title colorway / suffix or explicit prod['color'] match
+    title = prod.get("title", "")
+    parts = re.split(r'\s*[\-–—]\s*', title.strip())
+    candidate_colors = []
+    if len(parts) > 1:
+        candidate_colors.append(parts[-1].strip().lower())
+    if prod.get("color"):
+        candidate_colors.append(str(prod.get("color")).strip().lower())
+
+    for cand in candidate_colors:
+        if not cand or len(cand) < 2:
+            continue
+
+        # 2a. Direct exact match on Color option (or single-dimension option)
+        for idx, var in enumerate(variant_inputs):
+            for ov in var.get("optionValues", []):
+                if ov.get("optionName", "") == "Color" or len(var.get("optionValues", [])) == 1:
+                    val_name = str(ov.get("name", "")).strip().lower()
+                    if val_name == cand:
+                        return idx
+
+        # 2b. Whole-word boundary match on Color option (e.g. 'Grass Green' vs 'Green', avoids 'red' in 'embroidered')
+        cand_words = set(re.findall(r'\b\w+\b', cand))
+        for idx, var in enumerate(variant_inputs):
+            for ov in var.get("optionValues", []):
+                if ov.get("optionName", "") == "Color" or len(var.get("optionValues", [])) == 1:
+                    val_name = str(ov.get("name", "")).strip().lower()
+                    if not val_name:
+                        continue
+                    val_words = set(re.findall(r'\b\w+\b', val_name))
+                    meaningful_cand = cand_words - {'and', 'with', 'the', 'in', 'of', 'bag', 'tote', 'mini'}
+                    meaningful_val = val_words - {'and', 'with', 'the', 'in', 'of', 'bag', 'tote', 'mini'}
+                    if meaningful_cand and meaningful_val:
+                        if meaningful_val.issubset(meaningful_cand) or meaningful_cand.issubset(meaningful_val):
+                            return idx
+
+    # Signal 3: Variant image matches the product's primary gallery image
     first_prod_img = (prod.get("images") or [None])[0] or prod.get("image") or prod.get("image_url")
     first_img_clean = first_prod_img.split('?')[0].lower() if first_prod_img and isinstance(first_prod_img, str) else ""
-
-    # Signal 1: Variant image matches the product's primary gallery image
     if first_img_clean:
         for idx, var in enumerate(variant_inputs):
             v_file = var.get("file")
@@ -463,35 +511,8 @@ def find_matching_variant_index(
                 if v_src and v_src == first_img_clean:
                     return idx
 
-    # Signal 2: Title colorway / suffix match
-    title = prod.get("title", "")
-    parts = re.split(r'\s*[\-–—]\s*', title.strip())
-    if len(parts) > 1:
-        candidate_color = parts[-1].strip().lower()
-        # Direct exact match
-        for idx, var in enumerate(variant_inputs):
-            for ov in var.get("optionValues", []):
-                val_name = str(ov.get("name", "")).strip().lower()
-                if val_name == candidate_color:
-                    return idx
-        # Substring / partial match
-        for idx, var in enumerate(variant_inputs):
-            for ov in var.get("optionValues", []):
-                val_name = str(ov.get("name", "")).strip().lower()
-                if (len(candidate_color) >= 3 and candidate_color in val_name) or (len(val_name) >= 3 and val_name in candidate_color):
-                    return idx
-
-    # Signal 3: Variant SKU matches product's source_sku
-    prod_sku = str(prod.get("source_sku") or prod.get("sku") or "").strip().lower()
-    if prod_sku and len(prod_sku) >= 4:
-        clean_prod_sku = prod_sku[5:] if prod_sku.startswith("rare-") else prod_sku
-        for idx, var in enumerate(variant_inputs):
-            var_sku = str(var.get("sku") or "").strip().lower()
-            clean_var_sku = var_sku[5:] if var_sku.startswith("rare-") else var_sku
-            if clean_prod_sku and clean_prod_sku == clean_var_sku:
-                return idx
-
     return 0
+
 
 
 def resolve_options_and_variants(
@@ -1134,11 +1155,28 @@ def prepare_product_set_payload(prod: Dict[str, Any], forex_rate: Optional[float
         all_img_urls.append(primary_img)
         seen_img_urls.add(primary_img)
 
-    # 2. Product gallery images (for multi-angle views and hover secondary image)
+    # 2. Product gallery images (authentic multi-angle views matching primary colorway stem first)
+    stem = ""
+    if primary_img:
+        filename = primary_img.split('/')[-1].split('?')[0]
+        stem = re.sub(r'(_a\d+|_front|_back|_side|-front|-back|-side).*$', '', filename, flags=re.I)
+
+    matching_gallery = []
+    other_gallery = []
     for img_url in prod.get("images", []):
         if img_url and isinstance(img_url, str) and img_url.startswith("http") and img_url not in seen_img_urls and img_url not in BROKEN_IMAGE_URLS:
-            all_img_urls.append(img_url)
-            seen_img_urls.add(img_url)
+            if stem and len(stem) >= 3 and stem.lower() in img_url.lower():
+                matching_gallery.append(img_url)
+            else:
+                other_gallery.append(img_url)
+
+    for img_url in matching_gallery:
+        all_img_urls.append(img_url)
+        seen_img_urls.add(img_url)
+
+    for img_url in other_gallery:
+        all_img_urls.append(img_url)
+        seen_img_urls.add(img_url)
 
     # 3. Fallback product image
     primary_prod_img = prod.get("image") or prod.get("image_url")
