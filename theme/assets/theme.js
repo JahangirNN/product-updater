@@ -2217,16 +2217,20 @@ var FacetsDrawer = class extends Drawer {
   constructor() {
     super();
     __privateAdd(this, _FacetsDrawer_instances);
+    this.addEventListener("dialog:before-hide", __privateMethod(this, _FacetsDrawer_instances, updateFacets_fn));
     this.addEventListener("dialog:after-hide", __privateMethod(this, _FacetsDrawer_instances, updateFacets_fn));
   }
 };
 _FacetsDrawer_instances = new WeakSet();
 updateFacets_fn = function() {
   const form = this.querySelector("facets-form form");
+  if (!form || this._isSubmitting) return;
+  this._isSubmitting = true;
+  setTimeout(() => { this._isSubmitting = false; }, 500);
   if (HTMLFormElement.prototype.requestSubmit) {
-    form?.requestSubmit();
+    form.requestSubmit();
   } else {
-    form?.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
   }
 };
 if (!window.customElements.get("facets-drawer")) {
@@ -2405,6 +2409,68 @@ function renderBrandActiveFacets(container, selectedVendors) {
   }
 }
 
+function renderSearchActiveFacets(container, selectedVendors, selectedSilhouettes) {
+  if (!container) return;
+  container.querySelectorAll(".brand-removable-facet, .silhouette-removable-facet").forEach(el => el.remove());
+  if (selectedVendors.length === 0 && selectedSilhouettes.length === 0) return;
+
+  const closeIconSvg = '<svg class="icon icon-close" width="10" height="10" viewBox="0 0 10 10" fill="none" style="pointer-events: none;"><path d="M1 1L9 9M9 1L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
+  const clearAllEl = container.querySelector(".facets-clear-all");
+
+  selectedVendors.forEach(vendor => {
+    const facetDiv = document.createElement("div");
+    facetDiv.className = "removable-facet brand-removable-facet";
+    facetDiv.innerHTML = `
+      <facet-link>
+        <button type="button" class="tap-area link-faded brand-facet-remove" data-brand-remove="${encodeURIComponent(vendor)}" aria-label="Remove filter Brand: ${vendor}" style="background: none; border: none; padding: 0; cursor: pointer; display: inline-flex; align-items: center;">
+          ${closeIconSvg}
+        </button>
+      </facet-link>
+      <span class="text-subdued">Brand: ${vendor}</span>
+    `;
+    if (clearAllEl) {
+      container.insertBefore(facetDiv, clearAllEl);
+    } else {
+      container.appendChild(facetDiv);
+    }
+  });
+
+  const silLabels = {
+    "satchels": "Satchels & Top Handles",
+    "crossbody-bags": "Crossbody & Messengers",
+    "totes": "Totes & Carryalls",
+    "shoulder-bags": "Shoulder Bags",
+    "backpacks": "Backpacks & Rucksacks",
+    "wallets": "Wallets & Small Goods"
+  };
+
+  selectedSilhouettes.forEach(sil => {
+    const label = silLabels[sil] || sil;
+    const facetDiv = document.createElement("div");
+    facetDiv.className = "removable-facet silhouette-removable-facet";
+    facetDiv.innerHTML = `
+      <facet-link>
+        <button type="button" class="tap-area link-faded silhouette-facet-remove" data-silhouette-remove="${encodeURIComponent(sil)}" aria-label="Remove filter Silhouette: ${label}" style="background: none; border: none; padding: 0; cursor: pointer; display: inline-flex; align-items: center;">
+          ${closeIconSvg}
+        </button>
+      </facet-link>
+      <span class="text-subdued">Silhouette: ${label}</span>
+    `;
+    if (clearAllEl) {
+      container.insertBefore(facetDiv, clearAllEl);
+    } else {
+      container.appendChild(facetDiv);
+    }
+  });
+
+  const totalRemovable = container.querySelectorAll(".removable-facet").length;
+  if (totalRemovable >= 1 && !container.querySelector(".facets-clear-all")) {
+    const clearLink = document.createElement("facet-link");
+    clearLink.innerHTML = `<button type="button" class="facets-clear-all text-subdued" data-brand-clear-all="true" style="background: none; border: none; padding: 0; cursor: pointer;"><span class="link">Clear all</span></button>`;
+    container.appendChild(clearLink);
+  }
+}
+
 function submitFacetsForm() {
   const sidebarForm = document.querySelector(".facets-sidebar facets-form form");
   const drawerForm = document.querySelector("#facets-drawer facets-form form");
@@ -2448,14 +2514,49 @@ document.addEventListener("click", (event) => {
     return;
   }
 
+  const silRemoveBtn = event.target.closest("[data-silhouette-remove]");
+  if (silRemoveBtn) {
+    event.preventDefault();
+    event.stopPropagation();
+    const sil = decodeURIComponent(silRemoveBtn.getAttribute("data-silhouette-remove") || "");
+    const checkboxes = document.querySelectorAll('input[name="filter.p.silhouette"]');
+    checkboxes.forEach(cb => {
+      if (cb.value.toLowerCase().trim() === sil.toLowerCase().trim()) {
+        cb.checked = false;
+      }
+    });
+    submitFacetsForm();
+    return;
+  }
+
   const clearAllBtn = event.target.closest("[data-brand-clear-all], .facets-clear-all");
   if (clearAllBtn) {
     event.preventDefault();
     event.stopPropagation();
-    const checkboxes = document.querySelectorAll('input[name="filter.p.vendor"]');
+    const checkboxes = document.querySelectorAll('input[name="filter.p.vendor"], input[name="filter.p.silhouette"], input[name="filter.v.availability"]');
     checkboxes.forEach(cb => {
       cb.checked = false;
     });
+    document.querySelectorAll('input[name="filter.v.price.gte"], input[name="filter.v.price.lte"]').forEach(input => {
+      input.value = "";
+    });
+
+    const isSearch = window.location.pathname.includes("/search");
+    if (isSearch) {
+      const currentParams = new URLSearchParams(window.location.search);
+      const rawQ = currentParams.get("q") || "";
+      const baseQ = rawQ.replace(/\s*\(?vendor:[^)]+\)?/gi, "").replace(/\s*\(?tag:[^)]+\)?/gi, "").trim();
+      const targetUrl = new URL("/search", window.location.origin);
+      if (baseQ) targetUrl.searchParams.set("q", baseQ);
+      const sectionId = document.querySelector("facets-form")?.getAttribute("section-id") ||
+                        document.querySelector(".shopify-section")?.id.replace("shopify-section-", "");
+      if (sectionId) targetUrl.searchParams.set("section_id", sectionId);
+      document.dispatchEvent(new CustomEvent("facet:update", {
+        bubbles: true,
+        detail: { url: targetUrl }
+      }));
+      return;
+    }
 
     const sidebarForm = document.querySelector(".facets-sidebar facets-form form");
     const drawerForm = document.querySelector("#facets-drawer facets-form form");
@@ -2492,6 +2593,186 @@ document.addEventListener("facet:update", async (event) => {
   const url = event.detail.url, sectionId = url.searchParams.get("section_id");
   const shopifySection = document.getElementById(`shopify-section-${sectionId}`);
   if (!shopifySection) return;
+
+  const isSearch = url.pathname.includes("/search") || window.location.pathname.includes("/search");
+
+  if (isSearch) {
+    const selectedVendors = url.searchParams.getAll("filter.p.vendor");
+    const selectedSilhouettes = url.searchParams.getAll("filter.p.silhouette");
+
+    // Clean browser URL: preserve q, filters, sort_by
+    const clonedUrl = new URL(url);
+    clonedUrl.pathname = "/search";
+    clonedUrl.searchParams.delete("section_id");
+    history.replaceState({}, "", clonedUrl.toString());
+
+    try {
+      document.documentElement.dispatchEvent(new CustomEvent("theme:loading:start", { bubbles: true }));
+
+      const rawQ = url.searchParams.get("q") || "";
+      const baseQ = rawQ.replace(/\s*\(?vendor:[^)]+\)?/gi, "").replace(/\s*\(?tag:[^)]+\)?/gi, "").trim();
+
+      let effectiveQ = baseQ;
+      if (selectedVendors.length > 0) {
+        const vendorTerms = selectedVendors.map(v => {
+          const norm = v.toLowerCase().trim();
+          if (norm === "michael kors" || norm === "michael michael kors") {
+            return '(vendor:"MICHAEL Michael Kors" OR vendor:"Michael Kors")';
+          }
+          return `vendor:"${v}"`;
+        });
+        if (vendorTerms.length === 1) {
+          effectiveQ += " " + vendorTerms[0];
+        } else {
+          effectiveQ += " (" + vendorTerms.join(" OR ") + ")";
+        }
+      }
+
+      if (selectedSilhouettes.length > 0) {
+        const silTagMap = {
+          "satchels": "tag:satchels",
+          "crossbody-bags": 'tag:"Crossbody Bags"',
+          "totes": "tag:totes",
+          "shoulder-bags": 'tag:"Shoulder Bags"',
+          "backpacks": "tag:backpacks",
+          "wallets": "tag:wallets"
+        };
+        const silTerms = selectedSilhouettes.map(s => silTagMap[s] || `tag:${s}`);
+        if (silTerms.length === 1) {
+          effectiveQ += " " + silTerms[0];
+        } else {
+          effectiveQ += " (" + silTerms.join(" OR ") + ")";
+        }
+      }
+
+      const fetchUrl = new URL("/search", window.location.origin);
+      fetchUrl.searchParams.set("q", effectiveQ);
+      if (sectionId) {
+        fetchUrl.searchParams.set("section_id", sectionId);
+      }
+      url.searchParams.forEach((val, key) => {
+        if (key.startsWith("filter.v.") || key === "sort_by" || key === "page") {
+          fetchUrl.searchParams.append(key, val);
+        }
+      });
+
+      const resp = await cachedFetch(fetchUrl.toString(), { signal: abortController.signal });
+      const tempContent = new DOMParser().parseFromString(await resp.text(), "text/html");
+      const newShopifySection = tempContent.querySelector(".shopify-section");
+
+      document.documentElement.dispatchEvent(new CustomEvent("theme:loading:end", { bubbles: true }));
+
+      if (!newShopifySection) return;
+
+      // Preserve full brand & silhouette options if current section had more options
+      ["facets-sidebar", "#facets-drawer"].forEach(selector => {
+        const oldContainer = shopifySection.querySelector(selector);
+        const newContainer = newShopifySection.querySelector(selector);
+        if (oldContainer && newContainer) {
+          const oldBrandContent = oldContainer.querySelector("input[name='filter.p.vendor']")?.closest(".accordion__content");
+          const newBrandContent = newContainer.querySelector("input[name='filter.p.vendor']")?.closest(".accordion__content");
+          if (oldBrandContent && newBrandContent) {
+            const oldCheckboxes = oldBrandContent.querySelectorAll("input[name='filter.p.vendor']");
+            const newCheckboxes = newBrandContent.querySelectorAll("input[name='filter.p.vendor']");
+            if (oldCheckboxes.length > newCheckboxes.length) {
+              newBrandContent.innerHTML = oldBrandContent.innerHTML;
+            }
+          }
+
+          const oldSilContent = oldContainer.querySelector("input[name='filter.p.silhouette']")?.closest(".accordion__content");
+          const newSilContent = newContainer.querySelector("input[name='filter.p.silhouette']")?.closest(".accordion__content");
+          if (oldSilContent && newSilContent) {
+            const oldSil = oldSilContent.querySelectorAll("input[name='filter.p.silhouette']");
+            const newSil = newSilContent.querySelectorAll("input[name='filter.p.silhouette']");
+            if (oldSil.length > newSil.length) {
+              newSilContent.innerHTML = oldSilContent.innerHTML;
+            }
+          }
+        }
+      });
+
+      // Synchronize brand checkboxes (both sidebar and drawer)
+      newShopifySection.querySelectorAll("input[name='filter.p.vendor']").forEach(cb => {
+        cb.checked = selectedVendors.some(v => v.toLowerCase().trim() === cb.value.toLowerCase().trim());
+      });
+
+      // Synchronize silhouette checkboxes (both sidebar and drawer)
+      newShopifySection.querySelectorAll("input[name='filter.p.silhouette']").forEach(cb => {
+        cb.checked = selectedSilhouettes.includes(cb.value);
+      });
+
+      // Preserve details open states
+      newShopifySection.querySelectorAll("facets-form details").forEach((detailsElement) => {
+        const inputNames = [...new Set(Array.from(detailsElement.querySelectorAll('input[name*="filter."]'), (item) => item.name))];
+        inputNames.forEach((inputName) => {
+          detailsElement.open = openDetailsValues.has(inputName);
+        });
+        if (detailsElement.querySelector("input:checked")) {
+          detailsElement.open = true;
+        }
+      });
+
+      // Fix search header count text to not display backend syntax
+      const searchHeaderTerms = newShopifySection.querySelector(".section-header p");
+      if (searchHeaderTerms) {
+        searchHeaderTerms.textContent = searchHeaderTerms.textContent.replace(/\s*\(?vendor:[^)]+\)?/gi, "").replace(/\s*\(?tag:[^)]+\)?/gi, "");
+      }
+
+      // Render active facets chips
+      let activeFacetsContainer = newShopifySection.querySelector(".active-facets");
+      if (!activeFacetsContainer && (selectedVendors.length > 0 || selectedSilhouettes.length > 0)) {
+        const colMain = newShopifySection.querySelector(".collection__main");
+        const prodList = newShopifySection.querySelector("product-list");
+        if (colMain && prodList) {
+          activeFacetsContainer = document.createElement("div");
+          activeFacetsContainer.className = "active-facets";
+          colMain.insertBefore(activeFacetsContainer, prodList);
+        }
+      }
+      if (activeFacetsContainer) {
+        renderSearchActiveFacets(activeFacetsContainer, selectedVendors, selectedSilhouettes);
+      }
+
+      // Synchronize pagination links so they carry all selected filters
+      const paginationNav = newShopifySection.querySelector("nav.pagination");
+      if (paginationNav) {
+        paginationNav.querySelectorAll("a.pagination__link").forEach(a => {
+          const linkUrl = new URL(a.href, window.location.origin);
+          linkUrl.pathname = "/search";
+          linkUrl.searchParams.set("q", baseQ);
+          selectedVendors.forEach(v => {
+            if (!linkUrl.searchParams.getAll("filter.p.vendor").includes(v)) {
+              linkUrl.searchParams.append("filter.p.vendor", v);
+            }
+          });
+          selectedSilhouettes.forEach(s => {
+            if (!linkUrl.searchParams.getAll("filter.p.silhouette").includes(s)) {
+              linkUrl.searchParams.append("filter.p.silhouette", s);
+            }
+          });
+          a.href = linkUrl.toString();
+        });
+      }
+
+      const focusedElement = document.activeElement;
+      shopifySection.replaceChildren(...document.importNode(newShopifySection, true).childNodes);
+
+      if (focusedElement?.id && document.getElementById(focusedElement.id)) {
+        document.getElementById(focusedElement.id).focus();
+      }
+
+      const scrollToProductList = () => shopifySection.querySelector(".collection")?.scrollIntoView({ block: "start", behavior: "smooth" });
+      if ("requestIdleCallback" in window) {
+        requestIdleCallback(scrollToProductList, { timeout: 500 });
+      } else {
+        requestAnimationFrame(scrollToProductList);
+      }
+    } catch (e) {
+      document.documentElement.dispatchEvent(new CustomEvent("theme:loading:end", { bubbles: true }));
+      console.error("Search facet update error:", e);
+    }
+    return;
+  }
 
   const pathParts = url.pathname.split("/").filter(Boolean);
   let baseCollectionPath = url.pathname;
@@ -2666,16 +2947,23 @@ document.addEventListener("facet:update", async (event) => {
 function initVendorFacetsOnLoad() {
   const params = new URLSearchParams(window.location.search);
   const vendors = params.getAll("filter.p.vendor");
-  if (vendors.length > 0) {
+  const silhouettes = params.getAll("filter.p.silhouette");
+  if (vendors.length > 0 || silhouettes.length > 0) {
     document.querySelectorAll("input[name='filter.p.vendor']").forEach(cb => {
       if (vendors.some(v => v.toLowerCase().trim() === cb.value.toLowerCase().trim())) {
         cb.checked = true;
       }
     });
+    document.querySelectorAll("input[name='filter.p.silhouette']").forEach(cb => {
+      if (silhouettes.includes(cb.value)) {
+        cb.checked = true;
+      }
+    });
     document.querySelectorAll("facets-form details").forEach(details => {
-      if (details.querySelector("input[name='filter.p.vendor']:checked")) {
+      if (details.querySelector("input[name='filter.p.vendor']:checked, input[name='filter.p.silhouette']:checked")) {
         details.open = true;
-        openDetailsValues.add("filter.p.vendor");
+        if (details.querySelector("input[name='filter.p.vendor']:checked")) openDetailsValues.add("filter.p.vendor");
+        if (details.querySelector("input[name='filter.p.silhouette']:checked")) openDetailsValues.add("filter.p.silhouette");
       }
     });
     const form = document.querySelector("facets-form form");

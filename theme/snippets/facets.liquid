@@ -133,6 +133,8 @@ Supported variables
       else
         assign form_action = collection.url
       endif
+    elsif request.page_type == 'search'
+      assign form_action = routes.search_url
     endif
   -%}
   <form method="GET" action="{{ form_action }}" class="facets">
@@ -298,9 +300,71 @@ Supported variables
           {%- render 'accordion', title: 'Gender', content: gender_filter_content, open: gender_open, show_arrow: true -%}
         {%- endif -%}
 
-        {%- if is_bag_collection -%}
+        {%- liquid
+          assign show_silhouette_filter = false
+          if is_bag_collection
+            assign show_silhouette_filter = true
+          elsif request.page_type == 'search'
+            assign has_bag_product = false
+            assign has_watch_product = false
+            for item in results.results
+              if item.object_type == 'product'
+                assign p_type_low = item.type | downcase
+                if p_type_low contains 'bag' or p_type_low contains 'wallet' or p_type_low contains 'satchel' or p_type_low contains 'tote' or p_type_low contains 'crossbody' or p_type_low contains 'backpack'
+                  assign has_bag_product = true
+                endif
+                if p_type_low contains 'watch'
+                  assign has_watch_product = true
+                endif
+                for tag in item.tags
+                  assign t_low = tag | downcase
+                  if t_low contains 'bag' or t_low contains 'wallet' or t_low contains 'satchel' or t_low contains 'tote' or t_low contains 'crossbody' or t_low contains 'backpack'
+                    assign has_bag_product = true
+                  endif
+                  if t_low contains 'watch' or t_low contains 'horology'
+                    assign has_watch_product = true
+                  endif
+                endfor
+                if has_bag_product and has_watch_product
+                  break
+                endif
+              endif
+            endfor
+            if has_bag_product
+              assign show_silhouette_filter = true
+            endif
+          endif
+        -%}
+
+        {%- if show_silhouette_filter -%}
           {%- capture silhouette_filter_content -%}
             <div class="v-stack gap-2.5">
+              {%- if request.page_type == 'search' -%}
+                <div class="checkbox-control" style="display: flex; align-items: center; gap: 0.75rem; padding: 3px 0;">
+                  <input id="checkbox-{{ id_prefix }}-sil-satchels" class="luxury-brand-checkbox luxury-silhouette-checkbox" type="checkbox" name="filter.p.silhouette" value="satchels" data-silhouette-tag="satchels">
+                  <label for="checkbox-{{ id_prefix }}-sil-satchels" class="tap-area text-subdued font-medium" style="cursor: pointer; letter-spacing: 0.02em; user-select: none;">Satchels &amp; Top Handles</label>
+                </div>
+                <div class="checkbox-control" style="display: flex; align-items: center; gap: 0.75rem; padding: 3px 0;">
+                  <input id="checkbox-{{ id_prefix }}-sil-crossbody" class="luxury-brand-checkbox luxury-silhouette-checkbox" type="checkbox" name="filter.p.silhouette" value="crossbody-bags" data-silhouette-tag="crossbody-bags">
+                  <label for="checkbox-{{ id_prefix }}-sil-crossbody" class="tap-area text-subdued font-medium" style="cursor: pointer; letter-spacing: 0.02em; user-select: none;">Crossbody &amp; Messengers</label>
+                </div>
+                <div class="checkbox-control" style="display: flex; align-items: center; gap: 0.75rem; padding: 3px 0;">
+                  <input id="checkbox-{{ id_prefix }}-sil-totes" class="luxury-brand-checkbox luxury-silhouette-checkbox" type="checkbox" name="filter.p.silhouette" value="totes" data-silhouette-tag="totes">
+                  <label for="checkbox-{{ id_prefix }}-sil-totes" class="tap-area text-subdued font-medium" style="cursor: pointer; letter-spacing: 0.02em; user-select: none;">Totes &amp; Carryalls</label>
+                </div>
+                <div class="checkbox-control" style="display: flex; align-items: center; gap: 0.75rem; padding: 3px 0;">
+                  <input id="checkbox-{{ id_prefix }}-sil-shoulder" class="luxury-brand-checkbox luxury-silhouette-checkbox" type="checkbox" name="filter.p.silhouette" value="shoulder-bags" data-silhouette-tag="shoulder-bags">
+                  <label for="checkbox-{{ id_prefix }}-sil-shoulder" class="tap-area text-subdued font-medium" style="cursor: pointer; letter-spacing: 0.02em; user-select: none;">Shoulder Bags</label>
+                </div>
+                <div class="checkbox-control" style="display: flex; align-items: center; gap: 0.75rem; padding: 3px 0;">
+                  <input id="checkbox-{{ id_prefix }}-sil-backpacks" class="luxury-brand-checkbox luxury-silhouette-checkbox" type="checkbox" name="filter.p.silhouette" value="backpacks" data-silhouette-tag="backpacks">
+                  <label for="checkbox-{{ id_prefix }}-sil-backpacks" class="tap-area text-subdued font-medium" style="cursor: pointer; letter-spacing: 0.02em; user-select: none;">Backpacks &amp; Rucksacks</label>
+                </div>
+                <div class="checkbox-control" style="display: flex; align-items: center; gap: 0.75rem; padding: 3px 0;">
+                  <input id="checkbox-{{ id_prefix }}-sil-wallets" class="luxury-brand-checkbox luxury-silhouette-checkbox" type="checkbox" name="filter.p.silhouette" value="wallets" data-silhouette-tag="wallets">
+                  <label for="checkbox-{{ id_prefix }}-sil-wallets" class="tap-area text-subdued font-medium" style="cursor: pointer; letter-spacing: 0.02em; user-select: none;">Wallets &amp; Small Goods</label>
+                </div>
+              {%- else -%}
               {%- comment -%} Satchels & Top Handles {%- endcomment -%}
               {%- liquid
                 assign sil_active = false
@@ -486,6 +550,7 @@ Supported variables
                   </a>
                 </facet-link>
               </div>
+              {%- endif -%}
             </div>
           {%- endcapture -%}
 
@@ -498,8 +563,51 @@ Supported variables
 
         {%- liquid
           assign show_brand_filter = false
+          assign facet_vendors = ''
           if request.page_type == 'collection' and collection.all_vendors.size > 1 and has_native_vendor_filter == false
             assign show_brand_filter = true
+            assign facet_vendors = collection.all_vendors
+          elsif request.page_type == 'search' and has_native_vendor_filter == false
+            assign search_vendors_raw = ''
+            assign facet_vendors_str = ''
+            if has_bag_product
+              assign facet_vendors_str = 'COACH:::JW PEI:::Michael Kors'
+              assign search_vendors_raw = '|COACH||JW PEI||Michael Kors|'
+            endif
+            if has_watch_product
+              if facet_vendors_str != blank
+                assign facet_vendors_str = facet_vendors_str | append: ':::Citizen:::Ferragamo:::Movado:::Seiko:::Tissot:::Versace'
+              else
+                assign facet_vendors_str = 'Citizen:::Ferragamo:::Michael Kors:::Movado:::Seiko:::Tissot:::Versace'
+              endif
+              assign search_vendors_raw = search_vendors_raw | append: '|Citizen||Ferragamo||Movado||Seiko||Tissot||Versace||Michael Kors|'
+            endif
+            for item in results.results
+              if item.object_type == 'product' and item.vendor != blank
+                assign v_clean = item.vendor | strip
+                assign v_lower = v_clean | downcase
+                if v_lower == 'michael michael kors' or v_lower == 'michael kors'
+                  assign v_clean = 'Michael Kors'
+                elsif v_lower == 'on' or v_lower == 'on-running' or v_lower == 'on running'
+                  assign v_clean = 'On'
+                elsif v_lower == 'my store'
+                  continue
+                endif
+                assign v_token = '|' | append: v_clean | append: '|'
+                unless search_vendors_raw contains v_token
+                  assign search_vendors_raw = search_vendors_raw | append: v_token
+                  if facet_vendors_str == blank
+                    assign facet_vendors_str = v_clean
+                  else
+                    assign facet_vendors_str = facet_vendors_str | append: ':::' | append: v_clean
+                  endif
+                endunless
+              endif
+            endfor
+            if facet_vendors_str != blank
+              assign show_brand_filter = true
+              assign facet_vendors = facet_vendors_str | split: ':::' | sort
+            endif
           endif
         -%}
 
@@ -514,7 +622,7 @@ Supported variables
               {%- endif -%}
 
               {%- assign rendered_vendors = '' -%}
-              {%- for vendor in collection.all_vendors -%}
+              {%- for vendor in facet_vendors -%}
                 {%- liquid
                   assign vendor_lower = vendor | downcase
                   assign display_vendor = vendor
