@@ -127,6 +127,27 @@ def run_tests():
         desktop_page.screenshot(path=ss4)
         print(f"  Screenshot saved: {ss4}")
 
+        # --- Test 1D: /collections/mens-bags Desktop ---
+        print("\n[1D] Testing /collections/mens-bags on Desktop...")
+        desktop_page.goto(f"{BASE_URL}/collections/mens-bags", wait_until="domcontentloaded", timeout=60000)
+        time.sleep(3)
+
+        mb_sidebar = desktop_page.locator(".facets-sidebar").first
+        mb_category_acc = mb_sidebar.locator("details summary:has-text('Category')").first
+        assert mb_category_acc.count() > 0, "Category accordion must exist on /collections/mens-bags sidebar!"
+        mb_sil_acc = mb_sidebar.locator("details summary:has-text('Silhouette')").first
+        assert mb_sil_acc.count() == 0, "Silhouette accordion must not exist on /collections/mens-bags sidebar!"
+
+        # Open Category accordion
+        mb_details = mb_category_acc.locator("xpath=..")
+        if not mb_details.evaluate("el => el.hasAttribute('open')"):
+            mb_category_acc.click()
+            time.sleep(1)
+
+        ss4b = os.path.join(ARTIFACTS_DIR, "04b_desktop_mens_bags_category_facet.png")
+        desktop_page.screenshot(path=ss4b)
+        print(f"  Screenshot saved: {ss4b}")
+
         desktop_context.close()
 
         # =========================================================================
@@ -199,6 +220,29 @@ def run_tests():
         mobile_page.screenshot(path=ss6)
         print(f"  Screenshot saved: {ss6}")
 
+        # --- Test 2C: /collections/mens-bags Mobile Drawer ---
+        print("\n[2C] Testing /collections/mens-bags on Mobile...")
+        mobile_page.goto(f"{BASE_URL}/collections/mens-bags", wait_until="domcontentloaded", timeout=60000)
+        time.sleep(3)
+
+        mb_filter_btn = mobile_page.locator("button[aria-controls='facets-drawer']").first
+        mb_filter_btn.click()
+        time.sleep(2)
+
+        mb_drawer = mobile_page.locator("#facets-drawer").first
+        mb_drawer_cat_acc = mb_drawer.locator("summary:has-text('Category')").first
+        assert mb_drawer_cat_acc.is_visible(), "Category accordion must be visible in mobile drawer on mens-bags!"
+
+        # Expand Category in mobile drawer
+        mbd_details = mb_drawer_cat_acc.locator("xpath=..")
+        if not mbd_details.evaluate("el => el.hasAttribute('open')"):
+            mb_drawer_cat_acc.click()
+            time.sleep(1)
+
+        ss6b = os.path.join(ARTIFACTS_DIR, "06b_mobile_mens_bags_drawer_category.png")
+        mobile_page.screenshot(path=ss6b)
+        print(f"  Screenshot saved: {ss6b}")
+
         mobile_context.close()
 
         # =========================================================================
@@ -211,6 +255,8 @@ def run_tests():
         search_context = browser.new_context(viewport={"width": 1440, "height": 900})
         search_page = search_context.new_page()
 
+        # --- Test 3A: Desktop Search Facets & Interactive Pill ---
+        print("\n[3A] Testing /search?q=bag on Desktop...")
         search_page.goto(f"{BASE_URL}/search?q=bag", wait_until="domcontentloaded", timeout=60000)
         time.sleep(3)
 
@@ -230,7 +276,63 @@ def run_tests():
         search_page.screenshot(path=ss7)
         print(f"  Screenshot saved: {ss7}")
 
+        # Check Category filter interaction on search page
+        totes_cb = s_sidebar.locator("input[value='totes']").first
+        assert totes_cb.count() > 0, "Totes checkbox must exist in Category facet!"
+        totes_cb.evaluate("el => { el.checked = true; el.dispatchEvent(new Event('change', { bubbles: true })); }")
+        time.sleep(3)
+
+        print(f"  URL after selecting Totes: {search_page.url}")
+        assert "filter.p.silhouette=totes" in search_page.url, "filter.p.silhouette=totes missing from URL!"
+
+        # Check active pill
+        totes_pill = search_page.locator(".removable-facet:has-text('Category: Totes & Carryalls')").first
+        assert totes_pill.count() > 0, "Active facet pill 'Category: Totes & Carryalls' must be rendered!"
+        print("  Active pill 'Category: Totes & Carryalls' verified!")
+
+        ss8 = os.path.join(ARTIFACTS_DIR, "08_desktop_search_bag_category_filtered.png")
+        search_page.screenshot(path=ss8)
+        print(f"  Screenshot saved: {ss8}")
+
+        # Remove pill
+        remove_btn = totes_pill.locator("button").first
+        remove_btn.click()
+        time.sleep(3)
+        print(f"  URL after removing pill: {search_page.url}")
+        assert "filter.p.silhouette=totes" not in search_page.url, "filter.p.silhouette should be removed from URL!"
+
         search_context.close()
+
+        # --- Test 3B: Mobile Search Drawer ---
+        print("\n[3B] Testing /search?q=bag on Mobile...")
+        m_search_context = browser.new_context(
+            viewport={"width": 430, "height": 932},
+            user_agent="Mozilla/5.0 (iPhone; CPU iPhone OS 16_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Mobile/15E148 Safari/604.1"
+        )
+        m_search_page = m_search_context.new_page()
+        m_search_page.goto(f"{BASE_URL}/search?q=bag", wait_until="domcontentloaded", timeout=60000)
+        time.sleep(3)
+
+        ms_btn = m_search_page.locator("button[aria-controls='facets-drawer']").first
+        assert ms_btn.is_visible(), "Mobile filter button should be visible on search page"
+        ms_btn.click()
+        time.sleep(2)
+
+        ms_drawer = m_search_page.locator("#facets-drawer").first
+        ms_cat_acc = ms_drawer.locator("summary:has-text('Category')").first
+        assert ms_cat_acc.is_visible(), "Category accordion must be visible in mobile drawer on search page!"
+
+        # Expand Category
+        ms_details = ms_cat_acc.locator("xpath=..")
+        if not ms_details.evaluate("el => el.hasAttribute('open')"):
+            ms_cat_acc.click()
+            time.sleep(1)
+
+        ss9 = os.path.join(ARTIFACTS_DIR, "09_mobile_search_bag_category_drawer.png")
+        m_search_page.screenshot(path=ss9)
+        print(f"  Screenshot saved: {ss9}")
+
+        m_search_context.close()
         browser.close()
 
     print("\n" + "=" * 80)

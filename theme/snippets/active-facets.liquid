@@ -120,17 +120,21 @@ Supported variables
   {%- endif -%}
 
   {%- for filter in results.filters -%}
+    {%- assign filter_group_label = filter.label -%}
+    {%- if filter_group_label == 'Silhouette' or filter_group_label == 'silhouette' -%}
+      {%- assign filter_group_label = 'Category' -%}
+    {%- endif -%}
     {%- if filter.type == 'price_range' -%}
       {%- if filter.max_value.value != blank or filter.min_value.value != blank -%}
         <div class="removable-facet">
           <facet-link>
-            <a href="{{ filter.url_to_remove }}" data-facet-remove="native" class="tap-area link-faded facet-remove-native" aria-label="{{ 'collection.faceting.remove_filter' | t: name: filter.label }}" data-no-instant>
+            <a href="{{ filter.url_to_remove }}" data-facet-remove="native" class="tap-area link-faded facet-remove-native" aria-label="{{ 'collection.faceting.remove_filter' | t: name: filter_group_label }}" data-no-instant>
               {%- render 'icon' with 'close', width: 10 -%}
             </a>
           </facet-link>
 
           {%- if section.settings.show_filter_group_name -%}
-            <span class="text-subdued">{{- filter.label }}: {{ filter.min_value.value | default: 0 | money_without_trailing_zeros }} - {{ filter.max_value.value | default: filter.range_max | money_without_trailing_zeros -}}</span>
+            <span class="text-subdued">{{- filter_group_label }}: {{ filter.min_value.value | default: 0 | money_without_trailing_zeros }} - {{ filter.max_value.value | default: filter.range_max | money_without_trailing_zeros -}}</span>
           {%- else -%}
             <span class="text-subdued">{{- filter.min_value.value | default: 0 | money_without_trailing_zeros }} - {{ filter.max_value.value | default: filter.range_max | money_without_trailing_zeros -}}</span>
           {%- endif -%}
@@ -148,7 +152,7 @@ Supported variables
           </facet-link>
 
           {%- if section.settings.show_filter_group_name or filter.type == 'boolean' -%}
-            <span class="text-subdued">{{- filter.label }}: {{ active_value.label -}}</span>
+            <span class="text-subdued">{{- filter_group_label }}: {{ active_value.label -}}</span>
           {%- else -%}
             <span class="text-subdued">{{- active_value.label -}}</span>
           {%- endif -%}

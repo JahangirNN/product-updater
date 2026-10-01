@@ -206,17 +206,19 @@ def test_search_facets():
 
         bag_sidebar = page.locator(".facets-sidebar").first
         bag_brand = bag_sidebar.locator("details summary:has-text('Brand')").first
-        bag_sil = bag_sidebar.locator("details summary:has-text('Category'), details summary:has-text('Silhouette')").first
+        bag_cat = bag_sidebar.locator("details summary:has-text('Category')").first
+        bag_sil_obsolete = bag_sidebar.locator("details summary:has-text('Silhouette')").first
         bag_avail = bag_sidebar.locator("details summary:has-text('Availability')").first
         bag_price = bag_sidebar.locator("details summary:has-text('Price')").first
 
         print(f"  Bag Brand accordion present: {bag_brand.count() > 0}")
-        print(f"  Bag Category accordion present: {bag_sil.count() > 0}")
+        print(f"  Bag Category accordion present: {bag_cat.count() > 0}")
         print(f"  Bag Availability accordion present: {bag_avail.count() > 0}")
         print(f"  Bag Price accordion present: {bag_price.count() > 0}")
 
         assert bag_brand.count() > 0, "Brand filter missing on /search?q=Bag"
-        assert bag_sil.count() > 0, "Category filter missing on /search?q=Bag"
+        assert bag_cat.count() > 0, "Category filter missing on /search?q=Bag"
+        assert bag_sil_obsolete.count() == 0, "Obsolete Silhouette filter must not exist on /search?q=Bag"
         assert bag_avail.count() > 0, "Availability filter missing on /search?q=Bag"
         assert bag_price.count() > 0, "Price filter missing on /search?q=Bag"
 
