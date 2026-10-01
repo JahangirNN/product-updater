@@ -574,7 +574,7 @@ Supported variables
           {%- if active_silhouette_tag != '' -%}
             {%- assign silhouette_open = true -%}
           {%- endif -%}
-          {%- render 'accordion', title: 'Silhouette', content: silhouette_filter_content, open: silhouette_open, show_arrow: true -%}
+          {%- render 'accordion', title: 'Category', content: silhouette_filter_content, open: silhouette_open, show_arrow: true -%}
         {%- endif -%}
 
         {%- liquid
@@ -758,7 +758,11 @@ Supported variables
           {%- endcapture -%}
 
           {%- if filter_content != blank -%}
-            {%- render 'accordion', title: filter.label, content: filter_content, open: open_filters_by_default, show_arrow: true -%}
+            {%- assign accordion_title = filter.label -%}
+            {%- if accordion_title == 'Silhouette' or accordion_title == 'silhouette' -%}
+              {%- assign accordion_title = 'Category' -%}
+            {%- endif -%}
+            {%- render 'accordion', title: accordion_title, content: filter_content, open: open_filters_by_default, show_arrow: true -%}
           {%- endif -%}
         {%- endfor -%}
       {%- endif -%}

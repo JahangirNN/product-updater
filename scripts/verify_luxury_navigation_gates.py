@@ -156,12 +156,12 @@ def run_gate3():
 
     gate3_passed = True
 
-    # 1. Check Silhouette Accordion presence on /collections/womens-handbags
+    # 1. Check Category/Silhouette Accordion presence on /collections/womens-handbags
     resp1 = client.get(f"{BASE_URL}/collections/womens-handbags")
     assert resp1.status_code == 200
-    has_silhouette_acc = "Silhouette" in resp1.text
-    print(f"[*] /collections/womens-handbags Silhouette accordion rendered: {has_silhouette_acc}")
-    if not has_silhouette_acc:
+    has_category_acc = "Category" in resp1.text or "Silhouette" in resp1.text
+    print(f"[*] /collections/womens-handbags Category accordion rendered: {has_category_acc}")
+    if not has_category_acc:
         gate3_passed = False
 
     for sil_slug in ["satchels", "crossbody-bags", "totes", "shoulder-bags", "backpacks", "wallets"]:

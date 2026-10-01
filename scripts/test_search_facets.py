@@ -61,17 +61,17 @@ def test_search_facets():
         brand_acc = sidebar.locator("details summary:has-text('Brand')").first
         price_acc = sidebar.locator("details summary:has-text('Price')").first
         avail_acc = sidebar.locator("details summary:has-text('Availability')").first
-        sil_acc = sidebar.locator("details summary:has-text('Silhouette')").first
+        sil_acc = sidebar.locator("details summary:has-text('Category'), details summary:has-text('Silhouette')").first
 
         print(f"  Brand accordion present: {brand_acc.count() > 0}")
         print(f"  Price accordion present: {price_acc.count() > 0}")
         print(f"  Availability accordion present: {avail_acc.count() > 0}")
-        print(f"  Silhouette accordion present: {sil_acc.count() > 0}")
+        print(f"  Category accordion present: {sil_acc.count() > 0}")
 
         assert brand_acc.count() > 0, "Brand filter accordion is missing from search results sidebar!"
         assert price_acc.count() > 0, "Price filter accordion is missing from search results sidebar!"
         assert avail_acc.count() > 0, "Availability filter accordion is missing from search results sidebar!"
-        assert sil_acc.count() > 0, "Silhouette filter accordion is missing from search results sidebar!"
+        assert sil_acc.count() > 0, "Category filter accordion is missing from search results sidebar!"
 
         # Screenshot initial state
         initial_ss_path = os.path.join(ARTIFACTS_DIR, "01_desktop_search_wallet_facets_rendered.png")
@@ -206,17 +206,17 @@ def test_search_facets():
 
         bag_sidebar = page.locator(".facets-sidebar").first
         bag_brand = bag_sidebar.locator("details summary:has-text('Brand')").first
-        bag_sil = bag_sidebar.locator("details summary:has-text('Silhouette')").first
+        bag_sil = bag_sidebar.locator("details summary:has-text('Category'), details summary:has-text('Silhouette')").first
         bag_avail = bag_sidebar.locator("details summary:has-text('Availability')").first
         bag_price = bag_sidebar.locator("details summary:has-text('Price')").first
 
         print(f"  Bag Brand accordion present: {bag_brand.count() > 0}")
-        print(f"  Bag Silhouette accordion present: {bag_sil.count() > 0}")
+        print(f"  Bag Category accordion present: {bag_sil.count() > 0}")
         print(f"  Bag Availability accordion present: {bag_avail.count() > 0}")
         print(f"  Bag Price accordion present: {bag_price.count() > 0}")
 
         assert bag_brand.count() > 0, "Brand filter missing on /search?q=Bag"
-        assert bag_sil.count() > 0, "Silhouette filter missing on /search?q=Bag"
+        assert bag_sil.count() > 0, "Category filter missing on /search?q=Bag"
         assert bag_avail.count() > 0, "Availability filter missing on /search?q=Bag"
         assert bag_price.count() > 0, "Price filter missing on /search?q=Bag"
 
@@ -271,17 +271,17 @@ def test_search_facets():
 
         # Verify drawer has Brand, Silhouette, Availability, Price
         d_brand = mobile_page.locator("#facets-drawer summary:has-text('Brand')").first
-        d_sil = mobile_page.locator("#facets-drawer summary:has-text('Silhouette')").first
+        d_sil = mobile_page.locator("#facets-drawer summary:has-text('Category'), #facets-drawer summary:has-text('Silhouette')").first
         d_avail = mobile_page.locator("#facets-drawer summary:has-text('Availability')").first
         d_price = mobile_page.locator("#facets-drawer summary:has-text('Price')").first
 
         print(f"  Drawer Brand accordion visible: {d_brand.is_visible()}")
-        print(f"  Drawer Silhouette accordion visible: {d_sil.is_visible()}")
+        print(f"  Drawer Category accordion visible: {d_sil.is_visible()}")
         print(f"  Drawer Availability accordion visible: {d_avail.is_visible()}")
         print(f"  Drawer Price accordion visible: {d_price.is_visible()}")
 
         assert d_brand.is_visible(), "Brand filter missing in mobile drawer!"
-        assert d_sil.is_visible(), "Silhouette filter missing in mobile drawer!"
+        assert d_sil.is_visible(), "Category filter missing in mobile drawer!"
         assert d_avail.is_visible(), "Availability filter missing in mobile drawer!"
         assert d_price.is_visible(), "Price filter missing in mobile drawer!"
 

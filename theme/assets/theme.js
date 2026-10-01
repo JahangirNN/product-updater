@@ -2471,10 +2471,10 @@ function renderSearchActiveFacets(container, selectedVendors, selectedSilhouette
     const facetDiv = document.createElement("div");
     facetDiv.className = "removable-facet silhouette-removable-facet";
     facetDiv.innerHTML = `
-      <button type="button" class="tap-area link-faded silhouette-facet-remove" data-silhouette-remove="${encodeURIComponent(sil)}" aria-label="Remove filter Silhouette: ${label}" style="background: none; border: none; padding: 0; cursor: pointer; display: inline-flex; align-items: center;">
+      <button type="button" class="tap-area link-faded silhouette-facet-remove" data-silhouette-remove="${encodeURIComponent(sil)}" aria-label="Remove filter Category: ${label}" style="background: none; border: none; padding: 0; cursor: pointer; display: inline-flex; align-items: center;">
         ${closeIconSvg}
       </button>
-      <span class="text-subdued">Silhouette: ${label}</span>
+      <span class="text-subdued">Category: ${label}</span>
     `;
     if (clearAllEl) {
       container.insertBefore(facetDiv, clearAllEl);
