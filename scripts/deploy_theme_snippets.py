@@ -53,6 +53,10 @@ FILES_TO_DEPLOY = [
     ("snippets/line-item.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "line-item.liquid")),
     ("config/settings_data.json", os.path.join(PROJECT_ROOT, "theme", "config", "settings_data.json")),
     ("assets/theme.js", os.path.join(PROJECT_ROOT, "theme", "assets", "theme.js")),
+    ("sections/cart-drawer.liquid", os.path.join(PROJECT_ROOT, "theme", "sections", "cart-drawer.liquid")),
+    ("sections/main-cart.liquid", os.path.join(PROJECT_ROOT, "theme", "sections", "main-cart.liquid")),
+    ("sections/quick-order-list.liquid", os.path.join(PROJECT_ROOT, "theme", "sections", "quick-order-list.liquid")),
+    ("locales/en.default.json", os.path.join(PROJECT_ROOT, "theme", "locales", "en.default.json")),
 ]
 
 def deploy_snippets():

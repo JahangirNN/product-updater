@@ -97,7 +97,19 @@
             {%- endif -%}
 
             {%- if section.settings.show_shipping_text -%}
-              <p class="text-subdued">{{ 'cart.general.taxes_and_shipping_at_checkout' | t }}</p>
+              {%- assign taxes_included = false -%}
+              {%- if cart.taxes_included or shop.taxes_included -%}
+                {%- assign taxes_included = true -%}
+              {%- endif -%}
+              {%- if taxes_included and shop.shipping_policy.body != blank -%}
+                <p class="text-subdued">{{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}</p>
+              {%- elsif taxes_included -%}
+                <p class="text-subdued">{{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}</p>
+              {%- elsif shop.shipping_policy.body != blank -%}
+                <p class="text-subdued">{{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}</p>
+              {%- else -%}
+                <p class="text-subdued">{{ 'cart.general.taxes_and_shipping_at_checkout' | t }}</p>
+              {%- endif -%}
             {%- endif -%}
           </div>
         {%- endif -%}
