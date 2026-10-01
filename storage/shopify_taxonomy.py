@@ -746,7 +746,12 @@ def resolve_options_and_variants(
 
         v_barcode = v.get("barcode") or v.get("upc") or v.get("ean")
 
-        v_is_stock = (v.get("availability") == "in_stock") or (v.get("in_stock") is True) or (v.get("availability") is None and ((prod.get("availability") == "in_stock") or (prod.get("in_stock") is True)))
+        if "in_stock" in v:
+            v_is_stock = bool(v.get("in_stock"))
+        elif v.get("availability") is not None:
+            v_is_stock = (v.get("availability") == "in_stock")
+        else:
+            v_is_stock = (prod.get("availability") == "in_stock") or (prod.get("in_stock") is True)
         var_dict = {
             "optionValues": opt_val_list,
             "price": f"{v_inr_price:.2f}",
@@ -1257,7 +1262,9 @@ def prepare_product_set_payload(prod: Dict[str, Any], forex_rate: Optional[float
             "contentType": "IMAGE"
         })
 
-    is_in_stock = (prod.get("availability") == "in_stock")
+    is_in_stock = (prod.get("availability") == "in_stock") or (prod.get("in_stock") is True) or any(
+        (v.get("inventoryPolicy") == "CONTINUE") for v in variants
+    )
 
     payload = {
         "title": title,
