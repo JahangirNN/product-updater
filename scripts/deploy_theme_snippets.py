@@ -40,9 +40,15 @@ FILES_TO_DEPLOY = [
     ("snippets/luxury-sidebar-panels.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "luxury-sidebar-panels.liquid")),
     ("snippets/facets.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "facets.liquid")),
     ("snippets/active-facets.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "active-facets.liquid")),
-    ("snippets/option-value.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "option-value.liquid")),
     ("snippets/product-card.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "product-card.liquid")),
+    ("snippets/product-card-horizontal.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "product-card-horizontal.liquid")),
+    ("snippets/vendor.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "vendor.liquid")),
+    ("snippets/product-info.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "product-info.liquid")),
+    ("snippets/css-variables.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "css-variables.liquid")),
+    ("snippets/luxury-breadcrumbs.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "luxury-breadcrumbs.liquid")),
+    ("snippets/product-badges.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "product-badges.liquid")),
     ("sections/main-search.liquid", os.path.join(PROJECT_ROOT, "theme", "sections", "main-search.liquid")),
+    ("config/settings_data.json", os.path.join(PROJECT_ROOT, "theme", "config", "settings_data.json")),
     ("assets/theme.js", os.path.join(PROJECT_ROOT, "theme", "assets", "theme.js")),
 ]
 

@@ -516,7 +516,7 @@
         "type": "checkbox",
         "id": "show_vendor",
         "label": "t:theme_settings.product_card.show_vendor",
-        "default": false
+        "default": true
       },
       {
         "type": "range",

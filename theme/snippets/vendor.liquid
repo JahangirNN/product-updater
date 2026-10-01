@@ -14,17 +14,65 @@ Supported variables
 * class: extra classes to be added on the vendor
 {%- endcomment -%}
 
-{%- if vendor != blank -%}
-  {%- assign collection_handle = vendor | handle -%}
-  {%- assign collection_for_vendor = collections[collection_handle] -%}
+{%- liquid
+  assign raw_vendor = vendor
+  if raw_vendor == blank
+    assign raw_vendor = product.vendor
+  endif
 
-  {%- if collection_for_vendor != blank -%}
-    {%- assign url = collection_for_vendor.url -%}
-  {%- else -%}
-    {%- assign url = vendor | url_for_vendor -%}
-  {%- endif -%}
+  if raw_vendor == blank or raw_vendor == 'My Store' or raw_vendor == 'General'
+    assign title_up = product.title | upcase
+    if title_up contains 'MICHAEL KORS' or title_up contains 'MICHAEL MICHAEL KORS'
+      assign raw_vendor = 'Michael Kors'
+    elsif title_up contains 'COACH'
+      assign raw_vendor = 'COACH'
+    elsif title_up contains 'JW PEI'
+      assign raw_vendor = 'JW PEI'
+    elsif title_up contains 'TISSOT'
+      assign raw_vendor = 'Tissot'
+    elsif title_up contains 'SEIKO'
+      assign raw_vendor = 'Seiko'
+    elsif title_up contains 'CITIZEN'
+      assign raw_vendor = 'Citizen'
+    elsif title_up contains 'VERSACE'
+      assign raw_vendor = 'Versace'
+    elsif title_up contains 'MOVADO'
+      assign raw_vendor = 'Movado'
+    elsif title_up contains 'FERRAGAMO'
+      assign raw_vendor = 'Ferragamo'
+    elsif title_up contains 'SALOMON'
+      assign raw_vendor = 'Salomon'
+    elsif title_up contains 'HOKA'
+      assign raw_vendor = 'HOKA'
+    elsif title_up contains 'NIKE'
+      assign raw_vendor = 'Nike'
+    elsif title_up contains 'JORDAN'
+      assign raw_vendor = 'Jordan'
+    elsif title_up contains 'ADIDAS'
+      assign raw_vendor = 'adidas'
+    elsif title_up contains 'ASICS'
+      assign raw_vendor = 'ASICS'
+    endif
+  endif
 
+  assign display_vendor = raw_vendor
+  assign vendor_lower = raw_vendor | downcase
+  if vendor_lower == 'michael michael kors'
+    assign display_vendor = 'Michael Kors'
+  endif
+
+  assign collection_handle = display_vendor | handle
+  assign collection_for_vendor = collections[collection_handle]
+
+  if collection_for_vendor != blank
+    assign url = collection_for_vendor.url
+  else
+    assign url = display_vendor | url_for_vendor
+  endif
+-%}
+
+{%- if display_vendor != blank -%}
   <a href="{{ url }}" class="vendor {{ class }}">
-    {{- vendor -}}
+    {{- display_vendor -}}
   </a>
 {%- endif -%}

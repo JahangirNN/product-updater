@@ -37,15 +37,54 @@ Supported variables
     assign show_badges = show_badges | default: true, allow_false: true
     assign show_rating = show_rating | default: settings.show_product_rating, allow_false: true
     assign show_vendor = show_vendor | default: settings.show_vendor, allow_false: true
+    if show_vendor == nil
+      assign show_vendor = true
+    endif
     assign show_quick_buy = show_quick_buy | default: settings.show_quick_buy, allow_false: true
     assign show_title = true
     assign show_prices = true
     assign show_secondary_image = show_secondary_image | default: settings.show_secondary_image, allow_false: true
     assign show_swatches = show_swatches | default: true, allow_false: true
   endif
+
+  assign card_vendor = product.vendor
+  if card_vendor == blank or card_vendor == 'My Store' or card_vendor == 'General'
+    assign title_up = product.title | upcase
+    if title_up contains 'MICHAEL KORS' or title_up contains 'MICHAEL MICHAEL KORS'
+      assign card_vendor = 'Michael Kors'
+    elsif title_up contains 'COACH'
+      assign card_vendor = 'COACH'
+    elsif title_up contains 'JW PEI'
+      assign card_vendor = 'JW PEI'
+    elsif title_up contains 'TISSOT'
+      assign card_vendor = 'Tissot'
+    elsif title_up contains 'SEIKO'
+      assign card_vendor = 'Seiko'
+    elsif title_up contains 'CITIZEN'
+      assign card_vendor = 'Citizen'
+    elsif title_up contains 'VERSACE'
+      assign card_vendor = 'Versace'
+    elsif title_up contains 'MOVADO'
+      assign card_vendor = 'Movado'
+    elsif title_up contains 'FERRAGAMO'
+      assign card_vendor = 'Ferragamo'
+    elsif title_up contains 'SALOMON'
+      assign card_vendor = 'Salomon'
+    elsif title_up contains 'HOKA'
+      assign card_vendor = 'HOKA'
+    elsif title_up contains 'NIKE'
+      assign card_vendor = 'Nike'
+    elsif title_up contains 'JORDAN'
+      assign card_vendor = 'Jordan'
+    elsif title_up contains 'ADIDAS'
+      assign card_vendor = 'adidas'
+    elsif title_up contains 'ASICS'
+      assign card_vendor = 'ASICS'
+    endif
+  endif
 -%}
 
-<product-card class="product-card" {% if reveal %}reveal-on-scroll="true"{% endif %} handle="{{ product.handle | escape }}" data-vendor="{{ product.vendor | escape }}">
+<product-card class="product-card" {% if reveal %}reveal-on-scroll="true"{% endif %} handle="{{ product.handle | escape }}" data-vendor="{{ card_vendor | default: product.vendor | escape }}">
   {%- comment -%}
   --------------------------------------------------------------------------------------------------------------------
   PRODUCT MEDIA
@@ -132,11 +171,11 @@ Supported variables
       {%- assign text_class = 'h6' -%}
     {%- endif -%}
 
-    {%- if show_title or show_prices or show_vendor and product.vendor != blank -%}
+    {%- if show_title or show_prices or show_vendor and card_vendor != blank -%}
       <div class="v-stack justify-items-center gap-2">
-        {%- if show_vendor and product.vendor != blank -%}
-          {%- capture vendor_class -%}smallcaps {% if settings.product_card_text_font == 'heading' %}heading{% endif %}{% endcapture %}
-          {%- render 'vendor' with product.vendor, class: vendor_class -%}
+        {%- if show_vendor and card_vendor != blank -%}
+          {%- capture vendor_class -%}product-card__vendor smallcaps {% if settings.product_card_text_font == 'heading' %}heading{% endif %}{% endcapture %}
+          {%- render 'vendor', vendor: card_vendor, class: vendor_class -%}
         {%- endif -%}
 
         {%- if show_title or show_prices -%}

@@ -172,8 +172,13 @@
           </li>
         {%- endif -%}
         {%- if product.vendor != blank -%}
+          {%- assign bc_vendor = product.vendor -%}
+          {%- assign bc_vendor_lower = bc_vendor | downcase -%}
+          {%- if bc_vendor_lower == 'michael michael kors' -%}
+            {%- assign bc_vendor = 'Michael Kors' -%}
+          {%- endif -%}
           <li class="breadcrumb__list-item">
-            <a href="/collections/{{ product.vendor | handleize }}" class="smallcaps link-faded">{{ product.vendor }}</a>
+            <a href="/collections/{{ bc_vendor | handleize }}" class="smallcaps link-faded">{{ bc_vendor }}</a>
           </li>
         {%- endif -%}
 
@@ -182,8 +187,13 @@
           <a href="{{ routes.all_products_collection_url }}" class="smallcaps link-faded">{{ 'general.breadcrumb.shop' | t | default: 'Shop' }}</a>
         </li>
         {%- if product.vendor != blank -%}
+          {%- assign bc_vendor = product.vendor -%}
+          {%- assign bc_vendor_lower = bc_vendor | downcase -%}
+          {%- if bc_vendor_lower == 'michael michael kors' -%}
+            {%- assign bc_vendor = 'Michael Kors' -%}
+          {%- endif -%}
           <li class="breadcrumb__list-item">
-            <a href="/collections/{{ product.vendor | handleize }}" class="smallcaps link-faded">{{ product.vendor }}</a>
+            <a href="/collections/{{ bc_vendor | handleize }}" class="smallcaps link-faded">{{ bc_vendor }}</a>
           </li>
         {%- endif -%}
       {%- endif -%}

@@ -274,4 +274,18 @@ note that this may have impact on different places.
       --circle-button-background: {{ color_scheme.settings.circle_button_background.rgb }};
       --circle-button-text-color: {{ color_scheme.settings.circle_button_icon.rgb }};
     }
+
+    .product-card__vendor {
+      font-size: 0.6875rem;
+      letter-spacing: 0.12em;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: rgb(var(--text-color) / 0.85);
+      display: inline-block;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+    .product-card__vendor:hover {
+      color: rgb(var(--text-color));
+      opacity: 0.7;
+    }
 </style>

@@ -117,11 +117,19 @@ Supported variables
 
           {%- when 'vendor' -%}
             {%- if product != blank -%}
+              {%- assign pdp_vendor = product.vendor -%}
+              {%- assign vendor_lower = pdp_vendor | downcase -%}
+              {%- if vendor_lower == 'michael michael kors' -%}
+                {%- assign pdp_vendor = 'Michael Kors' -%}
+              {%- endif -%}
+              {%- assign pdp_vendor_handle = pdp_vendor | handle -%}
               <div class="luxury-pdp-maison">
                 <span class="luxury-pdp-maison__tag">
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-                  {%- assign vendor_up = product.vendor | upcase -%}
-                  {%- if vendor_up contains 'TISSOT' or vendor_up contains 'MOVADO' -%}
+                  {%- assign vendor_up = pdp_vendor | upcase -%}
+                  {%- if product.type contains 'Sunglasses' or product.tags contains 'Sunglasses' or product.type contains 'Eyewear' -%}
+                    Designer Eyewear
+                  {%- elsif vendor_up contains 'TISSOT' or vendor_up contains 'MOVADO' -%}
                     Swiss Horology
                   {%- elsif vendor_up contains 'SEIKO' or vendor_up contains 'CITIZEN' -%}
                     Japanese Precision
@@ -136,8 +144,8 @@ Supported variables
                   {%- endif -%}
                 </span>
                 <span class="luxury-pdp-maison__dot"></span>
-                <a href="{{ routes.collections_url }}/{{ product.vendor | handle }}" class="luxury-pdp-maison__vendor">
-                  {{ product.vendor }}
+                <a href="{{ routes.collections_url }}/{{ pdp_vendor_handle }}" class="luxury-pdp-maison__vendor">
+                  {{ pdp_vendor }}
                 </a>
               </div>
             {%- else -%}
