@@ -2406,7 +2406,18 @@ function renderBrandActiveFacets(container, selectedVendors) {
   if (selectedVendors.length === 0) return;
 
   const closeIconSvg = '<svg class="icon icon-close" width="10" height="10" viewBox="0 0 10 10" fill="none" style="pointer-events: none;"><path d="M1 1L9 9M9 1L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
-  const clearAllEl = container.querySelector(".facets-clear-all");
+  const rawClearAll = container.querySelector(".facets-clear-all");
+  let clearTarget = null;
+  if (rawClearAll) {
+    if (rawClearAll.parentNode === container) {
+      clearTarget = rawClearAll;
+    } else {
+      const wrapper = rawClearAll.closest(".facets-clear-all-wrapper");
+      if (wrapper && wrapper.parentNode === container) {
+        clearTarget = wrapper;
+      }
+    }
+  }
 
   selectedVendors.forEach(vendor => {
     const facetDiv = document.createElement("div");
@@ -2417,8 +2428,8 @@ function renderBrandActiveFacets(container, selectedVendors) {
       </button>
       <span class="text-subdued">Brand: ${vendor}</span>
     `;
-    if (clearAllEl) {
-      container.insertBefore(facetDiv, clearAllEl);
+    if (clearTarget) {
+      container.insertBefore(facetDiv, clearTarget);
     } else {
       container.appendChild(facetDiv);
     }
@@ -2439,7 +2450,18 @@ function renderSearchActiveFacets(container, selectedVendors, selectedSilhouette
   if (selectedVendors.length === 0 && selectedSilhouettes.length === 0) return;
 
   const closeIconSvg = '<svg class="icon icon-close" width="10" height="10" viewBox="0 0 10 10" fill="none" style="pointer-events: none;"><path d="M1 1L9 9M9 1L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
-  const clearAllEl = container.querySelector(".facets-clear-all");
+  const rawClearAll = container.querySelector(".facets-clear-all");
+  let clearTarget = null;
+  if (rawClearAll) {
+    if (rawClearAll.parentNode === container) {
+      clearTarget = rawClearAll;
+    } else {
+      const wrapper = rawClearAll.closest(".facets-clear-all-wrapper");
+      if (wrapper && wrapper.parentNode === container) {
+        clearTarget = wrapper;
+      }
+    }
+  }
 
   selectedVendors.forEach(vendor => {
     const facetDiv = document.createElement("div");
@@ -2450,8 +2472,8 @@ function renderSearchActiveFacets(container, selectedVendors, selectedSilhouette
       </button>
       <span class="text-subdued">Brand: ${vendor}</span>
     `;
-    if (clearAllEl) {
-      container.insertBefore(facetDiv, clearAllEl);
+    if (clearTarget) {
+      container.insertBefore(facetDiv, clearTarget);
     } else {
       container.appendChild(facetDiv);
     }
@@ -2476,8 +2498,8 @@ function renderSearchActiveFacets(container, selectedVendors, selectedSilhouette
       </button>
       <span class="text-subdued">Category: ${label}</span>
     `;
-    if (clearAllEl) {
-      container.insertBefore(facetDiv, clearAllEl);
+    if (clearTarget) {
+      container.insertBefore(facetDiv, clearTarget);
     } else {
       container.appendChild(facetDiv);
     }
@@ -3399,6 +3421,63 @@ if (!window.customElements.get("gift-card-recipient")) {
 // js/common/product/product-card.js
 import { Delegate as Delegate4 } from "vendor";
 var _delegate3, _ProductCard_instances, onSwatchHovered_fn, onSwatchChanged_fn, createMediaImg_fn;
+function updateProductCardPrice(card, targetOrControl) {
+  if (!card || !targetOrControl) return;
+  const price = targetOrControl.getAttribute("data-variant-price") || 
+                (targetOrControl.control && targetOrControl.control.getAttribute("data-variant-price"));
+  if (!price) return;
+
+  const priceList = card.querySelector("price-list");
+  if (!priceList) return;
+
+  if (!priceList.dataset.originalHtml) {
+    priceList.dataset.originalHtml = priceList.innerHTML;
+  }
+
+  const comparePrice = targetOrControl.getAttribute("data-variant-compare-at-price") ||
+                       (targetOrControl.control && targetOrControl.control.getAttribute("data-variant-compare-at-price"));
+
+  let salePrice = priceList.querySelector("sale-price");
+  if (!salePrice) {
+    salePrice = document.createElement("sale-price");
+    priceList.appendChild(salePrice);
+  }
+
+  const srOnly = salePrice.querySelector(".sr-only");
+  const srText = srOnly ? srOnly.outerHTML : '<span class="sr-only">Sale price</span>';
+  salePrice.innerHTML = srText + price;
+
+  let compareAtPrice = priceList.querySelector("compare-at-price");
+  if (comparePrice) {
+    if (!compareAtPrice) {
+      compareAtPrice = document.createElement("compare-at-price");
+      compareAtPrice.className = "h6 text-subdued line-through";
+      priceList.appendChild(compareAtPrice);
+    }
+    const compareSr = compareAtPrice.querySelector(".sr-only");
+    const compareSrText = compareSr ? compareSr.outerHTML : '<span class="sr-only">Regular price</span>';
+    compareAtPrice.innerHTML = compareSrText + comparePrice;
+    compareAtPrice.style.display = "";
+    salePrice.className = "h6 text-on-sale";
+  } else {
+    if (compareAtPrice) {
+      compareAtPrice.style.display = "none";
+    }
+    salePrice.className = "h6 text-subdued";
+  }
+}
+
+function restoreProductCardPrice(card) {
+  if (!card) return;
+  const priceList = card.querySelector("price-list");
+  if (!priceList) return;
+  if (priceList.dataset.selectedPriceHtml) {
+    priceList.innerHTML = priceList.dataset.selectedPriceHtml;
+  } else if (priceList.dataset.originalHtml) {
+    priceList.innerHTML = priceList.dataset.originalHtml;
+  }
+}
+
 var ProductCard = class extends HTMLElement {
   constructor() {
     super(...arguments);
@@ -3408,6 +3487,9 @@ var ProductCard = class extends HTMLElement {
   connectedCallback() {
     __privateGet(this, _delegate3).on("change", '.product-card__info [type="radio"]', __privateMethod(this, _ProductCard_instances, onSwatchChanged_fn).bind(this));
     __privateGet(this, _delegate3).on("pointerover", '.product-card__info [type="radio"] + label', __privateMethod(this, _ProductCard_instances, onSwatchHovered_fn).bind(this), true);
+    __privateGet(this, _delegate3).on("pointerleave", '.product-card__info fieldset', () => {
+      restoreProductCardPrice(this);
+    });
   }
   disconnectedCallback() {
     __privateGet(this, _delegate3).off();
@@ -3416,13 +3498,19 @@ var ProductCard = class extends HTMLElement {
 _delegate3 = new WeakMap();
 _ProductCard_instances = new WeakSet();
 onSwatchHovered_fn = async function(event, target) {
-  const control = target.control;
+  const control = target.control || target;
+  updateProductCardPrice(this, control);
   const primaryMediaElement = this.querySelector(".product-card__image--primary");
-  if (control.hasAttribute("data-variant-media")) {
+  if (control && control.hasAttribute("data-variant-media")) {
     __privateMethod(this, _ProductCard_instances, createMediaImg_fn).call(this, JSON.parse(control.getAttribute("data-variant-media")), primaryMediaElement.className, primaryMediaElement.sizes);
   }
 };
 onSwatchChanged_fn = async function(event, target) {
+  updateProductCardPrice(this, target);
+  const priceList = this.querySelector("price-list");
+  if (priceList) {
+    priceList.dataset.selectedPriceHtml = priceList.innerHTML;
+  }
   if (target.hasAttribute("data-product-url")) {
     this.querySelectorAll(`a[href^="${Shopify.routes.root}products/"`).forEach((link) => {
       link.href = target.getAttribute("data-product-url");

@@ -233,7 +233,7 @@ Supported variables
 
               {%- liquid
                 for option_value in matched_product_option.values
-                  render 'option-value', type: 'swatch', option_value: option_value, param_name: param_name, option_position: matched_product_option.position, output_variant_media: true, size: 'sm'
+                  render 'option-value', type: 'swatch', option_value: option_value, param_name: param_name, option_position: matched_product_option.position, output_variant_media: true, size: 'sm', product: product
                 endfor
               -%}
             </fieldset>

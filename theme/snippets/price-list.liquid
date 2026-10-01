@@ -100,10 +100,72 @@ Supported variables
     --------------------------------------------------------------------------------------------------------------------
     {%- endcomment -%}
     {%- liquid
-      if product.price_varies and settings.product_price_strategy != 'from_price'
-        assign variant = product.variants | sort: 'price' | last | default: product.selected_or_first_available_variant
+      assign has_active_price_filter = false
+      assign filter_min_price = nil
+      assign filter_max_price = nil
+
+      assign filters_to_check = collection.filters | default: search.filters
+      if filters_to_check
+        for filter in filters_to_check
+          if filter.type == 'price_range'
+            if filter.min_value.value != blank or filter.max_value.value != blank
+              assign has_active_price_filter = true
+              if filter.min_value.value != blank
+                assign filter_min_price = filter.min_value.value
+              endif
+              if filter.max_value.value != blank
+                assign filter_max_price = filter.max_value.value
+              endif
+              break
+            endif
+          endif
+        endfor
+      endif
+
+      if has_active_price_filter
+        assign matched_filter_variant = nil
+        assign candidate_variant = product.selected_or_first_available_variant
+
+        if candidate_variant != blank
+          assign candidate_in_range = true
+          if filter_min_price != blank and candidate_variant.price < filter_min_price
+            assign candidate_in_range = false
+          endif
+          if filter_max_price != blank and candidate_variant.price > filter_max_price
+            assign candidate_in_range = false
+          endif
+          if candidate_in_range
+            assign matched_filter_variant = candidate_variant
+          endif
+        endif
+
+        if matched_filter_variant == nil
+          for prod_var in product.variants
+            assign var_in_range = true
+            if filter_min_price != blank and prod_var.price < filter_min_price
+              assign var_in_range = false
+            endif
+            if filter_max_price != blank and prod_var.price > filter_max_price
+              assign var_in_range = false
+            endif
+            if var_in_range
+              if prod_var.available
+                assign matched_filter_variant = prod_var
+                break
+              elsif matched_filter_variant == nil
+                assign matched_filter_variant = prod_var
+              endif
+            endif
+          endfor
+        endif
+
+        assign variant = matched_filter_variant | default: product.selected_or_first_available_variant | default: product.variants.first
       else
-        assign variant = product.variants | sort: 'price' | first | default: product.selected_or_first_available_variant
+        if product.price_varies and settings.product_price_strategy != 'from_price'
+          assign variant = product.variants | sort: 'price' | last | default: product.selected_or_first_available_variant
+        else
+          assign variant = product.variants | sort: 'price' | first | default: product.selected_or_first_available_variant
+        endif
       endif
 
       if settings.currency_code_enabled
@@ -115,7 +177,7 @@ Supported variables
       endif
     -%}
 
-    {%- if product.price_varies -%}
+    {%- if product.price_varies and has_active_price_filter == false -%}
       {%- assign is_variant_on_sale = false -%}
 
       {%- if variant.price < variant.compare_at_price -%}

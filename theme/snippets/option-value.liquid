@@ -76,7 +76,22 @@ Thumbnail specific parameters:
 
 {%- liquid
   assign fallback_variant_media = blank
-  if variant.featured_media == blank and option_value.variant.featured_media == blank
+  if variant == blank and product != blank
+    for prod_var in product.variants
+      for opt in prod_var.options
+        assign opt_clean = opt | strip | downcase
+        if opt_clean == downcase_label
+          assign variant = prod_var
+          break
+        endif
+      endfor
+      if variant != blank
+        break
+      endif
+    endfor
+  endif
+
+  if variant.featured_media == blank and option_value.variant.featured_media == blank and product != blank
     for prod_var in product.variants
       for opt in prod_var.options
         assign opt_clean = opt | strip | downcase
@@ -89,6 +104,18 @@ Thumbnail specific parameters:
         break
       endif
     endfor
+  endif
+
+  assign variant_price_formatted = blank
+  assign variant_compare_at_price_formatted = blank
+  if variant != blank
+    if settings.currency_code_enabled
+      assign variant_price_formatted = variant.price | money_with_currency
+      assign variant_compare_at_price_formatted = variant.compare_at_price | money_with_currency
+    else
+      assign variant_price_formatted = variant.price | money
+      assign variant_compare_at_price_formatted = variant.compare_at_price | money
+    endif
   endif
 
   if type == 'swatch' or type == 'block' and show_swatch
@@ -159,7 +186,7 @@ Thumbnail specific parameters:
         endif
       -%}
 
-      data-variant-id="{{ variant.id }}" {% if variant_media %}data-variant-media="{{ variant_media | json | escape }}" {% if secondary_variant_media %}data-variant-secondary-media="{{ secondary_variant_media | json | escape }}"{% endif %}{% endif %}
+      data-variant-id="{{ variant.id }}" {% if variant_price_formatted != blank %}data-variant-price="{{ variant_price_formatted | escape }}"{% endif %} {% if variant.compare_at_price > variant.price and variant_compare_at_price_formatted != blank %}data-variant-compare-at-price="{{ variant_compare_at_price_formatted | escape }}"{% endif %} {% if variant_media %}data-variant-media="{{ variant_media | json | escape }}" {% if secondary_variant_media %}data-variant-secondary-media="{{ secondary_variant_media | json | escape }}"{% endif %}{% endif %}
     {%- endif -%}
   {%- endcapture -%}
 
@@ -173,12 +200,12 @@ Thumbnail specific parameters:
     {%- assign image = image | default: variant.featured_media | default: variant.product.featured_media -%}
 
     {%- if image != blank -%}
-      <{{ option_value_tag }} class="thumbnail-swatch {% if disabled %}is-disabled{% endif %} {% if selected and option_value_tag == 'a' %}is-selected{% endif %}" {{ attributes }}>
+      <{{ option_value_tag }} class="thumbnail-swatch {% if disabled %}is-disabled{% endif %} {% if selected and option_value_tag == 'a' %}is-selected{% endif %}" {{ attributes }} {% if variant_price_formatted != blank %}data-variant-price="{{ variant_price_formatted | escape }}"{% endif %}>
         <span class="sr-only">{{ label | default: value }}</span>
         {{- image | image_url: width: image.width | image_tag: sizes: '(max-width: 699px) 48px, 68px', widths: '48,68,96,136', class: 'object-contain' -}}
       </{{ option_value_tag }}>
     {%- else -%}
-      <{{ option_value_tag }} class="block-swatch {% if disabled %}is-disabled{% endif %} {% if selected and option_value_tag == 'a' %}is-selected{% endif %}" {{ attributes }}>
+      <{{ option_value_tag }} class="block-swatch {% if disabled %}is-disabled{% endif %} {% if selected and option_value_tag == 'a' %}is-selected{% endif %}" {{ attributes }} {% if variant_price_formatted != blank %}data-variant-price="{{ variant_price_formatted | escape }}"{% endif %}>
         {{ label | default: value }}
       </{{ option_value_tag }}>
     {%- endif -%}
@@ -186,7 +213,7 @@ Thumbnail specific parameters:
   {%- when 'block' -%}
     {%- assign white_label = 'general.label.white' | t | downcase -%}
 
-    <{{ option_value_tag }} class="block-swatch {% if disabled %}is-disabled{% endif %} {% if selected and option_value_tag == 'a' %}is-selected{% endif %}" {{ attributes }}>
+    <{{ option_value_tag }} class="block-swatch {% if disabled %}is-disabled{% endif %} {% if selected and option_value_tag == 'a' %}is-selected{% endif %}" {{ attributes }} {% if variant_price_formatted != blank %}data-variant-price="{{ variant_price_formatted | escape }}"{% endif %}>
       {%- if show_swatch -%}
         <span class="block-swatch__color {% if settings.round_color_swatches %}rounded-full{% endif %} {% if white_label == downcase_label %}border{% endif %}" style="{{ swatch_style }}"></span>
       {%- endif -%}
@@ -197,7 +224,7 @@ Thumbnail specific parameters:
   {%- when 'swatch' -%}
     {%- assign white_label = 'general.label.white' | t | downcase -%}
 
-    <{{ option_value_tag }} class="color-swatch {% if disabled %}is-disabled{% endif %} {% if selected and option_value_tag == 'a' %}is-selected{% endif %} {% if settings.round_color_swatches %}rounded-full{% endif %} {% if white_label == downcase_label %}border{% endif %}" {{ attributes }} {% if show_tooltip %}data-tooltip="{{ label | default: value | escape }}"{% endif %} style="{{ swatch_style }}">
+    <{{ option_value_tag }} class="color-swatch {% if disabled %}is-disabled{% endif %} {% if selected and option_value_tag == 'a' %}is-selected{% endif %} {% if settings.round_color_swatches %}rounded-full{% endif %} {% if white_label == downcase_label %}border{% endif %}" {{ attributes }} {% if variant_price_formatted != blank %}data-variant-price="{{ variant_price_formatted | escape }}"{% endif %} {% if variant.compare_at_price > variant.price and variant_compare_at_price_formatted != blank %}data-variant-compare-at-price="{{ variant_compare_at_price_formatted | escape }}"{% endif %} {% if show_tooltip %}data-tooltip="{{ label | default: value | escape }}"{% endif %} style="{{ swatch_style }}">
       <span class="sr-only">{{ label | default: value }}</span>
     </{{ option_value_tag }}>
 
