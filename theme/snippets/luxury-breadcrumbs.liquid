@@ -171,8 +171,42 @@
             <a href="/collections/mens-shoes" class="smallcaps link-faded">Premium Footwear</a>
           </li>
         {%- endif -%}
-        {%- if product.vendor != blank -%}
-          {%- assign bc_vendor = product.vendor -%}
+        {%- assign bc_vendor = product.vendor -%}
+        {%- if bc_vendor == blank or bc_vendor == 'My Store' or bc_vendor == 'General' -%}
+          {%- assign title_up = product.title | upcase -%}
+          {%- if title_up contains 'MICHAEL KORS' or title_up contains 'MICHAEL MICHAEL KORS' -%}
+            {%- assign bc_vendor = 'Michael Kors' -%}
+          {%- elsif title_up contains 'COACH' -%}
+            {%- assign bc_vendor = 'COACH' -%}
+          {%- elsif title_up contains 'JW PEI' -%}
+            {%- assign bc_vendor = 'JW PEI' -%}
+          {%- elsif title_up contains 'TISSOT' -%}
+            {%- assign bc_vendor = 'Tissot' -%}
+          {%- elsif title_up contains 'SEIKO' -%}
+            {%- assign bc_vendor = 'Seiko' -%}
+          {%- elsif title_up contains 'CITIZEN' -%}
+            {%- assign bc_vendor = 'Citizen' -%}
+          {%- elsif title_up contains 'VERSACE' -%}
+            {%- assign bc_vendor = 'Versace' -%}
+          {%- elsif title_up contains 'MOVADO' -%}
+            {%- assign bc_vendor = 'Movado' -%}
+          {%- elsif title_up contains 'FERRAGAMO' -%}
+            {%- assign bc_vendor = 'Ferragamo' -%}
+          {%- elsif title_up contains 'SALOMON' -%}
+            {%- assign bc_vendor = 'Salomon' -%}
+          {%- elsif title_up contains 'HOKA' -%}
+            {%- assign bc_vendor = 'HOKA' -%}
+          {%- elsif title_up contains 'NIKE' -%}
+            {%- assign bc_vendor = 'Nike' -%}
+          {%- elsif title_up contains 'JORDAN' -%}
+            {%- assign bc_vendor = 'Jordan' -%}
+          {%- elsif title_up contains 'ADIDAS' -%}
+            {%- assign bc_vendor = 'adidas' -%}
+          {%- elsif title_up contains 'ASICS' -%}
+            {%- assign bc_vendor = 'ASICS' -%}
+          {%- endif -%}
+        {%- endif -%}
+        {%- if bc_vendor != blank -%}
           {%- assign bc_vendor_lower = bc_vendor | downcase -%}
           {%- if bc_vendor_lower == 'michael michael kors' -%}
             {%- assign bc_vendor = 'Michael Kors' -%}
@@ -186,8 +220,42 @@
         <li class="breadcrumb__list-item">
           <a href="{{ routes.all_products_collection_url }}" class="smallcaps link-faded">{{ 'general.breadcrumb.shop' | t | default: 'Shop' }}</a>
         </li>
-        {%- if product.vendor != blank -%}
-          {%- assign bc_vendor = product.vendor -%}
+        {%- assign bc_vendor = product.vendor -%}
+        {%- if bc_vendor == blank or bc_vendor == 'My Store' or bc_vendor == 'General' -%}
+          {%- assign title_up = product.title | upcase -%}
+          {%- if title_up contains 'MICHAEL KORS' or title_up contains 'MICHAEL MICHAEL KORS' -%}
+            {%- assign bc_vendor = 'Michael Kors' -%}
+          {%- elsif title_up contains 'COACH' -%}
+            {%- assign bc_vendor = 'COACH' -%}
+          {%- elsif title_up contains 'JW PEI' -%}
+            {%- assign bc_vendor = 'JW PEI' -%}
+          {%- elsif title_up contains 'TISSOT' -%}
+            {%- assign bc_vendor = 'Tissot' -%}
+          {%- elsif title_up contains 'SEIKO' -%}
+            {%- assign bc_vendor = 'Seiko' -%}
+          {%- elsif title_up contains 'CITIZEN' -%}
+            {%- assign bc_vendor = 'Citizen' -%}
+          {%- elsif title_up contains 'VERSACE' -%}
+            {%- assign bc_vendor = 'Versace' -%}
+          {%- elsif title_up contains 'MOVADO' -%}
+            {%- assign bc_vendor = 'Movado' -%}
+          {%- elsif title_up contains 'FERRAGAMO' -%}
+            {%- assign bc_vendor = 'Ferragamo' -%}
+          {%- elsif title_up contains 'SALOMON' -%}
+            {%- assign bc_vendor = 'Salomon' -%}
+          {%- elsif title_up contains 'HOKA' -%}
+            {%- assign bc_vendor = 'HOKA' -%}
+          {%- elsif title_up contains 'NIKE' -%}
+            {%- assign bc_vendor = 'Nike' -%}
+          {%- elsif title_up contains 'JORDAN' -%}
+            {%- assign bc_vendor = 'Jordan' -%}
+          {%- elsif title_up contains 'ADIDAS' -%}
+            {%- assign bc_vendor = 'adidas' -%}
+          {%- elsif title_up contains 'ASICS' -%}
+            {%- assign bc_vendor = 'ASICS' -%}
+          {%- endif -%}
+        {%- endif -%}
+        {%- if bc_vendor != blank -%}
           {%- assign bc_vendor_lower = bc_vendor | downcase -%}
           {%- if bc_vendor_lower == 'michael michael kors' -%}
             {%- assign bc_vendor = 'Michael Kors' -%}

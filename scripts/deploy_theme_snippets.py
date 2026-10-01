@@ -48,6 +48,9 @@ FILES_TO_DEPLOY = [
     ("snippets/luxury-breadcrumbs.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "luxury-breadcrumbs.liquid")),
     ("snippets/product-badges.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "product-badges.liquid")),
     ("sections/main-search.liquid", os.path.join(PROJECT_ROOT, "theme", "sections", "main-search.liquid")),
+    ("snippets/complementary-products.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "complementary-products.liquid")),
+    ("snippets/product-quick-buy.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "product-quick-buy.liquid")),
+    ("snippets/line-item.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "line-item.liquid")),
     ("config/settings_data.json", os.path.join(PROJECT_ROOT, "theme", "config", "settings_data.json")),
     ("assets/theme.js", os.path.join(PROJECT_ROOT, "theme", "assets", "theme.js")),
 ]

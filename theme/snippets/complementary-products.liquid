@@ -57,7 +57,7 @@ Supported variables
 
           <scroll-carousel id="{{ carousel_mobile_id }}" class="complementary-products__product-list complementary-products__product-list--carousel bleed scroll-area snap-x">
             {%- for product in recommendations.products -%}
-              {%- render 'product-card', product: product, show_quick_buy: block.settings.show_quick_buy, show_badges: false, show_vendor: false, show_rating: false, show_secondary_image: false, show_swatches: false -%}
+              {%- render 'product-card', product: product, show_quick_buy: block.settings.show_quick_buy, show_badges: false, show_vendor: true, show_rating: false, show_secondary_image: false, show_swatches: false -%}
             {%- endfor -%}
           </scroll-carousel>
 

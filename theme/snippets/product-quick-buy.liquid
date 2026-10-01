@@ -45,6 +45,7 @@ Supported variables
         {%- endif -%}
         
         <div class="quick-buy-modal__mobile-info v-stack gap-1 justify-center text-center sm:hidden">
+          {%- render 'vendor', vendor: product.vendor, product: product, class: 'product-card__vendor smallcaps' -%}
           <a href="{{ product.url }}" class="product-title h6">{{ product.title }}</a>
 
           {%- if product.selected_or_first_available_variant != nil -%}

@@ -36,7 +36,6 @@ Supported variables
   else
     assign show_badges = show_badges | default: true, allow_false: true
     assign show_rating = show_rating | default: settings.show_product_rating, allow_false: true
-    assign show_vendor = show_vendor | default: settings.show_vendor, allow_false: true
     if show_vendor == nil
       assign show_vendor = true
     endif
@@ -175,7 +174,7 @@ Supported variables
       <div class="v-stack justify-items-center gap-2">
         {%- if show_vendor and card_vendor != blank -%}
           {%- capture vendor_class -%}product-card__vendor smallcaps {% if settings.product_card_text_font == 'heading' %}heading{% endif %}{% endcapture %}
-          {%- render 'vendor', vendor: card_vendor, class: vendor_class -%}
+          {%- render 'vendor', vendor: card_vendor, product: product, class: vendor_class -%}
         {%- endif -%}
 
         {%- if show_title or show_prices -%}

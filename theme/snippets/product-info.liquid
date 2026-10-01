@@ -118,6 +118,40 @@ Supported variables
           {%- when 'vendor' -%}
             {%- if product != blank -%}
               {%- assign pdp_vendor = product.vendor -%}
+              {%- if pdp_vendor == blank or pdp_vendor == 'My Store' or pdp_vendor == 'General' -%}
+                {%- assign title_up = product.title | upcase -%}
+                {%- if title_up contains 'MICHAEL KORS' or title_up contains 'MICHAEL MICHAEL KORS' -%}
+                  {%- assign pdp_vendor = 'Michael Kors' -%}
+                {%- elsif title_up contains 'COACH' -%}
+                  {%- assign pdp_vendor = 'COACH' -%}
+                {%- elsif title_up contains 'JW PEI' -%}
+                  {%- assign pdp_vendor = 'JW PEI' -%}
+                {%- elsif title_up contains 'TISSOT' -%}
+                  {%- assign pdp_vendor = 'Tissot' -%}
+                {%- elsif title_up contains 'SEIKO' -%}
+                  {%- assign pdp_vendor = 'Seiko' -%}
+                {%- elsif title_up contains 'CITIZEN' -%}
+                  {%- assign pdp_vendor = 'Citizen' -%}
+                {%- elsif title_up contains 'VERSACE' -%}
+                  {%- assign pdp_vendor = 'Versace' -%}
+                {%- elsif title_up contains 'MOVADO' -%}
+                  {%- assign pdp_vendor = 'Movado' -%}
+                {%- elsif title_up contains 'FERRAGAMO' -%}
+                  {%- assign pdp_vendor = 'Ferragamo' -%}
+                {%- elsif title_up contains 'SALOMON' -%}
+                  {%- assign pdp_vendor = 'Salomon' -%}
+                {%- elsif title_up contains 'HOKA' -%}
+                  {%- assign pdp_vendor = 'HOKA' -%}
+                {%- elsif title_up contains 'NIKE' -%}
+                  {%- assign pdp_vendor = 'Nike' -%}
+                {%- elsif title_up contains 'JORDAN' -%}
+                  {%- assign pdp_vendor = 'Jordan' -%}
+                {%- elsif title_up contains 'ADIDAS' -%}
+                  {%- assign pdp_vendor = 'adidas' -%}
+                {%- elsif title_up contains 'ASICS' -%}
+                  {%- assign pdp_vendor = 'ASICS' -%}
+                {%- endif -%}
+              {%- endif -%}
               {%- assign vendor_lower = pdp_vendor | downcase -%}
               {%- if vendor_lower == 'michael michael kors' -%}
                 {%- assign pdp_vendor = 'Michael Kors' -%}

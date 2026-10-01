@@ -22,9 +22,44 @@ Supported variables
 
   <div class="horizontal-product-card__info">
     <div class="v-stack gap-1 justify-items-start">
-      {%- if product.vendor != blank -%}
+      {%- assign h_vendor = product.vendor -%}
+      {%- if h_vendor == blank or h_vendor == 'My Store' or h_vendor == 'General' -%}
+        {%- assign title_up = product.title | upcase -%}
+        {%- if title_up contains 'MICHAEL KORS' or title_up contains 'MICHAEL MICHAEL KORS' -%}
+          {%- assign h_vendor = 'Michael Kors' -%}
+        {%- elsif title_up contains 'COACH' -%}
+          {%- assign h_vendor = 'COACH' -%}
+        {%- elsif title_up contains 'JW PEI' -%}
+          {%- assign h_vendor = 'JW PEI' -%}
+        {%- elsif title_up contains 'TISSOT' -%}
+          {%- assign h_vendor = 'Tissot' -%}
+        {%- elsif title_up contains 'SEIKO' -%}
+          {%- assign h_vendor = 'Seiko' -%}
+        {%- elsif title_up contains 'CITIZEN' -%}
+          {%- assign h_vendor = 'Citizen' -%}
+        {%- elsif title_up contains 'VERSACE' -%}
+          {%- assign h_vendor = 'Versace' -%}
+        {%- elsif title_up contains 'MOVADO' -%}
+          {%- assign h_vendor = 'Movado' -%}
+        {%- elsif title_up contains 'FERRAGAMO' -%}
+          {%- assign h_vendor = 'Ferragamo' -%}
+        {%- elsif title_up contains 'SALOMON' -%}
+          {%- assign h_vendor = 'Salomon' -%}
+        {%- elsif title_up contains 'HOKA' -%}
+          {%- assign h_vendor = 'HOKA' -%}
+        {%- elsif title_up contains 'NIKE' -%}
+          {%- assign h_vendor = 'Nike' -%}
+        {%- elsif title_up contains 'JORDAN' -%}
+          {%- assign h_vendor = 'Jordan' -%}
+        {%- elsif title_up contains 'ADIDAS' -%}
+          {%- assign h_vendor = 'adidas' -%}
+        {%- elsif title_up contains 'ASICS' -%}
+          {%- assign h_vendor = 'ASICS' -%}
+        {%- endif -%}
+      {%- endif -%}
+      {%- if h_vendor != blank -%}
         {%- capture vendor_class -%}product-card__vendor smallcaps {% if settings.product_card_text_font == 'heading' %}heading{% endif %}{% endcapture %}
-        {%- render 'vendor', vendor: product.vendor, class: vendor_class -%}
+        {%- render 'vendor', vendor: h_vendor, product: product, class: vendor_class -%}
       {%- endif -%}
       <a href="{{ product.url }}" class="product-title {% if settings.product_card_text_font == 'heading' %}h6{% endif %}" data-instant>{{ product.title }}</a>
       {%- render 'price-list', product: product, context: 'card' -%}

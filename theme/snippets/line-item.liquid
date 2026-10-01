@@ -28,7 +28,7 @@ Supported variables
     <div class="v-stack justify-items-start gap-2">
       {%- if settings.show_vendor and line_item.vendor != blank -%}
         {%- capture vendor_class -%}smallcaps {% if settings.product_card_text_font == 'heading' %}heading{% endif %}{% endcapture %}
-        {%- render 'vendor' with line_item.vendor, class: vendor_class -%}
+        {%- render 'vendor' with line_item.vendor, product: line_item.product, class: vendor_class -%}
       {%- endif -%}
 
       <div class="v-stack justify-items-start gap-1">
