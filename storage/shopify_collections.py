@@ -19,7 +19,7 @@ COLLECTIONS_MANIFEST: List[Dict[str, Any]] = [
     # --- Instant Dispatch & Ready to Ship ---
     {
         "title": "Ready to Ship",
-        "handle": "ready-to-ship",
+        "handle": "instant-ship",
         "descriptionHtml": "<p>In-stock luxury designer pieces ready to ship immediately — authentic, verified, and delivered with express dispatch.</p>",
         "ruleSet": {
             "appliedDisjunctively": True,

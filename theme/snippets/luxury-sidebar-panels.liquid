@@ -103,27 +103,7 @@
       <accordion-disclosure>
         <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
           <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
-            Luxury Watches
-            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
-          </summary>
-          <div class="header-sidebar__nested-linklist">
-            <a href="/collections/womens-watches" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Women's Watches</a>
-            <a href="/collections/womens-watches/tissot" class="link-faded-reverse">Tissot</a>
-            <a href="/collections/womens-watches/seiko" class="link-faded-reverse">Seiko</a>
-            <a href="/collections/womens-watches/citizen" class="link-faded-reverse">Citizen</a>
-            <a href="/collections/womens-watches/movado" class="link-faded-reverse">Movado</a>
-            <a href="/collections/womens-watches/versace" class="link-faded-reverse">Versace</a>
-            <a href="/collections/womens-watches/michael-kors" class="link-faded-reverse">Michael Kors</a>
-          </div>
-        </details>
-      </accordion-disclosure>
-    </li>
-
-    <li>
-      <accordion-disclosure>
-        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
-          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
-            Designer Bags
+            Designer Handbags
             <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
           </summary>
           <div class="header-sidebar__nested-linklist">
@@ -135,6 +115,45 @@
             <a href="/collections/womens-handbags/crossbody-bags" class="link-faded-reverse">Crossbody &amp; Messengers</a>
             <a href="/collections/womens-handbags/totes" class="link-faded-reverse">Totes &amp; Carryalls</a>
             <a href="/collections/womens-handbags/shoulder-bags" class="link-faded-reverse">Shoulder Bags</a>
+          </div>
+        </details>
+      </accordion-disclosure>
+    </li>
+
+    <li>
+      <accordion-disclosure>
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Luxury Footwear
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/women?filter.p.tag=Footwear" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Shoes &rarr;</a>
+            <a href="/collections/all?filter.p.vendor=On" class="link-faded-reverse">On Running</a>
+            <a href="/collections/all?filter.p.vendor=Salomon" class="link-faded-reverse">Salomon</a>
+            <a href="/collections/all?filter.p.vendor=HOKA" class="link-faded-reverse">HOKA</a>
+            <a href="/collections/coach?filter.p.tag=Footwear" class="link-faded-reverse">COACH Footwear</a>
+            <a href="/collections/michael-kors?filter.p.tag=Footwear" class="link-faded-reverse">Michael Kors Footwear</a>
+          </div>
+        </details>
+      </accordion-disclosure>
+    </li>
+
+    <li>
+      <accordion-disclosure>
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Fine Timepieces
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/womens-watches" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Women's Watches &rarr;</a>
+            <a href="/collections/womens-watches/tissot" class="link-faded-reverse">Tissot</a>
+            <a href="/collections/womens-watches/seiko" class="link-faded-reverse">Seiko</a>
+            <a href="/collections/womens-watches/citizen" class="link-faded-reverse">Citizen</a>
+            <a href="/collections/womens-watches/movado" class="link-faded-reverse">Movado</a>
+            <a href="/collections/womens-watches/versace" class="link-faded-reverse">Versace</a>
+            <a href="/collections/womens-watches/michael-kors" class="link-faded-reverse">Michael Kors</a>
           </div>
         </details>
       </accordion-disclosure>
@@ -163,13 +182,15 @@
       <accordion-disclosure>
         <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
           <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
-            Designer Sunglasses
+            Designer Eyewear
             <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
           </summary>
           <div class="header-sidebar__nested-linklist">
-            <a href="/collections/womens-sunglasses" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Sunglasses</a>
+            <a href="/collections/womens-sunglasses" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Sunglasses &rarr;</a>
             <a href="/collections/designer-eyewear?filter.p.vendor=Michael+Kors" class="link-faded-reverse">Michael Kors</a>
-            <a href="/collections/designer-eyewear" class="link-faded-reverse">All Designer Eyewear</a>
+            <a href="/collections/womens-sunglasses?filter.p.tag=Cat-Eye" class="link-faded-reverse">Cat-Eye &amp; Butterfly</a>
+            <a href="/collections/womens-sunglasses?filter.p.tag=Aviator" class="link-faded-reverse">Aviator &amp; Pilot</a>
+            <a href="/collections/womens-sunglasses?filter.p.tag=Oversized" class="link-faded-reverse">Oversized &amp; Geometric</a>
           </div>
         </details>
       </accordion-disclosure>
@@ -194,17 +215,36 @@
       <accordion-disclosure>
         <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
           <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
-            Luxury Watches
+            Fine Timepieces
             <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
           </summary>
           <div class="header-sidebar__nested-linklist">
-            <a href="/collections/mens-watches" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Men's Watches</a>
+            <a href="/collections/mens-watches" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Men's Watches &rarr;</a>
             <a href="/collections/mens-watches/tissot" class="link-faded-reverse">Tissot</a>
             <a href="/collections/mens-watches/citizen" class="link-faded-reverse">Citizen</a>
             <a href="/collections/mens-watches/movado" class="link-faded-reverse">Movado</a>
             <a href="/collections/mens-watches/seiko" class="link-faded-reverse">Seiko</a>
             <a href="/collections/mens-watches/versace" class="link-faded-reverse">Versace</a>
             <a href="/collections/mens-watches/ferragamo" class="link-faded-reverse">Ferragamo</a>
+          </div>
+        </details>
+      </accordion-disclosure>
+    </li>
+
+    <li>
+      <accordion-disclosure>
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Premium Footwear
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/men?filter.p.tag=Footwear" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Men's Shoes &rarr;</a>
+            <a href="/collections/all?filter.p.vendor=Salomon" class="link-faded-reverse">Salomon</a>
+            <a href="/collections/all?filter.p.vendor=On" class="link-faded-reverse">On Running</a>
+            <a href="/collections/all?filter.p.vendor=HOKA" class="link-faded-reverse">HOKA</a>
+            <a href="/collections/coach?filter.p.tag=Footwear" class="link-faded-reverse">COACH Footwear</a>
+            <a href="/collections/michael-kors?filter.p.tag=Footwear" class="link-faded-reverse">Michael Kors Footwear</a>
           </div>
         </details>
       </accordion-disclosure>
@@ -252,13 +292,15 @@
       <accordion-disclosure>
         <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
           <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
-            Designer Sunglasses
+            Designer Eyewear
             <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
           </summary>
           <div class="header-sidebar__nested-linklist">
-            <a href="/collections/mens-sunglasses" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Sunglasses</a>
-            <a href="/collections/designer-eyewear?filter.p.vendor=Michael+Kors" class="link-faded-reverse">Michael Kors</a>
-            <a href="/collections/designer-eyewear" class="link-faded-reverse">All Designer Eyewear</a>
+            <a href="/collections/mens-sunglasses" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Sunglasses &rarr;</a>
+            <a href="/collections/designer-eyewear?filter.p.vendor=Michael+Kors" class="link-faded-reverse">Michael Kors Eyewear</a>
+            <a href="/collections/mens-sunglasses?filter.p.tag=Aviator" class="link-faded-reverse">Aviator &amp; Pilot</a>
+            <a href="/collections/mens-sunglasses?filter.p.tag=Navigator" class="link-faded-reverse">Navigator &amp; Square</a>
+            <a href="/collections/mens-sunglasses?filter.p.tag=Wireframe" class="link-faded-reverse">Wireframe &amp; Metal</a>
           </div>
         </details>
       </accordion-disclosure>
@@ -297,6 +339,7 @@
             <a href="/collections/coach" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">All COACH Showroom</a>
             <a href="/collections/womens-handbags/coach" class="link-faded-reverse">Women's Handbags</a>
             <a href="/collections/mens-bags/coach" class="link-faded-reverse">Men's Collection</a>
+            <a href="/collections/coach?filter.p.tag=Footwear" class="link-faded-reverse">COACH Footwear</a>
           </div>
         </details>
       </accordion-disclosure>
@@ -332,6 +375,7 @@
             <a href="/collections/womens-handbags/michael-kors" class="link-faded-reverse">Luxury Handbags</a>
             <a href="/collections/michael-kors-watches" class="link-faded-reverse">Luxury Watches</a>
             <a href="/collections/designer-eyewear/michael-kors" class="link-faded-reverse">Designer Sunglasses</a>
+            <a href="/collections/michael-kors?filter.p.tag=Footwear" class="link-faded-reverse">Michael Kors Footwear</a>
           </div>
         </details>
       </accordion-disclosure>
@@ -386,6 +430,35 @@
       <a href="/collections/ferragamo" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
         <span class="luxury-sidebar__brand-name">Ferragamo</span>
         <span class="luxury-sidebar__chip">Swiss Made</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    {%- comment -%} Section 3: Performance & Designer Footwear {%- endcomment -%}
+    <li class="luxury-sidebar__section-title">
+      Performance &amp; Designer Footwear
+    </li>
+
+    <li>
+      <a href="/collections/all?filter.p.vendor=Salomon" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">Salomon</span>
+        <span class="luxury-sidebar__chip">Trail Running</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/all?filter.p.vendor=On" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">On Running</span>
+        <span class="luxury-sidebar__chip">Swiss Tech</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/all?filter.p.vendor=HOKA" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">HOKA</span>
+        <span class="luxury-sidebar__chip">Maximalist</span>
         <span class="luxury-sidebar__arrow">&rarr;</span>
       </a>
     </li>
