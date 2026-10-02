@@ -3,7 +3,7 @@
 **Store URL**: `https://therareavenue.com` (`hewmvw-am.myshopify.com`)  
 **Store Currency**: Indian Rupee (INR ₹)  
 **Store Protocol**: Shopify Admin GraphQL API (`2026-04`)  
-**Last Updated**: September 27, 2026  
+**Last Updated**: October 2, 2026  
 
 ---
 
@@ -25,13 +25,13 @@
 | Source Store | Catalog Total | Status on Shopify | Ingested Count | Ingestion Date | Notes |
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **Jomashop (Watches Complete)** | 574 | 🟢 Ingestion Complete | 574 / 574 | 2026-09-25 | 100% of all 574 Luxury Watches Live (Tissot, Citizen, Movado, Seiko, MK, Versace, Ferragamo) |
-| **JW PEI** | 491 | 🟡 Ingesting | 4 / 491 | 2026-09-25 | Designer Vegan Leather Handbags |
-| **Nordstrom** | 238 | ⬜ Ready for Ingestion | 0 / 238 | - | Salomon, On Running, HOKA |
-| **Foot Locker** | 307 | ⬜ Ready for Ingestion | 0 / 307 | - | Nike, adidas, ASICS |
-| **Michael Kors** | 530 | 🟡 Ingesting | 46 / 530 | 2026-09-27 | 100% of Designer Eyewear Live (46 Sunglasses: 6 Men's, 19 Unisex, 21 Women's) |
-| **Coach** | 573 | ⬜ Ready for Ingestion | 0 / 573 | - | Handbags, Crossbody, Wallets, Footwear |
+| **JW PEI** | 491 | 🟢 Ingestion Complete | 491 / 491 | 2026-09-29 | 100% of Designer Vegan Leather Handbags Live with multi-color swatch linkage |
+| **Coach** | 573 | 🟢 Ingestion Complete | 573 / 573 | 2026-10-01 | 100% of Handbags, Wallets, and Footwear Live with US/UK size matrix and S7 imagery |
+| **Michael Kors** | 530 | 🟢 Ingestion Complete | 530 / 530 | 2026-10-01 | 100% of Designer Handbags, Eyewear, Belts, and Footwear Live |
+| **Nordstrom** | 238 | 🟡 Ingesting | 92 / 238 | 2026-09-30 | Salomon, On Running, HOKA premium athletic footwear |
+| **Foot Locker** | 307 | ⬜ Ready for Ingestion | 0 / 307 | - | Nike, adidas, ASICS sneakers |
 | **JD Sports** | 476 | ⬜ Ready for Ingestion | 0 / 476 | - | Nike Footwear & Streetwear |
-| **TOTAL** | **3,189** | - | **624 / 3,189** | - | **Target: 100% Ingested** |
+| **TOTAL** | **3,189** | - | **2,260 / 3,189** | - | **70.9% Ingested (Target: 100%)** |
 
 ---
 
@@ -95,4 +95,10 @@
 | **2026-09-27** | Hybrid Luxury Navigation Live Theme Deployment (#197348655270) | `3/3 SNIPPETS DEPLOYED` (`luxury-desktop-nav`, `luxury-sidebar-panels`, `facets`) | GraphQL `themeFilesUpsert` |
 | **2026-09-27** | Automated Playwright Regression Verification (Tier 1 & Tier 4) | `46/46 PASS` (40 Tier 1 tests, 6 Tier 4 user journeys, 100% OK) | `scripts/test_hybrid_luxury_navigation_e2e.py` |
 | **2026-09-27** | ADR 0023 Accepted (Hybrid Luxury Navigation & Eyewear) | `ADR 0023 ACCEPTED` | `docs/adr/0023-*` |
+| **2026-10-01** | Coach Remaining Footwear & Wallets Ingestion (114 items) | `114/114 PASS` (Coach at 573/573, 100.0% Complete) | Subagent `Coach Ingestion Specialist` |
+| **2026-10-01** | Michael Kors Remaining Footwear & Belts Ingestion (139 items) | `139/139 PASS` (MK at 530/530, 100.0% Complete) | Subagent `MK Ingestion Specialist` |
+| **2026-10-01** | Online Store Sales Channel Batch Publication | `996/996 QUEUED & PUBLISHED` to Online Store Publication | `scripts/publish_active_coach_mk.py` |
+| **2026-10-01** | Variant Stock Fallback Parity Bugfix | `FIXED & COMMITTED (54d7541e)`: Out-of-stock variants strictly enforce `DENY` policy | `storage/shopify_taxonomy.py` line 749 |
+| **2026-10-02** | Truly Random Footwear Audit (8 Coach & MK Shoe Models) | `100% PASS` across 96 individual variants (Policy & Whole-Rupee INR) | `scratch/audit_random_shoes_variants.py` |
+
 

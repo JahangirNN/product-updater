@@ -95,4 +95,13 @@
 - **Granular Variant Stock Tracking**:
   - Returns `variant_stock_changed: bool` and `changed_variants: List[Dict[str, Any]]` with `{sku, old_in_stock, new_in_stock}` to maintain a clean delta event queue.
 
+---
+
+## 8. Shopify Footwear Catalog Onboarding & Variant Stock Policy (October 2026)
+- **100% Onboarding Achieved**: All 573 Coach products (including 159 footwear models: sandals, sneakers, clogs, loafers, flats) are linked to Shopify.
+- **Sizing Schema**: Dual US/UK options selector pills (`US X / UK Y`) generated dynamically with whole-rupee INR pricing per variant.
+- **Variant Policy Enforcement (`54d7541e`)**: In `storage/shopify_taxonomy.py` line 749, variant-level `in_stock` strictly takes priority over parent-level availability fallback. Out-of-stock sizes and colorways are provisioned with `inventoryPolicy: "DENY"` and `tracked: true`, eliminating cart checkout leakage on sold-out shoe sizes.
+- **Sales Channel Publishing**: Active items queued for Online Store sales channel publication via asynchronous `productBulkPublish` GraphQL mutation.
+
+
 

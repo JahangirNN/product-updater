@@ -122,3 +122,12 @@
   - Continuous freshner daemon (`scripts/run_freshner_daemon.py`, `sync_catalog.py`) polls live SFCC stock and price.
   - Synchronous `productSet` mutation dispatches directly to Shopify Admin GraphQL on detected price or stock shift.
 
+---
+
+## 8. Shopify Footwear Catalog Onboarding & Variant Stock Policy (October 2026)
+- **100% Ingestion Complete**: All 530 Michael Kors items (including 174 footwear models: sandals, sneakers, loafers, mules, boots, and pumps) are live on Shopify.
+- **Multi-Dimensional Option Discovery**: Automatically discovers both `Size` and `Color` dimensions without flattening variants or dropping color-specific variant combinations.
+- **Variant Policy Enforcement (`54d7541e`)**: In `storage/shopify_taxonomy.py` line 749, variant-level `in_stock` strictly overrides parent availability fallback. Out-of-stock sizes and colorways are assigned `inventoryPolicy: "DENY"` and `tracked: true`, eliminating cart checkout leakage on sold-out shoe sizes.
+- **Sales Channel Publishing**: Active items queued for Online Store sales channel publication via asynchronous `productBulkPublish` GraphQL mutation.
+
+
