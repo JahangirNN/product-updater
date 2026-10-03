@@ -220,7 +220,7 @@ Supported variables
         endif
       -%}
 
-      {%- if matched_product_option != blank -%}
+      {%- if matched_product_option != blank and matched_product_option.values.size > 1 -%}
         {%- case settings.product_color_display -%}
           {%- when 'count' -%}
             <p class="smallcaps text-subdued">{{- 'product.general.available_colors_count' | t: count: matched_product_option.values.size -}}</p>
