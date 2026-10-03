@@ -59,23 +59,23 @@
             },
             {
               "title": "On Running",
-              "url": "/collections/all?filter.p.vendor=On"
+              "url": "/collections/women/on"
             },
             {
               "title": "Salomon",
-              "url": "/collections/all?filter.p.vendor=Salomon"
+              "url": "/collections/women/salomon"
             },
             {
               "title": "HOKA",
-              "url": "/collections/all?filter.p.vendor=HOKA"
+              "url": "/collections/women/hoka"
             },
             {
               "title": "COACH Footwear",
-              "url": "/collections/coach?filter.p.tag=Footwear"
+              "url": "/collections/coach/women+footwear"
             },
             {
               "title": "Michael Kors Footwear",
-              "url": "/collections/michael-kors?filter.p.tag=Footwear"
+              "url": "/collections/michael-kors/women+footwear"
             }
           ]
         },
@@ -117,31 +117,31 @@
         {
           "title": "Wallets & Small Goods",
           "type": "category",
-          "url": "/collections/wallets-leather-goods?filter.p.tag=Women",
+          "url": "/collections/wallets-leather-goods/women",
           "items": [
             {
               "title": "Shop All Wallets",
-              "url": "/collections/wallets-leather-goods?filter.p.tag=Women"
+              "url": "/collections/wallets-leather-goods/women"
             },
             {
               "title": "Wristlets & Pouches",
-              "url": "/collections/wallets-leather-goods?filter.p.tag=Women&filter.p.tag=Wristlets"
+              "url": "/collections/wallets-leather-goods/women+wristlets"
             },
             {
               "title": "Card Cases & Holders",
-              "url": "/collections/wallets-leather-goods?filter.p.tag=Women&filter.p.tag=Card+Cases"
+              "url": "/collections/wallets-leather-goods/women+card-cases"
             },
             {
               "title": "Continental & Zip Wallets",
-              "url": "/collections/wallets-leather-goods?filter.p.tag=Women&filter.p.tag=Wallets"
+              "url": "/collections/wallets-leather-goods/women+wallets"
             },
             {
               "title": "Michael Kors",
-              "url": "/collections/wallets-leather-goods?filter.p.tag=Women&filter.p.vendor=Michael+Kors"
+              "url": "/collections/wallets-leather-goods/women+michael-kors"
             },
             {
               "title": "COACH",
-              "url": "/collections/wallets-leather-goods?filter.p.tag=Women&filter.p.vendor=COACH"
+              "url": "/collections/wallets-leather-goods/women+coach"
             }
           ]
         },
@@ -156,19 +156,19 @@
             },
             {
               "title": "Michael Kors",
-              "url": "/collections/designer-eyewear?filter.p.vendor=Michael+Kors"
+              "url": "/collections/womens-sunglasses/michael-kors"
             },
             {
               "title": "Cat-Eye & Butterfly",
-              "url": "/collections/womens-sunglasses?filter.p.tag=Cat-Eye"
+              "url": "/collections/womens-sunglasses/cat-eye"
             },
             {
               "title": "Aviator & Pilot",
-              "url": "/collections/womens-sunglasses?filter.p.tag=Aviator"
+              "url": "/collections/womens-sunglasses/aviator"
             },
             {
               "title": "Oversized & Geometric",
-              "url": "/collections/womens-sunglasses?filter.p.tag=Oversized"
+              "url": "/collections/womens-sunglasses/oversized"
             }
           ]
         }
@@ -217,31 +217,31 @@
         {
           "title": "Premium Footwear",
           "type": "category",
-          "url": "/collections/men?filter.p.tag=Footwear",
+          "url": "/collections/men/footwear",
           "items": [
             {
               "title": "Shop All Men's Shoes",
-              "url": "/collections/men?filter.p.tag=Footwear"
+              "url": "/collections/men/footwear"
             },
             {
               "title": "Salomon",
-              "url": "/collections/all?filter.p.vendor=Salomon"
+              "url": "/collections/men/salomon"
             },
             {
               "title": "On Running",
-              "url": "/collections/all?filter.p.vendor=On"
+              "url": "/collections/men/on"
             },
             {
               "title": "HOKA",
-              "url": "/collections/all?filter.p.vendor=HOKA"
+              "url": "/collections/men/hoka"
             },
             {
               "title": "COACH Footwear",
-              "url": "/collections/coach?filter.p.tag=Footwear"
+              "url": "/collections/coach/men+footwear"
             },
             {
               "title": "Michael Kors Footwear",
-              "url": "/collections/michael-kors?filter.p.tag=Footwear"
+              "url": "/collections/michael-kors/men+footwear"
             }
           ]
         },
@@ -259,10 +259,6 @@
               "url": "/collections/mens-bags/coach"
             },
             {
-              "title": "Michael Kors",
-              "url": "/collections/mens-bags/michael-kors"
-            },
-            {
               "title": "Messengers & Crossbody",
               "url": "/collections/mens-bags/crossbody-bags"
             },
@@ -273,37 +269,41 @@
             {
               "title": "Briefcases & Satchels",
               "url": "/collections/mens-bags/satchels"
+            },
+            {
+              "title": "Totes & Carryalls",
+              "url": "/collections/mens-bags/totes"
             }
           ]
         },
         {
           "title": "Wallets & Small Goods",
           "type": "category",
-          "url": "/collections/wallets-leather-goods?filter.p.tag=Men",
+          "url": "/collections/wallets-leather-goods/men",
           "items": [
             {
               "title": "Shop All Men's Wallets",
-              "url": "/collections/wallets-leather-goods?filter.p.tag=Men"
+              "url": "/collections/wallets-leather-goods/men"
             },
             {
               "title": "Billfolds & Passcases",
-              "url": "/collections/wallets-leather-goods?filter.p.tag=Men&filter.p.tag=Billfolds"
+              "url": "/collections/wallets-leather-goods/men+billfolds"
             },
             {
               "title": "Card Cases & Money Clips",
-              "url": "/collections/wallets-leather-goods?filter.p.tag=Men&filter.p.tag=Card+Cases"
+              "url": "/collections/wallets-leather-goods/men+card-cases"
             },
             {
               "title": "MagSafe & Tech Wallets",
-              "url": "/collections/wallets-leather-goods?filter.p.tag=Men&filter.p.tag=Tech+Accessories"
+              "url": "/collections/wallets-leather-goods/men+tech-accessories"
             },
             {
               "title": "Michael Kors",
-              "url": "/collections/wallets-leather-goods?filter.p.tag=Men&filter.p.vendor=Michael+Kors"
+              "url": "/collections/wallets-leather-goods/men+michael-kors"
             },
             {
               "title": "COACH",
-              "url": "/collections/wallets-leather-goods?filter.p.tag=Men&filter.p.vendor=COACH"
+              "url": "/collections/wallets-leather-goods/men+coach"
             }
           ]
         },
@@ -318,19 +318,19 @@
             },
             {
               "title": "Michael Kors Eyewear",
-              "url": "/collections/designer-eyewear?filter.p.vendor=Michael+Kors"
+              "url": "/collections/mens-sunglasses/michael-kors"
             },
             {
               "title": "Aviator & Pilot",
-              "url": "/collections/mens-sunglasses?filter.p.tag=Aviator"
+              "url": "/collections/mens-sunglasses/aviator"
             },
             {
               "title": "Navigator & Square",
-              "url": "/collections/mens-sunglasses?filter.p.tag=Navigator"
+              "url": "/collections/mens-sunglasses/navigator"
             },
             {
               "title": "Wireframe & Metal",
-              "url": "/collections/mens-sunglasses?filter.p.tag=Wireframe"
+              "url": "/collections/mens-sunglasses/wireframe"
             }
           ]
         }
@@ -359,7 +359,7 @@
             },
             {
               "title": "COACH Footwear",
-              "url": "/collections/coach?filter.p.tag=Footwear"
+              "url": "/collections/coach/footwear"
             }
           ]
         },
@@ -399,37 +399,37 @@
             },
             {
               "title": "Designer Sunglasses",
-              "url": "/collections/designer-eyewear/michael-kors"
+              "url": "/collections/womens-sunglasses/michael-kors"
             },
             {
               "title": "Michael Kors Footwear",
-              "url": "/collections/michael-kors?filter.p.tag=Footwear"
+              "url": "/collections/michael-kors/footwear"
             }
           ]
         },
         {
           "title": "Performance & Designer Footwear",
-          "url": "/collections/all?filter.p.tag=Footwear",
+          "url": "/collections/all/footwear",
           "items": [
             {
               "title": "Salomon",
-              "url": "/collections/all?filter.p.vendor=Salomon"
+              "url": "/collections/all/salomon"
             },
             {
               "title": "On Running",
-              "url": "/collections/all?filter.p.vendor=On"
+              "url": "/collections/all/on"
             },
             {
               "title": "HOKA",
-              "url": "/collections/all?filter.p.vendor=HOKA"
+              "url": "/collections/all/hoka"
             },
             {
               "title": "Coach Footwear",
-              "url": "/collections/coach?filter.p.tag=Footwear"
+              "url": "/collections/coach/footwear"
             },
             {
               "title": "MK Footwear",
-              "url": "/collections/michael-kors?filter.p.tag=Footwear"
+              "url": "/collections/michael-kors/footwear"
             }
           ]
         },
