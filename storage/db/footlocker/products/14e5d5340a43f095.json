@@ -10,7 +10,7 @@
   "source_price": 115.0,
   "source_compare_at_price": null,
   "current_price": 11039.0,
-  "compare_at_price": 11044.0,
+  "compare_at_price": 11083.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -108,7 +108,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/O3496002_01",
       "option_values": [
         {
@@ -583,7 +583,11 @@
   "groups": [
     "Nike P-6000"
   ],
-  "last_verified_at": "2026-09-22T06:23:37Z",
+  "last_verified_at": "2026-10-03T21:53:07Z",
   "created_at": "2026-09-20T10:34:56Z",
-  "updated_at": "2026-09-22T06:23:37Z"
+  "updated_at": "2026-10-03T21:53:07Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851006230694",
+  "shopify_handle": "nike-p-6000-women-s-anthracite-black-black-o3496002",
+  "shopify_synced_at": "2026-10-03T22:41:14Z"
 }

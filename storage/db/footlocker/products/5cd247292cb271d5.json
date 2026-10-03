@@ -10,7 +10,7 @@
   "source_price": 160.0,
   "source_compare_at_price": null,
   "current_price": 15358.0,
-  "compare_at_price": 15366.0,
+  "compare_at_price": 15420.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -163,7 +163,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/F1309004_01",
       "option_values": [
         {
@@ -359,7 +359,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/F1309004_01",
       "option_values": [
         {
@@ -650,7 +650,11 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-22T06:24:33Z",
+  "last_verified_at": "2026-10-03T23:01:53Z",
   "created_at": "2026-09-18T20:48:23Z",
-  "updated_at": "2026-09-22T06:24:33Z"
+  "updated_at": "2026-10-03T23:01:53Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851008753830",
+  "shopify_handle": "nike-vomero-17-men-s-black-white-anthracite-f1309004",
+  "shopify_synced_at": "2026-10-03T22:45:09Z"
 }

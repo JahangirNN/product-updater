@@ -10,7 +10,7 @@
   "source_price": 129.99,
   "source_compare_at_price": 180.0,
   "current_price": 12478.0,
-  "compare_at_price": 17287.0,
+  "compare_at_price": 17347.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -106,7 +106,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8154606_01",
       "option_values": [
         {
@@ -134,7 +134,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8154606_01",
       "option_values": [
         {
@@ -246,7 +246,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8154606_01",
       "option_values": [
         {
@@ -581,8 +581,11 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-22T06:26:22Z",
+  "last_verified_at": "2026-10-03T23:14:35Z",
   "created_at": "2026-09-18T20:48:01Z",
-  "updated_at": "2026-09-22T06:26:22Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-03T23:14:35Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851014946982",
+  "shopify_handle": "nike-vomero-plus-women-s-pearl-pink-midnight-navy-white-v8154606",
+  "shopify_synced_at": "2026-10-03T22:56:45Z"
 }

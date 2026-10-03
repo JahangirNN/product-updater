@@ -10,7 +10,7 @@
   "source_price": 120.0,
   "source_compare_at_price": null,
   "current_price": 11519.0,
-  "compare_at_price": 11524.0,
+  "compare_at_price": 11565.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -135,7 +135,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KH5701_01",
       "option_values": [
         {
@@ -219,7 +219,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KH5701_01",
       "option_values": [
         {
@@ -247,7 +247,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KH5701_01",
       "option_values": [
         {
@@ -514,8 +514,11 @@
   "groups": [
     "adidas Handball Spezial"
   ],
-  "last_verified_at": "2026-09-22T06:24:48Z",
+  "last_verified_at": "2026-10-03T23:04:01Z",
   "created_at": "2026-09-20T10:34:57Z",
-  "updated_at": "2026-09-22T06:24:48Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-03T23:04:01Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851009441958",
+  "shopify_handle": "adidas-handball-spezial-loafer-men-s-brown-brown-brown-kh5701",
+  "shopify_synced_at": "2026-10-03T22:45:57Z"
 }

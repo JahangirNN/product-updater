@@ -10,7 +10,7 @@
   "source_price": 144.0,
   "source_compare_at_price": 180.0,
   "current_price": 13822.0,
-  "compare_at_price": 17287.0,
+  "compare_at_price": 17347.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -50,7 +50,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8150404_01",
       "option_values": [
         {
@@ -134,7 +134,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8150404_01",
       "option_values": [
         {
@@ -411,8 +411,11 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-22T06:25:43Z",
+  "last_verified_at": "2026-10-03T23:11:46Z",
   "created_at": "2026-09-18T20:48:16Z",
-  "updated_at": "2026-09-22T06:25:43Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-03T23:11:46Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851012751526",
+  "shopify_handle": "nike-vomero-plus-men-s-orange-black-blue-v8150404",
+  "shopify_synced_at": "2026-10-03T22:50:27Z"
 }

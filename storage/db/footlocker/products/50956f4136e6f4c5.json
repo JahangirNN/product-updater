@@ -10,7 +10,7 @@
   "source_price": 150.0,
   "source_compare_at_price": null,
   "current_price": 14398.0,
-  "compare_at_price": 14406.0,
+  "compare_at_price": 14456.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -163,7 +163,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/A789020_a1",
       "option_values": [
         {
@@ -480,8 +480,11 @@
   "groups": [
     "ASICS Shoes"
   ],
-  "last_verified_at": "2026-09-22T06:24:21Z",
+  "last_verified_at": "2026-10-03T23:00:52Z",
   "created_at": "2026-09-20T10:34:57Z",
-  "updated_at": "2026-09-22T06:24:21Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-03T23:00:52Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851008360614",
+  "shopify_handle": "asics-gel-nyc-men-s-black-grey-silver-a789020",
+  "shopify_synced_at": "2026-10-03T22:44:27Z"
 }

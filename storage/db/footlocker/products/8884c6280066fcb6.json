@@ -10,7 +10,7 @@
   "source_price": 170.0,
   "source_compare_at_price": null,
   "current_price": 16318.0,
-  "compare_at_price": 16326.0,
+  "compare_at_price": 16383.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -46,13 +46,13 @@
       "id": null,
       "sku": "V1358001-7.5",
       "title": "US 7.5 / UK 6.5 - Silver/Grey/Black",
-      "price": "12239.00",
+      "price": "16308.00",
       "compare_at_price": null,
-      "source_price": 127.5,
+      "source_price": 170.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V1358001_01",
       "option_values": [
         {
@@ -68,7 +68,7 @@
           "name": "Silver/Grey/Black"
         }
       ],
-      "price_current": 12239.0
+      "price_current": 16308.0
     },
     {
       "id": null,
@@ -326,13 +326,13 @@
       "id": null,
       "sku": "V1358001-12.5",
       "title": "US 12.5 / UK 11.5 - Silver/Grey/Black",
-      "price": "12239.00",
+      "price": "16308.00",
       "compare_at_price": null,
-      "source_price": 127.5,
+      "source_price": 170.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V1358001_01",
       "option_values": [
         {
@@ -348,7 +348,7 @@
           "name": "Silver/Grey/Black"
         }
       ],
-      "price_current": 12239.0
+      "price_current": 16308.0
     },
     {
       "id": null,
@@ -410,13 +410,13 @@
       "id": null,
       "sku": "V1358001-15",
       "title": "US 15 / UK 14 - Silver/Grey/Black",
-      "price": "12239.00",
+      "price": "16308.00",
       "compare_at_price": null,
-      "source_price": 127.5,
+      "source_price": 170.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V1358001_01",
       "option_values": [
         {
@@ -432,7 +432,7 @@
           "name": "Silver/Grey/Black"
         }
       ],
-      "price_current": 12239.0
+      "price_current": 16308.0
     }
   ],
   "product_options": [
@@ -549,8 +549,11 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-22T06:25:10Z",
+  "last_verified_at": "2026-10-03T23:07:12Z",
   "created_at": "2026-09-18T20:48:11Z",
-  "updated_at": "2026-09-22T06:25:10Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-03T23:07:12Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851010457766",
+  "shopify_handle": "nike-vomero-5-men-s-silver-grey-black-v1358001",
+  "shopify_synced_at": "2026-10-03T22:47:42Z"
 }

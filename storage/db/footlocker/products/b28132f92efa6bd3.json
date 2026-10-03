@@ -10,7 +10,7 @@
   "source_price": 140.0,
   "source_compare_at_price": null,
   "current_price": 13439.0,
-  "compare_at_price": 13445.0,
+  "compare_at_price": 13492.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -247,7 +247,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/3A542105_01",
       "option_values": [
         {
@@ -378,7 +378,11 @@
   "groups": [
     "ASICS Shoes"
   ],
-  "last_verified_at": "2026-09-22T06:25:47Z",
+  "last_verified_at": "2026-10-03T23:11:56Z",
   "created_at": "2026-09-20T10:38:23Z",
-  "updated_at": "2026-09-22T06:25:47Z"
+  "updated_at": "2026-10-03T23:11:56Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851012980902",
+  "shopify_handle": "asics-gel-nyc-2055-women-s-white-green-3a542105",
+  "shopify_synced_at": "2026-10-03T22:51:13Z"
 }

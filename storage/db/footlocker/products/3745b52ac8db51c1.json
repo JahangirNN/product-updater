@@ -10,7 +10,7 @@
   "source_price": 84.99,
   "source_compare_at_price": 170.0,
   "current_price": 8158.0,
-  "compare_at_price": 16326.0,
+  "compare_at_price": 16383.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -164,7 +164,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/M2404645_01",
       "option_values": [
         {
@@ -192,7 +192,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/M2404645_01",
       "option_values": [
         {
@@ -515,8 +515,11 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-22T06:24:06Z",
+  "last_verified_at": "2026-10-03T22:57:29Z",
   "created_at": "2026-09-18T20:48:08Z",
-  "updated_at": "2026-09-22T06:24:06Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-03T22:57:29Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851007574182",
+  "shopify_handle": "nike-zoom-vomero-5-na9-women-s-summit-white-hyper-pink-m2404645",
+  "shopify_synced_at": "2026-10-03T22:43:00Z"
 }

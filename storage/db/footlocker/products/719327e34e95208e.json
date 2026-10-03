@@ -10,7 +10,7 @@
   "source_price": 160.0,
   "source_compare_at_price": null,
   "current_price": 15358.0,
-  "compare_at_price": 15366.0,
+  "compare_at_price": 15420.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -164,7 +164,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/F9149101_01",
       "option_values": [
         {
@@ -651,7 +651,11 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-22T06:24:49Z",
+  "last_verified_at": "2026-10-03T23:04:12Z",
   "created_at": "2026-09-18T20:48:10Z",
-  "updated_at": "2026-09-22T06:24:49Z"
+  "updated_at": "2026-10-03T23:04:12Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851009474726",
+  "shopify_handle": "nike-vomero-5-men-s-black-white-platinum-tint-f9149101",
+  "shopify_synced_at": "2026-10-03T22:45:59Z"
 }

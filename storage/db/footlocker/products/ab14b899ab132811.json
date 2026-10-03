@@ -10,7 +10,7 @@
   "source_price": 130.0,
   "source_compare_at_price": null,
   "current_price": 12479.0,
-  "compare_at_price": 12485.0,
+  "compare_at_price": 12528.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -249,7 +249,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KK2786_01",
       "option_values": [
         {
@@ -516,7 +516,11 @@
   "groups": [
     "adidas Handball Spezial"
   ],
-  "last_verified_at": "2026-09-22T06:25:40Z",
+  "last_verified_at": "2026-10-03T23:11:35Z",
   "created_at": "2026-09-20T10:34:57Z",
-  "updated_at": "2026-09-22T06:25:40Z"
+  "updated_at": "2026-10-03T23:11:35Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851012620454",
+  "shopify_handle": "adidas-originals-handball-spezial-loafers-women-s-gum-footwear-white-core-black-kk2786",
+  "shopify_synced_at": "2026-10-03T22:50:15Z"
 }

@@ -10,7 +10,7 @@
   "source_price": 155.0,
   "source_compare_at_price": null,
   "current_price": 14878.0,
-  "compare_at_price": 14886.0,
+  "compare_at_price": 14938.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -359,7 +359,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/O9915100_01",
       "option_values": [
         {
@@ -443,7 +443,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/O9915100_01",
       "option_values": [
         {
@@ -582,8 +582,11 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-22T06:25:05Z",
+  "last_verified_at": "2026-10-03T23:06:16Z",
   "created_at": "2026-09-18T20:48:27Z",
-  "updated_at": "2026-09-22T06:25:05Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-03T23:06:16Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851010228390",
+  "shopify_handle": "nike-vomero-18-ess-women-s-summit-white-white-chalk-o9915100",
+  "shopify_synced_at": "2026-10-03T22:47:15Z"
 }

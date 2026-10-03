@@ -10,7 +10,7 @@
   "source_price": 150.0,
   "source_compare_at_price": null,
   "current_price": 14398.0,
-  "compare_at_price": 14406.0,
+  "compare_at_price": 14456.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -135,7 +135,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/1B974002_01",
       "option_values": [
         {
@@ -163,7 +163,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/1B974002_01",
       "option_values": [
         {
@@ -191,7 +191,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/1B974002_01",
       "option_values": [
         {
@@ -514,8 +514,11 @@
   "groups": [
     "ASICS Shoes"
   ],
-  "last_verified_at": "2026-09-22T06:26:39Z",
+  "last_verified_at": "2026-10-03T23:15:28Z",
   "created_at": "2026-09-20T10:38:23Z",
-  "updated_at": "2026-09-22T06:26:39Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-03T23:15:28Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851015831718",
+  "shopify_handle": "asics-novablast-5-men-s-black-black-1b974002",
+  "shopify_synced_at": "2026-10-03T22:58:02Z"
 }

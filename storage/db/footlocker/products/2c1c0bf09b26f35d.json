@@ -10,7 +10,7 @@
   "source_price": 165.0,
   "source_compare_at_price": null,
   "current_price": 15838.0,
-  "compare_at_price": 15846.0,
+  "compare_at_price": 15901.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -334,7 +334,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/O8250800_01",
       "option_values": [
         {
@@ -585,7 +585,11 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-22T06:23:59Z",
+  "last_verified_at": "2026-10-03T22:55:57Z",
   "created_at": "2026-09-18T20:48:20Z",
-  "updated_at": "2026-09-22T06:23:59Z"
+  "updated_at": "2026-10-03T22:55:57Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851007180966",
+  "shopify_handle": "nike-vomero-18-women-s-lt-redwood-barely-green-brt-crimson-o8250800",
+  "shopify_synced_at": "2026-10-03T22:42:39Z"
 }

@@ -10,7 +10,7 @@
   "source_price": 120.0,
   "source_compare_at_price": null,
   "current_price": 11519.0,
-  "compare_at_price": 11524.0,
+  "compare_at_price": 11565.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -311,7 +311,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/HQ9435_01",
       "option_values": [
         {
@@ -454,8 +454,11 @@
   "groups": [
     "adidas Handball Spezial"
   ],
-  "last_verified_at": "2026-09-22T06:25:37Z",
+  "last_verified_at": "2026-10-03T23:10:12Z",
   "created_at": "2026-09-20T10:34:57Z",
-  "updated_at": "2026-09-22T06:25:37Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-03T23:10:12Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851012456614",
+  "shopify_handle": "adidas-handball-spezial-jamaica-men-s-white-green-hq9435",
+  "shopify_synced_at": "2026-10-03T22:49:57Z"
 }

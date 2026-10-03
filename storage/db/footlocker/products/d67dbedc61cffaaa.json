@@ -10,7 +10,7 @@
   "source_price": 170.0,
   "source_compare_at_price": null,
   "current_price": 16318.0,
-  "compare_at_price": 16326.0,
+  "compare_at_price": 16383.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -79,7 +79,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/7723001_01",
       "option_values": [
         {
@@ -582,8 +582,11 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-22T06:26:12Z",
+  "last_verified_at": "2026-10-03T23:13:43Z",
   "created_at": "2026-09-18T20:48:02Z",
-  "updated_at": "2026-09-22T06:26:12Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-03T23:13:43Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851014357158",
+  "shopify_handle": "nike-zoom-vomero-5-women-s-grey-gold-7723001",
+  "shopify_synced_at": "2026-10-03T22:54:53Z"
 }

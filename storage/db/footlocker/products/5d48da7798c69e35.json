@@ -10,7 +10,7 @@
   "source_price": 110.0,
   "source_compare_at_price": null,
   "current_price": 10559.0,
-  "compare_at_price": 10564.0,
+  "compare_at_price": 10601.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -275,7 +275,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/3B265700_01",
       "option_values": [
         {
@@ -378,7 +378,11 @@
   "groups": [
     "ASICS Shoes"
   ],
-  "last_verified_at": "2026-09-22T06:24:34Z",
+  "last_verified_at": "2026-10-03T23:01:55Z",
   "created_at": "2026-09-20T10:34:57Z",
-  "updated_at": "2026-09-22T06:24:34Z"
+  "updated_at": "2026-10-03T23:01:55Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851008819366",
+  "shopify_handle": "asics-gel-1130-women-s-pink-black-3b265700",
+  "shopify_synced_at": "2026-10-03T22:45:16Z"
 }

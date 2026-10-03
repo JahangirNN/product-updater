@@ -10,7 +10,7 @@
   "source_price": 77.49,
   "source_compare_at_price": 155.0,
   "current_price": 7436.0,
-  "compare_at_price": 14886.0,
+  "compare_at_price": 14850.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.957344,
@@ -582,8 +582,11 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-22T06:26:34Z",
+  "last_verified_at": "2026-10-03T23:15:12Z",
   "created_at": "2026-09-18T20:48:07Z",
-  "updated_at": "2026-09-22T06:26:34Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-03T23:15:12Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851015504038",
+  "shopify_handle": "nike-vomero-18-women-s-6804604",
+  "shopify_synced_at": "2026-10-03T22:57:38Z"
 }

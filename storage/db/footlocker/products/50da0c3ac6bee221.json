@@ -10,7 +10,7 @@
   "source_price": 170.0,
   "source_compare_at_price": null,
   "current_price": 16318.0,
-  "compare_at_price": 16326.0,
+  "compare_at_price": 16383.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -164,7 +164,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/D0884025_01",
       "option_values": [
         {
@@ -220,7 +220,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/D0884025_01",
       "option_values": [
         {
@@ -583,8 +583,11 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-09-22T06:24:22Z",
+  "last_verified_at": "2026-10-03T23:00:52Z",
   "created_at": "2026-09-18T20:48:02Z",
-  "updated_at": "2026-09-22T06:24:22Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-03T23:00:52Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851008426150",
+  "shopify_handle": "nike-zoom-vomero-5-women-s-charcoal-photon-dust-d0884025",
+  "shopify_synced_at": "2026-10-03T22:44:35Z"
 }
