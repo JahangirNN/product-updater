@@ -9,7 +9,7 @@
   "source_sku": "ON-8772937-7",
   "source_price": 180.0,
   "source_compare_at_price": null,
-  "current_price": 17284.0,
+  "current_price": 17287.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -56,7 +56,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/d6203009-0061-449b-9d9b-6d5ed0499e40.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -83,7 +83,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/d6203009-0061-449b-9d9b-6d5ed0499e40.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -137,7 +137,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/d6203009-0061-449b-9d9b-6d5ed0499e40.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -191,7 +191,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/d6203009-0061-449b-9d9b-6d5ed0499e40.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -245,7 +245,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/d6203009-0061-449b-9d9b-6d5ed0499e40.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -299,7 +299,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/d6203009-0061-449b-9d9b-6d5ed0499e40.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -353,7 +353,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/d6203009-0061-449b-9d9b-6d5ed0499e40.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -380,7 +380,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/d6203009-0061-449b-9d9b-6d5ed0499e40.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -704,7 +704,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/b90a74fa-b34c-47fd-87d5-5df84d17d8fd.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -758,7 +758,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/b90a74fa-b34c-47fd-87d5-5df84d17d8fd.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -923,17 +923,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:31:34Z",
+  "last_verified_at": "2026-10-03T09:26:53Z",
   "created_at": "2026-09-17T14:19:11Z",
-  "updated_at": "2026-09-22T05:31:34Z",
+  "updated_at": "2026-10-03T09:26:53Z",
   "price_range_usd": {
     "min": 180.0,
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 17284.0,
-    "max": 17284.0
+    "min": 17287.0,
+    "max": 17287.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": true,
+  "price": "17287.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850877976742",
+  "shopify_handle": "on-running-the-roger-clubhouse-ace-tennis-sneaker-men",
+  "shopify_synced_at": "2026-10-03T09:36:22Z"
 }

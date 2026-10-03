@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-8653367-7",
   "source_price": 220.0,
   "source_compare_at_price": 220.0,
-  "current_price": 21111.0,
-  "compare_at_price": 21111.0,
+  "current_price": 21203.0,
+  "compare_at_price": 21203.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -399,9 +399,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:28:29Z",
+  "last_verified_at": "2026-10-03T09:31:42Z",
   "created_at": "2026-09-17T19:02:00Z",
-  "updated_at": "2026-09-22T06:28:29Z",
+  "updated_at": "2026-10-03T09:31:42Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -411,7 +411,11 @@
     "max": 220.0
   },
   "price_range_inr": {
-    "min": 21111.0,
-    "max": 21111.0
-  }
+    "min": 21203.0,
+    "max": 21203.0
+  },
+  "price": "21203.00",
+  "shopify_product_id": "gid://shopify/Product/15848586772646",
+  "shopify_handle": "acs-pro-20y-sneaker-men",
+  "shopify_synced_at": "2026-10-01T09:32:38Z"
 }

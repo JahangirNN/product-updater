@@ -9,7 +9,7 @@
   "source_sku": "SALOMON-7938104-5",
   "source_price": 220.0,
   "source_compare_at_price": null,
-  "current_price": 21107.0,
+  "current_price": 21203.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -632,19 +632,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:27:28Z",
+  "last_verified_at": "2026-10-03T08:26:34Z",
   "created_at": "2026-09-18T05:45:40Z",
-  "updated_at": "2026-09-22T05:27:28Z",
+  "updated_at": "2026-10-03T08:26:34Z",
   "price_range_usd": {
     "min": 220.0,
     "max": 220.0
   },
   "price_range_inr": {
-    "min": 21107.0,
-    "max": 21107.0
+    "min": 21203.0,
+    "max": 21203.0
   },
   "status": "ACTIVE",
   "is_active": false,
-  "price": "21107.00",
-  "shopify_sync_pending": true
+  "price": "21203.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850876960934",
+  "shopify_handle": "acs-pro-gore-tex-waterproof-sneaker-men",
+  "shopify_synced_at": "2026-10-03T09:34:55Z"
 }

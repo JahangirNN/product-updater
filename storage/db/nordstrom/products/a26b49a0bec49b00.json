@@ -9,7 +9,7 @@
   "source_sku": "SALOMON-8929407-6",
   "source_price": 200.0,
   "source_compare_at_price": null,
-  "current_price": 19188.0,
+  "current_price": 19275.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -263,7 +263,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/25e8e9a2-8f7f-49c8-8dc0-208ca3c3a0a1.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -631,19 +631,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:29:23Z",
+  "last_verified_at": "2026-10-03T09:32:07Z",
   "created_at": "2026-09-18T06:53:10Z",
-  "updated_at": "2026-09-22T06:29:23Z",
+  "updated_at": "2026-10-03T09:32:07Z",
   "price_range_usd": {
     "min": 200.0,
     "max": 200.0
   },
   "price_range_inr": {
-    "min": 19188.0,
-    "max": 19188.0
+    "min": 19275.0,
+    "max": 19275.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "shopify_sync_pending": true,
-  "price": "19188.00"
+  "shopify_sync_pending": false,
+  "price": "19275.00",
+  "shopify_product_id": "gid://shopify/Product/15850879123622",
+  "shopify_handle": "xt-4-og-sneaker-women",
+  "shopify_synced_at": "2026-10-03T09:38:05Z"
 }

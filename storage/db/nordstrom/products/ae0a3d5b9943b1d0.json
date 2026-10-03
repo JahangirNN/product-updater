@@ -9,7 +9,7 @@
   "source_sku": "ON-9040818-6",
   "source_price": 150.0,
   "source_compare_at_price": null,
-  "current_price": 14398.0,
+  "current_price": 14456.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -128,7 +128,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/7afa6529-2962-477f-9c9f-f93f3afd4343.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -263,7 +263,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/7afa6529-2962-477f-9c9f-f93f3afd4343.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -499,17 +499,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:30:22Z",
+  "last_verified_at": "2026-10-03T07:32:11Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-22T06:30:22Z",
+  "updated_at": "2026-10-03T07:32:11Z",
   "price_range_usd": {
     "min": 150.0,
     "max": 150.0
   },
   "price_range_inr": {
-    "min": 14398.0,
-    "max": 14398.0
+    "min": 14456.0,
+    "max": 14456.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": true,
+  "price": "14456.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850879385766",
+  "shopify_handle": "cloudnova-form-2-sneaker-women",
+  "shopify_synced_at": "2026-10-03T09:38:20Z"
 }

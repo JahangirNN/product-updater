@@ -7,9 +7,9 @@
   "vendor": "On",
   "product_type": "Athletic Shoes",
   "source_sku": "ON-9138660-6",
-  "source_price": 120.0,
+  "source_price": 160.0,
   "source_compare_at_price": null,
-  "current_price": 11519.0,
+  "current_price": 15420.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -195,7 +195,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/36a7a3d1-c5ca-400d-ab28-6a0c44c6e9e3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -216,10 +216,10 @@
       "id": 913866006,
       "sku": "ON-9138660-9",
       "title": "US 9 / UK 7 - Ivory / Creek",
-      "price": "15358.00",
-      "compare_at_price": null,
+      "price": "15420.00",
+      "compare_at_price": "15366.00",
       "source_price": 160.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -237,16 +237,17 @@
           "option_name": "Color",
           "name": "Ivory / Creek"
         }
-      ]
+      ],
+      "price_current": 15420.0
     },
     {
       "id": 913866007,
       "sku": "ON-9138660-8.5",
       "title": "US 8.5 / UK 6.5 - Ivory / Creek",
-      "price": "15358.00",
-      "compare_at_price": null,
+      "price": "15420.00",
+      "compare_at_price": "15366.00",
       "source_price": 160.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -264,7 +265,8 @@
           "option_name": "Color",
           "name": "Ivory / Creek"
         }
-      ]
+      ],
+      "price_current": 15420.0
     },
     {
       "id": 913866008,
@@ -297,10 +299,10 @@
       "id": 913866009,
       "sku": "ON-9138660-9.5",
       "title": "US 9.5 / UK 7.5 - Ivory / Creek",
-      "price": "15358.00",
-      "compare_at_price": null,
+      "price": "15420.00",
+      "compare_at_price": "15366.00",
       "source_price": 160.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -318,16 +320,17 @@
           "option_name": "Color",
           "name": "Ivory / Creek"
         }
-      ]
+      ],
+      "price_current": 15420.0
     },
     {
       "id": 913866010,
       "sku": "ON-9138660-10",
       "title": "US 10 / UK 8 - Ivory / Creek",
-      "price": "15358.00",
-      "compare_at_price": null,
+      "price": "15420.00",
+      "compare_at_price": "15366.00",
       "source_price": 160.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -345,16 +348,17 @@
           "option_name": "Color",
           "name": "Ivory / Creek"
         }
-      ]
+      ],
+      "price_current": 15420.0
     },
     {
       "id": 913866011,
       "sku": "ON-9138660-10.5",
       "title": "US 10.5 / UK 8.5 - Ivory / Creek",
-      "price": "15358.00",
-      "compare_at_price": null,
+      "price": "15420.00",
+      "compare_at_price": "15366.00",
       "source_price": 160.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -372,7 +376,8 @@
           "option_name": "Color",
           "name": "Ivory / Creek"
         }
-      ]
+      ],
+      "price_current": 15420.0
     },
     {
       "id": 913866012,
@@ -384,7 +389,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/36a7a3d1-c5ca-400d-ab28-6a0c44c6e9e3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -405,9 +410,9 @@
       "id": 913866013,
       "sku": "ON-9138660-SAND-6.5",
       "title": "US 6.5 / UK 4.5 - Sand / Ivory",
-      "price": "11519.00",
+      "price": "15366.00",
       "compare_at_price": "15358.00",
-      "source_price": 120.0,
+      "source_price": 160.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -426,15 +431,16 @@
           "option_name": "Color",
           "name": "Sand / Ivory"
         }
-      ]
+      ],
+      "price_current": 15366.0
     },
     {
       "id": 913866014,
       "sku": "ON-9138660-SAND-7",
       "title": "US 7 / UK 5 - Sand / Ivory",
-      "price": "11519.00",
+      "price": "15366.00",
       "compare_at_price": "15358.00",
-      "source_price": 120.0,
+      "source_price": 160.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -453,19 +459,20 @@
           "option_name": "Color",
           "name": "Sand / Ivory"
         }
-      ]
+      ],
+      "price_current": 15366.0
     },
     {
       "id": 913866015,
       "sku": "ON-9138660-SAND-6",
       "title": "US 6 / UK 4 - Sand / Ivory",
-      "price": "11519.00",
+      "price": "15366.00",
       "compare_at_price": "15358.00",
-      "source_price": 120.0,
+      "source_price": 160.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/0f00ae07-79d3-4d1b-945a-b0a800d1c119.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -480,19 +487,20 @@
           "option_name": "Color",
           "name": "Sand / Ivory"
         }
-      ]
+      ],
+      "price_current": 15366.0
     },
     {
       "id": 913866016,
       "sku": "ON-9138660-SAND-7.5",
       "title": "US 7.5 / UK 5.5 - Sand / Ivory",
-      "price": "11519.00",
+      "price": "15366.00",
       "compare_at_price": "15358.00",
-      "source_price": 120.0,
+      "source_price": 160.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/0f00ae07-79d3-4d1b-945a-b0a800d1c119.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -507,15 +515,16 @@
           "option_name": "Color",
           "name": "Sand / Ivory"
         }
-      ]
+      ],
+      "price_current": 15366.0
     },
     {
       "id": 913866017,
       "sku": "ON-9138660-SAND-8",
       "title": "US 8 / UK 6 - Sand / Ivory",
-      "price": "11519.00",
+      "price": "15366.00",
       "compare_at_price": "15358.00",
-      "source_price": 120.0,
+      "source_price": 160.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -534,15 +543,16 @@
           "option_name": "Color",
           "name": "Sand / Ivory"
         }
-      ]
+      ],
+      "price_current": 15366.0
     },
     {
       "id": 913866018,
       "sku": "ON-9138660-SAND-9.5",
       "title": "US 9.5 / UK 7.5 - Sand / Ivory",
-      "price": "11519.00",
+      "price": "15420.00",
       "compare_at_price": "15358.00",
-      "source_price": 120.0,
+      "source_price": 160.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -561,15 +571,16 @@
           "option_name": "Color",
           "name": "Sand / Ivory"
         }
-      ]
+      ],
+      "price_current": 15420.0
     },
     {
       "id": 913866019,
       "sku": "ON-9138660-SAND-9",
       "title": "US 9 / UK 7 - Sand / Ivory",
-      "price": "11519.00",
+      "price": "15420.00",
       "compare_at_price": "15358.00",
-      "source_price": 120.0,
+      "source_price": 160.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -588,15 +599,16 @@
           "option_name": "Color",
           "name": "Sand / Ivory"
         }
-      ]
+      ],
+      "price_current": 15420.0
     },
     {
       "id": 913866020,
       "sku": "ON-9138660-SAND-10",
       "title": "US 10 / UK 8 - Sand / Ivory",
-      "price": "11519.00",
+      "price": "15420.00",
       "compare_at_price": "15358.00",
-      "source_price": 120.0,
+      "source_price": 160.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -615,15 +627,16 @@
           "option_name": "Color",
           "name": "Sand / Ivory"
         }
-      ]
+      ],
+      "price_current": 15420.0
     },
     {
       "id": 913866021,
       "sku": "ON-9138660-SAND-8.5",
       "title": "US 8.5 / UK 6.5 - Sand / Ivory",
-      "price": "11519.00",
+      "price": "15420.00",
       "compare_at_price": "15358.00",
-      "source_price": 120.0,
+      "source_price": 160.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -642,15 +655,16 @@
           "option_name": "Color",
           "name": "Sand / Ivory"
         }
-      ]
+      ],
+      "price_current": 15420.0
     },
     {
       "id": 913866022,
       "sku": "ON-9138660-SAND-10.5",
       "title": "US 10.5 / UK 8.5 - Sand / Ivory",
-      "price": "11519.00",
+      "price": "15420.00",
       "compare_at_price": "15358.00",
-      "source_price": 120.0,
+      "source_price": 160.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -669,19 +683,20 @@
           "option_name": "Color",
           "name": "Sand / Ivory"
         }
-      ]
+      ],
+      "price_current": 15420.0
     },
     {
       "id": 913866023,
       "sku": "ON-9138660-SAND-5.5",
       "title": "US 5.5 / UK 3.5 - Sand / Ivory",
-      "price": "11519.00",
+      "price": "15366.00",
       "compare_at_price": "15358.00",
-      "source_price": 120.0,
+      "source_price": 160.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/0f00ae07-79d3-4d1b-945a-b0a800d1c119.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -696,15 +711,16 @@
           "option_name": "Color",
           "name": "Sand / Ivory"
         }
-      ]
+      ],
+      "price_current": 15366.0
     },
     {
       "id": 913866024,
       "sku": "ON-9138660-SAND-11",
       "title": "US 11 / UK 9 - Sand / Ivory",
-      "price": "11519.00",
+      "price": "15366.00",
       "compare_at_price": "15358.00",
-      "source_price": 120.0,
+      "source_price": 160.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -723,15 +739,16 @@
           "option_name": "Color",
           "name": "Sand / Ivory"
         }
-      ]
+      ],
+      "price_current": 15366.0
     },
     {
       "id": 913866025,
       "sku": "ON-9138660-SAND-5",
       "title": "US 5 / UK 3 - Sand / Ivory",
-      "price": "11519.00",
+      "price": "15366.00",
       "compare_at_price": "15358.00",
-      "source_price": 120.0,
+      "source_price": 160.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -750,7 +767,8 @@
           "option_name": "Color",
           "name": "Sand / Ivory"
         }
-      ]
+      ],
+      "price_current": 15366.0
     },
     {
       "id": 913866026,
@@ -843,7 +861,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/40bad270-5733-4dbf-bb70-05dabd727631.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -870,7 +888,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/40bad270-5733-4dbf-bb70-05dabd727631.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -918,13 +936,13 @@
       "id": 913866032,
       "sku": "ON-9138660-HEAT-8.5",
       "title": "US 8.5 / UK 6.5 - Heather / Ivory",
-      "price": "15358.00",
-      "compare_at_price": null,
+      "price": "15420.00",
+      "compare_at_price": "15366.00",
       "source_price": 160.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/40bad270-5733-4dbf-bb70-05dabd727631.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -939,19 +957,20 @@
           "option_name": "Color",
           "name": "Heather / Ivory"
         }
-      ]
+      ],
+      "price_current": 15420.0
     },
     {
       "id": 913866033,
       "sku": "ON-9138660-HEAT-10",
       "title": "US 10 / UK 8 - Heather / Ivory",
-      "price": "15358.00",
-      "compare_at_price": null,
+      "price": "15420.00",
+      "compare_at_price": "15366.00",
       "source_price": 160.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/40bad270-5733-4dbf-bb70-05dabd727631.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -966,7 +985,8 @@
           "option_name": "Color",
           "name": "Heather / Ivory"
         }
-      ]
+      ],
+      "price_current": 15420.0
     },
     {
       "id": 913866034,
@@ -978,7 +998,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/40bad270-5733-4dbf-bb70-05dabd727631.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -999,13 +1019,13 @@
       "id": 913866035,
       "sku": "ON-9138660-HEAT-9.5",
       "title": "US 9.5 / UK 7.5 - Heather / Ivory",
-      "price": "15358.00",
-      "compare_at_price": null,
+      "price": "15420.00",
+      "compare_at_price": "15366.00",
       "source_price": 160.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/40bad270-5733-4dbf-bb70-05dabd727631.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1020,7 +1040,8 @@
           "option_name": "Color",
           "name": "Heather / Ivory"
         }
-      ]
+      ],
+      "price_current": 15420.0
     },
     {
       "id": 913866036,
@@ -1032,7 +1053,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/40bad270-5733-4dbf-bb70-05dabd727631.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1053,13 +1074,13 @@
       "id": 913866037,
       "sku": "ON-9138660-HEAT-9",
       "title": "US 9 / UK 7 - Heather / Ivory",
-      "price": "15358.00",
-      "compare_at_price": null,
+      "price": "15420.00",
+      "compare_at_price": "15366.00",
       "source_price": 160.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/40bad270-5733-4dbf-bb70-05dabd727631.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1074,19 +1095,20 @@
           "option_name": "Color",
           "name": "Heather / Ivory"
         }
-      ]
+      ],
+      "price_current": 15420.0
     },
     {
       "id": 913866038,
       "sku": "ON-9138660-HEAT-10.5",
       "title": "US 10.5 / UK 8.5 - Heather / Ivory",
-      "price": "15358.00",
-      "compare_at_price": null,
+      "price": "15420.00",
+      "compare_at_price": "15366.00",
       "source_price": 160.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/40bad270-5733-4dbf-bb70-05dabd727631.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1101,7 +1123,8 @@
           "option_name": "Color",
           "name": "Heather / Ivory"
         }
-      ]
+      ],
+      "price_current": 15420.0
     }
   ],
   "product_options": [
@@ -1219,17 +1242,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:31:42Z",
+  "last_verified_at": "2026-10-03T09:27:24Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-22T05:31:42Z",
+  "updated_at": "2026-10-03T09:27:24Z",
   "price_range_usd": {
-    "min": 120.0,
+    "min": 160.0,
     "max": 160.0
   },
   "price_range_inr": {
-    "min": 11519.0,
-    "max": 15358.0
+    "min": 15420.0,
+    "max": 15420.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": true,
+  "price": "15420.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850878140582",
+  "shopify_handle": "on-running-cloudsurfer-2-running-shoe-women",
+  "shopify_synced_at": "2026-10-03T09:36:37Z"
 }

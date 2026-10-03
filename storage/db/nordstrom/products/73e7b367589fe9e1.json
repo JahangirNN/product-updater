@@ -7,9 +7,9 @@
   "vendor": "NORDSTROM",
   "product_type": "Athletic Shoes",
   "source_sku": "HOKA-8428286-7",
-  "source_price": 124.0,
+  "source_price": 155.0,
   "source_compare_at_price": null,
-  "current_price": 11909.0,
+  "current_price": 14939.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -638,7 +638,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/e45168a1-a97d-491e-aa5f-001a822a08ef.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1097,7 +1097,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/95862297-8c18-4001-969f-6eeeaf3fcb95.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1178,7 +1178,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/a9bb2561-fb06-47d7-94ce-4b8e45f8bca9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1394,7 +1394,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a9bb2561-fb06-47d7-94ce-4b8e45f8bca9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1469,9 +1469,9 @@
       "id": 842828652,
       "sku": "NORDSTROM-8428286-STAR-11",
       "title": "US 11 / UK 9 - Stardust / Sea Glass",
-      "price": "11903.00",
+      "price": "9561.00",
       "compare_at_price": "14878.00",
-      "source_price": 124.0,
+      "source_price": 99.2,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1490,15 +1490,16 @@
           "option_name": "Color",
           "name": "Stardust / Sea Glass"
         }
-      ]
+      ],
+      "price_current": 9561.0
     },
     {
       "id": 842828653,
       "sku": "NORDSTROM-8428286-STAR-6.5",
       "title": "US 6.5 / UK 4.5 - Stardust / Sea Glass",
-      "price": "11903.00",
+      "price": "9561.00",
       "compare_at_price": "14878.00",
-      "source_price": 124.0,
+      "source_price": 99.2,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1517,15 +1518,16 @@
           "option_name": "Color",
           "name": "Stardust / Sea Glass"
         }
-      ]
+      ],
+      "price_current": 9561.0
     },
     {
       "id": 842828654,
       "sku": "NORDSTROM-8428286-STAR-10.5",
       "title": "US 10.5 / UK 8.5 - Stardust / Sea Glass",
-      "price": "11903.00",
+      "price": "9561.00",
       "compare_at_price": "14878.00",
-      "source_price": 124.0,
+      "source_price": 99.2,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1544,15 +1546,16 @@
           "option_name": "Color",
           "name": "Stardust / Sea Glass"
         }
-      ]
+      ],
+      "price_current": 9561.0
     },
     {
       "id": 842828655,
       "sku": "NORDSTROM-8428286-STAR-8",
       "title": "US 8 / UK 6 - Stardust / Sea Glass",
-      "price": "11903.00",
+      "price": "9561.00",
       "compare_at_price": "14878.00",
-      "source_price": 124.0,
+      "source_price": 99.2,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1571,15 +1574,16 @@
           "option_name": "Color",
           "name": "Stardust / Sea Glass"
         }
-      ]
+      ],
+      "price_current": 9561.0
     },
     {
       "id": 842828656,
       "sku": "NORDSTROM-8428286-STAR-6",
       "title": "US 6 / UK 4 - Stardust / Sea Glass",
-      "price": "11903.00",
+      "price": "9561.00",
       "compare_at_price": "14878.00",
-      "source_price": 124.0,
+      "source_price": 99.2,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1598,19 +1602,20 @@
           "option_name": "Color",
           "name": "Stardust / Sea Glass"
         }
-      ]
+      ],
+      "price_current": 9561.0
     },
     {
       "id": 842828657,
       "sku": "NORDSTROM-8428286-STAR-5.5",
       "title": "US 5.5 / UK 3.5 - Stardust / Sea Glass",
-      "price": "11903.00",
+      "price": "9561.00",
       "compare_at_price": "14878.00",
-      "source_price": 124.0,
+      "source_price": 99.2,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/5e2affc0-b51f-41cd-9670-85476529ceb1.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1625,15 +1630,16 @@
           "option_name": "Color",
           "name": "Stardust / Sea Glass"
         }
-      ]
+      ],
+      "price_current": 9561.0
     },
     {
       "id": 842828658,
       "sku": "NORDSTROM-8428286-STAR-5",
       "title": "US 5 / UK 3 - Stardust / Sea Glass",
-      "price": "11903.00",
+      "price": "9561.00",
       "compare_at_price": "14878.00",
-      "source_price": 124.0,
+      "source_price": 99.2,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1652,15 +1658,16 @@
           "option_name": "Color",
           "name": "Stardust / Sea Glass"
         }
-      ]
+      ],
+      "price_current": 9561.0
     },
     {
       "id": 842828659,
       "sku": "NORDSTROM-8428286-STAR-10",
       "title": "US 10 / UK 8 - Stardust / Sea Glass",
-      "price": "11903.00",
+      "price": "9561.00",
       "compare_at_price": "14878.00",
-      "source_price": 124.0,
+      "source_price": 99.2,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1679,15 +1686,16 @@
           "option_name": "Color",
           "name": "Stardust / Sea Glass"
         }
-      ]
+      ],
+      "price_current": 9561.0
     },
     {
       "id": 842828660,
       "sku": "NORDSTROM-8428286-STAR-9.5",
       "title": "US 9.5 / UK 7.5 - Stardust / Sea Glass",
-      "price": "11903.00",
+      "price": "9561.00",
       "compare_at_price": "14878.00",
-      "source_price": 124.0,
+      "source_price": 99.2,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1706,15 +1714,16 @@
           "option_name": "Color",
           "name": "Stardust / Sea Glass"
         }
-      ]
+      ],
+      "price_current": 9561.0
     },
     {
       "id": 842828661,
       "sku": "NORDSTROM-8428286-STAR-7",
       "title": "US 7 / UK 5 - Stardust / Sea Glass",
-      "price": "11903.00",
+      "price": "9561.00",
       "compare_at_price": "14878.00",
-      "source_price": 124.0,
+      "source_price": 99.2,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1733,15 +1742,16 @@
           "option_name": "Color",
           "name": "Stardust / Sea Glass"
         }
-      ]
+      ],
+      "price_current": 9561.0
     },
     {
       "id": 842828662,
       "sku": "NORDSTROM-8428286-STAR-7.5",
       "title": "US 7.5 / UK 5.5 - Stardust / Sea Glass",
-      "price": "11903.00",
+      "price": "9561.00",
       "compare_at_price": "14878.00",
-      "source_price": 124.0,
+      "source_price": 99.2,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1760,15 +1770,16 @@
           "option_name": "Color",
           "name": "Stardust / Sea Glass"
         }
-      ]
+      ],
+      "price_current": 9561.0
     },
     {
       "id": 842828663,
       "sku": "NORDSTROM-8428286-STAR-8.5",
       "title": "US 8.5 / UK 6.5 - Stardust / Sea Glass",
-      "price": "11903.00",
+      "price": "9561.00",
       "compare_at_price": "14878.00",
-      "source_price": 124.0,
+      "source_price": 99.2,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1787,19 +1798,20 @@
           "option_name": "Color",
           "name": "Stardust / Sea Glass"
         }
-      ]
+      ],
+      "price_current": 9561.0
     },
     {
       "id": 842828664,
       "sku": "NORDSTROM-8428286-STAR-9",
       "title": "US 9 / UK 7 - Stardust / Sea Glass",
-      "price": "11903.00",
+      "price": "9561.00",
       "compare_at_price": "14878.00",
-      "source_price": 124.0,
+      "source_price": 99.2,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/5e2affc0-b51f-41cd-9670-85476529ceb1.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1814,7 +1826,8 @@
           "option_name": "Color",
           "name": "Stardust / Sea Glass"
         }
-      ]
+      ],
+      "price_current": 9561.0
     }
   ],
   "product_options": [
@@ -1940,19 +1953,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:31:54Z",
+  "last_verified_at": "2026-10-03T09:28:18Z",
   "created_at": "2026-09-17T15:00:58Z",
-  "updated_at": "2026-09-22T05:31:54Z",
+  "updated_at": "2026-10-03T09:28:18Z",
   "price_range_usd": {
-    "min": 124.0,
+    "min": 99.2,
     "max": 155.0
   },
   "price_range_inr": {
-    "min": 11909.0,
-    "max": 14886.0
+    "min": 9561.0,
+    "max": 14939.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": true,
-  "price": "11909.00"
+  "price": "14939.00",
+  "shopify_product_id": "gid://shopify/Product/15848581496998",
+  "shopify_handle": "transport-2-water-repellent-hiking-sneaker-women",
+  "shopify_synced_at": "2026-10-01T09:22:08Z"
 }

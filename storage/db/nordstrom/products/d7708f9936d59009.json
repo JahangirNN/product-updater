@@ -7,14 +7,14 @@
   "vendor": "HOKA",
   "product_type": "Athletic Shoes",
   "source_sku": "HOKA-7262293-4",
-  "source_price": 110.0,
+  "source_price": 77.0,
   "source_compare_at_price": 110.0,
-  "current_price": 10564.0,
-  "compare_at_price": 10564.0,
+  "current_price": 7421.0,
+  "compare_at_price": 10602.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Textile upper and lining/rubber sole",
   "specifications": {
     "Brand": "HOKA",
@@ -41,9 +41,9 @@
       "id": 726229300,
       "sku": "HOKA-7262293-4",
       "title": "US 4 / UK 3.5 - GALAXY / GROUT",
-      "price": "10562.00",
+      "price": "7395.00",
       "compare_at_price": null,
-      "source_price": 110.0,
+      "source_price": 77.0,
       "source_compare_at_price": 110.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -62,15 +62,16 @@
           "option_name": "Color",
           "name": "GALAXY / GROUT"
         }
-      ]
+      ],
+      "price_current": 7395.0
     },
     {
       "id": 726229301,
       "sku": "HOKA-7262293-5",
       "title": "US 5 / UK 4.5 - GALAXY / GROUT",
-      "price": "10562.00",
+      "price": "7395.00",
       "compare_at_price": null,
-      "source_price": 110.0,
+      "source_price": 77.0,
       "source_compare_at_price": 110.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -89,15 +90,16 @@
           "option_name": "Color",
           "name": "GALAXY / GROUT"
         }
-      ]
+      ],
+      "price_current": 7395.0
     },
     {
       "id": 726229302,
       "sku": "HOKA-7262293-6",
       "title": "US 6 / UK 5.5 - GALAXY / GROUT",
-      "price": "10562.00",
+      "price": "7395.00",
       "compare_at_price": null,
-      "source_price": 110.0,
+      "source_price": 77.0,
       "source_compare_at_price": 110.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -116,7 +118,8 @@
           "option_name": "Color",
           "name": "GALAXY / GROUT"
         }
-      ]
+      ],
+      "price_current": 7395.0
     },
     {
       "id": 726229303,
@@ -263,7 +266,7 @@
       "source_compare_at_price": 110.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/34b0bfe4-5867-44c1-a929-88021816c3f3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -444,18 +447,21 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:33:59Z",
+  "last_verified_at": "2026-10-03T07:35:33Z",
   "created_at": "2026-09-18T05:46:22Z",
-  "updated_at": "2026-09-22T05:33:59Z",
-  "is_active": true,
-  "shopify_sync_pending": true,
+  "updated_at": "2026-10-03T07:35:33Z",
+  "is_active": false,
+  "shopify_sync_pending": false,
   "price_range_usd": {
-    "min": 110.0,
+    "min": 77.0,
     "max": 110.0
   },
   "price_range_inr": {
-    "min": 10564.0,
-    "max": 10564.0
+    "min": 7421.0,
+    "max": 10602.0
   },
-  "price": "10564.00"
+  "price": "7421.00",
+  "shopify_product_id": "gid://shopify/Product/15850880008358",
+  "shopify_handle": "restore-tc-slip-on-men",
+  "shopify_synced_at": "2026-10-03T09:39:15Z"
 }

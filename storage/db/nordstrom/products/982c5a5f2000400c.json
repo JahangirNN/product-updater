@@ -1217,9 +1217,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:27:55Z",
+  "last_verified_at": "2026-10-03T09:31:03Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-22T06:27:55Z",
+  "updated_at": "2026-10-03T09:31:03Z",
   "price_range_usd": {
     "min": 150.0,
     "max": 150.0
@@ -1230,5 +1230,8 @@
   },
   "status": "ACTIVE",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850878861478",
+  "shopify_handle": "cloudzone-sneaker-women-on-8386142-5",
+  "shopify_synced_at": "2026-10-03T09:37:36Z"
 }

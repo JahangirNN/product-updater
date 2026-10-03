@@ -9,8 +9,8 @@
   "source_sku": "HOKA-7039216-4",
   "source_price": 60.0,
   "source_compare_at_price": 60.0,
-  "current_price": 5762.0,
-  "compare_at_price": 5762.0,
+  "current_price": 5782.0,
+  "compare_at_price": 5782.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -73,7 +73,7 @@
       "source_compare_at_price": 60.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/468633ba-cc0b-4414-a266-ae85ef1727f7.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -262,7 +262,7 @@
       "source_compare_at_price": 60.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/468633ba-cc0b-4414-a266-ae85ef1727f7.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -443,18 +443,21 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:29:29Z",
+  "last_verified_at": "2026-10-03T07:31:16Z",
   "created_at": "2026-09-18T07:00:02Z",
-  "updated_at": "2026-09-22T06:29:29Z",
+  "updated_at": "2026-10-03T07:31:16Z",
   "is_active": true,
-  "shopify_sync_pending": true,
+  "shopify_sync_pending": false,
   "price_range_usd": {
     "min": 60.0,
     "max": 60.0
   },
   "price_range_inr": {
-    "min": 5762.0,
-    "max": 5762.0
+    "min": 5782.0,
+    "max": 5782.0
   },
-  "price": "5762.00"
+  "price": "5782.00",
+  "shopify_product_id": "gid://shopify/Product/15850879189158",
+  "shopify_handle": "hoka-gender-inclusive-ora-recovery-slide-3-sandal",
+  "shopify_synced_at": "2026-10-03T09:38:09Z"
 }

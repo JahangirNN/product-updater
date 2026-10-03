@@ -9,7 +9,7 @@
   "source_sku": "HOKA-8432287-7",
   "source_price": 145.0,
   "source_compare_at_price": null,
-  "current_price": 13925.0,
+  "current_price": 13974.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -201,7 +201,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/97895463-5c61-4f78-9c7a-7ab9d57ab505.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -228,7 +228,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/97895463-5c61-4f78-9c7a-7ab9d57ab505.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -3549,7 +3549,7 @@
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/a73dd277-fe55-4997-a803-705202aa9d73.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -3576,7 +3576,7 @@
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a73dd277-fe55-4997-a803-705202aa9d73.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -3927,7 +3927,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a73dd277-fe55-4997-a803-705202aa9d73.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -3954,7 +3954,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/a73dd277-fe55-4997-a803-705202aa9d73.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -4840,19 +4840,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:34:52Z",
+  "last_verified_at": "2026-10-03T09:41:15Z",
   "created_at": "2026-09-17T14:57:32Z",
-  "updated_at": "2026-09-22T05:34:52Z",
+  "updated_at": "2026-10-03T09:41:15Z",
   "price_range_usd": {
     "min": 99.99,
     "max": 145.0
   },
   "price_range_inr": {
-    "min": 9603.0,
-    "max": 13925.0
+    "min": 9636.0,
+    "max": 13974.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": true,
-  "price": "13925.00"
+  "price": "13974.00",
+  "shopify_product_id": "gid://shopify/Product/15850880729254",
+  "shopify_handle": "mach-7-running-shoe-men",
+  "shopify_synced_at": "2026-10-03T09:40:17Z"
 }

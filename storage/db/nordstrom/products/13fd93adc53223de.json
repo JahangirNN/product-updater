@@ -7,9 +7,9 @@
   "vendor": "NORDSTROM",
   "product_type": "Athletic Shoes",
   "source_sku": "ON-9138703-7",
-  "source_price": 113.9,
+  "source_price": 170.0,
   "source_compare_at_price": null,
-  "current_price": 10933.0,
+  "current_price": 15980.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -82,10 +82,10 @@
       "id": 913870301,
       "sku": "NORDSTROM-9138703-7",
       "title": "US 7 / UK 6.5 - White / Midnight",
-      "price": "16324.00",
-      "compare_at_price": null,
+      "price": "15980.00",
+      "compare_at_price": "16298.00",
       "source_price": 170.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -103,7 +103,8 @@
           "option_name": "Color",
           "name": "White / Midnight"
         }
-      ]
+      ],
+      "price_current": 15980.0
     },
     {
       "id": 913870302,
@@ -136,10 +137,10 @@
       "id": 913870303,
       "sku": "NORDSTROM-9138703-7.5",
       "title": "US 7.5 / UK 7 - White / Midnight",
-      "price": "16324.00",
-      "compare_at_price": null,
+      "price": "15980.00",
+      "compare_at_price": "16298.00",
       "source_price": 170.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -157,7 +158,8 @@
           "option_name": "Color",
           "name": "White / Midnight"
         }
-      ]
+      ],
+      "price_current": 15980.0
     },
     {
       "id": 913870304,
@@ -406,9 +408,9 @@
       "id": 913870313,
       "sku": "NORDSTROM-9138703-IVOR-7.5",
       "title": "US 7.5 / UK 7 - Ivory / Maroon",
-      "price": "10937.00",
+      "price": "15980.00",
       "compare_at_price": "16324.00",
-      "source_price": 113.9,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -427,15 +429,16 @@
           "option_name": "Color",
           "name": "Ivory / Maroon"
         }
-      ]
+      ],
+      "price_current": 15980.0
     },
     {
       "id": 913870314,
       "sku": "NORDSTROM-9138703-IVOR-8.5",
       "title": "US 8.5 / UK 8 - Ivory / Maroon",
-      "price": "10937.00",
+      "price": "16298.00",
       "compare_at_price": "16324.00",
-      "source_price": 113.9,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -454,15 +457,16 @@
           "option_name": "Color",
           "name": "Ivory / Maroon"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 913870315,
       "sku": "NORDSTROM-9138703-IVOR-9",
       "title": "US 9 / UK 8.5 - Ivory / Maroon",
-      "price": "10937.00",
+      "price": "16298.00",
       "compare_at_price": "16324.00",
-      "source_price": 113.9,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -481,15 +485,16 @@
           "option_name": "Color",
           "name": "Ivory / Maroon"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 913870316,
       "sku": "NORDSTROM-9138703-IVOR-8",
       "title": "US 8 / UK 7.5 - Ivory / Maroon",
-      "price": "10937.00",
+      "price": "16298.00",
       "compare_at_price": "16324.00",
-      "source_price": 113.9,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -508,15 +513,16 @@
           "option_name": "Color",
           "name": "Ivory / Maroon"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 913870317,
       "sku": "NORDSTROM-9138703-IVOR-10.5",
       "title": "US 10.5 / UK 10 - Ivory / Maroon",
-      "price": "10937.00",
+      "price": "16298.00",
       "compare_at_price": "16324.00",
-      "source_price": 113.9,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -535,15 +541,16 @@
           "option_name": "Color",
           "name": "Ivory / Maroon"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 913870318,
       "sku": "NORDSTROM-9138703-IVOR-11",
       "title": "US 11 / UK 10.5 - Ivory / Maroon",
-      "price": "10937.00",
+      "price": "16298.00",
       "compare_at_price": "16324.00",
-      "source_price": 113.9,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -562,15 +569,16 @@
           "option_name": "Color",
           "name": "Ivory / Maroon"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 913870319,
       "sku": "NORDSTROM-9138703-IVOR-14",
       "title": "US 14 / UK 13.5 - Ivory / Maroon",
-      "price": "10937.00",
+      "price": "16298.00",
       "compare_at_price": "16324.00",
-      "source_price": 113.9,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -589,15 +597,16 @@
           "option_name": "Color",
           "name": "Ivory / Maroon"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 913870320,
       "sku": "NORDSTROM-9138703-IVOR-11.5",
       "title": "US 11.5 / UK 11 - Ivory / Maroon",
-      "price": "10937.00",
+      "price": "16298.00",
       "compare_at_price": "16324.00",
-      "source_price": 113.9,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -616,15 +625,16 @@
           "option_name": "Color",
           "name": "Ivory / Maroon"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 913870321,
       "sku": "NORDSTROM-9138703-IVOR-7",
       "title": "US 7 / UK 6.5 - Ivory / Maroon",
-      "price": "10937.00",
+      "price": "15980.00",
       "compare_at_price": "16324.00",
-      "source_price": 113.9,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -643,15 +653,16 @@
           "option_name": "Color",
           "name": "Ivory / Maroon"
         }
-      ]
+      ],
+      "price_current": 15980.0
     },
     {
       "id": 913870322,
       "sku": "NORDSTROM-9138703-IVOR-10",
       "title": "US 10 / UK 9.5 - Ivory / Maroon",
-      "price": "10937.00",
+      "price": "16298.00",
       "compare_at_price": "16324.00",
-      "source_price": 113.9,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -670,15 +681,16 @@
           "option_name": "Color",
           "name": "Ivory / Maroon"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 913870323,
       "sku": "NORDSTROM-9138703-IVOR-12",
       "title": "US 12 / UK 11.5 - Ivory / Maroon",
-      "price": "10937.00",
+      "price": "16298.00",
       "compare_at_price": "16324.00",
-      "source_price": 113.9,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -697,15 +709,16 @@
           "option_name": "Color",
           "name": "Ivory / Maroon"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 913870324,
       "sku": "NORDSTROM-9138703-IVOR-13",
       "title": "US 13 / UK 12.5 - Ivory / Maroon",
-      "price": "10937.00",
+      "price": "16298.00",
       "compare_at_price": "16324.00",
-      "source_price": 113.9,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -724,15 +737,16 @@
           "option_name": "Color",
           "name": "Ivory / Maroon"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 913870325,
       "sku": "NORDSTROM-9138703-IVOR-9.5",
       "title": "US 9.5 / UK 9 - Ivory / Maroon",
-      "price": "10937.00",
+      "price": "16298.00",
       "compare_at_price": "16324.00",
-      "source_price": 113.9,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -751,16 +765,17 @@
           "option_name": "Color",
           "name": "Ivory / Maroon"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 913870326,
       "sku": "NORDSTROM-9138703-BLAC-7.5",
       "title": "US 7.5 / UK 7 - Black / White",
-      "price": "16324.00",
-      "compare_at_price": null,
+      "price": "15980.00",
+      "compare_at_price": "16298.00",
       "source_price": 170.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -778,7 +793,8 @@
           "option_name": "Color",
           "name": "Black / White"
         }
-      ]
+      ],
+      "price_current": 15980.0
     },
     {
       "id": 913870327,
@@ -892,10 +908,10 @@
       "id": 913870331,
       "sku": "NORDSTROM-9138703-BLAC-7",
       "title": "US 7 / UK 6.5 - Black / White",
-      "price": "16324.00",
-      "compare_at_price": null,
+      "price": "15980.00",
+      "compare_at_price": "16298.00",
       "source_price": 170.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -913,7 +929,8 @@
           "option_name": "Color",
           "name": "Black / White"
         }
-      ]
+      ],
+      "price_current": 15980.0
     },
     {
       "id": 913870332,
@@ -1255,19 +1272,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:24:52Z",
+  "last_verified_at": "2026-10-03T08:23:45Z",
   "created_at": "2026-09-18T06:45:03Z",
-  "updated_at": "2026-09-22T05:24:52Z",
+  "updated_at": "2026-10-03T08:23:45Z",
   "price_range_usd": {
-    "min": 113.9,
+    "min": 170.0,
     "max": 170.0
   },
   "price_range_inr": {
-    "min": 10933.0,
-    "max": 16318.0
+    "min": 15980.0,
+    "max": 15980.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "10933.00",
-  "shopify_sync_pending": true
+  "price": "15980.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850876174502",
+  "shopify_handle": "the-roger-wildcard-sneaker-men",
+  "shopify_synced_at": "2026-10-03T09:33:49Z"
 }

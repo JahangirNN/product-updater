@@ -9,8 +9,8 @@
   "source_sku": "HOKA-8735076-5",
   "source_price": 180.0,
   "source_compare_at_price": 180.0,
-  "current_price": 17284.0,
-  "compare_at_price": 17284.0,
+  "current_price": 17265.0,
+  "compare_at_price": 17265.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -344,7 +344,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/5794483f-39e0-4efa-94fd-785d7482a14f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -510,7 +510,21 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:27:10Z",
+  "last_verified_at": "2026-10-03T09:30:04Z",
   "created_at": "2026-09-18T06:50:31Z",
-  "updated_at": "2026-09-22T06:27:10Z"
+  "updated_at": "2026-10-03T09:30:04Z",
+  "price_range_usd": {
+    "min": 180.0,
+    "max": 180.0
+  },
+  "price_range_inr": {
+    "min": 17265.0,
+    "max": 17265.0
+  },
+  "price": "17265.00",
+  "is_active": true,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850878697638",
+  "shopify_handle": "stinson-8-running-shoe",
+  "shopify_synced_at": "2026-10-03T09:37:17Z"
 }

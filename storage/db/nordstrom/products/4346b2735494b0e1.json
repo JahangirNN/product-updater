@@ -9,7 +9,7 @@
   "source_sku": "HOKA-8139967-7",
   "source_price": 185.0,
   "source_compare_at_price": null,
-  "current_price": 17764.0,
+  "current_price": 17830.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -499,17 +499,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:27:23Z",
+  "last_verified_at": "2026-10-03T08:26:29Z",
   "created_at": "2026-09-18T06:56:51Z",
-  "updated_at": "2026-09-22T05:27:23Z",
+  "updated_at": "2026-10-03T08:26:29Z",
   "price_range_usd": {
     "min": 185.0,
     "max": 185.0
   },
   "price_range_inr": {
-    "min": 17764.0,
-    "max": 17764.0
+    "min": 17830.0,
+    "max": 17830.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": true,
+  "price": "17830.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850876928166",
+  "shopify_handle": "hoka-mafate-three2-sneaker-men",
+  "shopify_synced_at": "2026-10-03T09:34:53Z"
 }

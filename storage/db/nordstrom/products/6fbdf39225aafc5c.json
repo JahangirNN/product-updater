@@ -9,7 +9,7 @@
   "source_sku": "ON-9040821-5",
   "source_price": 170.0,
   "source_compare_at_price": null,
-  "current_price": 16318.0,
+  "current_price": 16320.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -47,7 +47,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/7e02ff72-78c6-4173-a238-625399d5a9c3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -74,7 +74,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/7e02ff72-78c6-4173-a238-625399d5a9c3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -155,7 +155,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/7e02ff72-78c6-4173-a238-625399d5a9c3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -317,7 +317,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/7e02ff72-78c6-4173-a238-625399d5a9c3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -499,17 +499,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:31:38Z",
+  "last_verified_at": "2026-10-03T09:27:13Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-22T05:31:38Z",
+  "updated_at": "2026-10-03T09:27:13Z",
   "price_range_usd": {
     "min": 170.0,
     "max": 170.0
   },
   "price_range_inr": {
-    "min": 16318.0,
-    "max": 16318.0
+    "min": 16320.0,
+    "max": 16320.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": true,
+  "price": "16320.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850878075046",
+  "shopify_handle": "on-running-cloudswift-4-running-shoe-women",
+  "shopify_synced_at": "2026-10-03T09:36:30Z"
 }

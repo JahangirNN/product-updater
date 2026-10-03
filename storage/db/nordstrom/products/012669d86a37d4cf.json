@@ -9,7 +9,7 @@
   "source_sku": "HOKA-8431048-7",
   "source_price": 145.0,
   "source_compare_at_price": null,
-  "current_price": 13918.0,
+  "current_price": 13910.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -537,7 +537,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/53fa1938-9463-467b-a496-4d215ef15bbc.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1077,7 +1077,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/496ab832-9a24-4742-ab0a-e1832b411c52.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1347,7 +1347,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/1012fe9b-ce11-4985-814d-a41b7dfd97ac.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1948,19 +1948,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:24:12Z",
+  "last_verified_at": "2026-10-03T08:23:14Z",
   "created_at": "2026-09-17T14:57:41Z",
-  "updated_at": "2026-09-22T06:24:12Z",
+  "updated_at": "2026-10-03T08:23:14Z",
   "price_range_usd": {
     "min": 145.0,
     "max": 145.0
   },
   "price_range_inr": {
-    "min": 13918.0,
-    "max": 13918.0
+    "min": 13910.0,
+    "max": 13910.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": true,
-  "price": "13918.00"
+  "price": "13910.00",
+  "shopify_product_id": "gid://shopify/Product/15848580645030",
+  "shopify_handle": "mach-remastered-sneaker-men",
+  "shopify_synced_at": "2026-10-01T09:21:05Z"
 }

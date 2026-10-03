@@ -9,8 +9,8 @@
   "source_sku": "ON-9040816-6.5",
   "source_price": 170.0,
   "source_compare_at_price": 170.0,
-  "current_price": 16313.0,
-  "compare_at_price": 16313.0,
+  "current_price": 15980.0,
+  "compare_at_price": 15980.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -41,7 +41,7 @@
       "id": 904081600,
       "sku": "ON-9040816-6.5",
       "title": "US 6.5 / UK 4.5 - White White",
-      "price": "10937.00",
+      "price": "15980.00",
       "compare_at_price": null,
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
@@ -62,13 +62,14 @@
           "option_name": "Color",
           "name": "White White"
         }
-      ]
+      ],
+      "price_current": 15980.0
     },
     {
       "id": 904081601,
       "sku": "ON-9040816-7",
       "title": "US 7 / UK 5 - White White",
-      "price": "10937.00",
+      "price": "15980.00",
       "compare_at_price": null,
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
@@ -89,13 +90,14 @@
           "option_name": "Color",
           "name": "White White"
         }
-      ]
+      ],
+      "price_current": 15980.0
     },
     {
       "id": 904081602,
       "sku": "ON-9040816-7.5",
       "title": "US 7.5 / UK 5.5 - White White",
-      "price": "10937.00",
+      "price": "15980.00",
       "compare_at_price": null,
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
@@ -116,13 +118,14 @@
           "option_name": "Color",
           "name": "White White"
         }
-      ]
+      ],
+      "price_current": 15980.0
     },
     {
       "id": 904081603,
       "sku": "ON-9040816-8",
       "title": "US 8 / UK 6 - White White",
-      "price": "10937.00",
+      "price": "15980.00",
       "compare_at_price": null,
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
@@ -143,13 +146,14 @@
           "option_name": "Color",
           "name": "White White"
         }
-      ]
+      ],
+      "price_current": 15980.0
     },
     {
       "id": 904081604,
       "sku": "ON-9040816-8.5",
       "title": "US 8.5 / UK 6.5 - White White",
-      "price": "10937.00",
+      "price": "15980.00",
       "compare_at_price": null,
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
@@ -170,13 +174,14 @@
           "option_name": "Color",
           "name": "White White"
         }
-      ]
+      ],
+      "price_current": 15980.0
     },
     {
       "id": 904081605,
       "sku": "ON-9040816-9",
       "title": "US 9 / UK 7 - White White",
-      "price": "10937.00",
+      "price": "15980.00",
       "compare_at_price": null,
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
@@ -197,13 +202,14 @@
           "option_name": "Color",
           "name": "White White"
         }
-      ]
+      ],
+      "price_current": 15980.0
     },
     {
       "id": 904081606,
       "sku": "ON-9040816-9.5",
       "title": "US 9.5 / UK 7.5 - White White",
-      "price": "10937.00",
+      "price": "15980.00",
       "compare_at_price": null,
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
@@ -224,13 +230,14 @@
           "option_name": "Color",
           "name": "White White"
         }
-      ]
+      ],
+      "price_current": 15980.0
     },
     {
       "id": 904081607,
       "sku": "ON-9040816-10",
       "title": "US 10 / UK 8 - White White",
-      "price": "10937.00",
+      "price": "15980.00",
       "compare_at_price": null,
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
@@ -251,13 +258,14 @@
           "option_name": "Color",
           "name": "White White"
         }
-      ]
+      ],
+      "price_current": 15980.0
     },
     {
       "id": 904081608,
       "sku": "ON-9040816-10.5",
       "title": "US 10.5 / UK 8.5 - White White",
-      "price": "10937.00",
+      "price": "15980.00",
       "compare_at_price": null,
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
@@ -278,13 +286,14 @@
           "option_name": "Color",
           "name": "White White"
         }
-      ]
+      ],
+      "price_current": 15980.0
     },
     {
       "id": 904081609,
       "sku": "ON-9040816-11",
       "title": "US 11 / UK 9 - White White",
-      "price": "10937.00",
+      "price": "15980.00",
       "compare_at_price": null,
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
@@ -305,7 +314,8 @@
           "option_name": "Color",
           "name": "White White"
         }
-      ]
+      ],
+      "price_current": 15980.0
     }
   ],
   "product_options": [
@@ -408,11 +418,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:30:42Z",
+  "last_verified_at": "2026-10-03T09:34:26Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-22T06:30:42Z",
+  "updated_at": "2026-10-03T09:34:26Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": true,
+  "price_range_usd": {
+    "min": 170.0,
+    "max": 170.0
+  },
+  "price_range_inr": {
+    "min": 15980.0,
+    "max": 15980.0
+  },
+  "price": "15980.00",
+  "shopify_product_id": "gid://shopify/Product/15848582021286",
+  "shopify_handle": "on-running-cloudmonster-void-sneaker-women",
+  "shopify_synced_at": "2026-10-01T09:22:40Z"
 }

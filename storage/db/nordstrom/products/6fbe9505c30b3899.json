@@ -7,9 +7,9 @@
   "vendor": "On",
   "product_type": "Athletic Shoes",
   "source_sku": "ON-7672890-7",
-  "source_price": 118.99,
+  "source_price": 170.0,
   "source_compare_at_price": null,
-  "current_price": 11426.0,
+  "current_price": 16326.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -98,7 +98,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1138cf5c-5b2d-4cef-b2d6-536856b2b36e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -179,7 +179,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1138cf5c-5b2d-4cef-b2d6-536856b2b36e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -233,7 +233,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1138cf5c-5b2d-4cef-b2d6-536856b2b36e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -314,7 +314,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1138cf5c-5b2d-4cef-b2d6-536856b2b36e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -341,7 +341,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1138cf5c-5b2d-4cef-b2d6-536856b2b36e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -368,7 +368,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1138cf5c-5b2d-4cef-b2d6-536856b2b36e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -395,7 +395,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1138cf5c-5b2d-4cef-b2d6-536856b2b36e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -422,7 +422,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1138cf5c-5b2d-4cef-b2d6-536856b2b36e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -470,13 +470,13 @@
       "id": 767289014,
       "sku": "ON-7672890-WHIT-7",
       "title": "US 7 / UK 6.5 - White / Sage",
-      "price": "11522.00",
+      "price": "16326.00",
       "compare_at_price": "15363.00",
-      "source_price": 119.99,
+      "source_price": 170.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9c065035-2d21-4cc5-aaf4-952202780e18.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -491,19 +491,20 @@
           "option_name": "Color",
           "name": "White / Sage"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 767289015,
       "sku": "ON-7672890-WHIT-11.5",
       "title": "US 11.5 / UK 11 - White / Sage",
-      "price": "11522.00",
+      "price": "16326.00",
       "compare_at_price": "15363.00",
-      "source_price": 119.99,
+      "source_price": 170.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9c065035-2d21-4cc5-aaf4-952202780e18.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -518,19 +519,20 @@
           "option_name": "Color",
           "name": "White / Sage"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 767289016,
       "sku": "ON-7672890-WHIT-8",
       "title": "US 8 / UK 7.5 - White / Sage",
-      "price": "11522.00",
+      "price": "16326.00",
       "compare_at_price": "15363.00",
-      "source_price": 119.99,
+      "source_price": 170.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9c065035-2d21-4cc5-aaf4-952202780e18.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -545,19 +547,20 @@
           "option_name": "Color",
           "name": "White / Sage"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 767289017,
       "sku": "ON-7672890-WHIT-10",
       "title": "US 10 / UK 9.5 - White / Sage",
-      "price": "11522.00",
+      "price": "16326.00",
       "compare_at_price": "15363.00",
-      "source_price": 119.99,
+      "source_price": 170.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9c065035-2d21-4cc5-aaf4-952202780e18.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -572,19 +575,20 @@
           "option_name": "Color",
           "name": "White / Sage"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 767289018,
       "sku": "ON-7672890-WHIT-8.5",
       "title": "US 8.5 / UK 8 - White / Sage",
-      "price": "11522.00",
+      "price": "16326.00",
       "compare_at_price": "15363.00",
-      "source_price": 119.99,
+      "source_price": 170.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9c065035-2d21-4cc5-aaf4-952202780e18.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -599,19 +603,20 @@
           "option_name": "Color",
           "name": "White / Sage"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 767289019,
       "sku": "ON-7672890-WHIT-7.5",
       "title": "US 7.5 / UK 7 - White / Sage",
-      "price": "11522.00",
+      "price": "16326.00",
       "compare_at_price": "15363.00",
-      "source_price": 119.99,
+      "source_price": 170.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9c065035-2d21-4cc5-aaf4-952202780e18.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -626,19 +631,20 @@
           "option_name": "Color",
           "name": "White / Sage"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 767289020,
       "sku": "ON-7672890-WHIT-12",
       "title": "US 12 / UK 11.5 - White / Sage",
-      "price": "11522.00",
+      "price": "16326.00",
       "compare_at_price": "15363.00",
-      "source_price": 119.99,
+      "source_price": 170.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9c065035-2d21-4cc5-aaf4-952202780e18.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -653,19 +659,20 @@
           "option_name": "Color",
           "name": "White / Sage"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 767289021,
       "sku": "ON-7672890-WHIT-14",
       "title": "US 14 / UK 13.5 - White / Sage",
-      "price": "11522.00",
+      "price": "16326.00",
       "compare_at_price": "15363.00",
-      "source_price": 119.99,
+      "source_price": 170.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9c065035-2d21-4cc5-aaf4-952202780e18.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -680,19 +687,20 @@
           "option_name": "Color",
           "name": "White / Sage"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 767289022,
       "sku": "ON-7672890-WHIT-11",
       "title": "US 11 / UK 10.5 - White / Sage",
-      "price": "11522.00",
+      "price": "16326.00",
       "compare_at_price": "15363.00",
-      "source_price": 119.99,
+      "source_price": 170.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9c065035-2d21-4cc5-aaf4-952202780e18.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -707,19 +715,20 @@
           "option_name": "Color",
           "name": "White / Sage"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 767289023,
       "sku": "ON-7672890-WHIT-9",
       "title": "US 9 / UK 8.5 - White / Sage",
-      "price": "11522.00",
+      "price": "16326.00",
       "compare_at_price": "15363.00",
-      "source_price": 119.99,
+      "source_price": 170.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9c065035-2d21-4cc5-aaf4-952202780e18.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -734,19 +743,20 @@
           "option_name": "Color",
           "name": "White / Sage"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 767289024,
       "sku": "ON-7672890-WHIT-9.5",
       "title": "US 9.5 / UK 9 - White / Sage",
-      "price": "11522.00",
+      "price": "16326.00",
       "compare_at_price": "15363.00",
-      "source_price": 119.99,
+      "source_price": 170.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9c065035-2d21-4cc5-aaf4-952202780e18.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -761,19 +771,20 @@
           "option_name": "Color",
           "name": "White / Sage"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 767289025,
       "sku": "ON-7672890-WHIT-13",
       "title": "US 13 / UK 12.5 - White / Sage",
-      "price": "11522.00",
+      "price": "16326.00",
       "compare_at_price": "15363.00",
-      "source_price": 119.99,
+      "source_price": 170.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9c065035-2d21-4cc5-aaf4-952202780e18.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -788,19 +799,20 @@
           "option_name": "Color",
           "name": "White / Sage"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 767289026,
       "sku": "ON-7672890-WHIT-10.5",
       "title": "US 10.5 / UK 10 - White / Sage",
-      "price": "11522.00",
+      "price": "16326.00",
       "compare_at_price": "15363.00",
-      "source_price": 119.99,
+      "source_price": 170.0,
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9c065035-2d21-4cc5-aaf4-952202780e18.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -815,7 +827,8 @@
           "option_name": "Color",
           "name": "White / Sage"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 767289027,
@@ -1583,7 +1596,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/94c145bb-06c1-4e99-bf8c-6605e62b51e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1610,7 +1623,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/94c145bb-06c1-4e99-bf8c-6605e62b51e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1637,7 +1650,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/94c145bb-06c1-4e99-bf8c-6605e62b51e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1664,7 +1677,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/94c145bb-06c1-4e99-bf8c-6605e62b51e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1691,7 +1704,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/94c145bb-06c1-4e99-bf8c-6605e62b51e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1718,7 +1731,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/94c145bb-06c1-4e99-bf8c-6605e62b51e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1745,7 +1758,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/94c145bb-06c1-4e99-bf8c-6605e62b51e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1772,7 +1785,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/94c145bb-06c1-4e99-bf8c-6605e62b51e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1799,7 +1812,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/94c145bb-06c1-4e99-bf8c-6605e62b51e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1826,7 +1839,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/94c145bb-06c1-4e99-bf8c-6605e62b51e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1853,7 +1866,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/94c145bb-06c1-4e99-bf8c-6605e62b51e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1880,7 +1893,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/94c145bb-06c1-4e99-bf8c-6605e62b51e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1907,7 +1920,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/94c145bb-06c1-4e99-bf8c-6605e62b51e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1934,7 +1947,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f45adf18-f988-49d2-82b0-951b33c9efa8.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1988,7 +2001,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f45adf18-f988-49d2-82b0-951b33c9efa8.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2015,7 +2028,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f45adf18-f988-49d2-82b0-951b33c9efa8.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2069,7 +2082,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f45adf18-f988-49d2-82b0-951b33c9efa8.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2096,7 +2109,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f45adf18-f988-49d2-82b0-951b33c9efa8.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2123,7 +2136,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f45adf18-f988-49d2-82b0-951b33c9efa8.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2150,7 +2163,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f45adf18-f988-49d2-82b0-951b33c9efa8.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2177,7 +2190,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f45adf18-f988-49d2-82b0-951b33c9efa8.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2231,7 +2244,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f45adf18-f988-49d2-82b0-951b33c9efa8.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2285,7 +2298,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f45adf18-f988-49d2-82b0-951b33c9efa8.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2312,7 +2325,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1b82cfb9-dbeb-4258-9dc6-8c6bcd156988.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2339,7 +2352,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1b82cfb9-dbeb-4258-9dc6-8c6bcd156988.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2366,7 +2379,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1b82cfb9-dbeb-4258-9dc6-8c6bcd156988.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2393,7 +2406,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1b82cfb9-dbeb-4258-9dc6-8c6bcd156988.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2420,7 +2433,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1b82cfb9-dbeb-4258-9dc6-8c6bcd156988.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2447,7 +2460,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1b82cfb9-dbeb-4258-9dc6-8c6bcd156988.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2474,7 +2487,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1b82cfb9-dbeb-4258-9dc6-8c6bcd156988.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2501,7 +2514,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1b82cfb9-dbeb-4258-9dc6-8c6bcd156988.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2528,7 +2541,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1b82cfb9-dbeb-4258-9dc6-8c6bcd156988.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2555,7 +2568,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1b82cfb9-dbeb-4258-9dc6-8c6bcd156988.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2582,7 +2595,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1b82cfb9-dbeb-4258-9dc6-8c6bcd156988.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2609,7 +2622,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1b82cfb9-dbeb-4258-9dc6-8c6bcd156988.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2636,7 +2649,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1b82cfb9-dbeb-4258-9dc6-8c6bcd156988.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2663,7 +2676,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1b82cfb9-dbeb-4258-9dc6-8c6bcd156988.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2684,13 +2697,13 @@
       "id": 767289096,
       "sku": "ON-7672890-JUNG-11.5",
       "title": "US 11.5 / UK 11 - Jungle / Shadow",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/ada5a727-c503-4ec6-a49d-9045eb80f567.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2705,19 +2718,20 @@
           "option_name": "Color",
           "name": "Jungle / Shadow"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 767289097,
       "sku": "ON-7672890-JUNG-7.5",
       "title": "US 7.5 / UK 7 - Jungle / Shadow",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/ada5a727-c503-4ec6-a49d-9045eb80f567.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2732,19 +2746,20 @@
           "option_name": "Color",
           "name": "Jungle / Shadow"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 767289098,
       "sku": "ON-7672890-JUNG-12",
       "title": "US 12 / UK 11.5 - Jungle / Shadow",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/ada5a727-c503-4ec6-a49d-9045eb80f567.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2759,15 +2774,16 @@
           "option_name": "Color",
           "name": "Jungle / Shadow"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 767289099,
       "sku": "ON-7672890-JUNG-13",
       "title": "US 13 / UK 12.5 - Jungle / Shadow",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2786,19 +2802,20 @@
           "option_name": "Color",
           "name": "Jungle / Shadow"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 7672890100,
       "sku": "ON-7672890-JUNG-10.5",
       "title": "US 10.5 / UK 10 - Jungle / Shadow",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/ada5a727-c503-4ec6-a49d-9045eb80f567.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2813,19 +2830,20 @@
           "option_name": "Color",
           "name": "Jungle / Shadow"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 7672890101,
       "sku": "ON-7672890-JUNG-14",
       "title": "US 14 / UK 13.5 - Jungle / Shadow",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/ada5a727-c503-4ec6-a49d-9045eb80f567.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2840,19 +2858,20 @@
           "option_name": "Color",
           "name": "Jungle / Shadow"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 7672890102,
       "sku": "ON-7672890-JUNG-8",
       "title": "US 8 / UK 7.5 - Jungle / Shadow",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/ada5a727-c503-4ec6-a49d-9045eb80f567.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2867,19 +2886,20 @@
           "option_name": "Color",
           "name": "Jungle / Shadow"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 7672890103,
       "sku": "ON-7672890-JUNG-7",
       "title": "US 7 / UK 6.5 - Jungle / Shadow",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/ada5a727-c503-4ec6-a49d-9045eb80f567.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2894,19 +2914,20 @@
           "option_name": "Color",
           "name": "Jungle / Shadow"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 7672890104,
       "sku": "ON-7672890-JUNG-9",
       "title": "US 9 / UK 8.5 - Jungle / Shadow",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/ada5a727-c503-4ec6-a49d-9045eb80f567.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2921,19 +2942,20 @@
           "option_name": "Color",
           "name": "Jungle / Shadow"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 7672890105,
       "sku": "ON-7672890-JUNG-10",
       "title": "US 10 / UK 9.5 - Jungle / Shadow",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/ada5a727-c503-4ec6-a49d-9045eb80f567.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2948,19 +2970,20 @@
           "option_name": "Color",
           "name": "Jungle / Shadow"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 7672890106,
       "sku": "ON-7672890-JUNG-8.5",
       "title": "US 8.5 / UK 8 - Jungle / Shadow",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/ada5a727-c503-4ec6-a49d-9045eb80f567.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2975,19 +2998,20 @@
           "option_name": "Color",
           "name": "Jungle / Shadow"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 7672890107,
       "sku": "ON-7672890-JUNG-9.5",
       "title": "US 9.5 / UK 9 - Jungle / Shadow",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/ada5a727-c503-4ec6-a49d-9045eb80f567.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -3002,19 +3026,20 @@
           "option_name": "Color",
           "name": "Jungle / Shadow"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 7672890108,
       "sku": "ON-7672890-JUNG-11",
       "title": "US 11 / UK 10.5 - Jungle / Shadow",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/ada5a727-c503-4ec6-a49d-9045eb80f567.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -3029,7 +3054,8 @@
           "option_name": "Color",
           "name": "Jungle / Shadow"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 7672890109,
@@ -3550,17 +3576,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:31:40Z",
+  "last_verified_at": "2026-10-03T09:27:15Z",
   "created_at": "2026-09-17T14:19:11Z",
-  "updated_at": "2026-09-22T05:31:40Z",
+  "updated_at": "2026-10-03T09:27:15Z",
   "price_range_usd": {
-    "min": 118.99,
+    "min": 170.0,
     "max": 170.0
   },
   "price_range_inr": {
-    "min": 11426.0,
-    "max": 16324.0
+    "min": 16326.0,
+    "max": 16326.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": true,
+  "price": "16326.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850878107814",
+  "shopify_handle": "cloudnova-2-training-sneaker-men",
+  "shopify_synced_at": "2026-10-03T09:36:34Z"
 }

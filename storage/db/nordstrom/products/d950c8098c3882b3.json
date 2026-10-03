@@ -7,9 +7,9 @@
   "vendor": "NORDSTROM",
   "product_type": "Athletic Shoes",
   "source_sku": "HOKA-8430924-7",
-  "source_price": 93.75,
+  "source_price": 125.0,
   "source_compare_at_price": null,
-  "current_price": 8994.0,
+  "current_price": 12047.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -193,7 +193,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/6cc4c59c-9f3b-47ff-bd2d-a767cbfec72e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -274,7 +274,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/6cc4c59c-9f3b-47ff-bd2d-a767cbfec72e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -409,7 +409,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/6cc4c59c-9f3b-47ff-bd2d-a767cbfec72e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -652,7 +652,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/6cc4c59c-9f3b-47ff-bd2d-a767cbfec72e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1489,7 +1489,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/097c4a8b-b674-4a3a-aeea-b4ddc329677f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1537,9 +1537,9 @@
       "id": 843092454,
       "sku": "NORDSTROM-8430924-ALAB-13",
       "title": "US 13 / UK 12.5 - Alabaster / Alabaster",
-      "price": "8996.00",
+      "price": "12005.00",
       "compare_at_price": "11995.00",
-      "source_price": 93.75,
+      "source_price": 125.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1558,7 +1558,8 @@
           "option_name": "Color",
           "name": "Alabaster / Alabaster"
         }
-      ]
+      ],
+      "price_current": 12005.0
     },
     {
       "id": 843092455,
@@ -1618,9 +1619,9 @@
       "id": 843092457,
       "sku": "NORDSTROM-8430924-ALAB-9",
       "title": "US 9 / UK 8.5 - Alabaster / Alabaster",
-      "price": "8996.00",
+      "price": "12005.00",
       "compare_at_price": "11995.00",
-      "source_price": 93.75,
+      "source_price": 125.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1639,15 +1640,16 @@
           "option_name": "Color",
           "name": "Alabaster / Alabaster"
         }
-      ]
+      ],
+      "price_current": 12005.0
     },
     {
       "id": 843092458,
       "sku": "NORDSTROM-8430924-ALAB-7.5",
       "title": "US 7.5 / UK 7 - Alabaster / Alabaster",
-      "price": "8996.00",
+      "price": "12005.00",
       "compare_at_price": "11995.00",
-      "source_price": 93.75,
+      "source_price": 125.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1666,7 +1668,8 @@
           "option_name": "Color",
           "name": "Alabaster / Alabaster"
         }
-      ]
+      ],
+      "price_current": 12005.0
     },
     {
       "id": 843092459,
@@ -1699,9 +1702,9 @@
       "id": 843092460,
       "sku": "NORDSTROM-8430924-ALAB-10.5",
       "title": "US 10.5 / UK 10 - Alabaster / Alabaster",
-      "price": "8996.00",
+      "price": "12005.00",
       "compare_at_price": "11995.00",
-      "source_price": 93.75,
+      "source_price": 125.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1720,15 +1723,16 @@
           "option_name": "Color",
           "name": "Alabaster / Alabaster"
         }
-      ]
+      ],
+      "price_current": 12005.0
     },
     {
       "id": 843092461,
       "sku": "NORDSTROM-8430924-ALAB-10.5",
       "title": "US 10.5 / UK 10 - Alabaster / Alabaster",
-      "price": "8999.00",
+      "price": "12005.00",
       "compare_at_price": "11999.00",
-      "source_price": 93.75,
+      "source_price": 125.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1747,7 +1751,8 @@
           "option_name": "Color",
           "name": "Alabaster / Alabaster"
         }
-      ]
+      ],
+      "price_current": 12005.0
     },
     {
       "id": 843092462,
@@ -1780,9 +1785,9 @@
       "id": 843092463,
       "sku": "NORDSTROM-8430924-ALAB-14",
       "title": "US 14 / UK 13.5 - Alabaster / Alabaster",
-      "price": "8996.00",
+      "price": "12005.00",
       "compare_at_price": "11995.00",
-      "source_price": 93.75,
+      "source_price": 125.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1801,15 +1806,16 @@
           "option_name": "Color",
           "name": "Alabaster / Alabaster"
         }
-      ]
+      ],
+      "price_current": 12005.0
     },
     {
       "id": 843092464,
       "sku": "NORDSTROM-8430924-ALAB-12",
       "title": "US 12 / UK 11.5 - Alabaster / Alabaster",
-      "price": "8996.00",
+      "price": "12005.00",
       "compare_at_price": "11995.00",
-      "source_price": 93.75,
+      "source_price": 125.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1828,15 +1834,16 @@
           "option_name": "Color",
           "name": "Alabaster / Alabaster"
         }
-      ]
+      ],
+      "price_current": 12005.0
     },
     {
       "id": 843092465,
       "sku": "NORDSTROM-8430924-ALAB-9.5",
       "title": "US 9.5 / UK 9 - Alabaster / Alabaster",
-      "price": "8996.00",
+      "price": "12005.00",
       "compare_at_price": "11995.00",
-      "source_price": 93.75,
+      "source_price": 125.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1855,7 +1862,8 @@
           "option_name": "Color",
           "name": "Alabaster / Alabaster"
         }
-      ]
+      ],
+      "price_current": 12005.0
     },
     {
       "id": 843092466,
@@ -1888,9 +1896,9 @@
       "id": 843092467,
       "sku": "NORDSTROM-8430924-ALAB-7.5",
       "title": "US 7.5 / UK 7 - Alabaster / Alabaster",
-      "price": "8999.00",
+      "price": "12005.00",
       "compare_at_price": "11999.00",
-      "source_price": 93.75,
+      "source_price": 125.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1909,15 +1917,16 @@
           "option_name": "Color",
           "name": "Alabaster / Alabaster"
         }
-      ]
+      ],
+      "price_current": 12005.0
     },
     {
       "id": 843092468,
       "sku": "NORDSTROM-8430924-ALAB-9.5",
       "title": "US 9.5 / UK 9 - Alabaster / Alabaster",
-      "price": "8999.00",
+      "price": "12005.00",
       "compare_at_price": "11999.00",
-      "source_price": 93.75,
+      "source_price": 125.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1936,7 +1945,8 @@
           "option_name": "Color",
           "name": "Alabaster / Alabaster"
         }
-      ]
+      ],
+      "price_current": 12005.0
     },
     {
       "id": 843092469,
@@ -1969,9 +1979,9 @@
       "id": 843092470,
       "sku": "NORDSTROM-8430924-ALAB-13",
       "title": "US 13 / UK 12.5 - Alabaster / Alabaster",
-      "price": "8999.00",
+      "price": "12005.00",
       "compare_at_price": "11999.00",
-      "source_price": 93.75,
+      "source_price": 125.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1990,15 +2000,16 @@
           "option_name": "Color",
           "name": "Alabaster / Alabaster"
         }
-      ]
+      ],
+      "price_current": 12005.0
     },
     {
       "id": 843092471,
       "sku": "NORDSTROM-8430924-ALAB-14",
       "title": "US 14 / UK 13.5 - Alabaster / Alabaster",
-      "price": "8999.00",
+      "price": "12005.00",
       "compare_at_price": "11999.00",
-      "source_price": 93.75,
+      "source_price": 125.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2017,7 +2028,8 @@
           "option_name": "Color",
           "name": "Alabaster / Alabaster"
         }
-      ]
+      ],
+      "price_current": 12005.0
     },
     {
       "id": 843092472,
@@ -2104,9 +2116,9 @@
       "id": 843092475,
       "sku": "NORDSTROM-8430924-ALAB-9",
       "title": "US 9 / UK 8.5 - Alabaster / Alabaster",
-      "price": "8999.00",
+      "price": "12005.00",
       "compare_at_price": "11999.00",
-      "source_price": 93.75,
+      "source_price": 125.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2125,7 +2137,8 @@
           "option_name": "Color",
           "name": "Alabaster / Alabaster"
         }
-      ]
+      ],
+      "price_current": 12005.0
     },
     {
       "id": 843092476,
@@ -2158,9 +2171,9 @@
       "id": 843092477,
       "sku": "NORDSTROM-8430924-ALAB-12",
       "title": "US 12 / UK 11.5 - Alabaster / Alabaster",
-      "price": "8999.00",
+      "price": "12005.00",
       "compare_at_price": "11999.00",
-      "source_price": 93.75,
+      "source_price": 125.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2179,7 +2192,8 @@
           "option_name": "Color",
           "name": "Alabaster / Alabaster"
         }
-      ]
+      ],
+      "price_current": 12005.0
     },
     {
       "id": 843092478,
@@ -2920,7 +2934,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/3a609c04-3c24-4be3-bddf-67516a2f09d4.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2947,7 +2961,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/b5ed9c0a-cc22-4208-9c05-9f3026498234.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -3368,19 +3382,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:33:35Z",
+  "last_verified_at": "2026-10-03T07:35:39Z",
   "created_at": "2026-09-17T15:00:11Z",
-  "updated_at": "2026-09-22T06:33:35Z",
+  "updated_at": "2026-10-03T07:35:39Z",
   "price_range_usd": {
-    "min": 93.75,
+    "min": 125.0,
     "max": 125.0
   },
   "price_range_inr": {
-    "min": 8994.0,
-    "max": 11993.0
+    "min": 12047.0,
+    "max": 12047.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "shopify_sync_pending": true,
-  "price": "8994.00"
+  "shopify_sync_pending": false,
+  "price": "12047.00",
+  "shopify_product_id": "gid://shopify/Product/15850880041126",
+  "shopify_handle": "solimar-2-training-shoe-men",
+  "shopify_synced_at": "2026-10-03T09:39:20Z"
 }

@@ -9,12 +9,12 @@
   "source_sku": "ON-8772935-7",
   "source_price": 160.0,
   "source_compare_at_price": 160.0,
-  "current_price": 15366.0,
-  "compare_at_price": 15366.0,
+  "current_price": 15420.0,
+  "compare_at_price": 15420.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Textile and synthetic upper",
   "specifications": {
     "Brand": "On",
@@ -47,7 +47,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/df852b80-cbd8-4b60-be55-5d62ec706b3d.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -344,7 +344,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/df852b80-cbd8-4b60-be55-5d62ec706b3d.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -371,7 +371,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/df852b80-cbd8-4b60-be55-5d62ec706b3d.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -398,7 +398,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/df852b80-cbd8-4b60-be55-5d62ec706b3d.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -540,18 +540,21 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:31:07Z",
+  "last_verified_at": "2026-10-03T07:33:13Z",
   "created_at": "2026-09-17T14:19:11Z",
-  "updated_at": "2026-09-22T06:31:07Z",
-  "is_active": true,
-  "shopify_sync_pending": true,
+  "updated_at": "2026-10-03T07:33:13Z",
+  "is_active": false,
+  "shopify_sync_pending": false,
   "price_range_usd": {
     "min": 160.0,
     "max": 160.0
   },
   "price_range_inr": {
-    "min": 15366.0,
-    "max": 15366.0
+    "min": 15420.0,
+    "max": 15420.0
   },
-  "price": "15366.00"
+  "price": "15420.00",
+  "shopify_product_id": "gid://shopify/Product/15850879582374",
+  "shopify_handle": "on-running-cloudnova-rift-sneaker-men",
+  "shopify_synced_at": "2026-10-03T09:38:35Z"
 }

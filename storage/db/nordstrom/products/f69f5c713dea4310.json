@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-7526540-5",
   "source_price": 150.0,
   "source_compare_at_price": 150.0,
-  "current_price": 14406.0,
-  "compare_at_price": 14406.0,
+  "current_price": 14457.0,
+  "compare_at_price": 14457.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -696,18 +696,21 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T04:34:43Z",
+  "last_verified_at": "2026-10-03T09:41:00Z",
   "created_at": "2026-09-18T06:48:22Z",
-  "updated_at": "2026-09-22T04:34:43Z",
+  "updated_at": "2026-10-03T09:41:00Z",
   "is_active": true,
-  "shopify_sync_pending": true,
+  "shopify_sync_pending": false,
   "price_range_usd": {
     "min": 150.0,
     "max": 150.0
   },
   "price_range_inr": {
-    "min": 14406.0,
-    "max": 14406.0
+    "min": 14457.0,
+    "max": 14457.0
   },
-  "price": "14406.00"
+  "price": "14457.00",
+  "shopify_product_id": "gid://shopify/Product/15850880663718",
+  "shopify_handle": "xa-pro-3d-sneaker-unisex",
+  "shopify_synced_at": "2026-10-03T09:40:10Z"
 }

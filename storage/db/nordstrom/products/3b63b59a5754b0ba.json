@@ -9,7 +9,7 @@
   "source_sku": "ON-9052819-8",
   "source_price": 150.0,
   "source_compare_at_price": null,
-  "current_price": 14398.0,
+  "current_price": 14410.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -182,7 +182,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9a7e5395-71a9-4a42-add3-5020758af59e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -263,7 +263,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9a7e5395-71a9-4a42-add3-5020758af59e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -533,17 +533,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:27:08Z",
+  "last_verified_at": "2026-10-03T08:26:17Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-22T05:27:08Z",
+  "updated_at": "2026-10-03T08:26:17Z",
   "price_range_usd": {
     "min": 150.0,
     "max": 150.0
   },
   "price_range_inr": {
-    "min": 14398.0,
-    "max": 14398.0
+    "min": 14410.0,
+    "max": 14410.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": true,
+  "price": "14410.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850876829862",
+  "shopify_handle": "on-running-cloudsurfer-next-running-shoe-men",
+  "shopify_synced_at": "2026-10-03T09:34:46Z"
 }

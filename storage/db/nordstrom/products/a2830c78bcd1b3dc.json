@@ -9,12 +9,12 @@
   "source_sku": "HOKA-8435031-7",
   "source_price": 175.0,
   "source_compare_at_price": 175.0,
-  "current_price": 16804.0,
-  "compare_at_price": 16793.0,
+  "current_price": 16787.0,
+  "compare_at_price": 16787.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Textile and synthetic upper/textile lining/rubber and recycled-rubber sole",
   "specifications": {
     "Brand": "HOKA",
@@ -74,7 +74,7 @@
       "source_compare_at_price": 175.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f82016cb-0da9-41a2-a76a-6d0a30170eaf.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -371,7 +371,7 @@
       "source_compare_at_price": 175.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f82016cb-0da9-41a2-a76a-6d0a30170eaf.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -498,17 +498,21 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:33:04Z",
+  "last_verified_at": "2026-10-03T09:32:12Z",
   "created_at": "2026-09-18T05:50:30Z",
-  "updated_at": "2026-09-22T05:33:04Z",
-  "is_active": false,
-  "shopify_sync_pending": true,
+  "updated_at": "2026-10-03T09:32:12Z",
+  "is_active": true,
+  "shopify_sync_pending": false,
   "price_range_usd": {
     "min": 175.0,
     "max": 175.0
   },
   "price_range_inr": {
-    "min": 16804.0,
-    "max": 16804.0
-  }
+    "min": 16787.0,
+    "max": 16787.0
+  },
+  "price": "16787.00",
+  "shopify_product_id": "gid://shopify/Product/15850879156390",
+  "shopify_handle": "transport-gore-tex-waterproof-shoe-wide-width-available-men",
+  "shopify_synced_at": "2026-10-03T09:38:07Z"
 }

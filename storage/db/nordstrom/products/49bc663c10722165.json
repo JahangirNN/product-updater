@@ -9,7 +9,7 @@
   "source_sku": "HOKA-8428172-7",
   "source_price": 125.0,
   "source_compare_at_price": null,
-  "current_price": 12005.0,
+  "current_price": 12047.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -313,7 +313,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9021184b-ca77-49e6-81a4-f67e1efc4fb1.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -367,7 +367,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9021184b-ca77-49e6-81a4-f67e1efc4fb1.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -421,7 +421,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/9021184b-ca77-49e6-81a4-f67e1efc4fb1.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -529,7 +529,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/9021184b-ca77-49e6-81a4-f67e1efc4fb1.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -934,7 +934,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/81e6b8f4-f17c-4a87-81a4-4e5977bc6b9f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2824,7 +2824,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/94dde57d-a56a-40df-af88-f77ede7db5ff.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -3223,9 +3223,9 @@
       "id": 8428172116,
       "sku": "NORDSTROM-8428172-BLAC-9.5",
       "title": "US 9.5 / UK 7.5 - Black / White",
-      "price": "8996.00",
+      "price": "7228.00",
       "compare_at_price": "11995.00",
-      "source_price": 93.75,
+      "source_price": 75.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -3244,13 +3244,14 @@
           "option_name": "Color",
           "name": "Black / White"
         }
-      ]
+      ],
+      "price_current": 7228.0
     },
     {
       "id": 8428172117,
       "sku": "NORDSTROM-8428172-BLAC-10.5",
       "title": "US 10.5 / UK 8.5 - Black / White",
-      "price": "8996.00",
+      "price": "9036.00",
       "compare_at_price": "11995.00",
       "source_price": 93.75,
       "source_compare_at_price": 125.0,
@@ -3271,15 +3272,16 @@
           "option_name": "Color",
           "name": "Black / White"
         }
-      ]
+      ],
+      "price_current": 9036.0
     },
     {
       "id": 8428172118,
       "sku": "NORDSTROM-8428172-BLAC-9",
       "title": "US 9 / UK 7 - Black / White",
-      "price": "8996.00",
+      "price": "7228.00",
       "compare_at_price": "11995.00",
-      "source_price": 93.75,
+      "source_price": 75.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -3298,15 +3300,16 @@
           "option_name": "Color",
           "name": "Black / White"
         }
-      ]
+      ],
+      "price_current": 7228.0
     },
     {
       "id": 8428172119,
       "sku": "NORDSTROM-8428172-BLAC-7.5",
       "title": "US 7.5 / UK 5.5 - Black / White",
-      "price": "8996.00",
+      "price": "7228.00",
       "compare_at_price": "11995.00",
-      "source_price": 93.75,
+      "source_price": 75.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -3325,7 +3328,8 @@
           "option_name": "Color",
           "name": "Black / White"
         }
-      ]
+      ],
+      "price_current": 7228.0
     },
     {
       "id": 8428172120,
@@ -3412,9 +3416,9 @@
       "id": 8428172123,
       "sku": "NORDSTROM-8428172-BLAC-9",
       "title": "US 9 / UK 7 - Black / White",
-      "price": "8999.00",
+      "price": "7228.00",
       "compare_at_price": "11999.00",
-      "source_price": 93.75,
+      "source_price": 75.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -3433,7 +3437,8 @@
           "option_name": "Color",
           "name": "Black / White"
         }
-      ]
+      ],
+      "price_current": 7228.0
     },
     {
       "id": 8428172124,
@@ -3547,9 +3552,9 @@
       "id": 8428172128,
       "sku": "NORDSTROM-8428172-BLAC-9.5",
       "title": "US 9.5 / UK 7.5 - Black / White",
-      "price": "8999.00",
+      "price": "7228.00",
       "compare_at_price": "11999.00",
-      "source_price": 93.75,
+      "source_price": 75.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -3568,7 +3573,8 @@
           "option_name": "Color",
           "name": "Black / White"
         }
-      ]
+      ],
+      "price_current": 7228.0
     },
     {
       "id": 8428172129,
@@ -3682,9 +3688,9 @@
       "id": 8428172133,
       "sku": "NORDSTROM-8428172-BLAC-7.5",
       "title": "US 7.5 / UK 5.5 - Black / White",
-      "price": "8999.00",
+      "price": "7228.00",
       "compare_at_price": "11999.00",
-      "source_price": 93.75,
+      "source_price": 75.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -3703,13 +3709,14 @@
           "option_name": "Color",
           "name": "Black / White"
         }
-      ]
+      ],
+      "price_current": 7228.0
     },
     {
       "id": 8428172134,
       "sku": "NORDSTROM-8428172-BLAC-10.5",
       "title": "US 10.5 / UK 8.5 - Black / White",
-      "price": "8999.00",
+      "price": "9036.00",
       "compare_at_price": "11999.00",
       "source_price": 93.75,
       "source_compare_at_price": 125.0,
@@ -3730,7 +3737,8 @@
           "option_name": "Color",
           "name": "Black / White"
         }
-      ]
+      ],
+      "price_current": 9036.0
     },
     {
       "id": 8428172135,
@@ -3817,9 +3825,9 @@
       "id": 8428172138,
       "sku": "NORDSTROM-8428172-BLAC-6.5",
       "title": "US 6.5 / UK 4.5 - Black / White",
-      "price": "8996.00",
+      "price": "7228.00",
       "compare_at_price": "11995.00",
-      "source_price": 93.75,
+      "source_price": 75.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -3838,7 +3846,8 @@
           "option_name": "Color",
           "name": "Black / White"
         }
-      ]
+      ],
+      "price_current": 7228.0
     },
     {
       "id": 8428172139,
@@ -3871,9 +3880,9 @@
       "id": 8428172140,
       "sku": "NORDSTROM-8428172-BLAC-6.5",
       "title": "US 6.5 / UK 4.5 - Black / White",
-      "price": "8999.00",
+      "price": "7228.00",
       "compare_at_price": "11999.00",
-      "source_price": 93.75,
+      "source_price": 75.0,
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -3892,7 +3901,8 @@
           "option_name": "Color",
           "name": "Black / White"
         }
-      ]
+      ],
+      "price_current": 7228.0
     },
     {
       "id": 8428172141,
@@ -4054,19 +4064,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:28:02Z",
+  "last_verified_at": "2026-10-03T08:27:01Z",
   "created_at": "2026-09-17T15:00:19Z",
-  "updated_at": "2026-09-22T05:28:02Z",
+  "updated_at": "2026-10-03T08:27:01Z",
   "price_range_usd": {
-    "min": 93.75,
+    "min": 75.0,
     "max": 125.0
   },
   "price_range_inr": {
-    "min": 9003.0,
-    "max": 12005.0
+    "min": 7228.0,
+    "max": 12047.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": true,
-  "price": "12005.00"
+  "price": "12047.00",
+  "shopify_product_id": "gid://shopify/Product/15848581103782",
+  "shopify_handle": "solimar-2-training-shoe-women",
+  "shopify_synced_at": "2026-10-01T09:21:41Z"
 }

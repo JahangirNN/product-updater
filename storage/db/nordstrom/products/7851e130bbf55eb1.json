@@ -9,12 +9,12 @@
   "source_sku": "ON-8934146-6",
   "source_price": 110.5,
   "source_compare_at_price": null,
-  "current_price": 10607.0,
+  "current_price": 10650.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Recycled textile and synthetic upper, textile lining, rubber sole",
   "specifications": {
     "Brand": "NORDSTROM",
@@ -47,7 +47,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/30a930b8-5411-4a97-9caf-46f64db35551.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -74,7 +74,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/30a930b8-5411-4a97-9caf-46f64db35551.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -101,7 +101,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/30a930b8-5411-4a97-9caf-46f64db35551.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -128,7 +128,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/30a930b8-5411-4a97-9caf-46f64db35551.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -155,7 +155,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/30a930b8-5411-4a97-9caf-46f64db35551.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -182,7 +182,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/30a930b8-5411-4a97-9caf-46f64db35551.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -209,7 +209,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/30a930b8-5411-4a97-9caf-46f64db35551.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -236,7 +236,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/30a930b8-5411-4a97-9caf-46f64db35551.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -263,7 +263,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/30a930b8-5411-4a97-9caf-46f64db35551.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -290,7 +290,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/30a930b8-5411-4a97-9caf-46f64db35551.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -317,7 +317,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/30a930b8-5411-4a97-9caf-46f64db35551.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -344,7 +344,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/30a930b8-5411-4a97-9caf-46f64db35551.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -371,7 +371,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/30a930b8-5411-4a97-9caf-46f64db35551.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -500,17 +500,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:32:06Z",
+  "last_verified_at": "2026-10-03T09:28:49Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-22T05:32:06Z",
+  "updated_at": "2026-10-03T09:28:49Z",
   "price_range_usd": {
     "min": 110.5,
     "max": 110.5
   },
   "price_range_inr": {
-    "min": 10607.0,
-    "max": 10607.0
+    "min": 10650.0,
+    "max": 10650.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": false,
+  "price": "10650.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850878369958",
+  "shopify_handle": "the-roger-wildcard-sneaker-women",
+  "shopify_synced_at": "2026-10-03T09:36:52Z"
 }

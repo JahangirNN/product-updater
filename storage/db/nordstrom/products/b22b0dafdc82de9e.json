@@ -532,9 +532,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:31:02Z",
+  "last_verified_at": "2026-10-03T07:33:08Z",
   "created_at": "2026-09-18T06:50:02Z",
-  "updated_at": "2026-09-22T06:31:02Z",
+  "updated_at": "2026-10-03T07:33:08Z",
   "price_range_usd": {
     "min": 180.0,
     "max": 180.0
@@ -545,6 +545,9 @@
   },
   "status": "ACTIVE",
   "is_active": true,
-  "shopify_sync_pending": true,
-  "price": "17287.00"
+  "shopify_sync_pending": false,
+  "price": "17287.00",
+  "shopify_product_id": "gid://shopify/Product/15850879549606",
+  "shopify_handle": "on-running-cloud-6-waterproof",
+  "shopify_synced_at": "2026-10-03T09:38:32Z"
 }

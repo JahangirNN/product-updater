@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-8841081-7",
   "source_price": 185.0,
   "source_compare_at_price": 185.0,
-  "current_price": 17752.0,
-  "compare_at_price": 17752.0,
+  "current_price": 17759.0,
+  "compare_at_price": 17759.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -41,13 +41,13 @@
       "id": 884108100,
       "sku": "SALOMON-8841081-7",
       "title": "US 7 / UK 6 - Lunar Rock Deep Lichen Green",
-      "price": "17764.00",
+      "price": "17291.00",
       "compare_at_price": "17764.00",
-      "source_price": 185.0,
+      "source_price": 180.0,
       "source_compare_at_price": 185.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/e45b1d18-0123-4ab7-a80b-26e8ac68202f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -62,15 +62,16 @@
           "option_name": "Color",
           "name": "Lunar Rock Deep Lichen Green"
         }
-      ]
+      ],
+      "price_current": 17291.0
     },
     {
       "id": 884108101,
       "sku": "SALOMON-8841081-8",
       "title": "US 8 / UK 7 - Lunar Rock Deep Lichen Green",
-      "price": "17764.00",
+      "price": "17280.00",
       "compare_at_price": "17764.00",
-      "source_price": 185.0,
+      "source_price": 180.0,
       "source_compare_at_price": 185.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -89,7 +90,8 @@
           "option_name": "Color",
           "name": "Lunar Rock Deep Lichen Green"
         }
-      ]
+      ],
+      "price_current": 17280.0
     },
     {
       "id": 884108102,
@@ -270,19 +272,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:27:19Z",
+  "last_verified_at": "2026-10-03T09:30:19Z",
   "created_at": "2026-09-17T18:55:16Z",
-  "updated_at": "2026-09-22T06:27:19Z",
+  "updated_at": "2026-10-03T09:30:19Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
   "shopify_sync_pending": true,
   "price_range_usd": {
-    "min": 185.0,
+    "min": 180.0,
     "max": 185.0
   },
   "price_range_inr": {
-    "min": 17752.0,
-    "max": 17752.0
-  }
+    "min": 17280.0,
+    "max": 17759.0
+  },
+  "price": "17759.00",
+  "shopify_product_id": "gid://shopify/Product/15848586215590",
+  "shopify_handle": "salomon-xt-6-sneaker-men",
+  "shopify_synced_at": "2026-10-01T09:30:33Z"
 }

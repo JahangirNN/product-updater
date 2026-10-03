@@ -9,8 +9,8 @@
   "source_sku": "HOKA-9052810-7",
   "source_price": 180.0,
   "source_compare_at_price": 180.0,
-  "current_price": 17284.0,
-  "compare_at_price": 17284.0,
+  "current_price": 17348.0,
+  "compare_at_price": 17348.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -47,7 +47,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/9fbcbc43-a058-4fd3-9525-19f14ff10346.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -501,7 +501,21 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:29:52Z",
+  "last_verified_at": "2026-10-03T07:31:40Z",
   "created_at": "2026-09-18T06:52:52Z",
-  "updated_at": "2026-09-22T06:29:52Z"
+  "updated_at": "2026-10-03T07:31:40Z",
+  "price_range_usd": {
+    "min": 180.0,
+    "max": 180.0
+  },
+  "price_range_inr": {
+    "min": 17348.0,
+    "max": 17348.0
+  },
+  "price": "17348.00",
+  "is_active": true,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850879320230",
+  "shopify_handle": "mafate-speed-4-lite-sneaker-men-hoka-9052810-7",
+  "shopify_synced_at": "2026-10-03T09:38:16Z"
 }

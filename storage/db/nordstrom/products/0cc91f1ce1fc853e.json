@@ -7,9 +7,9 @@
   "vendor": "On",
   "product_type": "Athletic Shoes",
   "source_sku": "ON-8389451-7",
-  "source_price": 84.99,
+  "source_price": 170.0,
   "source_compare_at_price": null,
-  "current_price": 8158.0,
+  "current_price": 16288.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -236,13 +236,13 @@
       "id": 838945106,
       "sku": "ON-8389451-11.5",
       "title": "US 11.5 / UK 11 - Black / Eclipse",
-      "price": "16324.00",
-      "compare_at_price": null,
+      "price": "16298.00",
+      "compare_at_price": "16326.00",
       "source_price": 170.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/38be00a4-6b3e-4463-80ae-485117e6e11a.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -257,7 +257,8 @@
           "option_name": "Color",
           "name": "Black / Eclipse"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 838945107,
@@ -350,7 +351,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/38be00a4-6b3e-4463-80ae-485117e6e11a.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -425,9 +426,9 @@
       "id": 838945113,
       "sku": "ON-8389451-ROCK-13",
       "title": "US 13 / UK 12.5 - Rock / Niagara",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -446,15 +447,16 @@
           "option_name": "Color",
           "name": "Rock / Niagara"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945114,
       "sku": "ON-8389451-ROCK-10",
       "title": "US 10 / UK 9.5 - Rock / Niagara",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -473,15 +475,16 @@
           "option_name": "Color",
           "name": "Rock / Niagara"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945115,
       "sku": "ON-8389451-ROCK-12",
       "title": "US 12 / UK 11.5 - Rock / Niagara",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -500,15 +503,16 @@
           "option_name": "Color",
           "name": "Rock / Niagara"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945116,
       "sku": "ON-8389451-ROCK-11",
       "title": "US 11 / UK 10.5 - Rock / Niagara",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -527,19 +531,20 @@
           "option_name": "Color",
           "name": "Rock / Niagara"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945117,
       "sku": "ON-8389451-ROCK-7",
       "title": "US 7 / UK 6.5 - Rock / Niagara",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a67b4638-bb77-4c80-91b9-d8b496528a60.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -554,15 +559,16 @@
           "option_name": "Color",
           "name": "Rock / Niagara"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945118,
       "sku": "ON-8389451-ROCK-9.5",
       "title": "US 9.5 / UK 9 - Rock / Niagara",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -581,15 +587,16 @@
           "option_name": "Color",
           "name": "Rock / Niagara"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945119,
       "sku": "ON-8389451-ROCK-9",
       "title": "US 9 / UK 8.5 - Rock / Niagara",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -608,15 +615,16 @@
           "option_name": "Color",
           "name": "Rock / Niagara"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945120,
       "sku": "ON-8389451-ROCK-10.5",
       "title": "US 10.5 / UK 10 - Rock / Niagara",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -635,15 +643,16 @@
           "option_name": "Color",
           "name": "Rock / Niagara"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945121,
       "sku": "ON-8389451-ROCK-8.5",
       "title": "US 8.5 / UK 8 - Rock / Niagara",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -662,15 +671,16 @@
           "option_name": "Color",
           "name": "Rock / Niagara"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945122,
       "sku": "ON-8389451-ROCK-7.5",
       "title": "US 7.5 / UK 7 - Rock / Niagara",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -689,15 +699,16 @@
           "option_name": "Color",
           "name": "Rock / Niagara"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945123,
       "sku": "ON-8389451-ROCK-14",
       "title": "US 14 / UK 13.5 - Rock / Niagara",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -716,15 +727,16 @@
           "option_name": "Color",
           "name": "Rock / Niagara"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945124,
       "sku": "ON-8389451-ROCK-8",
       "title": "US 8 / UK 7.5 - Rock / Niagara",
-      "price": "11426.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -743,19 +755,20 @@
           "option_name": "Color",
           "name": "Rock / Niagara"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945125,
       "sku": "ON-8389451-ROCK-11.5",
       "title": "US 11.5 / UK 11 - Rock / Niagara",
-      "price": "11426.00",
+      "price": "16298.00",
       "compare_at_price": "16324.00",
-      "source_price": 118.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a67b4638-bb77-4c80-91b9-d8b496528a60.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -770,7 +783,8 @@
           "option_name": "Color",
           "name": "Rock / Niagara"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 838945126,
@@ -803,13 +817,13 @@
       "id": 838945127,
       "sku": "ON-8389451-IVOR-7",
       "title": "US 7 / UK 6.5 - Ivory / Lime",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a1e87af1-2bda-4968-80ec-68d4a008ae97.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -824,15 +838,16 @@
           "option_name": "Color",
           "name": "Ivory / Lime"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945128,
       "sku": "ON-8389451-IVOR-10",
       "title": "US 10 / UK 9.5 - Ivory / Lime",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -851,15 +866,16 @@
           "option_name": "Color",
           "name": "Ivory / Lime"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945129,
       "sku": "ON-8389451-IVOR-12",
       "title": "US 12 / UK 11.5 - Ivory / Lime",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -878,15 +894,16 @@
           "option_name": "Color",
           "name": "Ivory / Lime"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945130,
       "sku": "ON-8389451-IVOR-8",
       "title": "US 8 / UK 7.5 - Ivory / Lime",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -905,15 +922,16 @@
           "option_name": "Color",
           "name": "Ivory / Lime"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945131,
       "sku": "ON-8389451-IVOR-8.5",
       "title": "US 8.5 / UK 8 - Ivory / Lime",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -932,15 +950,16 @@
           "option_name": "Color",
           "name": "Ivory / Lime"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945132,
       "sku": "ON-8389451-IVOR-13",
       "title": "US 13 / UK 12.5 - Ivory / Lime",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -959,19 +978,20 @@
           "option_name": "Color",
           "name": "Ivory / Lime"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945133,
       "sku": "ON-8389451-IVOR-11.5",
       "title": "US 11.5 / UK 11 - Ivory / Lime",
-      "price": "8161.00",
+      "price": "16298.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a1e87af1-2bda-4968-80ec-68d4a008ae97.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -986,15 +1006,16 @@
           "option_name": "Color",
           "name": "Ivory / Lime"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 838945134,
       "sku": "ON-8389451-IVOR-9.5",
       "title": "US 9.5 / UK 9 - Ivory / Lime",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1013,15 +1034,16 @@
           "option_name": "Color",
           "name": "Ivory / Lime"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945135,
       "sku": "ON-8389451-IVOR-10.5",
       "title": "US 10.5 / UK 10 - Ivory / Lime",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1040,15 +1062,16 @@
           "option_name": "Color",
           "name": "Ivory / Lime"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945136,
       "sku": "ON-8389451-IVOR-14",
       "title": "US 14 / UK 13.5 - Ivory / Lime",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1067,15 +1090,16 @@
           "option_name": "Color",
           "name": "Ivory / Lime"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945137,
       "sku": "ON-8389451-IVOR-7.5",
       "title": "US 7.5 / UK 7 - Ivory / Lime",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1094,15 +1118,16 @@
           "option_name": "Color",
           "name": "Ivory / Lime"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945138,
       "sku": "ON-8389451-IVOR-11",
       "title": "US 11 / UK 10.5 - Ivory / Lime",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1121,15 +1146,16 @@
           "option_name": "Color",
           "name": "Ivory / Lime"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945139,
       "sku": "ON-8389451-IVOR-9",
       "title": "US 9 / UK 8.5 - Ivory / Lime",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1148,7 +1174,8 @@
           "option_name": "Color",
           "name": "Ivory / Lime"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945140,
@@ -1208,13 +1235,13 @@
       "id": 838945142,
       "sku": "ON-8389451-SAFA-11.5",
       "title": "US 11.5 / UK 11 - Safari / Glacier",
-      "price": "16324.00",
-      "compare_at_price": null,
+      "price": "16298.00",
+      "compare_at_price": "16326.00",
       "source_price": 170.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/b94feea5-0755-4e33-b4d7-4ce36698d492.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1229,7 +1256,8 @@
           "option_name": "Color",
           "name": "Safari / Glacier"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 838945143,
@@ -1457,7 +1485,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/b94feea5-0755-4e33-b4d7-4ce36698d492.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1505,13 +1533,13 @@
       "id": 838945153,
       "sku": "ON-8389451-CHAL-11.5",
       "title": "US 11.5 / UK 11 - Chalk / Ghost",
-      "price": "10610.00",
+      "price": "16298.00",
       "compare_at_price": "16324.00",
-      "source_price": 110.5,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ac9f4836-049f-44fb-872a-02e1f07714d4.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1526,15 +1554,16 @@
           "option_name": "Color",
           "name": "Chalk / Ghost"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 838945154,
       "sku": "ON-8389451-CHAL-14",
       "title": "US 14 / UK 13.5 - Chalk / Ghost",
-      "price": "10610.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 110.5,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1553,15 +1582,16 @@
           "option_name": "Color",
           "name": "Chalk / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945155,
       "sku": "ON-8389451-CHAL-9.5",
       "title": "US 9.5 / UK 9 - Chalk / Ghost",
-      "price": "10610.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 110.5,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1580,19 +1610,20 @@
           "option_name": "Color",
           "name": "Chalk / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945156,
       "sku": "ON-8389451-CHAL-7",
       "title": "US 7 / UK 6.5 - Chalk / Ghost",
-      "price": "10610.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 110.5,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ac9f4836-049f-44fb-872a-02e1f07714d4.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1607,15 +1638,16 @@
           "option_name": "Color",
           "name": "Chalk / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945157,
       "sku": "ON-8389451-CHAL-8.5",
       "title": "US 8.5 / UK 8 - Chalk / Ghost",
-      "price": "10610.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 110.5,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1634,15 +1666,16 @@
           "option_name": "Color",
           "name": "Chalk / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945158,
       "sku": "ON-8389451-CHAL-7.5",
       "title": "US 7.5 / UK 7 - Chalk / Ghost",
-      "price": "10610.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 110.5,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1661,15 +1694,16 @@
           "option_name": "Color",
           "name": "Chalk / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945159,
       "sku": "ON-8389451-CHAL-11",
       "title": "US 11 / UK 10.5 - Chalk / Ghost",
-      "price": "10610.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 110.5,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1688,15 +1722,16 @@
           "option_name": "Color",
           "name": "Chalk / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945160,
       "sku": "ON-8389451-CHAL-9",
       "title": "US 9 / UK 8.5 - Chalk / Ghost",
-      "price": "10610.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 110.5,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1715,15 +1750,16 @@
           "option_name": "Color",
           "name": "Chalk / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945161,
       "sku": "ON-8389451-CHAL-12",
       "title": "US 12 / UK 11.5 - Chalk / Ghost",
-      "price": "10610.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 110.5,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1742,15 +1778,16 @@
           "option_name": "Color",
           "name": "Chalk / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945162,
       "sku": "ON-8389451-CHAL-8",
       "title": "US 8 / UK 7.5 - Chalk / Ghost",
-      "price": "10610.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 110.5,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1769,15 +1806,16 @@
           "option_name": "Color",
           "name": "Chalk / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945163,
       "sku": "ON-8389451-CHAL-10",
       "title": "US 10 / UK 9.5 - Chalk / Ghost",
-      "price": "10610.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 110.5,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1796,15 +1834,16 @@
           "option_name": "Color",
           "name": "Chalk / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945164,
       "sku": "ON-8389451-CHAL-13",
       "title": "US 13 / UK 12.5 - Chalk / Ghost",
-      "price": "10610.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 110.5,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1823,15 +1862,16 @@
           "option_name": "Color",
           "name": "Chalk / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945165,
       "sku": "ON-8389451-CHAL-10.5",
       "title": "US 10.5 / UK 10 - Chalk / Ghost",
-      "price": "10610.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 110.5,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1850,15 +1890,16 @@
           "option_name": "Color",
           "name": "Chalk / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945166,
       "sku": "ON-8389451-IVOR-9",
       "title": "US 9 / UK 8.5 - Ivory / Ghost",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1877,15 +1918,16 @@
           "option_name": "Color",
           "name": "Ivory / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945167,
       "sku": "ON-8389451-IVOR-12",
       "title": "US 12 / UK 11.5 - Ivory / Ghost",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1904,15 +1946,16 @@
           "option_name": "Color",
           "name": "Ivory / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945168,
       "sku": "ON-8389451-IVOR-11",
       "title": "US 11 / UK 10.5 - Ivory / Ghost",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1931,15 +1974,16 @@
           "option_name": "Color",
           "name": "Ivory / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945169,
       "sku": "ON-8389451-IVOR-10",
       "title": "US 10 / UK 9.5 - Ivory / Ghost",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1958,19 +2002,20 @@
           "option_name": "Color",
           "name": "Ivory / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945170,
       "sku": "ON-8389451-IVOR-11.5",
       "title": "US 11.5 / UK 11 - Ivory / Ghost",
-      "price": "8161.00",
+      "price": "16298.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/1ec8e81a-534a-449f-a9ef-4cf5ee84882a.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1985,15 +2030,16 @@
           "option_name": "Color",
           "name": "Ivory / Ghost"
         }
-      ]
+      ],
+      "price_current": 16298.0
     },
     {
       "id": 838945171,
       "sku": "ON-8389451-IVOR-8",
       "title": "US 8 / UK 7.5 - Ivory / Ghost",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2012,15 +2058,16 @@
           "option_name": "Color",
           "name": "Ivory / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945172,
       "sku": "ON-8389451-IVOR-9.5",
       "title": "US 9.5 / UK 9 - Ivory / Ghost",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2039,15 +2086,16 @@
           "option_name": "Color",
           "name": "Ivory / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945173,
       "sku": "ON-8389451-IVOR-8.5",
       "title": "US 8.5 / UK 8 - Ivory / Ghost",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2066,15 +2114,16 @@
           "option_name": "Color",
           "name": "Ivory / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945174,
       "sku": "ON-8389451-IVOR-13",
       "title": "US 13 / UK 12.5 - Ivory / Ghost",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2093,15 +2142,16 @@
           "option_name": "Color",
           "name": "Ivory / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945175,
       "sku": "ON-8389451-IVOR-14",
       "title": "US 14 / UK 13.5 - Ivory / Ghost",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2120,15 +2170,16 @@
           "option_name": "Color",
           "name": "Ivory / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945176,
       "sku": "ON-8389451-IVOR-7.5",
       "title": "US 7.5 / UK 7 - Ivory / Ghost",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2147,19 +2198,20 @@
           "option_name": "Color",
           "name": "Ivory / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945177,
       "sku": "ON-8389451-IVOR-7",
       "title": "US 7 / UK 6.5 - Ivory / Ghost",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/1ec8e81a-534a-449f-a9ef-4cf5ee84882a.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2174,15 +2226,16 @@
           "option_name": "Color",
           "name": "Ivory / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     },
     {
       "id": 838945178,
       "sku": "ON-8389451-IVOR-10.5",
       "title": "US 10.5 / UK 10 - Ivory / Ghost",
-      "price": "8161.00",
+      "price": "16326.00",
       "compare_at_price": "16324.00",
-      "source_price": 84.99,
+      "source_price": 170.0,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2201,7 +2254,8 @@
           "option_name": "Color",
           "name": "Ivory / Ghost"
         }
-      ]
+      ],
+      "price_current": 16326.0
     }
   ],
   "product_options": [
@@ -2335,19 +2389,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:24:39Z",
+  "last_verified_at": "2026-10-03T08:23:33Z",
   "created_at": "2026-09-18T06:50:07Z",
-  "updated_at": "2026-09-22T06:24:39Z",
+  "updated_at": "2026-10-03T08:23:33Z",
   "price_range_usd": {
-    "min": 84.99,
+    "min": 118.99,
     "max": 170.0
   },
   "price_range_inr": {
-    "min": 8158.0,
-    "max": 16318.0
+    "min": 11400.0,
+    "max": 16288.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "8158.00",
-  "shopify_sync_pending": true
+  "price": "16288.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850875879590",
+  "shopify_handle": "cloudsurfer-trail-2-trail-running-shoe-men",
+  "shopify_synced_at": "2026-10-03T09:33:20Z"
 }

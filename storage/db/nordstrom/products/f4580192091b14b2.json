@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-8416464-5",
   "source_price": 160.0,
   "source_compare_at_price": 165.0,
-  "current_price": 15350.0,
-  "compare_at_price": 15830.0,
+  "current_price": 15360.0,
+  "compare_at_price": 15840.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -122,13 +122,13 @@
       "id": 841646403,
       "sku": "SALOMON-8416464-8",
       "title": "US 8 / UK 6 - Liberty Astral",
-      "price": "15363.00",
+      "price": "15360.00",
       "compare_at_price": "15844.00",
       "source_price": 160.0,
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ada1578c-af42-4833-98bc-24d5322efdf6.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -143,15 +143,16 @@
           "option_name": "Color",
           "name": "Liberty Astral"
         }
-      ]
+      ],
+      "price_current": 15360.0
     },
     {
       "id": 841646404,
       "sku": "SALOMON-8416464-9",
       "title": "US 9 / UK 7 - Liberty Astral",
-      "price": "15363.00",
+      "price": "15846.00",
       "compare_at_price": "15844.00",
-      "source_price": 160.0,
+      "source_price": 165.0,
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -170,15 +171,16 @@
           "option_name": "Color",
           "name": "Liberty Astral"
         }
-      ]
+      ],
+      "price_current": 15846.0
     },
     {
       "id": 841646405,
       "sku": "SALOMON-8416464-10",
       "title": "US 10 / UK 8 - Liberty Astral",
-      "price": "15363.00",
+      "price": "15846.00",
       "compare_at_price": "15844.00",
-      "source_price": 160.0,
+      "source_price": 165.0,
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -197,15 +199,16 @@
           "option_name": "Color",
           "name": "Liberty Astral"
         }
-      ]
+      ],
+      "price_current": 15846.0
     },
     {
       "id": 841646406,
       "sku": "SALOMON-8416464-11",
       "title": "US 11 / UK 9 - Liberty Astral",
-      "price": "15363.00",
+      "price": "15846.00",
       "compare_at_price": "15844.00",
-      "source_price": 160.0,
+      "source_price": 165.0,
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -224,15 +227,16 @@
           "option_name": "Color",
           "name": "Liberty Astral"
         }
-      ]
+      ],
+      "price_current": 15846.0
     },
     {
       "id": 841646407,
       "sku": "SALOMON-8416464-12",
       "title": "US 12 / UK 10 - Liberty Astral",
-      "price": "15363.00",
+      "price": "15846.00",
       "compare_at_price": "15844.00",
-      "source_price": 160.0,
+      "source_price": 165.0,
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -251,15 +255,16 @@
           "option_name": "Color",
           "name": "Liberty Astral"
         }
-      ]
+      ],
+      "price_current": 15846.0
     },
     {
       "id": 841646408,
       "sku": "SALOMON-8416464-13",
       "title": "US 13 / UK 11 - Liberty Astral",
-      "price": "15363.00",
+      "price": "15846.00",
       "compare_at_price": "15844.00",
-      "source_price": 160.0,
+      "source_price": 165.0,
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -278,7 +283,8 @@
           "option_name": "Color",
           "name": "Liberty Astral"
         }
-      ]
+      ],
+      "price_current": 15846.0
     },
     {
       "id": 841646409,
@@ -441,20 +447,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T04:34:35Z",
+  "last_verified_at": "2026-10-03T09:40:44Z",
   "created_at": "2026-09-17T18:54:06Z",
-  "updated_at": "2026-09-22T04:34:35Z",
+  "updated_at": "2026-10-03T09:40:44Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
   "shopify_sync_pending": true,
   "price_range_usd": {
     "min": 160.0,
-    "max": 160.0
+    "max": 165.0
   },
   "price_range_inr": {
-    "min": 15350.0,
-    "max": 15350.0
+    "min": 15360.0,
+    "max": 15840.0
   },
-  "price": "15350.00"
+  "price": "15360.00",
+  "shopify_product_id": "gid://shopify/Product/15848585756838",
+  "shopify_handle": "salomon-gender-inclusive-xt-whisper-void-sneaker",
+  "shopify_synced_at": "2026-10-01T09:29:27Z"
 }

@@ -9,7 +9,7 @@
   "source_sku": "HOKA-8430925-7",
   "source_price": 129.5,
   "source_compare_at_price": null,
-  "current_price": 12437.0,
+  "current_price": 12440.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -277,7 +277,7 @@
       "source_compare_at_price": 185.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/cd0295cc-752b-47b0-93e7-4890edd73db7.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -304,7 +304,7 @@
       "source_compare_at_price": 185.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/cd0295cc-752b-47b0-93e7-4890edd73db7.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -763,7 +763,7 @@
       "source_compare_at_price": 185.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/035c2771-e576-460e-bb4e-5c5096249893.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -871,7 +871,7 @@
       "source_compare_at_price": 185.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/035c2771-e576-460e-bb4e-5c5096249893.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1222,19 +1222,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:32:34Z",
+  "last_verified_at": "2026-10-03T09:29:47Z",
   "created_at": "2026-09-18T06:49:00Z",
-  "updated_at": "2026-09-22T05:32:34Z",
+  "updated_at": "2026-10-03T09:29:47Z",
   "price_range_usd": {
     "min": 129.5,
     "max": 185.0
   },
   "price_range_inr": {
-    "min": 12437.0,
-    "max": 17767.0
+    "min": 12440.0,
+    "max": 17772.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "shopify_sync_pending": true,
-  "price": "12437.00"
+  "shopify_sync_pending": false,
+  "price": "12440.00",
+  "shopify_product_id": "gid://shopify/Product/15850878599334",
+  "shopify_handle": "stinson-one7-trail-sneaker-men",
+  "shopify_synced_at": "2026-10-03T09:37:09Z"
 }

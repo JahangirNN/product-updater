@@ -7,9 +7,9 @@
   "vendor": "NORDSTROM",
   "product_type": "Athletic Shoes",
   "source_sku": "SALOMON-5702495-6",
-  "source_price": 62.99,
+  "source_price": 140.0,
   "source_compare_at_price": null,
-  "current_price": 6043.0,
+  "current_price": 13440.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -58,9 +58,9 @@
       "id": 570249500,
       "sku": "NORDSTROM-5702495-11",
       "title": "US 11 / UK 10.5 - Sulphur Spring / Red / Black",
-      "price": "6048.00",
+      "price": "13445.00",
       "compare_at_price": "13443.00",
-      "source_price": 62.99,
+      "source_price": 140.0,
       "source_compare_at_price": 140.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -79,7 +79,8 @@
           "option_name": "Color",
           "name": "Sulphur Spring / Red / Black"
         }
-      ]
+      ],
+      "price_current": 13445.0
     },
     {
       "id": 570249501,
@@ -1264,19 +1265,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:33:16Z",
+  "last_verified_at": "2026-10-03T09:32:56Z",
   "created_at": "2026-09-17T18:51:50Z",
-  "updated_at": "2026-09-22T05:33:16Z",
+  "updated_at": "2026-10-03T09:32:56Z",
   "price_range_usd": {
-    "min": 62.99,
+    "min": 76.99,
     "max": 140.0
   },
   "price_range_inr": {
-    "min": 6043.0,
-    "max": 13432.0
+    "min": 7391.0,
+    "max": 13440.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": true,
-  "price": "6043.00"
+  "price": "13440.00",
+  "shopify_product_id": "gid://shopify/Product/15848585461926",
+  "shopify_handle": "gender-inclusive-speedcross-3-sneaker",
+  "shopify_synced_at": "2026-10-01T09:29:14Z"
 }

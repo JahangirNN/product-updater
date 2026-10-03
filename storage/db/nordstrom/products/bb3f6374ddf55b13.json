@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-8841089-7",
   "source_price": 210.0,
   "source_compare_at_price": 220.0,
-  "current_price": 20151.0,
-  "compare_at_price": 21111.0,
+  "current_price": 20240.0,
+  "compare_at_price": 21203.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -41,7 +41,7 @@
       "id": 884108900,
       "sku": "SALOMON-8841089-7",
       "title": "US 7 / UK 6 - Black Black Lunar Rock",
-      "price": "20165.00",
+      "price": "20163.00",
       "compare_at_price": "21125.00",
       "source_price": 210.0,
       "source_compare_at_price": 220.0,
@@ -62,15 +62,16 @@
           "option_name": "Color",
           "name": "Black Black Lunar Rock"
         }
-      ]
+      ],
+      "price_current": 20163.0
     },
     {
       "id": 884108901,
       "sku": "SALOMON-8841089-8",
       "title": "US 8 / UK 7 - Black Black Lunar Rock",
-      "price": "20165.00",
+      "price": "21078.00",
       "compare_at_price": "21125.00",
-      "source_price": 210.0,
+      "source_price": 220.0,
       "source_compare_at_price": 220.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -89,15 +90,16 @@
           "option_name": "Color",
           "name": "Black Black Lunar Rock"
         }
-      ]
+      ],
+      "price_current": 21078.0
     },
     {
       "id": 884108902,
       "sku": "SALOMON-8841089-9",
       "title": "US 9 / UK 8 - Black Black Lunar Rock",
-      "price": "20165.00",
+      "price": "21128.00",
       "compare_at_price": "21125.00",
-      "source_price": 210.0,
+      "source_price": 220.0,
       "source_compare_at_price": 220.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -116,15 +118,16 @@
           "option_name": "Color",
           "name": "Black Black Lunar Rock"
         }
-      ]
+      ],
+      "price_current": 21128.0
     },
     {
       "id": 884108903,
       "sku": "SALOMON-8841089-10",
       "title": "US 10 / UK 9 - Black Black Lunar Rock",
-      "price": "20165.00",
+      "price": "21128.00",
       "compare_at_price": "21125.00",
-      "source_price": 210.0,
+      "source_price": 220.0,
       "source_compare_at_price": 220.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -143,19 +146,20 @@
           "option_name": "Color",
           "name": "Black Black Lunar Rock"
         }
-      ]
+      ],
+      "price_current": 21128.0
     },
     {
       "id": 884108904,
       "sku": "SALOMON-8841089-11",
       "title": "US 11 / UK 10 - Black Black Lunar Rock",
-      "price": "20165.00",
+      "price": "20240.00",
       "compare_at_price": "21125.00",
       "source_price": 210.0,
       "source_compare_at_price": 220.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/d82307c9-f8b6-4a74-a7f6-f0db52432a1a.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -170,15 +174,16 @@
           "option_name": "Color",
           "name": "Black Black Lunar Rock"
         }
-      ]
+      ],
+      "price_current": 20240.0
     },
     {
       "id": 884108905,
       "sku": "SALOMON-8841089-12",
       "title": "US 12 / UK 11 - Black Black Lunar Rock",
-      "price": "20165.00",
+      "price": "21104.00",
       "compare_at_price": "21125.00",
-      "source_price": 210.0,
+      "source_price": 220.0,
       "source_compare_at_price": 220.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -197,7 +202,8 @@
           "option_name": "Color",
           "name": "Black Black Lunar Rock"
         }
-      ]
+      ],
+      "price_current": 21104.0
     },
     {
       "id": 884108906,
@@ -303,19 +309,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:31:41Z",
+  "last_verified_at": "2026-10-03T09:35:09Z",
   "created_at": "2026-09-17T18:55:44Z",
-  "updated_at": "2026-09-22T06:31:41Z",
+  "updated_at": "2026-10-03T09:35:09Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
   "shopify_sync_pending": true,
   "price_range_usd": {
     "min": 210.0,
-    "max": 210.0
+    "max": 220.0
   },
   "price_range_inr": {
-    "min": 20151.0,
-    "max": 20151.0
-  }
+    "min": 20240.0,
+    "max": 21203.0
+  },
+  "price": "20240.00",
+  "shopify_product_id": "gid://shopify/Product/15848585560230",
+  "shopify_handle": "salomon-xt-4-og-gtx-gore-tex-waterproof-sneaker-men",
+  "shopify_synced_at": "2026-10-01T09:29:17Z"
 }

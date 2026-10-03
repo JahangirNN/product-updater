@@ -9,7 +9,7 @@
   "source_sku": "HOKA-7721712-7",
   "source_price": 140.0,
   "source_compare_at_price": null,
-  "current_price": 13445.0,
+  "current_price": 13492.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -71,7 +71,7 @@
       "source_compare_at_price": 175.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/2892dce9-b514-4e21-b4eb-3f4b27bd4722.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -98,7 +98,7 @@
       "source_compare_at_price": 175.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/2892dce9-b514-4e21-b4eb-3f4b27bd4722.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -233,7 +233,7 @@
       "source_compare_at_price": 175.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/2892dce9-b514-4e21-b4eb-3f4b27bd4722.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -395,7 +395,7 @@
       "source_compare_at_price": 175.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/2892dce9-b514-4e21-b4eb-3f4b27bd4722.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -773,7 +773,7 @@
       "source_compare_at_price": 175.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/6a49f1a4-b6ea-4d10-a17d-c99a4ed30331.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1070,7 +1070,7 @@
       "source_compare_at_price": 175.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f9dedd59-2b76-4d36-b169-17b86f53a990.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2033,19 +2033,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:32:41Z",
+  "last_verified_at": "2026-10-03T07:34:29Z",
   "created_at": "2026-09-18T05:45:54Z",
-  "updated_at": "2026-09-22T06:32:41Z",
+  "updated_at": "2026-10-03T07:34:29Z",
   "price_range_usd": {
     "min": 69.99,
     "max": 140.0
   },
   "price_range_inr": {
-    "min": 6722.0,
-    "max": 13445.0
+    "min": 6745.0,
+    "max": 13492.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "shopify_sync_pending": true,
-  "price": "13445.00"
+  "shopify_sync_pending": false,
+  "price": "13492.00",
+  "shopify_product_id": "gid://shopify/Product/15850879811750",
+  "shopify_handle": "transport-gore-tex-waterproof-shoe-men-hoka-7721712-7",
+  "shopify_synced_at": "2026-10-03T09:38:54Z"
 }

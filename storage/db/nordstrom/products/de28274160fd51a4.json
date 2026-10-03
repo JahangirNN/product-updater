@@ -9,12 +9,12 @@
   "source_sku": "HOKA-7261104-7",
   "source_price": 160.0,
   "source_compare_at_price": 160.0,
-  "current_price": 15350.0,
-  "compare_at_price": 15350.0,
+  "current_price": 15420.0,
+  "compare_at_price": 15420.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Recycled-polyester, textile and synthetic upper and lining/synthetic and rubber sole",
   "specifications": {
     "Brand": "HOKA",
@@ -128,7 +128,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/86e2158a-1237-442e-9699-31d4a8a048e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -597,18 +597,21 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:34:09Z",
+  "last_verified_at": "2026-10-03T07:36:52Z",
   "created_at": "2026-09-18T05:46:00Z",
-  "updated_at": "2026-09-22T05:34:09Z",
-  "is_active": true,
-  "shopify_sync_pending": true,
+  "updated_at": "2026-10-03T07:36:52Z",
+  "is_active": false,
+  "shopify_sync_pending": false,
   "price_range_usd": {
     "min": 160.0,
     "max": 160.0
   },
   "price_range_inr": {
-    "min": 15350.0,
-    "max": 15350.0
+    "min": 15420.0,
+    "max": 15420.0
   },
-  "price": "15350.00"
+  "price": "15420.00",
+  "shopify_product_id": "gid://shopify/Product/15850880237734",
+  "shopify_handle": "clifton-9-gore-tex-waterproof-running-shoe-men-hoka-7261104-7",
+  "shopify_synced_at": "2026-10-03T09:39:34Z"
 }

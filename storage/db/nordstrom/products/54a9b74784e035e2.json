@@ -9,7 +9,7 @@
   "source_sku": "ON-8876502-5.5",
   "source_price": 200.0,
   "source_compare_at_price": null,
-  "current_price": 19198.0,
+  "current_price": 19186.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -57,7 +57,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f50ff016-3ac6-4af7-a24b-91db6eb6bdd4.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -300,7 +300,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f50ff016-3ac6-4af7-a24b-91db6eb6bdd4.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -462,7 +462,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/d17de371-ce92-4c01-8c87-3ad58bf360c9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -570,7 +570,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/d17de371-ce92-4c01-8c87-3ad58bf360c9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -863,17 +863,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:30:22Z",
+  "last_verified_at": "2026-10-03T09:24:45Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-22T05:30:22Z",
+  "updated_at": "2026-10-03T09:24:45Z",
   "price_range_usd": {
     "min": 200.0,
     "max": 200.0
   },
   "price_range_inr": {
-    "min": 19198.0,
-    "max": 19198.0
+    "min": 19186.0,
+    "max": 19186.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": true,
+  "price": "19186.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850877517990",
+  "shopify_handle": "cloudnova-moon-sneaker-women",
+  "shopify_synced_at": "2026-10-03T09:35:41Z"
 }

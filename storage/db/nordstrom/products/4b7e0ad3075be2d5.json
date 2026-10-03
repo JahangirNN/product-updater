@@ -9,12 +9,12 @@
   "source_sku": "SALOMON-7938058-6",
   "source_price": 230.0,
   "source_compare_at_price": 230.0,
-  "current_price": 22085.0,
-  "compare_at_price": 22085.0,
+  "current_price": 22166.0,
+  "compare_at_price": 22166.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Textile and synthetic upper/textile lining/synthetic sole",
   "specifications": {
     "Brand": "Salomon",
@@ -128,7 +128,7 @@
       "source_compare_at_price": 230.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/43b66dd4-6308-49eb-9beb-00d19534c175.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -267,9 +267,21 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:28:12Z",
+  "last_verified_at": "2026-10-03T09:24:18Z",
   "created_at": "2026-09-18T05:46:19Z",
-  "updated_at": "2026-09-22T05:28:12Z",
-  "is_active": true,
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-03T09:24:18Z",
+  "is_active": false,
+  "shopify_sync_pending": false,
+  "price_range_usd": {
+    "min": 230.0,
+    "max": 230.0
+  },
+  "price_range_inr": {
+    "min": 22166.0,
+    "max": 22166.0
+  },
+  "price": "22166.00",
+  "shopify_product_id": "gid://shopify/Product/15850877157542",
+  "shopify_handle": "salomon-xt-slate-advanced-sneaker-men",
+  "shopify_synced_at": "2026-10-03T09:35:15Z"
 }

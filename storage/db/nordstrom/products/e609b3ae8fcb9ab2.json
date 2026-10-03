@@ -9,8 +9,8 @@
   "source_sku": "ON-9053887-7",
   "source_price": 160.0,
   "source_compare_at_price": 160.0,
-  "current_price": 15363.0,
-  "compare_at_price": 15363.0,
+  "current_price": 15421.0,
+  "compare_at_price": 15421.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -74,7 +74,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a468aa9b-459d-4632-9b5b-8eee4477be0e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -101,7 +101,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a468aa9b-459d-4632-9b5b-8eee4477be0e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -182,7 +182,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a468aa9b-459d-4632-9b5b-8eee4477be0e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -209,7 +209,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a468aa9b-459d-4632-9b5b-8eee4477be0e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -317,7 +317,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a468aa9b-459d-4632-9b5b-8eee4477be0e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -534,7 +534,21 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T04:33:30Z",
+  "last_verified_at": "2026-10-03T07:38:10Z",
   "created_at": "2026-09-17T14:19:11Z",
-  "updated_at": "2026-09-22T04:33:30Z"
+  "updated_at": "2026-10-03T07:38:10Z",
+  "price_range_usd": {
+    "min": 160.0,
+    "max": 160.0
+  },
+  "price_range_inr": {
+    "min": 15421.0,
+    "max": 15421.0
+  },
+  "price": "15421.00",
+  "is_active": true,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850880499878",
+  "shopify_handle": "cloud-x-5-training-shoe-men-on-9053887-7",
+  "shopify_synced_at": "2026-10-03T09:39:55Z"
 }

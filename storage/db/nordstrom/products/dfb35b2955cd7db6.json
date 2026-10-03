@@ -9,7 +9,7 @@
   "source_sku": "HOKA-8131905-7",
   "source_price": 175.0,
   "source_compare_at_price": null,
-  "current_price": 16790.0,
+  "current_price": 16865.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -156,7 +156,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/33970f68-7ff9-4bf4-a7b1-3862883a637e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -345,7 +345,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/33970f68-7ff9-4bf4-a7b1-3862883a637e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -939,7 +939,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/9e528d5f-5a9d-49d9-a584-6beda974dccb.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -966,7 +966,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/9e528d5f-5a9d-49d9-a584-6beda974dccb.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1371,7 +1371,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/81aa6fd0-ddc2-436a-b4ee-a9171077cf0c.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2005,19 +2005,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:34:56Z",
+  "last_verified_at": "2026-10-03T07:37:09Z",
   "created_at": "2026-09-17T14:59:49Z",
-  "updated_at": "2026-09-22T06:34:56Z",
+  "updated_at": "2026-10-03T07:37:09Z",
   "price_range_usd": {
     "min": 122.49,
     "max": 175.0
   },
   "price_range_inr": {
-    "min": 11752.0,
-    "max": 16790.0
+    "min": 11805.0,
+    "max": 16865.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "shopify_sync_pending": true,
-  "price": "16790.00"
+  "shopify_sync_pending": false,
+  "price": "16865.00",
+  "shopify_product_id": "gid://shopify/Product/15850880270502",
+  "shopify_handle": "skyward-laceless-recovery-sneaker-men-hoka-8131905-7",
+  "shopify_synced_at": "2026-10-03T09:39:40Z"
 }

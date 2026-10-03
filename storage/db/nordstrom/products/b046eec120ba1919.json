@@ -9,7 +9,7 @@
   "source_sku": "HOKA-8431600-7",
   "source_price": 155.0,
   "source_compare_at_price": null,
-  "current_price": 14871.0,
+  "current_price": 14880.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -1584,19 +1584,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:30:52Z",
+  "last_verified_at": "2026-10-03T07:32:57Z",
   "created_at": "2026-09-18T07:01:25Z",
-  "updated_at": "2026-09-22T06:30:52Z",
+  "updated_at": "2026-10-03T07:32:57Z",
   "price_range_usd": {
     "min": 108.5,
     "max": 155.0
   },
   "price_range_inr": {
-    "min": 10410.0,
-    "max": 14871.0
+    "min": 10416.0,
+    "max": 14880.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "14871.00",
-  "shopify_sync_pending": true
+  "price": "14880.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850879451302",
+  "shopify_handle": "challenger-8-trail-running-shoe-men-wide",
+  "shopify_synced_at": "2026-10-03T09:38:26Z"
 }

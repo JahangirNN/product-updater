@@ -9,7 +9,7 @@
   "source_sku": "HOKA-8735212-7",
   "source_price": 175.0,
   "source_compare_at_price": null,
-  "current_price": 16790.0,
+  "current_price": 16779.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -1366,19 +1366,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:28:38Z",
+  "last_verified_at": "2026-10-03T08:27:24Z",
   "created_at": "2026-09-17T14:54:54Z",
-  "updated_at": "2026-09-22T05:28:38Z",
+  "updated_at": "2026-10-03T08:27:24Z",
   "price_range_usd": {
     "min": 175.0,
     "max": 175.0
   },
   "price_range_inr": {
-    "min": 16790.0,
-    "max": 16790.0
+    "min": 16779.0,
+    "max": 16779.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "shopify_sync_pending": true,
-  "price": "16790.00"
+  "shopify_sync_pending": false,
+  "price": "16779.00",
+  "shopify_product_id": "gid://shopify/Product/15850877223078",
+  "shopify_handle": "hoka-m-clifton-11-gtx-wide",
+  "shopify_synced_at": "2026-10-03T09:35:19Z"
 }

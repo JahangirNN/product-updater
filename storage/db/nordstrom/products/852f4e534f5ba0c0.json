@@ -7,10 +7,10 @@
   "vendor": "HOKA",
   "product_type": "Athletic Shoes",
   "source_sku": "HOKA-8131883-7.5",
-  "source_price": 112.5,
+  "source_price": 150.0,
   "source_compare_at_price": 150.0,
-  "current_price": 10795.0,
-  "compare_at_price": 14394.0,
+  "current_price": 14389.0,
+  "compare_at_price": 14389.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -41,9 +41,9 @@
       "id": 813188300,
       "sku": "HOKA-8131883-7.5",
       "title": "US 7.5 / UK 6.5 - Grout Putty",
-      "price": "10802.00",
+      "price": "14406.00",
       "compare_at_price": "14398.00",
-      "source_price": 112.5,
+      "source_price": 150.0,
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -62,7 +62,8 @@
           "option_name": "Color",
           "name": "Grout Putty"
         }
-      ]
+      ],
+      "price_current": 14406.0
     },
     {
       "id": 813188301,
@@ -149,7 +150,7 @@
       "id": 813188304,
       "sku": "HOKA-8131883-11",
       "title": "US 11 / UK 10 - Grout Putty",
-      "price": "10802.00",
+      "price": "10575.00",
       "compare_at_price": "14398.00",
       "source_price": 112.5,
       "source_compare_at_price": 150.0,
@@ -170,7 +171,8 @@
           "option_name": "Color",
           "name": "Grout Putty"
         }
-      ]
+      ],
+      "price_current": 10575.0
     },
     {
       "id": 813188305,
@@ -312,19 +314,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:32:30Z",
+  "last_verified_at": "2026-10-03T09:29:42Z",
   "created_at": "2026-09-17T14:50:54Z",
-  "updated_at": "2026-09-22T05:32:30Z",
+  "updated_at": "2026-10-03T09:29:42Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
   "shopify_sync_pending": true,
   "price_range_usd": {
     "min": 112.5,
-    "max": 112.5
+    "max": 150.0
   },
   "price_range_inr": {
-    "min": 10795.0,
-    "max": 10795.0
-  }
+    "min": 10792.0,
+    "max": 14389.0
+  },
+  "price": "14389.00",
+  "shopify_product_id": "gid://shopify/Product/15848581628070",
+  "shopify_handle": "arahi-8-stability-running-shoe-men",
+  "shopify_synced_at": "2026-10-01T09:22:15Z"
 }

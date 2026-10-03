@@ -9,7 +9,7 @@
   "source_sku": "HOKA-9052777-7",
   "source_price": 175.0,
   "source_compare_at_price": null,
-  "current_price": 16790.0,
+  "current_price": 16787.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -47,7 +47,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9f4a7e1b-6ba8-4ffa-a884-c73799f332b9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -317,7 +317,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9f4a7e1b-6ba8-4ffa-a884-c73799f332b9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -912,19 +912,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:27:05Z",
+  "last_verified_at": "2026-10-03T08:26:14Z",
   "created_at": "2026-09-17T14:52:56Z",
-  "updated_at": "2026-09-22T05:27:05Z",
+  "updated_at": "2026-10-03T08:26:14Z",
   "price_range_usd": {
     "min": 175.0,
     "max": 175.0
   },
   "price_range_inr": {
-    "min": 16790.0,
-    "max": 16790.0
+    "min": 16787.0,
+    "max": 16787.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": true,
-  "price": "16790.00"
+  "price": "16787.00",
+  "shopify_product_id": "gid://shopify/Product/15848581005478",
+  "shopify_handle": "hoka-bondi-9-running-shoe-men",
+  "shopify_synced_at": "2026-10-01T09:21:31Z"
 }

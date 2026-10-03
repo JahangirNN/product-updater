@@ -9,7 +9,7 @@
   "source_sku": "ON-9129543-5",
   "source_price": 160.0,
   "source_compare_at_price": null,
-  "current_price": 15358.0,
+  "current_price": 15421.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -154,7 +154,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a89d186a-b010-4831-a9b5-288ba8829fef.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -235,7 +235,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a89d186a-b010-4831-a9b5-288ba8829fef.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -343,7 +343,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a89d186a-b010-4831-a9b5-288ba8829fef.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -498,19 +498,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:25:29Z",
+  "last_verified_at": "2026-10-03T08:24:52Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-22T05:25:29Z",
+  "updated_at": "2026-10-03T08:24:52Z",
   "price_range_usd": {
     "min": 160.0,
     "max": 160.0
   },
   "price_range_inr": {
-    "min": 15358.0,
-    "max": 15358.0
+    "min": 15421.0,
+    "max": 15421.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "15358.00",
-  "shopify_sync_pending": true
+  "price": "15421.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850876338342",
+  "shopify_handle": "cloud-x-5-training-shoe-women-on-9129543-5",
+  "shopify_synced_at": "2026-10-03T09:34:02Z"
 }

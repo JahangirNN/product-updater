@@ -9,8 +9,8 @@
   "source_sku": "ON-8897204-6",
   "source_price": 150.0,
   "source_compare_at_price": 200.0,
-  "current_price": 14398.0,
-  "compare_at_price": 19198.0,
+  "current_price": 14382.0,
+  "compare_at_price": 19176.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -68,9 +68,9 @@
       "id": 889720401,
       "sku": "ON-8897204-6.5",
       "title": "US 6.5 / UK 4.5 - Ivory Nightfall",
-      "price": "14398.00",
+      "price": "19176.00",
       "compare_at_price": "19198.00",
-      "source_price": 150.0,
+      "source_price": 200.0,
       "source_compare_at_price": 200.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -89,7 +89,8 @@
           "option_name": "Color",
           "name": "Ivory Nightfall"
         }
-      ]
+      ],
+      "price_current": 19176.0
     },
     {
       "id": 889720402,
@@ -438,9 +439,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:28:15Z",
+  "last_verified_at": "2026-10-03T09:31:31Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-22T06:28:15Z",
+  "updated_at": "2026-10-03T09:31:31Z",
   "status": "ACTIVE",
-  "validation_warnings": []
+  "validation_warnings": [],
+  "price_range_usd": {
+    "min": 150.0,
+    "max": 200.0
+  },
+  "price_range_inr": {
+    "min": 14382.0,
+    "max": 19176.0
+  },
+  "price": "14382.00",
+  "is_active": true,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850878927014",
+  "shopify_handle": "on-running-cloudzone-moon-sneaker-women",
+  "shopify_synced_at": "2026-10-03T09:37:41Z"
 }

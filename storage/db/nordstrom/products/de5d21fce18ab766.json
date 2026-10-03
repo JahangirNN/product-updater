@@ -9,8 +9,8 @@
   "source_sku": "HOKA-8735075-5",
   "source_price": 165.0,
   "source_compare_at_price": 165.0,
-  "current_price": 15833.0,
-  "compare_at_price": 15833.0,
+  "current_price": 15903.0,
+  "compare_at_price": 15903.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -708,9 +708,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:34:45Z",
+  "last_verified_at": "2026-10-03T09:38:41Z",
   "created_at": "2026-09-17T14:54:16Z",
-  "updated_at": "2026-09-22T06:34:45Z",
+  "updated_at": "2026-10-03T09:38:41Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -720,7 +720,11 @@
     "max": 165.0
   },
   "price_range_inr": {
-    "min": 15833.0,
-    "max": 15833.0
-  }
+    "min": 15903.0,
+    "max": 15903.0
+  },
+  "price": "15903.00",
+  "shopify_product_id": "gid://shopify/Product/15848582348966",
+  "shopify_handle": "hoka-clifton-pro-running-shoe-women-wide",
+  "shopify_synced_at": "2026-10-01T09:22:56Z"
 }

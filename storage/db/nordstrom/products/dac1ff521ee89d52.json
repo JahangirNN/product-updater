@@ -9,7 +9,7 @@
   "source_sku": "HOKA-8131906-8",
   "source_price": 120.0,
   "source_compare_at_price": null,
-  "current_price": 11524.0,
+  "current_price": 11565.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -565,7 +565,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a2112fbd-3ee7-4406-b625-0b360e8c1a1f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -754,7 +754,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a2112fbd-3ee7-4406-b625-0b360e8c1a1f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -3751,7 +3751,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/730e0232-7a08-4ccb-acf2-5204fdb8f179.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -3832,7 +3832,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/730e0232-7a08-4ccb-acf2-5204fdb8f179.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -3886,7 +3886,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/730e0232-7a08-4ccb-acf2-5204fdb8f179.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -3994,7 +3994,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/730e0232-7a08-4ccb-acf2-5204fdb8f179.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -4021,7 +4021,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/730e0232-7a08-4ccb-acf2-5204fdb8f179.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -4777,7 +4777,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/e0ae27c0-8e09-474a-b39d-23a1f3e859eb.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5255,19 +5255,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:33:48Z",
+  "last_verified_at": "2026-10-03T09:37:23Z",
   "created_at": "2026-09-17T14:52:44Z",
-  "updated_at": "2026-09-22T06:33:48Z",
+  "updated_at": "2026-10-03T09:37:23Z",
   "price_range_usd": {
     "min": 119.99,
     "max": 150.0
   },
   "price_range_inr": {
-    "min": 11523.0,
-    "max": 14406.0
+    "min": 11564.0,
+    "max": 14456.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": true,
-  "price": "11524.00"
+  "price": "11565.00",
+  "shopify_product_id": "gid://shopify/Product/15848582283430",
+  "shopify_handle": "hoka-arahi-8-stability-running-shoe-men",
+  "shopify_synced_at": "2026-10-01T09:22:52Z"
 }

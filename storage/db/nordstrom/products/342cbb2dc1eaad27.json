@@ -9,7 +9,7 @@
   "source_sku": "ON-9053885-7",
   "source_price": 180.0,
   "source_compare_at_price": null,
-  "current_price": 17284.0,
+  "current_price": 17287.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -449,7 +449,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/37d25bb5-a32b-455f-97d0-0f7670e635e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -476,7 +476,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/37d25bb5-a32b-455f-97d0-0f7670e635e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -530,7 +530,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/37d25bb5-a32b-455f-97d0-0f7670e635e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -557,7 +557,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/37d25bb5-a32b-455f-97d0-0f7670e635e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -584,7 +584,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/37d25bb5-a32b-455f-97d0-0f7670e635e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -746,7 +746,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/37d25bb5-a32b-455f-97d0-0f7670e635e5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1367,7 +1367,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/5170c916-6f9b-4567-82d1-a4b8a9e01340.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1475,7 +1475,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/5170c916-6f9b-4567-82d1-a4b8a9e01340.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1699,17 +1699,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:26:48Z",
+  "last_verified_at": "2026-10-03T08:25:51Z",
   "created_at": "2026-09-17T14:19:11Z",
-  "updated_at": "2026-09-22T05:26:48Z",
+  "updated_at": "2026-10-03T08:25:51Z",
   "price_range_usd": {
     "min": 180.0,
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 17284.0,
-    "max": 17284.0
+    "min": 17287.0,
+    "max": 17287.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": true,
+  "price": "17287.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850876764326",
+  "shopify_handle": "on-running-cloud-x-tempo-training-shoe",
+  "shopify_synced_at": "2026-10-03T09:34:41Z"
 }

@@ -28,10 +28,10 @@
 | **JW PEI** | 491 | 🟢 Ingestion Complete | 491 / 491 | 2026-09-29 | 100% of Designer Vegan Leather Handbags Live with multi-color swatch linkage |
 | **Coach** | 573 | 🟢 Ingestion Complete | 573 / 573 | 2026-10-01 | 100% of Handbags, Wallets, and Footwear Live with US/UK size matrix and S7 imagery |
 | **Michael Kors** | 530 | 🟢 Ingestion Complete | 530 / 530 | 2026-10-01 | 100% of Designer Handbags, Eyewear, Belts, and Footwear Live |
-| **Nordstrom** | 238 | 🟡 Ingesting | 92 / 238 | 2026-09-30 | Salomon, On Running, HOKA premium athletic footwear |
+| **Nordstrom** | 238 | 🟢 Ingestion Complete | 238 / 238 | 2026-10-03 | 100% of Salomon, On Running, HOKA premium athletic footwear Live |
 | **Foot Locker** | 307 | ⬜ Ready for Ingestion | 0 / 307 | - | Nike, adidas, ASICS sneakers |
 | **JD Sports** | 476 | ⬜ Ready for Ingestion | 0 / 476 | - | Nike Footwear & Streetwear |
-| **TOTAL** | **3,189** | - | **2,260 / 3,189** | - | **70.9% Ingested (Target: 100%)** |
+| **TOTAL** | **3,189** | - | **2,406 / 3,189** | - | **75.5% Ingested (Target: 100%)** |
 
 ---
 

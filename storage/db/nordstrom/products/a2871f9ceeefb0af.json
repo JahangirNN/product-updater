@@ -7,9 +7,9 @@
   "vendor": "NORDSTROM",
   "product_type": "Athletic Shoes",
   "source_sku": "HOKA-8430691-5",
-  "source_price": 116.0,
+  "source_price": 92.8,
   "source_compare_at_price": null,
-  "current_price": 11140.0,
+  "current_price": 8943.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -293,7 +293,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/d1c41a81-3688-480b-a480-c7f07863caa7.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -320,7 +320,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/d1c41a81-3688-480b-a480-c7f07863caa7.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -455,7 +455,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/d1c41a81-3688-480b-a480-c7f07863caa7.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -833,7 +833,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/d4e47a08-60b4-41b6-9ad0-e7d6d0ec3137.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -887,7 +887,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/d4e47a08-60b4-41b6-9ad0-e7d6d0ec3137.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1373,7 +1373,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ab997524-f479-421c-b518-8979bd09d798.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1529,9 +1529,9 @@
       "id": 843069152,
       "sku": "NORDSTROM-8430691-FROS-9.5",
       "title": "US 9.5 / UK 7.5 - Frost / Neon Yuzu",
-      "price": "10435.00",
+      "price": "8385.00",
       "compare_at_price": "13914.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1550,7 +1550,8 @@
           "option_name": "Color",
           "name": "Frost / Neon Yuzu"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069153,
@@ -1610,9 +1611,9 @@
       "id": 843069155,
       "sku": "NORDSTROM-8430691-FROS-7",
       "title": "US 7 / UK 5 - Frost / Neon Yuzu",
-      "price": "10435.00",
+      "price": "8385.00",
       "compare_at_price": "13914.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1631,7 +1632,8 @@
           "option_name": "Color",
           "name": "Frost / Neon Yuzu"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069156,
@@ -1664,9 +1666,9 @@
       "id": 843069157,
       "sku": "NORDSTROM-8430691-FROS-8",
       "title": "US 8 / UK 6 - Frost / Neon Yuzu",
-      "price": "10435.00",
+      "price": "8385.00",
       "compare_at_price": "13914.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1685,15 +1687,16 @@
           "option_name": "Color",
           "name": "Frost / Neon Yuzu"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069158,
       "sku": "NORDSTROM-8430691-FROS-5.5",
       "title": "US 5.5 / UK 3.5 - Frost / Neon Yuzu",
-      "price": "10435.00",
+      "price": "8385.00",
       "compare_at_price": "13914.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1712,7 +1715,8 @@
           "option_name": "Color",
           "name": "Frost / Neon Yuzu"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069159,
@@ -1799,9 +1803,9 @@
       "id": 843069162,
       "sku": "NORDSTROM-8430691-FROS-10.5",
       "title": "US 10.5 / UK 8.5 - Frost / Neon Yuzu",
-      "price": "10435.00",
+      "price": "8385.00",
       "compare_at_price": "13914.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1820,15 +1824,16 @@
           "option_name": "Color",
           "name": "Frost / Neon Yuzu"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069163,
       "sku": "NORDSTROM-8430691-FROS-7.5",
       "title": "US 7.5 / UK 5.5 - Frost / Neon Yuzu",
-      "price": "10435.00",
+      "price": "8385.00",
       "compare_at_price": "13914.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1847,15 +1852,16 @@
           "option_name": "Color",
           "name": "Frost / Neon Yuzu"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069164,
       "sku": "NORDSTROM-8430691-FROS-9",
       "title": "US 9 / UK 7 - Frost / Neon Yuzu",
-      "price": "10435.00",
+      "price": "8385.00",
       "compare_at_price": "13914.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1874,7 +1880,8 @@
           "option_name": "Color",
           "name": "Frost / Neon Yuzu"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069165,
@@ -1907,9 +1914,9 @@
       "id": 843069166,
       "sku": "NORDSTROM-8430691-FROS-7.5",
       "title": "US 7.5 / UK 5.5 - Frost / Rose Gold",
-      "price": "10435.00",
+      "price": "8385.00",
       "compare_at_price": "13914.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1928,15 +1935,16 @@
           "option_name": "Color",
           "name": "Frost / Rose Gold"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069167,
       "sku": "NORDSTROM-8430691-FROS-5.5",
       "title": "US 5.5 / UK 3.5 - Frost / Rose Gold",
-      "price": "10435.00",
+      "price": "8385.00",
       "compare_at_price": "13914.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1955,15 +1963,16 @@
           "option_name": "Color",
           "name": "Frost / Rose Gold"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069168,
       "sku": "NORDSTROM-8430691-FROS-7",
       "title": "US 7 / UK 5 - Frost / Rose Gold",
-      "price": "10435.00",
+      "price": "8385.00",
       "compare_at_price": "13914.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1982,15 +1991,16 @@
           "option_name": "Color",
           "name": "Frost / Rose Gold"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069169,
       "sku": "NORDSTROM-8430691-FROS-9",
       "title": "US 9 / UK 7 - Frost / Rose Gold",
-      "price": "10435.00",
+      "price": "8385.00",
       "compare_at_price": "13914.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2009,15 +2019,16 @@
           "option_name": "Color",
           "name": "Frost / Rose Gold"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069170,
       "sku": "NORDSTROM-8430691-FROS-7.5",
       "title": "US 7.5 / UK 5.5 - Frost / Rose Gold",
-      "price": "10439.00",
+      "price": "8385.00",
       "compare_at_price": "13918.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2036,7 +2047,8 @@
           "option_name": "Color",
           "name": "Frost / Rose Gold"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069171,
@@ -2069,9 +2081,9 @@
       "id": 843069172,
       "sku": "NORDSTROM-8430691-FROS-10.5",
       "title": "US 10.5 / UK 8.5 - Frost / Rose Gold",
-      "price": "10435.00",
+      "price": "8385.00",
       "compare_at_price": "13914.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2090,15 +2102,16 @@
           "option_name": "Color",
           "name": "Frost / Rose Gold"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069173,
       "sku": "NORDSTROM-8430691-FROS-8",
       "title": "US 8 / UK 6 - Frost / Rose Gold",
-      "price": "10435.00",
+      "price": "8385.00",
       "compare_at_price": "13914.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2117,15 +2130,16 @@
           "option_name": "Color",
           "name": "Frost / Rose Gold"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069174,
       "sku": "NORDSTROM-8430691-FROS-7",
       "title": "US 7 / UK 5 - Frost / Rose Gold",
-      "price": "10439.00",
+      "price": "8385.00",
       "compare_at_price": "13918.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2144,15 +2158,16 @@
           "option_name": "Color",
           "name": "Frost / Rose Gold"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069175,
       "sku": "NORDSTROM-8430691-FROS-9",
       "title": "US 9 / UK 7 - Frost / Rose Gold",
-      "price": "10439.00",
+      "price": "8385.00",
       "compare_at_price": "13918.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2171,15 +2186,16 @@
           "option_name": "Color",
           "name": "Frost / Rose Gold"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069176,
       "sku": "NORDSTROM-8430691-FROS-9.5",
       "title": "US 9.5 / UK 7.5 - Frost / Rose Gold",
-      "price": "10435.00",
+      "price": "8385.00",
       "compare_at_price": "13914.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2198,7 +2214,8 @@
           "option_name": "Color",
           "name": "Frost / Rose Gold"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069177,
@@ -2312,9 +2329,9 @@
       "id": 843069181,
       "sku": "NORDSTROM-8430691-FROS-10.5",
       "title": "US 10.5 / UK 8.5 - Frost / Rose Gold",
-      "price": "10439.00",
+      "price": "8385.00",
       "compare_at_price": "13918.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2333,7 +2350,8 @@
           "option_name": "Color",
           "name": "Frost / Rose Gold"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069182,
@@ -2366,9 +2384,9 @@
       "id": 843069183,
       "sku": "NORDSTROM-8430691-FROS-8",
       "title": "US 8 / UK 6 - Frost / Rose Gold",
-      "price": "10439.00",
+      "price": "8385.00",
       "compare_at_price": "13918.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2387,7 +2405,8 @@
           "option_name": "Color",
           "name": "Frost / Rose Gold"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069184,
@@ -2420,9 +2439,9 @@
       "id": 843069185,
       "sku": "NORDSTROM-8430691-FROS-5.5",
       "title": "US 5.5 / UK 3.5 - Frost / Rose Gold",
-      "price": "10439.00",
+      "price": "8385.00",
       "compare_at_price": "13918.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2441,7 +2460,8 @@
           "option_name": "Color",
           "name": "Frost / Rose Gold"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069186,
@@ -2555,9 +2575,9 @@
       "id": 843069190,
       "sku": "NORDSTROM-8430691-FROS-9.5",
       "title": "US 9.5 / UK 7.5 - Frost / Rose Gold",
-      "price": "10439.00",
+      "price": "8385.00",
       "compare_at_price": "13918.00",
-      "source_price": 108.75,
+      "source_price": 87.0,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2576,7 +2596,8 @@
           "option_name": "Color",
           "name": "Frost / Rose Gold"
         }
-      ]
+      ],
+      "price_current": 8385.0
     },
     {
       "id": 843069191,
@@ -2885,7 +2906,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/4ee9063b-cf48-4beb-8917-259bf4a34065.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -3182,7 +3203,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/4ee9063b-cf48-4beb-8917-259bf4a34065.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5126,7 +5147,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/416b7c3e-ae53-4356-8adb-12f8b3d8bd94.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5153,7 +5174,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/416b7c3e-ae53-4356-8adb-12f8b3d8bd94.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5180,7 +5201,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/416b7c3e-ae53-4356-8adb-12f8b3d8bd94.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5390,13 +5411,13 @@
       "id": 8430691195,
       "sku": "NORDSTROM-8430691-LING-6",
       "title": "US 6 / UK 4 - Lingonberry / Cranberry",
-      "price": "11131.00",
+      "price": "8944.00",
       "compare_at_price": "13914.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/104d5d82-d716-4e8e-9613-5ac70df11897.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5411,19 +5432,20 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691196,
       "sku": "NORDSTROM-8430691-LING-5",
       "title": "US 5 / UK 3 - Lingonberry / Cranberry",
-      "price": "11131.00",
+      "price": "8944.00",
       "compare_at_price": "13914.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/104d5d82-d716-4e8e-9613-5ac70df11897.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5438,15 +5460,16 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691197,
       "sku": "NORDSTROM-8430691-LING-10",
       "title": "US 10 / UK 8 - Lingonberry / Cranberry",
-      "price": "11131.00",
+      "price": "8944.00",
       "compare_at_price": "13914.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -5465,7 +5488,8 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691198,
@@ -5525,13 +5549,13 @@
       "id": 8430691200,
       "sku": "NORDSTROM-8430691-LING-7.5",
       "title": "US 7.5 / UK 5.5 - Lingonberry / Cranberry",
-      "price": "11131.00",
+      "price": "8944.00",
       "compare_at_price": "13914.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/104d5d82-d716-4e8e-9613-5ac70df11897.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5546,7 +5570,8 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691201,
@@ -5579,9 +5604,9 @@
       "id": 8430691202,
       "sku": "NORDSTROM-8430691-LING-8",
       "title": "US 8 / UK 6 - Lingonberry / Cranberry",
-      "price": "11131.00",
+      "price": "8944.00",
       "compare_at_price": "13914.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -5600,19 +5625,20 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691203,
       "sku": "NORDSTROM-8430691-LING-6",
       "title": "US 6 / UK 4 - Lingonberry / Cranberry",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/104d5d82-d716-4e8e-9613-5ac70df11897.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5627,7 +5653,8 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691204,
@@ -5660,9 +5687,9 @@
       "id": 8430691205,
       "sku": "NORDSTROM-8430691-LING-10.5",
       "title": "US 10.5 / UK 8.5 - Lingonberry / Cranberry",
-      "price": "11131.00",
+      "price": "8944.00",
       "compare_at_price": "13914.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -5681,19 +5708,20 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691206,
       "sku": "NORDSTROM-8430691-LING-7",
       "title": "US 7 / UK 5 - Lingonberry / Cranberry",
-      "price": "11131.00",
+      "price": "8944.00",
       "compare_at_price": "13914.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/104d5d82-d716-4e8e-9613-5ac70df11897.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5708,7 +5736,8 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691207,
@@ -5720,7 +5749,7 @@
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/104d5d82-d716-4e8e-9613-5ac70df11897.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5741,9 +5770,9 @@
       "id": 8430691208,
       "sku": "NORDSTROM-8430691-LING-8",
       "title": "US 8 / UK 6 - Lingonberry / Cranberry",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -5762,19 +5791,20 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691209,
       "sku": "NORDSTROM-8430691-LING-6.5",
       "title": "US 6.5 / UK 4.5 - Lingonberry / Cranberry",
-      "price": "11131.00",
+      "price": "8944.00",
       "compare_at_price": "13914.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/104d5d82-d716-4e8e-9613-5ac70df11897.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5789,19 +5819,20 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691210,
       "sku": "NORDSTROM-8430691-LING-5",
       "title": "US 5 / UK 3 - Lingonberry / Cranberry",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/104d5d82-d716-4e8e-9613-5ac70df11897.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5816,19 +5847,20 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691211,
       "sku": "NORDSTROM-8430691-LING-7",
       "title": "US 7 / UK 5 - Lingonberry / Cranberry",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/104d5d82-d716-4e8e-9613-5ac70df11897.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5843,19 +5875,20 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691212,
       "sku": "NORDSTROM-8430691-LING-6.5",
       "title": "US 6.5 / UK 4.5 - Lingonberry / Cranberry",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/104d5d82-d716-4e8e-9613-5ac70df11897.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5870,19 +5903,20 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691213,
       "sku": "NORDSTROM-8430691-LING-8.5",
       "title": "US 8.5 / UK 6.5 - Lingonberry / Cranberry",
-      "price": "11131.00",
+      "price": "8944.00",
       "compare_at_price": "13914.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/104d5d82-d716-4e8e-9613-5ac70df11897.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5897,7 +5931,8 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691214,
@@ -5930,9 +5965,9 @@
       "id": 8430691215,
       "sku": "NORDSTROM-8430691-LING-10.5",
       "title": "US 10.5 / UK 8.5 - Lingonberry / Cranberry",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -5951,19 +5986,20 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691216,
       "sku": "NORDSTROM-8430691-LING-8.5",
       "title": "US 8.5 / UK 6.5 - Lingonberry / Cranberry",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/104d5d82-d716-4e8e-9613-5ac70df11897.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -5978,7 +6014,8 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691217,
@@ -6011,9 +6048,9 @@
       "id": 8430691218,
       "sku": "NORDSTROM-8430691-LING-10",
       "title": "US 10 / UK 8 - Lingonberry / Cranberry",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6032,19 +6069,20 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691219,
       "sku": "NORDSTROM-8430691-LING-7.5",
       "title": "US 7.5 / UK 5.5 - Lingonberry / Cranberry",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/104d5d82-d716-4e8e-9613-5ac70df11897.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -6059,7 +6097,8 @@
           "option_name": "Color",
           "name": "Lingonberry / Cranberry"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691220,
@@ -6071,7 +6110,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/104d5d82-d716-4e8e-9613-5ac70df11897.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -6152,7 +6191,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/456d0c97-07e1-4bcb-8cf2-1bbbfeb808b7.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -6422,7 +6461,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/456d0c97-07e1-4bcb-8cf2-1bbbfeb808b7.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -6443,9 +6482,9 @@
       "id": 8430691234,
       "sku": "NORDSTROM-8430691-ALAB-6.5",
       "title": "US 6.5 / UK 4.5 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6464,15 +6503,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691235,
       "sku": "NORDSTROM-8430691-ALAB-10",
       "title": "US 10 / UK 8 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6491,15 +6531,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691236,
       "sku": "NORDSTROM-8430691-ALAB-6",
       "title": "US 6 / UK 4 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6518,15 +6559,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691237,
       "sku": "NORDSTROM-8430691-ALAB-5",
       "title": "US 5 / UK 3 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6545,15 +6587,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691238,
       "sku": "NORDSTROM-8430691-ALAB-9.5",
       "title": "US 9.5 / UK 7.5 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6572,15 +6615,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691239,
       "sku": "NORDSTROM-8430691-ALAB-9",
       "title": "US 9 / UK 7 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6599,15 +6643,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691240,
       "sku": "NORDSTROM-8430691-ALAB-7",
       "title": "US 7 / UK 5 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6626,15 +6671,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691241,
       "sku": "NORDSTROM-8430691-ALAB-9",
       "title": "US 9 / UK 7 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6653,15 +6699,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691242,
       "sku": "NORDSTROM-8430691-ALAB-6.5",
       "title": "US 6.5 / UK 4.5 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6680,15 +6727,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691243,
       "sku": "NORDSTROM-8430691-ALAB-5.5",
       "title": "US 5.5 / UK 3.5 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6707,15 +6755,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691244,
       "sku": "NORDSTROM-8430691-ALAB-7.5",
       "title": "US 7.5 / UK 5.5 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6734,15 +6783,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691245,
       "sku": "NORDSTROM-8430691-ALAB-10",
       "title": "US 10 / UK 8 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6761,15 +6811,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691246,
       "sku": "NORDSTROM-8430691-ALAB-5",
       "title": "US 5 / UK 3 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6788,15 +6839,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691247,
       "sku": "NORDSTROM-8430691-ALAB-11",
       "title": "US 11 / UK 9 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6815,15 +6867,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691248,
       "sku": "NORDSTROM-8430691-ALAB-8.5",
       "title": "US 8.5 / UK 6.5 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6842,15 +6895,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691249,
       "sku": "NORDSTROM-8430691-ALAB-5.5",
       "title": "US 5.5 / UK 3.5 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6869,15 +6923,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691250,
       "sku": "NORDSTROM-8430691-ALAB-11",
       "title": "US 11 / UK 9 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6896,19 +6951,20 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691251,
       "sku": "NORDSTROM-8430691-ALAB-10.5",
       "title": "US 10.5 / UK 8.5 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/02407f01-d9f9-42a6-8e88-4313c7754b98.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -6923,15 +6979,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691252,
       "sku": "NORDSTROM-8430691-ALAB-7",
       "title": "US 7 / UK 5 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6950,15 +7007,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691253,
       "sku": "NORDSTROM-8430691-ALAB-8.5",
       "title": "US 8.5 / UK 6.5 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -6977,15 +7035,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691254,
       "sku": "NORDSTROM-8430691-ALAB-8",
       "title": "US 8 / UK 6 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -7004,15 +7063,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691255,
       "sku": "NORDSTROM-8430691-ALAB-9.5",
       "title": "US 9.5 / UK 7.5 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -7031,15 +7091,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691256,
       "sku": "NORDSTROM-8430691-ALAB-7.5",
       "title": "US 7.5 / UK 5.5 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -7058,19 +7119,20 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691257,
       "sku": "NORDSTROM-8430691-ALAB-10.5",
       "title": "US 10.5 / UK 8.5 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/02407f01-d9f9-42a6-8e88-4313c7754b98.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -7085,15 +7147,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691258,
       "sku": "NORDSTROM-8430691-ALAB-6",
       "title": "US 6 / UK 4 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -7112,15 +7175,16 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     },
     {
       "id": 8430691259,
       "sku": "NORDSTROM-8430691-ALAB-8",
       "title": "US 8 / UK 6 - Alabaster / Soaring Blue",
-      "price": "11135.00",
+      "price": "8944.00",
       "compare_at_price": "13918.00",
-      "source_price": 116.0,
+      "source_price": 92.8,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -7139,7 +7203,8 @@
           "option_name": "Color",
           "name": "Alabaster / Soaring Blue"
         }
-      ]
+      ],
+      "price_current": 8944.0
     }
   ],
   "product_options": [
@@ -7289,19 +7354,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:33:09Z",
+  "last_verified_at": "2026-10-03T09:32:19Z",
   "created_at": "2026-09-17T14:57:58Z",
-  "updated_at": "2026-09-22T05:33:09Z",
+  "updated_at": "2026-10-03T09:32:19Z",
   "price_range_usd": {
-    "min": 108.75,
+    "min": 87.0,
     "max": 145.0
   },
   "price_range_inr": {
-    "min": 10444.0,
-    "max": 13925.0
+    "min": 8384.0,
+    "max": 13974.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": true,
-  "price": "11140.00"
+  "price": "8943.00",
+  "shopify_product_id": "gid://shopify/Product/15848581791910",
+  "shopify_handle": "mach-7-running-shoe-women",
+  "shopify_synced_at": "2026-10-01T09:22:29Z"
 }

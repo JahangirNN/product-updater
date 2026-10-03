@@ -9,7 +9,7 @@
   "source_sku": "HOKA-9040810-5",
   "source_price": 180.0,
   "source_compare_at_price": null,
-  "current_price": 17284.0,
+  "current_price": 17291.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -539,17 +539,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:32:11Z",
+  "last_verified_at": "2026-10-03T09:28:59Z",
   "created_at": "2026-09-18T07:01:46Z",
-  "updated_at": "2026-09-22T05:32:11Z",
+  "updated_at": "2026-10-03T09:28:59Z",
   "price_range_usd": {
     "min": 180.0,
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 17284.0,
-    "max": 17284.0
+    "min": 17291.0,
+    "max": 17291.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": true,
+  "price": "17291.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850878435494",
+  "shopify_handle": "mafate-speed-4-lite-sneaker-women-hoka-9040810-5",
+  "shopify_synced_at": "2026-10-03T09:36:57Z"
 }

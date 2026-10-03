@@ -7,10 +7,10 @@
   "vendor": "On",
   "product_type": "Athletic Shoes",
   "source_sku": "ON-8389452-7",
-  "source_price": 150.0,
+  "source_price": 140.0,
   "source_compare_at_price": 150.0,
-  "current_price": 14394.0,
-  "compare_at_price": 14394.0,
+  "current_price": 13493.0,
+  "compare_at_price": 14457.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -41,13 +41,13 @@
       "id": 838945200,
       "sku": "ON-8389452-7",
       "title": "US 7 / UK 6.5 - Indigo Black",
-      "price": "14398.00",
+      "price": "8674.00",
       "compare_at_price": null,
-      "source_price": 150.0,
+      "source_price": 90.0,
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/37903746-32c2-4a3b-b90f-a584ff2fc1bd.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -62,13 +62,14 @@
           "option_name": "Color",
           "name": "Indigo Black"
         }
-      ]
+      ],
+      "price_current": 8674.0
     },
     {
       "id": 838945201,
       "sku": "ON-8389452-8",
       "title": "US 8 / UK 7.5 - Indigo Black",
-      "price": "14398.00",
+      "price": "14457.00",
       "compare_at_price": null,
       "source_price": 150.0,
       "source_compare_at_price": 150.0,
@@ -89,13 +90,14 @@
           "option_name": "Color",
           "name": "Indigo Black"
         }
-      ]
+      ],
+      "price_current": 14457.0
     },
     {
       "id": 838945202,
       "sku": "ON-8389452-8.5",
       "title": "US 8.5 / UK 8 - Indigo Black",
-      "price": "14398.00",
+      "price": "14457.00",
       "compare_at_price": null,
       "source_price": 150.0,
       "source_compare_at_price": 150.0,
@@ -116,15 +118,16 @@
           "option_name": "Color",
           "name": "Indigo Black"
         }
-      ]
+      ],
+      "price_current": 14457.0
     },
     {
       "id": 838945203,
       "sku": "ON-8389452-9",
       "title": "US 9 / UK 8.5 - Indigo Black",
-      "price": "14398.00",
+      "price": "13422.00",
       "compare_at_price": null,
-      "source_price": 150.0,
+      "source_price": 140.0,
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -143,15 +146,16 @@
           "option_name": "Color",
           "name": "Indigo Black"
         }
-      ]
+      ],
+      "price_current": 13422.0
     },
     {
       "id": 838945204,
       "sku": "ON-8389452-9.5",
       "title": "US 9.5 / UK 9 - Indigo Black",
-      "price": "14398.00",
+      "price": "13422.00",
       "compare_at_price": null,
-      "source_price": 150.0,
+      "source_price": 140.0,
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -170,15 +174,16 @@
           "option_name": "Color",
           "name": "Indigo Black"
         }
-      ]
+      ],
+      "price_current": 13422.0
     },
     {
       "id": 838945205,
       "sku": "ON-8389452-10",
       "title": "US 10 / UK 9.5 - Indigo Black",
-      "price": "14398.00",
+      "price": "13422.00",
       "compare_at_price": null,
-      "source_price": 150.0,
+      "source_price": 140.0,
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -197,7 +202,8 @@
           "option_name": "Color",
           "name": "Indigo Black"
         }
-      ]
+      ],
+      "price_current": 13422.0
     },
     {
       "id": 838945206,
@@ -378,11 +384,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:25:57Z",
+  "last_verified_at": "2026-10-03T09:27:46Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-09-22T06:25:57Z",
+  "updated_at": "2026-10-03T09:27:46Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "price_range_usd": {
+    "min": 90.0,
+    "max": 150.0
+  },
+  "price_range_inr": {
+    "min": 8674.0,
+    "max": 14457.0
+  },
+  "price": "13493.00",
+  "shopify_product_id": "gid://shopify/Product/15850878173350",
+  "shopify_handle": "on-running-cloudzone-sneaker-men",
+  "shopify_synced_at": "2026-10-03T09:36:39Z"
 }

@@ -9,7 +9,7 @@
   "source_sku": "HOKA-8432588-6",
   "source_price": 155.0,
   "source_compare_at_price": null,
-  "current_price": 14883.0,
+  "current_price": 14869.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -686,7 +686,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/264b41d2-189d-43c1-afb2-a7c2af890f1f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1138,17 +1138,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:25:01Z",
+  "last_verified_at": "2026-10-03T08:23:56Z",
   "created_at": "2026-09-18T07:00:32Z",
-  "updated_at": "2026-09-22T05:25:01Z",
+  "updated_at": "2026-10-03T08:23:56Z",
   "price_range_usd": {
     "min": 155.0,
     "max": 155.0
   },
   "price_range_inr": {
-    "min": 14883.0,
-    "max": 14883.0
+    "min": 14869.0,
+    "max": 14869.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": true,
+  "price": "14869.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850876240038",
+  "shopify_handle": "clifton-one9-aerino-sneaker-women",
+  "shopify_synced_at": "2026-10-03T09:33:55Z"
 }

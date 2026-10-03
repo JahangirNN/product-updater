@@ -7,9 +7,9 @@
   "vendor": "NORDSTROM",
   "product_type": "Athletic Shoes",
   "source_sku": "HOKA-8131937-5",
-  "source_price": 142.5,
+  "source_price": 114.0,
   "source_compare_at_price": null,
-  "current_price": 13685.0,
+  "current_price": 10986.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -141,7 +141,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/5463c1c9-76f8-4a4b-8f83-b84d7e8b0fa7.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -546,7 +546,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/3b693680-f7ca-4ab3-890a-c3ea19d5e5d1.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -627,7 +627,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/3b693680-f7ca-4ab3-890a-c3ea19d5e5d1.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -681,7 +681,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/3b693680-f7ca-4ab3-890a-c3ea19d5e5d1.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -735,7 +735,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/3b693680-f7ca-4ab3-890a-c3ea19d5e5d1.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -870,7 +870,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1f9475e9-b6ce-4626-81e9-ae3c2be95135.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1188,9 +1188,9 @@
       "id": 813193741,
       "sku": "NORDSTROM-8131937-OYST-8",
       "title": "US 8 / UK 6 - Oyster Mushroom / Yellow",
-      "price": "13678.00",
+      "price": "10987.00",
       "compare_at_price": "18238.00",
-      "source_price": 142.5,
+      "source_price": 114.0,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1209,15 +1209,16 @@
           "option_name": "Color",
           "name": "Oyster Mushroom / Yellow"
         }
-      ]
+      ],
+      "price_current": 10987.0
     },
     {
       "id": 813193742,
       "sku": "NORDSTROM-8131937-OYST-9.5",
       "title": "US 9.5 / UK 7.5 - Oyster Mushroom / Yellow",
-      "price": "13678.00",
+      "price": "10987.00",
       "compare_at_price": "18238.00",
-      "source_price": 142.5,
+      "source_price": 114.0,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1236,15 +1237,16 @@
           "option_name": "Color",
           "name": "Oyster Mushroom / Yellow"
         }
-      ]
+      ],
+      "price_current": 10987.0
     },
     {
       "id": 813193743,
       "sku": "NORDSTROM-8131937-OYST-10",
       "title": "US 10 / UK 8 - Oyster Mushroom / Yellow",
-      "price": "13678.00",
+      "price": "10987.00",
       "compare_at_price": "18238.00",
-      "source_price": 142.5,
+      "source_price": 114.0,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1263,7 +1265,8 @@
           "option_name": "Color",
           "name": "Oyster Mushroom / Yellow"
         }
-      ]
+      ],
+      "price_current": 10987.0
     },
     {
       "id": 813193744,
@@ -1296,13 +1299,13 @@
       "id": 813193745,
       "sku": "NORDSTROM-8131937-OYST-10.5",
       "title": "US 10.5 / UK 8.5 - Oyster Mushroom / Yellow",
-      "price": "13678.00",
+      "price": "10987.00",
       "compare_at_price": "18238.00",
-      "source_price": 142.5,
+      "source_price": 114.0,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/bfef6a21-5f82-4f0c-9b76-4666d3ca8654.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1317,7 +1320,8 @@
           "option_name": "Color",
           "name": "Oyster Mushroom / Yellow"
         }
-      ]
+      ],
+      "price_current": 10987.0
     },
     {
       "id": 813193746,
@@ -1377,9 +1381,9 @@
       "id": 813193748,
       "sku": "NORDSTROM-8131937-OYST-5",
       "title": "US 5 / UK 3 - Oyster Mushroom / Yellow",
-      "price": "13678.00",
+      "price": "10987.00",
       "compare_at_price": "18238.00",
-      "source_price": 142.5,
+      "source_price": 114.0,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1398,19 +1402,20 @@
           "option_name": "Color",
           "name": "Oyster Mushroom / Yellow"
         }
-      ]
+      ],
+      "price_current": 10987.0
     },
     {
       "id": 813193749,
       "sku": "NORDSTROM-8131937-OYST-11",
       "title": "US 11 / UK 9 - Oyster Mushroom / Yellow",
-      "price": "13678.00",
+      "price": "10987.00",
       "compare_at_price": "18238.00",
-      "source_price": 142.5,
+      "source_price": 114.0,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/bfef6a21-5f82-4f0c-9b76-4666d3ca8654.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1425,7 +1430,8 @@
           "option_name": "Color",
           "name": "Oyster Mushroom / Yellow"
         }
-      ]
+      ],
+      "price_current": 10987.0
     },
     {
       "id": 813193750,
@@ -1458,9 +1464,9 @@
       "id": 813193751,
       "sku": "NORDSTROM-8131937-OYST-6.5",
       "title": "US 6.5 / UK 4.5 - Oyster Mushroom / Yellow",
-      "price": "13678.00",
+      "price": "10987.00",
       "compare_at_price": "18238.00",
-      "source_price": 142.5,
+      "source_price": 114.0,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1479,7 +1485,8 @@
           "option_name": "Color",
           "name": "Oyster Mushroom / Yellow"
         }
-      ]
+      ],
+      "price_current": 10987.0
     },
     {
       "id": 813193752,
@@ -1680,7 +1687,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/81a4ee2e-e72f-4f5c-a987-5102fea0f706.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1836,9 +1843,9 @@
       "id": 813193765,
       "sku": "NORDSTROM-8131937-FRAG-8.5",
       "title": "US 8.5 / UK 6.5 - Fragrant Lilac / Lilac Cream",
-      "price": "14590.00",
+      "price": "11720.00",
       "compare_at_price": "18238.00",
-      "source_price": 152.0,
+      "source_price": 121.6,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1857,15 +1864,16 @@
           "option_name": "Color",
           "name": "Fragrant Lilac / Lilac Cream"
         }
-      ]
+      ],
+      "price_current": 11720.0
     },
     {
       "id": 813193766,
       "sku": "NORDSTROM-8131937-FRAG-10.5",
       "title": "US 10.5 / UK 8.5 - Fragrant Lilac / Lilac Cream",
-      "price": "14590.00",
+      "price": "11720.00",
       "compare_at_price": "18238.00",
-      "source_price": 152.0,
+      "source_price": 121.6,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1884,7 +1892,8 @@
           "option_name": "Color",
           "name": "Fragrant Lilac / Lilac Cream"
         }
-      ]
+      ],
+      "price_current": 11720.0
     },
     {
       "id": 813193767,
@@ -1917,13 +1926,13 @@
       "id": 813193768,
       "sku": "NORDSTROM-8131937-FRAG-5.5",
       "title": "US 5.5 / UK 3.5 - Fragrant Lilac / Lilac Cream",
-      "price": "14590.00",
+      "price": "11720.00",
       "compare_at_price": "18238.00",
-      "source_price": 152.0,
+      "source_price": 121.6,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/c532cc99-0c67-4cd2-afc7-8dbe5986ce6c.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1938,15 +1947,16 @@
           "option_name": "Color",
           "name": "Fragrant Lilac / Lilac Cream"
         }
-      ]
+      ],
+      "price_current": 11720.0
     },
     {
       "id": 813193769,
       "sku": "NORDSTROM-8131937-FRAG-9.5",
       "title": "US 9.5 / UK 7.5 - Fragrant Lilac / Lilac Cream",
-      "price": "14590.00",
+      "price": "11720.00",
       "compare_at_price": "18238.00",
-      "source_price": 152.0,
+      "source_price": 121.6,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1965,15 +1975,16 @@
           "option_name": "Color",
           "name": "Fragrant Lilac / Lilac Cream"
         }
-      ]
+      ],
+      "price_current": 11720.0
     },
     {
       "id": 813193770,
       "sku": "NORDSTROM-8131937-FRAG-6.5",
       "title": "US 6.5 / UK 4.5 - Fragrant Lilac / Lilac Cream",
-      "price": "14590.00",
+      "price": "11720.00",
       "compare_at_price": "18238.00",
-      "source_price": 152.0,
+      "source_price": 121.6,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1992,15 +2003,16 @@
           "option_name": "Color",
           "name": "Fragrant Lilac / Lilac Cream"
         }
-      ]
+      ],
+      "price_current": 11720.0
     },
     {
       "id": 813193771,
       "sku": "NORDSTROM-8131937-FRAG-6",
       "title": "US 6 / UK 4 - Fragrant Lilac / Lilac Cream",
-      "price": "14590.00",
+      "price": "11720.00",
       "compare_at_price": "18238.00",
-      "source_price": 152.0,
+      "source_price": 121.6,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2019,15 +2031,16 @@
           "option_name": "Color",
           "name": "Fragrant Lilac / Lilac Cream"
         }
-      ]
+      ],
+      "price_current": 11720.0
     },
     {
       "id": 813193772,
       "sku": "NORDSTROM-8131937-FRAG-10",
       "title": "US 10 / UK 8 - Fragrant Lilac / Lilac Cream",
-      "price": "14590.00",
+      "price": "11720.00",
       "compare_at_price": "18238.00",
-      "source_price": 152.0,
+      "source_price": 121.6,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2046,19 +2059,20 @@
           "option_name": "Color",
           "name": "Fragrant Lilac / Lilac Cream"
         }
-      ]
+      ],
+      "price_current": 11720.0
     },
     {
       "id": 813193773,
       "sku": "NORDSTROM-8131937-FRAG-7.5",
       "title": "US 7.5 / UK 5.5 - Fragrant Lilac / Lilac Cream",
-      "price": "14590.00",
+      "price": "11720.00",
       "compare_at_price": "18238.00",
-      "source_price": 152.0,
+      "source_price": 121.6,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/c532cc99-0c67-4cd2-afc7-8dbe5986ce6c.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2073,15 +2087,16 @@
           "option_name": "Color",
           "name": "Fragrant Lilac / Lilac Cream"
         }
-      ]
+      ],
+      "price_current": 11720.0
     },
     {
       "id": 813193774,
       "sku": "NORDSTROM-8131937-FRAG-11",
       "title": "US 11 / UK 9 - Fragrant Lilac / Lilac Cream",
-      "price": "14590.00",
+      "price": "11720.00",
       "compare_at_price": "18238.00",
-      "source_price": 152.0,
+      "source_price": 121.6,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2100,19 +2115,20 @@
           "option_name": "Color",
           "name": "Fragrant Lilac / Lilac Cream"
         }
-      ]
+      ],
+      "price_current": 11720.0
     },
     {
       "id": 813193775,
       "sku": "NORDSTROM-8131937-FRAG-7",
       "title": "US 7 / UK 5 - Fragrant Lilac / Lilac Cream",
-      "price": "14590.00",
+      "price": "11720.00",
       "compare_at_price": "18238.00",
-      "source_price": 152.0,
+      "source_price": 121.6,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/c532cc99-0c67-4cd2-afc7-8dbe5986ce6c.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2127,15 +2143,16 @@
           "option_name": "Color",
           "name": "Fragrant Lilac / Lilac Cream"
         }
-      ]
+      ],
+      "price_current": 11720.0
     },
     {
       "id": 813193776,
       "sku": "NORDSTROM-8131937-FRAG-9",
       "title": "US 9 / UK 7 - Fragrant Lilac / Lilac Cream",
-      "price": "14590.00",
+      "price": "11720.00",
       "compare_at_price": "18238.00",
-      "source_price": 152.0,
+      "source_price": 121.6,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2154,15 +2171,16 @@
           "option_name": "Color",
           "name": "Fragrant Lilac / Lilac Cream"
         }
-      ]
+      ],
+      "price_current": 11720.0
     },
     {
       "id": 813193777,
       "sku": "NORDSTROM-8131937-FRAG-8",
       "title": "US 8 / UK 6 - Fragrant Lilac / Lilac Cream",
-      "price": "14590.00",
+      "price": "11720.00",
       "compare_at_price": "18238.00",
-      "source_price": 152.0,
+      "source_price": 121.6,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2181,7 +2199,8 @@
           "option_name": "Color",
           "name": "Fragrant Lilac / Lilac Cream"
         }
-      ]
+      ],
+      "price_current": 11720.0
     },
     {
       "id": 813193778,
@@ -2457,9 +2476,9 @@
       "id": 813193788,
       "sku": "NORDSTROM-8131937-ROSE-7.5",
       "title": "US 7.5 / UK 5.5 - Rose Latte / Blush",
-      "price": "14590.00",
+      "price": "11720.00",
       "compare_at_price": "18238.00",
-      "source_price": 152.0,
+      "source_price": 121.6,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2478,7 +2497,8 @@
           "option_name": "Color",
           "name": "Rose Latte / Blush"
         }
-      ]
+      ],
+      "price_current": 11720.0
     },
     {
       "id": 813193789,
@@ -2664,19 +2684,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:30:43Z",
+  "last_verified_at": "2026-10-03T09:25:38Z",
   "created_at": "2026-09-17T15:01:11Z",
-  "updated_at": "2026-09-22T05:30:43Z",
+  "updated_at": "2026-10-03T09:25:38Z",
   "price_range_usd": {
-    "min": 142.5,
+    "min": 114.0,
     "max": 190.0
   },
   "price_range_inr": {
-    "min": 13685.0,
-    "max": 18247.0
+    "min": 10986.0,
+    "max": 18311.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": true,
-  "price": "13685.00"
+  "price": "10986.00",
+  "shopify_product_id": "gid://shopify/Product/15848581333158",
+  "shopify_handle": "transport-chukka-gore-tex-waterproof-trail-shoe-women",
+  "shopify_synced_at": "2026-10-01T09:21:56Z"
 }

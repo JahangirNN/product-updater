@@ -9,8 +9,8 @@
   "source_sku": "HOKA-8735062-5",
   "source_price": 125.0,
   "source_compare_at_price": 125.0,
-  "current_price": 11995.0,
-  "compare_at_price": 11995.0,
+  "current_price": 12000.0,
+  "compare_at_price": 12000.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -262,7 +262,7 @@
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ba54fab3-6bc4-4c60-abfd-615c78273214.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -343,7 +343,7 @@
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ba54fab3-6bc4-4c60-abfd-615c78273214.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -370,7 +370,7 @@
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ba54fab3-6bc4-4c60-abfd-615c78273214.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -509,9 +509,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:34:19Z",
+  "last_verified_at": "2026-10-03T08:29:04Z",
   "created_at": "2026-09-17T14:59:40Z",
-  "updated_at": "2026-09-22T05:34:19Z",
+  "updated_at": "2026-10-03T08:29:04Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -521,7 +521,11 @@
     "max": 125.0
   },
   "price_range_inr": {
-    "min": 11995.0,
-    "max": 11995.0
-  }
+    "min": 12000.0,
+    "max": 12000.0
+  },
+  "price": "12000.00",
+  "shopify_product_id": "gid://shopify/Product/15848582447270",
+  "shopify_handle": "rincon-5-running-shoe",
+  "shopify_synced_at": "2026-10-01T09:23:04Z"
 }

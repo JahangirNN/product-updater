@@ -9,7 +9,7 @@
   "source_sku": "ON-8732811-7",
   "source_price": 160.0,
   "source_compare_at_price": null,
-  "current_price": 15363.0,
+  "current_price": 15360.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -53,7 +53,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/11140f9e-69c5-466c-b8d0-d00b5cbb5219.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -431,7 +431,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/c720580f-01fd-426f-9015-a76976227ef3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -458,7 +458,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/c720580f-01fd-426f-9015-a76976227ef3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -485,7 +485,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/c720580f-01fd-426f-9015-a76976227ef3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -512,7 +512,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/c720580f-01fd-426f-9015-a76976227ef3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -539,7 +539,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/c720580f-01fd-426f-9015-a76976227ef3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -566,7 +566,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/c720580f-01fd-426f-9015-a76976227ef3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -647,7 +647,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/c720580f-01fd-426f-9015-a76976227ef3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -674,7 +674,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/c720580f-01fd-426f-9015-a76976227ef3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -701,7 +701,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/c720580f-01fd-426f-9015-a76976227ef3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -919,17 +919,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:25:11Z",
+  "last_verified_at": "2026-10-03T08:24:05Z",
   "created_at": "2026-09-17T14:19:11Z",
-  "updated_at": "2026-09-22T05:25:11Z",
+  "updated_at": "2026-10-03T08:24:05Z",
   "price_range_usd": {
     "min": 160.0,
     "max": 160.0
   },
   "price_range_inr": {
-    "min": 15363.0,
-    "max": 15363.0
+    "min": 15360.0,
+    "max": 15360.0
   },
   "status": "ACTIVE",
-  "is_active": true
+  "is_active": true,
+  "price": "15360.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850876305574",
+  "shopify_handle": "cloud-x-5-training-shoe-men",
+  "shopify_synced_at": "2026-10-03T09:33:59Z"
 }

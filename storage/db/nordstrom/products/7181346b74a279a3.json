@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-7591540-5.5",
   "source_price": 200.0,
   "source_compare_at_price": 200.0,
-  "current_price": 19191.0,
-  "compare_at_price": 19191.0,
+  "current_price": 19176.0,
+  "compare_at_price": 19176.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -531,9 +531,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T06:26:04Z",
+  "last_verified_at": "2026-10-03T09:27:58Z",
   "created_at": "2026-09-17T18:52:45Z",
-  "updated_at": "2026-09-22T06:26:04Z",
+  "updated_at": "2026-10-03T09:27:58Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -543,7 +543,11 @@
     "max": 200.0
   },
   "price_range_inr": {
-    "min": 19191.0,
-    "max": 19191.0
-  }
+    "min": 19176.0,
+    "max": 19176.0
+  },
+  "price": "19176.00",
+  "shopify_product_id": "gid://shopify/Product/15848585298086",
+  "shopify_handle": "acs-pro-running-shoe-women",
+  "shopify_synced_at": "2026-10-01T09:28:58Z"
 }

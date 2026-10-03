@@ -9,7 +9,7 @@
   "source_sku": "SALOMON-7569954-8",
   "source_price": 190.0,
   "source_compare_at_price": null,
-  "current_price": 18229.0,
+  "current_price": 18239.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -53,7 +53,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/8ce1e8a6-a979-46ce-8a6b-a772e888660c.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -323,7 +323,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/8ce1e8a6-a979-46ce-8a6b-a772e888660c.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -371,13 +371,13 @@
       "id": 756995412,
       "sku": "NORDSTROM-7569954-WHIT-9",
       "title": "US 9 / UK 8.5 - White / Nectarine",
-      "price": "18340.00",
+      "price": "18247.00",
       "compare_at_price": null,
-      "source_price": 191.0,
+      "source_price": 190.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/906d5a0a-6413-424d-a151-d6734f2cba18.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -392,15 +392,16 @@
           "option_name": "Color",
           "name": "White / Nectarine"
         }
-      ]
+      ],
+      "price_current": 18247.0
     },
     {
       "id": 756995413,
       "sku": "NORDSTROM-7569954-WHIT-8.5",
       "title": "US 8.5 / UK 8 - White / Nectarine",
-      "price": "18340.00",
+      "price": "18247.00",
       "compare_at_price": null,
-      "source_price": 191.0,
+      "source_price": 190.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -419,7 +420,8 @@
           "option_name": "Color",
           "name": "White / Nectarine"
         }
-      ]
+      ],
+      "price_current": 18247.0
     },
     {
       "id": 756995414,
@@ -452,9 +454,9 @@
       "id": 756995415,
       "sku": "NORDSTROM-7569954-WHIT-8",
       "title": "US 8 / UK 7.5 - White / Nectarine",
-      "price": "18340.00",
+      "price": "18247.00",
       "compare_at_price": null,
-      "source_price": 191.0,
+      "source_price": 190.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -473,7 +475,8 @@
           "option_name": "Color",
           "name": "White / Nectarine"
         }
-      ]
+      ],
+      "price_current": 18247.0
     },
     {
       "id": 756995416,
@@ -533,9 +536,9 @@
       "id": 756995418,
       "sku": "NORDSTROM-7569954-WHIT-9.5",
       "title": "US 9.5 / UK 9 - White / Nectarine",
-      "price": "18340.00",
+      "price": "18247.00",
       "compare_at_price": null,
-      "source_price": 191.0,
+      "source_price": 190.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -554,7 +557,8 @@
           "option_name": "Color",
           "name": "White / Nectarine"
         }
-      ]
+      ],
+      "price_current": 18247.0
     },
     {
       "id": 756995419,
@@ -799,19 +803,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-09-22T05:30:27Z",
+  "last_verified_at": "2026-10-03T09:24:52Z",
   "created_at": "2026-09-18T06:45:27Z",
-  "updated_at": "2026-09-22T05:30:27Z",
+  "updated_at": "2026-10-03T09:24:52Z",
   "price_range_usd": {
     "min": 190.0,
     "max": 191.0
   },
   "price_range_inr": {
-    "min": 18229.0,
-    "max": 18325.0
+    "min": 18239.0,
+    "max": 18335.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "18229.00",
-  "shopify_sync_pending": true
+  "price": "18239.00",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15850877550758",
+  "shopify_handle": "gender-inclusive-xt-4-og-sneaker",
+  "shopify_synced_at": "2026-10-03T09:35:43Z"
 }
