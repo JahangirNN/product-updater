@@ -3,7 +3,7 @@
 **Store URL**: `https://therareavenue.com` (`hewmvw-am.myshopify.com`)  
 **Store Currency**: Indian Rupee (INR ₹)  
 **Store Protocol**: Shopify Admin GraphQL API (`2026-04`)  
-**Last Updated**: October 2, 2026  
+**Last Updated**: October 3, 2026  
 
 ---
 
@@ -100,5 +100,8 @@
 | **2026-10-01** | Online Store Sales Channel Batch Publication | `996/996 QUEUED & PUBLISHED` to Online Store Publication | `scripts/publish_active_coach_mk.py` |
 | **2026-10-01** | Variant Stock Fallback Parity Bugfix | `FIXED & COMMITTED (54d7541e)`: Out-of-stock variants strictly enforce `DENY` policy | `storage/shopify_taxonomy.py` line 749 |
 | **2026-10-02** | Truly Random Footwear Audit (8 Coach & MK Shoe Models) | `100% PASS` across 96 individual variants (Policy & Whole-Rupee INR) | `scratch/audit_random_shoes_variants.py` |
+| **2026-10-02** | 5-Pillar Storewide Navigation Integration (#197348655270) | `100% DEPLOYED & VERIFIED` (5 desktop columns, mobile drawer accordions) | `snippets/luxury-desktop-nav`, `luxury-sidebar-panels` |
+| **2026-10-03** | Cross-Gender Isolation & Tag Routing Bugfix | `100% PASS` (Multi-tag routing `/men+footwear`, zero cross-gender leaks) | Playwright live storefront test suite |
+| **2026-10-03** | Variant-Level Out-of-Stock Enforcement Verified | `100% PASS` (`inventoryPolicy: "DENY"`, `tracked: true`, button disabled) | `storage/shopify_taxonomy.py` |
 
 

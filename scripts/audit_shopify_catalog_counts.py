@@ -143,22 +143,24 @@ def update_ledger_file(audit_data):
     ]
 
     notes_map = {
-        "jomashop": ("Luxury Watches (Tissot, Citizen, Seiko, Movado, Versace, Ferragamo, MK)", "Completed"),
-        "jwpei": ("68 Canonical Silhouettes (423 sibling clones drafted, variants unified)", "Completed"),
-        "coach": ("Handbags, Crossbody, Shoulder Bags, Satchels, Totes, Wallets, 50 Shoes", "109 Shoes & Sandals, 3 Wallets, 2 Shoulder Bags"),
-        "michaelkors": ("Handbags (234), Wallets (60), Designer Sunglasses (46), 50 Shoes/Flats", "46 Sandals, 40 Sneakers, 20 Shoes, 14 Flats, 12 Belts, 4 Boots"),
-        "nordstrom": ("Salomon Performance Outdoor Footwear (XT-4, XT-6)", "67 On Running, 27 HOKA, 18 Salomon, 34 Nordstrom Curated"),
-        "footlocker": ("None", "122 Nike, 97 adidas Originals, 87 ASICS"),
-        "jdsports": ("None", "476 Nike Footwear, Dunks & Streetwear"),
+        "jomashop": ("Luxury Watches (574 watches: Tissot, Citizen, Seiko, Movado, Versace, Ferragamo, MK)", "Completed"),
+        "jwpei": ("Designer Handbags (68 Canonical PDPs, 423 sibling variants unified)", "Completed"),
+        "coach": ("Handbags, Wallets & Luxury Footwear (159 shoes, 414 bags & wallets)", "Completed"),
+        "michaelkors": ("Designer Handbags (234), Wallets (60), Eyewear (46), Footwear (174), Belts (16)", "Completed"),
+        "nordstrom": ("Salomon Performance Footwear (92 prods live)", "146 remaining: 67 On Running, 27 HOKA, 18 Salomon, 34 Nordstrom"),
+        "footlocker": ("None", "307 remaining: 122 Nike, 97 adidas Originals, 87 ASICS, 1 Brooks"),
+        "jdsports": ("None", "476 remaining: 476 Nike Footwear & Streetwear"),
     }
 
     for s in STORES:
         st = audit_data["stores"][s]
         c_live, c_rem = notes_map.get(s, ("-", "-"))
+        if st["remaining"] == 0:
+            c_rem = "Completed (100%)"
         name = "COACH" if s == "coach" else ("JW PEI" if s == "jwpei" else s.capitalize())
         lines.append(f"| **{name}** | {st['total']} | **{st['synced']}** | **{st['remaining']}** | **{st['percentage']:.1f}%** | {c_live} | {c_rem} |\n")
 
-    lines.append(f"| **TOTAL** | **{tot_loc:,}** | **{tot_sync:,}** | **{tot_rem:,}** | **{pct_sync:.1f}%** | **Watches (574), Bags & Wallets (1,291), Eyewear (46), Footwear (96)** | **Footwear & Streetwear (1,182)** |\n\n")
+    lines.append(f"| **TOTAL** | **{tot_loc:,}** | **{tot_sync:,}** | **{tot_rem:,}** | **{pct_sync:.1f}%** | **Watches (574), Bags & Wallets (1,291), Eyewear (46), Footwear (350)** | **Remaining Footwear & Streetwear (929)** |\n\n")
     lines.append("---\n\n")
     lines.append("## 3. How to Keep This Ledger Updated\n\n")
     lines.append("Whenever new products are added or synced to Shopify, run the dedicated auto-update script:\n")
