@@ -12,8 +12,14 @@ import re
 from typing import Any, Dict, List, Optional, Tuple
 import httpx
 
+try:
+    from curl_cffi import requests as cffi_requests
+    HAS_CURL_CFFI = True
+except ImportError:
+    HAS_CURL_CFFI = False
+
 from storage.network import create_http_client, DEFAULT_BROWSER_HEADERS
-from storage.rate_limiter import acquire_permit, trip_circuit_breaker, parse_retry_after
+from storage.rate_limiter import acquire_permit, trip_circuit_breaker, parse_retry_after, record_throttle, record_success
 from stores.footlocker.inflow import parse_numeric_size
 
 DEFAULT_HEADERS = {
@@ -73,40 +79,55 @@ def check_price_and_stock(
             else:
                 acquire_permit(resolved_store)
 
-            # 2. Network Request
+            # 2. Network Request (prioritize curl_cffi Chrome TLS impersonation)
             resp = None
-            if client:
-                resp = client.get(source_url, headers=DEFAULT_HEADERS, follow_redirects=True, timeout=20.0)
-            else:
-                with httpx.Client() as c:
-                    resp = c.get(source_url, headers=DEFAULT_HEADERS, follow_redirects=True, timeout=20.0)
+            if HAS_CURL_CFFI:
+                try:
+                    resp = cffi_requests.get(source_url, headers=DEFAULT_HEADERS, impersonate="chrome120", timeout=20.0)
+                except Exception:
+                    resp = None
+
+            if resp is None:
+                if client:
+                    resp = client.get(source_url, headers=DEFAULT_HEADERS, follow_redirects=True, timeout=20.0)
+                else:
+                    with httpx.Client() as c:
+                        resp = c.get(source_url, headers=DEFAULT_HEADERS, follow_redirects=True, timeout=20.0)
 
             elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
 
-            # 3. HTTP 429 Handling with Circuit Breaker
-            if resp.status_code == 429:
-                retry_after_sec = parse_retry_after(resp.headers.get("Retry-After"))
-                jitter = random.uniform(1.0, 2.0 * (2 ** attempt))
+            # 3. HTTP 429 / 403 Rate Limiting with Circuit Breaker
+            if resp.status_code in (429, 403):
+                retry_after_sec = parse_retry_after(resp.headers.get("Retry-After"), default_cooldown=60.0)
+                jitter = random.uniform(1.0, 3.0)
                 backoff_duration = retry_after_sec + jitter
 
-                if rate_limiter and callable(getattr(rate_limiter, "trip_circuit_breaker", None)):
-                    try:
-                        rate_limiter.trip_circuit_breaker(resolved_store, backoff_duration)
-                    except TypeError:
-                        rate_limiter.trip_circuit_breaker(backoff_duration)
-                elif isinstance(rate_limiter, dict) and callable(rate_limiter.get("trip_circuit_breaker")):
-                    try:
-                        rate_limiter["trip_circuit_breaker"](resolved_store, backoff_duration)
-                    except TypeError:
-                        rate_limiter["trip_circuit_breaker"](backoff_duration)
+                if rate_limiter and callable(getattr(rate_limiter, "record_throttle", None)):
+                    rate_limiter.record_throttle(resolved_store)
+                elif isinstance(rate_limiter, dict) and callable(rate_limiter.get("record_throttle")):
+                    rate_limiter["record_throttle"]()
                 else:
-                    trip_circuit_breaker(resolved_store, backoff_duration)
+                    record_throttle(resolved_store)
 
-                if attempt < 2:
-                    time.sleep(backoff_duration)
-                    continue
-                else:
-                    break
+                return {
+                    "status": "rate_limited",
+                    "handle": handle,
+                    "availability": old_availability,
+                    "old_availability": old_availability,
+                    "current_source_price": old_source_price,
+                    "old_source_price": old_source_price,
+                    "is_active": (old_availability == "in_stock"),
+                    "price_changed": False,
+                    "stock_changed": False,
+                    "variant_stock_changed": False,
+                    "changed_variants": [],
+                    "variant_price_changed": False,
+                    "changed_variant_prices": [],
+                    "variants_delta": [],
+                    "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                    "elapsed_ms": elapsed_ms,
+                    "message": f"Foot Locker HTTP {resp.status_code} WAF Throttled"
+                }
 
             # 4. HTTP 404 Delisting State Preservation (ADR 0008, ADR 0010, ADR 0015)
             if resp.status_code == 404:

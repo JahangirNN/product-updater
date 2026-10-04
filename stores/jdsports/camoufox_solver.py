@@ -46,7 +46,7 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
     t_start = time.perf_counter()
     try:
         setup_camoufox_route_blocking(page)
-        resp = page.goto(url, wait_until="domcontentloaded", timeout=45000)
+        resp = page.goto(url, wait_until="domcontentloaded", timeout=20000)
         status_code = resp.status if resp else 0
 
         if status_code == 404:
@@ -73,7 +73,7 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
 
         # Poll live DOM for ProductGroup / Product JSON-LD
         pg = None
-        for _ in range(24):  # up to 12 seconds max wait for React hydration
+        for _ in range(10):  # up to 5 seconds max wait for React hydration
             try:
                 pg = page.evaluate("""() => {
                     const scripts = Array.from(document.querySelectorAll('script[type="application/ld+json"]'));

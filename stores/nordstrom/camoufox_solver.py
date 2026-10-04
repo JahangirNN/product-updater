@@ -50,8 +50,8 @@ def fetch_collection_catalog(page: Any) -> Dict[str, Dict[str, Any]]:
 
     for c_url in collection_urls:
         try:
-            page.goto(c_url, wait_until="domcontentloaded", timeout=45000)
-            for _ in range(12):
+            page.goto(c_url, wait_until="domcontentloaded", timeout=25000)
+            for _ in range(6):
                 page.wait_for_timeout(1000)
                 html = page.content()
                 if "istlWas" not in html and len(html) > 20000:
@@ -342,7 +342,7 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
         except Exception:
             pass
 
-        for _ in range(20):  # up to 20 x 1000ms = 20s max
+        for _ in range(8):  # up to 8 x 1000ms = 8s max
             page.wait_for_timeout(1000)
             try:
                 html = page.content()

@@ -13,7 +13,7 @@ from typing import Any, Dict, List, Optional, Tuple
 import httpx
 
 from storage.network import create_http_client, DEFAULT_BROWSER_HEADERS
-from storage.rate_limiter import acquire_permit, trip_circuit_breaker, parse_retry_after
+from storage.rate_limiter import acquire_permit, trip_circuit_breaker, parse_retry_after, record_throttle, record_success
 
 DEFAULT_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
@@ -86,6 +86,13 @@ def check_price_and_stock(
         elapsed_ms = solve_res.get("elapsed_ms", round((time.perf_counter() - t_start) * 1000, 2))
 
         if status == "success":
+            if rate_limiter and callable(getattr(rate_limiter, "record_success", None)):
+                rate_limiter.record_success(resolved_store)
+            elif isinstance(rate_limiter, dict) and callable(rate_limiter.get("record_success")):
+                rate_limiter["record_success"]()
+            else:
+                record_success(resolved_store)
+
             raw_extracted_variants = solve_res.get("variants", [])
             new_source_price = float(solve_res.get("price_usd") or 0.0)
             if new_source_price <= 0.0:
@@ -197,6 +204,13 @@ def check_price_and_stock(
             }
 
         elif status in ("rate_limited", "blocked"):
+            if rate_limiter and callable(getattr(rate_limiter, "record_throttle", None)):
+                rate_limiter.record_throttle(resolved_store)
+            elif isinstance(rate_limiter, dict) and callable(rate_limiter.get("record_throttle")):
+                rate_limiter["record_throttle"]()
+            else:
+                record_throttle(resolved_store)
+
             return {
                 "status": "rate_limited",
                 "handle": handle,

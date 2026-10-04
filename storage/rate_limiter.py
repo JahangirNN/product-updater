@@ -8,24 +8,25 @@ import threading
 import email.utils
 from typing import Any, Dict, Optional, Tuple, Union
 
-_STORE_LOCKS: Dict[str, threading.Lock] = {}
+_STORE_LOCKS: Dict[str, threading.RLock] = {}
 _STORE_COOLDOWNS: Dict[str, float] = {}       # store -> epoch timestamp when cooldown ends
 _NEXT_AVAILABLE_TS: Dict[str, float] = {}     # store -> epoch timestamp when next request can proceed
 _STORE_CONFIGS: Dict[str, Dict[str, float]] = {}  # store -> {"requests_per_second": float, "delay_seconds": float}
-_GLOBAL_LOCK = threading.Lock()
+_GLOBAL_LOCK = threading.RLock()
 
 DEFAULT_REQUESTS_PER_SECOND = 2.0
 DEFAULT_DELAY_SECONDS = 0.5
-DEFAULT_COOLDOWN_SECONDS = 30.0
-MAX_COOLDOWN_SECONDS = 300.0  # 5-minute safety cap against infinite lockout
+DEFAULT_COOLDOWN_SECONDS = 60.0
+MAX_COOLDOWN_SECONDS = 1800.0  # 30-minute safety cap for retailer WAF cooldowns
+_CONSECUTIVE_THROTTLES: Dict[str, int] = {}  # store -> consecutive 429/403/block count
 
 
-def _get_store_lock(store_name: str) -> threading.Lock:
-    """Retrieve or initialize a thread lock dedicated to a specific store."""
+def _get_store_lock(store_name: str) -> threading.RLock:
+    """Retrieve or initialize a reentrant thread lock dedicated to a specific store."""
     clean_store = (store_name or "default").strip()
     with _GLOBAL_LOCK:
         if clean_store not in _STORE_LOCKS:
-            _STORE_LOCKS[clean_store] = threading.Lock()
+            _STORE_LOCKS[clean_store] = threading.RLock()
         return _STORE_LOCKS[clean_store]
 
 
@@ -127,6 +128,35 @@ def trip_circuit_breaker(
         return new_cooldown
 
 
+def record_throttle(
+    store_name: str,
+    threshold: int = 2,
+    cooldown_seconds: float = 1200.0
+) -> bool:
+    """
+    Record a rate-limit/block encounter for a store.
+    If consecutive throttles reach threshold, automatically trips circuit breaker.
+    Returns True if breaker was tripped.
+    """
+    store = (store_name or "default").strip()
+    store_lock = _get_store_lock(store)
+    with store_lock:
+        curr = _CONSECUTIVE_THROTTLES.get(store, 0) + 1
+        _CONSECUTIVE_THROTTLES[store] = curr
+        if curr >= threshold:
+            trip_circuit_breaker(store, cooldown_seconds)
+            return True
+        return False
+
+
+def record_success(store_name: str) -> None:
+    """Reset consecutive throttle counter upon successful response."""
+    store = (store_name or "default").strip()
+    store_lock = _get_store_lock(store)
+    with store_lock:
+        _CONSECUTIVE_THROTTLES[store] = 0
+
+
 def create_store_limiter(store_name: str) -> Dict[str, Any]:
     """
     Pure functional closure-based per-store rate limiter and circuit breaker handle.
@@ -134,12 +164,43 @@ def create_store_limiter(store_name: str) -> Dict[str, Any]:
     Zero classes (ADR 0005, ADR 0010).
     """
     store = (store_name or "default").strip()
+
+    def _safe_acquire(*args, **kwargs):
+        rps = kwargs.get("requests_per_second", kwargs.get("rps"))
+        delay = kwargs.get("delay_seconds", kwargs.get("delay"))
+        for a in args:
+            if isinstance(a, (int, float)):
+                if rps is None:
+                    rps = float(a)
+                elif delay is None:
+                    delay = float(a)
+        return acquire_permit(store, rps, delay)
+
+    def _safe_trip(*args, **kwargs):
+        cd = kwargs.get("cooldown_seconds", kwargs.get("cooldown", DEFAULT_COOLDOWN_SECONDS))
+        for a in args:
+            if isinstance(a, (int, float)):
+                cd = float(a)
+        return trip_circuit_breaker(store, cd)
+
+    def _safe_throttle(*args, **kwargs):
+        th = kwargs.get("threshold", 2)
+        cd = kwargs.get("cooldown_seconds", kwargs.get("cooldown", 1200.0))
+        for a in args:
+            if isinstance(a, int):
+                th = a
+            elif isinstance(a, float):
+                cd = a
+        return record_throttle(store, th, cd)
+
     return {
         "store": store,
-        "acquire_permit": lambda rps=None, delay=None: acquire_permit(store, rps, delay),
-        "trip_circuit_breaker": lambda cooldown=DEFAULT_COOLDOWN_SECONDS: trip_circuit_breaker(store, cooldown),
+        "acquire_permit": _safe_acquire,
+        "trip_circuit_breaker": _safe_trip,
         "is_circuit_open": lambda: is_circuit_open(store),
         "get_cooldown_remaining": lambda: get_cooldown_remaining(store),
+        "record_throttle": _safe_throttle,
+        "record_success": lambda: record_success(store),
         "configure": lambda rps=DEFAULT_REQUESTS_PER_SECOND, delay=DEFAULT_DELAY_SECONDS: configure_store_rate_limits(store, rps, delay),
         "get_limits": lambda: get_store_rate_limits(store)
     }
@@ -166,51 +227,51 @@ def get_cooldown_remaining(store_name: str) -> float:
         return max(0.0, remaining)
 
 
+class CircuitBreakerOpenError(Exception):
+    """Raised when request permit is denied due to an active circuit breaker cooldown."""
+    pass
+
+
 def acquire_permit(
     store_name: str,
-    requests_per_second: Optional[float] = None,
-    delay_seconds: Optional[float] = None
+    requests_per_second: Optional[Any] = None,
+    delay_seconds: Optional[Any] = None,
+    fail_on_circuit_open: bool = True
 ) -> float:
     """
     Thread-safe permit acquisition for a store.
-    Enforces per-store rate limits, spaces requests, and pauses cleanly
-    when circuit breaker is tripped, preventing thundering herds.
-    Returns the total seconds waited.
+    Enforces per-store polite request pacing.
+    If circuit breaker is open:
+    FAIL-FAST IMMEDIATELY in 0.0ms instead of sleeping for minutes!
+    Raises CircuitBreakerOpenError if fail_on_circuit_open is True.
     """
     store = (store_name or "default").strip()
-    rps_cfg, delay_cfg = get_store_rate_limits(store)
-    rps = requests_per_second if requests_per_second is not None else rps_cfg
-    delay = delay_seconds if delay_seconds is not None else delay_cfg
-
-    min_interval = max(delay, 1.0 / rps if rps > 0 else 0.0)
     store_lock = _get_store_lock(store)
-    total_waited = 0.0
 
-    while True:
-        with store_lock:
-            now = time.time()
-            cooldown_end = _STORE_COOLDOWNS.get(store, 0.0)
+    with store_lock:
+        now = time.time()
+        cooldown_end = _STORE_COOLDOWNS.get(store, 0.0)
+        if cooldown_end > now:
+            if fail_on_circuit_open:
+                rem = cooldown_end - now
+                raise CircuitBreakerOpenError(f"Circuit breaker open for '{store}' ({rem:.0f}s cooldown remaining)")
+            return 0.0
 
-            # If cooldown active, schedule after cooldown expiration
-            earliest_start = max(now, cooldown_end)
-            prev_next = _NEXT_AVAILABLE_TS.get(store, 0.0)
-            scheduled_slot = max(earliest_start, prev_next)
-            _NEXT_AVAILABLE_TS[store] = scheduled_slot + min_interval
+        rps_cfg, delay_cfg = get_store_rate_limits(store)
+        rps_val = float(requests_per_second) if isinstance(requests_per_second, (int, float)) else rps_cfg
+        delay_val = float(delay_seconds) if isinstance(delay_seconds, (int, float)) else delay_cfg
+        min_interval = max(delay_val, 1.0 / rps_val if rps_val > 0 else 0.0)
 
-            sleep_duration = scheduled_slot - now
+        prev_next = _NEXT_AVAILABLE_TS.get(store, 0.0)
+        scheduled_slot = max(now, prev_next)
+        _NEXT_AVAILABLE_TS[store] = scheduled_slot + min_interval
+        sleep_duration = scheduled_slot - now
 
-        if sleep_duration > 0:
-            time.sleep(sleep_duration)
-            total_waited += sleep_duration
-
-            # Verify circuit breaker was not tripped during sleep
-            with store_lock:
-                cooldown_end = _STORE_COOLDOWNS.get(store, 0.0)
-                if cooldown_end > time.time():
-                    # Breaker was tripped by a sibling thread while we slept; reschedule
-                    continue
-
-        return total_waited
+    # Normal polite pacing between consecutive requests (capped at 2.0s max)
+    if 0 < sleep_duration <= 2.0:
+        time.sleep(sleep_duration)
+        return sleep_duration
+    return 0.0
 
 
 def reset_rate_limiter(store_name: Optional[str] = None) -> None:
@@ -225,8 +286,10 @@ def reset_rate_limiter(store_name: Optional[str] = None) -> None:
             _NEXT_AVAILABLE_TS.pop(store, None)
             _STORE_CONFIGS.pop(store, None)
             _STORE_LOCKS.pop(store, None)
+            _CONSECUTIVE_THROTTLES.pop(store, None)
         else:
             _STORE_COOLDOWNS.clear()
             _NEXT_AVAILABLE_TS.clear()
             _STORE_CONFIGS.clear()
             _STORE_LOCKS.clear()
+            _CONSECUTIVE_THROTTLES.clear()

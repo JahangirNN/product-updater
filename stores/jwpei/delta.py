@@ -9,7 +9,7 @@ from typing import Any, Dict, List, Optional, Tuple
 import httpx
 
 from storage.network import create_http_client, DEFAULT_BROWSER_HEADERS
-from storage.rate_limiter import acquire_permit, trip_circuit_breaker, parse_retry_after
+from storage.rate_limiter import acquire_permit, trip_circuit_breaker, parse_retry_after, record_throttle, record_success
 
 DEFAULT_HEADERS = DEFAULT_BROWSER_HEADERS
 
@@ -69,31 +69,34 @@ def check_price_and_stock(
 
             elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
 
-            if resp.status_code == 429:
-                retry_after_sec = parse_retry_after(resp.headers.get("Retry-After"))
-                jitter = random.uniform(1.0, 2.0 * (2 ** attempt))
-                backoff_duration = retry_after_sec + jitter
-
-                # Trip store circuit breaker so sibling threads pause immediately
-                if rate_limiter and callable(getattr(rate_limiter, "trip_circuit_breaker", None)):
-                    try:
-                        rate_limiter.trip_circuit_breaker(resolved_store, backoff_duration)
-                    except TypeError:
-                        rate_limiter.trip_circuit_breaker(backoff_duration)
-                elif isinstance(rate_limiter, dict) and callable(rate_limiter.get("trip_circuit_breaker")):
-                    try:
-                        rate_limiter["trip_circuit_breaker"](resolved_store, backoff_duration)
-                    except TypeError:
-                        rate_limiter["trip_circuit_breaker"](backoff_duration)
+            if resp.status_code in (429, 403):
+                retry_after_sec = parse_retry_after(resp.headers.get("Retry-After"), default_cooldown=60.0)
+                if rate_limiter and callable(getattr(rate_limiter, "record_throttle", None)):
+                    rate_limiter.record_throttle(resolved_store)
+                elif isinstance(rate_limiter, dict) and callable(rate_limiter.get("record_throttle")):
+                    rate_limiter["record_throttle"]()
                 else:
-                    trip_circuit_breaker(resolved_store, backoff_duration)
+                    record_throttle(resolved_store)
 
-                if attempt < 2:
-                    time.sleep(backoff_duration)
-                    continue
-                else:
-                    # Final attempt exhausted: breaker tripped, exit immediately without redundant sleep
-                    break
+                return {
+                    "status": "rate_limited",
+                    "handle": handle,
+                    "availability": old_availability,
+                    "old_availability": old_availability,
+                    "current_source_price": old_source_price,
+                    "old_source_price": old_source_price,
+                    "is_active": (old_availability == "in_stock"),
+                    "price_changed": False,
+                    "stock_changed": False,
+                    "variant_stock_changed": False,
+                    "changed_variants": [],
+                    "variant_price_changed": False,
+                    "changed_variant_prices": [],
+                    "variants_delta": [],
+                    "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                    "elapsed_ms": elapsed_ms,
+                    "message": f"JW PEI HTTP {resp.status_code} WAF Throttled"
+                }
 
             if resp.status_code == 404:
                 return {
@@ -117,6 +120,13 @@ def check_price_and_stock(
 
             resp.raise_for_status()
             data = resp.json()
+
+            if rate_limiter and callable(getattr(rate_limiter, "record_success", None)):
+                rate_limiter.record_success(resolved_store)
+            elif isinstance(rate_limiter, dict) and callable(rate_limiter.get("record_success")):
+                rate_limiter["record_success"]()
+            else:
+                record_success(resolved_store)
 
             # Parse live price (convert cents to dollars)
             price_cents = data.get("price", 0)

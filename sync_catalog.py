@@ -14,6 +14,7 @@ import datetime
 import inspect
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Any, Dict, List, Optional, Tuple
+import threading
 import httpx
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -49,6 +50,7 @@ from storage.shopify_sync import sync_delta_to_shopify
 
 DEFAULT_CONFIG_PATH = "config/delta_config.json"
 DEFAULT_HEADERS = DEFAULT_BROWSER_HEADERS
+_CAMOUFOX_SERIAL_LOCK = threading.Lock()
 
 
 def load_delta_config(config_path: str = DEFAULT_CONFIG_PATH) -> Dict[str, Any]:
@@ -127,11 +129,21 @@ def parse_iso_timestamp(ts_str: Optional[str]) -> Optional[float]:
         return None
 
 
-def is_product_due(product: Dict[str, Any], interval_minutes: float, force: bool = False) -> Tuple[bool, float]:
+def is_product_due(
+    product: Dict[str, Any],
+    interval_minutes: float,
+    force: bool = False,
+    check_circuit: bool = True
+) -> Tuple[bool, float]:
     """
     Check if a product is due for a delta check based on last_verified_at.
     Returns (is_due, elapsed_minutes).
+    If store's circuit breaker is open (cooling down), defers product to prevent WAF hammering.
     """
+    store_name = product.get("store") or product.get("source_store") or "default"
+    if check_circuit and not force and rate_limiter.is_circuit_open(store_name):
+        return False, 0.0
+
     if force:
         return True, 999999.0
 
@@ -179,6 +191,19 @@ def poll_single_product(
     p_id = product_stub.get("id")
 
     try:
+        # Fail-fast: if store circuit breaker is open, defer immediately without network calls
+        if rate_limiter.is_circuit_open(store):
+            rem = rate_limiter.get_cooldown_remaining(store)
+            return {
+                "status": "rate_limited",
+                "id": p_id,
+                "handle": product_stub.get("handle"),
+                "store": store,
+                "message": f"Circuit breaker open ({rem:.0f}s cooldown) - deferred",
+                "elapsed_ms": 0.0,
+                "has_changed": False
+            }
+
         full_product = load_product(store, p_id)
         if not full_product:
             return {
@@ -268,6 +293,16 @@ def poll_single_product(
         delta_res["has_changed"] = has_changed
         return delta_res
 
+    except rate_limiter.CircuitBreakerOpenError as cb_err:
+        return {
+            "status": "rate_limited",
+            "id": p_id,
+            "handle": product_stub.get("handle"),
+            "store": store,
+            "message": str(cb_err),
+            "elapsed_ms": 0.0,
+            "has_changed": False
+        }
     except Exception as exc:
         log_error(f"Unexpected error checking product {p_id} ({product_stub.get('handle', 'unknown')}): {exc}")
         return {
@@ -304,6 +339,25 @@ def sync_store_batch(
     results: List[Dict[str, Any]] = []
 
     if engine == "camoufox":
+        # Pre-check circuit breaker: if cooling down, defer immediately without acquiring browser lock
+        if store_limiter.get("is_circuit_open") and store_limiter["is_circuit_open"]():
+            rem_cooldown = store_limiter["get_cooldown_remaining"]()
+            log_warning(
+                f"[{store_name.upper()}] Store circuit breaker open ({rem_cooldown:.0f}s cooldown). "
+                f"Skipping browser launch. Deferring {len(store_items)} items."
+            )
+            for rem_item in store_items:
+                results.append({
+                    "status": "rate_limited",
+                    "id": rem_item.get("id"),
+                    "handle": rem_item.get("handle"),
+                    "store": store_name,
+                    "message": f"Circuit breaker open ({rem_cooldown:.0f}s cooldown) - deferred",
+                    "elapsed_ms": 0.0,
+                    "has_changed": False
+                })
+            return results
+
         if store_name == "nordstrom":
             from stores.nordstrom.camoufox_solver import create_nordstrom_browser as create_store_browser
         elif store_name == "michaelkors":
@@ -314,39 +368,28 @@ def sync_store_batch(
             from camoufox.sync_api import Camoufox
             create_store_browser = lambda headless=True: Camoufox(headless=headless)
 
-        log_info(f"[{store_name.upper()}] Launching Camoufox stealth browser worker for {len(store_items)} items...")
-        BROWSER_RECYCLE_INTERVAL = 25
-        try:
-            with create_store_browser(headless=True) as browser:
-                page = browser.new_page()
-                if store_name == "nordstrom":
-                    from stores.nordstrom.camoufox_solver import setup_camoufox_route_blocking
-                    setup_camoufox_route_blocking(page)
-                elif store_name == "jdsports":
-                    from stores.jdsports.camoufox_solver import setup_camoufox_route_blocking
-                    setup_camoufox_route_blocking(page)
+        with _CAMOUFOX_SERIAL_LOCK:
+            log_info(f"[{store_name.upper()}] Acquired browser lock. Launching Camoufox worker for {len(store_items)} items...")
+            BROWSER_RECYCLE_INTERVAL = 25
+            try:
+                with create_store_browser(headless=True) as browser:
+                    page = browser.new_page()
+                    if store_name == "nordstrom":
+                        from stores.nordstrom.camoufox_solver import setup_camoufox_route_blocking
+                        setup_camoufox_route_blocking(page)
+                    elif store_name == "jdsports":
+                        from stores.jdsports.camoufox_solver import setup_camoufox_route_blocking
+                        setup_camoufox_route_blocking(page)
 
-                items_since_recycle = 0
+                    items_since_recycle = 0
 
-                for idx, item in enumerate(store_items, 1):
-                    # Periodic page recycling to prevent memory bloat in long-running daemons
-                    if items_since_recycle >= BROWSER_RECYCLE_INTERVAL:
-                        try:
-                            page.close()
-                        except Exception:
-                            pass
-                        page = browser.new_page()
-                        if store_name == "nordstrom":
-                            setup_camoufox_route_blocking(page)
-                        elif store_name == "jdsports":
-                            from stores.jdsports.camoufox_solver import setup_camoufox_route_blocking
-                            setup_camoufox_route_blocking(page)
-                        items_since_recycle = 0
-                        log_info(f"[{store_name.upper()}] Page recycled after {BROWSER_RECYCLE_INTERVAL} items to prevent memory bloat.")
-
-                    # If page crashed or closed in previous iteration, reopen new page
-                    try:
-                        if page.is_closed():
+                    for idx, item in enumerate(store_items, 1):
+                        # Periodic page recycling to prevent memory bloat in long-running daemons
+                        if items_since_recycle >= BROWSER_RECYCLE_INTERVAL:
+                            try:
+                                page.close()
+                            except Exception:
+                                pass
                             page = browser.new_page()
                             if store_name == "nordstrom":
                                 setup_camoufox_route_blocking(page)
@@ -354,70 +397,139 @@ def sync_store_batch(
                                 from stores.jdsports.camoufox_solver import setup_camoufox_route_blocking
                                 setup_camoufox_route_blocking(page)
                             items_since_recycle = 0
-                    except Exception:
-                        page = browser.new_page()
-                        if store_name == "nordstrom":
-                            setup_camoufox_route_blocking(page)
-                        elif store_name == "jdsports":
-                            from stores.jdsports.camoufox_solver import setup_camoufox_route_blocking
-                            setup_camoufox_route_blocking(page)
-                        items_since_recycle = 0
+                            log_info(f"[{store_name.upper()}] Page recycled after {BROWSER_RECYCLE_INTERVAL} items to prevent memory bloat.")
 
-                    # Error-isolated per-item processing: individual failures do not abort the batch
-                    try:
-                        res = poll_single_product(
-                            product_stub=item,
-                            store_mod=store_mod,
-                            client=None,
-                            forex_rate=forex_rate,
-                            delay_seconds=delay_sec,
-                            dry_run=dry_run,
-                            store_name=store_name,
-                            store_rate_limiter=store_limiter,
-                            browser_page=page
-                        )
-                    except Exception as item_exc:
-                        log_error(f"[{store_name.upper()}] Item-level error for {item.get('handle', item.get('id', 'unknown'))}: {item_exc}")
-                        res = {
-                            "status": "error",
-                            "handle": item.get("handle", item.get("id")),
-                            "error": str(item_exc),
-                            "elapsed_ms": 0.0,
-                            "has_changed": False
-                        }
-
-                    items_since_recycle += 1
-
-                    # If page suffered network disconnection (NS_ERROR) or DNS failure, force page recycle
-                    err_str = str(res.get("error", ""))
-                    if "NS_ERROR" in err_str or "connection" in err_str.lower() or "getaddrinfo" in err_str.lower():
+                        # If page crashed or closed in previous iteration, reopen new page
                         try:
-                            page.close()
+                            if page.is_closed():
+                                page = browser.new_page()
+                                if store_name == "nordstrom":
+                                    setup_camoufox_route_blocking(page)
+                                elif store_name == "jdsports":
+                                    from stores.jdsports.camoufox_solver import setup_camoufox_route_blocking
+                                    setup_camoufox_route_blocking(page)
+                                items_since_recycle = 0
                         except Exception:
-                            pass
-                        page = browser.new_page()
-                        if store_name == "nordstrom":
-                            setup_camoufox_route_blocking(page)
-                        elif store_name == "jdsports":
-                            from stores.jdsports.camoufox_solver import setup_camoufox_route_blocking
-                            setup_camoufox_route_blocking(page)
-                        items_since_recycle = 0
+                            page = browser.new_page()
+                            if store_name == "nordstrom":
+                                setup_camoufox_route_blocking(page)
+                            elif store_name == "jdsports":
+                                from stores.jdsports.camoufox_solver import setup_camoufox_route_blocking
+                                setup_camoufox_route_blocking(page)
+                            items_since_recycle = 0
 
-                    results.append(res)
-                    log_info(f"[{store_name.upper()} {idx:2d}/{len(store_items)}] {res.get('handle', item.get('id'))[:28]:28s} | {res.get('status', 'unknown'):7s} | {res.get('availability', 'unknown'):12s} | ${res.get('current_source_price')} | {res.get('elapsed_ms', 0):.0f}ms")
-                    # Only sleep if network I/O took place (> 500ms), avoid idle delay on fast-path memory lookups
-                    if res.get("elapsed_ms", 0) > 500:
-                        time.sleep(delay_sec)
-        except Exception as b_exc:
-            log_error(f"[{store_name.upper()}] Camoufox worker error: {b_exc}")
-        finally:
-            log_info(f"[{store_name.upper()}] Camoufox stealth browser closed.")
+                        # Fail-fast check before processing item
+                        if store_limiter.get("is_circuit_open") and store_limiter["is_circuit_open"]():
+                            rem_count = len(store_items) - idx + 1
+                            rem_cooldown = store_limiter["get_cooldown_remaining"]()
+                            log_warning(
+                                f"[{store_name.upper()}] Store circuit breaker open ({rem_cooldown:.0f}s cooldown). "
+                                f"Halting sweep for {store_name}. Deferring remaining {rem_count} items."
+                            )
+                            for rem_item in store_items[idx - 1:]:
+                                results.append({
+                                    "status": "rate_limited",
+                                    "id": rem_item.get("id"),
+                                    "handle": rem_item.get("handle"),
+                                    "store": store_name,
+                                    "message": f"Circuit breaker open ({rem_cooldown:.0f}s cooldown) - deferred",
+                                    "elapsed_ms": 0.0,
+                                    "has_changed": False
+                                })
+                            break
+
+                        # Error-isolated per-item processing: individual failures do not abort the batch
+                        try:
+                            res = poll_single_product(
+                                product_stub=item,
+                                store_mod=store_mod,
+                                client=None,
+                                forex_rate=forex_rate,
+                                delay_seconds=delay_sec,
+                                dry_run=dry_run,
+                                store_name=store_name,
+                                store_rate_limiter=store_limiter,
+                                browser_page=page
+                            )
+                        except Exception as item_exc:
+                            log_error(f"[{store_name.upper()}] Item-level error for {item.get('handle', item.get('id', 'unknown'))}: {item_exc}")
+                            res = {
+                                "status": "error",
+                                "handle": item.get("handle", item.get("id")),
+                                "error": str(item_exc),
+                                "elapsed_ms": 0.0,
+                                "has_changed": False
+                            }
+
+                        items_since_recycle += 1
+
+                        # If page suffered network disconnection (NS_ERROR) or DNS failure, force page recycle
+                        err_str = str(res.get("error", ""))
+                        if "NS_ERROR" in err_str or "connection" in err_str.lower() or "getaddrinfo" in err_str.lower():
+                            try:
+                                page.close()
+                            except Exception:
+                                pass
+                            page = browser.new_page()
+                            if store_name == "nordstrom":
+                                setup_camoufox_route_blocking(page)
+                            elif store_name == "jdsports":
+                                from stores.jdsports.camoufox_solver import setup_camoufox_route_blocking
+                                setup_camoufox_route_blocking(page)
+                            items_since_recycle = 0
+
+                        results.append(res)
+                        log_info(f"[{store_name.upper()} {idx:2d}/{len(store_items)}] {res.get('handle', item.get('id'))[:28]:28s} | {res.get('status', 'unknown'):7s} | {res.get('availability', 'unknown'):12s} | ${res.get('current_source_price')} | {res.get('elapsed_ms', 0):.0f}ms")
+
+                        # Fail-fast circuit breaker check
+                        if store_limiter.get("is_circuit_open") and store_limiter["is_circuit_open"]():
+                            rem_count = len(store_items) - idx
+                            rem_cooldown = store_limiter["get_cooldown_remaining"]()
+                            log_warning(
+                                f"[{store_name.upper()}] Store circuit breaker tripped ({rem_cooldown:.0f}s cooldown). "
+                                f"Halting sweep for {store_name} to prevent WAF lockout. Deferring remaining {rem_count} items to next cycle."
+                            )
+                            for rem_item in store_items[idx:]:
+                                results.append({
+                                    "status": "rate_limited",
+                                    "id": rem_item.get("id"),
+                                    "handle": rem_item.get("handle"),
+                                    "store": store_name,
+                                    "message": f"Circuit breaker open ({rem_cooldown:.0f}s cooldown) - deferred",
+                                    "elapsed_ms": 0.0,
+                                    "has_changed": False
+                                })
+                            break
+
+                        # Only sleep if network I/O took place (> 500ms), avoid idle delay on fast-path memory lookups
+                        if res.get("elapsed_ms", 0) > 500:
+                            time.sleep(delay_sec)
+            except Exception as b_exc:
+                log_error(f"[{store_name.upper()}] Camoufox worker error: {b_exc}")
+            finally:
+                log_info(f"[{store_name.upper()}] Camoufox stealth browser closed.")
     else:
         log_info(f"[{store_name.upper()}] Polling {len(store_items)} items via HTTP pool (workers={max_workers}, delay={delay_sec}s)...")
         with create_http_client(timeout_seconds=timeout_sec) as client:
             with ThreadPoolExecutor(max_workers=max_workers) as executor:
-                future_to_item = {
-                    executor.submit(
+                future_to_item = {}
+                for it_idx, item in enumerate(store_items):
+                    if store_limiter.get("is_circuit_open") and store_limiter["is_circuit_open"]():
+                        rem_count = len(store_items) - it_idx
+                        rem_cooldown = store_limiter["get_cooldown_remaining"]()
+                        log_warning(f"[{store_name.upper()}] Circuit breaker open ({rem_cooldown:.0f}s cooldown). Skipping submission of remaining {rem_count} items.")
+                        for rem_item in store_items[it_idx:]:
+                            results.append({
+                                "status": "rate_limited",
+                                "id": rem_item.get("id"),
+                                "handle": rem_item.get("handle"),
+                                "store": store_name,
+                                "message": f"Circuit breaker open ({rem_cooldown:.0f}s cooldown) - deferred",
+                                "elapsed_ms": 0.0,
+                                "has_changed": False
+                            })
+                        break
+                    future_to_item[executor.submit(
                         poll_single_product,
                         item,
                         store_mod,
@@ -428,9 +540,8 @@ def sync_store_batch(
                         store_name,
                         store_limiter,
                         None
-                    ): item
-                    for item in store_items
-                }
+                    )] = item
+
                 for idx, future in enumerate(as_completed(future_to_item), 1):
                     try:
                         res = future.result()
@@ -446,8 +557,8 @@ def sync_store_batch(
                             "has_changed": False
                         }
                     results.append(res)
-                    if idx % 10 == 0 or idx == len(store_items):
-                        log_info(f"[{store_name.upper()} {idx:3d}/{len(store_items)}] {res.get('handle', '')[:28]:28s} | {res.get('status', 'unknown'):7s} | {res.get('availability', 'unknown'):12s} | ${res.get('current_source_price')} | {res.get('elapsed_ms', 0):.0f}ms")
+                    if idx % 10 == 0 or idx == len(future_to_item) or len(future_to_item) <= 5:
+                        log_info(f"[{store_name.upper()} {idx:3d}/{len(future_to_item)}] {res.get('handle', '')[:28]:28s} | {res.get('status', 'unknown'):7s} | {res.get('availability', 'unknown'):12s} | ${res.get('current_source_price')} | {res.get('elapsed_ms', 0):.0f}ms")
 
     return results
 
@@ -601,7 +712,6 @@ def run_catalog_sync(
                     err_msg = res.get("error") or res.get("message") or "Unknown processing error"
                     log_error(f"Sync error for {res.get('handle', res.get('id'))}: {err_msg}")
                 elif status in ("rate_limited", "blocked"):
-                    errors += 1
                     rate_limited_count += 1
                     reason = res.get("message") or res.get("error") or "WAF challenge / Rate limit"
                     log_warning(f"Block/RateLimit ({status}) for store '{res.get('store', st_name)}': {res.get('handle', res.get('id'))} - {reason}")
@@ -657,9 +767,8 @@ def run_catalog_sync(
     log_info(f"Currently Out of Stock:    {out_stock_count}")
     log_info(f"Price Shifts Detected:     {price_shifts}")
     log_info(f"Stock Shifts Detected:     {stock_shifts}")
-    actual_errors = errors - rate_limited_count
-    if actual_errors > 0:
-        log_error(f"Failed / Request Errors:   {actual_errors} (check logs/errors.log for diagnostics)")
+    if errors > 0:
+        log_error(f"Failed / Request Errors:   {errors} (check logs/errors.log for diagnostics)")
     else:
         log_info(f"Failed / Request Errors:   0")
     if rate_limited_count > 0:

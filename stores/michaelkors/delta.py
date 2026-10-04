@@ -19,7 +19,7 @@ except ImportError:
     HAS_CURL_CFFI = False
 
 from storage.network import create_http_client, DEFAULT_BROWSER_HEADERS
-from storage.rate_limiter import acquire_permit, trip_circuit_breaker, parse_retry_after
+from storage.rate_limiter import acquire_permit, trip_circuit_breaker, parse_retry_after, record_throttle, record_success
 
 DEFAULT_HEADERS = DEFAULT_BROWSER_HEADERS
 
@@ -160,6 +160,15 @@ def check_price_and_stock(
             rate_limiter.acquire_permit(resolved_store)
         except TypeError:
             rate_limiter.acquire_permit()
+    elif isinstance(rate_limiter, dict):
+        acquire_fn = rate_limiter.get("acquire_permit")
+        if callable(acquire_fn):
+            try:
+                acquire_fn(resolved_store)
+            except TypeError:
+                acquire_fn()
+        else:
+            acquire_permit(resolved_store)
     else:
         acquire_permit(resolved_store)
 
@@ -175,7 +184,12 @@ def check_price_and_stock(
 
     # 3. Handle rate limits and errors
     if status_code == 429:
-        trip_circuit_breaker(resolved_store, 30)
+        if rate_limiter and callable(getattr(rate_limiter, "record_throttle", None)):
+            rate_limiter.record_throttle(resolved_store)
+        elif isinstance(rate_limiter, dict) and callable(rate_limiter.get("record_throttle")):
+            rate_limiter["record_throttle"]()
+        else:
+            record_throttle(resolved_store)
         return {
             "status": "rate_limited",
             "handle": handle,
@@ -239,7 +253,14 @@ def check_price_and_stock(
             "message": f"SFCC query failed: {err_detail} (status {status_code})"
         }
 
-    # 4. Extract price
+    # 4. Record success & extract price
+    if rate_limiter and callable(getattr(rate_limiter, "record_success", None)):
+        rate_limiter.record_success(resolved_store)
+    elif isinstance(rate_limiter, dict) and callable(rate_limiter.get("record_success")):
+        rate_limiter["record_success"]()
+    else:
+        record_success(resolved_store)
+
     price_obj = p_data.get("price") or {}
     curr_price = old_source_price
     sales_obj = price_obj.get("sales") if isinstance(price_obj, dict) else None

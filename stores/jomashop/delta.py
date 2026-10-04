@@ -18,7 +18,7 @@ except ImportError:
     HAS_CURL_CFFI = False
 
 from storage.network import create_http_client, DEFAULT_BROWSER_HEADERS
-from storage.rate_limiter import acquire_permit, trip_circuit_breaker, parse_retry_after
+from storage.rate_limiter import acquire_permit, trip_circuit_breaker, parse_retry_after, record_throttle, record_success
 
 GRAPHQL_URL = "https://www.jomashop.com/graphql"
 
@@ -74,34 +74,21 @@ def _post_graphql(
     impersonation to bypass Cloudflare 493 bot protection at $0.00 / 0 Firecrawl tokens.
     Returns (json_data, status_code, error_message).
     """
-    if client is not None:
-        try:
-            resp = client.post(GRAPHQL_URL, json=payload, headers=headers)
-            status = getattr(resp, "status_code", 200)
-            if status == 200:
-                data = resp.json()
-                errors = data.get("errors", []) if isinstance(data, dict) else []
-                if errors:
-                    for err in errors:
-                        cat = str(err.get("extensions", {}).get("category", ""))
-                        code = str(err.get("extensions", {}).get("error-code", ""))
-                        msg = str(err.get("message", ""))
-                        if "bot-protection" in cat or "bot-protection" in code or "Bot Protection" in msg:
-                            return None, 493, f"Bot protection triggered: {msg}"
-                return data, 200, ""
-            return None, status, f"HTTP status {status}"
-        except Exception as exc:
-            return None, 0, f"Injected client error: {exc}"
-
     if HAS_CURL_CFFI:
         try:
-            resp = cffi_requests.post(
-                GRAPHQL_URL,
-                json=payload,
-                headers=headers,
-                impersonate="chrome124",
-                timeout=timeout
-            )
+            if client is not None and (hasattr(client, "impersonate") or "cffi" in type(client).__module__ or not isinstance(client, httpx.Client)):
+                try:
+                    resp = client.post(GRAPHQL_URL, json=payload, headers=headers, timeout=timeout)
+                except TypeError:
+                    resp = client.post(GRAPHQL_URL, json=payload, headers=headers)
+            else:
+                resp = cffi_requests.post(
+                    GRAPHQL_URL,
+                    json=payload,
+                    headers=headers,
+                    impersonate="chrome124",
+                    timeout=timeout
+                )
             status = resp.status_code
             if status == 200:
                 try:
@@ -120,6 +107,25 @@ def _post_graphql(
             return None, status, f"HTTP status {status}"
         except Exception as exc:
             return None, 0, f"curl_cffi error: {exc}"
+
+    if client is not None:
+        try:
+            resp = client.post(GRAPHQL_URL, json=payload, headers=headers)
+            status = getattr(resp, "status_code", 200)
+            if status == 200:
+                data = resp.json()
+                errors = data.get("errors", []) if isinstance(data, dict) else []
+                if errors:
+                    for err in errors:
+                        cat = str(err.get("extensions", {}).get("category", ""))
+                        code = str(err.get("extensions", {}).get("error-code", ""))
+                        msg = str(err.get("message", ""))
+                        if "bot-protection" in cat or "bot-protection" in code or "Bot Protection" in msg:
+                            return None, 493, f"Bot protection triggered: {msg}"
+                return data, 200, ""
+            return None, status, f"HTTP status {status}"
+        except Exception as exc:
+            return None, 0, f"Injected client error: {exc}"
 
     # Fallback to standard HTTP client
     try:
@@ -234,11 +240,14 @@ def check_price_and_stock(
                 else:
                     trip_circuit_breaker(resolved_store, backoff_duration)
 
-                if attempt < 2:
-                    time.sleep(backoff_duration)
-                    continue
+                if rate_limiter and callable(getattr(rate_limiter, "record_throttle", None)):
+                    rate_limiter.record_throttle(resolved_store)
+                elif isinstance(rate_limiter, dict) and callable(rate_limiter.get("record_throttle")):
+                    rate_limiter["record_throttle"]()
                 else:
-                    return {
+                    record_throttle(resolved_store)
+
+                return {
                         "status": "rate_limited",
                         "handle": handle,
                         "availability": old_availability,
@@ -303,6 +312,13 @@ def check_price_and_stock(
                 }
 
             items = data.get("data", {}).get("products", {}).get("items", [])
+
+            if rate_limiter and callable(getattr(rate_limiter, "record_success", None)):
+                rate_limiter.record_success(resolved_store)
+            elif isinstance(rate_limiter, dict) and callable(rate_limiter.get("record_success")):
+                rate_limiter["record_success"]()
+            else:
+                record_success(resolved_store)
 
             # If url_key query returned no items, try fallback to SKU if available
             if not items and source_sku:
