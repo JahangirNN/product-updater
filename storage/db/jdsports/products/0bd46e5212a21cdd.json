@@ -9,15 +9,15 @@
   "gender": "Kids'",
   "sizing_category": "Toddler",
   "source_sku": "3490409",
-  "source_price": 65.0,
+  "source_price": 30.0,
   "source_compare_at_price": null,
-  "current_price": 6242.0,
+  "current_price": 2881.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -130,7 +130,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IF1674_601_P1",
       "option_values": [
         {
@@ -158,7 +158,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IF1674_601_P1",
       "option_values": [
         {
@@ -186,7 +186,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IF1674_601_P1",
       "option_values": [
         {
@@ -214,7 +214,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IF1674_601_P1",
       "option_values": [
         {
@@ -242,7 +242,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IF1674_601_P1",
       "option_values": [
         {
@@ -376,7 +376,10 @@
     "shoes"
   ],
   "created_at": "2026-09-20T16:01:29Z",
-  "updated_at": "2026-09-21T22:23:36Z",
-  "last_verified_at": "2026-09-21T22:23:36Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-03T09:27:08Z",
+  "last_verified_at": "2026-10-03T09:27:08Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851444600998",
+  "shopify_handle": "kids-toddler-nike-force-1-low-casual-shoes-pink-foam-pink-rise-pink-foam-3490409",
+  "shopify_synced_at": "2026-10-04T08:58:42Z"
 }

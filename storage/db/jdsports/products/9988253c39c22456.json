@@ -9,15 +9,15 @@
   "gender": "Men's",
   "sizing_category": "Adult",
   "source_sku": "3773937",
-  "source_price": 95.0,
+  "source_price": 50.0,
   "source_compare_at_price": null,
-  "current_price": 9119.0,
+  "current_price": 4803.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -270,7 +270,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/FQ1833_008_P1",
       "option_values": [
         {
@@ -819,6 +819,10 @@
     "shoes"
   ],
   "created_at": "2026-09-20T15:48:34Z",
-  "updated_at": "2026-09-20T15:57:20Z",
-  "last_verified_at": "2026-09-20T15:57:20Z"
+  "updated_at": "2026-09-30T05:11:07Z",
+  "last_verified_at": "2026-09-30T05:11:07Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851455086758",
+  "shopify_handle": "mens-nike-air-max-alpha-trainer-6-training-shoes-platinum-tint-college-grey-black-barely-green-3773937",
+  "shopify_synced_at": "2026-10-04T09:09:26Z"
 }

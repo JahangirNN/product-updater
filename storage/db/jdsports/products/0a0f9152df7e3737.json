@@ -9,9 +9,9 @@
   "gender": "Men's",
   "sizing_category": "Adult",
   "source_sku": "3335233",
-  "source_price": 160.0,
+  "source_price": 130.0,
   "source_compare_at_price": null,
-  "current_price": 15366.0,
+  "current_price": 12528.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -354,7 +354,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IR0196_010_P1",
       "option_values": [
         {
@@ -479,7 +479,10 @@
     "shoes"
   ],
   "created_at": "2026-09-20T15:47:07Z",
-  "updated_at": "2026-09-21T22:23:33Z",
-  "last_verified_at": "2026-09-21T22:23:33Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-03T09:25:23Z",
+  "last_verified_at": "2026-10-03T09:25:23Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851444404390",
+  "shopify_handle": "mens-nike-air-max-95-big-bubble-casual-shoes-black-anthracite-dark-smoke-grey-black-3335233",
+  "shopify_synced_at": "2026-10-04T08:58:29Z"
 }

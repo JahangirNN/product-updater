@@ -298,7 +298,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/CU1727_700_P1",
       "option_values": [
         {
@@ -326,7 +326,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/CU1727_700_P1",
       "option_values": [
         {
@@ -479,6 +479,10 @@
     "shoes"
   ],
   "created_at": "2026-09-20T16:11:06Z",
-  "updated_at": "2026-09-20T16:11:06Z",
-  "last_verified_at": "2026-09-20T16:11:06Z"
+  "updated_at": "2026-09-30T04:04:59Z",
+  "last_verified_at": "2026-09-30T04:04:59Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851452956838",
+  "shopify_handle": "mens-nike-dunk-low-sp-casual-shoes-varsity-maize-pine-green-white-3394730",
+  "shopify_synced_at": "2026-10-04T09:06:36Z"
 }

@@ -3,7 +3,7 @@
 > **Authoritative Ingestion & Progress Ledger for The Rare Avenue**  
 > **Store URL**: `https://therareavenue.com` (`hewmvw-am.myshopify.com`)  
 > **Store Protocol**: Shopify Admin GraphQL API (`2026-04`)  
-> **Last Verified Audit**: 2026-10-04 05:06 IST  
+> **Last Verified Audit**: 2026-10-04 14:58 IST  
 > **Automated Audit Script**: [`scripts/audit_shopify_catalog_counts.py`](file:///c:/Users/Administrator/WorkPlace/dropship-scraper-portable-20260905/product-updater/scripts/audit_shopify_catalog_counts.py)
 
 ---
@@ -13,10 +13,10 @@
 | Metric | Count | Percentage | Status |
 | :--- | :---: | :---: | :--- |
 | **Total Products in Local Database** | **3,189** | 100% | Scraped across 7 active retailer stores |
-| **Total Products Linked to Shopify** | **2,713** | **85.1%** | Formatted with tri-field whole-rupee INR pricing |
-| **Live Active Storefront Silhouettes** | **2,290** | **71.8%** | Canonical pieces active on storefront |
+| **Total Products Linked to Shopify** | **3,189** | **100.0%** | Formatted with tri-field whole-rupee INR pricing |
+| **Live Active Storefront Silhouettes** | **2,766** | **86.7%** | Canonical pieces active on storefront |
 | **Drafted Siblings / Clones** | **423** | 13.3% | JW PEI colorway duplicates consolidated into single PDPs |
-| **Remaining to Onboard on Shopify** | **476** | **14.9%** | Footwear, Sneakers, Belts, Streetwear |
+| **Remaining to Onboard on Shopify** | **0** | **0.0%** | Footwear, Sneakers, Belts, Streetwear |
 
 ---
 
@@ -30,8 +30,8 @@
 | **Michaelkors** | 530 | **530** | **0** | **100.0%** | Designer Handbags (234), Wallets (60), Eyewear (46), Footwear (174), Belts (16) | Completed (100%) |
 | **Nordstrom** | 238 | **238** | **0** | **100.0%** | Salomon Performance Footwear (92 prods live) | Completed (100%) |
 | **Footlocker** | 307 | **307** | **0** | **100.0%** | None | Completed (100%) |
-| **Jdsports** | 476 | **0** | **476** | **0.0%** | None | 476 remaining: 476 Nike Footwear & Streetwear |
-| **TOTAL** | **3,189** | **2,713** | **476** | **85.1%** | **Watches (574), Bags & Wallets (1,291), Eyewear (46), Footwear (350)** | **Remaining Footwear & Streetwear (929)** |
+| **Jdsports** | 476 | **476** | **0** | **100.0%** | None | Completed (100%) |
+| **TOTAL** | **3,189** | **3,189** | **0** | **100.0%** | **Watches (574), Bags & Wallets (1,291), Eyewear (46), Footwear (350)** | **Remaining Footwear & Streetwear (929)** |
 
 ---
 

@@ -9,15 +9,15 @@
   "gender": "Men's",
   "sizing_category": "Adult",
   "source_sku": "3707403",
-  "source_price": 130.0,
+  "source_price": 120.0,
   "source_compare_at_price": null,
-  "current_price": 12479.0,
+  "current_price": 11524.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -46,7 +46,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/HQ1931_001_P1",
       "option_values": [
         {
@@ -74,7 +74,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/HQ1931_001_P1",
       "option_values": [
         {
@@ -102,7 +102,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/HQ1931_001_P1",
       "option_values": [
         {
@@ -130,7 +130,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/HQ1931_001_P1",
       "option_values": [
         {
@@ -158,7 +158,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/HQ1931_001_P1",
       "option_values": [
         {
@@ -186,7 +186,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/HQ1931_001_P1",
       "option_values": [
         {
@@ -214,7 +214,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/HQ1931_001_P1",
       "option_values": [
         {
@@ -242,7 +242,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/HQ1931_001_P1",
       "option_values": [
         {
@@ -270,7 +270,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/HQ1931_001_P1",
       "option_values": [
         {
@@ -298,7 +298,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/HQ1931_001_P1",
       "option_values": [
         {
@@ -326,7 +326,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/HQ1931_001_P1",
       "option_values": [
         {
@@ -354,7 +354,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/HQ1931_001_P1",
       "option_values": [
         {
@@ -479,7 +479,10 @@
     "shoes"
   ],
   "created_at": "2026-09-20T16:07:39Z",
-  "updated_at": "2026-09-20T21:23:25Z",
-  "last_verified_at": "2026-09-20T21:23:25Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-09-30T06:48:11Z",
+  "last_verified_at": "2026-09-30T06:48:11Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851443945638",
+  "shopify_handle": "mens-nike-dunk-low-retro-se-suede-casual-shoes-black-grey-gum-3707403",
+  "shopify_synced_at": "2026-10-04T08:57:48Z"
 }

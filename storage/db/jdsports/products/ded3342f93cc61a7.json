@@ -9,9 +9,9 @@
   "gender": "Women's",
   "sizing_category": "Adult",
   "source_sku": "3837259",
-  "source_price": 135.0,
+  "source_price": 35.0,
   "source_compare_at_price": null,
-  "current_price": 12959.0,
+  "current_price": 3362.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -410,7 +410,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/HQ2056_013_P1",
       "option_values": [
         {
@@ -581,6 +581,10 @@
     "women's-shoes"
   ],
   "created_at": "2026-09-20T15:46:27Z",
-  "updated_at": "2026-09-20T15:55:18Z",
-  "last_verified_at": "2026-09-20T15:55:18Z"
+  "updated_at": "2026-09-30T07:21:44Z",
+  "last_verified_at": "2026-09-30T07:21:44Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851460919462",
+  "shopify_handle": "womens-nike-air-max-moto-2k-casual-shoes-pure-platinum-metallic-silver-black-gridiron-3837259",
+  "shopify_synced_at": "2026-10-04T09:14:36Z"
 }

@@ -547,8 +547,11 @@ def apply_delta_to_product(
     # 1. Price updates (Whole-Rupee INR Math)
     new_source_price = float(delta_result.get("current_source_price", product.get("source_price", 0.0)) or 0.0)
     if price_changed and new_source_price > 0:
+        inr_val = float(round(new_source_price * forex_rate))
         product["source_price"] = new_source_price
-        product["current_price"] = float(round(new_source_price * forex_rate))
+        product["price"] = f"{inr_val:.2f}"
+        product["price_current"] = inr_val
+        product["current_price"] = inr_val
         has_changed = True
 
     new_compare_price = delta_result.get("current_compare_price")

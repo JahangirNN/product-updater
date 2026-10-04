@@ -9,9 +9,9 @@
   "gender": "Kids'",
   "sizing_category": "Grade School",
   "source_sku": "3342503",
-  "source_price": 75.0,
+  "source_price": 65.0,
   "source_compare_at_price": null,
-  "current_price": 7199.0,
+  "current_price": 6244.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -46,7 +46,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IO9746_400_P1",
       "option_values": [
         {
@@ -343,6 +343,10 @@
     "shoes"
   ],
   "created_at": "2026-09-20T16:07:40Z",
-  "updated_at": "2026-09-20T16:09:45Z",
-  "last_verified_at": "2026-09-20T16:09:45Z"
+  "updated_at": "2026-09-30T05:14:16Z",
+  "last_verified_at": "2026-09-30T05:14:16Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851455545510",
+  "shopify_handle": "big-kids-nike-dunk-low-casual-shoes-hydrogen-blue-thunder-blue-3342503",
+  "shopify_synced_at": "2026-10-04T09:09:55Z"
 }

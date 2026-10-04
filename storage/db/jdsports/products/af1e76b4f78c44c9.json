@@ -74,7 +74,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/AQ8810_003_P1",
       "option_values": [
         {
@@ -580,6 +580,10 @@
     "shoes"
   ],
   "created_at": "2026-09-20T15:46:15Z",
-  "updated_at": "2026-09-20T15:46:16Z",
-  "last_verified_at": "2026-09-20T15:46:16Z"
+  "updated_at": "2026-09-29T12:10:32Z",
+  "last_verified_at": "2026-09-29T12:10:32Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851456790694",
+  "shopify_handle": "mens-nike-air-vapormax-run-utility-running-shoes-black-reflective-silver-black-black-3809147",
+  "shopify_synced_at": "2026-10-04T09:11:49Z"
 }

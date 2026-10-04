@@ -9,9 +9,9 @@
   "gender": "Women's",
   "sizing_category": "Adult",
   "source_sku": "3332758",
-  "source_price": 150.0,
+  "source_price": 110.0,
   "source_compare_at_price": null,
-  "current_price": 14406.0,
+  "current_price": 10601.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -214,7 +214,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/HJ5996_005_P1",
       "option_values": [
         {
@@ -270,7 +270,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/HJ5996_005_P1",
       "option_values": [
         {
@@ -479,7 +479,10 @@
     "women's-shoes"
   ],
   "created_at": "2026-09-20T15:46:40Z",
-  "updated_at": "2026-09-21T22:23:36Z",
-  "last_verified_at": "2026-09-21T22:23:36Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-03T09:26:57Z",
+  "last_verified_at": "2026-10-03T09:26:57Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851444568230",
+  "shopify_handle": "womens-nike-air-max-95-big-bubble-casual-shoes-black-white-medium-grey-fresh-mint-3332758",
+  "shopify_synced_at": "2026-10-04T08:58:40Z"
 }

@@ -85,10 +85,15 @@ def resolve_authentic_vendor(prod: Dict[str, Any]) -> str:
 
 
 def resolve_gender(prod: Dict[str, Any]) -> str:
-    """Classify product gender into Men, Women, or Unisex with title-dominant priority."""
+    """Classify product gender into Men, Women, Kids, or Unisex with title-dominant priority."""
     title = str(prod.get("title", "")).strip().lower()
     raw_g = str(prod.get("gender") or (prod.get("specifications") or {}).get("Gender") or "").strip().lower()
     url = str(prod.get("source_url", "")).strip().lower()
+
+    # 0. Kids / Youth / Children Footwear & Apparel (checked first to prevent boys/girls/kids falling back to Men)
+    kids_pattern = r"\b(kids|kid|kids\'|toddler|toddlers|infant|infants|baby|babies|boys|boys\'|girls|girls\'|little kids|big kids|preschool|grade school|youth|children|child|crib)\b"
+    if re.search(kids_pattern, title) or re.search(kids_pattern, raw_g):
+        return "Kids"
 
     # 1. Product title is the single most authoritative customer-facing indicator
     is_women_title = bool(re.search(r"\b(women|womens|women\'s|ladies|lady)\b", title))
@@ -110,6 +115,8 @@ def resolve_gender(prod: Dict[str, Any]) -> str:
         return "Unisex"
 
     # 3. Fallback to URL only if title and specs are completely silent
+    if re.search(kids_pattern, url):
+        return "Kids"
     if re.search(r"\b(women|womens|women\'s|ladies|lady)\b", url):
         return "Women"
     if re.search(r"\b(men|mens|men\'s)\b", url):
@@ -319,11 +326,14 @@ def generate_taxonomy_tags(prod: Dict[str, Any], vendor: str, product_type: str,
 
     # 2. Gender Department Tags
     if gender == "Men":
-        tags = [t for t in tags if not re.search(r"\b(women|women\'s|ladies|unisex)\b", t.lower())]
+        tags = [t for t in tags if not re.search(r"\b(women|women\'s|ladies|kids|youth|boys|girls|unisex)\b", t.lower())]
         tags.extend(["Men", "Men's", "Gender:Men", "Gender:Men's"])
     elif gender == "Women":
-        tags = [t for t in tags if not re.search(r"\b(men|men\'s|unisex)\b", t.lower())]
+        tags = [t for t in tags if not re.search(r"\b(men|men\'s|kids|youth|boys|girls|unisex)\b", t.lower())]
         tags.extend(["Women", "Women's", "Gender:Women", "Gender:Women's", "Ladies"])
+    elif gender == "Kids":
+        tags = [t for t in tags if not re.search(r"\b(men|men\'s|women|women\'s|ladies)\b", t.lower())]
+        tags.extend(["Kids", "Kids Footwear", "Youth", "Children", "Gender:Kids", "Kids'"])
     else:
         tags.extend(["Unisex", "Gender:Unisex", "Men", "Men's", "Women", "Women's"])
 

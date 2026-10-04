@@ -9,15 +9,15 @@
   "gender": "Women's",
   "sizing_category": "Adult",
   "source_sku": "3496549",
-  "source_price": 180.0,
+  "source_price": 72.0,
   "source_compare_at_price": null,
-  "current_price": 17278.0,
+  "current_price": 6917.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -46,7 +46,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IQ0379_739_P1",
       "option_values": [
         {
@@ -102,7 +102,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IQ0379_739_P1",
       "option_values": [
         {
@@ -130,7 +130,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IQ0379_739_P1",
       "option_values": [
         {
@@ -158,7 +158,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IQ0379_739_P1",
       "option_values": [
         {
@@ -186,7 +186,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IQ0379_739_P1",
       "option_values": [
         {
@@ -214,7 +214,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IQ0379_739_P1",
       "option_values": [
         {
@@ -242,7 +242,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IQ0379_739_P1",
       "option_values": [
         {
@@ -270,7 +270,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IQ0379_739_P1",
       "option_values": [
         {
@@ -298,7 +298,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IQ0379_739_P1",
       "option_values": [
         {
@@ -326,7 +326,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IQ0379_739_P1",
       "option_values": [
         {
@@ -581,7 +581,10 @@
     "women's-shoes"
   ],
   "created_at": "2026-09-20T15:51:10Z",
-  "updated_at": "2026-09-21T22:23:43Z",
-  "last_verified_at": "2026-09-21T22:23:43Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-09-30T01:52:14Z",
+  "last_verified_at": "2026-09-30T01:52:14Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851445092518",
+  "shopify_handle": "womens-nike-air-max-muse-casual-shoes-university-gold-multi-color-metallic-gold-pink-foam-3496549",
+  "shopify_synced_at": "2026-10-04T08:59:18Z"
 }

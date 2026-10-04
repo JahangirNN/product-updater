@@ -9,9 +9,9 @@
   "gender": "Men's",
   "sizing_category": "Adult",
   "source_sku": "3334822",
-  "source_price": 100.0,
+  "source_price": 96.0,
   "source_compare_at_price": null,
-  "current_price": 9599.0,
+  "current_price": 9222.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -354,7 +354,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IB7680_101_P1",
       "option_values": [
         {
@@ -479,6 +479,10 @@
     "shoes"
   ],
   "created_at": "2026-09-20T15:46:39Z",
-  "updated_at": "2026-09-20T15:54:02Z",
-  "last_verified_at": "2026-09-20T15:54:02Z"
+  "updated_at": "2026-09-30T01:59:10Z",
+  "last_verified_at": "2026-09-30T01:59:10Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851446960294",
+  "shopify_handle": "mens-nike-air-max-90-casual-shoes-white-photon-dust-hyper-turquoise-3334822",
+  "shopify_synced_at": "2026-10-04T09:01:37Z"
 }

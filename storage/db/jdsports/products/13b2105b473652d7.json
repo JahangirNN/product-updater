@@ -9,15 +9,15 @@
   "gender": "Kids'",
   "sizing_category": "Grade School",
   "source_sku": "3365056",
-  "source_price": 112.0,
+  "source_price": 102.0,
   "source_compare_at_price": null,
-  "current_price": 10751.0,
+  "current_price": 9796.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -74,7 +74,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IH8654_001_P1",
       "option_values": [
         {
@@ -343,7 +343,10 @@
     "shoes"
   ],
   "created_at": "2026-09-20T15:48:32Z",
-  "updated_at": "2026-09-21T22:23:44Z",
-  "last_verified_at": "2026-09-21T22:23:44Z",
-  "shopify_sync_pending": true
+  "updated_at": "2026-09-30T01:52:31Z",
+  "last_verified_at": "2026-09-30T01:52:31Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851445190822",
+  "shopify_handle": "big-kids-nike-air-max-90-casual-shoes-black-dark-smoke-grey-light-carbon-black-3365056",
+  "shopify_synced_at": "2026-10-04T08:59:22Z"
 }

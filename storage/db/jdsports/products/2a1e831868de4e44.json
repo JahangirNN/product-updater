@@ -9,9 +9,9 @@
   "gender": "Kids'",
   "sizing_category": "Grade School",
   "source_sku": "3836655",
-  "source_price": 132.0,
+  "source_price": 130.0,
   "source_compare_at_price": null,
-  "current_price": 12671.0,
+  "current_price": 12488.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -46,7 +46,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/943345_129_P1",
       "option_values": [
         {
@@ -343,6 +343,10 @@
     "shoes"
   ],
   "created_at": "2026-09-20T15:49:36Z",
-  "updated_at": "2026-09-20T15:56:31Z",
-  "last_verified_at": "2026-09-20T15:56:31Z"
+  "updated_at": "2026-09-30T01:58:27Z",
+  "last_verified_at": "2026-09-30T01:58:27Z",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15851446796454",
+  "shopify_handle": "big-kids-nike-air-max-270-casual-shoes-white-football-blue-arctic-green-pinksicle-3836655",
+  "shopify_synced_at": "2026-10-04T09:01:26Z"
 }
