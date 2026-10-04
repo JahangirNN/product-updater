@@ -598,11 +598,13 @@ def run_catalog_sync(
 
                 if status == "error":
                     errors += 1
-                    log_error(f"Sync error for {res.get('handle', res.get('id'))}: {res.get('error')}")
+                    err_msg = res.get("error") or res.get("message") or "Unknown processing error"
+                    log_error(f"Sync error for {res.get('handle', res.get('id'))}: {err_msg}")
                 elif status in ("rate_limited", "blocked"):
                     errors += 1
                     rate_limited_count += 1
-                    log_error(f"Block/RateLimit ({status}) for store '{res.get('store', st_name)}': {res.get('handle', res.get('id'))} - {res.get('error')}")
+                    reason = res.get("message") or res.get("error") or "WAF challenge / Rate limit"
+                    log_warning(f"Block/RateLimit ({status}) for store '{res.get('store', st_name)}': {res.get('handle', res.get('id'))} - {reason}")
                 elif status in ("success", "not_found"):
                     avail = res.get("availability")
                     if avail == "in_stock":
@@ -655,12 +657,13 @@ def run_catalog_sync(
     log_info(f"Currently Out of Stock:    {out_stock_count}")
     log_info(f"Price Shifts Detected:     {price_shifts}")
     log_info(f"Stock Shifts Detected:     {stock_shifts}")
-    if errors > 0:
-        log_error(f"Failed / Request Errors:   {errors} (check logs/errors.log for diagnostics)")
-        if rate_limited_count > 0:
-            log_warning(f"Rate Limited (HTTP 429):   {rate_limited_count}")
+    actual_errors = errors - rate_limited_count
+    if actual_errors > 0:
+        log_error(f"Failed / Request Errors:   {actual_errors} (check logs/errors.log for diagnostics)")
     else:
-        log_info(f"Failed / Request Errors:   {errors}")
+        log_info(f"Failed / Request Errors:   0")
+    if rate_limited_count > 0:
+        log_warning(f"Throttled / Rate Limited:  {rate_limited_count} (handled by circuit breakers)")
     log_info(f"Average Request Latency:   {avg_latency:.2f} ms")
     log_info(f"Total Sweep Duration:      {total_time:.2f} seconds")
     if not dry_run:

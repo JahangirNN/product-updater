@@ -323,6 +323,7 @@ def check_price_and_stock(
                     "variants_delta": [],
                     "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                     "elapsed_ms": elapsed_ms,
+                    "error": "Akamai Bot Manager 403 Forbidden",
                     "message": "Akamai Bot Manager 403 Forbidden"
                 }
 

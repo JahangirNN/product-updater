@@ -219,6 +219,7 @@ def check_price_and_stock(
         }
 
     if not p_data:
+        err_detail = err_msg or "Empty product payload from SFCC"
         return {
             "status": "error",
             "handle": handle,
@@ -234,7 +235,8 @@ def check_price_and_stock(
             "changed_variant_prices": [],
             "variants_delta": [],
             "elapsed_ms": elapsed_ms,
-            "message": f"SFCC query failed: {err_msg} (status {status_code})"
+            "error": f"SFCC query failed: {err_detail} (status {status_code})",
+            "message": f"SFCC query failed: {err_detail} (status {status_code})"
         }
 
     # 4. Extract price

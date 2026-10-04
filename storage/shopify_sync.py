@@ -76,8 +76,9 @@ def upsert_product_to_shopify(prod: Dict[str, Any], forex_rate: Optional[float] 
         if is_handle_conflict:
             raw_sku = str(prod.get("source_sku") or prod.get("sku") or prod.get("id") or "")
             sku_suffix = "".join(c if c.isalnum() else "-" for c in raw_sku).strip("-").lower()
-            current_handle = payload.get("handle") or prod.get("handle") or "luxury-bag"
-            new_handle = f"{current_handle}-{sku_suffix}" if sku_suffix else f"{current_handle}-{int(time.time())}"
+            current_handle = payload.get("handle") or prod.get("handle") or "luxury-item"
+            unique_part = sku_suffix if (sku_suffix and sku_suffix not in current_handle) else str(prod.get("id", ""))[:8]
+            new_handle = f"{current_handle}-{unique_part}" if unique_part else f"{current_handle}-{int(time.time()*1000)%1000000}"
             payload["handle"] = new_handle
             
             data, ext, err = execute_shopify_graphql(

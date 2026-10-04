@@ -23,15 +23,19 @@ DEFAULT_API_VERSION = "2026-04"
 def refresh_cli_session(shop_domain: str = DEFAULT_SHOP_DOMAIN) -> bool:
     """Trigger Shopify CLI to refresh session tokens silently via CLI."""
     try:
+        cmd = ["shopify.cmd" if sys.platform == "win32" else "shopify", "theme", "list", f"--store={shop_domain}"]
         res = subprocess.run(
-            ["shopify.cmd" if sys.platform == "win32" else "shopify", "theme", "list", f"--store={shop_domain}"],
+            cmd,
             capture_output=True,
             text=True,
-            timeout=35
+            timeout=60
         )
         if res.returncode != 0:
             log_shopify_warning(f"Shopify CLI token auto-refresh exited with code {res.returncode}: {res.stderr.strip()[:200]}")
         return res.returncode == 0
+    except subprocess.TimeoutExpired:
+        log_shopify_warning(f"Shopify CLI token auto-refresh timed out after 60s for {shop_domain}.")
+        return False
     except Exception as exc:
         log_shopify_warning(f"Shopify CLI token auto-refresh exception: {exc}")
         return False
@@ -162,14 +166,41 @@ def execute_shopify_graphql(
                 err_msg = f"HTTP {resp.status_code}: {resp.text}"
                 log_shopify_error(f"Shopify Admin GraphQL failure: {err_msg}")
                 return None, {}, err_msg
-        except (httpx.ReadTimeout, httpx.ConnectTimeout) as te:
+        except (httpx.ReadTimeout, httpx.ConnectTimeout, httpx.RemoteProtocolError, httpx.ConnectError, ConnectionResetError) as te:
+            # Force client reset so subsequent attempts get a fresh TCP connection
+            global _CLIENT
+            try:
+                if _CLIENT:
+                    _CLIENT.close()
+            except Exception:
+                pass
+            _CLIENT = None
+
             if attempt < max_retries - 1:
-                time.sleep(1.5 * (attempt + 1))
+                backoff = 2.0 * (attempt + 1)
+                log_shopify_warning(f"Shopify Admin GraphQL network blip ({type(te).__name__}: {te}). Reconnecting in {backoff:.1f}s (attempt {attempt+1}/{max_retries})...")
+                time.sleep(backoff)
+                client = get_shopify_http_client()
                 continue
-            err_msg = f"Request Timeout: {te}"
-            log_shopify_error(f"Shopify Admin GraphQL timeout: {err_msg}", exc=te)
+            err_msg = f"Network Disconnect / Timeout after {max_retries} attempts: {te}"
+            log_shopify_error(f"Shopify Admin GraphQL network failure: {err_msg}", exc=te)
             return None, {}, err_msg
         except Exception as exc:
+            # Check if inner exception was RemoteProtocolError or connection reset
+            exc_str = str(exc).lower()
+            if any(term in exc_str for term in ["disconnected", "connection reset", "10054", "remoteprotocolerror"]):
+                try:
+                    if _CLIENT:
+                        _CLIENT.close()
+                except Exception:
+                    pass
+                _CLIENT = None
+                if attempt < max_retries - 1:
+                    backoff = 2.0 * (attempt + 1)
+                    log_shopify_warning(f"Shopify Admin GraphQL connection reset ({exc}). Reconnecting in {backoff:.1f}s (attempt {attempt+1}/{max_retries})...")
+                    time.sleep(backoff)
+                    client = get_shopify_http_client()
+                    continue
             err_msg = f"Request Exception: {exc}"
             log_shopify_error(f"Shopify Admin GraphQL exception: {err_msg}", exc=exc)
             return None, {}, err_msg
