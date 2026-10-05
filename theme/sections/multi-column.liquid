@@ -40,14 +40,16 @@
 
               {%- liquid
                 capture media_content
-                  if block.type == 'image_with_text' and block.settings.image != blank
+                  assign col_image = block.settings.collection.featured_image | default: block.settings.collection.products.first.featured_media.preview_image
+                  assign block_image = block.settings.image | default: col_image
+                  if block.type == 'image_with_text' and block_image != blank
                     assign loading_strategy = nil
 
                     if forloop.index > 2 or section.location == 'footer'
                       assign loading_strategy = 'lazy'
                     endif
 
-                    echo block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: loading_strategy, sizes: sizes_attribute, widths: '300,400,500,600,800,1000,1200,1400,1600,1800', class: 'zoom-image group-hover:zoom'
+                    echo block_image | image_url: width: block_image.width | image_tag: loading: loading_strategy, sizes: sizes_attribute, widths: '300,400,500,600,800,1000,1200,1400,1600,1800', class: 'zoom-image group-hover:zoom'
                   elsif block.type == 'video_with_text' and block.settings.video != blank
                     if block.settings.autoplay and block.settings.loop
                       assign show_controls = false
@@ -60,9 +62,10 @@
                 endcapture
               -%}
 
+              {%- assign block_url = block.settings.link_url | default: block.settings.collection.url -%}
               {%- if media_content != blank -%}
-                {%- if block.type == 'image_with_text' and block.settings.link_url != blank -%}
-                  <a href="{{ block.settings.link_url }}" class="overflow-hidden">
+                {%- if block.type == 'image_with_text' and block_url != blank -%}
+                  <a href="{{ block_url }}" class="overflow-hidden">
                     {{- media_content -}}
                   </a>
                 {%- else -%}
@@ -230,6 +233,11 @@
           "id": "image",
           "label": "t:global.image.image",
           "info": "t:sections.multi_column.blocks.image_with_text.image_size_recommendation"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:global.collection.collection"
         },
         {
           "type": "inline_richtext",

@@ -78,14 +78,15 @@
             {%- assign collection = block.settings.collection -%}
             {%- assign collection_url = block.settings.button_link | default: collection.url -%}
 
+            {%- assign card_title = block.settings.title | default: collection.title -%}
             {%- capture collection_card_info -%}
               <div class="collection-card__content color-scheme color-scheme--{{ block.settings.color_scheme.id }} prose prose--tight {{ block.settings.content_position }}">
                 {%- if block.settings.subheading != blank -%}
                   <p class="h6">{{- block.settings.subheading -}}</p>
                 {%- endif -%}
 
-                {%- if block.settings.title != blank -%}
-                  <p class="h3">{{- block.settings.title -}}</p>
+                {%- if card_title != blank -%}
+                  <p class="h3">{{- card_title -}}</p>
                 {%- endif -%}
 
                 {%- if block.settings.button_text != blank -%}
@@ -96,7 +97,7 @@
 
             {%- capture collection_card_content -%}
               <div class="content-over-media content-over-media--{{ section.settings.image_size }}" style="--content-over-media-overlay: {{ block.settings.overlay_color.rgb }} / {{ block.settings.overlay_opacity | divided_by: 100.0 }};">
-                {%- assign image = block.settings.image | default: collection.featured_image -%}
+                {%- assign image = block.settings.image | default: collection.featured_image | default: collection.products.first.featured_media.preview_image -%}
                 {%- capture sizes -%}(max-width: 699px) 100vw, {% if block.settings.expand_collection %}100vw{% else %}(max-width: 1149px) {{ 100 | divided_by: section.settings.collections_per_row_desktop | at_least: 50 }}vw, {{ 100 | divided_by: section.settings.collections_per_row_desktop }}vw{% endif %}{%- endcapture -%}
 
                 {%- if image != blank -%}

@@ -349,6 +349,7 @@
               {%- for block in section.blocks -%}
                 {%- assign collection = block.settings.collection -%}
                 {%- assign card_title = block.settings.title | default: collection.title | default: 'Maison Collection' -%}
+                {%- assign card_alt = card_title | escape -%}
                 {%- assign card_url = block.settings.url | default: collection.url | default: '#' -%}
                 {%- assign card_image = block.settings.image | default: collection.featured_image | default: collection.products.first.featured_media.preview_image -%}
                 {%- assign card_count = block.settings.custom_count | default: collection.all_products_count -%}
@@ -362,7 +363,7 @@
                           sizes: '(max-width: 699px) 240px, 320px',
                           widths: '240,320,480,640,800',
                           class: 'marquee-card__image',
-                          alt: card_title | escape,
+                          alt: card_alt,
                           draggable: 'false'
                         -}}
                       {%- else -%}
@@ -403,6 +404,7 @@
               {%- for block in section.blocks -%}
                 {%- assign collection = block.settings.collection -%}
                 {%- assign card_title = block.settings.title | default: collection.title | default: 'Maison Collection' -%}
+                {%- assign card_alt_b = card_title | escape -%}
                 {%- assign card_url = block.settings.url | default: collection.url | default: '#' -%}
                 {%- assign card_image = block.settings.image | default: collection.featured_image | default: collection.products.first.featured_media.preview_image -%}
                 {%- assign card_count = block.settings.custom_count | default: collection.all_products_count -%}
@@ -416,7 +418,7 @@
                           sizes: '(max-width: 699px) 240px, 320px',
                           widths: '240,320,480,640,800',
                           class: 'marquee-card__image',
-                          alt: card_title | escape,
+                          alt: card_alt_b,
                           draggable: 'false'
                         -}}
                       {%- else -%}
