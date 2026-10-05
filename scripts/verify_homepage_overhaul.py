@@ -551,21 +551,27 @@ def check_http_route(url: str, timeout: int = 25) -> Tuple[int, str]:
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     }
     if HTTPX_AVAILABLE:
-        try:
-            with httpx.Client(timeout=timeout, follow_redirects=True, headers=headers) as client:
-                resp = client.get(url)
-                return resp.status_code, ""
-        except Exception as e:
-            return 0, str(e)
+        for attempt in range(2):
+            try:
+                with httpx.Client(timeout=timeout, follow_redirects=True, headers=headers) as client:
+                    resp = client.get(url)
+                    return resp.status_code, ""
+            except Exception as e:
+                if attempt == 1:
+                    return 0, str(e)
+                time.sleep(1.0)
     else:
         req = urllib.request.Request(url, headers=headers)
-        try:
-            with urllib.request.urlopen(req, timeout=timeout) as response:
-                return response.status, ""
-        except urllib.error.HTTPError as e:
-            return e.code, str(e)
-        except Exception as e:
-            return 0, str(e)
+        for attempt in range(2):
+            try:
+                with urllib.request.urlopen(req, timeout=timeout) as response:
+                    return response.status, ""
+            except urllib.error.HTTPError as e:
+                return e.code, str(e)
+            except Exception as e:
+                if attempt == 1:
+                    return 0, str(e)
+                time.sleep(1.0)
 
 
 def validate_storefront_collection_routes(
