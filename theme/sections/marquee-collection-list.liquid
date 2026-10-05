@@ -1,0 +1,921 @@
+{%- if section.blocks.size > 0 -%}
+  <style>
+    #shopify-section-{{ section.id }} {
+      --marquee-card-width-desktop: {{ section.settings.card_width }}px;
+      --marquee-card-width-mobile: {{ section.settings.card_width | times: 0.82 | round }}px;
+      --marquee-rail-gap: {{ section.settings.gap }}px;
+      --marquee-speed: {{ section.settings.speed }}s;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-collection-section {
+      position: relative;
+      overflow: hidden;
+      background: var(--color-background, #0a0a0a);
+      color: var(--color-foreground, #f0eee9);
+      padding-block: var(--section-vertical-spacing, 3rem);
+    }
+
+    #shopify-section-{{ section.id }} .marquee-collection-header {
+      margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+      padding-inline: var(--container-gutter, 1.25rem);
+    }
+
+    #shopify-section-{{ section.id }} .marquee-collection-subheading {
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #c9a876;
+      margin-bottom: 0.5rem;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-collection-heading {
+      font-family: var(--heading-font-family, inherit);
+      font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #f0eee9;
+      margin: 0;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-rail {
+      display: block;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: pan-y;
+      cursor: grab;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-rail.is-dragging {
+      cursor: grabbing;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-rail__viewport {
+      width: 100%;
+      overflow: hidden;
+      contain: paint layout;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-rail__track {
+      display: flex;
+      width: max-content;
+      will-change: transform;
+      transform: translate3d(0, 0, 0);
+      animation-name: marquee-scroll-{{ section.settings.direction }};
+      animation-duration: var(--marquee-speed);
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-rail[data-pause-on-hover]:hover .marquee-rail__track,
+    #shopify-section-{{ section.id }} .marquee-rail[data-pause-on-hover]:focus-within .marquee-rail__track {
+      animation-play-state: paused;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-rail.is-dragging .marquee-rail__track {
+      animation-play-state: paused !important;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-rail__group {
+      display: flex;
+      gap: var(--marquee-rail-gap);
+      padding-right: var(--marquee-rail-gap);
+      flex-shrink: 0;
+    }
+
+    @keyframes marquee-scroll-left {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+
+    @keyframes marquee-scroll-right {
+      0% {
+        transform: translate3d(-50%, 0, 0);
+      }
+      100% {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    /* Card Presentation & Zero Layout Shift (CLS = 0) */
+    #shopify-section-{{ section.id }} .marquee-card {
+      position: relative;
+      width: var(--marquee-card-width-desktop);
+      flex: 0 0 var(--marquee-card-width-desktop);
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    @media screen and (max-width: 699px) {
+      #shopify-section-{{ section.id }} .marquee-card {
+        width: var(--marquee-card-width-mobile);
+        flex: 0 0 var(--marquee-card-width-mobile);
+      }
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card__link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      outline: none;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card__media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      background-color: #141414;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card:hover .marquee-card__media {
+      border-color: rgba(201, 168, 118, 0.35);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Obsidian Skeleton Shimmer Placeholder */
+    #shopify-section-{{ section.id }} .marquee-card__media::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(20, 20, 20, 0) 0%,
+        rgba(201, 168, 118, 0.08) 50%,
+        rgba(20, 20, 20, 0) 100%
+      );
+      transform: translateX(-100%);
+      animation: marquee-shimmer 2.2s infinite ease-in-out;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @keyframes marquee-shimmer {
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card__image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 2;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card:hover .marquee-card__image {
+      transform: scale(1.06);
+    }
+
+    /* Floating Product Count Badge Pill */
+    #shopify-section-{{ section.id }} .marquee-card__pill {
+      position: absolute;
+      top: 0.875rem;
+      right: 0.875rem;
+      z-index: 10;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.3rem 0.65rem;
+      border-radius: 9999px;
+      background: rgba(10, 10, 10, 0.72);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(201, 168, 118, 0.45);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+      pointer-events: none;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card:hover .marquee-card__pill {
+      transform: translateY(-2px);
+      border-color: #c9a876;
+      background: rgba(10, 10, 10, 0.85);
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card__pill-text {
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.625rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #c9a876;
+      white-space: nowrap;
+    }
+
+    /* Glassmorphic Card Overlay */
+    #shopify-section-{{ section.id }} .marquee-card__overlay {
+      position: absolute;
+      inset-inline: 0;
+      bottom: 0;
+      padding: 1.25rem 1rem 1rem;
+      background: linear-gradient(
+        180deg,
+        rgba(10, 10, 10, 0) 0%,
+        rgba(10, 10, 10, 0.65) 40%,
+        rgba(10, 10, 10, 0.95) 100%
+      );
+      backdrop-filter: blur(12px) saturate(160%);
+      -webkit-backdrop-filter: blur(12px) saturate(160%);
+      border-top: 1px solid rgba(201, 168, 118, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      z-index: 5;
+      transition: backdrop-filter 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card:hover .marquee-card__overlay {
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-top-color: rgba(201, 168, 118, 0.5);
+      background: linear-gradient(
+        180deg,
+        rgba(10, 10, 10, 0) 0%,
+        rgba(10, 10, 10, 0.75) 35%,
+        rgba(10, 10, 10, 0.98) 100%
+      );
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card__kicker {
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #c9a876;
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card__title {
+      font-family: var(--heading-font-family, inherit);
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.3;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #f0eee9;
+      margin: 0;
+      transition: color 0.25s ease;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card:hover .marquee-card__title {
+      color: #ffffff;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card__action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.625rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #c9a876;
+      margin-top: 0.4rem;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card:hover .marquee-card__action {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #shopify-section-{{ section.id }} .marquee-rail__track {
+        animation: none !important;
+      }
+      #shopify-section-{{ section.id }} .marquee-rail__viewport {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      #shopify-section-{{ section.id }} .marquee-card__media::before {
+        animation: none !important;
+      }
+    }
+  </style>
+
+  {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | default: '#0a0a0a' | md5 -%}
+
+  <div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %} marquee-collection-section">
+    <div class="section-stack">
+      {%- if section.settings.subheading != blank or section.settings.title != blank -%}
+        <div class="marquee-collection-header justify-self-center text-center">
+          <div class="prose">
+            {%- if section.settings.subheading != blank -%}
+              <p class="marquee-collection-subheading">{{ section.settings.subheading }}</p>
+            {%- endif -%}
+
+            {%- if section.settings.title != blank -%}
+              <h2 class="marquee-collection-heading">{{ section.settings.title }}</h2>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+
+      <marquee-collection-rail
+        class="marquee-rail"
+        data-speed="{{ section.settings.speed }}"
+        data-direction="{{ section.settings.direction }}"
+        {% if section.settings.pause_on_hover %}data-pause-on-hover{% endif %}
+        role="region"
+        aria-label="{{ section.settings.title | default: 'Curated collection showcase' | escape }}"
+      >
+        <div class="marquee-rail__viewport">
+          <div class="marquee-rail__track">
+            {%- comment -%} Group A: Semantic primary collection cards {%- endcomment -%}
+            <div class="marquee-rail__group" data-group="a">
+              {%- for block in section.blocks -%}
+                {%- assign collection = block.settings.collection -%}
+                {%- assign card_title = block.settings.title | default: collection.title | default: 'Maison Collection' -%}
+                {%- assign card_url = block.settings.url | default: collection.url | default: '#' -%}
+                {%- assign card_image = block.settings.image | default: collection.featured_image | default: collection.products.first.featured_media.preview_image -%}
+                {%- assign card_count = block.settings.custom_count | default: collection.all_products_count -%}
+
+                <div class="marquee-card" {{ block.shopify_attributes }}>
+                  <a href="{{ card_url }}" class="marquee-card__link" draggable="false">
+                    <div class="marquee-card__media">
+                      {%- if card_image != blank -%}
+                        {{- card_image | image_url: width: 800 | image_tag:
+                          loading: 'lazy',
+                          sizes: '(max-width: 699px) 240px, 320px',
+                          widths: '240,320,480,640,800',
+                          class: 'marquee-card__image',
+                          alt: card_title | escape,
+                          draggable: 'false'
+                        -}}
+                      {%- else -%}
+                        {%- capture placeholder_index -%}{% cycle '1', '2', '3', '4', '5', '6' %}{%- endcapture -%}
+                        {{- 'collection-' | append: placeholder_index | placeholder_svg_tag: 'placeholder marquee-card__image' -}}
+                      {%- endif -%}
+
+                      <div class="marquee-card__pill">
+                        <span class="marquee-card__pill-text">
+                          {%- if card_count != blank and card_count > 0 -%}
+                            {{ card_count }} {% if card_count == 1 %}PIECE{% else %}PIECES{% endif %}
+                          {%- else -%}
+                            EXPLORE
+                          {%- endif -%}
+                        </span>
+                      </div>
+
+                      <div class="marquee-card__overlay">
+                        {%- if block.settings.subheading != blank -%}
+                          <span class="marquee-card__kicker">{{ block.settings.subheading }}</span>
+                        {%- endif -%}
+                        <h3 class="marquee-card__title">{{ card_title }}</h3>
+                        <span class="marquee-card__action">
+                          DISCOVER
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+                            <path d="M1 5H9M9 5L5.5 1.5M9 5L5.5 8.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              {%- endfor -%}
+            </div>
+
+            {%- comment -%} Group B: Cloned collection cards for seamless continuous infinite loop {%- endcomment -%}
+            <div class="marquee-rail__group" data-group="b" aria-hidden="true">
+              {%- for block in section.blocks -%}
+                {%- assign collection = block.settings.collection -%}
+                {%- assign card_title = block.settings.title | default: collection.title | default: 'Maison Collection' -%}
+                {%- assign card_url = block.settings.url | default: collection.url | default: '#' -%}
+                {%- assign card_image = block.settings.image | default: collection.featured_image | default: collection.products.first.featured_media.preview_image -%}
+                {%- assign card_count = block.settings.custom_count | default: collection.all_products_count -%}
+
+                <div class="marquee-card" aria-hidden="true">
+                  <a href="{{ card_url }}" class="marquee-card__link" tabindex="-1" aria-hidden="true" draggable="false">
+                    <div class="marquee-card__media">
+                      {%- if card_image != blank -%}
+                        {{- card_image | image_url: width: 800 | image_tag:
+                          loading: 'lazy',
+                          sizes: '(max-width: 699px) 240px, 320px',
+                          widths: '240,320,480,640,800',
+                          class: 'marquee-card__image',
+                          alt: card_title | escape,
+                          draggable: 'false'
+                        -}}
+                      {%- else -%}
+                        {%- capture placeholder_index_b -%}{% cycle '1', '2', '3', '4', '5', '6' %}{%- endcapture -%}
+                        {{- 'collection-' | append: placeholder_index_b | placeholder_svg_tag: 'placeholder marquee-card__image' -}}
+                      {%- endif -%}
+
+                      <div class="marquee-card__pill">
+                        <span class="marquee-card__pill-text">
+                          {%- if card_count != blank and card_count > 0 -%}
+                            {{ card_count }} {% if card_count == 1 %}PIECE{% else %}PIECES{% endif %}
+                          {%- else -%}
+                            EXPLORE
+                          {%- endif -%}
+                        </span>
+                      </div>
+
+                      <div class="marquee-card__overlay">
+                        {%- if block.settings.subheading != blank -%}
+                          <span class="marquee-card__kicker">{{ block.settings.subheading }}</span>
+                        {%- endif -%}
+                        <h3 class="marquee-card__title">{{ card_title }}</h3>
+                        <span class="marquee-card__action">
+                          DISCOVER
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+                            <path d="M1 5H9M9 5L5.5 1.5M9 5L5.5 8.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </marquee-collection-rail>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      if (customElements.get('marquee-collection-rail')) return;
+
+      class MarqueeCollectionRail extends HTMLElement {
+        constructor() {
+          super();
+          this.track = null;
+          this.groupA = null;
+          this.groupB = null;
+          this.isDragging = false;
+          this.hasMoved = false;
+          this.startX = 0;
+          this.lastX = 0;
+          this.lastTime = 0;
+          this.velocity = 0;
+          this.currentX = 0;
+          this.rafId = null;
+
+          this.onPointerDown = this.onPointerDown.bind(this);
+          this.onPointerMove = this.onPointerMove.bind(this);
+          this.onPointerUp = this.onPointerUp.bind(this);
+          this.onPointerCancel = this.onPointerCancel.bind(this);
+          this.glide = this.glide.bind(this);
+        }
+
+        connectedCallback() {
+          this.track = this.querySelector('.marquee-rail__track');
+          this.groupA = this.querySelector('.marquee-rail__group[data-group="a"]');
+          this.groupB = this.querySelector('.marquee-rail__group[data-group="b"]');
+
+          if (!this.track) return;
+
+          this.track.addEventListener('pointerdown', this.onPointerDown, { passive: false });
+          this.track.addEventListener('pointermove', this.onPointerMove, { passive: false });
+          this.track.addEventListener('pointerup', this.onPointerUp, { passive: false });
+          this.track.addEventListener('pointercancel', this.onPointerCancel, { passive: false });
+        }
+
+        disconnectedCallback() {
+          if (this.rafId) cancelAnimationFrame(this.rafId);
+          if (this.track) {
+            this.track.removeEventListener('pointerdown', this.onPointerDown);
+            this.track.removeEventListener('pointermove', this.onPointerMove);
+            this.track.removeEventListener('pointerup', this.onPointerUp);
+            this.track.removeEventListener('pointercancel', this.onPointerCancel);
+          }
+        }
+
+        getGroupWidth() {
+          if (this.groupA && this.groupA.offsetWidth > 0) {
+            return this.groupA.offsetWidth;
+          }
+          return (this.track ? this.track.offsetWidth / 2 : 0);
+        }
+
+        getCurrentTransformX() {
+          if (!this.track) return 0;
+          const style = window.getComputedStyle(this.track);
+          const transform = style.transform || style.webkitTransform;
+          if (!transform || transform === 'none') return 0;
+
+          try {
+            const matrix = new DOMMatrix(transform);
+            return matrix.m41 || 0;
+          } catch (e) {
+            const values = transform.match(/matrix.*\((.+)\)/);
+            if (values && values[1]) {
+              const parts = values[1].split(', ');
+              return parseFloat(parts[4]) || 0;
+            }
+            return 0;
+          }
+        }
+
+        onPointerDown(e) {
+          if (e.button !== 0 && e.pointerType === 'mouse') return;
+          if (this.rafId) {
+            cancelAnimationFrame(this.rafId);
+            this.rafId = null;
+          }
+
+          const currentX = this.getCurrentTransformX();
+          const groupWidth = this.getGroupWidth();
+
+          this.currentX = currentX;
+          if (groupWidth > 0) {
+            while (this.currentX > 0) this.currentX -= groupWidth;
+            while (this.currentX < -groupWidth) this.currentX += groupWidth;
+          }
+
+          this.track.style.animation = 'none';
+          this.track.style.willChange = 'transform';
+          this.track.style.transform = `translate3d(${this.currentX}px, 0, 0)`;
+
+          this.isDragging = true;
+          this.hasMoved = false;
+          this.startX = e.clientX;
+          this.lastX = e.clientX;
+          this.lastTime = performance.now();
+          this.velocity = 0;
+
+          this.classList.add('is-dragging');
+          try {
+            this.track.setPointerCapture(e.pointerId);
+          } catch (_) {}
+        }
+
+        onPointerMove(e) {
+          if (!this.isDragging) return;
+
+          const now = performance.now();
+          const dt = Math.max(1, now - this.lastTime);
+          const dx = e.clientX - this.lastX;
+
+          if (Math.abs(e.clientX - this.startX) > 4) {
+            this.hasMoved = true;
+          }
+
+          this.currentX += dx;
+          // Instantaneous velocity (px/ms)
+          this.velocity = dx / dt;
+
+          this.lastX = e.clientX;
+          this.lastTime = now;
+
+          const groupWidth = this.getGroupWidth();
+          if (groupWidth > 0) {
+            while (this.currentX > 0) this.currentX -= groupWidth;
+            while (this.currentX < -groupWidth) this.currentX += groupWidth;
+          }
+
+          this.track.style.transform = `translate3d(${this.currentX}px, 0, 0)`;
+        }
+
+        onPointerUp(e) {
+          if (!this.isDragging) return;
+          this.isDragging = false;
+          this.classList.remove('is-dragging');
+
+          try {
+            if (this.track.hasPointerCapture(e.pointerId)) {
+              this.track.releasePointerCapture(e.pointerId);
+            }
+          } catch (_) {}
+
+          if (this.hasMoved) {
+            const suppressClick = (evt) => {
+              evt.preventDefault();
+              evt.stopPropagation();
+              window.removeEventListener('click', suppressClick, true);
+            };
+            window.addEventListener('click', suppressClick, true);
+          }
+
+          if (Math.abs(this.velocity) > 0.08) {
+            this.rafId = requestAnimationFrame(this.glide);
+          } else {
+            this.resumeCssAnimation();
+          }
+        }
+
+        onPointerCancel(e) {
+          this.onPointerUp(e);
+        }
+
+        glide() {
+          if (this.isDragging) return;
+
+          // Exponential friction deceleration
+          this.velocity *= 0.95;
+          this.currentX += this.velocity * 16.67;
+
+          const groupWidth = this.getGroupWidth();
+          if (groupWidth > 0) {
+            while (this.currentX > 0) this.currentX -= groupWidth;
+            while (this.currentX < -groupWidth) this.currentX += groupWidth;
+          }
+
+          this.track.style.transform = `translate3d(${this.currentX}px, 0, 0)`;
+
+          if (Math.abs(this.velocity) > 0.02) {
+            this.rafId = requestAnimationFrame(this.glide);
+          } else {
+            this.resumeCssAnimation();
+          }
+        }
+
+        resumeCssAnimation() {
+          const groupWidth = this.getGroupWidth();
+          if (!groupWidth || groupWidth <= 0) return;
+
+          const speed = parseFloat(this.dataset.speed) || 35;
+          const direction = this.dataset.direction || 'left';
+
+          // Normalized progress [0, 1)
+          let progress = 0;
+          if (direction === 'left') {
+            progress = (-this.currentX) / groupWidth;
+          } else {
+            progress = (this.currentX + groupWidth) / groupWidth;
+          }
+          progress = ((progress % 1) + 1) % 1;
+
+          const delay = -(progress * speed);
+          const animName = direction === 'right' ? 'marquee-scroll-right' : 'marquee-scroll-left';
+
+          this.track.style.animation = `${animName} ${speed}s linear infinite`;
+          this.track.style.animationDelay = `${delay}s`;
+          this.track.style.transform = '';
+        }
+      }
+
+      customElements.define('marquee-collection-rail', MarqueeCollectionRail);
+    })();
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Marquee collection list",
+  "class": "shopify-section--marquee-collection-list",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "max_blocks": 16,
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "separate_section_with_border",
+      "label": "Separate section with border",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "s",
+      "label": "Animation cycle duration",
+      "info": "Lower duration means faster scrolling speed.",
+      "default": 35
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "Scroll direction",
+      "options": [
+        {
+          "value": "left",
+          "label": "Right to left"
+        },
+        {
+          "value": "right",
+          "label": "Left to right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause animation on hover",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "card_width",
+      "min": 240,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "label": "Card width (desktop)",
+      "default": 280
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Card gap",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Section header"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Curated Portfolios"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Heading",
+      "default": "Explore by Maison & Category"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_card",
+      "name": "Collection Card",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Custom card image",
+          "info": "Overrides default collection image and first product image."
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Custom title",
+          "info": "Overrides collection title if populated."
+        },
+        {
+          "type": "inline_richtext",
+          "id": "subheading",
+          "label": "Badge / Sub-label",
+          "info": "e.g. 'Maison Edit', 'Haute Horlogerie', 'New In'"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Custom destination URL",
+          "info": "Overrides collection URL (e.g. filtered tag URL)."
+        },
+        {
+          "type": "number",
+          "id": "custom_count",
+          "label": "Custom piece count override",
+          "info": "Overrides collection product count if populated."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marquee collection list",
+      "blocks": [
+        {
+          "type": "collection_card",
+          "settings": {
+            "collection": "designer-bags",
+            "title": "Luxury Handbags",
+            "subheading": "Maison Edit"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "collection": "instant-ship",
+            "url": "/collections/women?filter.p.tag=Footwear",
+            "title": "Premium Footwear",
+            "subheading": "Designer Silhouettes"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "collection": "luxury-watches",
+            "title": "Swiss Timepieces",
+            "subheading": "Haute Horlogerie"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "collection": "instant-ship",
+            "title": "Ready to Ship",
+            "subheading": "Express Dispatch"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "collection": "coach",
+            "title": "Coach",
+            "subheading": "New York Leathercraft"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "collection": "instant-ship",
+            "url": "/collections/women?filter.p.vendor=Nike",
+            "title": "Nike",
+            "subheading": "Iconic Athletics"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "collection": "jw-pei",
+            "title": "JW PEI",
+            "subheading": "Modern Sculptural"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "collection": "tissot",
+            "title": "Tissot",
+            "subheading": "Swiss Tradition"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "collection": "michael-kors",
+            "title": "Michael Kors",
+            "subheading": "Jet Set Luxury"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "collection": "instant-ship",
+            "url": "/collections/women/on",
+            "title": "On Running",
+            "subheading": "Swiss Performance"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "collection": "instant-ship",
+            "url": "/collections/women/hoka",
+            "title": "HOKA",
+            "subheading": "Maximalist Comfort"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "collection": "wallets-leather-goods",
+            "title": "Small Leather Goods",
+            "subheading": "Petite Essentials"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

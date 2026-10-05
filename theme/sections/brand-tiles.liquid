@@ -1,0 +1,522 @@
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+BRAND TILES SECTION (MINIMALIST BRAND PORTAL MATRIX)
+------------------------------------------------------------------------------------------------------------------------
+High-elegance curated maison matrix displaying live style counts, glassmorphic card overlays,
+smooth hover elevation, and responsive reflow (4 columns desktop, 2 columns mobile).
+{%- endcomment -%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    --brand-matrix-columns-desktop: {{ section.settings.columns_desktop | default: 4 }};
+    --brand-card-aspect-ratio: {{ section.settings.card_aspect_ratio | default: '4 / 5' }};
+  }
+
+  #shopify-section-{{ section.id }} .brand-tiles-container {
+    position: relative;
+    padding-block: var(--section-vertical-spacing, 3.5rem);
+  }
+
+  #shopify-section-{{ section.id }} .brand-tiles-header {
+    margin-bottom: clamp(1.75rem, 3.5vw, 3rem);
+    text-align: center;
+  }
+
+  #shopify-section-{{ section.id }} .brand-tiles-subheading {
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9a876;
+    margin-bottom: 0.5rem;
+  }
+
+  #shopify-section-{{ section.id }} .brand-tiles-heading {
+    font-family: var(--heading-font-family, inherit);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-foreground, #f0eee9);
+    margin: 0;
+  }
+
+  #shopify-section-{{ section.id }} .brand-tiles-intro {
+    max-width: 600px;
+    margin: 0.75rem auto 0;
+    font-size: 0.9375rem;
+    color: rgba(240, 238, 233, 0.7);
+    line-height: 1.6;
+  }
+
+  #shopify-section-{{ section.id }} .brand-tiles-grid {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.columns_mobile | default: 2 }}, 1fr);
+    gap: clamp(0.75rem, 1.5vw, 1.25rem);
+  }
+
+  @media screen and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .brand-tiles-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    #shopify-section-{{ section.id }} .brand-tiles-grid {
+      grid-template-columns: repeat(var(--brand-matrix-columns-desktop), 1fr);
+    }
+  }
+
+  /* Brand Card Styling & Hover Elevation */
+  #shopify-section-{{ section.id }} .brand-card {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.4s ease,
+                box-shadow 0.4s ease;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201, 168, 118, 0.45);
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.65);
+  }
+
+  #shopify-section-{{ section.id }} .brand-card__link {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    outline: none;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card__media-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: var(--brand-card-aspect-ratio);
+    overflow: hidden;
+    background-color: #141414;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.001);
+    transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  #shopify-section-{{ section.id }} .brand-card:hover .brand-card__image {
+    transform: scale(1.08);
+  }
+
+  /* Shimmer Skeleton Placeholder */
+  #shopify-section-{{ section.id }} .brand-card__media-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(201, 168, 118, 0.04) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: translateX(-100%);
+    animation: brand-shimmer 2.2s infinite ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  @keyframes brand-shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  /* Monogram Typographic Fallback */
+  #shopify-section-{{ section.id }} .brand-card__monogram {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #1c1c1c 0%, #0d0d0d 100%);
+    font-family: var(--heading-font-family, inherit);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: rgba(201, 168, 118, 0.25);
+    text-transform: uppercase;
+    transition: color 0.4s ease, transform 0.4s ease;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card:hover .brand-card__monogram {
+    color: rgba(201, 168, 118, 0.5);
+    transform: scale(1.05);
+  }
+
+  /* Style Count Badge Pill */
+  #shopify-section-{{ section.id }} .brand-card__pill {
+    position: absolute;
+    top: 0.875rem;
+    right: 0.875rem;
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.625rem;
+    border-radius: 9999px;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(201, 168, 118, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: #c9a876;
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card:hover .brand-card__pill {
+    transform: translateY(-2px);
+    border-color: #c9a876;
+  }
+
+  /* Glassmorphic Overlay */
+  #shopify-section-{{ section.id }} .brand-card__overlay {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 4;
+    padding: clamp(1rem, 2vw, 1.35rem);
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 10, 0) 0%,
+      rgba(10, 10, 10, 0.65) 30%,
+      rgba(10, 10, 10, 0.95) 100%
+    );
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(201, 168, 118, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card:hover .brand-card__overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 10, 0) 0%,
+      rgba(10, 10, 10, 0.78) 30%,
+      rgba(10, 10, 10, 0.98) 100%
+    );
+    border-top-color: rgba(201, 168, 118, 0.4);
+  }
+
+  #shopify-section-{{ section.id }} .brand-card__kicker {
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.5625rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9a876;
+    margin-bottom: 0.25rem;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card__title {
+    font-family: var(--heading-font-family, inherit);
+    font-size: clamp(0.9375rem, 1.5vw, 1.1875rem);
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #f0eee9;
+    margin: 0;
+    line-height: 1.2;
+    transition: color 0.25s ease;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card:hover .brand-card__title {
+    color: #ffffff;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card__action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.4rem;
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #c9a876;
+    opacity: 0;
+    transform: translateY(3px);
+    transition: opacity 0.3s ease, transform 0.3s ease, color 0.25s ease;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card:hover .brand-card__action {
+    opacity: 1;
+    transform: translateY(0);
+    color: #ffffff;
+  }
+</style>
+
+<div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  <div class="container">
+    <div class="brand-tiles-container">
+      {%- if section.settings.title != blank or section.settings.subheading != blank -%}
+        <div class="brand-tiles-header">
+          {%- if section.settings.subheading != blank -%}
+            <p class="brand-tiles-subheading">{{ section.settings.subheading }}</p>
+          {%- endif -%}
+          {%- if section.settings.title != blank -%}
+            <h2 class="brand-tiles-heading">{{ section.settings.title }}</h2>
+          {%- endif -%}
+          {%- if section.settings.content != blank -%}
+            <div class="brand-tiles-intro">
+              {{ section.settings.content }}
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="brand-tiles-grid">
+        {%- if section.blocks.size > 0 -%}
+          {%- for block in section.blocks -%}
+            {%- liquid
+              assign collection = block.settings.collection
+              assign brand_title = block.settings.title | default: collection.title | default: 'Maison'
+              assign brand_subheading = block.settings.subheading
+              assign brand_url = block.settings.link_url | default: collection.url | default: routes.collections_url
+              assign brand_count = collection.all_products_count | default: collection.products_count | default: 0
+              assign brand_image = block.settings.image | default: collection.featured_image | default: collection.products.first.featured_media.preview_image
+            -%}
+
+            <div class="brand-card group" {{ block.shopify_attributes }}>
+              <a href="{{ brand_url }}" class="brand-card__link" aria-label="{{ brand_title | escape }}">
+                <div class="brand-card__media-box">
+                  {%- if brand_image != blank -%}
+                    {{- brand_image | image_url: width: 800 | image_tag:
+                      loading: 'lazy',
+                      sizes: '(max-width: 699px) 50vw, (max-width: 1024px) 33vw, 25vw',
+                      widths: '200,300,400,600,800',
+                      class: 'brand-card__image'
+                    -}}
+                  {%- else -%}
+                    <div class="brand-card__monogram">
+                      <span>{{ brand_title | slice: 0, 2 }}</span>
+                    </div>
+                  {%- endif -%}
+
+                  {%- if block.settings.show_style_count -%}
+                    <div class="brand-card__pill">
+                      <span>{{ brand_count }} {% if brand_count == 1 %}STYLE{% else %}STYLES{% endif %}</span>
+                    </div>
+                  {%- endif -%}
+
+                  <div class="brand-card__overlay">
+                    {%- if brand_subheading != blank -%}
+                      <span class="brand-card__kicker">{{ brand_subheading }}</span>
+                    {%- endif -%}
+                    <h3 class="brand-card__title">{{ brand_title }}</h3>
+                    <span class="brand-card__action">
+                      View Showroom &rarr;
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          {%- endfor -%}
+        {%- else -%}
+          {%- comment -%} Default Curated Maisons when 0 blocks configured {%- endcomment -%}
+          {%- assign default_handles = 'coach,michael-kors,tissot,jw-pei,movado,citizen,versace,seiko,instant-ship,luxury-watches,designer-bags,wallets-leather-goods' | split: ',' -%}
+          {%- for handle in default_handles -%}
+            {%- liquid
+              assign col = collections[handle]
+              assign col_title = col.title | default: handle | capitalize
+              assign col_url = col.url | default: routes.collections_url | append: '/' | append: handle
+              assign col_count = col.all_products_count | default: 0
+              assign col_img = col.featured_image | default: col.products.first.featured_media.preview_image
+            -%}
+            <div class="brand-card group">
+              <a href="{{ col_url }}" class="brand-card__link" aria-label="{{ col_title | escape }}">
+                <div class="brand-card__media-box">
+                  {%- if col_img != blank -%}
+                    {{- col_img | image_url: width: 800 | image_tag:
+                      loading: 'lazy',
+                      sizes: '(max-width: 699px) 50vw, (max-width: 1024px) 33vw, 25vw',
+                      widths: '200,300,400,600,800',
+                      class: 'brand-card__image'
+                    -}}
+                  {%- else -%}
+                    <div class="brand-card__monogram">
+                      <span>{{ col_title | slice: 0, 2 }}</span>
+                    </div>
+                  {%- endif -%}
+
+                  <div class="brand-card__pill">
+                    <span>{{ col_count }} {% if col_count == 1 %}STYLE{% else %}STYLES{% endif %}</span>
+                  </div>
+
+                  <div class="brand-card__overlay">
+                    <span class="brand-card__kicker">Curated Maison</span>
+                    <h3 class="brand-card__title">{{ col_title }}</h3>
+                    <span class="brand-card__action">
+                      View Showroom &rarr;
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Brand tiles",
+  "class": "shopify-section--brand-tiles",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "separate_section_with_border",
+      "label": "Separate section with border",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Curated Maisons"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Heading",
+      "default": "Explore by Brand"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Intro narrative"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "label": "Desktop columns per row",
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Mobile columns per row",
+      "options": [
+        { "value": "1", "label": "1 Column" },
+        { "value": "2", "label": "2 Columns" }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "select",
+      "id": "card_aspect_ratio",
+      "label": "Card aspect ratio",
+      "options": [
+        { "value": "4 / 5", "label": "Portrait (4:5)" },
+        { "value": "1 / 1", "label": "Square (1:1)" },
+        { "value": "3 / 4", "label": "Classic (3:4)" }
+      ],
+      "default": "4 / 5"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "brand",
+      "name": "Brand Card",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Brand collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Custom image or logo",
+          "info": "Overrides collection image and first product image."
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Brand title",
+          "info": "Leave blank to use collection title."
+        },
+        {
+          "type": "inline_richtext",
+          "id": "subheading",
+          "label": "Maison kicker / Origin",
+          "info": "e.g., 'New York 1941', 'Swiss Horology 1853'"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Destination link override"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_style_count",
+          "label": "Show style count pill",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brand tiles",
+      "blocks": [
+        { "type": "brand", "settings": { "collection": "coach", "title": "COACH", "subheading": "New York 1941" } },
+        { "type": "brand", "settings": { "collection": "michael-kors", "title": "Michael Kors", "subheading": "Jet Set Luxury" } },
+        { "type": "brand", "settings": { "collection": "tissot", "title": "Tissot", "subheading": "Swiss Horology 1853" } },
+        { "type": "brand", "settings": { "collection": "jw-pei", "title": "JW PEI", "subheading": "Modern Vegan Leather" } },
+        { "type": "brand", "settings": { "collection": "movado", "title": "Movado", "subheading": "Modernist Museum Dial" } },
+        { "type": "brand", "settings": { "collection": "citizen", "title": "Citizen", "subheading": "Eco-Drive Technology" } },
+        { "type": "brand", "settings": { "collection": "versace", "title": "Versace", "subheading": "Italian Heritage" } },
+        { "type": "brand", "settings": { "collection": "seiko", "title": "Seiko", "subheading": "Japanese Precision" } },
+        { "type": "brand", "settings": { "collection": "instant-ship", "title": "Ready to Ship", "subheading": "Dispatch in 24 Hours" } },
+        { "type": "brand", "settings": { "collection": "luxury-watches", "title": "Luxury Watches", "subheading": "Certified Calibers" } },
+        { "type": "brand", "settings": { "collection": "designer-bags", "title": "Designer Bags", "subheading": "Iconic Silhouettes" } },
+        { "type": "brand", "settings": { "collection": "wallets-leather-goods", "title": "Leather Goods", "subheading": "Wallets & Pouches" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

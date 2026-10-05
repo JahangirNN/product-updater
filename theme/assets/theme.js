@@ -3445,7 +3445,7 @@ function updateProductCardPrice(card, targetOrControl) {
 
   const srOnly = salePrice.querySelector(".sr-only");
   const srText = srOnly ? srOnly.outerHTML : '<span class="sr-only">Sale price</span>';
-  salePrice.innerHTML = srText + price;
+  salePrice.innerHTML = srText + '\n' + price;
 
   let compareAtPrice = priceList.querySelector("compare-at-price");
   if (comparePrice) {
@@ -3456,7 +3456,7 @@ function updateProductCardPrice(card, targetOrControl) {
     }
     const compareSr = compareAtPrice.querySelector(".sr-only");
     const compareSrText = compareSr ? compareSr.outerHTML : '<span class="sr-only">Regular price</span>';
-    compareAtPrice.innerHTML = compareSrText + comparePrice;
+    compareAtPrice.innerHTML = compareSrText + '\n' + comparePrice;
     compareAtPrice.style.display = "";
     salePrice.className = "h6 text-on-sale";
   } else {
@@ -3487,12 +3487,25 @@ var ProductCard = class extends HTMLElement {
   connectedCallback() {
     __privateGet(this, _delegate3).on("change", '.product-card__info [type="radio"]', __privateMethod(this, _ProductCard_instances, onSwatchChanged_fn).bind(this));
     __privateGet(this, _delegate3).on("pointerover", '.product-card__info [type="radio"] + label', __privateMethod(this, _ProductCard_instances, onSwatchHovered_fn).bind(this), true);
-    __privateGet(this, _delegate3).on("pointerleave", '.product-card__info fieldset', () => {
+    
+    this._onPointerLeave = () => {
       restoreProductCardPrice(this);
-    });
+    };
+    const fieldset = this.querySelector(".product-card__info fieldset");
+    if (fieldset) {
+      fieldset.addEventListener("pointerleave", this._onPointerLeave);
+    }
+    this.addEventListener("pointerleave", this._onPointerLeave);
   }
   disconnectedCallback() {
     __privateGet(this, _delegate3).off();
+    if (this._onPointerLeave) {
+      const fieldset = this.querySelector(".product-card__info fieldset");
+      if (fieldset) {
+        fieldset.removeEventListener("pointerleave", this._onPointerLeave);
+      }
+      this.removeEventListener("pointerleave", this._onPointerLeave);
+    }
   }
 };
 _delegate3 = new WeakMap();

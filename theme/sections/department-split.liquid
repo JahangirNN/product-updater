@@ -1,0 +1,491 @@
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+DEPARTMENT SPLIT SECTION (50/50 EDITORIAL CAMPAIGN)
+------------------------------------------------------------------------------------------------------------------------
+High-impact dual campaign split for "The Women's Edit" and "The Men's Edit".
+Features live product count badges, glassmorphic bottom overlays, hover media zoom,
+and seamless responsive reflow.
+{%- endcomment -%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    --department-card-aspect-desktop: {{ section.settings.desktop_aspect_ratio | default: '4 / 5' }};
+    --department-card-aspect-mobile: {{ section.settings.mobile_aspect_ratio | default: '1 / 1' }};
+  }
+
+  #shopify-section-{{ section.id }} .department-split-container {
+    position: relative;
+    padding-block: var(--section-vertical-spacing, 3.5rem);
+  }
+
+  #shopify-section-{{ section.id }} .department-split-header {
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+    text-align: center;
+  }
+
+  #shopify-section-{{ section.id }} .department-split-subheading {
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9a876;
+    margin-bottom: 0.5rem;
+  }
+
+  #shopify-section-{{ section.id }} .department-split-heading {
+    font-family: var(--heading-font-family, inherit);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-foreground, #f0eee9);
+    margin: 0;
+  }
+
+  #shopify-section-{{ section.id }} .department-split-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 2vw, 1.75rem);
+  }
+
+  @media screen and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .department-split-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Campaign Card */
+  #shopify-section-{{ section.id }} .department-card {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  #shopify-section-{{ section.id }} .department-card:hover {
+    border-color: rgba(201, 168, 118, 0.4);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+  }
+
+  #shopify-section-{{ section.id }} .department-card__link {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    outline: none;
+  }
+
+  #shopify-section-{{ section.id }} .department-card__media-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: var(--department-card-aspect-mobile);
+    overflow: hidden;
+    background-color: #141414;
+  }
+
+  @media screen and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .department-card__media-wrapper {
+      aspect-ratio: var(--department-card-aspect-desktop);
+    }
+  }
+
+  #shopify-section-{{ section.id }} .department-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.001);
+    transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  #shopify-section-{{ section.id }} .department-card:hover .department-card__image {
+    transform: scale(1.06);
+  }
+
+  /* Obsidian Shimmer Loader */
+  #shopify-section-{{ section.id }} .department-card__media-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(201, 168, 118, 0.04) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: translateX(-100%);
+    animation: department-shimmer 2.5s infinite ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  @keyframes department-shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  /* Floating Style Count Pill */
+  #shopify-section-{{ section.id }} .department-card__pill {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.875rem;
+    border-radius: 9999px;
+    background: rgba(10, 10, 10, 0.78);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(201, 168, 118, 0.45);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+    color: #c9a876;
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  #shopify-section-{{ section.id }} .department-card:hover .department-card__pill {
+    transform: translateY(-2px);
+    border-color: #c9a876;
+  }
+
+  /* Glassmorphic Bottom Editorial Overlay */
+  #shopify-section-{{ section.id }} .department-card__overlay {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 4;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 10, 0) 0%,
+      rgba(10, 10, 10, 0.6) 30%,
+      rgba(10, 10, 10, 0.94) 100%
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(201, 168, 118, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: background 0.35s ease, border-color 0.35s ease;
+  }
+
+  #shopify-section-{{ section.id }} .department-card:hover .department-card__overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 10, 0) 0%,
+      rgba(10, 10, 10, 0.72) 30%,
+      rgba(10, 10, 10, 0.98) 100%
+    );
+    border-top-color: rgba(201, 168, 118, 0.4);
+  }
+
+  #shopify-section-{{ section.id }} .department-card__subheading {
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9a876;
+    margin-bottom: 0.4rem;
+  }
+
+  #shopify-section-{{ section.id }} .department-card__title {
+    font-family: var(--heading-font-family, inherit);
+    font-size: clamp(1.5rem, 2.75vw, 2.25rem);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #f0eee9;
+    margin: 0 0 1rem 0;
+    line-height: 1.15;
+    transition: color 0.3s ease;
+  }
+
+  #shopify-section-{{ section.id }} .department-card:hover .department-card__title {
+    color: #ffffff;
+  }
+
+  #shopify-section-{{ section.id }} .department-card__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #c9a876;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid rgba(201, 168, 118, 0.4);
+    align-self: flex-start;
+    transition: border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+
+  #shopify-section-{{ section.id }} .department-card:hover .department-card__button {
+    color: #ffffff;
+    border-color: #c9a876;
+    transform: translateX(4px);
+  }
+</style>
+
+<div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  <div class="container">
+    <div class="department-split-container">
+      {%- if section.settings.title != blank or section.settings.subheading != blank -%}
+        <div class="department-split-header">
+          {%- if section.settings.subheading != blank -%}
+            <p class="department-split-subheading">{{ section.settings.subheading }}</p>
+          {%- endif -%}
+          {%- if section.settings.title != blank -%}
+            <h2 class="department-split-heading">{{ section.settings.title }}</h2>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="department-split-grid">
+        {%- if section.blocks.size > 0 -%}
+          {%- for block in section.blocks -%}
+            {%- liquid
+              assign collection = block.settings.collection
+              assign card_title = block.settings.title | default: collection.title | default: 'Department'
+              assign card_subheading = block.settings.subheading
+              assign button_text = block.settings.button_text | default: 'Explore Collection'
+              assign card_url = block.settings.button_link | default: collection.url | default: routes.collections_url
+              assign card_count = collection.all_products_count | default: collection.products_count | default: 0
+              assign card_image = block.settings.image | default: collection.featured_image | default: collection.products.first.featured_media.preview_image
+            -%}
+
+            <div class="department-card group" {{ block.shopify_attributes }}>
+              <a href="{{ card_url }}" class="department-card__link" aria-label="{{ card_title | escape }}">
+                <div class="department-card__media-wrapper">
+                  {%- if card_image != blank -%}
+                    {{- card_image | image_url: width: 1400 | image_tag:
+                      loading: 'lazy',
+                      sizes: '(max-width: 767px) 100vw, 50vw',
+                      widths: '375,550,750,1000,1200,1400',
+                      class: 'department-card__image'
+                    -}}
+                  {%- else -%}
+                    {%- capture placeholder_index -%}{% cycle '1', '2' %}{%- endcapture -%}
+                    {{- 'collection-' | append: placeholder_index | placeholder_svg_tag: 'placeholder department-card__image' -}}
+                  {%- endif -%}
+
+                  {%- if block.settings.show_product_count -%}
+                    <div class="department-card__pill">
+                      <span>{{ card_count }} {% if card_count == 1 %}PIECE{% else %}PIECES{% endif %}</span>
+                    </div>
+                  {%- endif -%}
+
+                  <div class="department-card__overlay">
+                    {%- if card_subheading != blank -%}
+                      <span class="department-card__subheading">{{ card_subheading }}</span>
+                    {%- endif -%}
+                    <h3 class="department-card__title">{{ card_title }}</h3>
+                    <span class="department-card__button">
+                      {{ button_text }} &rarr;
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          {%- endfor -%}
+        {%- else -%}
+          {%- comment -%} Default Two Columns Fallback when 0 blocks configured {%- endcomment -%}
+          {%- for i in (1..2) -%}
+            {%- liquid
+              if forloop.first
+                assign default_handle = 'women'
+                assign default_title = "The Women's Edit"
+                assign default_sub = "Curated Elegance"
+                assign default_btn = "Discover Women's"
+              else
+                assign default_handle = 'men'
+                assign default_title = "The Men's Edit"
+                assign default_sub = "Modern Caliber"
+                assign default_btn = "Discover Men's"
+              endif
+              assign default_col = collections[default_handle]
+              assign default_url = default_col.url | default: routes.collections_url | append: '/' | append: default_handle
+              assign default_count = default_col.all_products_count | default: 0
+              assign default_img = default_col.featured_image | default: default_col.products.first.featured_media.preview_image
+            -%}
+            <div class="department-card group">
+              <a href="{{ default_url }}" class="department-card__link" aria-label="{{ default_title | escape }}">
+                <div class="department-card__media-wrapper">
+                  {%- if default_img != blank -%}
+                    {{- default_img | image_url: width: 1400 | image_tag:
+                      loading: 'lazy',
+                      sizes: '(max-width: 767px) 100vw, 50vw',
+                      widths: '375,550,750,1000,1200,1400',
+                      class: 'department-card__image'
+                    -}}
+                  {%- else -%}
+                    {%- capture placeholder_index -%}{% cycle '1', '2' %}{%- endcapture -%}
+                    {{- 'collection-' | append: placeholder_index | placeholder_svg_tag: 'placeholder department-card__image' -}}
+                  {%- endif -%}
+
+                  <div class="department-card__pill">
+                    <span>{{ default_count }} {% if default_count == 1 %}PIECE{% else %}PIECES{% endif %}</span>
+                  </div>
+
+                  <div class="department-card__overlay">
+                    <span class="department-card__subheading">{{ default_sub }}</span>
+                    <h3 class="department-card__title">{{ default_title }}</h3>
+                    <span class="department-card__button">
+                      {{ default_btn }} &rarr;
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Department split",
+  "class": "shopify-section--department-split",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "max_blocks": 2,
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "separate_section_with_border",
+      "label": "Separate section with border",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Curated Portfolios"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Heading",
+      "default": "Explore by Department"
+    },
+    {
+      "type": "select",
+      "id": "desktop_aspect_ratio",
+      "label": "Desktop card aspect ratio",
+      "options": [
+        { "value": "4 / 5", "label": "Portrait (4:5)" },
+        { "value": "1 / 1", "label": "Square (1:1)" },
+        { "value": "16 / 9", "label": "Cinematic (16:9)" }
+      ],
+      "default": "4 / 5"
+    },
+    {
+      "type": "select",
+      "id": "mobile_aspect_ratio",
+      "label": "Mobile card aspect ratio",
+      "options": [
+        { "value": "1 / 1", "label": "Square (1:1)" },
+        { "value": "4 / 5", "label": "Portrait (4:5)" }
+      ],
+      "default": "1 / 1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "department",
+      "name": "Department Card",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Custom campaign image",
+          "info": "Overrides collection image and first product image."
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Campaign title",
+          "default": "The Women's Edit"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "subheading",
+          "label": "Subheading kicker",
+          "default": "Curated Wardrobe"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Explore Collection"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Custom link override"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_product_count",
+          "label": "Show piece count pill",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Department split",
+      "blocks": [
+        {
+          "type": "department",
+          "settings": {
+            "collection": "women",
+            "title": "The Women's Edit",
+            "subheading": "Curated Elegance",
+            "button_text": "Discover Women's"
+          }
+        },
+        {
+          "type": "department",
+          "settings": {
+            "collection": "men",
+            "title": "The Men's Edit",
+            "subheading": "Modern Caliber",
+            "button_text": "Discover Men's"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
