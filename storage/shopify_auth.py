@@ -20,21 +20,30 @@ DEFAULT_SHOP_DOMAIN = "hewmvw-am.myshopify.com"
 DEFAULT_API_VERSION = "2026-04"
 
 
+_LAST_CLI_REFRESH_TIME: float = 0.0
+_CLI_REFRESH_COOLDOWN_SECONDS: float = 300.0  # 5-minute cooldown between CLI refresh attempts
+
+
 def refresh_cli_session(shop_domain: str = DEFAULT_SHOP_DOMAIN) -> bool:
-    """Trigger Shopify CLI to refresh session tokens silently via CLI."""
+    """Trigger Shopify CLI to refresh session tokens silently via CLI with cooldown to prevent blocking."""
+    global _LAST_CLI_REFRESH_TIME
+    now = time.time()
+    if now - _LAST_CLI_REFRESH_TIME < _CLI_REFRESH_COOLDOWN_SECONDS:
+        return False
+    _LAST_CLI_REFRESH_TIME = now
     try:
         cmd = ["shopify.cmd" if sys.platform == "win32" else "shopify", "theme", "list", f"--store={shop_domain}"]
         res = subprocess.run(
             cmd,
             capture_output=True,
             text=True,
-            timeout=60
+            timeout=5
         )
         if res.returncode != 0:
             log_shopify_warning(f"Shopify CLI token auto-refresh exited with code {res.returncode}: {res.stderr.strip()[:200]}")
         return res.returncode == 0
     except subprocess.TimeoutExpired:
-        log_shopify_warning(f"Shopify CLI token auto-refresh timed out after 60s for {shop_domain}.")
+        log_shopify_warning(f"Shopify CLI token auto-refresh timed out after 5s for {shop_domain} (manual interactive login required).")
         return False
     except Exception as exc:
         log_shopify_warning(f"Shopify CLI token auto-refresh exception: {exc}")
@@ -134,11 +143,15 @@ def execute_shopify_graphql(
         try:
             resp = client.post(url, json=payload, headers=headers)
 
-            # Handle token expiration with transparent auto-refresh
-            if resp.status_code == 401 and allow_retry and attempt == 0:
-                log_shopify_warning(f"Shopify Admin GraphQL returned 401 Unauthorized for {domain}. Triggering CLI session auto-refresh...")
-                if refresh_cli_session(domain):
-                    return execute_shopify_graphql(query, variables, shop_domain, timeout, allow_retry=False)
+            # Handle token expiration with transparent auto-refresh or fail fast
+            if resp.status_code == 401:
+                if allow_retry and attempt == 0:
+                    log_shopify_warning(f"Shopify Admin GraphQL returned 401 Unauthorized for {domain}. Triggering CLI session auto-refresh...")
+                    if refresh_cli_session(domain):
+                        return execute_shopify_graphql(query, variables, shop_domain, timeout, allow_retry=False)
+                err_msg = f"HTTP 401 Unauthorized: Shopify session token expired for {domain}"
+                log_shopify_error(err_msg)
+                return None, {}, err_msg
 
             if (resp.status_code == 429 or resp.status_code == 503) and attempt < max_retries - 1:
                 backoff = 2.5 * (attempt + 1)
