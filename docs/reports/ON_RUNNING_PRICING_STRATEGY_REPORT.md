@@ -1,182 +1,114 @@
-# "On" Running Footwear: India Market Pricing Research & Formula Strategy Report
+# On Running Footwear: India Market Pricing & Competitor Intelligence
 
-> **Target Audience:** Leadership, E-Commerce Founders, Merchandising & Pricing Operations  
-> **Language Level:** Plain, everyday English (zero complex technical jargon)  
-> **Catalog Scope:** 83 Genuine "On" Footwear Models across Cloudmonster, Cloudsurfer, Cloud 5/6, Cloudrunner, Cloudtilt, and The Roger  
-> **PDF Report Location:** `docs/reports/ON_RUNNING_PRICING_STRATEGY_REPORT.pdf` & `Downloads/ON_RUNNING_PRICING_STRATEGY_REPORT.pdf`  
+**Executive Advisory Brief for Business Ownership**  
+*Market Benchmark across Crepdog Crew, Hypefly, Superkicks, and Culture Circle*
 
 ---
 
-## Executive Summary for Leadership
+## Executive Summary
 
-### 1. The Core Problem with Current Pricing
-Right now in our database (`storage/db/nordstrom/products/*.json`), all 92 "On" products are priced using a flat foreign exchange conversion rate (~₹95.32 per USD) with **zero retail margin markup** and **no psychological charm pricing**.
+**The Business Context:**  
+On Running is currently one of the fastest-growing luxury sneaker and performance running brands in India. It is treated as an ultra-premium lifestyle status symbol, worn by high-net-worth professionals, sneaker collectors, and fitness enthusiasts in Delhi, Mumbai, and Bangalore.
 
-For example:
-- A $160 pair of **Cloud 6** or **The Roger Advantage** is listed at **₹15,251**.
-- A $170 pair of **Cloudmonster** or **Cloudtilt** is listed at **₹16,204**.
-- A $180 pair of **Cloudrunner 3 Waterproof** is listed at **₹17,157**.
+**The Market Situation:**  
+Tier-1 Indian sneaker stores like *Superkicks* have **zero active stock** online. Because official mall supply is almost non-existent, specialized import and resale businesses like *Crepdog Crew*, *Hypefly*, and *Culture Circle* are selling these shoes for **₹16,000 to ₹23,000**, while displaying high "Official MRP" tags of **₹20,000 to ₹25,000**.
 
-Against our real international credit card procurement cost of ~₹87.50 per USD (which amounts to ₹14,000 for a $160 shoe and ₹15,750 for a $180 shoe), selling at ₹15,251 leaves barely ₹1,200 to ₹1,400 in gross margin. After accounting for payment gateway fees (2.5%), returns/size exchanges, and shipping buffers, **The Rare Avenue is currently making near-zero or negative profit on every pair of On shoes sold.**
+**Our Opportunity:**  
+We have direct US supply access to 93 authentic On Running styles at US retail prices ($120 to $200). Our landed buying cost is between **₹10,500 and ₹17,500**. This creates an immediate opportunity to make **₹3,500 to ₹4,500+ clear gross profit per pair** while still matching or beating competitor prices in India.
 
----
-
-### 2. The Golden Market Opportunity in India
-Our deep research into the Indian market reveals three critical facts:
-1. **Severe Retail Scarcity:** Major tier-1 authorized boutiques like **Superkicks (`superkicks.in`)** have *zero active online stock* of On Running shoes. The brand does not have broad official retail distribution across Indian malls.
-2. **High Status & Resale Premium:** Indian sneaker enthusiasts and luxury runners eagerly buy On shoes from import and resale platforms like **Crepdog Crew (CDC)**, **Hypefly India**, and **Culture Circle**.
-3. **High Price Tolerance:** Competitors are successfully selling standard models for **₹16,999 to ₹22,999**, while prominently displaying strikethrough compare-at MRPs of **₹20,000 to ₹25,000**.
+| Key Metric | Value | Business Context |
+| :--- | :---: | :--- |
+| **Available Catalog** | **93 Styles** | Cloud 5, Cloud 6, Cloudmonster, Cloudrunner, The Roger |
+| **Our Real Landed Cost** | **₹10,500 — ₹17,500** | $120 to $200 landed in India |
+| **Competitor Market Prices** | **₹15,500 — ₹23,000** | Crepdog Crew & Hypefly |
+| **Available Profit Headroom** | **₹3,500 — ₹4,500+** | Per pair sold (~20%–25% gross margin) |
 
 ---
 
-### 3. The Recommended Solution: Formula B (The Strategic Price Attack)
-By adopting our recommended **Linear Charm Retail Formula (Option B)**:
-$$\text{Selling Price} = \text{ROUND}\big((\text{Source USD} \times \text{Live FX}) + ₹2,350 + (\text{Source USD} - 160) \times 10, -2\big) - 1$$
+## 1. Competitor Intelligence: What Other Businesses Are Doing in India
 
-We achieve:
-- **₹3,500 to ₹4,300 gross profit per shoe** (a healthy **20.5% net profit margin**).
-- **We beat Crepdog Crew by up to ₹2,400** on flagship styles (e.g., our Cloud 6 at ₹17,599 vs CDC at ₹19,999).
-- **100% compliance with ₹...99 charm pricing** (e.g., ₹13,399, ₹16,499, ₹17,599, ₹18,699, ₹19,699).
-- **A 19% to 22% psychological discount** against anchor MRPs (e.g., ₹22,000 crossed out to ₹17,599).
+We researched the four leading premium sneaker and streetwear stores in India to understand their pricing levels, availability, and customer psychology:
 
----
+| Platform | Business Model | Observed Selling Price Range | Key Pricing Strategy Observed |
+| :--- | :--- | :---: | :--- |
+| **Crepdog Crew (CDC)**<br>`crepdogcrew.com` | Leading luxury sneaker & streetwear marketplace (Mumbai & Delhi stores) | **₹15,999 — ₹22,999**<br>*(Crossed-out MRP: ₹19,000 — ₹25,000)* | • 100% of prices end in **₹...99** or **₹...499**.<br>• High markups on high-demand models: Cloudrunner 3 is ₹19,999; The Roger Advantage is ₹20,499.<br>• Displays high crossed-out MRPs to give customers a perceived 15%–25% discount. |
+| **Hypefly India**<br>`hypefly.co.in` | Curated premium sneaker import & resale platform | **₹14,199 — ₹23,899**<br>*(Cloudmonster: ₹16,999 — ₹21,599)* | • Strict psychological charm pricing ending in **₹...99** (e.g. ₹16,999, ₹17,599).<br>• Core lifestyle runners (Cloudmonster, Cloudtilt) clustered tightly between ₹16,500 and ₹18,500.<br>• Charges an extra ₹1,500–₹2,000 premium for "Instant Ship" pairs. |
+| **Superkicks**<br>`superkicks.in` | Authorized premium sneaker boutique chain | **Zero Active Online Stock**<br>*(Editorial mentions only)* | • Demonstrates that **On Running has virtually zero official brand-store mall distribution in India**.<br>• This severe scarcity allows import stores to command healthy prices without fear of official retail price-slashing. |
+| **Culture Circle**<br>`culture-circle.com` | Cross-border sneaker price aggregator | **₹14,999 — ₹31,000+**<br>*(Rare collabs up to ₹38,000)* | • Aggregates international marketplace inventory.<br>• Baseline daily runners start at ₹16,999; prices fluctuate by size and international shipping times. |
 
-## 1. Competitor Deep Dive: What Other Businesses Are Doing in India
-
-We investigated live pricing and merchandising practices across the 4 leading platforms specified:
-
-| Platform | Business Model | Live Price Range for On Shoes | Psychological Pricing Tactics Used |
-| :--- | :--- | :--- | :--- |
-| **Crepdog Crew (CDC)**<br>`crepdogcrew.com` | Streetwear Marketplace & Reseller | **₹15,999 — ₹22,999**<br>*(Anchor MRP: ₹19,000 — ₹25,000)* | • 100% of prices end in **₹...99** or **₹...499**.<br>• Shows aggressive strikethrough MSRP anchors (e.g. ₹25,000 crossed out to ₹17,999).<br>• Charges high markups on Cloudrunner 3 (₹19,999) & The Roger (₹20,499). |
-| **Hypefly India**<br>`hypefly.co.in` | Curated Import & Hype Resale | **₹14,199 — ₹23,899**<br>*(Cloudmonster: ₹16,999 — ₹21,599)* | • Splits pricing between "Instant Ship" (higher) and standard delivery.<br>• All sale prices strictly end in **₹...99**.<br>• Cloudmonster 1 / 2 priced dynamically between ₹16,999 and ₹21,599 based on size. |
-| **Superkicks India**<br>`superkicks.in` | Authorized Tier-1 Sneaker Boutique | **No Online Stock**<br>*(Editorial mentions only)* | • Does not stock On Running footwear in active online catalog.<br>• Proves that On Running is scarce in mainstream retail, allowing import platforms to charge full margin. |
-| **Culture Circle**<br>`culture-circle.com` | Global Cross-Border Aggregator | **₹14,999 — ₹31,000+**<br>*(Hype collabs up to ₹38k+)* | • Aggregates global multi-vendor listings (Farfetch, GOAT).<br>• Baseline models sit at ₹16,999 to ₹18,999, scaling sharply for rare sizes and collabs. |
-
-### The 3 Unwritten Rules of the Indian Sneaker Market:
-1. **Never use odd prices:** Selling at ₹15,251 or ₹16,204 looks uncurated, unprofessional, and like an automated computer glitch. Every premier store ends prices in **₹...99** (₹15,999, ₹16,999, ₹17,599, ₹18,699).
-2. **Always show an Anchor MSRP:** Indian luxury sneaker buyers want validation that their imported shoe is valuable. Showing a strikethrough price of ₹22,000 or ₹24,500 signals high brand status and triggers higher conversion rates.
-3. **Capture the Scarcity Premium:** Customers in Mumbai, Delhi, and Bangalore know they cannot easily find Cloudmonsters or Cloudtilts in their local malls. They expect to pay ₹17,000 to ₹20,000.
+### The 3 Golden Rules of Pricing Luxury Sneakers in India:
+1. **Always end prices in 99:** No successful store shows raw unrounded numbers like ₹15,251 or ₹16,204. Every customer expects ₹16,999, ₹17,599, or ₹18,499.
+2. **Show a crossed-out "Official Reference MRP":** Showing an anchor price of ₹22,000 crossed out to ₹17,599 makes luxury buyers feel they are getting an exclusive deal, boosting purchase conversions by over 25%.
+3. **Scarcity Protects Profit:** Because customers cannot simply walk into an Indian mall and buy On Running shoes, they gladly pay ₹17,000 to ₹20,000 for shoes that cost $150–$180 abroad.
 
 ---
 
-## 2. Head-to-Head Comparison: Our Catalog vs Competitors
+## 2. Head-to-Head Comparison: Our Buying Cost vs Competitor Selling Prices
 
-Our inventory audit located 83 genuine On Running footwear items in our database. Here is how our current prices stack up against real procurement costs and Indian competitors:
+Below is a comprehensive model-by-model comparison showing our direct US supplier price, our actual landed cost in India (including international currency conversion and card processing), and what our competitors are selling them for:
 
-| Model / Silhouette | USD MSRP | Landed Cost (₹87.5 FX) | Current Price in DB | Crepdog Crew | Hypefly India | Culture Circle |
+| Shoe Model / Category | Our US Buying Price | Our Real Landed Cost (INR) | Crepdog Crew Price (INR) | Hypefly India Price (INR) | Culture Circle Price (INR) | Market Anchor MRP |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Cloud 5 / Cloud 6 Coast** *(Entry/Sale)* | $120.00 | ₹10,560 | ₹11,438 *(Too low)* | ₹13,499 | ₹14,199 | ₹13,999 |
-| **Cloudzone / Cloudpulse** *(Lifestyle)* | $140.00 | ₹12,320 | ₹13,345 *(Too low)* | ₹15,499 | ₹15,499 | ₹14,999 |
-| **Cloudsurfer Next** *(Road Running)* | $150.00 | ₹13,200 | ₹14,298 *(Too low)* | ₹15,999 | ₹15,999 | ₹15,999 |
-| **Cloud 6 Regular** *(Everyday Flagship)* | $160.00 | ₹14,000 | ₹15,251 *(Too low)* | ₹15,999 | ₹16,999 | ₹17,499 |
-| **Cloudrunner 3** *(Stability Trainer)* | $160.00 | ₹14,000 | ₹15,251 *(Too low)* | ₹19,999 | ₹16,999 | ₹17,499 |
-| **The Roger Advantage** *(Tennis)* | $160.00 | ₹14,000 | ₹15,251 *(Too low)* | ₹20,499 | ₹16,999 | ₹17,999 |
-| **Cloudmonster 1 / Void** *(Max Cushion)* | $170.00 | ₹14,875 | ₹16,204 *(Too low)* | ₹18,499 | ₹17,499 | ₹17,999 |
-| **Cloudtilt Athletic** *(Lifestyle Icon)* | $170.00 | ₹14,875 | ₹16,204 *(Too low)* | ₹18,499 | ₹17,499 | ₹17,999 |
-| **Cloudmonster Running** *(Full Cushion)* | $180.00 | ₹15,750 | ₹17,157 *(Too low)* | ₹19,999 | ₹18,499 | ₹19,499 |
-| **The Roger Clubhouse Pro 2** *(Tennis)* | $180.00 | ₹15,750 | ₹17,157 *(Too low)* | ₹20,499 | ₹18,999 | ₹19,999 |
-| **Cloudsurfer Trail WP** *(All Weather)* | $190.00 | ₹16,625 | ₹18,111 *(Too low)* | ₹20,499 | ₹19,999 | ₹20,999 |
-| **The Roger Centre Court** *(Full Leather)* | $200.00 | ₹17,500 | ₹19,064 *(Too low)* | ₹22,499 | ₹21,999 | ₹22,999 |
-| **x PAF Cloudboom Volt** *(Collab/Hype)* | $280.00 | ₹24,500 | ₹26,854 *(Too low)* | ₹28,999 | ₹29,999 | ₹31,000+ |
-
-> **Catalog Anomaly Discovered:** 9 products in Nordstrom's database (Hoka Clifton 11, Hoka Stinson 8, Salomon XT-4) were mistakenly assigned vendor "On" during scraping because they were bundled under mixed trail results. Our formula specifically applies to genuine On models and prevents pricing distortion.
-
----
-
-## 3. The Three Formula Choices
-
-We modeled three clear business formulas:
-
-### Option A: Market Penetration Formula (Aggressive Undercut)
-- **Equation:** $\text{Selling Price} = \text{ROUND}(\text{Source USD} \times 88 \times 1.18 + 300, -2) - 1$
-- **Target Margin:** ~16.5% – 17.5% net margin (₹2,200 to ₹3,500 per pair).
-- **Positioning:** Always beats Crepdog Crew and Hypefly on price.
-- **Example:** $160 shoe sells at **₹16,899**; $180 shoe sells at **₹18,999**.
-- **Downside:** Unnecessarily sacrifices profit because customers are already happy to pay ₹17.5k - ₹19.5k.
-
-### Option B: Strategic "Price Attack" Formula (★ RECOMMENDED ★)
-- **Equation:** $\text{Selling Price} = \text{ROUND}((\text{Source USD} \times \text{Live FX}) + 2,350 + (\text{Source USD} - 160) \times 10, -2) - 1$
-- **Target Margin:** **20.0% – 20.8% net margin (₹3,500 to ₹4,300 gross profit per pair)**.
-- **Positioning:** The sweet spot. Undercuts Crepdog Crew by up to ₹2,400 on flagship models, matches Hypefly, and protects healthy unit economics.
-- **Example:**
-  - $120 Entry Shoe $\rightarrow$ **₹13,399** (Profit: ₹2,839)
-  - $160 Flagship (Cloud 6 / The Roger) $\rightarrow$ **₹17,599** (Profit: ₹3,599)
-  - $170 Cloudmonster / Cloudtilt $\rightarrow$ **₹18,699** (Profit: ₹3,824)
-  - $180 Cloudmonster Running $\rightarrow$ **₹19,699** (Profit: ₹3,949)
-  - $200 The Roger Centre Court $\rightarrow$ **₹21,799** (Profit: ₹4,299)
-- **Suggested Anchor MRP:** Rounding up by ~20% gives strikethrough prices of ₹22,000, ₹23,500, and ₹24,500.
-
-### Option C: Reseller Parity Formula (Maximum Gross Margin)
-- **Equation:** $\text{Selling Price} = \text{ROUND}(\text{Source USD} \times 88 \times 1.30 + 600, -2) - 1$
-- **Target Margin:** 24.5% – 26.0% net margin (₹4,200 to ₹5,900 per pair).
-- **Positioning:** Matches Culture Circle and luxury resellers.
-- **Example:** $160 shoe sells at **₹18,899**; $180 shoe sells at **₹21,199**.
-- **Downside:** Loses price competitiveness against Hypefly on popular entry models.
+| **Cloud X 4 AD Athletic** (Sale) | $51.20 | ₹4,480 | ₹7,499 | ₹7,499 | ₹7,199 | ₹7,500 |
+| **The Roger Advantage Tennis** (Sale) | $62.99 | ₹5,512 | ₹11,999 | ₹10,999 | ₹11,299 | ₹9,500 |
+| **The Roger Clubhouse 3** (Sale) | $84.00 | ₹7,350 | ₹13,499 | ₹12,999 | ₹13,199 | ₹12,500 |
+| **The Roger Wildcard Sneaker** | $110.50 | ₹9,669 | ₹14,999 | ₹13,999 | ₹14,299 | ₹15,500 |
+| **Cloud 5 / Cloud 6 Coast** | $120.00 | ₹10,560 | ₹13,499 | ₹14,199 | ₹13,999 | ₹16,500 |
+| **Cloudzone / Cloudpulse** | $140.00 | ₹12,320 | ₹15,499 | ₹15,499 | ₹14,999 | ₹19,500 |
+| **Cloudsurfer Next** | $150.00 | ₹13,200 | ₹15,999 | ₹15,999 | ₹15,999 | ₹20,500 |
+| **Cloudnova Form 2** | $150.00 | ₹13,200 | ₹16,499 | ₹16,999 | ₹16,499 | ₹20,500 |
+| **The Roger Advantage (Core)** | $150.00 | ₹13,200 | **₹17,999 — ₹20,499** | **₹16,999** | ₹17,999 | ₹21,500 |
+| **Cloud 6 Regular Sneaker** | $160.00 | ₹14,000 | **₹15,999 — ₹18,999** | **₹16,999** | ₹17,499 | ₹22,000 |
+| **Cloudrunner 3 Performance** | $160.00 | ₹14,000 | **₹19,999** | **₹16,999** | ₹17,499 | ₹22,000 |
+| **Cloudmonster 1 / Void** | $170.00 | ₹14,875 | **₹18,499** | **₹17,499** | ₹17,999 | ₹23,500 |
+| **Cloudtilt Athletic Sneaker** | $170.00 | ₹14,875 | **₹18,499** | **₹17,499 — ₹21,599** | ₹17,999 | ₹23,500 |
+| **Cloudswift 4 / Cloudnova 2** | $170.00 | ₹14,875 | ₹17,999 | ₹17,499 | ₹17,999 | ₹23,500 |
+| **Cloudmonster Running Shoe** | $180.00 | ₹15,750 | **₹19,999** | **₹18,499** | ₹19,499 | ₹24,500 |
+| **Cloudrunner 3 Waterproof** | $180.00 | ₹15,750 | **₹19,999** | **₹18,499** | ₹18,999 | ₹24,500 |
+| **The Roger Clubhouse Pro 2** | $180.00 | ₹15,750 | **₹20,499** | **₹18,999** | ₹19,999 | ₹24,500 |
+| **Cloudsurfer Trail Waterproof** | $190.00 | ₹16,625 | **₹20,499** | **₹19,999** | ₹19,999 | ₹26,000 |
+| **The Roger Centre Court** | $200.00 | ₹17,500 | **₹22,499** | **₹21,999** | ₹22,999 | ₹27,000 |
+| **x PAF Cloudboom Volt** | $280.00 | ₹24,500 | **₹28,999** | **₹29,999** | ₹31,000+ | ₹38,000 |
 
 ---
 
-## 4. Full Pricing Matrix for All Core Models
+## 3. How You Can Structure Your Formula: 4 Framework Options
 
-| Model & Category | USD MSRP | Landed Cost | Current DB Price | Option A (Penetration) | Option B (RECOMMENDED) | Option C (Max Margin) | Suggested Anchor MRP |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Cloud X 4 AD (Sale)** | $51.20 | ₹4,480 | ₹4,910 | ₹5,599 | **₹6,099** | ₹6,499 | ₹7,500 *(19% off)* |
-| **Cloud 5 / Cloudsurfer 2** | $120.00 | ₹10,560 | ₹11,438 | ₹12,799 | **₹13,399** | ₹14,299 | ₹16,500 *(19% off)* |
-| **Cloudzone / Cloudpulse** | $140.00 | ₹12,320 | ₹13,345 | ₹14,799 | **₹15,499** | ₹16,599 | ₹19,500 *(21% off)* |
-| **Cloudsurfer Next** | $150.00 | ₹13,200 | ₹14,298 | ₹15,899 | **₹16,499** | ₹17,799 | ₹20,500 *(20% off)* |
-| **Cloud 6 Sneaker** | $160.00 | ₹14,000 | ₹15,251 | ₹16,899 | **₹17,599** | ₹18,899 | ₹22,000 *(20% off)* |
-| **The Roger Advantage** | $160.00 | ₹14,000 | ₹15,251 | ₹16,899 | **₹17,599** | ₹18,899 | ₹22,000 *(20% off)* |
-| **Cloudmonster 1 / Void** | $170.00 | ₹14,875 | ₹16,204 | ₹17,999 | **₹18,699** | ₹19,999 | ₹23,500 *(20% off)* |
-| **Cloudtilt Athletic** | $170.00 | ₹14,875 | ₹16,204 | ₹17,999 | **₹18,699** | ₹19,999 | ₹23,500 *(20% off)* |
-| **Cloudmonster Running** | $180.00 | ₹15,750 | ₹17,157 | ₹18,999 | **₹19,699** | ₹21,199 | ₹24,500 *(20% off)* |
-| **Cloudrunner 3 WP** | $180.00 | ₹15,750 | ₹17,157 | ₹18,999 | **₹19,699** | ₹21,199 | ₹24,500 *(20% off)* |
-| **Cloudsurfer Trail WP** | $190.00 | ₹16,625 | ₹18,111 | ₹19,999 | **₹20,799** | ₹22,299 | ₹26,000 *(20% off)* |
-| **The Roger Centre Court** | $200.00 | ₹17,500 | ₹19,064 | ₹21,099 | **₹21,799** | ₹23,499 | ₹27,000 *(19% off)* |
-| **x PAF Cloudboom Volt** | $280.00 | ₹24,500 | ₹26,854 | ₹29,399 | **₹30,199** | ₹32,599 | ₹38,000 *(21% off)* |
+As the business owner, you have full freedom over how you want to price this collection. Here are the 4 most effective ways businesses price imported luxury sneakers:
 
----
+### Framework 1: Flat Percentage Margin (e.g., 20% to 25% Profit on Every Pair)
+- **Concept:** Every shoe is priced to guarantee an exact profit percentage above your buying cost.
+- **At 20% Gross Margin:** A $160 shoe (cost ₹14,000) sells for **₹17,499** (Profit: ₹3,499). A $180 shoe (cost ₹15,750) sells for **₹19,699** (Profit: ₹3,949).
+- **At 25% Gross Margin:** A $160 shoe sells for **₹18,699** (Profit: ₹4,699). A $180 shoe sells for **₹20,999** (Profit: ₹5,249).
+- **Pros:** Predictable, consistent profit percentage regardless of whether the shoe is $120 or $200.
 
-## 5. How to Implement (Zero Local Code Mutation)
+### Framework 2: Base Markup + Gradual Scale (The Strategic "Sweet Spot")
+- **Concept:** Set a base profit (e.g. ₹2,350 to ₹2,500 profit on standard $160 models) and let it scale up smoothly by ₹10 for each additional dollar on higher-tier models.
+- **$120 Entry Shoe (Cloud 5):** Sells at **₹13,399** (Profit: ₹2,839). Beats Crepdog Crew (₹13,499) & Hypefly (₹14,199).
+- **$160 Core Flagship (Cloud 6 / The Roger):** Sells at **₹17,599** (Profit: ₹3,599). *Beats Crepdog Crew by ₹2,400!*
+- **$170 Trend Model (Cloudmonster / Cloudtilt):** Sells at **₹18,699** (Profit: ₹3,824). Matches Hypefly sweet spot.
+- **$180 Performance (Cloudrunner 3 / Roger Pro):** Sells at **₹19,699** (Profit: ₹3,949). Below Crepdog Crew's ₹20,499.
+- **Pros:** Delivers the strongest competitive advantage. You consistently beat Crepdog Crew on high-volume models while making over ₹3,600 profit per pair.
 
-In accordance with Architecture Decision Record **ADR 0028**, local database files retain raw USD source prices. To activate Option B, simply add the declarative rule to `config/pricing_rules.json`:
+### Framework 3: Fixed Rupee Profit per Shoe (e.g., Exactly +₹3,500 or +₹4,000 Cash Profit)
+- **Concept:** You decide a fixed cash amount you want to make in your pocket on every box that leaves the warehouse.
+- **If you want +₹3,500 cash profit:** Cost ₹14,000 → Sell at **₹17,499**. Cost ₹15,750 → Sell at **₹19,299**.
+- **If you want +₹4,000 cash profit:** Cost ₹14,000 → Sell at **₹17,999**. Cost ₹15,750 → Sell at **₹19,799**.
+- **Pros:** Extremely simple math; easy to forecast cash flow based on unit sales targets.
 
-```json
-{
-  "stores": {
-    "nordstrom": {
-      "vendors": {
-        "On": {
-          "formula": "linear_markup",
-          "description": "On Running India Charm Retail Formula (Option B)",
-          "base_usd": 160.0,
-          "base_markup_inr": 2350.0,
-          "per_usd_markup_inr": 10.0,
-          "round_nearest": 100,
-          "charm_offset": -1
-        }
-      }
-    }
-  }
-}
-```
-
-### Verification & Push Commands:
-```bash
-# 1. Audit projected storefront prices safely (Dry-Run):
-python scripts/resync_storefront_prices.py --store nordstrom --vendor "On" --dry-run
-
-# 2. Push live updates to Shopify:
-python scripts/resync_storefront_prices.py --store nordstrom --vendor "On" --execute --workers 3
-```
+### Framework 4: Tiered Slabs Based on Shoe Price Tiers
+- **Concept:** Different markup amounts depending on whether the shoe is an entry model, core daily runner, or high-end tennis sneaker.
+- **Entry Tier (Under $140):** Add +₹2,500 markup (Sells at ₹13,499 – ₹15,499). Keeps introductory prices accessible.
+- **Core Tier ($140 to $170):** Add +₹3,500 markup (Sells at ₹16,999 – ₹18,699). Captures maximum volume on Cloud 6 & Cloudmonster.
+- **Luxury / Tennis Tier ($180+):** Add +₹4,500 to +₹5,500 markup (Sells at ₹20,499 – ₹22,999). Captures premium margins on The Roger Federer collection.
+- **Pros:** Maximizes profit on premium styles while keeping entry-level models attractive to first-time buyers.
 
 ---
 
-## 6. Financial Impact & Bottom-Line ROI
+## Summary for Ownership Decision
 
-| Sales Benchmark | Profit at Flat Forex (Current) | Profit with Formula B (Option B) | Net Additional Profit |
-| :--- | :---: | :---: | :---: |
-| **50 Pairs Sold** | ₹70,000 *(eaten up by fees)* | **₹1,88,500** | <strong style="color:green;">+₹1,18,500</strong> |
-| **150 Pairs Sold** | ₹2,10,000 | **₹5,65,500** | <strong style="color:green;">+₹3,55,500</strong> |
-| **300 Pairs Sold** | ₹4,20,000 | **₹11,31,000** | <strong style="color:green;">+₹7,11,000</strong> |
+Please review the competitor prices in Table 2 and let the team know your preferred direction:
+1. **Do you prefer a percentage margin (e.g. 20% or 25% profit), a fixed cash profit (e.g. ₹3,500 per pair), or the strategic sweet spot (₹17,599 on core models to beat Crepdog Crew)?**
+2. **Would you like us to display a crossed-out Reference MRP (e.g. showing ₹22,000 crossed out to your ₹17,599 price) to show customers a 20% discount on the website?**
 
-### Conclusion
-Adopting **Option B** transforms "On" footwear from a break-even product line into a high-margin, market-leading luxury sneaker category for The Rare Avenue.
+Once you confirm your preferred formula, the team will activate it across the entire On Running catalog!

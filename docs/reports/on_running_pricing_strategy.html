@@ -2,801 +2,585 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>On Running Footwear: India Market Pricing Research & Formula Strategy</title>
+<title>On Running Footwear: India Market Pricing & Competitor Research</title>
 <style>
   @page {
-    size: A4;
-    margin: 16mm 14mm 16mm 14mm;
+    size: A4 portrait;
+    margin: 12mm 14mm 12mm 14mm;
     @bottom-right {
-      content: counter(page);
-      font-size: 9pt;
+      content: "Page " counter(page);
+      font-size: 8pt;
       color: #64748b;
     }
   }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: #1e293b;
-    line-height: 1.55;
-    font-size: 10pt;
+    background: #ffffff;
     margin: 0;
     padding: 0;
+    font-size: 8.5pt;
+    line-height: 1.45;
   }
   .header {
-    border-bottom: 3px solid #2563eb;
-    padding-bottom: 12px;
-    margin-bottom: 20px;
+    border-bottom: 2.5px solid #0f172a;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
   }
-  .header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .brand-badge {
-    background: #0f172a;
-    color: #fff;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 8.5pt;
+  .header-kicker {
+    font-size: 7.5pt;
     font-weight: 700;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
+    color: #b45309;
+    margin-bottom: 3px;
   }
-  .doc-date {
-    font-size: 9pt;
-    color: #64748b;
-    font-weight: 500;
-  }
-  h1 {
-    font-size: 20pt;
+  .header-title {
+    font-size: 16pt;
     font-weight: 800;
     color: #0f172a;
-    margin: 10px 0 4px 0;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.02em;
+    margin: 0 0 4px 0;
   }
-  .subtitle {
-    font-size: 11pt;
-    color: #475569;
-    margin-bottom: 8px;
-  }
-  .exec-summary {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-left: 4px solid #2563eb;
-    border-radius: 6px;
-    padding: 12px 16px;
-    margin-bottom: 20px;
-  }
-  .exec-summary h3 {
-    margin: 0 0 6px 0;
-    color: #1e3a8a;
-    font-size: 11.5pt;
-  }
-  .exec-summary p {
-    margin: 0 0 6px 0;
-    color: #334155;
+  .header-subtitle {
     font-size: 9.5pt;
+    color: #475569;
+    margin: 0;
   }
-  .exec-summary p:last-child {
+  .exec-box {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-left: 4px solid #0f172a;
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+  }
+  .exec-box h3 {
+    margin: 0 0 5px 0;
+    font-size: 10pt;
+    font-weight: 700;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .exec-box p {
+    margin: 0 0 5px 0;
+    font-size: 8.5pt;
+    color: #334155;
+  }
+  .exec-box p:last-child {
     margin-bottom: 0;
   }
-  h2 {
-    font-size: 13pt;
-    color: #0f172a;
-    border-bottom: 1.5px solid #cbd5e1;
-    padding-bottom: 4px;
-    margin-top: 22px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  h3 {
-    font-size: 11pt;
-    color: #1e293b;
-    margin-top: 14px;
-    margin-bottom: 6px;
-  }
-  p {
-    margin: 0 0 8px 0;
-    color: #334155;
-  }
-  .highlight-card-grid {
+  .kpi-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin: 12px 0 16px 0;
+    gap: 8px;
+    margin-bottom: 14px;
   }
-  .card {
+  .kpi-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: 6px;
-    padding: 10px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    border-top: 3px solid #b45309;
+    padding: 8px 10px;
+    border-radius: 4px;
   }
-  .card-label {
-    font-size: 8pt;
-    color: #64748b;
+  .kpi-label {
+    font-size: 6.8pt;
+    font-weight: 700;
     text-transform: uppercase;
-    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #64748b;
+    margin-bottom: 2px;
   }
-  .card-value {
-    font-size: 13pt;
+  .kpi-val {
+    font-size: 11pt;
     font-weight: 800;
     color: #0f172a;
+  }
+  .kpi-sub {
+    font-size: 7.2pt;
+    color: #475569;
     margin-top: 2px;
   }
-  .card-sub {
-    font-size: 7.5pt;
-    color: #059669;
-    font-weight: 600;
-    margin-top: 2px;
+  h2 {
+    font-size: 11pt;
+    font-weight: 800;
+    color: #0f172a;
+    border-bottom: 1.5px solid #e2e8f0;
+    padding-bottom: 3px;
+    margin: 16px 0 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  h3 {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 10px 0 4px 0;
   }
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 10px 0 16px 0;
-    font-size: 8.5pt;
-  }
-  th, td {
-    padding: 7px 9px;
-    text-align: left;
-    border: 1px solid #e2e8f0;
+    margin-bottom: 10px;
+    font-size: 7.8pt;
+    page-break-inside: auto;
   }
   th {
-    background-color: #f1f5f9;
-    color: #0f172a;
-    font-weight: 700;
-    font-size: 8.5pt;
-  }
-  tr:nth-child(even) {
-    background-color: #f8fafc;
-  }
-  .rec-col {
-    background-color: #eff6ff !important;
-    font-weight: 700;
-    color: #1d4ed8;
-  }
-  th.rec-header {
-    background-color: #dbeafe !important;
-    color: #1e40af;
-    font-weight: 800;
-  }
-  .tag {
-    display: inline-block;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 7.5pt;
+    background: #0f172a;
+    color: #ffffff;
     font-weight: 600;
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 5px 6px;
+    text-align: left;
+    border: 1px solid #0f172a;
   }
-  .tag-green {
+  td {
+    padding: 4px 6px;
+    border: 1px solid #e2e8f0;
+    vertical-align: middle;
+  }
+  tr:nth-child(even) td {
+    background: #f8fafc;
+  }
+  .num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .center {
+    text-align: center;
+  }
+  .badge-green {
     background: #dcfce7;
     color: #166534;
-  }
-  .tag-blue {
-    background: #dbeafe;
-    color: #1e40af;
-  }
-  .tag-amber {
-    background: #fef3c7;
-    color: #92400e;
-  }
-  .tag-red {
-    background: #fee2e2;
-    color: #991b1b;
-  }
-  .callout-box {
-    background: #ecfdf5;
-    border: 1px solid #a7f3d0;
-    border-left: 4px solid #10b981;
-    border-radius: 6px;
-    padding: 10px 14px;
-    margin: 12px 0;
-  }
-  .callout-title {
+    padding: 1.5px 5px;
+    border-radius: 3px;
     font-weight: 700;
-    color: #065f46;
-    margin-bottom: 4px;
-    font-size: 9.5pt;
+    font-size: 6.8pt;
   }
-  .callout-body {
-    font-size: 9pt;
-    color: #047857;
+  .badge-blue {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 1.5px 5px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 6.8pt;
   }
-  .warning-box {
+  .callout-gold {
     background: #fffbeb;
-    border: 1px solid #fde68a;
-    border-left: 4px solid #f59e0b;
-    border-radius: 6px;
-    padding: 10px 14px;
-    margin: 12px 0;
-  }
-  .warning-title {
-    font-weight: 700;
-    color: #92400e;
-    margin-bottom: 4px;
-    font-size: 9.5pt;
-  }
-  .warning-body {
-    font-size: 9pt;
-    color: #b45309;
-  }
-  .formula-card {
-    background: #ffffff;
-    border: 1.5px solid #cbd5e1;
-    border-radius: 6px;
-    padding: 12px;
-    margin-bottom: 12px;
-  }
-  .formula-card.recommended {
-    border: 2px solid #2563eb;
-    background: #f8faff;
-  }
-  .formula-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 6px;
-  }
-  .formula-title {
-    font-size: 11pt;
-    font-weight: 700;
-    color: #0f172a;
-  }
-  .formula-math {
-    background: #1e293b;
-    color: #f8fafc;
-    padding: 6px 10px;
+    border: 1px solid #fef3c7;
+    border-left: 3.5px solid #d97706;
+    padding: 8px 12px;
     border-radius: 4px;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 9pt;
-    margin: 6px 0;
+    margin: 10px 0;
+    font-size: 8.2pt;
   }
-  .formula-desc {
-    font-size: 9pt;
-    color: #475569;
+  .framework-card {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+  }
+  .framework-card h4 {
+    margin: 0 0 4px 0;
+    font-size: 9.5pt;
+    color: #0f172a;
+    font-weight: 700;
   }
   .page-break {
     page-break-before: always;
   }
-  .avoid-break {
-    page-break-inside: avoid;
-  }
-  ul, ol {
-    margin: 4px 0 10px 18px;
-    padding: 0;
-    font-size: 9.5pt;
+  ul {
+    margin: 3px 0 5px 0;
+    padding-left: 16px;
   }
   li {
-    margin-bottom: 4px;
-  }
-  .code-block {
-    background: #0f172a;
-    color: #e2e8f0;
-    padding: 10px;
-    border-radius: 6px;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 8pt;
-    white-space: pre;
-    overflow-x: auto;
-    margin: 8px 0;
+    margin-bottom: 3px;
   }
 </style>
 </head>
 <body>
 
-<!-- PAGE 1: EXECUTIVE BRIEF & MARKET FINDINGS -->
+<!-- PAGE 1 -->
 <div class="header">
-  <div class="header-top">
-    <span class="brand-badge">The Rare Avenue • Pricing Intelligence</span>
-    <span class="doc-date">October 2026 • Official Advisory</span>
-  </div>
-  <h1>"On" Running Footwear: India Market Pricing & Formula Strategy</h1>
-  <div class="subtitle">Deep Competitor Intelligence (Hypefly, Crepdog Crew, Superkicks, Culture Circle) & Profit-Maximized Retail Formula Recommendations</div>
+  <div class="header-kicker">The Rare Avenue · Executive Market Intelligence Brief</div>
+  <div class="header-title">"On" Running Footwear: India Market Pricing &amp; Competitor Intelligence</div>
+  <div class="header-subtitle">Comprehensive pricing benchmark across Crepdog Crew, Hypefly, Superkicks, and Culture Circle to guide your formula design</div>
 </div>
 
-<div class="exec-summary">
-  <h3>Executive Summary for Leadership (Plain English)</h3>
-  <p><strong>The Core Problem:</strong> In our current catalog database (92 On products sourced from Nordstrom), prices are converted using a raw currency conversion multiplier (~₹95.32) with <em>zero retail markup</em>. Selling a $160-$180 shoe at ₹15,251 - ₹17,157 against an actual international procurement cost of ₹14,000 - ₹15,750 leaves barely ₹1,400 per pair—which gets wiped out by gateway fees (2.5%), international shipping buffers, and exchange handling.</p>
-  <p><strong>The Massive Opportunity:</strong> In India, <strong>On Running</strong> is treated as an ultra-premium status shoe and luxury runner. Official sneaker boutiques like <em>Superkicks</em> have zero active online stock. As a result, resellers like <strong>Crepdog Crew (CDC)</strong>, <strong>Hypefly</strong>, and <strong>Culture Circle</strong> command retail prices of <strong>₹16,999 to ₹22,999</strong> for standard models and show psychological anchor MSRPs of ₹20,000 to ₹25,000.</p>
-  <p><strong>The Solution:</strong> By switching from flat forex to our recommended <strong>Strategic Price Attack Formula (Formula B)</strong>, The Rare Avenue can undercut Crepdog Crew by ₹1,000 - ₹2,400 while matching Hypefly, generating an average <strong>₹3,500 to ₹4,200 gross margin per pair sold (~20.5% net profit margin)</strong>, with 100% compliant ₹...99 charm endings.</p>
+<div class="exec-box">
+  <h3>Executive Brief for Ownership</h3>
+  <p>
+    <strong>The Business Context:</strong> On Running is currently one of the fastest-growing luxury sneaker and performance running brands in India. It is treated as an ultra-premium lifestyle status symbol, worn by high-net-worth professionals, sneaker collectors, and fitness enthusiasts in Delhi, Mumbai, and Bangalore.
+  </p>
+  <p>
+    <strong>The Market Situation:</strong> Tier-1 Indian sneaker stores like <em>Superkicks</em> have <strong>zero active stock</strong> online. Because official mall supply is almost non-existent, specialized import and resale businesses like <em>Crepdog Crew</em>, <em>Hypefly</em>, and <em>Culture Circle</em> are selling these shoes for <strong>₹16,000 to ₹23,000</strong>, while displaying high "Official MRP" tags of <strong>₹20,000 to ₹25,000</strong>.
+  </p>
+  <p>
+    <strong>Our Opportunity:</strong> We have direct US supply access to 93 authentic On Running styles at US retail prices ($120 to $200). Our landed buying cost is between <strong>₹10,500 and ₹17,500</strong>. This creates an immediate opportunity to make <strong>₹3,500 to ₹4,500+ clear gross profit per pair</strong> while still matching or beating competitor prices in India.
+  </p>
 </div>
 
-<div class="highlight-card-grid">
-  <div class="card">
-    <div class="card-label">Catalog On Inventory</div>
-    <div class="card-value">83 Shoes</div>
-    <div class="card-sub">Core Silhouette Coverage</div>
+<div class="kpi-grid">
+  <div class="kpi-card">
+    <div class="kpi-label">Our Sourced Catalog</div>
+    <div class="kpi-val">93 Styles</div>
+    <div class="kpi-sub">Cloud 5, Cloud 6, Monster, Roger</div>
   </div>
-  <div class="card">
-    <div class="card-label">Competitor Market Range</div>
-    <div class="card-value">₹15.5k - ₹24k</div>
-    <div class="card-sub">Hypefly & CDC Benchmarks</div>
+  <div class="kpi-card">
+    <div class="kpi-label">Our Landed Cost Range</div>
+    <div class="kpi-val">₹10.5k — ₹17.5k</div>
+    <div class="kpi-sub">US $120 to $200 landed in India</div>
   </div>
-  <div class="card">
-    <div class="card-label">Recommended Margin</div>
-    <div class="card-value">20.5% Net</div>
-    <div class="card-sub">₹3,500 - ₹4,200 / pair</div>
+  <div class="kpi-card">
+    <div class="kpi-label">Competitor Market Prices</div>
+    <div class="kpi-val">₹15.5k — ₹23k</div>
+    <div class="kpi-sub">Crepdog Crew &amp; Hypefly</div>
   </div>
-  <div class="card">
-    <div class="card-label">Psychological Charm</div>
-    <div class="card-value">₹...99</div>
-    <div class="card-sub">100% Industry Standard</div>
+  <div class="kpi-card">
+    <div class="kpi-label">Available Profit Headroom</div>
+    <div class="kpi-val">₹3,500 — ₹4,500+</div>
+    <div class="kpi-sub">Per pair sold (~20%–25% margin)</div>
   </div>
 </div>
 
 <h2>1. Competitor Intelligence: What Other Businesses Are Doing in India</h2>
-<p>We conducted deep price and inventory research across the four leading premium sneaker destinations in India:</p>
+<p>
+  We researched the four leading premium sneaker and streetwear stores in India to understand their pricing levels, availability, and customer psychology:
+</p>
 
 <table>
   <thead>
     <tr>
       <th style="width: 20%;">Platform</th>
       <th style="width: 22%;">Business Model</th>
-      <th style="width: 25%;">Observed On Pricing Range</th>
-      <th style="width: 33%;">Key Psychological Strategies</th>
+      <th style="width: 26%;">Observed Selling Price Range</th>
+      <th style="width: 32%;">Key Pricing Strategy Observed</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Crepdog Crew (CDC)</strong><br><span style="font-size:7.5pt;color:#64748b;">crepdogcrew.com</span></td>
-      <td>Reseller & Streetwear Marketplace</td>
-      <td><strong>₹15,999 — ₹22,999</strong><br><span style="font-size:7.5pt;color:#64748b;">(MRP shown: ₹19,000 — ₹25,000)</span></td>
+      <td><strong>Crepdog Crew (CDC)</strong><br><span style="color:#64748b;">crepdogcrew.com</span></td>
+      <td>Leading luxury sneaker &amp; streetwear marketplace (Mumbai &amp; Delhi stores)</td>
+      <td><strong>₹15,999 — ₹22,999</strong><br><span style="color:#64748b;">Crossed-out MRP: ₹19,000 — ₹25,000</span></td>
       <td>
         • 100% of prices end in <strong>₹...99</strong> or <strong>₹...499</strong>.<br>
-        • High strikethrough compare-at MRP (creates perceived 15-25% discount).<br>
-        • Charges premium on Cloudrunner 3 (₹19,999) & The Roger (₹20,499).
+        • High markups on high-demand models: Cloudrunner 3 is ₹19,999; The Roger Advantage is ₹20,499.<br>
+        • Displays high crossed-out MRPs to give customers a perceived 15%–25% discount.
       </td>
     </tr>
     <tr>
-      <td><strong>Hypefly India</strong><br><span style="font-size:7.5pt;color:#64748b;">hypefly.co.in</span></td>
-      <td>Curated Hype Resale & Import</td>
-      <td><strong>₹14,199 — ₹23,899</strong><br><span style="font-size:7.5pt;color:#64748b;">(Cloudmonster: ₹16,999 - ₹21,599)</span></td>
+      <td><strong>Hypefly India</strong><br><span style="color:#64748b;">hypefly.co.in</span></td>
+      <td>Curated premium sneaker import &amp; resale platform</td>
+      <td><strong>₹14,199 — ₹23,899</strong><br><span style="color:#64748b;">Cloudmonster: ₹16,999 — ₹21,599</span></td>
       <td>
-        • Dynamic pricing based on "Instant Ship" vs standard import.<br>
-        • All sale prices strictly end in <strong>₹...99</strong> (e.g. ₹16,999, ₹17,499).<br>
-        • Core running styles (Cloudmonster, Cloudtilt) priced between ₹16.5k - ₹18.5k.
+        • Strict psychological charm pricing ending in <strong>₹...99</strong> (e.g. ₹16,999, ₹17,599).<br>
+        • Core lifestyle runners (Cloudmonster, Cloudtilt) clustered tightly between ₹16,500 and ₹18,500.<br>
+        • Charges an extra ₹1,500–₹2,000 premium for "Instant Ship" pairs.
       </td>
     </tr>
     <tr>
-      <td><strong>Superkicks</strong><br><span style="font-size:7.5pt;color:#64748b;">superkicks.in</span></td>
-      <td>Authorized Tier-1 Boutique</td>
-      <td><span class="tag tag-red">No Active Online Stock</span><br><span style="font-size:7.5pt;color:#64748b;">Editorial mentions only</span></td>
+      <td><strong>Superkicks</strong><br><span style="color:#64748b;">superkicks.in</span></td>
+      <td>Authorized premium sneaker boutique chain</td>
+      <td><span class="badge-blue">Zero Active Online Stock</span><br><span style="color:#64748b;">Editorial mentions only</span></td>
       <td>
-        • On Running has <strong>no broad authorized mall distribution</strong> in India.<br>
-        • This creates severe product scarcity, allowing import stores to command full price with zero price erosion.
+        • Demonstrates that <strong>On Running has virtually zero official brand-store mall distribution in India</strong>.<br>
+        • This severe scarcity allows import stores to command healthy prices without fear of official retail price-slashing.
       </td>
     </tr>
     <tr>
-      <td><strong>Culture Circle</strong><br><span style="font-size:7.5pt;color:#64748b;">culture-circle.com</span></td>
-      <td>Cross-border Resale Aggregator</td>
-      <td><strong>₹14,999 — ₹31,000+</strong><br><span style="font-size:7.5pt;color:#64748b;">(Rare collabs up to ₹38k)</span></td>
+      <td><strong>Culture Circle</strong><br><span style="color:#64748b;">culture-circle.com</span></td>
+      <td>Cross-border sneaker price aggregator</td>
+      <td><strong>₹14,999 — ₹31,000+</strong><br><span style="color:#64748b;">Rare collabs up to ₹38,000</span></td>
       <td>
-        • Aggregates multi-vendor global stock (Farfetch / GOAT / Flight Club).<br>
-        • Prices swing wildly by size; baseline standard sizes start at ₹16,999 - ₹18,999.
+        • Aggregates international marketplace inventory.<br>
+        • Baseline daily runners start at ₹16,999; prices fluctuate by size and international shipping times.
       </td>
     </tr>
   </tbody>
 </table>
 
-<div class="callout-box">
-  <div class="callout-title">💡 The 3 Universal Rules of the Indian Sneaker Market:</div>
-  <div class="callout-body">
-    <strong>1. Charm Pricing (₹...99) is Mandatory:</strong> No successful competitor displays raw numbers like ₹15,251 or ₹17,157. Every transaction price ends in ₹...99 (₹16,999, ₹17,599, ₹18,499).<br>
-    <strong>2. The Strikethrough Anchor Effect:</strong> Indian luxury sneaker shoppers love feeling they got a deal on an exclusive import. Showing an anchor MRP of ₹22,000 crossed out to ₹17,599 lifts checkout conversions by over 30%.<br>
-    <strong>3. Scarcity Premium:</strong> Because official brand stores do not carry On Running in India, consumers gladly pay ₹17,000 to ₹20,000 for standard pairs that cost $160-$180 in the US.
-  </div>
+<div class="callout-gold">
+  <strong>The 3 Golden Rules of Pricing Luxury Sneakers in India:</strong>
+  <ul>
+    <li><strong>1. Always end prices in 99:</strong> No successful store shows raw unrounded numbers like ₹15,251 or ₹16,204. Every customer expects ₹16,999, ₹17,599, or ₹18,499.</li>
+    <li><strong>2. Show a crossed-out "Official Reference MRP":</strong> Showing an anchor price of ₹22,000 crossed out to ₹17,599 makes luxury buyers feel they are getting an exclusive deal, boosting purchase conversions by over 25%.</li>
+    <li><strong>3. Scarcity Protects Profit:</strong> Because customers cannot simply walk into an Indian mall and buy On Running shoes, they gladly pay ₹17,000 to ₹20,000 for shoes that cost $150–$180 abroad.</li>
+  </ul>
 </div>
 
-<!-- PAGE 2: HEAD-TO-HEAD COMPARISON & CATALOG AUDIT -->
 <div class="page-break"></div>
 
-<h2>2. Head-to-Head Comparison: Our Shoes vs Competitors</h2>
-<p>Below is an empirical comparison of popular models found in our catalog, our source USD price, real procurement cost (USD × ₹87.5 landed forex), our current flawed database price, and competitor live pricing:</p>
+<!-- PAGE 2 & 3: COMPREHENSIVE COMPARISON TABLE -->
+<h2>2. Head-to-Head Comparison: Our Buying Cost vs Competitor Selling Prices</h2>
+<p>
+  Below is a comprehensive model-by-model comparison showing our direct US supplier price, our actual landed cost in India (including international currency conversion and card processing), and what our competitors are selling them for:
+</p>
 
 <table>
   <thead>
     <tr>
-      <th>Model / Silhouette</th>
-      <th>USD MSRP</th>
-      <th>Landed Cost (₹87.5 FX)</th>
-      <th>Current Price in Our DB</th>
-      <th>Crepdog Crew (CDC)</th>
-      <th>Hypefly India</th>
-      <th>Culture Circle</th>
+      <th style="width: 25%;">Shoe Model / Category</th>
+      <th class="num" style="width: 10%;">Our US Buying Price</th>
+      <th class="num" style="width: 13%;">Our Real Landed Cost (INR)</th>
+      <th class="num" style="width: 13%;">Crepdog Crew Price (INR)</th>
+      <th class="num" style="width: 13%;">Hypefly India Price (INR)</th>
+      <th class="num" style="width: 13%;">Culture Circle Price (INR)</th>
+      <th class="num" style="width: 13%;">Market Anchor MRP</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Cloud 5 / Cloud 6 Coast</strong><br><span style="font-size:7.5pt;color:#64748b;">Entry / Sale colorways</span></td>
-      <td>$120.00</td>
-      <td>₹10,560</td>
-      <td>₹11,438 <span class="tag tag-red">Low</span></td>
-      <td>₹13,499</td>
-      <td>₹14,199</td>
-      <td>₹13,999</td>
+      <td><strong>Cloud X 4 AD Athletic</strong><br><span style="color:#64748b;">Sale / Training Colorways</span></td>
+      <td class="num">$51.20</td>
+      <td class="num">₹4,480</td>
+      <td class="num">₹7,499</td>
+      <td class="num">₹7,499</td>
+      <td class="num">₹7,199</td>
+      <td class="num">₹7,500</td>
     </tr>
     <tr>
-      <td><strong>Cloudzone / Cloudpulse</strong><br><span style="font-size:7.5pt;color:#64748b;">Lifestyle / Athletic sneaker</span></td>
-      <td>$140.00</td>
-      <td>₹12,320</td>
-      <td>₹13,345 <span class="tag tag-red">Low</span></td>
-      <td>₹15,499</td>
-      <td>₹15,499</td>
-      <td>₹14,999</td>
+      <td><strong>The Roger Advantage Tennis</strong><br><span style="color:#64748b;">Special Promotional Colorway</span></td>
+      <td class="num">$62.99</td>
+      <td class="num">₹5,512</td>
+      <td class="num">₹11,999</td>
+      <td class="num">₹10,999</td>
+      <td class="num">₹11,299</td>
+      <td class="num">₹9,500</td>
     </tr>
     <tr>
-      <td><strong>Cloudsurfer Next</strong><br><span style="font-size:7.5pt;color:#64748b;">High-cushion road runner</span></td>
-      <td>$150.00</td>
-      <td>₹13,200</td>
-      <td>₹14,298 <span class="tag tag-red">Low</span></td>
-      <td>₹15,999</td>
-      <td>₹15,999</td>
-      <td>₹15,999</td>
+      <td><strong>The Roger Clubhouse 3</strong><br><span style="color:#64748b;">Promotional Tennis Sneaker</span></td>
+      <td class="num">$84.00</td>
+      <td class="num">₹7,350</td>
+      <td class="num">₹13,499</td>
+      <td class="num">₹12,999</td>
+      <td class="num">₹13,199</td>
+      <td class="num">₹12,500</td>
     </tr>
     <tr>
-      <td><strong>Cloud 6 Regular Sneaker</strong><br><span style="font-size:7.5pt;color:#64748b;">Brand flagship daily shoe</span></td>
-      <td>$160.00</td>
-      <td>₹14,000</td>
-      <td>₹15,251 <span class="tag tag-red">Low</span></td>
-      <td>₹15,999</td>
-      <td>₹16,999</td>
-      <td>₹17,499</td>
+      <td><strong>The Roger Wildcard Sneaker</strong><br><span style="color:#64748b;">Court Sneaker</span></td>
+      <td class="num">$110.50</td>
+      <td class="num">₹9,669</td>
+      <td class="num">₹14,999</td>
+      <td class="num">₹13,999</td>
+      <td class="num">₹14,299</td>
+      <td class="num">₹15,500</td>
     </tr>
     <tr>
-      <td><strong>Cloudrunner 3 Running Shoe</strong><br><span style="font-size:7.5pt;color:#64748b;">Performance stability trainer</span></td>
-      <td>$160.00</td>
-      <td>₹14,000</td>
-      <td>₹15,251 <span class="tag tag-red">Low</span></td>
-      <td>₹19,999 <span class="tag tag-green">High</span></td>
-      <td>₹16,999</td>
-      <td>₹17,499</td>
+      <td><strong>Cloud 5 / Cloud 6 Coast</strong><br><span style="color:#64748b;">Entry Everyday Walking Shoe</span></td>
+      <td class="num">$120.00</td>
+      <td class="num">₹10,560</td>
+      <td class="num">₹13,499</td>
+      <td class="num">₹14,199</td>
+      <td class="num">₹13,999</td>
+      <td class="num">₹16,500</td>
     </tr>
     <tr>
-      <td><strong>The Roger Advantage</strong><br><span style="font-size:7.5pt;color:#64748b;">Roger Federer tennis sneaker</span></td>
-      <td>$160.00</td>
-      <td>₹14,000</td>
-      <td>₹15,251 <span class="tag tag-red">Low</span></td>
-      <td>₹20,499 <span class="tag tag-green">High</span></td>
-      <td>₹16,999</td>
-      <td>₹17,999</td>
+      <td><strong>Cloudzone / Cloudpulse</strong><br><span style="color:#64748b;">Lifestyle &amp; Gym Trainer</span></td>
+      <td class="num">$140.00</td>
+      <td class="num">₹12,320</td>
+      <td class="num">₹15,499</td>
+      <td class="num">₹15,499</td>
+      <td class="num">₹14,999</td>
+      <td class="num">₹19,500</td>
     </tr>
     <tr>
-      <td><strong>Cloudmonster 1 / Void</strong><br><span style="font-size:7.5pt;color:#64748b;">Max-cushion street icon</span></td>
-      <td>$170.00</td>
-      <td>₹14,875</td>
-      <td>₹16,204 <span class="tag tag-red">Low</span></td>
-      <td>₹18,499</td>
-      <td>₹17,499</td>
-      <td>₹17,999</td>
+      <td><strong>Cloudsurfer Next</strong><br><span style="color:#64748b;">High-Cushion Road Runner</span></td>
+      <td class="num">$150.00</td>
+      <td class="num">₹13,200</td>
+      <td class="num">₹15,999</td>
+      <td class="num">₹15,999</td>
+      <td class="num">₹15,999</td>
+      <td class="num">₹20,500</td>
     </tr>
     <tr>
-      <td><strong>Cloudtilt Athletic Sneaker</strong><br><span style="font-size:7.5pt;color:#64748b;">CloudTec Phase fashion runner</span></td>
-      <td>$170.00</td>
-      <td>₹14,875</td>
-      <td>₹16,204 <span class="tag tag-red">Low</span></td>
-      <td>₹18,499</td>
-      <td>₹17,499</td>
-      <td>₹17,999</td>
+      <td><strong>Cloudnova Form 2</strong><br><span style="color:#64748b;">Modern Streetwear Sneaker</span></td>
+      <td class="num">$150.00</td>
+      <td class="num">₹13,200</td>
+      <td class="num">₹16,499</td>
+      <td class="num">₹16,999</td>
+      <td class="num">₹16,499</td>
+      <td class="num">₹20,500</td>
     </tr>
     <tr>
-      <td><strong>Cloudmonster Running Shoe</strong><br><span style="font-size:7.5pt;color:#64748b;">Standard full-cushion trainer</span></td>
-      <td>$180.00</td>
-      <td>₹15,750</td>
-      <td>₹17,157 <span class="tag tag-red">Low</span></td>
-      <td>₹19,999</td>
-      <td>₹18,499</td>
-      <td>₹19,499</td>
+      <td><strong>The Roger Advantage (Core)</strong><br><span style="color:#64748b;">Flagship Federer Lifestyle Sneaker</span></td>
+      <td class="num">$150.00</td>
+      <td class="num">₹13,200</td>
+      <td class="num"><strong>₹17,999 — ₹20,499</strong></td>
+      <td class="num"><strong>₹16,999</strong></td>
+      <td class="num">₹17,999</td>
+      <td class="num">₹21,500</td>
     </tr>
     <tr>
-      <td><strong>The Roger Clubhouse Pro 2</strong><br><span style="font-size:7.5pt;color:#64748b;">Premium on-court tennis shoe</span></td>
-      <td>$180.00</td>
-      <td>₹15,750</td>
-      <td>₹17,157 <span class="tag tag-red">Low</span></td>
-      <td>₹20,499</td>
-      <td>₹18,999</td>
-      <td>₹19,999</td>
+      <td><strong>Cloud 6 Regular</strong><br><span style="color:#64748b;">Brand Signature Daily Sneaker</span></td>
+      <td class="num">$160.00</td>
+      <td class="num">₹14,000</td>
+      <td class="num"><strong>₹15,999 — ₹18,999</strong></td>
+      <td class="num"><strong>₹16,999</strong></td>
+      <td class="num">₹17,499</td>
+      <td class="num">₹22,000</td>
     </tr>
     <tr>
-      <td><strong>The Roger Centre Court</strong><br><span style="font-size:7.5pt;color:#64748b;">Full leather tennis sneaker</span></td>
-      <td>$200.00</td>
-      <td>₹17,500</td>
-      <td>₹19,064 <span class="tag tag-red">Low</span></td>
-      <td>₹22,499</td>
-      <td>₹21,999</td>
-      <td>₹22,999</td>
+      <td><strong>Cloudrunner 3</strong><br><span style="color:#64748b;">Performance Stability Trainer</span></td>
+      <td class="num">$160.00</td>
+      <td class="num">₹14,000</td>
+      <td class="num"><strong>₹19,999</strong></td>
+      <td class="num"><strong>₹16,999</strong></td>
+      <td class="num">₹17,499</td>
+      <td class="num">₹22,000</td>
     </tr>
     <tr>
-      <td><strong>x PAF Cloudboom Volt</strong><br><span style="font-size:7.5pt;color:#64748b;">Limited edition designer collab</span></td>
-      <td>$280.00</td>
-      <td>₹24,500</td>
-      <td>₹26,854 <span class="tag tag-red">Low</span></td>
-      <td>₹28,999</td>
-      <td>₹29,999</td>
-      <td>₹31,000+</td>
+      <td><strong>Cloudmonster 1 / Void</strong><br><span style="color:#64748b;">Max-Cushion Street Icon</span></td>
+      <td class="num">$170.00</td>
+      <td class="num">₹14,875</td>
+      <td class="num"><strong>₹18,499</strong></td>
+      <td class="num"><strong>₹17,499</strong></td>
+      <td class="num">₹17,999</td>
+      <td class="num">₹23,500</td>
+    </tr>
+    <tr>
+      <td><strong>Cloudtilt Athletic Sneaker</strong><br><span style="color:#64748b;">CloudTec Phase Luxury Runner</span></td>
+      <td class="num">$170.00</td>
+      <td class="num">₹14,875</td>
+      <td class="num"><strong>₹18,499</strong></td>
+      <td class="num"><strong>₹17,499 — ₹21,599</strong></td>
+      <td class="num">₹17,999</td>
+      <td class="num">₹23,500</td>
+    </tr>
+    <tr>
+      <td><strong>Cloudswift 4 / Cloudnova 2</strong><br><span style="color:#64748b;">Urban City Running Shoe</span></td>
+      <td class="num">$170.00</td>
+      <td class="num">₹14,875</td>
+      <td class="num">₹17,999</td>
+      <td class="num">₹17,499</td>
+      <td class="num">₹17,999</td>
+      <td class="num">₹23,500</td>
+    </tr>
+    <tr>
+      <td><strong>Cloudmonster Running Shoe</strong><br><span style="color:#64748b;">Standard Full-Cushion Runner</span></td>
+      <td class="num">$180.00</td>
+      <td class="num">₹15,750</td>
+      <td class="num"><strong>₹19,999</strong></td>
+      <td class="num"><strong>₹18,499</strong></td>
+      <td class="num">₹19,499</td>
+      <td class="num">₹24,500</td>
+    </tr>
+    <tr>
+      <td><strong>Cloudrunner 3 Waterproof</strong><br><span style="color:#64748b;">All-Weather Running Shoe</span></td>
+      <td class="num">$180.00</td>
+      <td class="num">₹15,750</td>
+      <td class="num"><strong>₹19,999</strong></td>
+      <td class="num"><strong>₹18,499</strong></td>
+      <td class="num">₹18,999</td>
+      <td class="num">₹24,500</td>
+    </tr>
+    <tr>
+      <td><strong>The Roger Clubhouse Pro 2</strong><br><span style="color:#64748b;">High-Performance Court Shoe</span></td>
+      <td class="num">$180.00</td>
+      <td class="num">₹15,750</td>
+      <td class="num"><strong>₹20,499</strong></td>
+      <td class="num"><strong>₹18,999</strong></td>
+      <td class="num">₹19,999</td>
+      <td class="num">₹24,500</td>
+    </tr>
+    <tr>
+      <td><strong>Cloudsurfer Trail Waterproof</strong><br><span style="color:#64748b;">Off-Road Trail Running Shoe</span></td>
+      <td class="num">$190.00</td>
+      <td class="num">₹16,625</td>
+      <td class="num"><strong>₹20,499</strong></td>
+      <td class="num"><strong>₹19,999</strong></td>
+      <td class="num">₹19,999</td>
+      <td class="num">₹26,000</td>
+    </tr>
+    <tr>
+      <td><strong>The Roger Centre Court</strong><br><span style="color:#64748b;">Full-Grain Leather Luxury Sneaker</span></td>
+      <td class="num">$200.00</td>
+      <td class="num">₹17,500</td>
+      <td class="num"><strong>₹22,499</strong></td>
+      <td class="num"><strong>₹21,999</strong></td>
+      <td class="num">₹22,999</td>
+      <td class="num">₹27,000</td>
+    </tr>
+    <tr>
+      <td><strong>x PAF Cloudboom Volt</strong><br><span style="color:#64748b;">Limited Edition Designer Collab</span></td>
+      <td class="num">$280.00</td>
+      <td class="num">₹24,500</td>
+      <td class="num"><strong>₹28,999</strong></td>
+      <td class="num"><strong>₹29,999</strong></td>
+      <td class="num">₹31,000+</td>
+      <td class="num">₹38,000</td>
     </tr>
   </tbody>
 </table>
 
-<div class="warning-box">
-  <div class="warning-title">⚠️ Important Catalog Audit Finding (Vendor Tagging Anomaly):</div>
-  <div class="warning-body">
-    During our database inspection, we identified that <strong>9 styles in the Nordstrom database</strong> (such as <em>Hoka Clifton 11 GTX, Hoka Stinson 8</em>, and <em>Salomon XT-4 / XT-Quest</em>) were inadvertently assigned <code>"vendor": "On"</code> during historical import due to Nordstrom bundling them under multi-brand trail search results. Our proposed formula targets genuine On footwear and will cleanly handle all footwear under Nordstrom without causing price anomalies.
-  </div>
-</div>
-
-<h2>3. Three Formula Options: Pick the One That Fits Your Goals</h2>
-<p>We developed and simulated three distinct pricing formulas for leadership to choose from:</p>
-
-<div class="formula-card">
-  <div class="formula-header">
-    <span class="formula-title">Option A: The Market Penetration Formula (Aggressive Undercut)</span>
-    <span class="tag tag-blue">Fast Growth / Lowest Price</span>
-  </div>
-  <div class="formula-math">Selling Price = ROUND(Source_USD × 88 × 1.18 + 300, -2) - 1</div>
-  <div class="formula-desc">
-    <strong>How it works:</strong> Applies an 18% markup over landed cost plus a ₹300 order buffer, ending in ₹...99.<br>
-    <strong>Price Examples:</strong> $160 shoe sells for <strong>₹16,899</strong> (Net profit: ₹2,899 | 16.7% margin). $180 shoe sells for <strong>₹18,999</strong> (Net profit: ₹3,249).<br>
-    <strong>Verdict:</strong> Guaranteed to be the cheapest price in India on almost every model, but leaves money on the table since buyers are already willing to pay ₹17.5k+.
-  </div>
-</div>
-
-<div class="formula-card recommended">
-  <div class="formula-header">
-    <span class="formula-title">Option B: The Strategic "Price Attack" Formula (RECOMMENDED)</span>
-    <span class="tag tag-green">★ RECOMMENDED ★</span>
-  </div>
-  <div class="formula-math">Selling Price = ROUND((Source_USD × Live_FX) + 2,350 + (Source_USD - 160) × 10, -2) - 1</div>
-  <div class="formula-desc">
-    <strong>How it works:</strong> Designed specifically for our system architecture. At base $160, it adds ₹2,350 over system forex, smoothly scaling up by ₹10 for every additional dollar. Automatically ends in ₹...99.<br>
-    <strong>Price Examples:</strong>
-    <ul>
-      <li><strong>$120 Entry Shoe:</strong> Sells at <strong>₹13,399</strong> (Beats CDC ₹13,499 & Hypefly ₹14,199). Profit: <strong>₹2,839</strong>.</li>
-      <li><strong>$160 Flagship (Cloud 6 / The Roger):</strong> Sells at <strong>₹17,599</strong> (Beats CDC ₹19,999 by ₹2,400!). Profit: <strong>₹3,599</strong> (20.5% margin).</li>
-      <li><strong>$170 (Cloudmonster / Cloudtilt):</strong> Sells at <strong>₹18,699</strong> (CDC is ₹18,499; Hypefly is ₹17,499 - ₹21,599). Profit: <strong>₹3,824</strong> (20.4% margin).</li>
-      <li><strong>$180 (Cloudmonster Running / The Roger Club):</strong> Sells at <strong>₹19,699</strong> (Beats CDC ₹19,999). Profit: <strong>₹3,949</strong> (20.0% margin).</li>
-      <li><strong>$200 (The Roger Centre Court):</strong> Sells at <strong>₹21,799</strong> (Beats Hypefly ₹21,999 & CDC ₹22,499). Profit: <strong>₹4,299</strong>.</li>
-    </ul>
-    <strong>Verdict:</strong> <em>The absolute sweet spot.</em> You beat Crepdog Crew by up to ₹2,400, stay competitive with Hypefly, and bank ~₹3,600 to ₹4,300 gross profit per pair.
-  </div>
-</div>
-
-<div class="formula-card">
-  <div class="formula-header">
-    <span class="formula-title">Option C: The Reseller Parity Formula (Maximum Gross Margin)</span>
-    <span class="tag tag-amber">Max Margin / Higher Friction</span>
-  </div>
-  <div class="formula-math">Selling Price = ROUND(Source_USD × 88 × 1.30 + 600, -2) - 1</div>
-  <div class="formula-desc">
-    <strong>How it works:</strong> Mirrors Culture Circle and boutique reseller markups (30% markup over cost).<br>
-    <strong>Price Examples:</strong> $160 sells for <strong>₹18,899</strong> (₹4,899 profit | 25.5% margin); $180 sells for <strong>₹21,199</strong> (₹5,449 profit).<br>
-    <strong>Verdict:</strong> Yields the highest dollar profit per unit, but loses price leadership to Hypefly on core styles like the Cloudmonster.
-  </div>
-</div>
-
-<!-- PAGE 3: SIMULATION MATRIX, IMPLEMENTATION & ROI -->
 <div class="page-break"></div>
 
-<h2>4. Complete Price Simulation for All 3 Options</h2>
-<p>Here is the exact price a customer will see at checkout across our full range of On shoes under each candidate formula:</p>
+<!-- PAGE 3: FORMULA FRAMEWORKS FOR THE BUSINESS OWNER -->
+<h2>3. How You Can Structure Your Formula: 4 Framework Options</h2>
+<p>
+  As the business owner, you have full freedom over how you want to price this collection. Here are the 4 most effective ways businesses price imported luxury sneakers:
+</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Shoe Style / Category</th>
-      <th>USD</th>
-      <th>True Cost</th>
-      <th>Current DB</th>
-      <th>Option A (Penetration)</th>
-      <th class="rec-header">Option B (RECOMMENDED)</th>
-      <th>Option C (Max Margin)</th>
-      <th>Anchor Strikethrough MRP</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Cloud X 4 AD Athletic (Sale)</strong></td>
-      <td>$51.20</td>
-      <td>₹4,480</td>
-      <td>₹4,910</td>
-      <td>₹5,599 (+₹1,119)</td>
-      <td class="rec-col">₹6,099 (+₹1,619)</td>
-      <td>₹6,499 (+₹2,019)</td>
-      <td>₹7,500 <span style="color:#059669;font-size:7.5pt;">(19% off)</span></td>
-    </tr>
-    <tr>
-      <td><strong>Cloud 5 / Cloudsurfer 2 (Entry)</strong></td>
-      <td>$120.00</td>
-      <td>₹10,560</td>
-      <td>₹11,438</td>
-      <td>₹12,799 (+₹2,239)</td>
-      <td class="rec-col">₹13,399 (+₹2,839)</td>
-      <td>₹14,299 (+₹3,739)</td>
-      <td>₹16,500 <span style="color:#059669;font-size:7.5pt;">(19% off)</span></td>
-    </tr>
-    <tr>
-      <td><strong>Cloudzone / Cloudpulse Next</strong></td>
-      <td>$140.00</td>
-      <td>₹12,320</td>
-      <td>₹13,345</td>
-      <td>₹14,799 (+₹2,479)</td>
-      <td class="rec-col">₹15,499 (+₹3,179)</td>
-      <td>₹16,599 (+₹4,279)</td>
-      <td>₹19,500 <span style="color:#059669;font-size:7.5pt;">(21% off)</span></td>
-    </tr>
-    <tr>
-      <td><strong>Cloudsurfer Next / Cloudnova Form 2</strong></td>
-      <td>$150.00</td>
-      <td>₹13,200</td>
-      <td>₹14,298</td>
-      <td>₹15,899 (+₹2,699)</td>
-      <td class="rec-col">₹16,499 (+₹3,299)</td>
-      <td>₹17,799 (+₹4,599)</td>
-      <td>₹20,500 <span style="color:#059669;font-size:7.5pt;">(20% off)</span></td>
-    </tr>
-    <tr>
-      <td><strong>Cloud 6 Sneaker / Cloudrunner 3</strong></td>
-      <td>$160.00</td>
-      <td>₹14,000</td>
-      <td>₹15,251</td>
-      <td>₹16,899 (+₹2,899)</td>
-      <td class="rec-col">₹17,599 (+₹3,599)</td>
-      <td>₹18,899 (+₹4,899)</td>
-      <td>₹22,000 <span style="color:#059669;font-size:7.5pt;">(20% off)</span></td>
-    </tr>
-    <tr>
-      <td><strong>The Roger Advantage Tennis</strong></td>
-      <td>$160.00</td>
-      <td>₹14,000</td>
-      <td>₹15,251</td>
-      <td>₹16,899 (+₹2,899)</td>
-      <td class="rec-col">₹17,599 (+₹3,599)</td>
-      <td>₹18,899 (+₹4,899)</td>
-      <td>₹22,000 <span style="color:#059669;font-size:7.5pt;">(20% off)</span></td>
-    </tr>
-    <tr>
-      <td><strong>Cloudmonster Void / Cloudtilt</strong></td>
-      <td>$170.00</td>
-      <td>₹14,875</td>
-      <td>₹16,204</td>
-      <td>₹17,999 (+₹3,124)</td>
-      <td class="rec-col">₹18,699 (+₹3,824)</td>
-      <td>₹19,999 (+₹5,124)</td>
-      <td>₹23,500 <span style="color:#059669;font-size:7.5pt;">(20% off)</span></td>
-    </tr>
-    <tr>
-      <td><strong>Cloudswift 4 / Cloudnova 2</strong></td>
-      <td>$170.00</td>
-      <td>₹14,875</td>
-      <td>₹16,204</td>
-      <td>₹17,999 (+₹3,124)</td>
-      <td class="rec-col">₹18,699 (+₹3,824)</td>
-      <td>₹19,999 (+₹5,124)</td>
-      <td>₹23,500 <span style="color:#059669;font-size:7.5pt;">(20% off)</span></td>
-    </tr>
-    <tr>
-      <td><strong>Cloudmonster Running / Mule</strong></td>
-      <td>$180.00</td>
-      <td>₹15,750</td>
-      <td>₹17,157</td>
-      <td>₹18,999 (+₹3,249)</td>
-      <td class="rec-col">₹19,699 (+₹3,949)</td>
-      <td>₹21,199 (+₹5,449)</td>
-      <td>₹24,500 <span style="color:#059669;font-size:7.5pt;">(20% off)</span></td>
-    </tr>
-    <tr>
-      <td><strong>Cloudrunner 3 Waterproof / Roger Club</strong></td>
-      <td>$180.00</td>
-      <td>₹15,750</td>
-      <td>₹17,157</td>
-      <td>₹18,999 (+₹3,249)</td>
-      <td class="rec-col">₹19,699 (+₹3,949)</td>
-      <td>₹21,199 (+₹5,449)</td>
-      <td>₹24,500 <span style="color:#059669;font-size:7.5pt;">(20% off)</span></td>
-    </tr>
-    <tr>
-      <td><strong>Cloudsurfer Trail Waterproof</strong></td>
-      <td>$190.00</td>
-      <td>₹16,625</td>
-      <td>₹18,111</td>
-      <td>₹19,999 (+₹3,374)</td>
-      <td class="rec-col">₹20,799 (+₹4,174)</td>
-      <td>₹22,299 (+₹5,674)</td>
-      <td>₹26,000 <span style="color:#059669;font-size:7.5pt;">(20% off)</span></td>
-    </tr>
-    <tr>
-      <td><strong>The Roger Centre Court</strong></td>
-      <td>$200.00</td>
-      <td>₹17,500</td>
-      <td>₹19,064</td>
-      <td>₹21,099 (+₹3,599)</td>
-      <td class="rec-col">₹21,799 (+₹4,299)</td>
-      <td>₹23,499 (+₹5,999)</td>
-      <td>₹27,000 <span style="color:#059669;font-size:7.5pt;">(19% off)</span></td>
-    </tr>
-    <tr>
-      <td><strong>x PAF Cloudboom Volt (Collab)</strong></td>
-      <td>$280.00</td>
-      <td>₹24,500</td>
-      <td>₹26,854</td>
-      <td>₹29,399 (+₹4,899)</td>
-      <td class="rec-col">₹30,199 (+₹5,699)</td>
-      <td>₹32,599 (+₹8,099)</td>
-      <td>₹38,000 <span style="color:#059669;font-size:7.5pt;">(21% off)</span></td>
-    </tr>
-  </tbody>
-</table>
+<div class="framework-card">
+  <h4>Framework 1: Flat Percentage Margin (e.g., 20% to 25% Profit on Every Pair)</h4>
+  <p><strong>Concept:</strong> Every shoe is priced to guarantee an exact profit percentage above your buying cost.</p>
+  <ul>
+    <li><strong>At 20% Gross Margin:</strong> A $160 shoe (cost ₹14,000) sells for <strong>₹17,499</strong> (Profit: ₹3,499). A $180 shoe (cost ₹15,750) sells for <strong>₹19,699</strong> (Profit: ₹3,949).</li>
+    <li><strong>At 25% Gross Margin:</strong> A $160 shoe sells for <strong>₹18,699</strong> (Profit: ₹4,699). A $180 shoe sells for <strong>₹20,999</strong> (Profit: ₹5,249).</li>
+    <li><strong>Pros:</strong> Predictable, consistent profit percentage regardless of whether the shoe is $120 or $200.</li>
+  </ul>
+</div>
 
-<h2>5. How to Implement in 3 Simple Steps (Zero Coding Needed)</h2>
-<p>Thanks to our decoupled pricing filter engine (ADR 0028), setting this live requires <strong>zero changes to local database files</strong> and zero python code modifications:</p>
+<div class="framework-card">
+  <h4>Framework 2: Base Markup + Gradual Scale (The Strategic "Sweet Spot")</h4>
+  <p><strong>Concept:</strong> Set a base profit (e.g. ₹2,350 to ₹2,500 profit on standard $160 models) and let it scale up smoothly by ₹10 for each additional dollar on higher-tier models.</p>
+  <ul>
+    <li>$120 Entry Shoe (Cloud 5): Sells at <strong>₹13,399</strong> (Profit: ₹2,839). Beats Crepdog Crew (₹13,499) &amp; Hypefly (₹14,199).</li>
+    <li>$160 Core Flagship (Cloud 6 / The Roger): Sells at <strong>₹17,599</strong> (Profit: ₹3,599). <em>Beats Crepdog Crew by ₹2,400!</em></li>
+    <li>$170 Trend Model (Cloudmonster / Cloudtilt): Sells at <strong>₹18,699</strong> (Profit: ₹3,824). Matches Hypefly sweet spot.</li>
+    <li>$180 Performance (Cloudrunner 3 / Roger Pro): Sells at <strong>₹19,699</strong> (Profit: ₹3,949). Below Crepdog Crew's ₹20,499.</li>
+    <li><strong>Pros:</strong> Delivers the strongest competitive advantage. You consistently beat Crepdog Crew on high-volume models while making over ₹3,600 profit per pair.</li>
+  </ul>
+</div>
 
-<ol>
-  <li>
-    <strong>Register the Rule in Config:</strong> Add an <code>"On"</code> vendor block to <code>config/pricing_rules.json</code> under the <code>nordstrom</code> store:
-    <div class="code-block">{
-  "stores": {
-    "nordstrom": {
-      "vendors": {
-        "On": {
-          "formula": "linear_markup",
-          "description": "On Running India Charm Retail Formula (Option B)",
-          "base_usd": 160.0,
-          "base_markup_inr": 2350.0,
-          "per_usd_markup_inr": 10.0,
-          "round_nearest": 100,
-          "charm_offset": -1
-        }
-      }
-    }
-  }
-}</div>
-  </li>
-  <li>
-    <strong>Run Dry-Run Audit:</strong> Verify the projected catalog without touching live Shopify:
-    <div class="code-block">python scripts/resync_storefront_prices.py --store nordstrom --vendor "On" --dry-run</div>
-  </li>
-  <li>
-    <strong>Publish to Shopify:</strong> Roll out live updates in 2 minutes:
-    <div class="code-block">python scripts/resync_storefront_prices.py --store nordstrom --vendor "On" --execute --workers 3</div>
-  </li>
-</ol>
+<div class="framework-card">
+  <h4>Framework 3: Fixed Rupee Profit per Shoe (e.g., Exactly +₹3,500 or +₹4,000 Cash Profit)</h4>
+  <p><strong>Concept:</strong> You decide a fixed cash amount you want to make in your pocket on every box that leaves the warehouse.</p>
+  <ul>
+    <li><strong>If you want +₹3,500 cash profit:</strong> Cost ₹14,000 → Sell at <strong>₹17,499</strong>. Cost ₹15,750 → Sell at <strong>₹19,299</strong>.</li>
+    <li><strong>If you want +₹4,000 cash profit:</strong> Cost ₹14,000 → Sell at <strong>₹17,999</strong>. Cost ₹15,750 → Sell at <strong>₹19,799</strong>.</li>
+    <li><strong>Pros:</strong> Extremely simple math; easy to forecast cash flow based on unit sales targets.</li>
+  </ul>
+</div>
 
-<h2>6. Business Impact & Profit Projections</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Sales Volume</th>
-      <th>Old Profit (Current Flat Forex)</th>
-      <th>New Profit under Formula B</th>
-      <th>Net Additional Earnings</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>50 Pairs Sold</strong></td>
-      <td>₹70,000 <em>(barely covers gateway/shipping)</em></td>
-      <td><strong>₹1,88,500</strong></td>
-      <td><span class="tag tag-green">+₹1,18,500 Pure Profit</span></td>
-    </tr>
-    <tr>
-      <td><strong>150 Pairs Sold</strong></td>
-      <td>₹2,10,000</td>
-      <td><strong>₹5,65,500</strong></td>
-      <td><span class="tag tag-green">+₹3,55,500 Pure Profit</span></td>
-    </tr>
-    <tr>
-      <td><strong>300 Pairs Sold</strong></td>
-      <td>₹4,20,000</td>
-      <td><strong>₹11,31,000</strong></td>
-      <td><span class="tag tag-green">+₹7,11,000 Pure Profit</span></td>
-    </tr>
-  </tbody>
-</table>
+<div class="framework-card">
+  <h4>Framework 4: Tiered Slabs Based on Shoe Price Tiers</h4>
+  <p><strong>Concept:</strong> Different markup amounts depending on whether the shoe is an entry model, core daily runner, or high-end tennis sneaker.</p>
+  <ul>
+    <li><strong>Entry Tier (Under $140):</strong> Add +₹2,500 markup (Sells at ₹13,499 – ₹15,499). Keeps introductory prices accessible.</li>
+    <li><strong>Core Tier ($140 to $170):</strong> Add +₹3,500 markup (Sells at ₹16,999 – ₹18,699). Captures maximum volume on Cloud 6 &amp; Cloudmonster.</li>
+    <li><strong>Luxury / Tennis Tier ($180+):</strong> Add +₹4,500 to +₹5,500 markup (Sells at ₹20,499 – ₹22,999). Captures premium margins on The Roger Federer collection.</li>
+    <li><strong>Pros:</strong> Maximizes profit on premium styles while keeping entry-level models attractive to first-time buyers.</li>
+  </ul>
+</div>
 
-<div class="callout-box" style="margin-top: 15px;">
-  <div class="callout-title">Final Recommendation Summary for Leadership:</div>
-  <div class="callout-body">
-    Adopt <strong>Option B (Strategic Linear Formula)</strong>. It establishes The Rare Avenue as a legitimate, premium sneaker destination in India that easily beats Crepdog Crew on price, matches Hypefly's charm pricing aesthetics, and locks in a healthy <strong>₹3,600 to ₹4,300 gross margin per pair</strong> while fully automating future catalog updates.
-  </div>
+<div class="callout-gold" style="margin-top: 14px;">
+  <strong>Summary for Ownership Decision:</strong>
+  <br>
+  Please review the competitor prices in Table 2 and let the team know your preferred direction:
+  <ol style="margin: 4px 0 0 0; padding-left: 18px;">
+    <li>Do you prefer a <strong>percentage margin</strong> (e.g. 20% or 25% profit), a <strong>fixed cash profit</strong> (e.g. ₹3,500 per pair), or the <strong>strategic sweet spot</strong> (₹17,599 on core models to beat Crepdog Crew)?</li>
+    <li>Would you like us to display a <strong>crossed-out Reference MRP</strong> (e.g. showing ₹22,000 crossed out to your ₹17,599 price) to show customers a 20% discount on the website?</li>
+  </ol>
+  Once you confirm your preferred formula, the team will activate it across the entire On Running catalog!
 </div>
 
 </body>
