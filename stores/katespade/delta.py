@@ -181,16 +181,72 @@ def check_price_and_stock(
             price_changed = abs(new_price - old_source_price) > 0.01 if (new_price and old_source_price) else False
             stock_changed = (new_availability != old_availability)
 
+            # 8. Variant-level change detection (ADR 0015, ADR 0021)
+            variant_stock_changed = False
+            variant_price_changed = False
+            changed_variants = []
+            changed_variant_prices = []
+
+            existing_vars = product.get("variants", [])
+            if existing_vars and variants_delta:
+                v_delta_map = {vd["sku"].strip().upper(): vd for vd in variants_delta if vd.get("sku")}
+                v_delta_color_map = {vd["color"].strip().title(): vd for vd in variants_delta if vd.get("color")}
+
+                for ev in existing_vars:
+                    matched_vd = None
+                    ev_sku = ev.get("sku", "").strip().upper()
+                    ev_opt1 = ev.get("option1", "").strip().title()
+                    ev_title = ev.get("title", "").strip().title()
+
+                    if ev_sku in v_delta_map:
+                        matched_vd = v_delta_map[ev_sku]
+                    elif ev_opt1 in v_delta_color_map:
+                        matched_vd = v_delta_color_map[ev_opt1]
+                    elif ev_title in v_delta_color_map:
+                        matched_vd = v_delta_color_map[ev_title]
+
+                    if matched_vd:
+                        old_v_stock = bool(ev.get("in_stock", True))
+                        new_v_stock = bool(matched_vd.get("in_stock", True))
+                        if old_v_stock != new_v_stock:
+                            variant_stock_changed = True
+                            changed_variants.append({
+                                "sku": ev.get("sku", ""),
+                                "old_in_stock": old_v_stock,
+                                "new_in_stock": new_v_stock
+                            })
+
+                        old_v_sp = float(ev.get("source_price") or 0.0)
+                        new_v_sp = matched_vd.get("source_price")
+                        if new_v_sp is not None and new_v_sp > 0 and old_v_sp > 0 and abs(new_v_sp - old_v_sp) > 0.01:
+                            variant_price_changed = True
+                            changed_variant_prices.append({
+                                "sku": ev.get("sku", ""),
+                                "title": ev.get("title", ""),
+                                "old_source_price": old_v_sp,
+                                "new_source_price": new_v_sp
+                            })
+
+            has_changed = (price_changed or stock_changed or variant_stock_changed or variant_price_changed)
+
             return {
                 "status": "success",
                 "id": product.get("id"),
                 "handle": handle,
                 "store": resolved_store,
                 "availability": new_availability,
+                "old_availability": old_availability,
                 "source_price": new_price,
-                "has_changed": (price_changed or stock_changed),
+                "current_source_price": new_price,
+                "new_source_price": new_price,
+                "old_source_price": old_source_price,
+                "has_changed": has_changed,
                 "price_changed": price_changed,
                 "stock_changed": stock_changed,
+                "variant_stock_changed": variant_stock_changed,
+                "changed_variants": changed_variants,
+                "variant_price_changed": variant_price_changed,
+                "changed_variant_prices": changed_variant_prices,
                 "variants_delta": variants_delta,
                 "elapsed_ms": elapsed_ms
             }
@@ -271,11 +327,14 @@ def apply_delta_to_product(
             matched_vd = None
             ev_sku = ev.get("sku", "").strip().upper()
             ev_opt1 = ev.get("option1", "").strip().title()
+            ev_title = ev.get("title", "").strip().title()
 
             if ev_sku in v_delta_map:
                 matched_vd = v_delta_map[ev_sku]
             elif ev_opt1 in v_delta_color_map:
                 matched_vd = v_delta_color_map[ev_opt1]
+            elif ev_title in v_delta_color_map:
+                matched_vd = v_delta_color_map[ev_title]
 
             if matched_vd:
                 # Update variant stock
