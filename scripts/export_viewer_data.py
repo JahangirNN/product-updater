@@ -426,14 +426,14 @@ def format_viewer_product(
         v_img = v.get("image_url") or v.get("image")
         if v_img:
             v_entry["image_url"] = v_img
-        if v.get("images"):
-            v_entry["images"] = v["images"]
         if v.get("option_values"):
             v_entry["option_values"] = v["option_values"]
         variants.append(v_entry)
 
     raw_desc = prod.get("descriptionHtml") or prod.get("description_html") or ""
     desc_html = raw_desc.strip()
+    if len(desc_html) > 1200:
+        desc_html = desc_html[:1200]
 
     all_imgs = []
     for im in (prod.get("images") or []):
@@ -448,7 +448,7 @@ def format_viewer_product(
             if vim and vim not in all_imgs:
                 all_imgs.append(vim)
 
-    images = all_imgs[:25]
+    images = all_imgs[:16]
 
     prod_title = prod.get("title", "")
     if prod.get("source_store") in ("footlocker", "jdsports"):
@@ -675,7 +675,7 @@ def export_catalog(
     catalog_file = os.path.join(output_dir, "catalog.json")
     tmp_catalog = f"{catalog_file}.tmp"
     with open(tmp_catalog, "w", encoding="utf-8") as f:
-        json.dump(all_products, f, indent=2, ensure_ascii=False)
+        json.dump(all_products, f, separators=(',', ':'), ensure_ascii=False)
     os.replace(tmp_catalog, catalog_file)
 
     meta_file = os.path.join(output_dir, "meta.json")

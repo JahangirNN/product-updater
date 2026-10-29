@@ -209,7 +209,11 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
     if (matchVar) {
       setSelectedVariantSku(matchVar.sku);
       if (matchVar.image_url) {
-        const idx = allImages.indexOf(matchVar.image_url);
+        let idx = allImages.indexOf(matchVar.image_url);
+        if (idx === -1) {
+          const cleanVar = matchVar.image_url.split('?')[0];
+          idx = allImages.findIndex(u => u.split('?')[0] === cleanVar);
+        }
         if (idx !== -1) {
           setActiveImageIndex(idx);
         }
