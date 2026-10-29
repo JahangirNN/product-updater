@@ -7,9 +7,9 @@
   "product_type": "Shoulder Bags",
   "gender": "Women",
   "source_sku": "KO436-250",
-  "source_price": 89.25,
+  "source_price": 119.0,
   "source_compare_at_price": null,
-  "current_price": 8497,
+  "current_price": 11340.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -95,7 +95,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KI904_100_1",
         "https://katespade.scene7.com/is/image/KateSpade/KI904_100_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KI904_100"
     },
     {
       "id": null,
@@ -117,7 +118,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KI904_001_2",
         "https://katespade.scene7.com/is/image/KateSpade/KI904_001_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KI904_001"
     },
     {
       "id": null,
@@ -139,7 +141,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KI904_201_1",
         "https://katespade.scene7.com/is/image/KateSpade/KI904_201_3"
       ],
-      "inventory_quantity": 0
+      "inventory_quantity": 0,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KI904_201"
     },
     {
       "id": null,
@@ -161,7 +164,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KI904_202_1",
         "https://katespade.scene7.com/is/image/KateSpade/KI904_202_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KI904_202"
     },
     {
       "id": null,
@@ -183,7 +187,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KI904_022_1",
         "https://katespade.scene7.com/is/image/KateSpade/KI904_022_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KI904_022"
     },
     {
       "id": null,
@@ -205,7 +210,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KI904_411_1",
         "https://katespade.scene7.com/is/image/KateSpade/KI904_411_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KI904_411"
     },
     {
       "id": null,
@@ -227,7 +233,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KM670_650_1",
         "https://katespade.scene7.com/is/image/KateSpade/KM670_650_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KM670_650"
     },
     {
       "id": null,
@@ -249,7 +256,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO435_800_1",
         "https://katespade.scene7.com/is/image/KateSpade/KO435_800_4"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO435_800"
     },
     {
       "id": null,
@@ -271,7 +279,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO436_250_1",
         "https://katespade.scene7.com/is/image/KateSpade/KO436_250_4"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO436_250"
     },
     {
       "id": null,
@@ -293,7 +302,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KP309_960_1",
         "https://katespade.scene7.com/is/image/KateSpade/KP309_960_2"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KP309_960"
     },
     {
       "id": null,
@@ -315,7 +325,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KP333_200_1",
         "https://katespade.scene7.com/is/image/KateSpade/KP333_200_2"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KP333_200"
     }
   ],
   "product_options": [
@@ -348,8 +359,10 @@
     "handbags"
   ],
   "created_at": "2026-10-29T05:27:09Z",
-  "last_verified_at": "2026-10-29T05:27:09Z",
+  "last_verified_at": "2026-10-29T07:40:27Z",
   "_elapsed_ms": 3054.228199995123,
   "id": "9e84e31b9eee6cf2",
-  "updated_at": "2026-10-29T05:27:09Z"
+  "updated_at": "2026-10-29T07:40:27Z",
+  "last_synced_fx_rate": 95.29615,
+  "shopify_sync_pending": true
 }

@@ -423,8 +423,11 @@ def format_viewer_product(
             "source_price": source_price_val,
             "in_stock": in_stock_val,
         }
-        if v.get("image_url"):
-            v_entry["image_url"] = v["image_url"]
+        v_img = v.get("image_url") or v.get("image")
+        if v_img:
+            v_entry["image_url"] = v_img
+        if v.get("images"):
+            v_entry["images"] = v["images"]
         if v.get("option_values"):
             v_entry["option_values"] = v["option_values"]
         variants.append(v_entry)
@@ -432,11 +435,20 @@ def format_viewer_product(
     raw_desc = prod.get("descriptionHtml") or prod.get("description_html") or ""
     desc_html = raw_desc.strip()
 
-    images = prod.get("images", [])
-    if isinstance(images, list):
-        images = images[:5]
-    else:
-        images = []
+    all_imgs = []
+    for im in (prod.get("images") or []):
+        if im and im not in all_imgs:
+            all_imgs.append(im)
+    for v in prod.get("variants", []):
+        v_im = v.get("image_url") or v.get("image")
+        if v_im and v_im not in all_imgs:
+            all_imgs.append(v_im)
+    for v in prod.get("variants", []):
+        for vim in v.get("images", []):
+            if vim and vim not in all_imgs:
+                all_imgs.append(vim)
+
+    images = all_imgs[:25]
 
     prod_title = prod.get("title", "")
     if prod.get("source_store") in ("footlocker", "jdsports"):

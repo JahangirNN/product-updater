@@ -7,9 +7,9 @@
   "product_type": "Satchels & Top Handles",
   "gender": "Women",
   "source_sku": "KP298-250",
-  "source_price": 93.75,
+  "source_price": 86.25,
   "source_compare_at_price": null,
-  "current_price": 8925,
+  "current_price": 8219.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -80,7 +80,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO144_200_1",
         "https://katespade.scene7.com/is/image/KateSpade/KO144_200_2"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO144_200"
     },
     {
       "id": null,
@@ -102,7 +103,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO149_001_1",
         "https://katespade.scene7.com/is/image/KateSpade/KO149_001_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO149_001"
     },
     {
       "id": null,
@@ -124,7 +126,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO149_250_1",
         "https://katespade.scene7.com/is/image/KateSpade/KO149_250_4"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO149_250"
     },
     {
       "id": null,
@@ -146,7 +149,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO149_800_1",
         "https://katespade.scene7.com/is/image/KateSpade/KO149_800_4"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO149_800"
     },
     {
       "id": null,
@@ -168,7 +172,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO149_600_1",
         "https://katespade.scene7.com/is/image/KateSpade/KO149_600_2"
       ],
-      "inventory_quantity": 0
+      "inventory_quantity": 0,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO149_600"
     },
     {
       "id": null,
@@ -190,7 +195,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO149_201_2",
         "https://katespade.scene7.com/is/image/KateSpade/KO149_201_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO149_201"
     },
     {
       "id": null,
@@ -212,7 +218,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KP176_650_1",
         "https://katespade.scene7.com/is/image/KateSpade/KP176_650_2"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KP176_650"
     }
   ],
   "product_options": [
@@ -241,8 +248,10 @@
     "handbags"
   ],
   "created_at": "2026-10-29T05:29:39Z",
-  "last_verified_at": "2026-10-29T05:29:39Z",
+  "last_verified_at": "2026-10-29T07:44:19Z",
   "_elapsed_ms": 3154.226699960418,
   "id": "781df01cf8a07338",
-  "updated_at": "2026-10-29T05:29:39Z"
+  "updated_at": "2026-10-29T07:44:19Z",
+  "last_synced_fx_rate": 95.29615,
+  "shopify_sync_pending": true
 }

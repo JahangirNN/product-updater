@@ -7,9 +7,9 @@
   "product_type": "Satchels & Top Handles",
   "gender": "Women",
   "source_sku": "KO145-200",
-  "source_price": 96.75,
+  "source_price": 101.25,
   "source_compare_at_price": null,
-  "current_price": 9211,
+  "current_price": 9649.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -66,7 +66,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO145_960_1",
         "https://katespade.scene7.com/is/image/KateSpade/KO145_960_2"
       ],
-      "inventory_quantity": 0
+      "inventory_quantity": 0,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO145_960"
     },
     {
       "id": null,
@@ -88,7 +89,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO145_200_1",
         "https://katespade.scene7.com/is/image/KateSpade/KO145_200_2"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO145_200"
     }
   ],
   "product_options": [
@@ -112,8 +114,10 @@
     "handbags"
   ],
   "created_at": "2026-10-29T05:29:42Z",
-  "last_verified_at": "2026-10-29T05:29:42Z",
+  "last_verified_at": "2026-10-29T07:44:23Z",
   "_elapsed_ms": 2946.477000019513,
   "id": "f81311ebec3b8ca7",
-  "updated_at": "2026-10-29T05:29:42Z"
+  "updated_at": "2026-10-29T07:44:23Z",
+  "last_synced_fx_rate": 95.29615,
+  "shopify_sync_pending": true
 }

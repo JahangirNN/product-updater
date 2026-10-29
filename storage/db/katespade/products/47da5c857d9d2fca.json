@@ -7,9 +7,9 @@
   "product_type": "Shoulder Bags",
   "gender": "Women",
   "source_sku": "KP645-500",
-  "source_price": 189.0,
+  "source_price": 199.0,
   "source_compare_at_price": null,
-  "current_price": 17993,
+  "current_price": 18964.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -77,7 +77,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KP226_020_1",
         "https://katespade.scene7.com/is/image/KateSpade/KP226_020_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KP226_020"
     },
     {
       "id": null,
@@ -99,7 +100,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KP228_200_1",
         "https://katespade.scene7.com/is/image/KateSpade/KP228_200_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KP228_200"
     },
     {
       "id": null,
@@ -121,7 +123,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KP645_001_1",
         "https://katespade.scene7.com/is/image/KateSpade/KP645_001_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KP645_001"
     },
     {
       "id": null,
@@ -143,7 +146,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KP645_403_1",
         "https://katespade.scene7.com/is/image/KateSpade/KP645_403_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KP645_403"
     },
     {
       "id": null,
@@ -165,7 +169,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KP645_600_1",
         "https://katespade.scene7.com/is/image/KateSpade/KP645_600_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KP645_600"
     },
     {
       "id": null,
@@ -187,7 +192,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KP645_500_1",
         "https://katespade.scene7.com/is/image/KateSpade/KP645_500_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KP645_500"
     }
   ],
   "product_options": [
@@ -215,8 +221,10 @@
     "handbags"
   ],
   "created_at": "2026-10-29T05:28:54Z",
-  "last_verified_at": "2026-10-29T05:28:54Z",
+  "last_verified_at": "2026-10-29T07:43:11Z",
   "_elapsed_ms": 3005.8972999686375,
   "id": "47da5c857d9d2fca",
-  "updated_at": "2026-10-29T05:28:54Z"
+  "updated_at": "2026-10-29T07:43:11Z",
+  "last_synced_fx_rate": 95.29615,
+  "shopify_sync_pending": true
 }

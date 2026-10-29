@@ -86,7 +86,10 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
       }
     };
     (product.images || []).forEach(addUrl);
-    (product.variants || []).forEach((v: any) => addUrl(v.image_url));
+    (product.variants || []).forEach((v: any) => {
+      addUrl(v.image_url);
+      (v.images || []).forEach(addUrl);
+    });
     return urls.length > 0
       ? urls
       : ['https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80'];
@@ -166,7 +169,11 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
     setSelectedVariantSku(variant.sku);
 
     if (variant.image_url) {
-      const idx = allImages.indexOf(variant.image_url);
+      let idx = allImages.indexOf(variant.image_url);
+      if (idx === -1) {
+        const cleanVar = variant.image_url.split('?')[0];
+        idx = allImages.findIndex(u => u.split('?')[0] === cleanVar);
+      }
       if (idx !== -1) {
         setActiveImageIndex(idx);
       }

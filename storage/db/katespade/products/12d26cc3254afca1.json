@@ -7,9 +7,9 @@
   "product_type": "Totes & Carryalls",
   "gender": "Women",
   "source_sku": "KO066-650",
-  "source_price": 119.25,
+  "source_price": 164.25,
   "source_compare_at_price": null,
-  "current_price": 11353,
+  "current_price": 15652.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -67,7 +67,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KN909_250_1",
         "https://katespade.scene7.com/is/image/KateSpade/KN909_250_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KN909_250"
     },
     {
       "id": null,
@@ -89,7 +90,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO066_650_1",
         "https://katespade.scene7.com/is/image/KateSpade/KO066_650_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO066_650"
     },
     {
       "id": null,
@@ -111,7 +113,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO373_960_1",
         "https://katespade.scene7.com/is/image/KateSpade/KO373_960_3"
       ],
-      "inventory_quantity": 0
+      "inventory_quantity": 0,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO373_960"
     }
   ],
   "product_options": [
@@ -136,8 +139,10 @@
     "handbags"
   ],
   "created_at": "2026-10-29T05:26:13Z",
-  "last_verified_at": "2026-10-29T05:26:13Z",
+  "last_verified_at": "2026-10-29T07:38:49Z",
   "_elapsed_ms": 3155.1605999702588,
   "id": "12d26cc3254afca1",
-  "updated_at": "2026-10-29T05:26:13Z"
+  "updated_at": "2026-10-29T07:38:49Z",
+  "last_synced_fx_rate": 95.29615,
+  "shopify_sync_pending": true
 }

@@ -66,7 +66,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KC921_100_1",
         "https://katespade.scene7.com/is/image/KateSpade/KC921_100_3"
       ],
-      "inventory_quantity": 10
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KC921_100"
     },
     {
       "id": null,
@@ -88,7 +89,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KC921_301_1",
         "https://katespade.scene7.com/is/image/KateSpade/KC921_301_3"
       ],
-      "inventory_quantity": 0
+      "inventory_quantity": 0,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KC921_301"
     },
     {
       "id": null,
@@ -110,7 +112,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KC921_700_1",
         "https://katespade.scene7.com/is/image/KateSpade/KC921_700_3"
       ],
-      "inventory_quantity": 0
+      "inventory_quantity": 0,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KC921_700"
     }
   ],
   "product_options": [
@@ -135,8 +138,9 @@
     "handbags"
   ],
   "created_at": "2026-10-29T05:25:27Z",
-  "last_verified_at": "2026-10-29T05:25:27Z",
+  "last_verified_at": "2026-10-29T07:37:29Z",
   "_elapsed_ms": 2703.8596000056714,
   "id": "50d56248ae4fa768",
-  "updated_at": "2026-10-29T05:25:27Z"
+  "updated_at": "2026-10-29T07:37:29Z",
+  "last_synced_fx_rate": 95.29615
 }

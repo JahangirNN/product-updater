@@ -321,6 +321,7 @@ def build_canonical_variants(
         "source_currency": "USD",
         "in_stock": raw_data.get("availability") == "in_stock" if "availability" in raw_data else True,
         "image": featured_image,
+        "image_url": featured_image,
         "images": clean_images(raw_data.get("images", [])),
         "inventory_quantity": 10 if raw_data.get("availability") != "out_of_stock" else 0
     }]
@@ -390,6 +391,7 @@ def extract_color_variants_from_group(
             "source_currency": "USD",
             "in_stock": v_stock,
             "image": v_hero,
+            "image_url": v_hero,
             "images": v_clean_images,
             "inventory_quantity": 10 if v_stock else 0
         })
