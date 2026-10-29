@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Suede, leather and fabric upper",
   "specifications": {
     "Material": "Suede, leather and fabric upper",
@@ -52,7 +52,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx74_zcb_a0",
       "option_values": [
         {
@@ -72,7 +72,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx74_zcb_a0",
       "option_values": [
         {
@@ -132,7 +132,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx74_zcb_a0",
       "option_values": [
         {
@@ -152,7 +152,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx74_zcb_a0",
       "option_values": [
         {
@@ -335,11 +335,16 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:45:04Z",
-  "last_verified_at": "2026-09-22T05:26:49Z",
+  "last_verified_at": "2026-10-29T03:40:16Z",
   "id": "a58e7285108f4c78",
   "product_id": "a58e7285108f4c78",
   "store": "coach",
-  "updated_at": "2026-09-22T05:26:49Z",
-  "shopify_sync_pending": true,
-  "is_active": false
+  "updated_at": "2026-10-29T03:40:16Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15848609120422",
+  "shopify_handle": "track-sneaker-cfx74-zcb-6-5-b",
+  "shopify_synced_at": "2026-10-26T10:10:54Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.160836
 }

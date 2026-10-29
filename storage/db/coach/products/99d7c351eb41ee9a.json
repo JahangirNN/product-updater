@@ -104,7 +104,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cbh13_lhpj6_a0",
       "option_values": [
         {
@@ -183,11 +183,17 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:44:32Z",
-  "last_verified_at": "2026-09-22T05:26:35Z",
+  "last_verified_at": "2026-10-29T03:40:01Z",
   "id": "99d7c351eb41ee9a",
   "product_id": "99d7c351eb41ee9a",
   "store": "coach",
-  "updated_at": "2026-09-22T05:26:35Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:40:01Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841767456934",
+  "shopify_handle": "stadium-swinger-bag",
+  "shopify_synced_at": "2026-10-22T09:51:56Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 94.995216,
+  "supplier_delisted": false
 }

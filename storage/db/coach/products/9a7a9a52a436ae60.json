@@ -7,9 +7,9 @@
   "product_type": "Handbags",
   "gender": "Men",
   "source_sku": "CFG68 SV/BK",
-  "source_price": 229.0,
+  "source_price": 219.0,
   "source_compare_at_price": null,
-  "current_price": 21909.0,
+  "current_price": 21004.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -56,9 +56,9 @@
       "id": null,
       "sku": "CFG68 SV/BK",
       "title": "Silver/Black",
-      "price": "21909.00",
+      "price": "21004.00",
       "compare_at_price": null,
-      "source_price": 229.0,
+      "source_price": 219.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -70,15 +70,15 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 21982.0
+      "price_current": 21004.0
     },
     {
       "id": null,
       "sku": "CFG68 SVMPL",
       "title": "Silver/Maple",
-      "price": "21909.00",
+      "price": "21004.00",
       "compare_at_price": null,
-      "source_price": 229.0,
+      "source_price": 219.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -90,7 +90,7 @@
           "name": "Silver/Maple"
         }
       ],
-      "price_current": 21982.0
+      "price_current": 21004.0
     }
   ],
   "product_options": [
@@ -115,11 +115,16 @@
     "men_bags"
   ],
   "created_at": "2026-09-13T00:44:34Z",
-  "last_verified_at": "2026-09-22T05:26:36Z",
+  "last_verified_at": "2026-10-29T03:40:03Z",
   "id": "9a7a9a52a436ae60",
   "product_id": "9a7a9a52a436ae60",
   "store": "coach",
-  "updated_at": "2026-09-22T05:26:36Z",
+  "updated_at": "2026-10-29T03:40:03Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841767489702",
+  "shopify_handle": "austin-brief",
+  "shopify_synced_at": "2026-10-14T09:36:02Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.252751
 }

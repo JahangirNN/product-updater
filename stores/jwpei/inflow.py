@@ -234,20 +234,16 @@ def generate_description_html(body_html: str, specs: Dict[str, str]) -> str:
     lining = specs.get("Lining Material", specs.get("Lining", "N/A"))
     material = specs.get("Material") or specs.get("Major Material") or specs.get("Main Material") or "Vegan Leather"
 
-    out_html = f"""<div class="product-description">
-  <p class="product-summary">{html.escape(lead_paragraph)}</p>
-  
-  <div class="product-highlights">
-    <h4>Product Specifications</h4>
-    <ul>
-      <li><strong>Material:</strong> {html.escape(material)}</li>
-      <li><strong>Lining:</strong> {html.escape(lining)}</li>
-      <li><strong>Hardware Finish:</strong> {html.escape(hardware)}</li>
-    </ul>
-  </div>
+    has_dims = any(
+        d and d != "N/A" and str(d).strip().lower() not in ("none", "null")
+        for d in (dims, handle_drop, strap_drop)
+    )
 
+    size_guide_html = ""
+    if has_dims:
+        size_guide_html = f"""
   <details class="size-guide-accordion" style="margin-top: 15px; border: 1px solid #e5e5e5; border-radius: 6px; padding: 10px;">
-    <summary style="font-weight: bold; cursor: pointer;">📏 Size & Measurement Guide</summary>
+    <summary style="font-weight: bold; cursor: pointer;">Size &amp; Measurement Guide</summary>
     <table style="width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 14px;">
       <tbody>
         <tr style="border-bottom: 1px solid #f0f0f0;">
@@ -264,6 +260,19 @@ def generate_description_html(body_html: str, specs: Dict[str, str]) -> str:
         </tr>
       </tbody>
     </table>
-  </details>
+  </details>"""
+
+    out_html = f"""<div class="product-description">
+  <p class="product-summary">{html.escape(lead_paragraph)}</p>
+  
+  <div class="product-highlights">
+    <h4>Product Specifications</h4>
+    <ul>
+      <li><strong>Material:</strong> {html.escape(material)}</li>
+      <li><strong>Lining:</strong> {html.escape(lining)}</li>
+      <li><strong>Hardware Finish:</strong> {html.escape(hardware)}</li>
+    </ul>
+  </div>
+{size_guide_html}
 </div>"""
     return out_html

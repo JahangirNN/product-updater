@@ -67,9 +67,9 @@
       "id": null,
       "sku": "CEZ23 SVMPL",
       "title": "Silver/Maple",
-      "price": "5645.00",
+      "price": "6618.00",
       "compare_at_price": null,
-      "source_price": 59.0,
+      "source_price": 69.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -81,15 +81,15 @@
           "name": "Silver/Maple"
         }
       ],
-      "price_current": 5663.0
+      "price_current": 6618.0
     },
     {
       "id": null,
       "sku": "CEZ23 SV/HA",
       "title": "Silver/Chalk",
-      "price": "5645.00",
+      "price": "6618.00",
       "compare_at_price": null,
-      "source_price": 59.0,
+      "source_price": 69.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -101,7 +101,7 @@
           "name": "Silver/Chalk"
         }
       ],
-      "price_current": 5663.0
+      "price_current": 6618.0
     }
   ],
   "product_options": [
@@ -129,11 +129,16 @@
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:46:49Z",
-  "last_verified_at": "2026-09-22T05:29:11Z",
+  "last_verified_at": "2026-10-29T05:37:07Z",
   "id": "cd498457b162c2a6",
   "product_id": "cd498457b162c2a6",
   "store": "coach",
-  "updated_at": "2026-09-22T05:29:11Z",
+  "updated_at": "2026-10-29T05:37:07Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841797570726",
+  "shopify_handle": "card-case-with-charms-cez23-sv-bk",
+  "shopify_synced_at": "2026-10-14T09:39:00Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.252751
 }

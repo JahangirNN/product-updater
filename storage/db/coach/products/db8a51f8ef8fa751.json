@@ -111,7 +111,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cm505_b4yds_a0",
       "option_values": [
         {
@@ -251,7 +251,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cr552_b4xhg_a0",
       "option_values": [
         {
@@ -390,7 +390,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cu220_blk_a0",
       "option_values": [
         {
@@ -410,7 +410,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cu220_chk_a0",
       "option_values": [
         {
@@ -485,11 +485,16 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:47:27Z",
-  "last_verified_at": "2026-09-22T05:29:57Z",
+  "last_verified_at": "2026-10-29T05:37:58Z",
   "id": "db8a51f8ef8fa751",
   "product_id": "db8a51f8ef8fa751",
   "store": "coach",
-  "updated_at": "2026-09-22T05:29:57Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T05:37:58Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841769554086",
+  "shopify_handle": "small-zip-around-card-case",
+  "shopify_synced_at": "2026-10-23T07:53:29Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 94.593871
 }

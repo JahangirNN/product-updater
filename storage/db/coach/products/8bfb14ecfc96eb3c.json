@@ -52,7 +52,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cgi01_pop_a0",
       "option_values": [
         {
@@ -112,7 +112,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cgi01_pop_a0",
       "option_values": [
         {
@@ -132,7 +132,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cgi01_pop_a0",
       "option_values": [
         {
@@ -192,7 +192,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cgi01_pop_a0",
       "option_values": [
         {
@@ -232,7 +232,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cgi01_pop_a0",
       "option_values": [
         {
@@ -252,7 +252,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cgi01_pop_a0",
       "option_values": [
         {
@@ -335,11 +335,16 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:43:51Z",
-  "last_verified_at": "2026-09-22T05:26:16Z",
+  "last_verified_at": "2026-10-29T03:39:02Z",
   "id": "8bfb14ecfc96eb3c",
   "product_id": "8bfb14ecfc96eb3c",
   "store": "coach",
-  "updated_at": "2026-09-22T05:26:16Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:39:02Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15848608170150",
+  "shopify_handle": "ballet-mule",
+  "shopify_synced_at": "2026-10-22T09:48:17Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 94.995216
 }

@@ -6,8 +6,8 @@
   "title": "Suffolk Sunglasses",
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Sunglasses",
-  "gender": "Women",
-  "current_price": 17097,
+  "gender": "Unisex",
+  "current_price": 17187.0,
   "source_price": 179.0,
   "currency": "INR",
   "source_currency": "USD",
@@ -25,7 +25,7 @@
     {
       "sku": "MK-1189",
       "title": "5100",
-      "price": "17097.00",
+      "price": "17187.00",
       "compare_at_price": "17097.00",
       "source_price": 179.0,
       "currency": "INR",
@@ -38,7 +38,7 @@
           "name": "5100"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 17187.0
     }
   ],
   "options": [
@@ -51,11 +51,11 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Suffolk Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Suffolk Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">Frame Specifications &amp; UV Protection</summary>\n    <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n      <tbody>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Silhouette</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Oval sunglasses</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Material</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Metal frame</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">UV Protection</td><td style=\"padding: 8px; border: 1px solid #ddd;\">100% UV Protection</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Fitting &amp; Size</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Universal Fit (One Size)</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Packaging</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Protective Michael Kors Sunglass Case Included</td></tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
-    "Gender": "Women",
+    "Gender": "Unisex",
     "StyleNumber": "MK-1189",
     "Color": "5100",
     "SourceCurrency": "USD",
@@ -65,20 +65,34 @@
       "Metal frame",
       "Case included",
       "100% UV protection",
-      "Imported",
-      "Style #",
-      "bvseo\\_sdk, dw\\_cartridge, 18.2.0, p\\_sdk\\_3.2.0"
+      "Imported"
     ]
   },
   "groups": [
+    "men",
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-22T05:23:51Z",
+  "last_verified_at": "2026-10-29T05:36:52Z",
   "id": "15277d7cc6591f67",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-22T05:23:51Z",
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Suffolk Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "updated_at": "2026-10-29T05:36:52Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Suffolk Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">Frame Specifications &amp; UV Protection</summary>\n    <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n      <tbody>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Silhouette</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Oval sunglasses</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Material</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Metal frame</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">UV Protection</td><td style=\"padding: 8px; border: 1px solid #ddd;\">100% UV Protection</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Fitting &amp; Size</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Universal Fit (One Size)</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Packaging</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Protective Michael Kors Sunglass Case Included</td></tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "source_compare_at_price": 179.0,
-  "compare_at_price": 17097
+  "compare_at_price": 17097,
+  "tags": [
+    "Accessories",
+    "Sunglasses",
+    "Designer Sunglasses",
+    "Michael Kors",
+    "Men",
+    "Men's",
+    "Women",
+    "Women's"
+  ],
+  "shopify_product_id": "gid://shopify/Product/15840666779814",
+  "shopify_handle": "suffolk-sunglasses",
+  "shopify_synced_at": "2026-09-29T06:02:12Z",
+  "shopify_sync_pending": false,
+  "last_synced_fx_rate": 95.252751
 }

@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 10411,
-  "source_price": 109.0,
+  "current_price": 9497.0,
+  "source_price": 99.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d5ed488f-cd35-496b-8b6f-add92fa415db/30S6GETT2V-001-0001_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/d5ed488f-cd35-496b-8b6f-add92fa415db/30S6GETT2V-001-0001_1-tif",
@@ -23,12 +23,12 @@
     {
       "sku": "30S6GETT2V",
       "title": "0001",
-      "price": "10411.00",
+      "price": "9497.00",
       "compare_at_price": "28606.00",
-      "source_price": 109.0,
+      "source_price": 99.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/d5ed488f-cd35-496b-8b6f-add92fa415db/30S6GETT2V-001-0001_1-tif",
       "option_values": [
         {
@@ -36,7 +36,7 @@
           "name": "0001"
         }
       ],
-      "price_current": 10463.0
+      "price_current": 9497.0
     }
   ],
   "options": [
@@ -78,12 +78,17 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-22T05:26:52Z",
+  "last_verified_at": "2026-10-29T03:38:34Z",
   "id": "cdc5770ab222f606",
   "created_at": "2026-09-11T18:30:35Z",
-  "updated_at": "2026-09-22T05:26:52Z",
+  "updated_at": "2026-10-29T03:38:34Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Scarlett Medium Textured Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 16”W X 10.5”H X 5”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 11”</li>\n      <li><strong>Material:</strong> Polyurethane blend, 60% polyurethane/40% polyester</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 299.5,
-  "compare_at_price": 28763.0,
-  "material": "Polyurethane blend, 60% polyurethane/40% polyester"
+  "compare_at_price": 28512.0,
+  "material": "Polyurethane blend, 60% polyurethane/40% polyester",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841793835174",
+  "shopify_handle": "scarlett-medium-textured-tote-bag",
+  "shopify_synced_at": "2026-10-28T07:38:29Z",
+  "last_synced_fx_rate": 95.199335
 }

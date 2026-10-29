@@ -157,7 +157,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ces03_svyu1_a0",
       "option_values": [
         {
@@ -271,11 +271,16 @@
     "men_bags"
   ],
   "created_at": "2026-09-13T00:47:39Z",
-  "last_verified_at": "2026-09-22T05:30:02Z",
+  "last_verified_at": "2026-10-29T05:38:06Z",
   "id": "e01b07ebb3425b0c",
   "product_id": "e01b07ebb3425b0c",
   "store": "coach",
-  "updated_at": "2026-09-22T05:30:02Z",
+  "updated_at": "2026-10-29T05:38:06Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841769783462",
+  "shopify_handle": "tristan-crossbody-bag-14-in-signature-canvas-with-patches",
+  "shopify_synced_at": "2026-10-18T08:26:48Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.111965
 }

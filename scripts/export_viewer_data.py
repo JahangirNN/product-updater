@@ -97,6 +97,25 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
 
         return "Designer Handbags"
 
+    # Kate Spade Handbags taxonomy
+    if source_store == "katespade":
+        pt = product.get("product_type", "")
+        if pt == "Crossbody Bags" or any(w in text for w in ["crossbody", "camera bag", "swingpack"]):
+            return "Crossbody Bags"
+        elif pt == "Satchels & Top Handles" or any(w in text for w in ["satchel", "top handle", "top-handle", "barrel", "dumpling"]):
+            return "Satchels & Top Handles"
+        elif pt == "Totes & Carryalls" or any(w in text for w in ["tote", "carryall", "shopper"]):
+            return "Totes & Carryalls"
+        elif pt == "Shoulder Bags" or any(w in text for w in ["shoulder", "hobo", "belted"]):
+            return "Shoulder Bags"
+        elif pt == "Bucket Bags" or "bucket" in text:
+            return "Bucket Bags"
+        elif pt == "Backpacks" or "backpack" in text:
+            return "Backpacks"
+        elif pt == "Wallets & Small Goods" or any(w in text for w in ["wallet", "card", "wristlet"]):
+            return "Wallets & Wristlets"
+        return "Designer Handbags"
+
     # Michael Kors multi-category taxonomy with strict Men & Women separation
     if source_store == "michaelkors":
         gender = product.get("gender", "Women")
@@ -591,6 +610,9 @@ def export_catalog(
                     group_display = "Unisex Watches"
                 else:
                     group_display = "Men's Watches"
+            elif s_store == "katespade":
+                store_display = "Kate Spade"
+                group_display = "Handbags"
             else:
                 store_display = prod.get("vendor", "Other")
                 group_display = prod.get("product_type", "Handbags")

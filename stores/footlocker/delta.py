@@ -79,20 +79,19 @@ def check_price_and_stock(
             else:
                 acquire_permit(resolved_store)
 
-            # 2. Network Request (prioritize curl_cffi Chrome TLS impersonation)
+            # 2. Network Request (prioritize injected client, then curl_cffi Chrome TLS impersonation)
             resp = None
-            if HAS_CURL_CFFI:
+            if client:
+                resp = client.get(source_url, headers=DEFAULT_HEADERS, follow_redirects=True, timeout=20.0)
+            elif HAS_CURL_CFFI:
                 try:
                     resp = cffi_requests.get(source_url, headers=DEFAULT_HEADERS, impersonate="chrome120", timeout=20.0)
                 except Exception:
                     resp = None
 
             if resp is None:
-                if client:
-                    resp = client.get(source_url, headers=DEFAULT_HEADERS, follow_redirects=True, timeout=20.0)
-                else:
-                    with httpx.Client() as c:
-                        resp = c.get(source_url, headers=DEFAULT_HEADERS, follow_redirects=True, timeout=20.0)
+                with httpx.Client() as c:
+                    resp = c.get(source_url, headers=DEFAULT_HEADERS, follow_redirects=True, timeout=20.0)
 
             elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
 
@@ -160,7 +159,9 @@ def check_price_and_stock(
                     "variants_delta": [],
                     "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                     "elapsed_ms": elapsed_ms,
-                    "message": "Product delisted (HTTP 404)"
+                    "message": "Product delisted (HTTP 404)",
+                    "is_http_404": True,
+                    "http_status": 404
                 }
 
             resp.raise_for_status()
@@ -169,38 +170,38 @@ def check_price_and_stock(
             html = resp.text
             idx = html.find('STATE_FROM_SERVER:')
             if idx == -1:
-                # Delisted or redirected to empty stub
-                if "/product/~/" in str(resp.url) or "/~/product/" in str(resp.url) or "not found" in html.lower():
-                    variant_stock_changed = False
-                    changed_variants = []
-                    for var in product.get("variants", []):
-                        if var.get("in_stock", False):
-                            variant_stock_changed = True
-                            changed_variants.append({
-                                "sku": var.get("sku", ""),
-                                "old_in_stock": True,
-                                "new_in_stock": False
-                            })
-                    return {
-                        "status": "not_found",
-                        "handle": handle,
-                        "availability": "out_of_stock",
-                        "old_availability": old_availability,
-                        "new_availability": "out_of_stock",
-                        "current_source_price": old_source_price,
-                        "old_source_price": old_source_price,
-                        "new_source_price": old_source_price,
-                        "is_active": False,
-                        "price_changed": False,
-                        "stock_changed": old_availability != "out_of_stock",
-                        "variant_stock_changed": variant_stock_changed,
-                        "changed_variants": changed_variants,
-                        "variants_delta": [],
-                        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-                        "elapsed_ms": elapsed_ms,
-                        "message": "Product delisted or unnavigable"
-                    }
-                raise ValueError("STATE_FROM_SERVER not found in Foot Locker response")
+                # Delisted or redirected to empty stub / missing server state
+                variant_stock_changed = False
+                changed_variants = []
+                for var in product.get("variants", []):
+                    if var.get("in_stock", False):
+                        variant_stock_changed = True
+                        changed_variants.append({
+                            "sku": var.get("sku", ""),
+                            "old_in_stock": True,
+                            "new_in_stock": False
+                        })
+                return {
+                    "status": "not_found",
+                    "handle": handle,
+                    "availability": "out_of_stock",
+                    "old_availability": old_availability,
+                    "new_availability": "out_of_stock",
+                    "current_source_price": old_source_price,
+                    "old_source_price": old_source_price,
+                    "new_source_price": old_source_price,
+                    "is_active": False,
+                    "price_changed": False,
+                    "stock_changed": old_availability != "out_of_stock",
+                    "variant_stock_changed": variant_stock_changed,
+                    "changed_variants": changed_variants,
+                    "variants_delta": [],
+                    "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                    "elapsed_ms": elapsed_ms,
+                    "message": "Product delisted or unnavigable (STATE_FROM_SERVER missing)",
+                    "is_http_404": False,
+                    "http_status": 200
+                }
 
             d, _ = json.JSONDecoder().raw_decode(html[idx + len('STATE_FROM_SERVER:'):].lstrip())
             get_details = d.get('api', {}).get('productDetails', {}).get('getDetails', {})
@@ -220,7 +221,7 @@ def check_price_and_stock(
                             "old_in_stock": True,
                             "new_in_stock": False
                         })
-                err_msg = errors[0].get('message') if errors and isinstance(errors, list) and isinstance(errors[0], dict) else f"HTTP {status_code or 404}"
+                err_msg = errors[0].get('message') if errors and isinstance(errors, list) and isinstance(errors[0], dict) else f"internal API status {status_code or 'FAILED'}"
                 return {
                     "status": "not_found",
                     "handle": handle,
@@ -238,7 +239,9 @@ def check_price_and_stock(
                     "variants_delta": [],
                     "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                     "elapsed_ms": elapsed_ms,
-                    "message": f"Product out of stock / delisted ({err_msg})"
+                    "message": f"Product inactive / delisted ({err_msg})",
+                    "is_http_404": False,
+                    "http_status": 200
                 }
 
             style = data.get('style', {})

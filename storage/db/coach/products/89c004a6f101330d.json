@@ -7,14 +7,14 @@
   "product_type": "Shoes & Footwear",
   "gender": "Women",
   "source_sku": "CFA90 BLK  5   B",
-  "source_price": 94.8,
+  "source_price": 47.4,
   "source_compare_at_price": null,
-  "current_price": 9070.0,
+  "current_price": 4512.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Leather upper",
   "specifications": {
     "Material": "Leather upper"
@@ -44,13 +44,13 @@
       "id": null,
       "sku": "CFA90 BLK  5   B-5",
       "title": "US 5 / UK 3",
-      "price": "9070.00",
+      "price": "4512.00",
       "compare_at_price": null,
-      "source_price": 94.8,
+      "source_price": 47.4,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfa90_blk_a0",
       "option_values": [
         {
@@ -58,15 +58,15 @@
           "name": "US 5 / UK 3"
         }
       ],
-      "price_current": 9100.0
+      "price_current": 4512.0
     },
     {
       "id": null,
       "sku": "CFA90 BLK  5   B-6",
       "title": "US 6 / UK 4",
-      "price": "9070.00",
+      "price": "4512.00",
       "compare_at_price": null,
-      "source_price": 94.8,
+      "source_price": 47.4,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -78,19 +78,19 @@
           "name": "US 6 / UK 4"
         }
       ],
-      "price_current": 9100.0
+      "price_current": 4512.0
     },
     {
       "id": null,
       "sku": "CFA90 BLK  5   B-7",
       "title": "US 7 / UK 5",
-      "price": "9070.00",
+      "price": "4512.00",
       "compare_at_price": null,
-      "source_price": 94.8,
+      "source_price": 47.4,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfa90_blk_a0",
       "option_values": [
         {
@@ -98,15 +98,15 @@
           "name": "US 7 / UK 5"
         }
       ],
-      "price_current": 9100.0
+      "price_current": 4512.0
     },
     {
       "id": null,
       "sku": "CFA90 BLK  5   B-8",
       "title": "US 8 / UK 6",
-      "price": "9070.00",
+      "price": "4512.00",
       "compare_at_price": null,
-      "source_price": 94.8,
+      "source_price": 47.4,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -118,15 +118,15 @@
           "name": "US 8 / UK 6"
         }
       ],
-      "price_current": 9100.0
+      "price_current": 4512.0
     },
     {
       "id": null,
       "sku": "CFA90 BLK  5   B-9",
       "title": "US 9 / UK 7",
-      "price": "9070.00",
+      "price": "4512.00",
       "compare_at_price": null,
-      "source_price": 94.8,
+      "source_price": 47.4,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -138,15 +138,15 @@
           "name": "US 9 / UK 7"
         }
       ],
-      "price_current": 9100.0
+      "price_current": 4512.0
     },
     {
       "id": null,
       "sku": "CFA90 BLK  5   B-10",
       "title": "US 10 / UK 8",
-      "price": "9070.00",
+      "price": "4512.00",
       "compare_at_price": null,
-      "source_price": 94.8,
+      "source_price": 47.4,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -158,15 +158,15 @@
           "name": "US 10 / UK 8"
         }
       ],
-      "price_current": 9100.0
+      "price_current": 4512.0
     },
     {
       "id": null,
       "sku": "CFA90 BLK  5   B-11",
       "title": "US 11 / UK 9",
-      "price": "9070.00",
+      "price": "4512.00",
       "compare_at_price": null,
-      "source_price": 94.8,
+      "source_price": 47.4,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -178,7 +178,7 @@
           "name": "US 11 / UK 9"
         }
       ],
-      "price_current": 9100.0
+      "price_current": 4512.0
     }
   ],
   "product_options": [
@@ -218,11 +218,16 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:43:48Z",
-  "last_verified_at": "2026-09-22T05:26:15Z",
+  "last_verified_at": "2026-10-29T03:38:52Z",
   "id": "89c004a6f101330d",
   "product_id": "89c004a6f101330d",
   "store": "coach",
-  "updated_at": "2026-09-22T05:26:15Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:38:53Z",
+  "shopify_sync_pending": false,
+  "is_active": false,
+  "shopify_product_id": "gid://shopify/Product/15848580448422",
+  "shopify_handle": "bow-flip-flop",
+  "shopify_synced_at": "2026-10-29T03:38:52Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

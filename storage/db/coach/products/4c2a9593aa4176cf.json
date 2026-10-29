@@ -57,7 +57,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdx85_svbk_a0",
       "option_values": [
         {
@@ -77,7 +77,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdx85_svmpl_a0",
       "option_values": [
         {
@@ -179,11 +179,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:41:26Z",
-  "last_verified_at": "2026-09-22T05:24:57Z",
+  "last_verified_at": "2026-10-29T03:39:35Z",
   "id": "4c2a9593aa4176cf",
   "product_id": "4c2a9593aa4176cf",
   "store": "coach",
-  "updated_at": "2026-09-22T05:24:57Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:39:35Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841764507814",
+  "shopify_handle": "jack-messenger-bag",
+  "shopify_synced_at": "2026-10-28T07:45:09Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

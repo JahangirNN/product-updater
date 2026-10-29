@@ -27,16 +27,27 @@ Scraped live search queries reveal the inventory distribution:
 
 ---
 
-## 3. Bot Protection & Zero-Token Akamai Bypass
+## 3. Bot Protection & Zero-Cost Algolia Search Solver (ADR 0027)
 
 - **WAF Engine**: Akamai Bot Manager (`server-timing: cdn-cache; desc=HIT, edge; dur=1, ak_p; ...`).
-- **Behavior**: Direct unauthenticated HTTP requests (`httpx`) return HTTP 403 Forbidden with Finish Line / JD Sports access denial HTML.
-- **Zero-Token Local Mitigation Architecture**:
+- **Web PDP Behavior**: Direct unauthenticated HTTP requests to `/pdp/` and `/search/` return HTTP 403 Forbidden with Finish Line / JD Sports access denial HTML. Furthermore, Camoufox sessions originating from non-US IPs face strict geoblocks and challenges.
+- **Production Architecture Evolution**:
   1. **Catalog Ingestion & Sweeps (Tier 1)**: Firecrawl MCP (`firecrawl_scrape`) was used for initial bulk collection ingestion.
-  2. **Zero-Token Delta Polling (Tier 2)**: All recurring scheduled daemon sweeps use the **local Camoufox stealth browser worker** (`stores/jdsports/camoufox_solver.py`), which executes the Akamai JS challenge locally at **$0.00 cost / 0 API tokens**.
-  3. **High-Performance Route Blocking**: Attaches route filters blocking heavy media, fonts, and tracking scripts while allowing Akamai telemetry and React hydration, achieving ~5-7s per-product sweep times.
-  4. **React Hydration Handling**: Waits specifically for `ProductGroup` JSON-LD injection by Next.js client-side streaming (distinguishing from static `BreadcrumbList`).
-  5. **Selective Timestamp Invariant (ADR 0008)**: Never stamp `last_verified_at` on HTTP 403 or 429, allowing the background daemon to retry without waiting 60 minutes.
+  2. **Legacy Browser Solver (Deprecated)**: `stores/jdsports/camoufox_solver.py` previously solved Akamai challenges locally, but was retired due to heavy CPU consumption and Akamai geoblocking non-US IPs.
+  3. **High-Throughput Algolia Solver (Current Production)**: `stores/jdsports/delta.py` now queries JD Sports' public Algolia search cloud directly:
+     - **Application ID**: `27VBXJQDBS`
+     - **Search API Key**: `05aa742eb69ad0736ce3d43bff0c4e9d`
+     - **Index**: `jd_products_prod`
+     - **Endpoint**: `https://27vbxjqdbs-dsn.algolia.net/1/indexes/jd_products_prod/query`
+     - **Performance**: Pure HTTP `httpx` POST requests responding in **~150–350 ms** with zero browser overhead, zero geoblocking, and zero token/proxy cost.
+     - **Payload Extraction**:
+       - `final_price`: Live selling price (USD).
+       - `price`: Compare-at price (USD).
+       - `available_sizes`: Exact array of in-stock footwear sizes (e.g. `['8.0', '9.5', '10.5']`).
+       - `stock_quantity`: Live total inventory.
+     - **Reverse Sizing Reconciliation**: Variants stored in canonical UK sizing (`UK 7.5`) are reverse-mapped to US sizing (`REV_MEN`, `REV_WOMEN`, `REV_GS`, `REV_PS`, `REV_TD`) and reconciled against `available_sizes`. Parent availability is strictly derived from child variants (ADR 0015).
+     - **Delisted Product Detection**: If Algolia returns 0 hits for a product style-color code, the product is classified as `status: "not_found"` and triggers the multi-strike delisting circuit (ADR 0026).
+  4. **Selective Timestamp Invariant (ADR 0008)**: Never stamp `last_verified_at` on HTTP 403 or 429, allowing the background daemon to retry without waiting 60 minutes.
 
 ---
 
@@ -79,14 +90,20 @@ Classification inspects title keywords, breadcrumbs, and raw size sets in order 
 3. **Grade School / Big Kids (GS)**: Keywords `big kids`, `grade school`, `gs`, `big boys`, `big girls`. Sizes `US 3.5Y` – `7.0Y`.
 4. **Adult**: Default tier. Men's (US $\ge 6.0\text{M}$) and Women's (US $\ge 5.0\text{W}$).
 
-### 5.3 Token Preservation Standard
-Variant labels and titles strictly preserve `C` and `Y` suffixes:
-- **Toddler**: `US 7C`, `US 10C` (never `US 7.0`)
-- **Preschool**: `US 11.5C` (for $\ge 10$) / `US 1.5Y` (for $< 10$)
-- **Grade School**: `US 7.0Y`, `US 3.5Y`
-- **Adult**: `US 7.0`, `US 8.5`
+### 5.3 Single Canonical UK Size Standard (ADR 0025)
+To eliminate Cartesian selector confusion on Shopify PDPs (where dual US and UK options generated "UNAVAILABLE" combinations), all footwear variants are standardized to a single option named `Size` using canonical UK values:
+- **Canonical Option**: `Size` (e.g. `UK 7.5`, `UK 8`, `UK 8.5`)
+- **Variant Titles**: `{UK Size} - {Color}` (e.g. `UK 8.5 - White/Deep Royal`)
+- **Size Guide Integration**: Full US, UK, and EU size mappings are embedded into the description HTML `<details>` accordion and theme modals for easy reference.
 
-### 5.4 Size Conversion Reference (US -> UK / EU)
+### 5.4 Token Preservation Standard
+Variant labels strictly preserve youth suffixes during internal classification:
+- **Toddler**: `US 2C` – `10C` $\to$ mapped to `UK {val}`
+- **Preschool**: `US 10.5C` – `3.0Y` $\to$ mapped to `UK {val}`
+- **Grade School**: `US 3.5Y` – `7.0Y` $\to$ mapped to `UK {val}`
+- **Adult**: Men's / Women's US $\to$ mapped to canonical UK sizes.
+
+### 5.5 Size Conversion Reference (US -> UK / EU)
 
 #### Men's Adult Footwear
 | US Size | UK Size | EU Size |

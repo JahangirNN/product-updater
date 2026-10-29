@@ -7,9 +7,9 @@
   "product_type": "Shoulder Bags",
   "gender": "Women",
   "source_sku": "CET14 IMCMS",
-  "source_price": 299.0,
+  "source_price": 279.0,
   "source_compare_at_price": null,
-  "current_price": 28607.0,
+  "current_price": 26758.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -193,9 +193,9 @@
       "id": null,
       "sku": "CDY83 IMSMU",
       "title": "Gold/Deep Blue",
-      "price": "20953.00",
+      "price": "18564.00",
       "compare_at_price": null,
-      "source_price": 219.0,
+      "source_price": 195.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -207,15 +207,15 @@
           "name": "Gold/Deep Blue"
         }
       ],
-      "price_current": 21022.0
+      "price_current": 18564.0
     },
     {
       "id": null,
       "sku": "CET14 IMPIN",
       "title": "Gold/Pink",
-      "price": "28607.00",
+      "price": "26758.00",
       "compare_at_price": null,
-      "source_price": 299.0,
+      "source_price": 279.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -227,15 +227,15 @@
           "name": "Gold/Pink"
         }
       ],
-      "price_current": 28701.0
+      "price_current": 26758.0
     },
     {
       "id": null,
       "sku": "CET14 IMCMS",
       "title": "Gold/Crimson",
-      "price": "28607.00",
+      "price": "26758.00",
       "compare_at_price": null,
-      "source_price": 299.0,
+      "source_price": 279.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -247,15 +247,15 @@
           "name": "Gold/Crimson"
         }
       ],
-      "price_current": 28701.0
+      "price_current": 26758.0
     },
     {
       "id": null,
       "sku": "CET14 IMTN2",
       "title": "Gold/Tan",
-      "price": "28607.00",
+      "price": "26758.00",
       "compare_at_price": null,
-      "source_price": 299.0,
+      "source_price": 279.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -267,7 +267,7 @@
           "name": "Gold/Tan"
         }
       ],
-      "price_current": 28701.0
+      "price_current": 26758.0
     },
     {
       "id": null,
@@ -379,7 +379,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cv934_qbcbd_a0",
       "option_values": [
         {
@@ -399,7 +399,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cv934_svbk_a0",
       "option_values": [
         {
@@ -473,9 +473,9 @@
       "id": null,
       "sku": "CDQ56 IMTYV",
       "title": "Gold/Indigo",
-      "price": "20953.00",
+      "price": "14169.00",
       "compare_at_price": null,
-      "source_price": 219.0,
+      "source_price": 147.5,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -487,7 +487,7 @@
           "name": "Gold/Indigo"
         }
       ],
-      "price_current": 21022.0
+      "price_current": 14169.0
     },
     {
       "id": null,
@@ -598,7 +598,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdy83_svmpl_a0",
       "option_values": [
         {
@@ -754,11 +754,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:40:56Z",
-  "last_verified_at": "2026-09-22T05:24:43Z",
+  "last_verified_at": "2026-10-29T03:39:20Z",
   "id": "3ce451a34882e156",
   "product_id": "3ce451a34882e156",
   "store": "coach",
-  "updated_at": "2026-09-22T05:24:43Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:39:20Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841764016294",
+  "shopify_handle": "teri-shoulder-bag-in-signature-beaded-satin",
+  "shopify_synced_at": "2026-10-28T19:44:55Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

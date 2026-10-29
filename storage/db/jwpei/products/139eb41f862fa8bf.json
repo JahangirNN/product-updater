@@ -2,14 +2,14 @@
   "source_store": "jwpei",
   "source_url": "https://www.jwpei.com/products/jw-pei-womens-abacus-artifical-crystal-mini-top-handle-bag-red-1",
   "handle": "jw-pei-womens-abacus-artifical-crystal-mini-top-handle-bag-red-1",
-  "title": "Abacus Artificial Crystal Mini Top Handle Bag - Red",
+  "title": "Abacus Artificial Crystal Mini Top Handle Bag",
   "vendor": "JW PEI",
   "product_type": "2T33",
   "source_sku": "2T33-45",
   "source_price": 139.0,
   "source_compare_at_price": 139.0,
   "current_price": 13183.0,
-  "compare_at_price": 13353.0,
+  "compare_at_price": 13233.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -271,6 +271,26 @@
         }
       ],
       "price_current": 8540.0
+    },
+    {
+      "id": 41551224930338,
+      "sku": "2T33-14",
+      "title": "Black",
+      "price": "14132.00",
+      "compare_at_price": null,
+      "source_price": 149.0,
+      "source_compare_at_price": 149.0,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-14-1.jpg?v=1752238744",
+      "option_values": [
+        {
+          "option_name": "Color",
+          "name": "Black"
+        }
+      ],
+      "is_available": false
     }
   ],
   "product_options": [
@@ -345,13 +365,16 @@
   "validation_warnings": [],
   "id": "139eb41f862fa8bf",
   "created_at": "2026-09-09T15:46:26Z",
-  "updated_at": "2026-09-30T08:46:57Z",
-  "last_verified_at": "2026-09-30T08:46:57Z",
+  "updated_at": "2026-10-29T03:39:49Z",
+  "last_verified_at": "2026-10-29T03:39:49Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841772175526",
   "shopify_handle": "jw-pei-womens-abacus-artifical-crystal-mini-top-handle-bag-red-1",
   "shopify_synced_at": "2026-09-29T05:57:50Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-45_1366b0a7-6dd5-470c-9fe0-b51b3e576705.jpg?v=1752239262",
-  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-45_1366b0a7-6dd5-470c-9fe0-b51b3e576705.jpg?v=1752239262"
+  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-45_1366b0a7-6dd5-470c-9fe0-b51b3e576705.jpg?v=1752239262",
+  "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\139eb41f862fa8bf.json",
+  "canonical": true,
+  "last_synced_fx_rate": 95.252751
 }

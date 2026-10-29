@@ -93,7 +93,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdy06_svs8s_a0",
       "option_values": [
         {
@@ -152,11 +152,16 @@
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:46:36Z",
-  "last_verified_at": "2026-09-22T05:28:36Z",
+  "last_verified_at": "2026-10-29T05:36:52Z",
   "id": "c9c0f24c20e9d7e6",
   "product_id": "c9c0f24c20e9d7e6",
   "store": "coach",
-  "updated_at": "2026-09-22T05:28:36Z",
+  "updated_at": "2026-10-29T05:36:52Z",
   "shopify_sync_pending": true,
-  "is_active": true
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841768964262",
+  "shopify_handle": "ashton-wristlet-in-signature-jacquard",
+  "shopify_synced_at": "2026-09-29T05:56:30Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.252751
 }

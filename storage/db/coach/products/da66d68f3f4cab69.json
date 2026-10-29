@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Double face pebble leather and printed coated canvas",
   "specifications": {
     "Material": "Double face pebble leather and printed coated canvas",
@@ -123,7 +123,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cbh06_imblk_a0",
       "option_values": [
         {
@@ -182,11 +182,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:47:21Z",
-  "last_verified_at": "2026-09-22T05:29:55Z",
+  "last_verified_at": "2026-10-29T05:37:49Z",
   "id": "da66d68f3f4cab69",
   "product_id": "da66d68f3f4cab69",
   "store": "coach",
-  "updated_at": "2026-09-22T05:29:55Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T05:37:51Z",
+  "shopify_sync_pending": false,
+  "is_active": false,
+  "shopify_product_id": "gid://shopify/Product/15841797898406",
+  "shopify_handle": "rowan-bucket-bag-cbh06-imblk",
+  "shopify_synced_at": "2026-10-29T05:37:49Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

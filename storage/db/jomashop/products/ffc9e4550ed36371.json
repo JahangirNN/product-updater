@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -80,7 +80,7 @@
       "source_compare_at_price": 1150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/t/i/tissot-chemin-des-tourelles-automatic-mens-watch-t0994081103800-t0994081103800.jpg",
       "option_values": [
         {
@@ -113,10 +113,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T10:48:05Z",
-  "updated_at": "2026-09-22T18:29:56Z",
-  "last_verified_at": "2026-09-22T18:29:56Z",
+  "updated_at": "2026-10-29T05:37:34Z",
+  "last_verified_at": "2026-10-29T05:37:34Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838221598886",
   "shopify_handle": "tissot-watch-t099-408-11-038-00",
-  "shopify_synced_at": "2026-09-24T16:12:27Z"
+  "shopify_synced_at": "2026-10-13T01:27:44Z",
+  "last_synced_fx_rate": 95.252751
 }

@@ -57,7 +57,9 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
                 "availability": "out_of_stock",
                 "variants": [],
                 "elapsed_ms": elapsed_ms,
-                "message": "Product delisted (HTTP 404)"
+                "message": "Product delisted (HTTP 404)",
+                "is_http_404": True,
+                "http_status": 404
             }
 
         if status_code in (403, 429):
@@ -69,6 +71,46 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
                 "variants": [],
                 "elapsed_ms": elapsed_ms,
                 "error": f"Akamai Bot Manager Rate Limit (HTTP {status_code} - temporary IP cooldown)"
+            }
+
+        # Check for soft-404 redirects (e.g. redirected away from /pdp/ or to category/404)
+        page_url_prop = getattr(page, "url", "")
+        current_url = str(page_url_prop() if callable(page_url_prop) else page_url_prop or "").lower()
+        is_soft_404_redirect = (
+            bool(url and "/pdp/" in url.lower() and "/pdp/" not in current_url) or
+            any(k in current_url for k in ["/category/", "/c/", "/error", "404", "not-found", "/cart"])
+        )
+
+        if is_soft_404_redirect:
+            elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
+            html = ""
+            try:
+                html = page.content()
+            except Exception:
+                pass
+            if "Access Denied" in html:
+                return {
+                    "status": "rate_limited",
+                    "price_usd": 0.0,
+                    "availability": "unknown",
+                    "variants": [],
+                    "elapsed_ms": elapsed_ms,
+                    "error": "Akamai Access Denied"
+                }
+            page_title = ""
+            try:
+                page_title = page.title()
+            except Exception:
+                pass
+            return {
+                "status": "not_found",
+                "price_usd": 0.0,
+                "availability": "out_of_stock",
+                "variants": [],
+                "elapsed_ms": elapsed_ms,
+                "message": f"Product delisted (soft-404 redirect to {current_url}: {page_title})",
+                "is_http_404": False,
+                "http_status": 200
             }
 
         # Poll live DOM for ProductGroup / Product JSON-LD
@@ -112,21 +154,18 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
                 }
 
             page_title = page.title()
-            if "out of stock" in html.lower() or "sold out" in html.lower():
-                return {
-                    "status": "success",
-                    "price_usd": 0.0,
-                    "availability": "out_of_stock",
-                    "variants": [],
-                    "elapsed_ms": round((time.perf_counter() - t_start) * 1000, 2)
-                }
+            elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
+
+            # Classify missing ProductGroup JSON-LD or soft-404 as "not_found" delisting
             return {
-                "status": "error",
+                "status": "not_found",
                 "price_usd": 0.0,
-                "availability": "unknown",
+                "availability": "out_of_stock",
                 "variants": [],
-                "elapsed_ms": round((time.perf_counter() - t_start) * 1000, 2),
-                "error": f"ProductGroup JSON-LD not found in DOM: {page_title}"
+                "elapsed_ms": elapsed_ms,
+                "message": f"Product delisted (soft-404 / missing ProductGroup JSON-LD: {page_title})",
+                "is_http_404": False,
+                "http_status": status_code or 200
             }
 
         raw_variants = pg.get("hasVariant") or []

@@ -8,15 +8,15 @@
   "product_type": "Watches",
   "gender": "Women's",
   "source_sku": "MV0607675",
-  "source_price": 647.32,
+  "source_price": 495.0,
   "source_compare_at_price": 895.0,
-  "current_price": 62167.0,
+  "current_price": 47183.0,
   "compare_at_price": 85953.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -63,14 +63,14 @@
       "id": null,
       "sku": "MV0607675",
       "title": "32 mm - Black / Leather",
-      "price": "62167.00",
-      "price_current": 62167.0,
+      "price": "47183.00",
+      "price_current": 47183.0,
       "compare_at_price": "85953.00",
-      "source_price": 647.32,
+      "source_price": 495.0,
       "source_compare_at_price": 895.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/m/o/movado-museum-classic-automatic-black-dial-ladies-watch-0607675.jpg",
       "option_values": [
         {
@@ -103,10 +103,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T14:52:56Z",
-  "updated_at": "2026-09-22T18:25:36Z",
-  "last_verified_at": "2026-09-22T18:25:36Z",
+  "updated_at": "2026-10-29T05:38:03Z",
+  "last_verified_at": "2026-10-29T05:38:03Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838880956582",
   "shopify_handle": "movado-museum-classic-automatic-black-dial-ladies-watch-0607675",
-  "shopify_synced_at": "2026-09-25T06:47:09Z"
+  "shopify_synced_at": "2026-10-16T17:25:32Z",
+  "last_synced_fx_rate": 95.252751
 }

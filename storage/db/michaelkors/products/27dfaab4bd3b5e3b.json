@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 9456,
-  "source_price": 99.0,
+  "current_price": 7578.0,
+  "source_price": 79.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7088b244-5082-4a35-a35b-9681b33fff0d/30S6SETS2V-198-0239_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/7088b244-5082-4a35-a35b-9681b33fff0d/30S6SETS2V-198-0239_1-tif",
@@ -23,12 +23,12 @@
     {
       "sku": "30S6SETS2V",
       "title": "0239",
-      "price": "9456.00",
+      "price": "7578.00",
       "compare_at_price": "24786.00",
-      "source_price": 99.0,
+      "source_price": 79.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/7088b244-5082-4a35-a35b-9681b33fff0d/30S6SETS2V-198-0239_1-tif",
       "option_values": [
         {
@@ -36,7 +36,7 @@
           "name": "0239"
         }
       ],
-      "price_current": 9503.0
+      "price_current": 7578.0
     }
   ],
   "options": [
@@ -78,12 +78,17 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-22T06:23:37Z",
+  "last_verified_at": "2026-10-29T05:37:12Z",
   "id": "27dfaab4bd3b5e3b",
   "created_at": "2026-09-11T18:30:35Z",
-  "updated_at": "2026-09-22T06:23:37Z",
+  "updated_at": "2026-10-29T05:37:14Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Scarlett Medium Textured Satchel by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 13.75”W X 8.75”H X 4.25”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 4.5”</li>\n      <li><strong>Material:</strong> Polyurethane blend, 60% polyurethane/40% polyester</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 259.5,
-  "compare_at_price": 24922.0,
-  "material": "Polyurethane blend, 60% polyurethane/40% polyester"
+  "compare_at_price": 24704.0,
+  "material": "Polyurethane blend, 60% polyurethane/40% polyester",
+  "shopify_product_id": "gid://shopify/Product/15841788952742",
+  "shopify_handle": "scarlett-medium-textured-satchel",
+  "shopify_synced_at": "2026-10-29T05:37:12Z",
+  "shopify_sync_pending": false,
+  "last_synced_fx_rate": 95.199335
 }

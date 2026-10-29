@@ -208,7 +208,7 @@ def check_price_and_stock(
             "message": "HTTP 429 rate limit encountered"
         }
 
-    if status_code == 404:
+    if status_code in (404, 500) or (not p_data and any(k in str(err_msg).lower() for k in ["not found", "delisted"])):
         changed_variants = [
             {"sku": v.get("sku"), "old_in_stock": v.get("in_stock", True), "new_in_stock": False}
             for v in stored_variants if v.get("in_stock", True)
@@ -229,7 +229,9 @@ def check_price_and_stock(
             "changed_variant_prices": [],
             "variants_delta": [{"sku": v.get("sku"), "size": v.get("size") or v.get("title") or "", "available": False, "in_stock": False, "price_usd": old_source_price, "source_price": old_source_price} for v in stored_variants],
             "elapsed_ms": elapsed_ms,
-            "message": "Product delisted (HTTP 404)"
+            "message": f"Product delisted (SFCC status {status_code})",
+            "is_http_404": (status_code == 404),
+            "http_status": status_code
         }
 
     if not p_data:

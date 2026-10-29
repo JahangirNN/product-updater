@@ -52,7 +52,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfo48_impop_a0",
       "option_values": [
         {
@@ -92,7 +92,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfu07_imyed_a0",
       "option_values": [
         {
@@ -152,7 +152,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceo31_svbk_a0",
       "option_values": [
         {
@@ -197,11 +197,16 @@
     "women_wristlets"
   ],
   "created_at": "2026-09-13T00:46:32Z",
-  "last_verified_at": "2026-09-22T05:28:31Z",
+  "last_verified_at": "2026-10-29T03:40:50Z",
   "id": "c7c1b90ea7ca16af",
   "product_id": "c7c1b90ea7ca16af",
   "store": "coach",
-  "updated_at": "2026-09-22T05:28:31Z",
+  "updated_at": "2026-10-29T03:40:50Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841768898726",
+  "shopify_handle": "wristlet-and-heart-pouch-in-signature-canvas",
+  "shopify_synced_at": "2026-10-25T06:52:39Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.036492
 }

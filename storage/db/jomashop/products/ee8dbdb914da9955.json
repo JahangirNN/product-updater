@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -75,7 +75,7 @@
       "source_compare_at_price": 1430.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/f/e/ferragamo-1898-quartz-silver-dial-ladies-watch-ff3180014.jpg",
       "option_values": [
         {
@@ -108,10 +108,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T14:52:55Z",
-  "updated_at": "2026-09-22T18:29:32Z",
-  "last_verified_at": "2026-09-22T18:29:32Z",
+  "updated_at": "2026-10-29T05:37:21Z",
+  "last_verified_at": "2026-10-29T05:37:21Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838894063782",
   "shopify_handle": "ferragamo-1898-quartz-silver-dial-ladies-watch-ff3180014",
-  "shopify_synced_at": "2026-09-25T07:00:44Z"
+  "shopify_synced_at": "2026-10-27T15:35:25Z",
+  "last_synced_fx_rate": 95.269051
 }

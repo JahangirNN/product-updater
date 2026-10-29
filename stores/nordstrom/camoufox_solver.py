@@ -330,7 +330,9 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
                 "size_stock": {},
                 "full_matrix": None,
                 "elapsed_ms": elapsed_ms,
-                "message": "Product page returned HTTP 404"
+                "message": "Product page returned HTTP 404",
+                "is_http_404": True,
+                "http_status": 404
             }
 
         # Ensure route blocking is active
@@ -416,21 +418,37 @@ def solve_and_extract_pdp(page: Any, url: str, target_handle: str = "") -> Dict[
             }
 
         return {
-            "status": "error",
-            "availability": "in_stock",
+            "status": "not_found",
+            "title": page_title.split("|")[0].strip() if page_title else "",
+            "availability": "out_of_stock",
             "price_usd": 0.0,
             "size_stock": {},
             "full_matrix": None,
             "elapsed_ms": elapsed_ms,
-            "error": f"Unable to extract product JSON-LD or pricing from rendered page: {page_title}"
+            "message": f"Product delisted (soft-404 / missing product data: {page_title})",
+            "is_http_404": False,
+            "http_status": status_code or 200
         }
 
     except Exception as exc:
         elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
+        err_msg = str(exc)
+        if "siteclosed.nordstrom.com" in err_msg or "invitation.html" in err_msg:
+            return {
+                "status": "not_found",
+                "availability": "out_of_stock",
+                "price_usd": 0.0,
+                "size_stock": {},
+                "full_matrix": None,
+                "elapsed_ms": elapsed_ms,
+                "message": f"Product delisted (redirected to siteclosed: {err_msg})",
+                "is_http_404": False,
+                "http_status": 302
+            }
         return {
             "status": "error",
             "availability": "in_stock",
             "price_usd": 0.0,
             "elapsed_ms": elapsed_ms,
-            "error": str(exc)
+            "error": err_msg
         }

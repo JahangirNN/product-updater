@@ -169,7 +169,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cby80_b4mpl_a0",
       "option_values": [
         {
@@ -576,11 +576,16 @@
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:44:44Z",
-  "last_verified_at": "2026-09-22T05:26:40Z",
+  "last_verified_at": "2026-10-29T03:40:12Z",
   "id": "9dd1aac084694218",
   "product_id": "9dd1aac084694218",
   "store": "coach",
-  "updated_at": "2026-09-22T05:26:40Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:40:12Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841767555238",
+  "shopify_handle": "essential-card-case-with-pillow-quilting",
+  "shopify_synced_at": "2026-10-27T08:53:37Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.269051
 }

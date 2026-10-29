@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 9456,
-  "source_price": 99.0,
+  "current_price": 7578.0,
+  "source_price": 79.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/4a065e82-ae84-444f-b256-bc7e67f0fead/30S6G0ZT2B-149-1546_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/4a065e82-ae84-444f-b256-bc7e67f0fead/30S6G0ZT2B-149-1546_1-tif",
@@ -23,12 +23,12 @@
     {
       "sku": "30S6G0ZT2B",
       "title": "1546",
-      "price": "9456.00",
+      "price": "7578.00",
       "compare_at_price": "21920.00",
-      "source_price": 99.0,
+      "source_price": 79.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/4a065e82-ae84-444f-b256-bc7e67f0fead/30S6G0ZT2B-149-1546_1-tif",
       "option_values": [
         {
@@ -36,7 +36,7 @@
           "name": "1546"
         }
       ],
-      "price_current": 9503.0
+      "price_current": 7578.0
     }
   ],
   "options": [
@@ -78,12 +78,17 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-22T05:24:25Z",
+  "last_verified_at": "2026-10-29T05:37:40Z",
   "id": "3a8e37afad03c280",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-22T05:24:25Z",
+  "updated_at": "2026-10-29T05:37:40Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Marlowe Medium Signature Logo Pocket Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 15”W X 10.5”H X 5.75”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 11&quot;</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 229.5,
-  "compare_at_price": 22040.0,
-  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
+  "compare_at_price": 21848.0,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+  "shopify_product_id": "gid://shopify/Product/15841789673638",
+  "shopify_handle": "marlowe-medium-signature-logo-pocket-tote-bag",
+  "shopify_synced_at": "2026-10-27T19:35:33Z",
+  "shopify_sync_pending": false,
+  "last_synced_fx_rate": 95.269051
 }

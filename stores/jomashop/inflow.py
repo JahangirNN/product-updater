@@ -252,7 +252,7 @@ def generate_specs_accordion_html(specs: Dict[str, Any], overview_html: str, cas
 
     size_guide_accordion = (
         '<details class="size-guide-accordion" style="margin: 20px 0; padding: 12px; border: 1px solid #e0e0e0; border-radius: 6px;">\n'
-        '  <summary style="font-weight: 600; cursor: pointer; font-size: 15px;">📏 Watch Sizing &amp; Case Dimension Guide</summary>\n'
+        '  <summary style="font-weight: 600; cursor: pointer; font-size: 15px;">Watch Sizing &amp; Case Dimension Guide</summary>\n'
         '  <div style="margin-top: 12px;">\n'
         '    <p style="font-size: 13px; color: #666; margin-bottom: 8px;">Standard wrist circumference &amp; case diameter matching guide:</p>\n'
         '    <table style="width: 100%; border-collapse: collapse; font-size: 13px;">\n'

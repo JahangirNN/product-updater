@@ -429,13 +429,13 @@
       "id": null,
       "sku": "CFA24 IMCAH",
       "title": "Gold/Chalk Multi",
-      "price": "6602.00",
+      "price": "5764.00",
       "compare_at_price": null,
-      "source_price": 69.0,
+      "source_price": 60.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfa25_imcah_a0",
       "option_values": [
         {
@@ -443,7 +443,7 @@
           "name": "Gold/Chalk Multi"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 5764.0
     },
     {
       "id": null,
@@ -489,9 +489,9 @@
       "id": null,
       "sku": "CFE05 IMPMC",
       "title": "Gold/Pink Multi",
-      "price": "6602.00",
+      "price": "5764.00",
       "compare_at_price": null,
-      "source_price": 69.0,
+      "source_price": 60.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -503,7 +503,7 @@
           "name": "Gold/Pink Multi"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 5764.0
     },
     {
       "id": null,
@@ -660,7 +660,8 @@
           "option_name": "Color",
           "name": "Silver/Dark Cardinal"
         }
-      ]
+      ],
+      "price_current": 5130.0
     },
     {
       "id": null,
@@ -802,11 +803,16 @@
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:44:14Z",
-  "last_verified_at": "2026-09-22T05:26:26Z",
+  "last_verified_at": "2026-10-29T03:39:54Z",
   "id": "92c07eeb41abb017",
   "product_id": "92c07eeb41abb017",
   "store": "coach",
-  "updated_at": "2026-09-22T05:26:26Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:39:54Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841767194790",
+  "shopify_handle": "snap-wallet-with-charm",
+  "shopify_synced_at": "2026-10-28T07:46:15Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

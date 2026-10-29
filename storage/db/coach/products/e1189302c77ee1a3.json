@@ -70,7 +70,8 @@
           "option_name": "Size",
           "name": "US 5 / UK 3"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -89,7 +90,8 @@
           "option_name": "Size",
           "name": "US 6 / UK 4"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -108,7 +110,8 @@
           "option_name": "Size",
           "name": "US 7 / UK 5"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -127,7 +130,8 @@
           "option_name": "Size",
           "name": "US 8 / UK 6"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -146,7 +150,8 @@
           "option_name": "Size",
           "name": "US 9 / UK 7"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -165,7 +170,8 @@
           "option_name": "Size",
           "name": "US 10 / UK 8"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -184,7 +190,8 @@
           "option_name": "Size",
           "name": "US 11 / UK 9"
         }
-      ]
+      ],
+      "is_available": false
     }
   ],
   "product_options": [
@@ -217,17 +224,24 @@
   ],
   "tags": [
     "COACH",
+    "Shoes & Footwear",
     "Women",
-    "Shoes & Footwear"
+    "supplier-delisted"
   ],
   "groups": [
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:47:42Z",
-  "last_verified_at": "2026-09-22T05:30:06Z",
+  "last_verified_at": "2026-10-29T03:36:43Z",
   "id": "e1189302c77ee1a3",
   "product_id": "e1189302c77ee1a3",
   "store": "coach",
-  "updated_at": "2026-09-22T05:30:06Z",
-  "is_active": false
+  "updated_at": "2026-10-29T03:36:45Z",
+  "is_active": false,
+  "shopify_product_id": "gid://shopify/Product/15848610463910",
+  "shopify_handle": "slipper-in-signature-shearling",
+  "shopify_synced_at": "2026-10-29T03:36:43Z",
+  "shopify_sync_pending": false,
+  "delist_strikes": 148,
+  "supplier_delisted": true
 }

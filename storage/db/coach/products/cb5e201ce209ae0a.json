@@ -105,9 +105,9 @@
       "id": null,
       "sku": "CEO25 SVPMZ",
       "title": "Silver/Black Brown",
-      "price": "18082.00",
+      "price": "17014.00",
       "compare_at_price": null,
-      "source_price": 189.0,
+      "source_price": 179.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -119,7 +119,7 @@
           "name": "Silver/Black Brown"
         }
       ],
-      "price_current": 18142.0
+      "price_current": 17014.0
     },
     {
       "id": null,
@@ -151,7 +151,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceo23_svpwh_a0",
       "option_values": [
         {
@@ -171,7 +171,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceo23_imxaq_a0",
       "option_values": [
         {
@@ -239,11 +239,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:46:47Z",
-  "last_verified_at": "2026-09-22T05:29:08Z",
+  "last_verified_at": "2026-10-29T05:37:03Z",
   "id": "cb5e201ce209ae0a",
   "product_id": "cb5e201ce209ae0a",
   "store": "coach",
-  "updated_at": "2026-09-22T05:29:08Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T05:37:05Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841769095334",
+  "shopify_handle": "rainer-crossbody-bag-18-with-quilting",
+  "shopify_synced_at": "2026-10-29T05:37:03Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

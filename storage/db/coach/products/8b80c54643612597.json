@@ -92,7 +92,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cgg26_svbk_a0",
       "option_values": [
         {
@@ -112,7 +112,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cew20_imwbr_a0",
       "option_values": [
         {
@@ -152,7 +152,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cew04_imblk_a0",
       "option_values": [
         {
@@ -206,9 +206,9 @@
       "id": null,
       "sku": "CCD71 IMV2R",
       "title": "Gold/Dark Stone",
-      "price": "19039.00",
+      "price": "17003.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 177.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -220,7 +220,7 @@
           "name": "Gold/Dark Stone"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 17003.0
     },
     {
       "id": null,
@@ -286,9 +286,9 @@
       "id": null,
       "sku": "CDB88 IMTYV",
       "title": "Gold/Indigo",
-      "price": "19039.00",
+      "price": "14169.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 147.5,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -300,7 +300,7 @@
           "name": "Gold/Indigo"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 14169.0
     },
     {
       "id": null,
@@ -312,7 +312,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cew04_imblk_a0",
       "option_values": [
         {
@@ -430,11 +430,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:43:51Z",
-  "last_verified_at": "2026-09-22T05:26:15Z",
+  "last_verified_at": "2026-10-29T03:38:57Z",
   "id": "8b80c54643612597",
   "product_id": "8b80c54643612597",
   "store": "coach",
-  "updated_at": "2026-09-22T05:26:15Z",
+  "updated_at": "2026-10-29T03:38:57Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841796096166",
+  "shopify_handle": "station-tote-bag-ccd71-sv-bk",
+  "shopify_synced_at": "2026-10-08T16:07:02Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.252751
 }

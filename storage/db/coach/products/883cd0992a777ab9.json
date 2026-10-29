@@ -71,7 +71,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw380_mqv_a0",
       "option_values": [
         {
@@ -391,7 +391,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cr911_mah_a0",
       "option_values": [
         {
@@ -471,7 +471,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw385_wan_a0",
       "option_values": [
         {
@@ -531,7 +531,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceu69_blk_a0",
       "option_values": [
         {
@@ -677,11 +677,16 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:43:44Z",
-  "last_verified_at": "2026-09-22T05:26:07Z",
+  "last_verified_at": "2026-10-29T03:39:47Z",
   "id": "883cd0992a777ab9",
   "product_id": "883cd0992a777ab9",
   "store": "coach",
-  "updated_at": "2026-09-22T05:26:07Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:39:47Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841766637734",
+  "shopify_handle": "3-in-1-wallet-in-signature-canvas-with-varsity-stripe",
+  "shopify_synced_at": "2026-10-28T15:45:11Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "High Line Sneaker In Signature Canvas",
   "specifications": {
     "Material": "High Line Sneaker In Signature Canvas",
@@ -283,7 +283,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccn67_cqbk_a0",
       "option_values": [
         {
@@ -346,11 +346,16 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:43:18Z",
-  "last_verified_at": "2026-09-22T05:25:52Z",
+  "last_verified_at": "2026-10-29T03:38:49Z",
   "id": "7e36bab7780e5dde",
   "product_id": "7e36bab7780e5dde",
   "store": "coach",
-  "updated_at": "2026-09-22T05:25:52Z",
-  "shopify_sync_pending": true,
-  "is_active": false
+  "updated_at": "2026-10-29T03:38:49Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15848583463078",
+  "shopify_handle": "high-line-sneaker-in-signature-canvas",
+  "shopify_synced_at": "2026-10-28T19:43:46Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

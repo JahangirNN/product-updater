@@ -70,7 +70,8 @@
     "20260909AI-AllProduct",
     "20260909AI-Handbag",
     "AIPRODUCT",
-    "ALLAITEMS-NOREMOVE"
+    "ALLAITEMS-NOREMOVE",
+    "supplier-delisted"
   ],
   "groups": [
     "handbags"
@@ -79,13 +80,15 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:35:43Z",
-  "updated_at": "2026-09-30T08:48:09Z",
-  "last_verified_at": "2026-09-30T08:48:09Z",
+  "updated_at": "2026-10-29T03:38:35Z",
+  "last_verified_at": "2026-10-29T03:38:34Z",
   "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841773846694",
   "shopify_handle": "carmen-structured-top-handle-bag-burgundy",
-  "shopify_synced_at": "2026-09-29T05:58:15Z",
+  "shopify_synced_at": "2026-10-29T03:38:34Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/unnamed_d6c52a40-9091-4356-96f0-80ce352b43c1.jpg?v=1788926567",
-  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/unnamed_d6c52a40-9091-4356-96f0-80ce352b43c1.jpg?v=1788926567"
+  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/unnamed_d6c52a40-9091-4356-96f0-80ce352b43c1.jpg?v=1788926567",
+  "delist_strikes": 141,
+  "supplier_delisted": true
 }

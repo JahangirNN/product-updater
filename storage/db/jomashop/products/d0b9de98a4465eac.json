@@ -8,15 +8,15 @@
   "product_type": "Watches",
   "gender": "Men's",
   "source_sku": "CZNJ0150-81Z",
-  "source_price": 239.0,
+  "source_price": 259.0,
   "source_compare_at_price": 599.0,
-  "current_price": 22953.0,
+  "current_price": 24670.0,
   "compare_at_price": 57526.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -72,14 +72,14 @@
       "id": null,
       "sku": "CZNJ0150-81Z",
       "title": "40 mm - Yellow / Stainless Steel",
-      "price": "22953.00",
-      "price_current": 22953.0,
+      "price": "24670.00",
+      "price_current": 24670.0,
       "compare_at_price": "57526.00",
-      "source_price": 239.0,
+      "source_price": 259.0,
       "source_compare_at_price": 599.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/c/i/citizen-automatic-orange-dial-mens-watch-nj015081z_1.jpg",
       "option_values": [
         {
@@ -112,10 +112,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T10:48:05Z",
-  "updated_at": "2026-09-22T18:28:59Z",
-  "last_verified_at": "2026-09-22T18:28:59Z",
+  "updated_at": "2026-10-29T05:37:42Z",
+  "last_verified_at": "2026-10-29T05:37:42Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838892556454",
   "shopify_handle": "citizen-automatic-orange-dial-mens-watch-nj0150-81z",
-  "shopify_synced_at": "2026-09-25T06:58:56Z"
+  "shopify_synced_at": "2026-10-27T19:36:05Z",
+  "last_synced_fx_rate": 95.269051
 }

@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -76,7 +76,7 @@
       "source_compare_at_price": 345.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/m/i/michael-kors-oversized-billie-chronograph-quartz-mens-watch-and-bracelet-gift-set-mk9272set.jpg",
       "option_values": [
         {
@@ -109,10 +109,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T10:48:06Z",
-  "updated_at": "2026-09-22T18:25:58Z",
-  "last_verified_at": "2026-09-22T18:25:58Z",
+  "updated_at": "2026-10-29T03:36:33Z",
+  "last_verified_at": "2026-10-29T03:36:33Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838882234534",
   "shopify_handle": "michael-kors-oversized-billie-chronograph-quartz-mens-watch-and-bracelet-gift-set-mk9272set",
-  "shopify_synced_at": "2026-09-25T06:48:20Z"
+  "shopify_synced_at": "2026-10-26T05:56:24Z",
+  "last_synced_fx_rate": 95.160836
 }

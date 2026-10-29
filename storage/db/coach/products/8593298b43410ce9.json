@@ -84,13 +84,13 @@
       "id": null,
       "sku": "CFQ33 IMCED",
       "title": "Im/Cedar",
-      "price": "22866.00",
+      "price": "21126.00",
       "compare_at_price": null,
-      "source_price": 239.0,
+      "source_price": 219.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfq33_imced_a0",
       "option_values": [
         {
@@ -98,15 +98,15 @@
           "name": "Im/Cedar"
         }
       ],
-      "price_current": 22942.0
+      "price_current": 21126.0
     },
     {
       "id": null,
       "sku": "CFQ34 IMBLK",
       "title": "Gold/Black",
-      "price": "22866.00",
+      "price": "21126.00",
       "compare_at_price": null,
-      "source_price": 239.0,
+      "source_price": 219.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -118,7 +118,7 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 22942.0
+      "price_current": 21126.0
     },
     {
       "id": null,
@@ -304,9 +304,9 @@
       "id": null,
       "sku": "CDE45 IMTYV",
       "title": "Gold/Indigo",
-      "price": "20953.00",
+      "price": "13209.00",
       "compare_at_price": null,
-      "source_price": 219.0,
+      "source_price": 137.5,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -318,7 +318,7 @@
           "name": "Gold/Indigo"
         }
       ],
-      "price_current": 21022.0
+      "price_current": 13209.0
     },
     {
       "id": null,
@@ -390,11 +390,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:43:39Z",
-  "last_verified_at": "2026-09-22T05:26:03Z",
+  "last_verified_at": "2026-10-29T03:39:44Z",
   "id": "8593298b43410ce9",
   "product_id": "8593298b43410ce9",
   "store": "coach",
-  "updated_at": "2026-09-22T05:26:03Z",
+  "updated_at": "2026-10-29T03:39:44Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841766572198",
+  "shopify_handle": "faye-shoulder-bag",
+  "shopify_synced_at": "2026-10-28T11:48:46Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

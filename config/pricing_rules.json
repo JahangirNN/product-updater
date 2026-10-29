@@ -1,0 +1,214 @@
+{
+  "version": "1.0.0",
+  "description": "Declarative pricing and markup rules for storefront publishing (ADR 0028)",
+  "stores": {
+    "jwpei": {
+      "default": {
+        "formula": "linear_markup",
+        "description": "JW PEI Bags & Accessories charm markup: ROUND(USD * (FX + 14) + 1709, -2) - 1",
+        "base_usd": 89.0,
+        "base_markup_inr": 2955.0,
+        "per_usd_markup_inr": 14.0,
+        "fx_addon": 14.0,
+        "fixed_offset_inr": 1709.0,
+        "round_nearest": 100,
+        "charm_offset": -1
+      }
+    },
+    "jomashop": {
+      "default": {
+        "formula": "discount_bracket_markup",
+        "description": "Jomashop dynamic watch pricing formula based on supplier discount off MSRP (ADR 0028)",
+        "round_nearest": 100,
+        "charm_offset": -1,
+        "brackets": [
+          { "max_discount": 0.25, "markup": 0.16 },
+          { "min_discount": 0.25, "max_discount": 0.30, "markup": 0.18 },
+          { "min_discount": 0.30, "max_discount": 0.40, "markup": 0.29 },
+          { "min_discount": 0.40, "max_discount": 0.50, "markup": 0.40 },
+          { "min_discount": 0.50, "max_discount": 0.60, "markup": 0.50 },
+          { "min_discount": 0.60, "markup": 0.70 }
+        ]
+      },
+      "vendors": {
+        "Tissot": {
+          "formula": "discount_bracket_markup",
+          "description": "Jomashop Tissot dynamic watch pricing formula based on supplier discount off MSRP (ADR 0028)",
+          "round_nearest": 100,
+          "charm_offset": -1,
+          "brackets": [
+            { "max_discount": 0.25, "markup": 0.16 },
+            { "min_discount": 0.25, "max_discount": 0.30, "markup": 0.18 },
+            { "min_discount": 0.30, "max_discount": 0.40, "markup": 0.29 },
+            { "min_discount": 0.40, "max_discount": 0.50, "markup": 0.40 },
+            { "min_discount": 0.50, "max_discount": 0.60, "markup": 0.50 },
+            { "min_discount": 0.60, "markup": 0.70 }
+          ]
+        }
+      },
+      "categories": {
+        "Watches": {
+          "formula": "discount_bracket_markup",
+          "description": "Jomashop dynamic watch pricing formula based on supplier discount off MSRP (ADR 0028)",
+          "round_nearest": 100,
+          "charm_offset": -1,
+          "brackets": [
+            { "max_discount": 0.25, "markup": 0.16 },
+            { "min_discount": 0.25, "max_discount": 0.30, "markup": 0.18 },
+            { "min_discount": 0.30, "max_discount": 0.40, "markup": 0.29 },
+            { "min_discount": 0.40, "max_discount": 0.50, "markup": 0.40 },
+            { "min_discount": 0.50, "max_discount": 0.60, "markup": 0.50 },
+            { "min_discount": 0.60, "markup": 0.70 }
+          ]
+        },
+        "Watch": {
+          "formula": "discount_bracket_markup",
+          "description": "Jomashop dynamic watch pricing formula based on supplier discount off MSRP (ADR 0028)",
+          "round_nearest": 100,
+          "charm_offset": -1,
+          "brackets": [
+            { "max_discount": 0.25, "markup": 0.16 },
+            { "min_discount": 0.25, "max_discount": 0.30, "markup": 0.18 },
+            { "min_discount": 0.30, "max_discount": 0.40, "markup": 0.29 },
+            { "min_discount": 0.40, "max_discount": 0.50, "markup": 0.40 },
+            { "min_discount": 0.50, "max_discount": 0.60, "markup": 0.50 },
+            { "min_discount": 0.60, "markup": 0.70 }
+          ]
+        },
+        "Tissot": {
+          "formula": "discount_bracket_markup",
+          "description": "Jomashop Tissot dynamic watch pricing formula based on supplier discount off MSRP (ADR 0028)",
+          "round_nearest": 100,
+          "charm_offset": -1,
+          "brackets": [
+            { "max_discount": 0.25, "markup": 0.16 },
+            { "min_discount": 0.25, "max_discount": 0.30, "markup": 0.18 },
+            { "min_discount": 0.30, "max_discount": 0.40, "markup": 0.29 },
+            { "min_discount": 0.40, "max_discount": 0.50, "markup": 0.40 },
+            { "min_discount": 0.50, "max_discount": 0.60, "markup": 0.50 },
+            { "min_discount": 0.60, "markup": 0.70 }
+          ]
+        }
+      }
+    },
+    "coach": {
+      "default": {
+        "formula": "price_bracket_markup",
+        "description": "Coach Outlet tiered markup: within 10K: +45%, within 15K: +40%, above 15K: +35% with .99 charm",
+        "round_nearest": 100,
+        "charm_offset": -1,
+        "brackets": [
+          {
+            "max_inr": 10000,
+            "markup_percent": 0.45,
+            "description": "Within 10K base cost: 45% markup"
+          },
+          {
+            "min_inr": 10000,
+            "max_inr": 15000,
+            "markup_percent": 0.40,
+            "description": "Within 15K base cost: 40% markup"
+          },
+          {
+            "min_inr": 15000,
+            "markup_percent": 0.35,
+            "description": "Above 15K base cost: 35% markup"
+          }
+        ]
+      }
+    },
+    "michaelkors": {
+      "default": {
+        "formula": "price_bracket_markup",
+        "description": "Michael Kors Outlet tiered markup: within 10K: +45%, within 15K: +40%, above 15K: +35% with .99 charm",
+        "round_nearest": 100,
+        "charm_offset": -1,
+        "brackets": [
+          {
+            "max_inr": 10000,
+            "markup_percent": 0.45,
+            "description": "Within 10K base cost: 45% markup"
+          },
+          {
+            "min_inr": 10000,
+            "max_inr": 15000,
+            "markup_percent": 0.40,
+            "description": "Within 15K base cost: 40% markup"
+          },
+          {
+            "min_inr": 15000,
+            "markup_percent": 0.35,
+            "description": "Above 15K base cost: 35% markup"
+          }
+        ]
+      },
+      "categories": {
+        "Watches": {
+          "formula": "discount_bracket_markup",
+          "description": "Michael Kors watch dynamic pricing formula based on supplier discount off MSRP (ADR 0028)",
+          "round_nearest": 100,
+          "charm_offset": -1,
+          "brackets": [
+            { "max_discount": 0.25, "markup": 0.16 },
+            { "min_discount": 0.25, "max_discount": 0.30, "markup": 0.18 },
+            { "min_discount": 0.30, "max_discount": 0.40, "markup": 0.29 },
+            { "min_discount": 0.40, "max_discount": 0.50, "markup": 0.40 },
+            { "min_discount": 0.50, "max_discount": 0.60, "markup": 0.50 },
+            { "min_discount": 0.60, "markup": 0.70 }
+          ]
+        },
+        "Watch": {
+          "formula": "discount_bracket_markup",
+          "description": "Michael Kors watch dynamic pricing formula based on supplier discount off MSRP (ADR 0028)",
+          "round_nearest": 100,
+          "charm_offset": -1,
+          "brackets": [
+            { "max_discount": 0.25, "markup": 0.16 },
+            { "min_discount": 0.25, "max_discount": 0.30, "markup": 0.18 },
+            { "min_discount": 0.30, "max_discount": 0.40, "markup": 0.29 },
+            { "min_discount": 0.40, "max_discount": 0.50, "markup": 0.40 },
+            { "min_discount": 0.50, "max_discount": 0.60, "markup": 0.50 },
+            { "min_discount": 0.60, "markup": 0.70 }
+          ]
+        }
+      }
+    }
+  },
+  "categories": {
+    "Watches": {
+      "formula": "discount_bracket_markup",
+      "description": "Universal luxury watch dynamic pricing formula based on supplier discount off MSRP (ADR 0028)",
+      "round_nearest": 100,
+      "charm_offset": -1,
+      "brackets": [
+        { "max_discount": 0.25, "markup": 0.16 },
+        { "min_discount": 0.25, "max_discount": 0.30, "markup": 0.18 },
+        { "min_discount": 0.30, "max_discount": 0.40, "markup": 0.29 },
+        { "min_discount": 0.40, "max_discount": 0.50, "markup": 0.40 },
+        { "min_discount": 0.50, "max_discount": 0.60, "markup": 0.50 },
+        { "min_discount": 0.60, "markup": 0.70 }
+      ]
+    },
+    "Watch": {
+      "formula": "discount_bracket_markup",
+      "description": "Universal luxury watch dynamic pricing formula based on supplier discount off MSRP (ADR 0028)",
+      "round_nearest": 100,
+      "charm_offset": -1,
+      "brackets": [
+        { "max_discount": 0.25, "markup": 0.16 },
+        { "min_discount": 0.25, "max_discount": 0.30, "markup": 0.18 },
+        { "min_discount": 0.30, "max_discount": 0.40, "markup": 0.29 },
+        { "min_discount": 0.40, "max_discount": 0.50, "markup": 0.40 },
+        { "min_discount": 0.50, "max_discount": 0.60, "markup": 0.50 },
+        { "min_discount": 0.60, "markup": 0.70 }
+      ]
+    }
+  },
+  "global_default": {
+    "formula": "standard_forex",
+    "description": "Universal fallback forex conversion with 99 charm rounding",
+    "multiplier": 1.0,
+    "round_nearest": 100,
+    "charm_offset": -1
+  }
+}

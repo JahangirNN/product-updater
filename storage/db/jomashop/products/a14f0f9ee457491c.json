@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -77,7 +77,7 @@
       "source_compare_at_price": 1495.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/m/o/movado-series-800-chronograph-quartz-green-dial-mens-watch-2600179.jpg",
       "option_values": [
         {
@@ -110,10 +110,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T14:52:56Z",
-  "updated_at": "2026-09-22T18:28:07Z",
-  "last_verified_at": "2026-09-22T18:28:07Z",
-  "shopify_sync_pending": false,
+  "updated_at": "2026-10-29T05:36:51Z",
+  "last_verified_at": "2026-10-29T05:36:51Z",
+  "shopify_sync_pending": true,
   "shopify_product_id": "gid://shopify/Product/15838889410726",
   "shopify_handle": "movado-series-800-chronograph-quartz-green-dial-mens-watch-2600179",
-  "shopify_synced_at": "2026-09-25T06:56:07Z"
+  "shopify_synced_at": "2026-09-29T06:06:11Z",
+  "last_synced_fx_rate": 95.252751
 }

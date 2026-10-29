@@ -117,7 +117,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw032_imxdm_a0",
       "option_values": [
         {
@@ -137,7 +137,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw032_imnav_a0",
       "option_values": [
         {
@@ -196,11 +196,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:39:19Z",
-  "last_verified_at": "2026-09-22T05:23:52Z",
+  "last_verified_at": "2026-10-29T03:37:31Z",
   "id": "1e2a80923d51ad94",
   "product_id": "1e2a80923d51ad94",
   "store": "coach",
-  "updated_at": "2026-09-22T05:23:52Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:37:31Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841762082982",
+  "shopify_handle": "city-mini-tote-bag-in-signature-canvas",
+  "shopify_synced_at": "2026-10-23T11:58:20Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 94.593871
 }

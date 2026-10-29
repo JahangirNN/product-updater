@@ -69,7 +69,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw380_mqv_a0",
       "option_values": [
         {
@@ -389,7 +389,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cr911_mah_a0",
       "option_values": [
         {
@@ -429,7 +429,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw232_blmc_a0",
       "option_values": [
         {
@@ -469,7 +469,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw385_wan_a0",
       "option_values": [
         {
@@ -529,7 +529,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceu69_blk_a0",
       "option_values": [
         {
@@ -675,11 +675,16 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:39:26Z",
-  "last_verified_at": "2026-09-22T05:23:58Z",
+  "last_verified_at": "2026-10-29T03:37:38Z",
   "id": "211ce30fb1d88e5e",
   "product_id": "211ce30fb1d88e5e",
   "store": "coach",
-  "updated_at": "2026-09-22T05:23:58Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:37:38Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841762246822",
+  "shopify_handle": "3-in-1-wallet-in-loved-signature-canvas",
+  "shopify_synced_at": "2026-10-28T19:39:46Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

@@ -2,12 +2,12 @@
   "source_store": "michaelkors",
   "source_sku": "MK-9055",
   "source_url": "https://www.michaelkors.com/city-sunglasses-/MK-9055.html",
-  "handle": "city-sunglasses-",
+  "handle": "city-sunglasses",
   "title": "City Sunglasses",
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Sunglasses",
-  "gender": "Women",
-  "current_price": 33608,
+  "gender": "Men",
+  "current_price": 33605.0,
   "source_price": 350.0,
   "currency": "INR",
   "source_currency": "USD",
@@ -26,7 +26,7 @@
     {
       "sku": "MK-9055",
       "title": "Standard",
-      "price": "33608.00",
+      "price": "33605.00",
       "compare_at_price": "33430.00",
       "source_price": 350.0,
       "currency": "INR",
@@ -39,7 +39,7 @@
           "name": "Standard"
         }
       ],
-      "price_current": 33596.0
+      "price_current": 33605.0
     }
   ],
   "options": [
@@ -52,11 +52,11 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">City Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate frame</li>\n    </ul>\n  </div>\n  \n</div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">City Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate frame</li>\n    </ul>\n  </div>\n  \n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">Frame Specifications &amp; UV Protection</summary>\n    <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n      <tbody>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Silhouette</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Classic Designer Silhouette</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Material</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Acetate frame</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">UV Protection</td><td style=\"padding: 8px; border: 1px solid #ddd;\">100% UV Protection</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Fitting &amp; Size</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Universal Fit (One Size)</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Packaging</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Protective Michael Kors Sunglass Case Included</td></tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
-    "Gender": "Women",
+    "Gender": "Men",
     "StyleNumber": "MK-9055",
     "Color": "Standard",
     "SourceCurrency": "USD",
@@ -67,21 +67,32 @@
       "Acetate frame",
       "Case included",
       "100% UV protection",
-      "Made in Italy",
-      "Style #"
+      "Made in Italy"
     ]
   },
   "groups": [
-    "sunglasses",
-    "women"
+    "men",
+    "sunglasses"
   ],
-  "last_verified_at": "2026-09-22T05:24:05Z",
+  "last_verified_at": "2026-10-29T05:37:18Z",
   "id": "2a875cd10f92e409",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-22T05:24:05Z",
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">City Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate frame</li>\n    </ul>\n  </div>\n  \n</div>",
+  "updated_at": "2026-10-29T05:37:18Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">City Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Material:</strong> Acetate frame</li>\n    </ul>\n  </div>\n  \n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">Frame Specifications &amp; UV Protection</summary>\n    <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n      <tbody>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Silhouette</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Classic Designer Silhouette</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Material</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Acetate frame</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">UV Protection</td><td style=\"padding: 8px; border: 1px solid #ddd;\">100% UV Protection</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Fitting &amp; Size</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Universal Fit (One Size)</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Packaging</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Protective Michael Kors Sunglass Case Included</td></tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "source_compare_at_price": 350.0,
   "compare_at_price": 33430,
   "material": "Acetate frame",
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "tags": [
+    "Accessories",
+    "Sunglasses",
+    "Designer Sunglasses",
+    "Michael Kors",
+    "Men",
+    "Men's"
+  ],
+  "shopify_product_id": "gid://shopify/Product/15840666976422",
+  "shopify_handle": "city-sunglasses",
+  "shopify_synced_at": "2026-09-29T06:02:22Z",
+  "last_synced_fx_rate": 95.252751
 }

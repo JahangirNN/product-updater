@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 17188,
-  "source_price": 179.0,
+  "current_price": 6713.0,
+  "source_price": 69.99,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/a2007cf9-abb6-4622-acf2-215400009a3a/30S6SQNT6C-562-0664_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/a2007cf9-abb6-4622-acf2-215400009a3a/30S6SQNT6C-562-0664_1-tif",
@@ -23,12 +23,12 @@
     {
       "sku": "30S6SQNT6C",
       "title": "0664",
-      "price": "17188.00",
+      "price": "6713.00",
       "compare_at_price": "24918.00",
-      "source_price": 179.0,
+      "source_price": 69.99,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/a2007cf9-abb6-4622-acf2-215400009a3a/30S6SQNT6C-562-0664_1-tif",
       "option_values": [
         {
@@ -36,7 +36,7 @@
           "name": "0664"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 6713.0
     }
   ],
   "options": [
@@ -77,13 +77,17 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-22T05:24:16Z",
+  "last_verified_at": "2026-10-29T05:37:30Z",
   "id": "34aa7f5ae924b314",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-22T05:24:16Z",
+  "updated_at": "2026-10-29T05:37:30Z",
   "source_compare_at_price": 259.5,
-  "compare_at_price": 24922.0,
+  "compare_at_price": 24704.0,
   "material": "Canvas, 70% cotton/30% polyester",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Quinn Large Striped Canvas Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 18.5”W X 11”H X 5”D</li>\n      <li><strong>Material:</strong> Canvas, 70% cotton/30% polyester</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841789444262",
+  "shopify_handle": "quinn-large-striped-canvas-tote-bag",
+  "shopify_synced_at": "2026-10-14T05:27:31Z",
+  "last_synced_fx_rate": 95.252751
 }

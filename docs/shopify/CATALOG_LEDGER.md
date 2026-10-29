@@ -3,7 +3,7 @@
 > **Authoritative Ingestion & Progress Ledger for The Rare Avenue**  
 > **Store URL**: `https://therareavenue.com` (`hewmvw-am.myshopify.com`)  
 > **Store Protocol**: Shopify Admin GraphQL API (`2026-04`)  
-> **Last Verified Audit**: 2026-10-04 14:58 IST  
+> **Last Verified Audit**: 2026-10-10 12:13 IST  
 > **Automated Audit Script**: [`scripts/audit_shopify_catalog_counts.py`](file:///c:/Users/Administrator/WorkPlace/dropship-scraper-portable-20260905/product-updater/scripts/audit_shopify_catalog_counts.py)
 
 ---

@@ -176,7 +176,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccy30_b4pop_a0",
       "option_values": [
         {
@@ -196,7 +196,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cer62_b4br_a0",
       "option_values": [
         {
@@ -287,11 +287,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:46:31Z",
-  "last_verified_at": "2026-09-22T05:28:59Z",
+  "last_verified_at": "2026-10-29T03:37:17Z",
   "id": "c7173202e809f1b6",
   "product_id": "c7173202e809f1b6",
   "store": "coach",
-  "updated_at": "2026-09-22T05:28:59Z",
+  "updated_at": "2026-10-29T03:37:17Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841797505190",
+  "shopify_handle": "new-york-elora-top-handle-crossbody-bag-ccy30-b4mpl",
+  "shopify_synced_at": "2026-10-14T09:38:31Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.252751
 }

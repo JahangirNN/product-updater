@@ -51,7 +51,19 @@ def solve_and_extract_pdp(page, url: str, target_handle: str = "") -> Dict[str, 
                     "elapsed_ms": round((time.perf_counter() - t_start) * 1000, 2)
                 }
 
-        page.goto(url, wait_until="domcontentloaded", timeout=30000)
+        resp = page.goto(url, wait_until="domcontentloaded", timeout=30000)
+        status_code = resp.status if resp else 0
+        if status_code == 404:
+            return {
+                "status": "not_found",
+                "price_usd": 0.0,
+                "availability": "out_of_stock",
+                "elapsed_ms": round((time.perf_counter() - t_start) * 1000, 2),
+                "message": "Product delisted (HTTP 404)",
+                "is_http_404": True,
+                "http_status": 404
+            }
+
         page.wait_for_timeout(2000)
         
         content = page.content()
@@ -77,6 +89,22 @@ def solve_and_extract_pdp(page, url: str, target_handle: str = "") -> Dict[str, 
             if matches:
                 price_usd = float(matches[0])
                 
+        # Delisting / soft-404 check
+        is_delisted = any(k in content.lower() for k in [
+            "page not found", "product not found", "no longer available",
+            "we're sorry", "this product is currently unavailable", "we couldn't find"
+        ])
+        if is_delisted or (price_usd == 0.0 and "product" not in content.lower()):
+            return {
+                "status": "not_found",
+                "price_usd": 0.0,
+                "availability": "out_of_stock",
+                "elapsed_ms": round((time.perf_counter() - t_start) * 1000, 2),
+                "message": "Product delisted (soft-404)",
+                "is_http_404": False,
+                "http_status": status_code or 200
+            }
+
         # Stock extraction
         avail = "in_stock"
         if "out of stock" in content.lower() or "sold out" in content.lower():

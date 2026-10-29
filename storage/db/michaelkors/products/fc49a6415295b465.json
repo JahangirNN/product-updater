@@ -6,8 +6,8 @@
   "title": "Avenue Sunglasses",
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Sunglasses",
-  "gender": "Women",
-  "current_price": 33430,
+  "gender": "Men",
+  "current_price": 33605.0,
   "source_price": 350.0,
   "currency": "INR",
   "source_currency": "USD",
@@ -23,7 +23,7 @@
     {
       "sku": "MK-9046",
       "title": "Tortoise",
-      "price": "33430.00",
+      "price": "33605.00",
       "compare_at_price": "33430.00",
       "source_price": 350.0,
       "currency": "INR",
@@ -36,7 +36,7 @@
           "name": "Tortoise"
         }
       ],
-      "price_current": 33596.0
+      "price_current": 33605.0
     }
   ],
   "options": [
@@ -49,11 +49,11 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Avenue Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Avenue Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">Frame Specifications &amp; UV Protection</summary>\n    <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n      <tbody>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Silhouette</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Shield sunglasses</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Material</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Metal frame</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">UV Protection</td><td style=\"padding: 8px; border: 1px solid #ddd;\">100% UV Protection</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Fitting &amp; Size</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Universal Fit (One Size)</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Packaging</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Protective Michael Kors Sunglass Case Included</td></tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
-    "Gender": "Women",
+    "Gender": "Men",
     "StyleNumber": "MK-9046",
     "Color": "Tortoise",
     "SourceCurrency": "USD",
@@ -63,19 +63,31 @@
       "Metal frame",
       "Case included",
       "100% UV protection",
-      "Imported",
-      "Style #"
+      "Imported"
     ]
   },
   "groups": [
-    "sunglasses",
-    "women"
+    "men",
+    "sunglasses"
   ],
-  "last_verified_at": "2026-09-22T05:28:15Z",
+  "last_verified_at": "2026-10-29T03:37:31Z",
   "id": "fc49a6415295b465",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-22T05:28:15Z",
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Avenue Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "updated_at": "2026-10-29T03:37:31Z",
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Avenue Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">Frame Specifications &amp; UV Protection</summary>\n    <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n      <tbody>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Silhouette</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Shield sunglasses</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Material</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Metal frame</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">UV Protection</td><td style=\"padding: 8px; border: 1px solid #ddd;\">100% UV Protection</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Fitting &amp; Size</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Universal Fit (One Size)</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Packaging</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Protective Michael Kors Sunglass Case Included</td></tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "source_compare_at_price": 350.0,
-  "compare_at_price": 33430
+  "compare_at_price": 33430,
+  "tags": [
+    "Accessories",
+    "Sunglasses",
+    "Designer Sunglasses",
+    "Michael Kors",
+    "Men",
+    "Men's"
+  ],
+  "shopify_product_id": "gid://shopify/Product/15840668385446",
+  "shopify_handle": "avenue-sunglasses",
+  "shopify_synced_at": "2026-09-29T06:03:47Z",
+  "shopify_sync_pending": false,
+  "last_synced_fx_rate": 95.252751
 }

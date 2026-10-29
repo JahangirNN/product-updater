@@ -73,7 +73,8 @@
           "option_name": "Color",
           "name": "Black"
         }
-      ]
+      ],
+      "price_current": 62441.0
     },
     {
       "id": null,
@@ -92,7 +93,8 @@
           "option_name": "Color",
           "name": "Black/Light Tan"
         }
-      ]
+      ],
+      "price_current": 57158.0
     },
     {
       "id": null,
@@ -111,7 +113,8 @@
           "option_name": "Color",
           "name": "Saddle/Burnt Sienna"
         }
-      ]
+      ],
+      "price_current": 57158.0
     },
     {
       "id": null,
@@ -130,7 +133,8 @@
           "option_name": "Color",
           "name": "Olive"
         }
-      ]
+      ],
+      "price_current": 52835.0
     },
     {
       "id": null,
@@ -149,7 +153,8 @@
           "option_name": "Color",
           "name": "Warm Brown"
         }
-      ]
+      ],
+      "price_current": 52835.0
     },
     {
       "id": null,
@@ -168,7 +173,8 @@
           "option_name": "Color",
           "name": "Dark Chocolate Suede"
         }
-      ]
+      ],
+      "price_current": 52835.0
     },
     {
       "id": null,
@@ -271,11 +277,16 @@
     "men_bags"
   ],
   "created_at": "2026-09-13T00:42:00Z",
-  "last_verified_at": "2026-09-22T05:25:15Z",
+  "last_verified_at": "2026-10-29T03:38:14Z",
   "id": "5b28870c8a38f7bc",
   "product_id": "5b28870c8a38f7bc",
   "store": "coach",
-  "updated_at": "2026-09-22T05:25:16Z",
+  "updated_at": "2026-10-29T03:38:14Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841795604646",
+  "shopify_handle": "mott-messenger-bag-ccb56-blk",
+  "shopify_synced_at": "2026-10-26T10:04:03Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.160836
 }

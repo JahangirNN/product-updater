@@ -99,28 +99,33 @@ def parse_numeric_size(size_str: str) -> Optional[float]:
     return None
 
 
-def convert_us_to_uk(us_size: float, gender: str, brand: str = "Nike") -> str:
+def convert_us_to_uk(us_size: Any, gender: str, brand: str = "Nike") -> str:
     """Convert US shoe size to brand-appropriate UK shoe size."""
-    key = f"{us_size:g}"
+    try:
+        val = float(us_size)
+    except (ValueError, TypeError):
+        return str(us_size)
+    key = f"{val:g}"
     b_lower = brand.lower()
     if "adidas" in b_lower:
         if "women" in gender.lower():
-            return f"{max(0.0, us_size - 1.5):g}"
-        return f"{max(0.0, us_size - 0.5):g}"
+            return f"{max(0.0, val - 1.5):g}"
+        return f"{max(0.0, val - 0.5):g}"
     elif "asics" in b_lower:
         if "women" in gender.lower():
-            return f"{max(0.0, us_size - 2.0):g}"
-        return f"{max(0.0, us_size - 1.0):g}"
+            return f"{max(0.0, val - 2.0):g}"
+        return f"{max(0.0, val - 1.0):g}"
     else:
         # Nike and standard footwear default
         if "women" in gender.lower():
             if key in NIKE_WOMEN_US_TO_UK:
                 return NIKE_WOMEN_US_TO_UK[key]
-            return f"{max(0.0, us_size - 2.5):g}"
+            return f"{max(0.0, val - 2.5):g}"
         else:
             if key in NIKE_MEN_US_TO_UK:
                 return NIKE_MEN_US_TO_UK[key]
-            return f"{max(0.0, us_size - 1.0):g}"
+            return f"{max(0.0, val - 1.0):g}"
+
 
 
 def convert_us_to_eu(us_size: float, gender: str, brand: str = "Nike") -> str:
@@ -199,12 +204,13 @@ def generate_description_html(
     size_rows = "".join(
         f"<tr><td style='padding:6px 12px;text-align:center;'>US {s['us_str']}</td>"
         f"<td style='padding:6px 12px;text-align:center;'>UK {s['uk_str']}</td>"
-        f"<td style='padding:6px 12px;text-align:center;'>EU {s['eu_str']}</td>"
-        f"<td style='padding:6px 12px;text-align:center;'>{'In Stock' if s['in_stock'] else 'Out of Stock'}</td></tr>"
+        f"<td style='padding:6px 12px;text-align:center;'>EU {s['eu_str']}</td></tr>"
         for s in sizes
     )
 
-    accordion_html = f"""
+    accordion_html = ""
+    if sizes:
+        accordion_html = f"""
 <details class="size-guide-accordion" style="margin: 20px 0; padding: 12px; border: 1px solid #e0e0e0; border-radius: 6px;">
   <summary style="font-weight: 600; cursor: pointer; font-size: 15px;">{brand} Size Guide &amp; Conversions ({gender})</summary>
   <div style="margin-top: 12px;">
@@ -215,7 +221,6 @@ def generate_description_html(
           <th style="padding:6px 12px;text-align:center;">US Size</th>
           <th style="padding:6px 12px;text-align:center;">UK Size</th>
           <th style="padding:6px 12px;text-align:center;">EU Size</th>
-          <th style="padding:6px 12px;text-align:center;">Availability</th>
         </tr>
       </thead>
       <tbody>{size_rows}</tbody>
@@ -326,7 +331,7 @@ def parse_product_payload(
         variants.append({
             "id": None,
             "sku": var_sku,
-            "title": f"US {s['us_str']} / UK {s['uk_str']} - {color or 'Standard'}",
+            "title": f"UK {s['uk_str']} - {color or 'Standard'}",
             "price": f"{price_inr:.2f}",
             "compare_at_price": f"{compare_inr:.2f}" if compare_inr else None,
             "source_price": source_price_usd,
@@ -336,11 +341,25 @@ def parse_product_payload(
             "in_stock": s["in_stock"],
             "image_url": featured_image,
             "option_values": [
-                {"option_name": "Size (US)", "name": f"US {s['us_str']}"},
-                {"option_name": "Size (UK)", "name": f"UK {s['uk_str']}"},
+                {"option_name": "Size", "name": f"UK {s['uk_str']}"},
                 {"option_name": "Color", "name": color or "Standard"}
             ]
         })
+
+    # Deduplicate variants by unique (Size, Color) option combination
+    seen_combos: Dict[Tuple[str, str], Dict[str, Any]] = {}
+    deduped_variants = []
+    for v in variants:
+        sz_val = next((ov["name"] for ov in v.get("option_values", []) if ov.get("option_name") == "Size"), "")
+        col_val = next((ov["name"] for ov in v.get("option_values", []) if ov.get("option_name") == "Color"), "")
+        combo_key = (sz_val, col_val)
+        if combo_key not in seen_combos:
+            seen_combos[combo_key] = v
+            deduped_variants.append(v)
+        else:
+            if v.get("in_stock") and not seen_combos[combo_key].get("in_stock"):
+                seen_combos[combo_key]["in_stock"] = True
+    variants = deduped_variants
 
     # Stock Harmony Invariant (ADR 0015):
     # Parent availability strictly synchronized with child variant in_stock statuses
@@ -369,14 +388,18 @@ def parse_product_payload(
     raw_desc = model.get("description") or style.get("description") or ""
     description_html = generate_description_html(title, raw_desc, gender, specs, deduped_sizes, brand)
 
+    seen_uk = set()
+    uk_option_values = []
+    for s in deduped_sizes:
+        uk_name = f"UK {s['uk_str']}"
+        if uk_name not in seen_uk:
+            seen_uk.add(uk_name)
+            uk_option_values.append({"name": uk_name})
+
     product_options = [
         {
-            "name": "Size (US)",
-            "values": [{"name": f"US {s['us_str']}"} for s in deduped_sizes]
-        },
-        {
-            "name": "Size (UK)",
-            "values": [{"name": f"UK {s['uk_str']}"} for s in deduped_sizes]
+            "name": "Size",
+            "values": uk_option_values
         },
         {
             "name": "Color",

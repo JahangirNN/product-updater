@@ -9,11 +9,11 @@
   "source_price": 109.0,
   "source_compare_at_price": 109.0,
   "current_price": 10338.0,
-  "compare_at_price": 10471.0,
+  "compare_at_price": 10377.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Washed Denim",
   "specifications": {
     "Main Material": "Washed Denim",
@@ -267,7 +267,7 @@
       "source_compare_at_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1774935571897-oxrx1t5t9rk.png?v=1775016128",
       "option_values": [
         {
@@ -363,13 +363,17 @@
   "validation_warnings": [],
   "id": "e97f7b5a4f311a69",
   "created_at": "2026-09-09T15:50:01Z",
-  "updated_at": "2026-09-30T08:51:18Z",
-  "last_verified_at": "2026-09-30T08:51:18Z",
-  "is_active": false,
+  "updated_at": "2026-10-29T03:37:51Z",
+  "last_verified_at": "2026-10-29T03:37:51Z",
+  "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841785708710",
   "shopify_handle": "elise-top-handle-bag-blue-denim",
-  "shopify_synced_at": "2026-09-29T06:01:36Z",
+  "shopify_synced_at": "2026-10-13T03:31:35Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1774935571897-oxrx1t5t9rk.png?v=1775016128",
-  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1774935571897-oxrx1t5t9rk.png?v=1775016128"
+  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1774935571897-oxrx1t5t9rk.png?v=1775016128",
+  "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\e97f7b5a4f311a69.json",
+  "archived": true,
+  "canonical_product_id": "gid://shopify/Product/15841771946150",
+  "last_synced_fx_rate": 95.252751
 }

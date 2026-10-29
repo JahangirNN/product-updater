@@ -221,7 +221,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cy679_imxi9_a0",
       "option_values": [
         {
@@ -388,11 +388,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:46:28Z",
-  "last_verified_at": "2026-09-22T05:28:13Z",
+  "last_verified_at": "2026-10-29T03:40:52Z",
   "id": "c5ff64dd14b69eed",
   "product_id": "c5ff64dd14b69eed",
   "store": "coach",
-  "updated_at": "2026-09-22T05:28:13Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:40:52Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841797472422",
+  "shopify_handle": "rowan-satchel-bag-cfp06-imwbr",
+  "shopify_synced_at": "2026-10-26T14:09:47Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.160836
 }

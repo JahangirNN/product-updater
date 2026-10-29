@@ -11,8 +11,8 @@
   "source_price": 58.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/ef297f0c-cd73-4aa6-ae7a-ebfe08769446/32F5GJ6C2L-001-0001_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/ef297f0c-cd73-4aa6-ae7a-ebfe08769446/32F5GJ6C2L-001-0001_1-tif",
@@ -27,7 +27,7 @@
       "source_price": 58.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/ef297f0c-cd73-4aa6-ae7a-ebfe08769446/32F5GJ6C2L-001-0001_1-tif",
       "option_values": [
         {
@@ -76,13 +76,17 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-22T05:23:33Z",
+  "last_verified_at": "2026-10-29T05:36:34Z",
   "id": "08b37bcacf15ea48",
   "created_at": "2026-09-11T18:30:37Z",
-  "updated_at": "2026-09-22T05:23:33Z",
+  "updated_at": "2026-10-29T05:36:36Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Pebbled Leather Sunglass Case by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 3.75”W X 7.5”H X 0.25”D</li>\n      <li><strong>Material:</strong> Pebbled leather, 100% leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 169.0,
   "compare_at_price": 16142,
   "material": "Pebbled leather, 100% leather",
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841787510950",
+  "shopify_handle": "jet-set-pebbled-leather-sunglass-case",
+  "shopify_synced_at": "2026-10-29T05:36:34Z",
+  "last_synced_fx_rate": 95.199335
 }

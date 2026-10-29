@@ -120,3 +120,7 @@ How we check price and stock in milliseconds without heavy HTML overhead:
     - To show all sibling swatches in the viewer, enrich each product's `variants` array with all sibling colorways from the group, each carrying: `{sku, title: color_name, price_inr, source_price_usd, in_stock, image_url, option_values: [{option_name: 'Color', name: color_name}]}`.
     - This enables clicking any color swatch in the UI to switch images and prices without loading a separate product.
     - Script: the sibling enrichment loop in `scripts/ingest_missing_jwpei_siblings.py` / inline enrichment applied post-ingestion.
+14. **Full Catalog Scale (491 Products) & Cloudflare Origin Pacing (ADR 0027)**:
+    - **Trap**: When scaling from 288 products to 491 products, running multiple concurrent workers or appending cache-busting query parameters (`?_cb={timestamp}`) bypassed Cloudflare edge caching, directly saturating JW PEI's Shopify origin server and triggering burst HTTP 429 rate limits that tripped the 20-minute circuit breaker.
+    - **Solution**: Removed cache-busting parameters (`?_cb=`) so Cloudflare edge caching handles identical rapid hits. In `config/delta_config.json`, configured `max_workers: 1`, `requests_per_second: 1.5`, and `delay_seconds: 0.5`. In `storage/rate_limiter.py`, increased consecutive throttle threshold to 5.
+    - **Result**: All 491 products sweep cleanly in ~415 seconds with zero circuit breaker lockouts, maintaining 99.8% freshness.

@@ -149,7 +149,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cby80_b4mpl_a0",
       "option_values": [
         {
@@ -409,7 +409,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cz144_b4ylz_a0",
       "option_values": [
         {
@@ -556,11 +556,16 @@
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:42:53Z",
-  "last_verified_at": "2026-09-22T05:25:41Z",
+  "last_verified_at": "2026-10-29T03:38:41Z",
   "id": "740e36c06628cd0b",
   "product_id": "740e36c06628cd0b",
   "store": "coach",
-  "updated_at": "2026-09-22T05:25:41Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:38:41Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841765916838",
+  "shopify_handle": "essential-card-case-in-colorblock",
+  "shopify_synced_at": "2026-10-27T04:51:40Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.160836
 }

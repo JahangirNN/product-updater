@@ -99,20 +99,19 @@ def check_price_and_stock(
             else:
                 acquire_permit(resolved_store)
 
-            # 2. Execute HTTP fetch (prioritize curl_cffi Chrome TLS impersonation)
+            # 2. Execute HTTP fetch (prioritize injected client, then curl_cffi Chrome TLS impersonation)
             resp = None
-            if HAS_CURL_CFFI:
+            if client:
+                resp = client.get(source_url, headers=DEFAULT_HEADERS, follow_redirects=True)
+            elif HAS_CURL_CFFI:
                 try:
                     resp = cffi_requests.get(source_url, headers=DEFAULT_HEADERS, impersonate="chrome120", timeout=15.0)
                 except Exception:
                     resp = None
 
             if resp is None:
-                if client:
-                    resp = client.get(source_url, headers=DEFAULT_HEADERS, follow_redirects=True)
-                else:
-                    with create_http_client(custom_headers=DEFAULT_HEADERS) as c:
-                        resp = c.get(source_url, follow_redirects=True)
+                with create_http_client(custom_headers=DEFAULT_HEADERS) as c:
+                    resp = c.get(source_url, follow_redirects=True)
 
             elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
 
@@ -151,6 +150,10 @@ def check_price_and_stock(
 
             # 4. Handle 404 Delisting preserving existing product prices
             if resp.status_code == 404:
+                changed_vars = [
+                    {"sku": v.get("sku"), "old_in_stock": v.get("in_stock", True), "new_in_stock": False}
+                    for v in product.get("variants", []) if v.get("in_stock", True)
+                ]
                 return {
                     "status": "not_found",
                     "handle": handle,
@@ -161,21 +164,53 @@ def check_price_and_stock(
                     "is_active": False,
                     "price_changed": False,
                     "stock_changed": old_availability != "out_of_stock",
-                    "variant_stock_changed": False,
-                    "changed_variants": [],
+                    "variant_stock_changed": bool(changed_vars),
+                    "changed_variants": changed_vars,
                     "variant_price_changed": False,
                     "changed_variant_prices": [],
                     "variants_delta": [],
                     "elapsed_ms": elapsed_ms,
-                    "message": "Product delisted (HTTP 404)"
+                    "message": "Product delisted (HTTP 404)",
+                    "is_http_404": True,
+                    "http_status": 404
                 }
 
             resp.raise_for_status()
 
             # 5. Extract price, availability, and variants from HTML & JSON-LD
             html_text = resp.text
+
             target_sku = product.get("source_sku")
             parsed_info = extract_coach_pdp_info(html_text, target_sku=target_sku)
+
+            # Check for soft-404 or delisted product on Coach:
+            # If the page genuinely lacks both price and variants delta, it has no product schema / data
+            has_valid_pdp_data = bool(parsed_info.get("price") or parsed_info.get("variants_delta"))
+            if not has_valid_pdp_data:
+                changed_vars = [
+                    {"sku": v.get("sku"), "old_in_stock": v.get("in_stock", True), "new_in_stock": False}
+                    for v in product.get("variants", []) if v.get("in_stock", True)
+                ]
+                return {
+                    "status": "not_found",
+                    "handle": handle,
+                    "availability": "out_of_stock",
+                    "old_availability": old_availability,
+                    "current_source_price": old_source_price,
+                    "old_source_price": old_source_price,
+                    "is_active": False,
+                    "price_changed": False,
+                    "stock_changed": old_availability != "out_of_stock",
+                    "variant_stock_changed": bool(changed_vars),
+                    "changed_variants": changed_vars,
+                    "variant_price_changed": False,
+                    "changed_variant_prices": [],
+                    "variants_delta": [],
+                    "elapsed_ms": elapsed_ms,
+                    "message": "Product delisted (missing product data / schema)",
+                    "is_http_404": False,
+                    "http_status": 200
+                }
 
             current_source_price = parsed_info.get("price") or old_source_price
             variants_delta = parsed_info.get("variants_delta", [])

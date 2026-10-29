@@ -7,9 +7,9 @@
   "product_type": "Handbags",
   "gender": "Men",
   "source_sku": "CFK07 SV/BK",
-  "source_price": 149.0,
+  "source_price": 139.0,
   "source_compare_at_price": null,
-  "current_price": 14256.0,
+  "current_price": 13233.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -61,9 +61,9 @@
       "id": null,
       "sku": "CFK07 SV/BK",
       "title": "Silver/BLACK",
-      "price": "14256.00",
+      "price": "13233.00",
       "compare_at_price": null,
-      "source_price": 149.0,
+      "source_price": 139.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -75,15 +75,15 @@
           "name": "Silver/BLACK"
         }
       ],
-      "price_current": 14302.0
+      "price_current": 13233.0
     },
     {
       "id": null,
       "sku": "CFK07 SVSMU",
       "title": "Silver/Deep Blue",
-      "price": "14256.00",
+      "price": "13233.00",
       "compare_at_price": null,
-      "source_price": 149.0,
+      "source_price": 139.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -95,15 +95,15 @@
           "name": "Silver/Deep Blue"
         }
       ],
-      "price_current": 14302.0
+      "price_current": 13233.0
     },
     {
       "id": null,
       "sku": "CFK07 SV/OL",
       "title": "Silver/OLIVE",
-      "price": "14256.00",
+      "price": "13233.00",
       "compare_at_price": null,
-      "source_price": 149.0,
+      "source_price": 139.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -115,15 +115,15 @@
           "name": "Silver/OLIVE"
         }
       ],
-      "price_current": 14302.0
+      "price_current": 13233.0
     },
     {
       "id": null,
       "sku": "CFK07 SVMPL",
       "title": "Silver/Maple",
-      "price": "14256.00",
+      "price": "13233.00",
       "compare_at_price": null,
-      "source_price": 149.0,
+      "source_price": 139.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -135,15 +135,15 @@
           "name": "Silver/Maple"
         }
       ],
-      "price_current": 14302.0
+      "price_current": 13233.0
     },
     {
       "id": null,
       "sku": "CES13 SVYZK",
       "title": "Silver/Black Signature",
-      "price": "14256.00",
+      "price": "13233.00",
       "compare_at_price": null,
-      "source_price": 149.0,
+      "source_price": 139.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -155,7 +155,7 @@
           "name": "Silver/Black Signature"
         }
       ],
-      "price_current": 14302.0
+      "price_current": 13233.0
     }
   ],
   "product_options": [
@@ -189,11 +189,16 @@
     "men_bags"
   ],
   "created_at": "2026-09-13T00:44:05Z",
-  "last_verified_at": "2026-09-22T05:26:21Z",
+  "last_verified_at": "2026-10-29T03:39:19Z",
   "id": "90a4d443c49f1560",
   "product_id": "90a4d443c49f1560",
   "store": "coach",
-  "updated_at": "2026-09-22T05:26:21Z",
+  "updated_at": "2026-10-29T03:39:19Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841766998182",
+  "shopify_handle": "ray-pack-17",
+  "shopify_synced_at": "2026-10-28T11:47:02Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

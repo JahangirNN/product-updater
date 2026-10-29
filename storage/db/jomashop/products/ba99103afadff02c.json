@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -78,7 +78,7 @@
       "source_compare_at_price": 675.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/o/p/open-box-tissot-seastar-chronograph-quartz-green-dial-mens-watch-t120-417-11-091-01-t1204171109101.jpg",
       "option_values": [
         {
@@ -111,10 +111,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T10:51:34Z",
-  "updated_at": "2026-09-22T18:28:36Z",
-  "last_verified_at": "2026-09-22T18:28:36Z",
+  "updated_at": "2026-10-29T05:37:06Z",
+  "last_verified_at": "2026-10-29T05:37:06Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838219894950",
   "shopify_handle": "open-box-tissot-seastar-chronograph-quartz-green-dial-mens-watch-t120-417-11-091-01",
-  "shopify_synced_at": "2026-09-24T16:10:46Z"
+  "shopify_synced_at": "2026-10-23T18:44:35Z",
+  "last_synced_fx_rate": 94.901331
 }

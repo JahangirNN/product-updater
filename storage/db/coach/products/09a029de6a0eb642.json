@@ -72,7 +72,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfw82_zc0_a0",
       "option_values": [
         {
@@ -152,7 +152,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfw82_zc0_a0",
       "option_values": [
         {
@@ -212,7 +212,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfw82_zc0_a0",
       "option_values": [
         {
@@ -232,7 +232,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfw82_zc0_a0",
       "option_values": [
         {
@@ -272,7 +272,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfw82_zc0_a0",
       "option_values": [
         {
@@ -335,11 +335,16 @@
     "women_shoes"
   ],
   "created_at": "2026-09-12T23:00:04Z",
-  "last_verified_at": "2026-09-22T05:23:33Z",
+  "last_verified_at": "2026-10-29T03:37:24Z",
   "id": "09a029de6a0eb642",
   "product_id": "09a029de6a0eb642",
   "store": "coach",
-  "updated_at": "2026-09-22T05:23:33Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:37:24Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15848604106918",
+  "shopify_handle": "soho-sneaker-with-signature-jacquard",
+  "shopify_synced_at": "2026-10-08T15:56:01Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.252751
 }

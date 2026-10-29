@@ -2,18 +2,18 @@
   "source_store": "jwpei",
   "source_url": "https://www.jwpei.com/products/thea-large-top-handle-bag-black",
   "handle": "thea-large-top-handle-bag-black",
-  "title": "Thea Large Top Handle Bag - Black",
+  "title": "Thea Large Top Handle Bag",
   "vendor": "JW PEI",
   "product_type": "2T78X001",
   "source_sku": "2T78X001-10",
   "source_price": 129.0,
   "source_compare_at_price": 129.0,
   "current_price": 12342.0,
-  "compare_at_price": 12392.0,
+  "compare_at_price": 12496.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Vegan Leather",
   "specifications": {
     "Main Material": "Vegan Leather",
@@ -50,7 +50,7 @@
       "source_compare_at_price": 129.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1773135871345-30bq9mzsdvu.jpg?v=1773136936",
       "option_values": [
         {
@@ -58,7 +58,8 @@
           "name": "Mocha Brown"
         }
       ],
-      "price_current": 12378.0
+      "price_current": 12378.0,
+      "is_available": false
     },
     {
       "id": 44394340450338,
@@ -70,7 +71,7 @@
       "source_compare_at_price": 129.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1773135834408-zqj7zmi4dzr.jpg?v=1773136919",
       "option_values": [
         {
@@ -78,7 +79,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 12383.0
+      "price_current": 12383.0,
+      "is_available": false
     },
     {
       "id": 44394340581410,
@@ -90,7 +92,7 @@
       "source_compare_at_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1773135794356-ot3rs8mj0h.jpg?v=1773136902",
       "option_values": [
         {
@@ -98,7 +100,8 @@
           "name": "Dark Red"
         }
       ],
-      "price_current": 14298.0
+      "price_current": 14298.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -126,7 +129,8 @@
     "26CODE20",
     "26RAM12",
     "26USMD",
-    "bags"
+    "bags",
+    "supplier-delisted"
   ],
   "groups": [
     "handbags"
@@ -135,13 +139,17 @@
   "validation_warnings": [],
   "id": "0af5417ae174a391",
   "created_at": "2026-09-09T15:49:51Z",
-  "updated_at": "2026-09-30T08:46:50Z",
-  "last_verified_at": "2026-09-30T08:46:50Z",
-  "is_active": true,
+  "updated_at": "2026-10-29T03:39:40Z",
+  "last_verified_at": "2026-10-29T03:39:38Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841771618470",
   "shopify_handle": "thea-large-top-handle-bag-black",
-  "shopify_synced_at": "2026-09-29T05:57:39Z",
+  "shopify_synced_at": "2026-10-29T03:39:38Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1773135834408-zqj7zmi4dzr.jpg?v=1773136919",
-  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1773135834408-zqj7zmi4dzr.jpg?v=1773136919"
+  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1773135834408-zqj7zmi4dzr.jpg?v=1773136919",
+  "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\0af5417ae174a391.json",
+  "canonical": true,
+  "delist_strikes": 117,
+  "supplier_delisted": true
 }

@@ -9,7 +9,7 @@
   "source_price": 119.0,
   "source_compare_at_price": 119.0,
   "current_price": 11419.0,
-  "compare_at_price": 11432.0,
+  "compare_at_price": 11257.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.957344,
@@ -46,7 +46,7 @@
       "source_compare_at_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779705249535-bqre26lge9v.jpg?v=1779786775",
       "option_values": [
         {
@@ -54,7 +54,8 @@
           "name": "Black Croc"
         }
       ],
-      "price_current": 10459.0
+      "price_current": 10459.0,
+      "is_available": false
     },
     {
       "id": 43851899699234,
@@ -66,7 +67,7 @@
       "source_compare_at_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T273-2-FRONT.jpg?v=1769148736",
       "option_values": [
         {
@@ -74,7 +75,8 @@
           "name": "White Croc"
         }
       ],
-      "price_current": 11419.0
+      "price_current": 11419.0,
+      "is_available": false
     },
     {
       "id": 43851942035490,
@@ -86,7 +88,7 @@
       "source_compare_at_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779705328346-rnz2mz5e2aa.jpg?v=1779786852",
       "option_values": [
         {
@@ -94,7 +96,8 @@
           "name": "Brown Canvas"
         }
       ],
-      "price_current": 10459.0
+      "price_current": 10459.0,
+      "is_available": false
     },
     {
       "id": 43851943444514,
@@ -106,7 +109,7 @@
       "source_compare_at_price": 99.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779099946547-28qpqjzs9y7.jpg?v=1779101902",
       "option_values": [
         {
@@ -114,7 +117,8 @@
           "name": "Deep Burgundy"
         }
       ],
-      "price_current": 9500.0
+      "price_current": 9500.0,
+      "is_available": false
     },
     {
       "id": 43953517166626,
@@ -126,7 +130,7 @@
       "source_compare_at_price": 99.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1780646317572-lj42ynnf0v.jpg?v=1780646656",
       "option_values": [
         {
@@ -134,7 +138,8 @@
           "name": "Elephant Gray"
         }
       ],
-      "price_current": 9500.0
+      "price_current": 9500.0,
+      "is_available": false
     },
     {
       "id": 43953517199394,
@@ -146,7 +151,7 @@
       "source_compare_at_price": 99.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779705406101-ky0zrfot5.jpg?v=1779786805",
       "option_values": [
         {
@@ -154,7 +159,8 @@
           "name": "Brown"
         }
       ],
-      "price_current": 9500.0
+      "price_current": 9500.0,
+      "is_available": false
     },
     {
       "id": 43953517232162,
@@ -166,7 +172,7 @@
       "source_compare_at_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T273-32-FRONT.jpg?v=1760086046",
       "option_values": [
         {
@@ -174,7 +180,8 @@
           "name": "Reddish Brown"
         }
       ],
-      "price_current": 10459.0
+      "price_current": 10459.0,
+      "is_available": false
     },
     {
       "id": 43953517363234,
@@ -186,7 +193,7 @@
       "source_compare_at_price": 139.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T273-34-FRONT.jpg?v=1760086163",
       "option_values": [
         {
@@ -194,7 +201,8 @@
           "name": "Dark Red"
         }
       ],
-      "price_current": 13338.0
+      "price_current": 13338.0,
+      "is_available": false
     },
     {
       "id": 43953517690914,
@@ -206,7 +214,7 @@
       "source_compare_at_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779705462398-mnm7k8uq7q.jpg?v=1779786818",
       "option_values": [
         {
@@ -214,7 +222,8 @@
           "name": "Red"
         }
       ],
-      "price_current": 11419.0
+      "price_current": 11419.0,
+      "is_available": false
     },
     {
       "id": 45101321977890,
@@ -226,7 +235,7 @@
       "source_compare_at_price": 129.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1775722520182-6udo45m0g1x.jpg?v=1775725416",
       "option_values": [
         {
@@ -234,7 +243,8 @@
           "name": "Blue Denim"
         }
       ],
-      "price_current": 12378.0
+      "price_current": 12378.0,
+      "is_available": false
     },
     {
       "id": 45300599914530,
@@ -254,7 +264,8 @@
           "name": "Pink Croc"
         }
       ],
-      "price_current": 10459.0
+      "price_current": 10459.0,
+      "is_available": false
     },
     {
       "id": 45300602175522,
@@ -274,7 +285,8 @@
           "name": "Ink Black"
         }
       ],
-      "price_current": 10459.0
+      "price_current": 10459.0,
+      "is_available": false
     },
     {
       "id": 45300602372130,
@@ -294,7 +306,8 @@
           "name": "Pink"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 11423.0,
+      "is_available": false
     },
     {
       "id": 45300676689954,
@@ -314,7 +327,8 @@
           "name": "Amber Brown"
         }
       ],
-      "price_current": 10459.0
+      "price_current": 10459.0,
+      "is_available": false
     },
     {
       "id": 45300684947490,
@@ -334,7 +348,8 @@
           "name": "Navy Blue"
         }
       ],
-      "price_current": 10459.0
+      "price_current": 10459.0,
+      "is_available": false
     },
     {
       "id": 45300684980258,
@@ -346,7 +361,7 @@
       "source_compare_at_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1780018285464-ddg7tommh9w.jpg?v=1780018982",
       "option_values": [
         {
@@ -354,7 +369,8 @@
           "name": "Blue Croc"
         }
       ],
-      "price_current": 10459.0
+      "price_current": 10459.0,
+      "is_available": false
     },
     {
       "id": 45300685013026,
@@ -366,7 +382,7 @@
       "source_compare_at_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1777084318457-vsqk1pkx65p.jpg?v=1777346549",
       "option_values": [
         {
@@ -374,7 +390,8 @@
           "name": "Forest Green"
         }
       ],
-      "price_current": 11419.0
+      "price_current": 11419.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -441,9 +458,10 @@
     "26ACT25",
     "26CODE20",
     "26noMD",
-    "bags",
     "Collection IV-CA",
-    "othersnotguaranteexmas"
+    "bags",
+    "othersnotguaranteexmas",
+    "supplier-delisted"
   ],
   "groups": [
     "handbags"
@@ -454,11 +472,17 @@
   "validation_warnings": [],
   "id": "32b12c0c93bb03b6",
   "created_at": "2026-09-19T11:15:34Z",
-  "updated_at": "2026-09-30T08:48:19Z",
-  "last_verified_at": "2026-09-30T08:48:19Z",
+  "updated_at": "2026-10-29T03:38:51Z",
+  "last_verified_at": "2026-10-29T03:38:48Z",
   "shopify_product_id": "gid://shopify/Product/15841774502054",
   "shopify_handle": "noor-faux-suede-top-handle-bag-pink",
-  "shopify_synced_at": "2026-09-29T05:58:26Z",
+  "shopify_synced_at": "2026-10-29T03:38:48Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1777084232940-cw4nk06i605.jpg?v=1777345949",
-  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1777084232940-cw4nk06i605.jpg?v=1777345949"
+  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1777084232940-cw4nk06i605.jpg?v=1777345949",
+  "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\32b12c0c93bb03b6.json",
+  "archived": true,
+  "canonical_product_id": "gid://shopify/Product/15838903238822",
+  "last_synced_fx_rate": 94.593871,
+  "delist_strikes": 26,
+  "supplier_delisted": true
 }

@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -75,7 +75,7 @@
       "source_compare_at_price": 1450.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/v/e/versace-greca-flourish-quartz-silver-dial-ladies-watch-ve7f00423.jpg",
       "option_values": [
         {
@@ -108,10 +108,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T10:48:04Z",
-  "updated_at": "2026-09-22T18:28:54Z",
-  "last_verified_at": "2026-09-22T18:28:54Z",
+  "updated_at": "2026-10-29T05:37:40Z",
+  "last_verified_at": "2026-10-29T05:37:40Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838211080358",
   "shopify_handle": "versace-greca-flourish-quartz-silver-dial-ladies-watch-ve7f00423",
-  "shopify_synced_at": "2026-09-24T15:37:38Z"
+  "shopify_synced_at": "2026-10-23T03:54:34Z",
+  "last_synced_fx_rate": 94.593871
 }

@@ -48,7 +48,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceb80_qsr_a0",
       "option_values": [
         {
@@ -68,7 +68,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceb80_p2u_a0",
       "option_values": [
         {
@@ -216,11 +216,16 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:39:44Z",
-  "last_verified_at": "2026-09-22T05:24:10Z",
+  "last_verified_at": "2026-10-29T03:37:44Z",
   "id": "2831718f404fac57",
   "product_id": "2831718f404fac57",
   "store": "coach",
-  "updated_at": "2026-09-22T05:24:10Z",
+  "updated_at": "2026-10-29T03:37:44Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841762705574",
+  "shopify_handle": "id-billfold-wallet-with-varsity-stripe",
+  "shopify_synced_at": "2026-10-26T22:00:41Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.160836
 }

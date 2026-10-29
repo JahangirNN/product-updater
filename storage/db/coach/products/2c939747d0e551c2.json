@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Chukka Boot In Signature Suede",
   "specifications": {
     "Material": "Chukka Boot In Signature Suede",
@@ -117,7 +117,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cek27_cqbk_a0",
       "option_values": [
         {
@@ -340,11 +340,16 @@
     "men_shoes"
   ],
   "created_at": "2026-09-13T00:39:55Z",
-  "last_verified_at": "2026-09-22T05:24:16Z",
+  "last_verified_at": "2026-10-29T03:37:47Z",
   "id": "2c939747d0e551c2",
   "product_id": "2c939747d0e551c2",
   "store": "coach",
-  "updated_at": "2026-09-22T05:24:16Z",
-  "is_active": true,
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-29T03:37:47Z",
+  "is_active": false,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15848604860582",
+  "shopify_handle": "chukka-boot-in-signature-suede",
+  "shopify_synced_at": "2026-10-28T07:40:01Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

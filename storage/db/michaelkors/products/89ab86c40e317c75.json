@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 9550,
+  "current_price": 9590.0,
   "source_price": 99.99,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/08d5a092-6900-4b3e-9297-a977536220c5/30S6GTVT2B-149-1546_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/08d5a092-6900-4b3e-9297-a977536220c5/30S6GTVT2B-149-1546_1-tif",
@@ -23,12 +23,12 @@
     {
       "sku": "30S6GTVT2B",
       "title": "1546",
-      "price": "9550.00",
+      "price": "9590.00",
       "compare_at_price": "21920.00",
       "source_price": 99.99,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/08d5a092-6900-4b3e-9297-a977536220c5/30S6GTVT2B-149-1546_1-tif",
       "option_values": [
         {
@@ -36,7 +36,7 @@
           "name": "1546"
         }
       ],
-      "price_current": 9598.0
+      "price_current": 9590.0
     }
   ],
   "options": [
@@ -78,12 +78,17 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-22T05:25:40Z",
+  "last_verified_at": "2026-10-29T03:36:59Z",
   "id": "89ab86c40e317c75",
   "created_at": "2026-09-11T18:30:35Z",
-  "updated_at": "2026-09-22T05:25:40Z",
+  "updated_at": "2026-10-29T03:36:59Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Jet Set Travel Medium Signature Logo Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 15.75”W X 10.5”H X 6.25”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 11”</li>\n      <li><strong>Material:</strong> Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 229.5,
-  "compare_at_price": 22040.0,
-  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane"
+  "compare_at_price": 21848.0,
+  "material": "Logo-print canvas, 89.4% coated canvas/9.6% polyester/1% polyurethane",
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841791901862",
+  "shopify_handle": "jet-set-travel-medium-signature-logo-tote-bag",
+  "shopify_synced_at": "2026-10-28T11:36:40Z",
+  "last_synced_fx_rate": 95.199335
 }

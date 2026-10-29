@@ -91,7 +91,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx55_imblk_a0",
       "option_values": [
         {
@@ -110,7 +110,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cgg17_imwbr_a0",
       "option_values": [
         {
@@ -148,7 +148,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cec13_svb9c_a0",
       "option_values": [
         {
@@ -205,7 +205,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfa37_impmc_a0",
       "option_values": [
         {
@@ -243,7 +243,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx55_imblk_a0",
       "option_values": [
         {
@@ -262,7 +262,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cec51_svmpl_a0",
       "option_values": [
         {
@@ -357,7 +357,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cec53_imylw_a0",
       "option_values": [
         {
@@ -376,7 +376,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cec53_impin_a0",
       "option_values": [
         {
@@ -490,7 +490,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccs83_imoat_a0",
       "option_values": [
         {
@@ -566,7 +566,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw883_imxdm_a0",
       "option_values": [
         {
@@ -585,7 +585,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw883_imxaq_a0",
       "option_values": [
         {
@@ -623,7 +623,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw883_svpwh_a0",
       "option_values": [
         {
@@ -642,7 +642,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw883_imxu5_a0",
       "option_values": [
         {
@@ -802,11 +802,16 @@
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:44:49Z",
-  "last_verified_at": "2026-09-22T05:26:42Z",
+  "last_verified_at": "2026-10-29T03:40:14Z",
   "id": "9f194329159a8a75",
   "product_id": "9f194329159a8a75",
   "store": "coach",
-  "updated_at": "2026-09-22T05:26:42Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:40:14Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841796456614",
+  "shopify_handle": "zip-card-case-cfx56-impop",
+  "shopify_synced_at": "2026-10-08T16:09:17Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.252751
 }

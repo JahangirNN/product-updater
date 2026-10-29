@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -74,7 +74,7 @@
       "source_compare_at_price": 495.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/m/o/movado-bold-quartz-grey-dial-men_s-watch-3600586.jpg",
       "option_values": [
         {
@@ -107,10 +107,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T14:52:55Z",
-  "updated_at": "2026-09-22T18:28:55Z",
-  "last_verified_at": "2026-09-22T18:28:55Z",
+  "updated_at": "2026-10-29T05:37:40Z",
+  "last_verified_at": "2026-10-29T05:37:40Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838892392614",
   "shopify_handle": "movado-bold-watch-3600586",
-  "shopify_synced_at": "2026-09-25T06:58:44Z"
+  "shopify_synced_at": "2026-10-13T21:28:42Z",
+  "last_synced_fx_rate": 95.252751
 }

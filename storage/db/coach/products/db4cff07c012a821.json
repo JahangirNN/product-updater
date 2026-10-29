@@ -69,7 +69,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceu08_svbk_a0",
       "option_values": [
         {
@@ -283,11 +283,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:47:24Z",
-  "last_verified_at": "2026-09-22T05:29:56Z",
+  "last_verified_at": "2026-10-29T05:37:51Z",
   "id": "db4cff07c012a821",
   "product_id": "db4cff07c012a821",
   "store": "coach",
-  "updated_at": "2026-09-22T05:29:56Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T05:37:51Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841769488550",
+  "shopify_handle": "pouch-in-signature-canvas-with-patches",
+  "shopify_synced_at": "2026-10-28T11:35:56Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

@@ -34,7 +34,7 @@ def check_price_and_stock(
     old_source_price = float(product.get("source_price") or 0.0)
     old_availability = product.get("availability", "unknown")
 
-    url = f"https://www.jwpei.com/products/{handle}.js?_cb={int(time.time())}"
+    url = f"https://www.jwpei.com/products/{handle}.js"
 
     for attempt in range(3):
         try:
@@ -70,7 +70,11 @@ def check_price_and_stock(
             elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
 
             if resp.status_code in (429, 403):
-                retry_after_sec = parse_retry_after(resp.headers.get("Retry-After"), default_cooldown=60.0)
+                retry_after_sec = parse_retry_after(resp.headers.get("Retry-After"), default_cooldown=3.0)
+                if attempt < 2:
+                    time.sleep(retry_after_sec + random.uniform(0.5, 1.5))
+                    continue
+
                 if rate_limiter and callable(getattr(rate_limiter, "record_throttle", None)):
                     rate_limiter.record_throttle(resolved_store)
                 elif isinstance(rate_limiter, dict) and callable(rate_limiter.get("record_throttle")):
@@ -95,10 +99,14 @@ def check_price_and_stock(
                     "variants_delta": [],
                     "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                     "elapsed_ms": elapsed_ms,
-                    "message": f"JW PEI HTTP {resp.status_code} WAF Throttled"
+                    "message": f"JW PEI HTTP {resp.status_code} WAF Throttled after retries"
                 }
 
             if resp.status_code == 404:
+                changed_vars = [
+                    {"sku": v.get("sku"), "old_in_stock": v.get("in_stock", True), "new_in_stock": False}
+                    for v in product.get("variants", []) if v.get("in_stock", True)
+                ]
                 return {
                     "status": "not_found",
                     "handle": handle,
@@ -109,17 +117,76 @@ def check_price_and_stock(
                     "is_active": False,
                     "price_changed": False,
                     "stock_changed": old_availability != "out_of_stock",
-                    "variant_stock_changed": False,
-                    "changed_variants": [],
+                    "variant_stock_changed": bool(changed_vars),
+                    "changed_variants": changed_vars,
                     "variant_price_changed": False,
                     "changed_variant_prices": [],
                     "variants_delta": [],
                     "elapsed_ms": elapsed_ms,
-                    "message": "Product delisted (HTTP 404)"
+                    "message": "Product delisted (HTTP 404)",
+                    "is_http_404": True,
+                    "http_status": 404
+                }
+
+            # Detect redirect away from product endpoint (e.g. redirected to homepage)
+            final_url = str(getattr(resp, "url", "") or "").lower().rstrip("/")
+            if final_url and (final_url in ("https://www.jwpei.com", "http://www.jwpei.com") or ("/products/" not in final_url and not final_url.endswith(".js"))):
+                changed_vars = [
+                    {"sku": v.get("sku"), "old_in_stock": v.get("in_stock", True), "new_in_stock": False}
+                    for v in product.get("variants", []) if v.get("in_stock", True)
+                ]
+                return {
+                    "status": "not_found",
+                    "handle": handle,
+                    "availability": "out_of_stock",
+                    "old_availability": old_availability,
+                    "current_source_price": old_source_price,
+                    "old_source_price": old_source_price,
+                    "is_active": False,
+                    "price_changed": False,
+                    "stock_changed": old_availability != "out_of_stock",
+                    "variant_stock_changed": bool(changed_vars),
+                    "changed_variants": changed_vars,
+                    "variant_price_changed": False,
+                    "changed_variant_prices": [],
+                    "variants_delta": [],
+                    "elapsed_ms": elapsed_ms,
+                    "message": "Product delisted (redirected to homepage)",
+                    "is_http_404": False,
+                    "http_status": resp.status_code
                 }
 
             resp.raise_for_status()
-            data = resp.json()
+            try:
+                data = resp.json()
+            except Exception:
+                data = None
+
+            if not isinstance(data, dict) or not data.get("title") or not data.get("id"):
+                changed_vars = [
+                    {"sku": v.get("sku"), "old_in_stock": v.get("in_stock", True), "new_in_stock": False}
+                    for v in product.get("variants", []) if v.get("in_stock", True)
+                ]
+                return {
+                    "status": "not_found",
+                    "handle": handle,
+                    "availability": "out_of_stock",
+                    "old_availability": old_availability,
+                    "current_source_price": old_source_price,
+                    "old_source_price": old_source_price,
+                    "is_active": False,
+                    "price_changed": False,
+                    "stock_changed": old_availability != "out_of_stock",
+                    "variant_stock_changed": bool(changed_vars),
+                    "changed_variants": changed_vars,
+                    "variant_price_changed": False,
+                    "changed_variant_prices": [],
+                    "variants_delta": [],
+                    "elapsed_ms": elapsed_ms,
+                    "message": "Product delisted (empty product payload)",
+                    "is_http_404": False,
+                    "http_status": resp.status_code
+                }
 
             if rate_limiter and callable(getattr(rate_limiter, "record_success", None)):
                 rate_limiter.record_success(resolved_store)

@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -76,7 +76,7 @@
       "source_compare_at_price": 1395.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/m/o/movado-museum-classic-black-dial-mens-watch-0607201.jpg",
       "option_values": [
         {
@@ -109,10 +109,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T14:52:55Z",
-  "updated_at": "2026-09-22T18:28:39Z",
-  "last_verified_at": "2026-09-22T18:28:39Z",
+  "updated_at": "2026-10-29T05:37:07Z",
+  "last_verified_at": "2026-10-29T05:37:07Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838891737254",
   "shopify_handle": "movado-museum-classic-watch-0607201",
-  "shopify_synced_at": "2026-09-25T06:57:56Z"
+  "shopify_synced_at": "2026-10-17T20:28:30Z",
+  "last_synced_fx_rate": 95.10014
 }

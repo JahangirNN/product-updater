@@ -9,11 +9,11 @@
   "source_price": 149.0,
   "source_compare_at_price": 149.0,
   "current_price": 14132.0,
-  "compare_at_price": 14293.0,
+  "compare_at_price": 14185.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Vegan Leather",
   "specifications": {
     "Main Material": "Vegan Leather",
@@ -48,7 +48,7 @@
       "source_compare_at_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/lwuydv165hi.jpg?v=1786680772",
       "option_values": [
         {
@@ -57,7 +57,7 @@
         }
       ],
       "price_current": 14302.0,
-      "is_available": false
+      "is_available": true
     }
   ],
   "product_options": [
@@ -84,13 +84,16 @@
   "validation_warnings": [],
   "id": "97f3450998a9c60a",
   "created_at": "2026-09-09T15:50:20Z",
-  "updated_at": "2026-09-30T08:50:01Z",
-  "last_verified_at": "2026-09-30T08:50:01Z",
-  "is_active": false,
-  "shopify_sync_pending": true,
+  "updated_at": "2026-10-29T05:38:25Z",
+  "last_verified_at": "2026-10-29T05:38:25Z",
+  "is_active": true,
+  "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841780793510",
   "shopify_handle": "maeve-dachshund-handle-bag-cognac",
-  "shopify_synced_at": "2026-09-29T06:00:12Z",
+  "shopify_synced_at": "2026-10-27T12:42:55Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/lwuydv165hi.jpg?v=1786680772",
-  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/lwuydv165hi.jpg?v=1786680772"
+  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/lwuydv165hi.jpg?v=1786680772",
+  "delist_strikes": 0,
+  "supplier_delisted": false,
+  "last_synced_fx_rate": 95.269051
 }

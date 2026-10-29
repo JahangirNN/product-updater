@@ -7,7 +7,7 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Sunglasses",
   "gender": "Women",
-  "current_price": 17097,
+  "current_price": 17187.0,
   "source_price": 179.0,
   "currency": "INR",
   "source_currency": "USD",
@@ -25,7 +25,7 @@
     {
       "sku": "MK-2295U",
       "title": "0255",
-      "price": "17097.00",
+      "price": "17187.00",
       "compare_at_price": null,
       "source_price": 179.0,
       "currency": "INR",
@@ -38,7 +38,7 @@
           "name": "0255"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 17187.0
     }
   ],
   "options": [
@@ -51,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Andermatt Sunglasses by Michael Kors.</p></div>",
+  "description_html": "<div class=\"product-description\"><p class=\"product-summary\">Andermatt Sunglasses by Michael Kors.</p>\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">Frame Specifications &amp; UV Protection</summary>\n    <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n      <tbody>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Silhouette</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Square sunglasses</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Material</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Acetate frame</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">UV Protection</td><td style=\"padding: 8px; border: 1px solid #ddd;\">100% UV Protection</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Fitting &amp; Size</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Universal Fit (One Size)</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Packaging</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Protective Michael Kors Sunglass Case Included</td></tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -59,15 +59,37 @@
     "StyleNumber": "MK-2295U",
     "Color": "0255",
     "SourceCurrency": "USD",
-    "TargetCurrency": "INR"
+    "TargetCurrency": "INR",
+    "DetailsBullets": [
+      "Square sunglasses",
+      "Acetate frame",
+      "Case included",
+      "100% UV protection",
+      "Imported"
+    ],
+    "Material": "Acetate frame"
   },
   "groups": [
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-22T05:23:37Z",
+  "last_verified_at": "2026-10-29T05:36:41Z",
   "id": "0c750b31356fc1aa",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-22T05:23:37Z",
-  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Andermatt Sunglasses by Michael Kors.</p></div>"
+  "updated_at": "2026-10-29T05:36:41Z",
+  "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Andermatt Sunglasses by Michael Kors.</p>\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">Frame Specifications &amp; UV Protection</summary>\n    <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n      <tbody>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Silhouette</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Square sunglasses</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Material</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Acetate frame</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">UV Protection</td><td style=\"padding: 8px; border: 1px solid #ddd;\">100% UV Protection</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Fitting &amp; Size</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Universal Fit (One Size)</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Packaging</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Protective Michael Kors Sunglass Case Included</td></tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "tags": [
+    "Accessories",
+    "Sunglasses",
+    "Designer Sunglasses",
+    "Michael Kors",
+    "Women",
+    "Women's"
+  ],
+  "material": "Acetate frame",
+  "shopify_product_id": "gid://shopify/Product/15840666615974",
+  "shopify_handle": "andermatt-sunglasses",
+  "shopify_synced_at": "2026-09-29T06:02:09Z",
+  "shopify_sync_pending": false,
+  "last_synced_fx_rate": 95.252751
 }

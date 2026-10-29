@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Refined pebble leather",
   "specifications": {
     "Material": "Refined pebble leather",
@@ -55,7 +55,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/c9875_qbbk_a0",
       "option_values": [
         {
@@ -85,10 +85,16 @@
     "men_bags"
   ],
   "created_at": "2026-09-13T00:48:28Z",
-  "last_verified_at": "2026-09-22T05:30:30Z",
+  "last_verified_at": "2026-10-29T03:36:38Z",
   "id": "f34b08c37b65f37e",
   "product_id": "f34b08c37b65f37e",
   "store": "coach",
-  "updated_at": "2026-09-22T05:30:30Z",
-  "is_active": false
+  "updated_at": "2026-10-29T03:36:38Z",
+  "is_active": true,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841798455462",
+  "shopify_handle": "sullivan-portfolio-brief-c9875-qb-bk",
+  "shopify_synced_at": "2026-10-28T19:36:44Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

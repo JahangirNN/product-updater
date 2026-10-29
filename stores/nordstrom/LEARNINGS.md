@@ -85,6 +85,12 @@ Derived directly from the official Nordstrom On shoe conversion guides:
 | **13.0** | **12.5** | 48.0 | 46 | 31.0 | 11 5/8 |
 | **14.0** | **13.5** | 49.0 | 43 | 31.5 | 12 |
 
+### 3.3 Single Canonical UK Size Option Standard (ADR 0025)
+To eliminate Cartesian variant selector confusion and checkout deadlocks on Shopify PDPs, all Nordstrom footwear variants are standardized to a single option named `Size` using pure UK values:
+- **Canonical Option**: `Size` (e.g. `UK 7`, `UK 7.5`, `UK 8`)
+- **Variant Titles**: `{UK Size} - {Color}`
+- **Size Guide Integration**: Full US, UK, and EU size translation matrices are embedded into the description HTML `<details>` accordion and theme modals.
+
 ---
 
 ## 4. Ingestion & Extraction Architecture (Tier 1)

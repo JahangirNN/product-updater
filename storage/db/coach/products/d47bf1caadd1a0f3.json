@@ -119,7 +119,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cbm50_svo1u_a0",
       "option_values": [
         {
@@ -139,7 +139,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cbm49_qba5f_a0",
       "option_values": [
         {
@@ -204,11 +204,16 @@
     "men_bags"
   ],
   "created_at": "2026-09-13T00:47:06Z",
-  "last_verified_at": "2026-09-22T05:29:25Z",
+  "last_verified_at": "2026-10-29T05:37:30Z",
   "id": "d47bf1caadd1a0f3",
   "product_id": "d47bf1caadd1a0f3",
   "store": "coach",
-  "updated_at": "2026-09-22T05:29:25Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T05:37:30Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841769324710",
+  "shopify_handle": "sprint-backpack-in-signature-canvas",
+  "shopify_synced_at": "2026-10-27T08:41:26Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.269051
 }

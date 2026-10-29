@@ -328,12 +328,13 @@ def generate_description_html(
     size_rows = "".join(
         f"<tr><td style='padding:6px 12px;text-align:center;'>{s['size_label']}</td>"
         f"<td style='padding:6px 12px;text-align:center;'>UK {s['uk_str']}</td>"
-        f"<td style='padding:6px 12px;text-align:center;'>EU {s['eu_str']}</td>"
-        f"<td style='padding:6px 12px;text-align:center;'>{'In Stock' if s['in_stock'] else 'Out of Stock'}</td></tr>"
+        f"<td style='padding:6px 12px;text-align:center;'>EU {s['eu_str']}</td></tr>"
         for s in sizes
     )
 
-    accordion_html = f"""
+    accordion_html = ""
+    if sizes:
+        accordion_html = f"""
 <details class="size-guide-accordion" style="margin: 20px 0; padding: 12px; border: 1px solid #e0e0e0; border-radius: 6px;">
   <summary style="font-weight: 600; cursor: pointer; font-size: 15px;">Nike Size Guide &amp; Conversions ({sizing_category} - {gender})</summary>
   <div style="margin-top: 12px;">
@@ -344,7 +345,6 @@ def generate_description_html(
           <th style="padding:6px 12px;text-align:center;">US Size</th>
           <th style="padding:6px 12px;text-align:center;">UK Size</th>
           <th style="padding:6px 12px;text-align:center;">EU Size</th>
-          <th style="padding:6px 12px;text-align:center;">Availability</th>
         </tr>
       </thead>
       <tbody>{size_rows}</tbody>
@@ -465,7 +465,10 @@ def parse_product_payload(
             except (ValueError, TypeError):
                 pass
             avail_str = str(v_offers.get("availability") or "").lower()
-            v_in_stock = ("instock" in avail_str or "in_stock" in avail_str)
+            if avail_str:
+                v_in_stock = ("instock" in avail_str or "in_stock" in avail_str)
+            else:
+                v_in_stock = bool(v.get("in_stock", False) or v.get("available", False))
         else:
             v_in_stock = bool(v.get("in_stock", False) or v.get("available", False))
 
@@ -610,7 +613,7 @@ def parse_product_payload(
         variants.append({
             "id": None,
             "sku": var_sku,
-            "title": f"{s['size_label']} / UK {s['uk_str']} - {color or 'Standard'}",
+            "title": f"UK {s['uk_str']} - {color or 'Standard'}",
             "price": f"{v_inr_p:.2f}",
             "price_current": v_inr_p,
             "compare_at_price": f"{compare_inr:.2f}" if compare_inr else None,
@@ -621,11 +624,25 @@ def parse_product_payload(
             "in_stock": s["in_stock"],
             "image_url": featured_image,
             "option_values": [
-                {"option_name": "Size (US)", "name": s["size_label"]},
-                {"option_name": "Size (UK)", "name": f"UK {s['uk_str']}"},
+                {"option_name": "Size", "name": f"UK {s['uk_str']}"},
                 {"option_name": "Color", "name": color or "Standard"}
             ]
         })
+
+    # Deduplicate variants by unique (Size, Color) option combination
+    seen_combos: Dict[Tuple[str, str], Dict[str, Any]] = {}
+    deduped_variants = []
+    for v in variants:
+        sz_val = next((ov["name"] for ov in v.get("option_values", []) if ov.get("option_name") == "Size"), "")
+        col_val = next((ov["name"] for ov in v.get("option_values", []) if ov.get("option_name") == "Color"), "")
+        combo_key = (sz_val, col_val)
+        if combo_key not in seen_combos:
+            seen_combos[combo_key] = v
+            deduped_variants.append(v)
+        else:
+            if v.get("in_stock") and not seen_combos[combo_key].get("in_stock"):
+                seen_combos[combo_key]["in_stock"] = True
+    variants = deduped_variants
 
     # 6. Parent-Variant Stock Harmony (ADR 0015)
     has_any_stock = any(v["in_stock"] for v in variants)
@@ -648,14 +665,18 @@ def parse_product_payload(
     raw_desc = str(raw_data.get("description") or raw_data.get("body_html") or "").strip()
     description_html = generate_description_html(title, raw_desc, sizing_category, gender, specs, deduped_sizes)
 
+    seen_uk = set()
+    uk_option_values = []
+    for s in deduped_sizes:
+        uk_name = f"UK {s['uk_str']}"
+        if uk_name not in seen_uk:
+            seen_uk.add(uk_name)
+            uk_option_values.append({"name": uk_name})
+
     product_options = [
         {
-            "name": "Size (US)",
-            "values": [{"name": s["size_label"]} for s in deduped_sizes]
-        },
-        {
-            "name": "Size (UK)",
-            "values": [{"name": f"UK {s['uk_str']}"} for s in deduped_sizes]
+            "name": "Size",
+            "values": uk_option_values
         },
         {
             "name": "Color",

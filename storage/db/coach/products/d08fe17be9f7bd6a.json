@@ -7,9 +7,9 @@
   "product_type": "Shoulder Bags",
   "gender": "Women",
   "source_sku": "CFP00 IMBLK",
-  "source_price": 229.0,
+  "source_price": 189.0,
   "source_compare_at_price": null,
-  "current_price": 21909.0,
+  "current_price": 17993.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -67,9 +67,9 @@
       "id": null,
       "sku": "CFP00 IMBLK",
       "title": "Gold/Black",
-      "price": "21909.00",
+      "price": "17993.00",
       "compare_at_price": null,
-      "source_price": 229.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -81,15 +81,15 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 21982.0
+      "price_current": 17993.0
     },
     {
       "id": null,
       "sku": "CFP00 IMPOP",
       "title": "Gold/Poppy",
-      "price": "21909.00",
+      "price": "17993.00",
       "compare_at_price": null,
-      "source_price": 229.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -101,15 +101,15 @@
           "name": "Gold/Poppy"
         }
       ],
-      "price_current": 21982.0
+      "price_current": 17993.0
     },
     {
       "id": null,
       "sku": "CFP00 IMMPL",
       "title": "Gold/Maple",
-      "price": "21909.00",
+      "price": "17993.00",
       "compare_at_price": null,
-      "source_price": 229.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -121,15 +121,15 @@
           "name": "Gold/Maple"
         }
       ],
-      "price_current": 21982.0
+      "price_current": 17993.0
     },
     {
       "id": null,
       "sku": "CFP01 SV/BK",
       "title": "Silver/BLACK",
-      "price": "21909.00",
+      "price": "17993.00",
       "compare_at_price": null,
-      "source_price": 229.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -141,15 +141,15 @@
           "name": "Silver/BLACK"
         }
       ],
-      "price_current": 21982.0
+      "price_current": 17993.0
     },
     {
       "id": null,
       "sku": "CFP04 IMXAQ",
       "title": "Gold/Walnut/Black",
-      "price": "21909.00",
+      "price": "17993.00",
       "compare_at_price": null,
-      "source_price": 229.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -161,7 +161,7 @@
           "name": "Gold/Walnut/Black"
         }
       ],
-      "price_current": 21982.0
+      "price_current": 17993.0
     }
   ],
   "product_options": [
@@ -195,11 +195,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:46:53Z",
-  "last_verified_at": "2026-09-22T05:29:17Z",
+  "last_verified_at": "2026-10-29T05:37:12Z",
   "id": "d08fe17be9f7bd6a",
   "product_id": "d08fe17be9f7bd6a",
   "store": "coach",
-  "updated_at": "2026-09-22T05:29:17Z",
+  "updated_at": "2026-10-29T05:37:12Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841769226406",
+  "shopify_handle": "sydney-shoulder-bag",
+  "shopify_synced_at": "2026-10-28T11:35:02Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

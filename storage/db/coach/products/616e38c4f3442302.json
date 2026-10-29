@@ -77,13 +77,13 @@
       "id": null,
       "sku": "CFP27 IMBLK",
       "title": "Gold/Black",
-      "price": "16169.00",
+      "price": "14374.00",
       "compare_at_price": null,
-      "source_price": 169.0,
+      "source_price": 149.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfp27_imblk_a0",
       "option_values": [
         {
@@ -91,15 +91,15 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 16222.0
+      "price_current": 14374.0
     },
     {
       "id": null,
       "sku": "CFP28 IMCED",
       "title": "IM/Cedar",
-      "price": "16169.00",
+      "price": "14374.00",
       "compare_at_price": null,
-      "source_price": 169.0,
+      "source_price": 149.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -111,7 +111,7 @@
           "name": "IM/Cedar"
         }
       ],
-      "price_current": 16222.0
+      "price_current": 14374.0
     },
     {
       "id": null,
@@ -143,7 +143,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdb67_svbk_a0",
       "option_values": [
         {
@@ -203,7 +203,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfp27_imblk_a0",
       "option_values": [
         {
@@ -314,11 +314,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:42:18Z",
-  "last_verified_at": "2026-09-22T05:25:25Z",
+  "last_verified_at": "2026-10-29T03:38:24Z",
   "id": "616e38c4f3442302",
   "product_id": "616e38c4f3442302",
   "store": "coach",
-  "updated_at": "2026-09-22T05:25:25Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:38:24Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841765359782",
+  "shopify_handle": "faye-mini-drawstring-bag",
+  "shopify_synced_at": "2026-10-28T23:42:57Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

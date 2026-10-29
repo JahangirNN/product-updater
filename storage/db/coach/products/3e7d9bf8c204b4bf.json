@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Corner Zip Wristlet In Signature Leather",
   "specifications": {
     "Material": "Corner Zip Wristlet In Signature Leather",
@@ -97,7 +97,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cex36_imuwr_a0",
       "option_values": [
         {
@@ -133,11 +133,16 @@
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:41:00Z",
-  "last_verified_at": "2026-09-22T05:24:45Z",
+  "last_verified_at": "2026-10-29T03:39:24Z",
   "id": "3e7d9bf8c204b4bf",
   "product_id": "3e7d9bf8c204b4bf",
   "store": "coach",
-  "updated_at": "2026-09-22T05:24:45Z",
-  "is_active": false,
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-29T03:39:24Z",
+  "is_active": true,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841764114598",
+  "shopify_handle": "corner-zip-wristlet-in-signature-leather",
+  "shopify_synced_at": "2026-10-28T19:45:08Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

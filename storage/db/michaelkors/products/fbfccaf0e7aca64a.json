@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 23901,
-  "source_price": 249.0,
+  "current_price": 10549.0,
+  "source_price": 109.99,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/65b3e7a9-dbbb-4174-8b86-4d5ceb3922cd/30S6SY5H3W-003-0799_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/65b3e7a9-dbbb-4174-8b86-4d5ceb3922cd/30S6SY5H3W-003-0799_1-tif",
@@ -23,12 +23,12 @@
     {
       "sku": "30S6SY5H3W",
       "title": "Brn/Acorn",
-      "price": "23901.00",
+      "price": "10549.00",
       "compare_at_price": "36428.00",
-      "source_price": 249.0,
+      "source_price": 109.99,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/65b3e7a9-dbbb-4174-8b86-4d5ceb3922cd/30S6SY5H3W-003-0799_1-tif",
       "option_values": [
         {
@@ -36,7 +36,7 @@
           "name": "Brn/Acorn"
         }
       ],
-      "price_current": 23901.0
+      "price_current": 10549.0
     }
   ],
   "options": [
@@ -77,12 +77,16 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-22T05:28:14Z",
+  "last_verified_at": "2026-10-29T03:37:30Z",
   "id": "fbfccaf0e7aca64a",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-22T05:28:14Z",
+  "updated_at": "2026-10-29T03:37:30Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nolita Large Crocheted Hobo Shoulder Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 15.75”W X 11.5” H X 3.25”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 10.75&quot;</li>\n      <li><strong>Hardware:</strong> Silver-tone hardware</li>\n      <li><strong>Closure:</strong> Snap fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 379.5,
-  "compare_at_price": 36446.0,
-  "shopify_sync_pending": true
+  "compare_at_price": 36128.0,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841794982054",
+  "shopify_handle": "nolita-large-crocheted-hobo-shoulder-bag",
+  "shopify_synced_at": "2026-10-27T04:44:37Z",
+  "last_synced_fx_rate": 95.160836
 }

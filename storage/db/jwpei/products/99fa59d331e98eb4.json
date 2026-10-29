@@ -9,11 +9,11 @@
   "source_price": 129.0,
   "source_compare_at_price": 129.0,
   "current_price": 12235.0,
-  "compare_at_price": 12392.0,
+  "compare_at_price": 12281.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Pet",
   "specifications": {
     "Main Material": "Pet",
@@ -728,7 +728,7 @@
       "source_compare_at_price": 129.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1788517419853-4lgpqa5ddg3.jpg?v=1788517741",
       "option_values": [
         {
@@ -896,13 +896,17 @@
   "validation_warnings": [],
   "id": "99fa59d331e98eb4",
   "created_at": "2026-09-09T15:49:03Z",
-  "updated_at": "2026-09-30T08:50:04Z",
-  "last_verified_at": "2026-09-30T08:50:04Z",
-  "is_active": true,
+  "updated_at": "2026-10-29T05:38:29Z",
+  "last_verified_at": "2026-10-29T05:38:29Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841780990118",
   "shopify_handle": "cleo-metallic-sequin-box-shape-top-handle-bag-brown",
-  "shopify_synced_at": "2026-09-29T06:00:17Z",
+  "shopify_synced_at": "2026-10-24T14:46:10Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1788517419853-4lgpqa5ddg3.jpg?v=1788517741",
-  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1788517419853-4lgpqa5ddg3.jpg?v=1788517741"
+  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1788517419853-4lgpqa5ddg3.jpg?v=1788517741",
+  "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\99fa59d331e98eb4.json",
+  "archived": true,
+  "canonical_product_id": "gid://shopify/Product/15841771192486",
+  "last_synced_fx_rate": 94.901331
 }

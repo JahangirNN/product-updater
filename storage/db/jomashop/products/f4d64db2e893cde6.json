@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "TR90 Composite",
   "specifications": {
     "Box Type": "Original Box",
@@ -78,7 +78,7 @@
       "source_compare_at_price": 495.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/m/o/movado-bold-quartz-black-dial-black-leather-men_s-watch-3600307_5.jpg",
       "option_values": [
         {
@@ -111,10 +111,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T14:52:56Z",
-  "updated_at": "2026-09-22T18:29:45Z",
-  "last_verified_at": "2026-09-22T18:29:45Z",
+  "updated_at": "2026-10-29T05:37:28Z",
+  "last_verified_at": "2026-10-29T05:37:28Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838894948518",
   "shopify_handle": "movado-watch-3600307",
-  "shopify_synced_at": "2026-09-25T07:01:37Z"
+  "shopify_synced_at": "2026-10-10T17:25:33Z",
+  "last_synced_fx_rate": 95.252751
 }

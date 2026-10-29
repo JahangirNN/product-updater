@@ -411,11 +411,13 @@ def check_price_and_stock(
                         new_v_price = float(sku_map[v_sku].get("price_usd") or 0.0)
                         if new_v_price > 0 and old_v_price > 0 and abs(new_v_price - old_v_price) > 0.01:
                             variant_price_changed = True
+                            var_comp = var.get("source_compare_at_price") or var.get("compare_at_price_source")
                             changed_variant_prices.append({
                                 "sku": v_sku,
                                 "size": var.get("size") or var.get("title") or "",
                                 "old_source_price": old_v_price,
-                                "new_source_price": new_v_price
+                                "new_source_price": new_v_price,
+                                "source_compare_at_price": float(var_comp) if var_comp is not None else None
                             })
 
             return {
@@ -425,6 +427,7 @@ def check_price_and_stock(
                 "old_source_price": old_source_price,
                 "new_source_price": current_source_price,
                 "current_compare_price": current_compare_price,
+                "current_compare_at_price": current_compare_price,
                 "availability": current_availability,
                 "old_availability": old_availability,
                 "new_availability": current_availability,
@@ -540,10 +543,13 @@ def apply_delta_to_product(
         product["source_price"] = new_source_price
         product["current_price"] = float(round(new_source_price * forex_rate))
 
-    new_compare_price = delta_result.get("current_compare_price")
+    new_compare_price = delta_result.get("current_compare_at_price") or delta_result.get("current_compare_price")
     if new_compare_price is not None:
         try:
-            product["compare_at_price"] = float(round(float(new_compare_price) * forex_rate))
+            val = float(new_compare_price)
+            if val > 0:
+                product["source_compare_at_price"] = val
+                product["compare_at_price"] = float(round(val * forex_rate))
         except (ValueError, TypeError):
             pass
 

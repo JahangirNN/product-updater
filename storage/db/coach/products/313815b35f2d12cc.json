@@ -7,9 +7,9 @@
   "product_type": "Handbags",
   "gender": "Women",
   "source_sku": "CFP27 IMBLK",
-  "source_price": 169.0,
+  "source_price": 149.0,
   "source_compare_at_price": null,
-  "current_price": 16169.0,
+  "current_price": 14374.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -55,13 +55,13 @@
       "id": null,
       "sku": "CFP27 IMBLK",
       "title": "Gold/Black",
-      "price": "16169.00",
+      "price": "14374.00",
       "compare_at_price": null,
-      "source_price": 169.0,
+      "source_price": 149.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfp27_imblk_a0",
       "option_values": [
         {
@@ -69,15 +69,15 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 16222.0
+      "price_current": 14374.0
     },
     {
       "id": null,
       "sku": "CFP28 IMCED",
       "title": "IM/Cedar",
-      "price": "16169.00",
+      "price": "14374.00",
       "compare_at_price": null,
-      "source_price": 169.0,
+      "source_price": 149.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -89,7 +89,7 @@
           "name": "IM/Cedar"
         }
       ],
-      "price_current": 16222.0
+      "price_current": 14374.0
     },
     {
       "id": null,
@@ -121,7 +121,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdb67_svbk_a0",
       "option_values": [
         {
@@ -181,7 +181,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfp27_imblk_a0",
       "option_values": [
         {
@@ -292,11 +292,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:40:21Z",
-  "last_verified_at": "2026-09-22T05:24:28Z",
+  "last_verified_at": "2026-10-29T03:37:59Z",
   "id": "313815b35f2d12cc",
   "product_id": "313815b35f2d12cc",
   "store": "coach",
-  "updated_at": "2026-09-22T05:24:28Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:37:59Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841795244198",
+  "shopify_handle": "faye-mini-drawstring-bag-with-fringe-cfp27-imblk",
+  "shopify_synced_at": "2026-10-28T19:40:54Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

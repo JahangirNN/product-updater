@@ -8,15 +8,15 @@
   "product_type": "Watches",
   "gender": "Men's",
   "source_sku": "SE-SUR377",
-  "source_price": 239.0,
+  "source_price": 249.0,
   "source_compare_at_price": 385.0,
-  "current_price": 22953.0,
+  "current_price": 23718.0,
   "compare_at_price": 36974.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Titanium",
   "specifications": {
     "Box Type": "Original Box",
@@ -73,14 +73,14 @@
       "id": null,
       "sku": "SE-SUR377",
       "title": "40 mm - Green / Titanium",
-      "price": "22953.00",
-      "price_current": 22953.0,
+      "price": "23718.00",
+      "price_current": 23718.0,
       "compare_at_price": "36974.00",
-      "source_price": 239.0,
+      "source_price": 249.0,
       "source_compare_at_price": 385.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/s/e/seiko-classic-quartz-green-dial-mens-watch-sur377.jpg",
       "option_values": [
         {
@@ -113,10 +113,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T10:48:05Z",
-  "updated_at": "2026-09-22T18:29:42Z",
-  "last_verified_at": "2026-09-22T18:29:42Z",
+  "updated_at": "2026-10-29T05:37:26Z",
+  "last_verified_at": "2026-10-29T05:37:26Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838894686374",
   "shopify_handle": "seiko-classic-quartz-green-dial-mens-watch-sur377",
-  "shopify_synced_at": "2026-09-25T07:01:25Z"
+  "shopify_synced_at": "2026-10-16T18:29:41Z",
+  "last_synced_fx_rate": 95.252751
 }

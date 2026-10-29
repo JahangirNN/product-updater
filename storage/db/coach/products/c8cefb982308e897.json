@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Leather and mesh upper",
   "specifications": {
     "Material": "Leather and mesh upper",
@@ -70,7 +70,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cde28_l77_a0",
       "option_values": [
         {
@@ -150,7 +150,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cde28_l77_a0",
       "option_values": [
         {
@@ -353,11 +353,16 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:46:34Z",
-  "last_verified_at": "2026-09-22T05:28:32Z",
+  "last_verified_at": "2026-10-29T05:36:58Z",
   "id": "c8cefb982308e897",
   "product_id": "c8cefb982308e897",
   "store": "coach",
-  "updated_at": "2026-09-22T05:28:32Z",
-  "is_active": true,
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-29T05:36:58Z",
+  "is_active": false,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15848609939622",
+  "shopify_handle": "bolt-runner-sneaker",
+  "shopify_synced_at": "2026-10-24T06:43:45Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 94.901331
 }

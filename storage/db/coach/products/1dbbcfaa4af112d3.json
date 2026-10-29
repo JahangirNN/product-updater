@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Refined Leather",
   "specifications": {
     "Lining": "Fabric lining and footbed",
@@ -59,7 +59,8 @@
           "name": "US 5 / UK 3"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -79,7 +80,8 @@
           "name": "US 5.5 / UK 3.5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -99,7 +101,8 @@
           "name": "US 6 / UK 4"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -119,7 +122,8 @@
           "name": "US 6.5 / UK 4.5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -139,7 +143,8 @@
           "name": "US 7 / UK 5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -159,7 +164,8 @@
           "name": "US 7.5 / UK 5.5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -179,7 +185,8 @@
           "name": "US 8 / UK 6"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -199,7 +206,8 @@
           "name": "US 8.5 / UK 6.5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -219,7 +227,8 @@
           "name": "US 9 / UK 7"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -239,7 +248,8 @@
           "name": "US 9.5 / UK 7.5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -251,7 +261,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx45_zcn_a0",
       "option_values": [
         {
@@ -259,7 +269,8 @@
           "name": "US 10 / UK 8"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -279,7 +290,8 @@
           "name": "US 11 / UK 9"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -327,18 +339,25 @@
   ],
   "tags": [
     "COACH",
+    "Shoes & Footwear",
     "Women",
-    "Shoes & Footwear"
+    "supplier-delisted"
   ],
   "groups": [
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:39:14Z",
-  "last_verified_at": "2026-09-22T05:23:51Z",
+  "last_verified_at": "2026-10-29T03:37:34Z",
   "id": "1dbbcfaa4af112d3",
   "product_id": "1dbbcfaa4af112d3",
   "store": "coach",
-  "updated_at": "2026-09-22T05:23:51Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:37:36Z",
+  "shopify_sync_pending": false,
+  "is_active": false,
+  "shopify_product_id": "gid://shopify/Product/15848604532902",
+  "shopify_handle": "soft-soho-sneaker-in-signature-sateen-jacquard",
+  "shopify_synced_at": "2026-10-29T03:37:34Z",
+  "delist_strikes": 6,
+  "last_synced_fx_rate": 95.199335,
+  "supplier_delisted": true
 }

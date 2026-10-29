@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-09-22T14:59:10Z",
+  "timestamp": "2026-09-23T17:03:20Z",
   "total_sampled": 24,
-  "divergence_count": 4,
-  "concordance_rate_pct": 83.33,
+  "divergence_count": 5,
+  "concordance_rate_pct": 79.17,
   "records": [
     {
       "store": "coach",
@@ -91,9 +91,9 @@
       "live_price_usd": 189.0,
       "stored_price_inr": 18142.0,
       "stored_availability": "in_stock",
-      "live_availability": "in_stock",
-      "diverged": false,
-      "divergence_details": "Zero Divergence (100% Parity)"
+      "live_availability": "out_of_stock",
+      "diverged": true,
+      "divergence_details": "Price Div: False (live 189.0 vs stored 189.0), Avail Div: True (live out_of_stock vs stored in_stock)"
     },
     {
       "store": "michaelkors",

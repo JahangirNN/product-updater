@@ -83,7 +83,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdy04_imyw7_a0",
       "option_values": [
         {
@@ -139,11 +139,16 @@
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:42:08Z",
-  "last_verified_at": "2026-09-22T05:25:23Z",
+  "last_verified_at": "2026-10-29T03:38:21Z",
   "id": "5d57d9d73a7218bf",
   "product_id": "5d57d9d73a7218bf",
   "store": "coach",
-  "updated_at": "2026-09-22T05:25:23Z",
+  "updated_at": "2026-10-29T03:38:21Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841795571878",
+  "shopify_handle": "ashton-wristlet-cdy04-sv-bk",
+  "shopify_synced_at": "2026-10-27T23:41:20Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.269051
 }

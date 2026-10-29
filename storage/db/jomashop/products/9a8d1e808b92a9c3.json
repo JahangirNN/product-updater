@@ -8,15 +8,15 @@
   "product_type": "Watches",
   "gender": "Women's",
   "source_sku": "SE-SWR075P1",
-  "source_price": 174.0,
+  "source_price": 189.0,
   "source_compare_at_price": 315.0,
-  "current_price": 16710.0,
+  "current_price": 18003.0,
   "compare_at_price": 30252.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -69,14 +69,14 @@
       "id": null,
       "sku": "SE-SWR075P1",
       "title": "26 mm - Green / Stainless Steel",
-      "price": "16710.00",
-      "price_current": 16710.0,
+      "price": "18003.00",
+      "price_current": 18003.0,
       "compare_at_price": "30252.00",
-      "source_price": 174.0,
+      "source_price": 189.0,
       "source_compare_at_price": 315.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/s/e/seiko-essentials-quartz-green-dial-ladies-watch-swr075p1.jpg",
       "option_values": [
         {
@@ -109,10 +109,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T10:48:05Z",
-  "updated_at": "2026-09-22T18:27:59Z",
-  "last_verified_at": "2026-09-22T18:27:59Z",
+  "updated_at": "2026-10-29T05:36:47Z",
+  "last_verified_at": "2026-10-29T05:36:47Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838889017510",
   "shopify_handle": "seiko-essentials-quartz-green-dial-ladies-watch-swr075p1",
-  "shopify_synced_at": "2026-09-25T06:55:47Z"
+  "shopify_synced_at": "2026-10-16T18:27:24Z",
+  "last_synced_fx_rate": 95.252751
 }

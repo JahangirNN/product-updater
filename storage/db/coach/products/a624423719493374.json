@@ -125,7 +125,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cer86_b4pgb_a0",
       "option_values": [
         {
@@ -187,11 +187,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:45:08Z",
-  "last_verified_at": "2026-09-22T05:26:51Z",
+  "last_verified_at": "2026-10-29T03:40:21Z",
   "id": "a624423719493374",
   "product_id": "a624423719493374",
   "store": "coach",
-  "updated_at": "2026-09-22T05:26:51Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:40:21Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841767751846",
+  "shopify_handle": "jade-drawstring-bag",
+  "shopify_synced_at": "2026-10-21T09:37:45Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.052511
 }

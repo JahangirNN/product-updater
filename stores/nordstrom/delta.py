@@ -110,9 +110,19 @@ def check_price_and_stock(
 
             price_in_range = (abs(old_source_price - p_min) < 0.01) or (p_min <= old_source_price <= p_max) if old_source_price > 0 else False
             stock_unchanged = (live_avail == old_availability)
+            has_child_variants = len(product.get("variants") or []) > 1
 
-            if price_in_range and stock_unchanged and cached_in_stock:
+            # Only bypass PDP visit if product has NO multi-size child variants.
+            # Multi-variant footwear must proceed to Tier 2 so granular size availability is verified.
+            if price_in_range and stock_unchanged and cached_in_stock and not has_child_variants:
                 elapsed_ms = round((time.perf_counter() - t_start) * 1000, 2)
+                single_var_deltas = []
+                for v in (product.get("variants") or []):
+                    single_var_deltas.append({
+                        "sku": v.get("sku"),
+                        "available": True,
+                        "price_usd": old_source_price
+                    })
                 return {
                     "status": "success",
                     "handle": handle,
@@ -125,7 +135,7 @@ def check_price_and_stock(
                     "price_changed": False,
                     "stock_changed": False,
                     "size_stock": {},
-                    "variants_delta": [],
+                    "variants_delta": single_var_deltas,
                     "elapsed_ms": elapsed_ms
                 }
 
@@ -268,6 +278,17 @@ def check_price_and_stock(
             }
 
         elif status == "not_found":
+            variant_stock_changed = False
+            changed_variants = []
+            for var in product.get("variants", []):
+                if var.get("in_stock", False):
+                    variant_stock_changed = True
+                    changed_variants.append({
+                        "sku": var.get("sku", ""),
+                        "old_in_stock": True,
+                        "new_in_stock": False
+                    })
+            is_404 = bool(solve_res.get("is_http_404") or "404" in str(solve_res.get("message", "")) or solve_res.get("http_status") == 404)
             return {
                 "status": "not_found",
                 "handle": handle,
@@ -278,13 +299,15 @@ def check_price_and_stock(
                 "is_active": False,
                 "price_changed": False,
                 "stock_changed": old_availability != "out_of_stock",
-                "variant_stock_changed": False,
-                "changed_variants": [],
+                "variant_stock_changed": variant_stock_changed,
+                "changed_variants": changed_variants,
                 "variant_price_changed": False,
                 "changed_variant_prices": [],
                 "variants_delta": [],
                 "elapsed_ms": elapsed_ms,
-                "message": "Product delisted (HTTP 404)"
+                "message": solve_res.get("message", "Product delisted (HTTP 404)"),
+                "is_http_404": is_404,
+                "http_status": solve_res.get("http_status", 404 if is_404 else 200)
             }
 
         elif status == "blocked":

@@ -127,18 +127,27 @@ When Firecrawl ingests a product, it normalizes the raw output into a strict sch
 
 ## 4. Systematic Delta Update Workflow
 
-1. **Schedule Trigger**: Operator CLI or scheduled cron triggers `python sync_catalog.py` (reads `config/delta_config.json`, default 120m).
-2. **Product-Level Eligibility Filtering**:
+1. **Schedule Trigger**: Operator CLI or background daemon (`scripts/run_freshner_daemon.py`) triggers `sync_catalog.py` (reads `config/delta_config.json`, default 60m).
+2. **Product-Level Eligibility Filtering & Fair LRU Queueing**:
    - Compares `now - product.last_verified_at`.
    - If `elapsed < interval_minutes`, product is skipped (0 network calls).
    - If `elapsed >= interval_minutes` (or `--force`), product is queued for verification.
-3. **Store Dynamic Dispatch**: Products are partitioned by store and dispatched to `stores/{store}/delta.py`.
-4. **Execution & Polite Pacing**: Lightweight storefront AJAX checks (`/products/{handle}.js`) run across worker threads with 80ms polite delays and exponential backoff on 429.
-5. **Comparison & Audit**:
-   - If price has shifted: Updates `source_price` (USD), recalculates `current_price` (INR) via cached forex rate, sets `shopify_sync_pending = True`, updates `last_verified_at`, and appends an event to `storage/db/history/delta_events.json`.
-   - If availability has flipped: Updates `availability` (`in_stock` $\leftrightarrow$ `out_of_stock`), updates variant availability, sets `shopify_sync_pending = True`, updates `last_verified_at`, and appends an event to `delta_events.json`.
+   - **True LRU Sorting**: Due products are sorted by elapsed minutes descending (`reverse=True`), ensuring unverified and severely starved items are prioritized first in every cycle.
+3. **Store Dynamic Dispatch**: Products are partitioned by store and dispatched to `stores/{store}/delta.py` with per-store concurrency and rate-limiter controls:
+   - **JD Sports**: Pure HTTP Algolia search cloud queries (~150–350ms) with reverse UK-to-US variant size reconciliation (ADR 0027).
+   - **JW PEI**: Lightweight Shopify `.js` endpoints with 0.5s polite pacing and edge caching (no cache busters).
+   - **Coach & Michael Kors**: SFCC Demandware / Scene7 high-speed endpoints (~400ms).
+   - **Jomashop**: Apollo GraphQL price & stock queries (~350ms).
+   - **Foot Locker**: Hydrated SSR state queries (~450ms).
+   - **Nordstrom**: Local Camoufox stealth browser solving client-side Kasada challenges (~4s).
+4. **Delisted Lifecycle & Multi-Strike Circuit (ADR 0026)**:
+   - Permanent 404s or 0-hit Algolia searches return `status: "not_found"`.
+   - After 2 consecutive delisting strikes, inventory is zeroed, Shopify status is flipped to `DRAFT`, and `supplier-delisted` tag is attached.
+5. **Comparison & Real-Time Shopify Sync**:
+   - If price has shifted: Updates `source_price` (USD), recalculates `current_price` (whole INR rupees) via cached forex rate, saves product JSON, and immediately syncs mutation to Shopify Admin GraphQL (`storage/shopify_sync.py`).
+   - If availability has flipped: Updates `availability` (`in_stock` $\leftrightarrow$ `out_of_stock`), cascades to child variants (ADR 0015), saves product, and syncs to Shopify.
    - If unchanged: Touches `last_verified_at` on disk and saves product.
-6. **Index & Metrics Refresh**: Rebuilds fast `storage/db/index.json` and logs batch metrics to `storage/db/history/delta_log.json`.
+6. **Index & Metrics Refresh**: Rebuilds `storage/db/index.json` and logs cycle metrics to `storage/db/history/delta_log.json` and `delta_events.jsonl`.
 
 ---
 
@@ -149,7 +158,18 @@ When Firecrawl ingests a product, it normalizes the raw output into a strict sch
 - **Static In-Memory Model**: Uses `scripts/export_viewer_data.py` to compile `storage/db/` into `frontend/public/data/catalog.json` (1.3 MB) for sub-5ms instant filtering, multi-tier navigation (`Store -> Group -> Subgroup`), responsive Size Guide tables, and Raw JSON copy inspector.
 - **Automated CI/CD**: Pushes to `main` trigger GitHub Actions (`.github/workflows/deploy-pages.yml`) which automatically builds and redeploys to GitHub Pages in ~25 seconds.
 
-### 5.2 Shopify Admin API Sync Worker (Future Phase)
-- Consumes the append-only queue at `storage/db/history/delta_events.json`.
-- Executes GraphQL `productSet` mutations targeting only products flagged with `shopify_sync_pending: true`.
-- Flushes the queue upon successful Shopify receipt and resets `shopify_sync_pending: false`.
+### 5.2 Real-Time Shopify Admin API Sync Engine (Production Live)
+- Operating live via `storage/shopify_sync.py` and `storage/shopify_taxonomy.py` across all 3,189 catalog products.
+- Uses Shopify Admin GraphQL API (`2026-04`) with permanent custom app authentication (`shpat_...`).
+- Synchronizes price shifts, per-variant inventory availability (`inventoryPolicy: "DENY"` on depletion), delisting draft flips, and automated tag management in real-time as delta events occur.
+- Append-only event queue recorded at `storage/db/history/delta_events.jsonl` for full auditability.
+
+---
+
+## 6. Storefront Theme & Licensing Architecture
+
+### 6.1 Theme Compliance & Anti-Piracy Invariant (ADR 0030)
+- **Approved Theme Foundation**: The Rare Avenue storefront operates exclusively on official free themes published by Shopify (currently **Horizon**, `themeStoreId: 2481`) or officially licensed commercial themes purchased directly through the Shopify Theme Store under the store's primary `.myshopify.com` domain.
+- **Zero Unlicensed Commercial Themes**: Uploading or running unpurchased third-party commercial themes (e.g., Prestige, Impact, Focal, Warehouse) via external ZIPs is strictly prohibited to prevent automated DMCA takedowns by vendor crawlers (`unlicensed.app`) and account suspensions (ADR 0030).
+- **Modular Custom Extensions**: All bespoke luxury features (desktop mega-nav, faceted category filters, CheckCheck authenticity verification modals, marquee collection carousels) are authored as isolated Liquid sections and snippets layered cleanly over the official theme base.
+- **Reference**: See [`THEME_LICENSING_AND_COMPLIANCE.md`](file:///c:/workspace/dropship-scraper-portable-20260905/product-updater/docs/THEME_LICENSING_AND_COMPLIANCE.md) and [`docs/adr/0030-commercial-theme-licensing-compliance-and-dmca-safe-harbor.md`](file:///c:/workspace/dropship-scraper-portable-20260905/product-updater/docs/adr/0030-commercial-theme-licensing-compliance-and-dmca-safe-harbor.md).

@@ -9,7 +9,7 @@
   "source_price": 129.0,
   "source_compare_at_price": 129.0,
   "current_price": 12378.0,
-  "compare_at_price": 12392.0,
+  "compare_at_price": 12281.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.957344,
@@ -388,16 +388,20 @@
     "handbags"
   ],
   "is_active": true,
-  "shopify_sync_pending": false,
+  "shopify_sync_pending": true,
   "status": "ACTIVE",
   "validation_warnings": [],
   "id": "c1855e45f8537ee6",
   "created_at": "2026-09-19T11:15:34Z",
-  "updated_at": "2026-09-30T08:50:35Z",
-  "last_verified_at": "2026-09-30T08:50:35Z",
+  "updated_at": "2026-10-29T03:37:00Z",
+  "last_verified_at": "2026-10-29T03:37:00Z",
   "shopify_product_id": "gid://shopify/Product/15841783152806",
   "shopify_handle": "nala-faux-suede-wide-tote-bag-brown",
   "shopify_synced_at": "2026-09-29T06:00:52Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779705872286-zpxae2e88p.jpg?v=1779787122",
-  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779705872286-zpxae2e88p.jpg?v=1779787122"
+  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779705872286-zpxae2e88p.jpg?v=1779787122",
+  "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\c1855e45f8537ee6.json",
+  "archived": true,
+  "canonical_product_id": "gid://shopify/Product/15841771585702",
+  "last_synced_fx_rate": 95.252751
 }

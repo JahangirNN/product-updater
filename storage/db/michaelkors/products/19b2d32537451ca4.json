@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 9456,
-  "source_price": 99.0,
+  "current_price": 7578.0,
+  "source_price": 79.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/788449b2-1084-476c-a0c3-6e8529131b70/30S6G0ZT2L-001-0001_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/788449b2-1084-476c-a0c3-6e8529131b70/30S6G0ZT2L-001-0001_1-tif",
@@ -23,12 +23,12 @@
     {
       "sku": "30S6G0ZT2L",
       "title": "0001",
-      "price": "9456.00",
+      "price": "7578.00",
       "compare_at_price": "21920.00",
-      "source_price": 99.0,
+      "source_price": 79.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/788449b2-1084-476c-a0c3-6e8529131b70/30S6G0ZT2L-001-0001_1-tif",
       "option_values": [
         {
@@ -36,7 +36,7 @@
           "name": "0001"
         }
       ],
-      "price_current": 9503.0
+      "price_current": 7578.0
     }
   ],
   "options": [
@@ -78,12 +78,17 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-22T05:23:58Z",
+  "last_verified_at": "2026-10-29T05:36:58Z",
   "id": "19b2d32537451ca4",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-22T05:23:58Z",
+  "updated_at": "2026-10-29T05:36:58Z",
   "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Marlowe Medium Pebbled Leather Pocket Tote Bag by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  <div class=\"product-highlights\" style=\"margin: 15px 0;\">\n    <h4 style=\"margin-bottom: 8px;\">Product Specifications</h4>\n    <ul style=\"padding-left: 20px; line-height: 1.6;\">\n      <li><strong>Dimensions:</strong> 15”W X 10.5”H X 5.75”D</li>\n      <li><strong>Handle Drop:</strong> Handle drop: 11”</li>\n      <li><strong>Material:</strong> The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather</li>\n      <li><strong>Hardware:</strong> Gold-tone hardware</li>\n      <li><strong>Lining:</strong> 100% polyester</li>\n      <li><strong>Closure:</strong> Zip fastening</li>\n    </ul>\n  </div>\n  \n</div>",
   "source_compare_at_price": 229.5,
-  "compare_at_price": 22040.0,
-  "material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather"
+  "compare_at_price": 21848.0,
+  "material": "The leather in this product comes from tanneries receiving Leather Working Group Gold- or Silver-certification in recognition of their environmental performance., Pebbled leather",
+  "shopify_product_id": "gid://shopify/Product/15841788362918",
+  "shopify_handle": "marlowe-medium-pebbled-leather-pocket-tote-bag",
+  "shopify_synced_at": "2026-10-21T15:21:54Z",
+  "shopify_sync_pending": false,
+  "last_synced_fx_rate": 94.995216
 }

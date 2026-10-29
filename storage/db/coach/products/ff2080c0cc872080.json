@@ -56,7 +56,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx80_cho_a0",
       "option_values": [
         {
@@ -76,7 +76,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx80_cho_a0",
       "option_values": [
         {
@@ -96,7 +96,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx80_cho_a0",
       "option_values": [
         {
@@ -116,7 +116,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx80_cho_a0",
       "option_values": [
         {
@@ -224,11 +224,16 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:49:17Z",
-  "last_verified_at": "2026-09-22T05:30:53Z",
+  "last_verified_at": "2026-10-29T03:39:13Z",
   "id": "ff2080c0cc872080",
   "product_id": "ff2080c0cc872080",
   "store": "coach",
-  "updated_at": "2026-09-22T05:30:53Z",
+  "updated_at": "2026-10-29T03:39:13Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15848611053734",
+  "shopify_handle": "archival-buckle-clog-with-signature-jacquard",
+  "shopify_synced_at": "2026-10-01T11:04:36Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.252751
 }

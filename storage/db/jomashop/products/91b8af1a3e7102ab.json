@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -75,7 +75,7 @@
       "source_compare_at_price": 275.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/m/i/michael-kors-runway-chronograph-quartz-rose-gold-dial-watch-mk7324_1.jpg",
       "option_values": [
         {
@@ -108,10 +108,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T10:48:06Z",
-  "updated_at": "2026-09-22T18:27:49Z",
-  "last_verified_at": "2026-09-22T18:27:49Z",
+  "updated_at": "2026-10-29T05:36:42Z",
+  "last_verified_at": "2026-10-29T05:36:42Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838888329382",
   "shopify_handle": "michael-kors-runway-chronograph-quartz-rose-gold-dial-watch-mk7324",
-  "shopify_synced_at": "2026-09-25T06:55:09Z"
+  "shopify_synced_at": "2026-10-20T15:21:48Z",
+  "last_synced_fx_rate": 95.052511
 }

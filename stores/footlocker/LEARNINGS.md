@@ -81,6 +81,12 @@ Derived directly from official Nike athletic shoe sizing standards embedded in F
 | **11.5** | 9.0 | 44.0 | 28.5 |
 | **12.0** | 9.5 | 44.5 | 29.0 |
 
+### 3.3 Single Canonical UK Size Option Standard (ADR 0025)
+To eliminate Cartesian variant selector confusion and checkout deadlocks on Shopify PDPs, all footwear variants are standardized to a single option named `Size` using pure UK values:
+- **Canonical Option**: `Size` (e.g. `UK 8`, `UK 8.5`, `UK 9`)
+- **Variant Titles**: `{UK Size} - {Color}`
+- **Size Guide Integration**: Full US, UK, and EU size translation matrices are embedded into the description HTML `<details>` accordion and theme modals.
+
 ---
 
 ## 4. Ingestion & Extraction Architecture (Tier 1)

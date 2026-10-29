@@ -9,11 +9,11 @@
   "source_price": 109.0,
   "source_compare_at_price": 109.0,
   "current_price": 10338.0,
-  "compare_at_price": 10471.0,
+  "compare_at_price": 10454.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Vegan Leather",
   "specifications": {
     "Main Material": "Vegan Leather",
@@ -46,7 +46,7 @@
       "source_compare_at_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1788168643114-6zy4b0yv172.jpg?v=1788169622",
       "option_values": [
         {
@@ -54,7 +54,8 @@
           "name": "Navy"
         }
       ],
-      "price_current": 10459.0
+      "price_current": 10459.0,
+      "is_available": false
     },
     {
       "id": 45880692801570,
@@ -66,7 +67,7 @@
       "source_compare_at_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1788255715616-rd8efd1ld7c.jpg?v=1788339462",
       "option_values": [
         {
@@ -74,7 +75,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 10459.0
+      "price_current": 10459.0,
+      "is_available": false
     },
     {
       "id": 46440765685794,
@@ -86,7 +88,7 @@
       "source_compare_at_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/ecakemkflg.jpg?v=1787110927",
       "option_values": [
         {
@@ -94,7 +96,8 @@
           "name": "Gray"
         }
       ],
-      "price_current": 10459.0
+      "price_current": 10459.0,
+      "is_available": false
     },
     {
       "id": 46440765816866,
@@ -106,7 +109,7 @@
       "source_compare_at_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/tdhylr3bfiq.jpg?v=1787110927",
       "option_values": [
         {
@@ -114,7 +117,8 @@
           "name": "Dark Coffee Brown"
         }
       ],
-      "price_current": 10463.0
+      "price_current": 10463.0,
+      "is_available": false
     },
     {
       "id": 46440765718562,
@@ -126,7 +130,7 @@
       "source_compare_at_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/134kzy7p88va.jpg?v=1787110927",
       "option_values": [
         {
@@ -134,7 +138,8 @@
           "name": "Cherry Red"
         }
       ],
-      "price_current": 10459.0
+      "price_current": 10459.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -165,7 +170,8 @@
     "26NO20",
     "bags",
     "newproduct",
-    "othersnotguaranteexmas"
+    "othersnotguaranteexmas",
+    "supplier-delisted"
   ],
   "groups": [
     "handbags"
@@ -174,13 +180,18 @@
   "validation_warnings": [],
   "id": "ce649f8b615a325e",
   "created_at": "2026-09-09T15:51:03Z",
-  "updated_at": "2026-09-30T08:50:54Z",
-  "last_verified_at": "2026-09-30T08:50:54Z",
-  "is_active": true,
+  "updated_at": "2026-10-29T03:37:18Z",
+  "last_verified_at": "2026-10-29T03:37:17Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841784004774",
   "shopify_handle": "vivienne-quilted-vanity-top-handle-bag-dark-coffee-brown",
-  "shopify_synced_at": "2026-09-29T06:01:05Z",
+  "shopify_synced_at": "2026-10-29T03:37:17Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/tdhylr3bfiq.jpg?v=1787110927",
-  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/tdhylr3bfiq.jpg?v=1787110927"
+  "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/tdhylr3bfiq.jpg?v=1787110927",
+  "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\ce649f8b615a325e.json",
+  "archived": true,
+  "canonical_product_id": "gid://shopify/Product/15841770963110",
+  "delist_strikes": 98,
+  "supplier_delisted": true
 }

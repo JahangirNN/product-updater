@@ -176,9 +176,9 @@
       "id": null,
       "sku": "CDY83 IMSMU",
       "title": "Gold/Deep Blue",
-      "price": "20953.00",
+      "price": "18564.00",
       "compare_at_price": null,
-      "source_price": 219.0,
+      "source_price": 195.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -190,15 +190,15 @@
           "name": "Gold/Deep Blue"
         }
       ],
-      "price_current": 21022.0
+      "price_current": 18564.0
     },
     {
       "id": null,
       "sku": "CET14 IMPIN",
       "title": "Gold/Pink",
-      "price": "28607.00",
+      "price": "26758.00",
       "compare_at_price": null,
-      "source_price": 299.0,
+      "source_price": 279.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -210,15 +210,15 @@
           "name": "Gold/Pink"
         }
       ],
-      "price_current": 28701.0
+      "price_current": 26758.0
     },
     {
       "id": null,
       "sku": "CET14 IMCMS",
       "title": "Gold/Crimson",
-      "price": "28607.00",
+      "price": "26758.00",
       "compare_at_price": null,
-      "source_price": 299.0,
+      "source_price": 279.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -230,15 +230,15 @@
           "name": "Gold/Crimson"
         }
       ],
-      "price_current": 28701.0
+      "price_current": 26758.0
     },
     {
       "id": null,
       "sku": "CET14 IMTN2",
       "title": "Gold/Tan",
-      "price": "28607.00",
+      "price": "26758.00",
       "compare_at_price": null,
-      "source_price": 299.0,
+      "source_price": 279.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -250,7 +250,7 @@
           "name": "Gold/Tan"
         }
       ],
-      "price_current": 28701.0
+      "price_current": 26758.0
     },
     {
       "id": null,
@@ -362,7 +362,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cv934_qbcbd_a0",
       "option_values": [
         {
@@ -382,7 +382,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cv934_svbk_a0",
       "option_values": [
         {
@@ -456,9 +456,9 @@
       "id": null,
       "sku": "CDQ56 IMTYV",
       "title": "Gold/Indigo",
-      "price": "20953.00",
+      "price": "14169.00",
       "compare_at_price": null,
-      "source_price": 219.0,
+      "source_price": 147.5,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -470,7 +470,7 @@
           "name": "Gold/Indigo"
         }
       ],
-      "price_current": 21022.0
+      "price_current": 14169.0
     },
     {
       "id": null,
@@ -581,7 +581,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdy83_svmpl_a0",
       "option_values": [
         {
@@ -737,11 +737,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:38:31Z",
-  "last_verified_at": "2026-09-22T05:23:31Z",
+  "last_verified_at": "2026-10-29T05:36:27Z",
   "id": "0a350b4b7a4cf920",
   "product_id": "0a350b4b7a4cf920",
   "store": "coach",
-  "updated_at": "2026-09-22T05:23:31Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T05:36:27Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841761067174",
+  "shopify_handle": "teri-shoulder-bag",
+  "shopify_synced_at": "2026-10-28T17:36:29Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

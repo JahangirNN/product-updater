@@ -7,7 +7,7 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Sunglasses",
   "gender": "Women",
-  "current_price": 14232,
+  "current_price": 14306.0,
   "source_price": 149.0,
   "currency": "INR",
   "source_currency": "USD",
@@ -25,7 +25,7 @@
     {
       "sku": "MK-2271U",
       "title": "Tortoise",
-      "price": "14232.00",
+      "price": "14306.00",
       "compare_at_price": "14232.00",
       "source_price": 149.0,
       "currency": "INR",
@@ -38,7 +38,7 @@
           "name": "Tortoise"
         }
       ],
-      "price_current": 14302.0
+      "price_current": 14306.0
     }
   ],
   "options": [
@@ -51,7 +51,7 @@
       ]
     }
   ],
-  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nagoya Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>",
+  "description_html": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nagoya Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">Frame Specifications &amp; UV Protection</summary>\n    <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n      <tbody>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Silhouette</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Cat-eye sunglasses</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Material</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Plastic frame</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">UV Protection</td><td style=\"padding: 8px; border: 1px solid #ddd;\">100% UV Protection</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Fitting &amp; Size</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Universal Fit (One Size)</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Packaging</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Protective Michael Kors Sunglass Case Included</td></tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
   "specifications": {
     "Brand": "MICHAEL Michael Kors",
     "Category": "Sunglasses",
@@ -65,20 +65,31 @@
       "Plastic frame",
       "Case included",
       "100% UV protection",
-      "Imported",
-      "Style #",
-      "bvseo\\_sdk, dw\\_cartridge, 18.2.0, p\\_sdk\\_3.2.0"
+      "Imported"
     ]
   },
   "groups": [
     "sunglasses",
     "women"
   ],
-  "last_verified_at": "2026-09-22T05:24:32Z",
+  "last_verified_at": "2026-10-29T05:37:48Z",
   "id": "40a26a8abee405ac",
   "created_at": "2026-09-11T18:30:38Z",
-  "updated_at": "2026-09-22T05:24:32Z",
+  "updated_at": "2026-10-29T05:37:48Z",
   "source_compare_at_price": 149.0,
   "compare_at_price": 14232,
-  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nagoya Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n</div>"
+  "descriptionHtml": "<div class=\"product-description\">\n  <p class=\"product-summary\">Nagoya Sunglasses by Michael Kors. Designed with superior craftsmanship and luxury finishing.</p>\n  \n\n  <details class=\"size-guide-accordion\" style=\"margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 4px;\">\n    <summary style=\"font-weight: bold; cursor: pointer;\">Frame Specifications &amp; UV Protection</summary>\n    <table style=\"width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left; font-size: 14px;\">\n      <tbody>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Silhouette</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Cat-eye sunglasses</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Frame Material</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Plastic frame</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">UV Protection</td><td style=\"padding: 8px; border: 1px solid #ddd;\">100% UV Protection</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Fitting &amp; Size</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Universal Fit (One Size)</td></tr>\n        <tr><td style=\"padding: 8px; border: 1px solid #ddd; font-weight: 500;\">Packaging</td><td style=\"padding: 8px; border: 1px solid #ddd;\">Protective Michael Kors Sunglass Case Included</td></tr>\n      </tbody>\n    </table>\n  </details>\n</div>",
+  "tags": [
+    "Accessories",
+    "Sunglasses",
+    "Designer Sunglasses",
+    "Michael Kors",
+    "Women",
+    "Women's"
+  ],
+  "shopify_product_id": "gid://shopify/Product/15840667173030",
+  "shopify_handle": "nagoya-sunglasses",
+  "shopify_synced_at": "2026-09-29T06:02:33Z",
+  "shopify_sync_pending": false,
+  "last_synced_fx_rate": 95.252751
 }

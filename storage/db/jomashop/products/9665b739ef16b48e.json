@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -75,7 +75,7 @@
       "source_compare_at_price": 250.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/m/i/michael-kors-runway-chronograph-quartz-gold-dial-ladies-watch-mk7326.jpg",
       "option_values": [
         {
@@ -108,10 +108,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T10:48:06Z",
-  "updated_at": "2026-09-22T18:27:56Z",
-  "last_verified_at": "2026-09-22T18:27:56Z",
+  "updated_at": "2026-10-29T05:36:45Z",
+  "last_verified_at": "2026-10-29T05:36:45Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838888755366",
   "shopify_handle": "michael-kors-runway-chronograph-quartz-gold-dial-ladies-watch-mk7326",
-  "shopify_synced_at": "2026-09-25T06:55:35Z"
+  "shopify_synced_at": "2026-10-12T17:27:40Z",
+  "last_synced_fx_rate": 95.252751
 }

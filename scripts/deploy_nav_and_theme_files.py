@@ -1,0 +1,88 @@
+import os
+import sys
+import time
+
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, PROJECT_ROOT)
+
+from storage.shopify_auth import execute_shopify_graphql
+
+THEME_ID = "gid://shopify/OnlineStoreTheme/197348655270"
+
+THEME_FILES_MUTATION = """
+mutation themeFilesUpsert($files: [OnlineStoreThemeFilesUpsertFileInput!]!, $themeId: ID!) {
+  themeFilesUpsert(files: $files, themeId: $themeId) {
+    upsertedThemeFiles {
+      filename
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
+"""
+
+FILES_TO_DEPLOY = [
+    ("sections/header.liquid", os.path.join(PROJECT_ROOT, "theme", "sections", "header.liquid")),
+    ("sections/footer.liquid", os.path.join(PROJECT_ROOT, "theme", "sections", "footer.liquid")),
+    ("snippets/luxury-desktop-nav.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "luxury-desktop-nav.liquid")),
+    ("snippets/header-sidebar.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "header-sidebar.liquid")),
+    ("snippets/luxury-sidebar-panels.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "luxury-sidebar-panels.liquid")),
+    ("layout/theme.liquid", os.path.join(PROJECT_ROOT, "theme", "layout", "theme.liquid")),
+]
+
+def deploy():
+    print("=" * 80)
+    print(f"DEPLOYING NAVIGATION THEME FILES TO THEME {THEME_ID}")
+    print("=" * 80)
+
+    files_payload = []
+    for rel_path, abs_path in FILES_TO_DEPLOY:
+        with open(abs_path, "r", encoding="utf-8") as f:
+            content = f.read()
+        files_payload.append({
+            "filename": rel_path,
+            "body": {
+                "type": "TEXT",
+                "value": content
+            }
+        })
+        print(f"Prepared {rel_path} ({len(content)} bytes)")
+
+    data, ext, err = None, None, None
+    for attempt in range(1, 4):
+        print(f"Deploy attempt {attempt}/3...")
+        data, ext, err = execute_shopify_graphql(
+            THEME_FILES_MUTATION,
+            variables={
+                "themeId": THEME_ID,
+                "files": files_payload
+            }
+        )
+        if data and not err:
+            break
+        print(f"Attempt {attempt} failed: {err}. Retrying in 2 seconds...")
+        time.sleep(2)
+
+    if err or not data:
+        print(f"FAILED to deploy theme files: {err}")
+        return False
+
+    res = data.get("themeFilesUpsert", {})
+    u_errs = res.get("userErrors", [])
+    if u_errs:
+        print(f"UserErrors deploying theme files: {u_errs}")
+        return False
+
+    upserted = res.get("upsertedThemeFiles", [])
+    print("\nSUCCESS! Successfully deployed files:")
+    for uf in upserted:
+        print(f"  - {uf.get('filename')}")
+    print("=" * 80)
+    return True
+
+if __name__ == "__main__":
+    success = deploy()
+    if not success:
+        sys.exit(1)

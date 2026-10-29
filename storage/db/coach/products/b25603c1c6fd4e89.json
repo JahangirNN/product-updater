@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Suede upper",
   "specifications": {
     "Heel Height": "Heel Height: 1.5\"",
@@ -51,7 +51,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cen28_blk_a0",
       "option_values": [
         {
@@ -131,7 +131,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cen28_blk_a0",
       "option_values": [
         {
@@ -334,11 +334,16 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:45:45Z",
-  "last_verified_at": "2026-09-22T05:27:17Z",
+  "last_verified_at": "2026-10-29T03:37:07Z",
   "id": "b25603c1c6fd4e89",
   "product_id": "b25603c1c6fd4e89",
   "store": "coach",
-  "updated_at": "2026-09-22T05:27:17Z",
-  "is_active": true,
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-29T03:37:07Z",
+  "is_active": false,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15848609579174",
+  "shopify_handle": "work-boot",
+  "shopify_synced_at": "2026-10-26T05:57:53Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.160836
 }

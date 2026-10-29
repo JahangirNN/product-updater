@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "ID Card Wallet In Signature Canvas With Patches",
   "specifications": {
     "Material": "ID Card Wallet In Signature Canvas With Patches",
@@ -48,7 +48,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceu95_pmz_a0",
       "option_values": [
         {
@@ -168,7 +168,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccf99_grm_a0",
       "option_values": [
         {
@@ -238,11 +238,16 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:44:16Z",
-  "last_verified_at": "2026-09-22T05:26:27Z",
+  "last_verified_at": "2026-10-29T03:39:53Z",
   "id": "93b7bd7b1bb7d3cd",
   "product_id": "93b7bd7b1bb7d3cd",
   "store": "coach",
-  "updated_at": "2026-09-22T05:26:27Z",
-  "is_active": true,
-  "shopify_sync_pending": true
+  "updated_at": "2026-10-29T03:39:54Z",
+  "is_active": false,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841767162022",
+  "shopify_handle": "id-card-wallet-in-signature-canvas-with-patches",
+  "shopify_synced_at": "2026-10-29T03:39:53Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

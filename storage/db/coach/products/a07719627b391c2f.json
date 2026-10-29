@@ -7,9 +7,9 @@
   "product_type": "Shoulder Bags",
   "gender": "Women",
   "source_sku": "CCE48 IMOAT",
-  "source_price": 199.0,
+  "source_price": 150.0,
   "source_compare_at_price": null,
-  "current_price": 19039.0,
+  "current_price": 14410.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -77,9 +77,9 @@
       "id": null,
       "sku": "CCE48 IMOAT",
       "title": "Gold/Oat",
-      "price": "19039.00",
+      "price": "14410.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 150.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -91,7 +91,7 @@
           "name": "Gold/Oat"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 14410.0
     },
     {
       "id": null,
@@ -117,9 +117,9 @@
       "id": null,
       "sku": "CCE48 IMXAL",
       "title": "Gold/Espresso",
-      "price": "19039.00",
+      "price": "16089.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 169.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -131,19 +131,19 @@
           "name": "Gold/Espresso"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 16089.0
     },
     {
       "id": null,
       "sku": "CCE48 IMBRN",
       "title": "Gold/Brown",
-      "price": "19039.00",
+      "price": "16089.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 169.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cce48_imbrn_a0",
       "option_values": [
         {
@@ -151,15 +151,15 @@
           "name": "Gold/Brown"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 16089.0
     },
     {
       "id": null,
       "sku": "CET38 IMNKR",
       "title": "Gold/Blush Pink",
-      "price": "19039.00",
+      "price": "18232.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -171,19 +171,19 @@
           "name": "Gold/Blush Pink"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 18232.0
     },
     {
       "id": null,
       "sku": "CCE49 IMA7U",
       "title": "Gold/Truffle",
-      "price": "19039.00",
+      "price": "18232.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cce49_ima7u_a0",
       "option_values": [
         {
@@ -191,19 +191,19 @@
           "name": "Gold/Truffle"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 18232.0
     },
     {
       "id": null,
       "sku": "CCE49 IMYN0",
       "title": "Gold/Light Khaki/Vintage Brown",
-      "price": "19039.00",
+      "price": "18232.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cce49_imyn0_a0",
       "option_values": [
         {
@@ -211,7 +211,7 @@
           "name": "Gold/Light Khaki/Vintage Brown"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 18232.0
     }
   ],
   "product_options": [
@@ -251,11 +251,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:44:54Z",
-  "last_verified_at": "2026-09-22T05:26:44Z",
+  "last_verified_at": "2026-10-29T03:40:14Z",
   "id": "a07719627b391c2f",
   "product_id": "a07719627b391c2f",
   "store": "coach",
-  "updated_at": "2026-09-22T05:26:44Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:40:14Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841796489382",
+  "shopify_handle": "ella-shoulder-bag-cce48-imoat",
+  "shopify_synced_at": "2026-10-28T11:50:36Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

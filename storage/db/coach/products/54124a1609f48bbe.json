@@ -7,14 +7,14 @@
   "product_type": "Shoes & Footwear",
   "gender": "Women",
   "source_sku": "CCO02 BLK  11  B",
-  "source_price": 39.0,
+  "source_price": 27.2,
   "source_compare_at_price": null,
-  "current_price": 3731.0,
+  "current_price": 2589.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Printed coated canvas upper",
   "specifications": {
     "Material": "Printed coated canvas upper"
@@ -44,9 +44,9 @@
       "id": null,
       "sku": "CCO02 BLK  11  B-5",
       "title": "US 5 / UK 3",
-      "price": "3731.00",
+      "price": "2589.00",
       "compare_at_price": null,
-      "source_price": 39.0,
+      "source_price": 27.2,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -58,19 +58,19 @@
           "name": "US 5 / UK 3"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 2589.0
     },
     {
       "id": null,
       "sku": "CCO02 BLK  11  B-6",
       "title": "US 6 / UK 4",
-      "price": "3731.00",
+      "price": "2589.00",
       "compare_at_price": null,
-      "source_price": 39.0,
+      "source_price": 27.2,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cco02_blk_a0",
       "option_values": [
         {
@@ -78,15 +78,15 @@
           "name": "US 6 / UK 4"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 2589.0
     },
     {
       "id": null,
       "sku": "CCO02 BLK  11  B-7",
       "title": "US 7 / UK 5",
-      "price": "3731.00",
+      "price": "2589.00",
       "compare_at_price": null,
-      "source_price": 39.0,
+      "source_price": 27.2,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -98,19 +98,19 @@
           "name": "US 7 / UK 5"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 2589.0
     },
     {
       "id": null,
       "sku": "CCO02 BLK  11  B-8",
       "title": "US 8 / UK 6",
-      "price": "3731.00",
+      "price": "2589.00",
       "compare_at_price": null,
-      "source_price": 39.0,
+      "source_price": 27.2,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cco02_blk_a0",
       "option_values": [
         {
@@ -118,19 +118,19 @@
           "name": "US 8 / UK 6"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 2589.0
     },
     {
       "id": null,
       "sku": "CCO02 BLK  11  B-9",
       "title": "US 9 / UK 7",
-      "price": "3731.00",
+      "price": "2589.00",
       "compare_at_price": null,
-      "source_price": 39.0,
+      "source_price": 27.2,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cco02_blk_a0",
       "option_values": [
         {
@@ -138,15 +138,15 @@
           "name": "US 9 / UK 7"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 2589.0
     },
     {
       "id": null,
       "sku": "CCO02 BLK  11  B-10",
       "title": "US 10 / UK 8",
-      "price": "3731.00",
+      "price": "2589.00",
       "compare_at_price": null,
-      "source_price": 39.0,
+      "source_price": 27.2,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -158,15 +158,15 @@
           "name": "US 10 / UK 8"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 2589.0
     },
     {
       "id": null,
       "sku": "CCO02 BLK  11  B-11",
       "title": "US 11 / UK 9",
-      "price": "3731.00",
+      "price": "2589.00",
       "compare_at_price": null,
-      "source_price": 39.0,
+      "source_price": 27.2,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -178,7 +178,7 @@
           "name": "US 11 / UK 9"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 2589.0
     }
   ],
   "product_options": [
@@ -218,11 +218,16 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:41:43Z",
-  "last_verified_at": "2026-09-22T05:25:05Z",
+  "last_verified_at": "2026-10-29T03:38:06Z",
   "id": "54124a1609f48bbe",
   "product_id": "54124a1609f48bbe",
   "store": "coach",
-  "updated_at": "2026-09-22T05:25:05Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:38:07Z",
+  "shopify_sync_pending": false,
+  "is_active": false,
+  "shopify_product_id": "gid://shopify/Product/15848606400678",
+  "shopify_handle": "zayn-flip-flop",
+  "shopify_synced_at": "2026-10-29T03:38:06Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

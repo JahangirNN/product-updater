@@ -97,6 +97,14 @@ def run_verification():
             swatch_card.screenshot(path=swatch_hover_screenshot)
             print(f"Captured Swatch Hover Screenshot -> {swatch_hover_screenshot}")
 
+            # Test pointerleave: move mouse away before clicking and verify price restores
+            page.mouse.move(0, 0)
+            page.wait_for_timeout(800)
+            restored_price = price_el.inner_text().replace("\n", " ").strip() if price_el else ""
+            print(f"Price after pointerleave (unhover): {restored_price}")
+            pointerleave_ok = (restored_price == initial_price)
+            print(f"  Pointerleave restoration verified: {pointerleave_ok}")
+
             # Click second swatch
             target_swatch.click()
             page.wait_for_timeout(800)
@@ -109,6 +117,14 @@ def run_verification():
                 page.wait_for_timeout(800)
                 hover_price_3 = price_el.inner_text().replace("\n", " ").strip() if price_el else ""
                 print(f"Price after hover on Swatch 3: {hover_price_3}")
+
+                # Move mouse away and verify price restores to clicked swatch price
+                page.mouse.move(0, 0)
+                page.wait_for_timeout(800)
+                restored_to_click = price_el.inner_text().replace("\n", " ").strip() if price_el else ""
+                print(f"Price after unhovering Swatch 3 (should restore to clicked Swatch 2): {restored_to_click}")
+                restore_to_clicked_ok = (restored_to_click == click_price)
+                print(f"  Retention of clicked variant price verified: {restore_to_clicked_ok}")
         else:
             print("No card with swatches found on initial view!")
 

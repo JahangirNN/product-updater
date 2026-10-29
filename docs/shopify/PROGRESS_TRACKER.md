@@ -3,7 +3,7 @@
 **Store URL**: `https://therareavenue.com` (`hewmvw-am.myshopify.com`)  
 **Store Currency**: Indian Rupee (INR ₹)  
 **Store Protocol**: Shopify Admin GraphQL API (`2026-04`)  
-**Last Updated**: October 3, 2026  
+**Last Updated**: October 6, 2026  
 
 ---
 
@@ -15,8 +15,11 @@
 | **M2: Pilot Category Ingestion** | ✅ **COMPLETED** | Created automated smart collections on Shopify, mapped rich data schema, and uploaded pilot category (46 Versace Watches) with high-res images and whole-rupee INR math. | ADR 0020, `storage/shopify_sync.py`, `scripts/upload_versace_pilot.py` |
 | **M3: Delta Freshner Live Sync Loop** | ✅ **COMPLETED** | Connected 1-hour background daemon to push price and stock shifts directly to Shopify via `productSet` in real-time. | `storage/shopify_sync.py`, `sync_catalog.py` live delta dispatch |
 | **M4: Distributed Connector & High-Throughput Engine** | ✅ **COMPLETED** | Built distributed Shopify connector architecture: universal taxonomy normalizer with zero retailer leakage, declarative collection provisioner (27 smart collections), and high-throughput bulk uploader CLI. | `storage/shopify_taxonomy.py`, `storage/shopify_collections.py`, `scripts/shopify_bulk_uploader.py`, ADR 0021 |
-| **M5: Storewide Catalog Ingestion** | 🔄 **IN PROGRESS** | Progressively ingesting remaining 2,612 products across JW PEI, COACH, Michael Kors, Nordstrom, Foot Locker, and JD Sports via bulk uploader. | `scripts/shopify_bulk_uploader.py`, `storage/db/index.json` |
-| **M6: Code-Driven Storefront UI** | 🔄 **IN PROGRESS** | Prestige theme (v10.11) pulled locally; coded 3-tier luxury navigation sidebar (`snippets/luxury-sidebar-panels.liquid`) deployed directly to live theme (`#197348655270`). | `theme/`, ADR 0022, `config/shopify_navigation_manifest.json` |
+| **M5: Storewide Catalog Ingestion** | ✅ **COMPLETED** | Ingested 100% of the 3,189 catalog products across all 7 partner retailers (Jomashop, JW PEI, COACH, Michael Kors, Nordstrom, Foot Locker, and JD Sports). | `scripts/shopify_bulk_uploader.py`, `storage/db/index.json`, `docs/shopify/CATALOG_LEDGER.md` |
+| **M6: Code-Driven Storefront UI & Layouts** | ✅ **COMPLETED** | Prestige theme (v10.11) custom split header navigation, curated section cards ("Curated Silhouettes", "Everyday Accoutrements", "Sneaker Vault"), interactive sizing pills, and AJAX bag drawer. | `theme/`, ADR 0022, ADR 0023, live theme `#197348655270` |
+| **M7: Footwear Sizing Consolidation** | ✅ **COMPLETED** | Unified dual US/UK options into a single canonical UK `Size` option across all 1,021 footwear products, resolving Cartesian checkout deadlocks. | ADR 0025, `scripts/migrate_footwear_single_size_options.py` |
+| **M8: Delisted Product Multi-Strike Circuit** | ✅ **COMPLETED** | Automated detection and neutralization of supplier-retired items via 2-strike hysteresis, zeroing stock, flipping status to `DRAFT`, and tagging `supplier-delisted`. | ADR 0026, `sync_catalog.py`, `storage/shopify_sync.py` |
+| **M9: Zero-Cost High-Throughput Algolia Freshner** | ✅ **COMPLETED** | Reverse-engineered JD Sports Algolia search cloud (150ms HTTP solver) and tuned JW PEI origin caching, dropping >24h catalog staleness to 0 and achieving 99.94% freshness across 3,189 products at $0 cost. | ADR 0027, `stores/jdsports/delta.py`, `scripts/run_freshner_daemon.py` |
 
 ---
 
@@ -30,8 +33,9 @@
 | **Michael Kors** | 530 | 🟢 Ingestion Complete | 530 / 530 | 2026-10-01 | 100% of Designer Handbags, Eyewear, Belts, and Footwear Live |
 | **Nordstrom** | 238 | 🟢 Ingestion Complete | 238 / 238 | 2026-10-03 | 100% of Salomon, On Running, HOKA premium athletic footwear Live |
 | **Foot Locker** | 307 | 🟢 Ingestion Complete | 307 / 307 | 2026-10-04 | 100% of Nike, adidas Originals, ASICS athletic footwear Live |
-| **JD Sports** | 476 | ⬜ Ready for Ingestion | 0 / 476 | - | 476 remaining: Nike Footwear & Streetwear |
-| **TOTAL** | **3,189** | - | **2,713 / 3,189** | - | **85.1% Ingested (Target: 100%)** |
+| **JD Sports** | 476 | 🟢 Ingestion Complete | 476 / 476 | 2026-10-04 | 100% of Nike Footwear & Streetwear Live with authentic size matrices |
+| **TOTAL** | **3,189** | 🟢 **100% Ingested** | **3,189 / 3,189** | 2026-10-04 | **100.0% Ingested across all 7 partner stores** |
+
 
 ---
 
@@ -103,5 +107,16 @@
 | **2026-10-02** | 5-Pillar Storewide Navigation Integration (#197348655270) | `100% DEPLOYED & VERIFIED` (5 desktop columns, mobile drawer accordions) | `snippets/luxury-desktop-nav`, `luxury-sidebar-panels` |
 | **2026-10-03** | Cross-Gender Isolation & Tag Routing Bugfix | `100% PASS` (Multi-tag routing `/men+footwear`, zero cross-gender leaks) | Playwright live storefront test suite |
 | **2026-10-03** | Variant-Level Out-of-Stock Enforcement Verified | `100% PASS` (`inventoryPolicy: "DENY"`, `tracked: true`, button disabled) | `storage/shopify_taxonomy.py` |
+| **2026-10-04** | Foot Locker Catalog Ingestion (307/307 items) | `307/307 PASS` (100% Athletic Footwear Live: Nike, adidas, ASICS) | `scripts/shopify_bulk_uploader.py` |
+| **2026-10-04** | JD Sports Catalog Ingestion (476/476 items) | `476/476 PASS` (100% Streetwear & Performance Footwear Live) | `scripts/shopify_bulk_uploader.py` |
+| **2026-10-04** | Storewide Catalog Ingestion Audit | `3,189/3,189 PASS` (100% of all 7 Partner Retailers Live on Shopify) | `scripts/audit_shopify_catalog_counts.py` |
+| **2026-10-06** | Permanent Custom App Token Recovery & MCP Authentication | `100% VERIFIED` (`shpat_...` credential recovery, ADR 0024 accepted) | `storage/shopify_auth.py`, ADR 0024 |
+| **2026-10-07** | Footwear Single UK Size Option Standard & Batch Migration | `1,021/1,021 MIGRATED` (Zero Cartesian deadlocks, ADR 0025 accepted) | `scripts/migrate_footwear_single_size_options.py`, ADR 0025 |
+| **2026-10-08** | Split Luxury Navigation & Header UI Optimization (#197348655270) | `100% DEPLOYED & VERIFIED` (Desktop split header, brand mega menus) | Theme GraphQL `themeFilesUpsert` |
+| **2026-10-09** | Homepage Section Card UI Harmonization & AJAX Bag Drawer | `100% DEPLOYED & VERIFIED` (Curated Silhouettes, Everyday Accoutrements, Sneaker Vault) | `theme/sections/`, `theme/snippets/` |
+| **2026-10-09** | Unified Multi-Facet Filtering across collections | `100% PASS` (Facet filters for Brand, Category, Gender, Color) | Storefront Playwright verification |
+| **2026-10-10** | Delisted Product Multi-Strike Circuit & Automatic Shopify Draft Neutralization | `100% ACTIVE` (2-strike hysteresis, DRAFT status, ADR 0026 accepted) | `sync_catalog.py`, `storage/shopify_sync.py`, ADR 0026 |
+| **2026-10-10** | Zero-Cost Algolia Solver for JD Sports & JW PEI Origin Optimization | `100% PASS` (476 JD Sports + 491 JW PEI refreshed at $0.00 cost, 99.94% catalog fresh <3h, daemon active) | `stores/jdsports/delta.py`, `sync_catalog.py`, ADR 0027 |
+
 
 

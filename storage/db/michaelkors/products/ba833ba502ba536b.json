@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Handbags",
   "gender": "Women",
-  "current_price": 21015,
+  "current_price": 21004.0,
   "source_price": 219.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/fd84c387-49e7-4217-9e4f-925319cfc3fc/30S5S9IT2V-198-0239_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/fd84c387-49e7-4217-9e4f-925319cfc3fc/30S5S9IT2V-198-0239_1-tif"
@@ -21,12 +21,12 @@
     {
       "sku": "30S5S9IT2V",
       "title": "0239",
-      "price": "21015.00",
+      "price": "21004.00",
       "compare_at_price": "24901.00",
       "source_price": 219.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/fd84c387-49e7-4217-9e4f-925319cfc3fc/30S5S9IT2V-198-0239_1-tif",
       "option_values": [
         {
@@ -34,7 +34,7 @@
           "name": "0239"
         }
       ],
-      "price_current": 21022.0
+      "price_current": 21004.0
     }
   ],
   "options": [
@@ -61,12 +61,16 @@
     "handbags",
     "women"
   ],
-  "last_verified_at": "2026-09-22T05:26:27Z",
+  "last_verified_at": "2026-10-29T03:38:11Z",
   "id": "ba833ba502ba536b",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-09-22T05:26:27Z",
+  "updated_at": "2026-10-29T03:38:11Z",
   "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Laila Medium Signature Logo Tote Bag by Michael Kors.</p></div>",
   "source_compare_at_price": 259.5,
-  "compare_at_price": 24922.0,
-  "shopify_sync_pending": true
+  "compare_at_price": 24704.0,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841799831718",
+  "shopify_handle": "laila-medium-signature-logo-tote-bag-30s5s9it2v",
+  "shopify_synced_at": "2026-10-28T15:37:53Z",
+  "last_synced_fx_rate": 95.199335
 }

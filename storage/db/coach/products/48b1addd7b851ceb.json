@@ -76,7 +76,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfo89_imblk_a0",
       "option_values": [
         {
@@ -156,7 +156,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfn74_imyn0_a0",
       "option_values": [
         {
@@ -244,11 +244,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:41:16Z",
-  "last_verified_at": "2026-09-22T05:24:52Z",
+  "last_verified_at": "2026-10-29T03:39:31Z",
   "id": "48b1addd7b851ceb",
   "product_id": "48b1addd7b851ceb",
   "store": "coach",
-  "updated_at": "2026-09-22T05:24:52Z",
+  "updated_at": "2026-10-29T03:39:31Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841764343974",
+  "shopify_handle": "emeilia-shoulder-bag",
+  "shopify_synced_at": "2026-10-28T23:45:53Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

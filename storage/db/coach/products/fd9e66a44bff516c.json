@@ -55,7 +55,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cap61_pub_a0",
       "option_values": [
         {
@@ -75,7 +75,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cap61_pub_a0",
       "option_values": [
         {
@@ -95,7 +95,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cap61_pub_a0",
       "option_values": [
         {
@@ -135,7 +135,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cap61_pub_a0",
       "option_values": [
         {
@@ -215,7 +215,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cap61_pub_a0",
       "option_values": [
         {
@@ -338,11 +338,16 @@
     "men_shoes"
   ],
   "created_at": "2026-09-13T00:49:11Z",
-  "last_verified_at": "2026-09-22T05:30:47Z",
+  "last_verified_at": "2026-10-29T03:39:08Z",
   "id": "fd9e66a44bff516c",
   "product_id": "fd9e66a44bff516c",
   "store": "coach",
-  "updated_at": "2026-09-22T05:30:47Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:39:08Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15848584413350",
+  "shopify_handle": "sport-sneaker",
+  "shopify_synced_at": "2026-10-26T06:04:39Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.160836
 }

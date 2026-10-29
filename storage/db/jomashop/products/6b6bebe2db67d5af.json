@@ -8,15 +8,15 @@
   "product_type": "Watches",
   "gender": "Men's",
   "source_sku": "CZBN0200-56E",
-  "source_price": 349.0,
+  "source_price": 389.0,
   "source_compare_at_price": 595.0,
-  "current_price": 33517.0,
+  "current_price": 36975.0,
   "compare_at_price": 57142.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "material": "Super Titanium",
   "specifications": {
     "Box Type": "Original Box",
@@ -73,14 +73,14 @@
       "id": null,
       "sku": "CZBN0200-56E",
       "title": "44 mm - Black / Super Titanium",
-      "price": "33517.00",
-      "price_current": 33517.0,
+      "price": "36975.00",
+      "price_current": 36975.0,
       "compare_at_price": "57142.00",
-      "source_price": 349.0,
+      "source_price": 389.0,
       "source_compare_at_price": 595.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/c/i/citizen-promaster-diver-luminous-men_s-watch-bn0200-56e.jpg",
       "option_values": [
         {
@@ -113,10 +113,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T10:48:05Z",
-  "updated_at": "2026-09-22T18:27:08Z",
-  "last_verified_at": "2026-09-22T18:27:08Z",
+  "updated_at": "2026-10-29T05:37:49Z",
+  "last_verified_at": "2026-10-29T05:37:49Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838886035622",
   "shopify_handle": "citizen-promaster-diver-watch-bn0200-56e",
-  "shopify_synced_at": "2026-09-25T06:52:39Z"
+  "shopify_synced_at": "2026-10-20T17:22:42Z",
+  "last_synced_fx_rate": 95.052511
 }

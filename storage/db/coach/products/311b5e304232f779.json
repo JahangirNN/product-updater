@@ -154,13 +154,13 @@
       "id": null,
       "sku": "CV962 QBCBD",
       "title": "Gunmetal/Dark Stone",
-      "price": "19039.00",
+      "price": "17003.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 177.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cv962_qbcbd_a0",
       "option_values": [
         {
@@ -168,7 +168,7 @@
           "name": "Gunmetal/Dark Stone"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 17003.0
     },
     {
       "id": null,
@@ -245,11 +245,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:40:19Z",
-  "last_verified_at": "2026-09-22T05:24:27Z",
+  "last_verified_at": "2026-10-29T03:37:59Z",
   "id": "311b5e304232f779",
   "product_id": "311b5e304232f779",
   "store": "coach",
-  "updated_at": "2026-09-22T05:24:27Z",
-  "shopify_sync_pending": true,
-  "is_active": true
+  "updated_at": "2026-10-29T03:37:59Z",
+  "shopify_sync_pending": false,
+  "is_active": true,
+  "shopify_product_id": "gid://shopify/Product/15841763459238",
+  "shopify_handle": "rowan-satchel-bag",
+  "shopify_synced_at": "2026-10-28T19:40:50Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.199335
 }

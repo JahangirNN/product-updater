@@ -72,7 +72,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cgd04_myb_a0",
       "option_values": [
         {
@@ -152,7 +152,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cgd04_myb_a0",
       "option_values": [
         {
@@ -335,11 +335,16 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:42:29Z",
-  "last_verified_at": "2026-09-22T05:25:29Z",
+  "last_verified_at": "2026-10-29T03:38:28Z",
   "id": "6790d0ae28df729d",
   "product_id": "6790d0ae28df729d",
   "store": "coach",
-  "updated_at": "2026-09-22T05:25:29Z",
+  "updated_at": "2026-10-29T03:38:28Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15848607187110",
+  "shopify_handle": "sport-sneaker-in-signature-canvas",
+  "shopify_synced_at": "2026-10-08T16:04:42Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.252751
 }

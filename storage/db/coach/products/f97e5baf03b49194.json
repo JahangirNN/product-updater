@@ -7,9 +7,9 @@
   "product_type": "Tote Bags",
   "gender": "Women",
   "source_sku": "CV976 IMXAQ",
-  "source_price": 199.0,
+  "source_price": 189.0,
   "source_compare_at_price": null,
-  "current_price": 19039.0,
+  "current_price": 18232.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -95,9 +95,9 @@
       "id": null,
       "sku": "CV976 IMXDM",
       "title": "Gold/Sand/Chalk",
-      "price": "19039.00",
+      "price": "18232.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -109,15 +109,15 @@
           "name": "Gold/Sand/Chalk"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 18232.0
     },
     {
       "id": null,
       "sku": "CV976 IMXAQ",
       "title": "Gold/Walnut/Black",
-      "price": "19039.00",
+      "price": "18232.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -129,19 +129,19 @@
           "name": "Gold/Walnut/Black"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 18232.0
     },
     {
       "id": null,
       "sku": "CV976 QBMI5",
       "title": "Gunmetal/Charcoal/Black",
-      "price": "19039.00",
+      "price": "18232.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cv976_qbmi5_a0",
       "option_values": [
         {
@@ -149,15 +149,15 @@
           "name": "Gunmetal/Charcoal/Black"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 18232.0
     },
     {
       "id": null,
       "sku": "CV976 IMXHE",
       "title": "Gold/Tan/Brown",
-      "price": "19039.00",
+      "price": "18232.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -169,15 +169,15 @@
           "name": "Gold/Tan/Brown"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 18232.0
     },
     {
       "id": null,
       "sku": "CV976 IMXU5",
       "title": "Gold/White/Chalk",
-      "price": "19039.00",
+      "price": "18232.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -189,15 +189,15 @@
           "name": "Gold/White/Chalk"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 18232.0
     },
     {
       "id": null,
       "sku": "CV976 IMNAV",
       "title": "Gold/Navy",
-      "price": "19039.00",
+      "price": "18232.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -209,15 +209,15 @@
           "name": "Gold/Navy"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 18232.0
     },
     {
       "id": null,
       "sku": "CV976 SVPWH",
       "title": "Silver/Sand/Taupe",
-      "price": "19039.00",
+      "price": "18301.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -229,7 +229,7 @@
           "name": "Silver/Sand/Taupe"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 18301.0
     }
   ],
   "product_options": [
@@ -269,11 +269,16 @@
     "women_bags"
   ],
   "created_at": "2026-09-13T00:48:56Z",
-  "last_verified_at": "2026-09-22T05:30:40Z",
+  "last_verified_at": "2026-10-29T03:36:47Z",
   "id": "f97e5baf03b49194",
   "product_id": "f97e5baf03b49194",
   "store": "coach",
-  "updated_at": "2026-09-22T05:30:40Z",
+  "updated_at": "2026-10-29T03:36:47Z",
   "is_active": true,
-  "shopify_sync_pending": true
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15841770537126",
+  "shopify_handle": "city-tote-bag-in-signature-canvas",
+  "shopify_synced_at": "2026-10-13T03:31:22Z",
+  "delist_strikes": 0,
+  "last_synced_fx_rate": 95.252751
 }

@@ -28,6 +28,12 @@ product-updater/
 │   ├── JSON_STORAGE_SPEC.md         # Partitioned JSON DB schema & deduplication logic
 │   ├── FOLDER_STRUCTURE.md          # Directory tree & module boundaries (this file)
 │   ├── CODING_STANDARDS.md          # Functional guidelines, typing, error handling
+│   ├── audits/                      # Deep forensic audits
+│   │   └── FOOTWEAR_SIZING_AND_STOCK_PARITY_AUDIT.md # Sizing & stock parity analysis across footwear stores
+│   ├── shopify/                     # Shopify integration ledgers and specs
+│   │   ├── README.md                # GraphQL Admin API specs & CLI auth
+│   │   ├── PROGRESS_TRACKER.md      # Living milestones and verification audit trail
+│   │   └── CATALOG_LEDGER.md        # Real-time multi-store product ingestion ledger
 │   └── adr/                         # Architecture Decision Records
 │       ├── 0001-record-architecture-decisions.md
 │       ├── 0002-decouple-firecrawl-ingestion-from-local-delta-updates.md
@@ -49,7 +55,13 @@ product-updater/
 │       ├── 0018-jomashop-xmode-onboarding.md
 │       ├── 0019-shopify-graphql-admin-and-mcp-integration.md
 │       ├── 0020-shopify-catalog-taxonomy-and-sync-bridge.md
-│       └── 0021-distributed-shopify-connector-and-sync-architecture.md
+│       ├── 0021-distributed-shopify-connector-and-sync-architecture.md
+│       ├── 0022-hierarchical-navigation-taxonomy-and-automated-menu-provisioning.md
+│       ├── 0023-hybrid-luxury-navigation-architecture-and-designer-eyewear-integration.md
+│       ├── 0024-permanent-custom-app-token-and-agent-auth-recovery.md
+│       ├── 0025-footwear-sizing-consolidation-and-canonical-uk-size-option.md
+│       ├── 0026-delisted-product-multi-strike-and-shopify-draft-neutralization.md
+│       └── 0027-zero-cost-algolia-search-solver-and-fair-lru-freshner.md
 │
 ├── frontend/                        # Mobile-First Catalog Data Viewer (React + Vite + Tailwind)
 │   ├── public/data/
@@ -141,9 +153,9 @@ product-updater/
 │   │
 │   ├── jdsports/                    # Concrete JD Sports implementation
 │   │   ├── LEARNINGS.md             # Living notes: Nike collections, Akamai WAF, multi-tier sizing, JSON-LD
-│   │   ├── camoufox_solver.py       # Zero-cost local stealth browser Akamai solver & DOM hydration extractor
+│   │   ├── camoufox_solver.py       # Legacy local stealth browser Akamai solver (archived)
 │   │   ├── inflow.py                # Ingestion normalizer with multi-tier sizing classification & conversion
-│   │   └── delta.py                 # Pure delta checker & variant inventory synchronizer
+│   │   └── delta.py                 # High-throughput Algolia search API solver (150ms HTTP, zero-cost, ADR 0027)
 │   │
 │   └── jomashop/                    # Concrete Jomashop implementation
 │       ├── LEARNINGS.md             # Living notes: Magento 2 GraphQL, case diameter sizing, tech specs

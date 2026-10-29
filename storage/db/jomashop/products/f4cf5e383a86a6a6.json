@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -76,7 +76,7 @@
       "source_compare_at_price": 495.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/m/o/movado-bold-silver-dial-stainless-steel-ladies-watch-3600194_5.jpg",
       "option_values": [
         {
@@ -109,10 +109,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T14:52:55Z",
-  "updated_at": "2026-09-22T18:29:44Z",
-  "last_verified_at": "2026-09-22T18:29:44Z",
+  "updated_at": "2026-10-29T05:37:27Z",
+  "last_verified_at": "2026-10-29T05:37:27Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838894882982",
   "shopify_handle": "movado-watch-3600194",
-  "shopify_synced_at": "2026-09-25T07:01:35Z"
+  "shopify_synced_at": "2026-10-20T15:22:38Z",
+  "last_synced_fx_rate": 95.052511
 }
