@@ -76,6 +76,15 @@
       "delay_seconds": 1.5,
       "timeout_seconds": 10.0,
       "endpoint_pattern": "https://www.jomashop.com/{handle}.html"
+    },
+    "sephora": {
+      "check_interval_minutes": 120,
+      "engine": "http",
+      "max_workers": 2,
+      "requests_per_second": 2.0,
+      "delay_seconds": 0.5,
+      "timeout_seconds": 25.0,
+      "endpoint_pattern": "https://www.sephora.com/product/{handle}"
     }
   },
   "shopify_sync": {

@@ -70,7 +70,8 @@ export function filterAndSortProducts(
         (p.gender && p.gender.toLowerCase() === 'women') || 
         p.group_display.toLowerCase().includes("women's") ||
         (p.specifications?.['Gender'] && p.specifications['Gender'].toLowerCase() === 'women') ||
-        p.store_display === 'JW PEI' // JW PEI is exclusively women's luxury bags
+        p.store_display === 'JW PEI' || // JW PEI is exclusively women's luxury bags
+        p.store_display === 'Sephora' // Sephora beauty catalog
       );
     }
   }

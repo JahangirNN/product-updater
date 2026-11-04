@@ -27,6 +27,31 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
     groups = [g.lower() for g in product.get("groups", [])]
     text = f"{title_lower} {handle_lower}"
 
+    # Sephora Beauty Taxonomy
+    if source_store == "sephora":
+        pt = product.get("product_type", "").lower()
+        cat = specs.get("Category", "").lower()
+        t_low = f"{title_lower} {handle_lower} {pt} {cat}"
+        if any(w in t_low for w in ["blush", "cheek"]):
+            return "Blush & Cheek"
+        if any(w in t_low for w in ["lip", "balm", "butter", "lipstick", "gloss", "stain", "tinted lip"]):
+            return "Lip Care & Color"
+        if any(w in t_low for w in ["foundation", "skin tint", "complexion", "bronzer", "contour"]):
+            return "Foundation & Complexion"
+        if any(w in t_low for w in ["concealer", "corrector"]):
+            return "Concealer & Correctors"
+        if any(w in t_low for w in ["mascara", "eyeliner", "shadow", "brow", "eye patch"]):
+            return "Eyes & Brows"
+        if any(w in t_low for w in ["powder", "setting spray", "setting", "primer"]):
+            return "Powders & Primers"
+        if any(w in t_low for w in ["serum", "moisturizer", "cream", "cleanser", "mask", "sunscreen", "spf"]):
+            return "Skincare & Cleansers"
+        if any(w in t_low for w in ["hair", "fragrance", "mist", "perfume"]):
+            return "Haircare & Fragrance"
+        if any(w in t_low for w in ["brush", "sponge", "applicator", "tool"]):
+            return "Brushes & Tools"
+        return specs.get("Category") or product.get("product_type") or "Beauty Essentials"
+
     # Coach multi-category taxonomy
     if source_store == "coach":
         pt = product.get("product_type", "")
@@ -625,6 +650,10 @@ def export_catalog(
             elif s_store == "katespade":
                 store_display = "Kate Spade"
                 group_display = "Handbags"
+            elif s_store == "sephora":
+                store_display = "Sephora"
+                brand_name = prod.get("brand") or prod.get("vendor") or "Sephora"
+                group_display = brand_name
             else:
                 store_display = prod.get("vendor", "Other")
                 group_display = prod.get("product_type", "Handbags")

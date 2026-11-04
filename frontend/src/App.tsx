@@ -149,7 +149,8 @@ export const App: React.FC = () => {
             (p.gender && p.gender.toLowerCase() === 'women') ||
             p.group_display.toLowerCase().includes("women's") ||
             (p.specifications?.['Gender'] && p.specifications['Gender'].toLowerCase() === 'women') ||
-            p.store_display === 'JW PEI'
+            p.store_display === 'JW PEI' ||
+            p.store_display === 'Sephora'
         );
       }
     }
