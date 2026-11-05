@@ -62,7 +62,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2371755+sw.jpg",
       "size": "1 oz/ 30 g",
       "variation_value": "She's Glossy",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 4742,
+      "source_price": 50.0
     },
     {
       "id": "2371748",
@@ -81,7 +83,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2371748+sw.jpg",
       "size": "1 oz/ 30 g",
       "variation_value": "She's On Vacation",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 4742,
+      "source_price": 50.0
     }
   ],
   "product_options": [
@@ -111,7 +115,8 @@
     "patrick-ta"
   ],
   "created_at": "2026-11-04T18:46:06Z",
-  "last_verified_at": "2026-11-04T18:46:06Z",
+  "last_verified_at": "2026-11-05T10:41:22Z",
   "id": "d876a95211afe187",
-  "updated_at": "2026-11-04T18:46:06Z"
+  "updated_at": "2026-11-05T10:41:22Z",
+  "last_synced_fx_rate": 94.834253
 }

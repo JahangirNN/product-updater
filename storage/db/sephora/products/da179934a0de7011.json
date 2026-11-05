@@ -76,7 +76,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867489+sw.jpg",
       "size": "0.37 oz/10.5 g",
       "variation_value": "Fair",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2867463",
@@ -95,7 +97,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867463+sw.jpg",
       "size": "0.37 oz/10.5 g",
       "variation_value": "Light",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2867505",
@@ -114,7 +118,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867505+sw.jpg",
       "size": "0.37 oz/10.5 g",
       "variation_value": "Light Medium",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2867497",
@@ -133,7 +139,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867497+sw.jpg",
       "size": "0.37 oz/10.5 g",
       "variation_value": "Medium",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2867448",
@@ -152,7 +160,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867448+sw.jpg",
       "size": "0.37 oz/10.5 g",
       "variation_value": "Medium Dark",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2867471",
@@ -171,7 +181,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867471+sw.jpg",
       "size": "0.37 oz/10.5 g",
       "variation_value": "Dark",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2867455",
@@ -190,7 +202,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867455+sw.jpg",
       "size": "0.37 oz/10.5 g",
       "variation_value": "Dark Deep",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     }
   ],
   "product_options": [
@@ -224,7 +238,8 @@
     "makeup-by-mario"
   ],
   "created_at": "2026-11-04T19:02:57Z",
-  "last_verified_at": "2026-11-04T19:02:57Z",
+  "last_verified_at": "2026-11-05T12:38:26Z",
   "id": "da179934a0de7011",
-  "updated_at": "2026-11-04T19:02:57Z"
+  "updated_at": "2026-11-05T12:38:26Z",
+  "last_synced_fx_rate": 94.834253
 }

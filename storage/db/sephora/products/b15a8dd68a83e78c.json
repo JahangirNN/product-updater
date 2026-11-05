@@ -80,7 +80,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2753804+sw.jpg",
       "size": ".4 oz",
       "variation_value": "Sand",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2753770",
@@ -99,7 +101,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2753770+sw.jpg",
       "size": ".4 oz",
       "variation_value": "Salt",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2753812",
@@ -118,7 +122,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2753812+sw.jpg",
       "size": ".4 oz",
       "variation_value": "Spritz",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2753788",
@@ -137,7 +143,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2753788+sw.jpg",
       "size": ".4 oz / 12 mL",
       "variation_value": "Swim",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2753820",
@@ -156,7 +164,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2753820+sw.jpg",
       "size": ".4 oz",
       "variation_value": "Stinson",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2753796",
@@ -175,7 +185,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2753796+sw.jpg",
       "size": ".4 oz",
       "variation_value": "Sail",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "3030301",
@@ -194,7 +206,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3030301+sw.jpg",
       "size": "0.20 oz/7 mL",
       "variation_value": "Swim",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1707,
+      "source_price": 18.0
     },
     {
       "id": "3030269",
@@ -213,7 +227,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3030269+sw.jpg",
       "size": "0.20 oz/7 mL",
       "variation_value": "Sand",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1707,
+      "source_price": 18.0
     },
     {
       "id": "3030251",
@@ -232,7 +248,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3030251+sw.jpg",
       "size": "0.20 oz/7 mL",
       "variation_value": "Salt",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1707,
+      "source_price": 18.0
     },
     {
       "id": "3030327",
@@ -251,7 +269,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3030327+sw.jpg",
       "size": "0.20 oz/7 mL",
       "variation_value": "Stinson",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1707,
+      "source_price": 18.0
     }
   ],
   "product_options": [
@@ -290,7 +310,16 @@
     "saie"
   ],
   "created_at": "2026-11-04T18:47:53Z",
-  "last_verified_at": "2026-11-04T18:47:53Z",
+  "last_verified_at": "2026-11-05T10:42:35Z",
   "id": "b15a8dd68a83e78c",
-  "updated_at": "2026-11-04T18:47:53Z"
+  "updated_at": "2026-11-05T10:42:35Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 1707,
+    "max": 2466
+  },
+  "price_range_usd": {
+    "min": 18.0,
+    "max": 26.0
+  }
 }

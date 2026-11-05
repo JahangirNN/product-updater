@@ -74,7 +74,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2787042+sw.jpg",
       "size": "0.15 oz / 4.5 mL",
       "variation_value": "Taupe",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "2787059",
@@ -93,7 +95,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2787059+sw.jpg",
       "size": "0.15 oz / 4.5 mL",
       "variation_value": "Light Brown",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "2787075",
@@ -112,7 +116,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2787075+sw.jpg",
       "size": "0.15 oz / 4.5 mL",
       "variation_value": "Dark Brown",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "2787067",
@@ -131,7 +137,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2787067+sw.jpg",
       "size": "0.15 oz / 4.5 mL",
       "variation_value": "Brown Black",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2276,
+      "source_price": 24.0
     }
   ],
   "product_options": [
@@ -164,7 +172,8 @@
     "merit"
   ],
   "created_at": "2026-11-04T18:53:21Z",
-  "last_verified_at": "2026-11-04T18:53:21Z",
+  "last_verified_at": "2026-11-05T10:46:12Z",
   "id": "501b55865fcfa679",
-  "updated_at": "2026-11-04T18:53:21Z"
+  "updated_at": "2026-11-05T10:46:12Z",
+  "last_synced_fx_rate": 94.834253
 }

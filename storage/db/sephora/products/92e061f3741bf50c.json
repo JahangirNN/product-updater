@@ -72,7 +72,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2895977-swatch-zoom.jpg",
       "size": "2.7oz/80ml",
       "variation_value": "2.7oz/80ml",
-      "variation_type": "Size"
+      "variation_type": "Size",
+      "price": 2845,
+      "source_price": 30.0
     },
     {
       "id": "3008117",
@@ -91,7 +93,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3008117-swatch-zoom.jpg",
       "size": "1.0oz/30ml",
       "variation_value": "1.0oz/30ml",
-      "variation_type": "Size"
+      "variation_type": "Size",
+      "price": 1897,
+      "source_price": 20.0
     }
   ],
   "product_options": [
@@ -125,7 +129,16 @@
     "rhode"
   ],
   "created_at": "2026-11-04T19:00:18Z",
-  "last_verified_at": "2026-11-04T19:00:18Z",
+  "last_verified_at": "2026-11-05T10:49:32Z",
   "id": "92e061f3741bf50c",
-  "updated_at": "2026-11-04T19:00:18Z"
+  "updated_at": "2026-11-05T10:49:32Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 1897,
+    "max": 2845
+  },
+  "price_range_usd": {
+    "min": 20.0,
+    "max": 30.0
+  }
 }

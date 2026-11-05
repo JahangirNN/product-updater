@@ -60,7 +60,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2671014+sw.jpg",
       "size": "0.01 oz / 0.34 g",
       "variation_value": "Khol Brun",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2671006",
@@ -79,7 +81,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2671006+sw.jpg",
       "size": "0.01 oz / 0.34 g",
       "variation_value": "Khol Noir",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     }
   ],
   "product_options": [
@@ -111,7 +115,8 @@
     "westman-atelier"
   ],
   "created_at": "2026-11-04T18:55:04Z",
-  "last_verified_at": "2026-11-04T18:55:04Z",
+  "last_verified_at": "2026-11-05T10:47:02Z",
   "id": "3166f677b03f5d9d",
-  "updated_at": "2026-11-04T18:55:04Z"
+  "updated_at": "2026-11-05T10:47:02Z",
+  "last_synced_fx_rate": 94.834253
 }

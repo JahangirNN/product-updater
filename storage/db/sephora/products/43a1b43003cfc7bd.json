@@ -74,7 +74,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2217560+sw.jpg",
       "size": "0.17 oz/ 5 g",
       "variation_value": "Baseline",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1897,
+      "source_price": 20.0
     },
     {
       "id": "2217586",
@@ -93,7 +95,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2217586+sw.jpg",
       "size": "0.17 oz/ 5 g",
       "variation_value": "Rush",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1897,
+      "source_price": 20.0
     },
     {
       "id": "2217578",
@@ -112,7 +116,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2217578+sw.jpg",
       "size": "0.17 oz/ 5 g",
       "variation_value": "Pulse",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1897,
+      "source_price": 20.0
     },
     {
       "id": "2447209",
@@ -131,7 +137,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2447209+sw.jpg",
       "size": "0.17 oz /5 g",
       "variation_value": "Flow",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1897,
+      "source_price": 20.0
     }
   ],
   "product_options": [
@@ -165,7 +173,8 @@
     "kosas"
   ],
   "created_at": "2026-11-04T18:58:29Z",
-  "last_verified_at": "2026-11-04T18:58:29Z",
+  "last_verified_at": "2026-11-05T10:48:38Z",
   "id": "43a1b43003cfc7bd",
-  "updated_at": "2026-11-04T18:58:29Z"
+  "updated_at": "2026-11-05T10:48:38Z",
+  "last_synced_fx_rate": 94.834253
 }

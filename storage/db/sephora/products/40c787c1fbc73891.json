@@ -57,7 +57,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2637726-swatch-zoom.jpg",
       "size": "1 oz / 30 mL",
       "variation_value": "1 oz / 30 mL",
-      "variation_type": "Size"
+      "variation_type": "Size",
+      "price": 10432,
+      "source_price": 110.0
     }
   ],
   "product_options": [
@@ -85,7 +87,8 @@
     "hourglass"
   ],
   "created_at": "2026-11-04T19:08:43Z",
-  "last_verified_at": "2026-11-04T19:08:43Z",
+  "last_verified_at": "2026-11-05T12:42:12Z",
   "id": "40c787c1fbc73891",
-  "updated_at": "2026-11-04T19:08:43Z"
+  "updated_at": "2026-11-05T12:42:12Z",
+  "last_synced_fx_rate": 94.834253
 }

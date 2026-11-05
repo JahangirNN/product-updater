@@ -75,7 +75,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2976249+sw.jpg",
       "size": "0.2 oz/6 g",
       "variation_value": "Did You Notice",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2976231",
@@ -94,7 +96,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2976231+sw.jpg",
       "size": "0.2 oz/6 mL",
       "variation_value": "Shy At First",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2990117",
@@ -113,7 +117,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2990117+sw.jpg",
       "size": "0.2 oz/6 g",
       "variation_value": "Quite Confident",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2976223",
@@ -132,7 +138,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2976223+sw.jpg",
       "size": "0.2 oz/6 g",
       "variation_value": "Between Us",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     }
   ],
   "product_options": [
@@ -164,7 +172,8 @@
     "patrick-ta"
   ],
   "created_at": "2026-11-04T18:46:01Z",
-  "last_verified_at": "2026-11-04T18:46:01Z",
+  "last_verified_at": "2026-11-05T10:41:10Z",
   "id": "c5d49792a4b2f039",
-  "updated_at": "2026-11-04T18:46:01Z"
+  "updated_at": "2026-11-05T10:41:10Z",
+  "last_synced_fx_rate": 94.834253
 }

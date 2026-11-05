@@ -76,7 +76,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2649671+sw.jpg",
       "size": "0.14 oz / 4.2 mL",
       "variation_value": "Clear",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1707,
+      "source_price": 18.0
     },
     {
       "id": "2649655",
@@ -95,7 +97,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2649655+sw.jpg",
       "size": "0.14 oz / 4.2 mL",
       "variation_value": "Holographic",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1707,
+      "source_price": 18.0
     },
     {
       "id": "2649663",
@@ -114,7 +118,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2649663+sw.jpg",
       "size": "0.14 oz / 4.2 mL",
       "variation_value": "Red",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1707,
+      "source_price": 18.0
     },
     {
       "id": "2831287",
@@ -133,7 +139,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2831287+sw.jpg",
       "size": "0.14 oz / 4.2 mL",
       "variation_value": "Pink",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1707,
+      "source_price": 18.0
     },
     {
       "id": "2831261",
@@ -152,7 +160,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2831261+sw.jpg",
       "size": "0.14 oz / 4.2 mL",
       "variation_value": "Bronze",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1707,
+      "source_price": 18.0
     },
     {
       "id": "2831279",
@@ -171,7 +181,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2831279+sw.jpg",
       "size": "0.14 oz / 4.2 mL",
       "variation_value": "Chocolate",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1707,
+      "source_price": 18.0
     }
   ],
   "product_options": [
@@ -203,7 +215,8 @@
     "glossier"
   ],
   "created_at": "2026-11-04T19:01:23Z",
-  "last_verified_at": "2026-11-04T19:01:23Z",
+  "last_verified_at": "2026-11-05T10:50:52Z",
   "id": "821f316f29c3992a",
-  "updated_at": "2026-11-04T19:01:23Z"
+  "updated_at": "2026-11-05T10:50:52Z",
+  "last_synced_fx_rate": 94.834253
 }

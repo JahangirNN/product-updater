@@ -78,7 +78,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2771939+sw.jpg",
       "size": "0.21 oz / 6 g",
       "variation_value": "Coquette",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 4552,
+      "source_price": 48.0
     },
     {
       "id": "2771921",
@@ -97,7 +99,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2771921+sw.jpg",
       "size": "0.21 oz / 6 g",
       "variation_value": "Garconne",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 4552,
+      "source_price": 48.0
     },
     {
       "id": "2434116",
@@ -116,7 +120,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2434116+sw.jpg",
       "size": ".21 oz",
       "variation_value": "Bichette",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 4552,
+      "source_price": 48.0
     },
     {
       "id": "2434124",
@@ -135,7 +141,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2434124+sw.jpg",
       "size": ".21 oz",
       "variation_value": "Chouchette",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 4552,
+      "source_price": 48.0
     },
     {
       "id": "2434157",
@@ -154,7 +162,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2434157+sw.jpg",
       "size": ".21 oz",
       "variation_value": "Minette",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 4552,
+      "source_price": 48.0
     },
     {
       "id": "2670990",
@@ -173,7 +183,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2670990+sw.jpg",
       "size": "0.09 oz / 2.5 g",
       "variation_value": "Petal",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2434132",
@@ -192,7 +204,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2434132+sw.jpg",
       "size": ".21 oz",
       "variation_value": "Poppet",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 4552,
+      "source_price": 48.0
     },
     {
       "id": "2434140",
@@ -211,7 +225,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2434140+sw.jpg",
       "size": ".21 oz",
       "variation_value": "Dou Dou",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 4552,
+      "source_price": 48.0
     },
     {
       "id": "2434165",
@@ -230,7 +246,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2434165+sw.jpg",
       "size": ".21 oz",
       "variation_value": "Petal",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 4552,
+      "source_price": 48.0
     },
     {
       "id": "2764017",
@@ -249,7 +267,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2764017+sw.jpg",
       "size": "0.09 oz / 2.5 g",
       "variation_value": "Dou Dou",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2869071",
@@ -268,7 +288,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2869071+sw.jpg",
       "size": "0.09 oz/2.5 g",
       "variation_value": "Coquette",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2869063",
@@ -287,7 +309,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2869063+sw.jpg",
       "size": "0.09 oz/2.5 g",
       "variation_value": "Poppet",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     }
   ],
   "product_options": [
@@ -329,7 +353,16 @@
     "westman-atelier"
   ],
   "created_at": "2026-11-04T18:54:02Z",
-  "last_verified_at": "2026-11-04T18:54:02Z",
+  "last_verified_at": "2026-11-05T10:46:44Z",
   "id": "44fff2ae3427c3c9",
-  "updated_at": "2026-11-04T18:54:02Z"
+  "updated_at": "2026-11-05T10:46:44Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 2466,
+    "max": 4552
+  },
+  "price_range_usd": {
+    "min": 26.0,
+    "max": 48.0
+  }
 }

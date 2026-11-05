@@ -74,7 +74,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2699205+sw.jpg",
       "size": "0.29 oz",
       "variation_value": "Clean Black",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 4268,
+      "source_price": 45.0
     },
     {
       "id": "2699213",
@@ -93,7 +95,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2699213+sw.jpg",
       "size": "0.29 oz",
       "variation_value": "Le Brun Clean",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 4268,
+      "source_price": 45.0
     },
     {
       "id": "2845709",
@@ -112,7 +116,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2845709+sw.jpg",
       "size": "0.15 oz/4.5 mL",
       "variation_value": "Clean Black",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     }
   ],
   "product_options": [
@@ -145,7 +151,16 @@
     "westman-atelier"
   ],
   "created_at": "2026-11-04T18:54:21Z",
-  "last_verified_at": "2026-11-04T18:54:21Z",
+  "last_verified_at": "2026-11-05T10:46:48Z",
   "id": "abb740743738ace4",
-  "updated_at": "2026-11-04T18:54:21Z"
+  "updated_at": "2026-11-05T10:46:48Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 2466,
+    "max": 4268
+  },
+  "price_range_usd": {
+    "min": 26.0,
+    "max": 45.0
+  }
 }

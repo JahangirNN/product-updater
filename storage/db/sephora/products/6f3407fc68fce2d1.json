@@ -69,7 +69,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2858389-swatch-zoom.jpg",
       "size": "6 pairs / pack",
       "variation_value": "6 pairs / pack",
-      "variation_type": "Size"
+      "variation_type": "Size",
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "2966471",
@@ -88,7 +90,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2966471-swatch-zoom.jpg",
       "size": "15 pairs/pack",
       "variation_value": "15 pairs/pack",
-      "variation_type": "Size"
+      "variation_type": "Size",
+      "price": 4742,
+      "source_price": 50.0
     }
   ],
   "product_options": [
@@ -119,8 +123,16 @@
     "summer-fridays"
   ],
   "created_at": "2026-11-04T18:27:40Z",
-  "last_verified_at": "2026-11-04T20:37:55Z",
+  "last_verified_at": "2026-11-05T12:44:11Z",
   "id": "6f3407fc68fce2d1",
-  "updated_at": "2026-11-04T20:37:55Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-05T12:44:11Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 2276,
+    "max": 4742
+  },
+  "price_range_usd": {
+    "min": 24.0,
+    "max": 50.0
+  }
 }

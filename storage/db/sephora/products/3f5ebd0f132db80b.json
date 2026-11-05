@@ -64,7 +64,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2507499+sw.jpg",
       "size": "3 x 0.03oz / 0.8g",
       "variation_value": "Rendez Vous",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 8345,
+      "source_price": 88.0
     },
     {
       "id": "2434405",
@@ -83,7 +85,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2434405+sw.jpg",
       "size": "3 x 0.03oz / 0.8g",
       "variation_value": "Les Jours",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 8345,
+      "source_price": 88.0
     },
     {
       "id": "2684215",
@@ -102,7 +106,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2684215+sw.jpg",
       "size": "3 x 0.03oz / 0.8g",
       "variation_value": "Toujours",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 8345,
+      "source_price": 88.0
     }
   ],
   "product_options": [
@@ -135,7 +141,8 @@
     "westman-atelier"
   ],
   "created_at": "2026-11-04T18:55:33Z",
-  "last_verified_at": "2026-11-04T18:55:33Z",
+  "last_verified_at": "2026-11-05T10:47:16Z",
   "id": "3f5ebd0f132db80b",
-  "updated_at": "2026-11-04T18:55:33Z"
+  "updated_at": "2026-11-05T10:47:16Z",
+  "last_synced_fx_rate": 94.834253
 }

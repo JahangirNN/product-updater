@@ -76,7 +76,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2925675+sw.jpg",
       "size": "0.5 oz/15 g",
       "variation_value": "Cocoa Butter",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2371,
+      "source_price": 25.0
     },
     {
       "id": "2925691",
@@ -95,7 +97,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2925691+sw.jpg",
       "size": "0.5 oz/15 g",
       "variation_value": "Pink Salted Caramel",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2371,
+      "source_price": 25.0
     },
     {
       "id": "2925659",
@@ -114,7 +118,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2925659+sw.jpg",
       "size": "0.5 oz/15 g",
       "variation_value": "Milk Tea",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2371,
+      "source_price": 25.0
     },
     {
       "id": "2925667",
@@ -133,7 +139,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2925667+sw.jpg",
       "size": "0.05 oz/15 g",
       "variation_value": "Cookie Butter",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2371,
+      "source_price": 25.0
     },
     {
       "id": "2925683",
@@ -152,7 +160,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2925683+sw.jpg",
       "size": "0.5 oz/15 g",
       "variation_value": "Espresso",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2371,
+      "source_price": 25.0
     }
   ],
   "product_options": [
@@ -185,7 +195,8 @@
     "patrick-ta"
   ],
   "created_at": "2026-11-04T18:45:51Z",
-  "last_verified_at": "2026-11-04T18:45:51Z",
+  "last_verified_at": "2026-11-05T10:41:03Z",
   "id": "e19116ab2ec4c6ed",
-  "updated_at": "2026-11-04T18:45:51Z"
+  "updated_at": "2026-11-05T10:41:03Z",
+  "last_synced_fx_rate": 94.834253
 }

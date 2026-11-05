@@ -17,8 +17,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.834253,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "primary_image_url": "https://www.sephora.com/productimages/sku/s3022381-main-zoom.jpg",
   "images": [
     "https://www.sephora.com/productimages/sku/s3022381-main-zoom.jpg",
@@ -52,14 +52,17 @@
       "current_price": 2371,
       "price_inr": 2371,
       "compare_at_price": null,
-      "in_stock": false,
-      "is_active": false,
+      "in_stock": true,
+      "is_active": true,
       "barcode": "3022381",
       "image_url": "https://www.sephora.com/productimages/sku/s3022381-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s3022381-swatch-zoom.jpg",
       "size": "0.5/15",
       "variation_value": "3022381",
-      "variation_type": "None"
+      "variation_type": "None",
+      "inventory_quantity": 10,
+      "price": 2371,
+      "source_price": 25.0
     }
   ],
   "product_options": [
@@ -89,7 +92,9 @@
     "gisou"
   ],
   "created_at": "2026-11-04T18:41:12Z",
-  "last_verified_at": "2026-11-04T18:41:12Z",
+  "last_verified_at": "2026-11-05T10:39:12Z",
   "id": "5d7abf807dceb349",
-  "updated_at": "2026-11-04T18:41:12Z"
+  "updated_at": "2026-11-05T10:39:12Z",
+  "last_synced_fx_rate": 94.834253,
+  "shopify_sync_pending": true
 }

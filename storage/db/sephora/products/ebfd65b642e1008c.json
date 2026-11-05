@@ -75,7 +75,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2995512-swatch-zoom.jpg",
       "size": "6.7 fl oz/200 ml",
       "variation_value": "6.7 fl oz/200 ml",
-      "variation_type": "Size"
+      "variation_type": "Size",
+      "price": 3035,
+      "source_price": 32.0
     },
     {
       "id": "2995488",
@@ -94,7 +96,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2995488-swatch-zoom.jpg",
       "size": "2 fl oz/60 ml",
       "variation_value": "2 fl oz/60 ml",
-      "variation_type": "Size"
+      "variation_type": "Size",
+      "price": 1707,
+      "source_price": 18.0
     }
   ],
   "product_options": [
@@ -126,7 +130,16 @@
     "summer-fridays"
   ],
   "created_at": "2026-11-04T18:38:27Z",
-  "last_verified_at": "2026-11-04T18:38:27Z",
+  "last_verified_at": "2026-11-05T10:38:07Z",
   "id": "ebfd65b642e1008c",
-  "updated_at": "2026-11-04T18:38:27Z"
+  "updated_at": "2026-11-05T10:38:07Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 1707,
+    "max": 3035
+  },
+  "price_range_usd": {
+    "min": 18.0,
+    "max": 32.0
+  }
 }

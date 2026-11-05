@@ -63,7 +63,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2988897+sw-62.jpg",
       "size": "",
       "variation_value": "Wish",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 5311,
+      "source_price": 56.0
     },
     {
       "id": "2988954",
@@ -82,7 +84,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2988954+sw-62.jpg",
       "size": "",
       "variation_value": "Love",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 5311,
+      "source_price": 56.0
     },
     {
       "id": "2988970",
@@ -101,7 +105,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2988970+sw-62.jpg",
       "size": "",
       "variation_value": "Luck",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 5311,
+      "source_price": 56.0
     }
   ],
   "product_options": [
@@ -130,7 +136,8 @@
     "hourglass"
   ],
   "created_at": "2026-11-04T19:06:41Z",
-  "last_verified_at": "2026-11-04T19:06:41Z",
+  "last_verified_at": "2026-11-05T12:40:45Z",
   "id": "d127b7703ae01b63",
-  "updated_at": "2026-11-04T19:06:41Z"
+  "updated_at": "2026-11-05T12:40:45Z",
+  "last_synced_fx_rate": 94.834253
 }

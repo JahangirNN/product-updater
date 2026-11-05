@@ -60,7 +60,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s1833755+sw.jpg",
       "size": "0.05 oz/ 1.4 g",
       "variation_value": "Luminous Bronze Light",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     },
     {
       "id": "1688860",
@@ -79,7 +81,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s1688860+sw.jpg",
       "size": "0.39 oz/ 11 g",
       "variation_value": "Luminous Bronze Light",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 5500,
+      "source_price": 58.0
     },
     {
       "id": "1688878",
@@ -98,7 +102,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s1688878+sw.jpg",
       "size": "0.39 oz/ 11 g",
       "variation_value": "Radiant Bronze Light",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 5500,
+      "source_price": 58.0
     },
     {
       "id": "1944628",
@@ -117,7 +123,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s1944628+sw.jpg",
       "size": "0.39 oz/ 11 g",
       "variation_value": "Nude Bronze Light",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 5500,
+      "source_price": 58.0
     },
     {
       "id": "1944610",
@@ -136,7 +144,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s1944610+sw.jpg",
       "size": "0.39 oz/ 11 g",
       "variation_value": "Diffused Bronze Light",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 5500,
+      "source_price": 58.0
     },
     {
       "id": "1963628",
@@ -155,7 +165,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s1963628+sw.jpg",
       "size": "0.04 oz/ 1.3 g",
       "variation_value": "Diffused Bronze Light",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     }
   ],
   "product_options": [
@@ -187,7 +199,16 @@
     "hourglass"
   ],
   "created_at": "2026-11-04T19:06:23Z",
-  "last_verified_at": "2026-11-04T19:06:23Z",
+  "last_verified_at": "2026-11-05T12:40:33Z",
   "id": "679b89a5e39cdf17",
-  "updated_at": "2026-11-04T19:06:23Z"
+  "updated_at": "2026-11-05T12:40:33Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 3035,
+    "max": 5500
+  },
+  "price_range_usd": {
+    "min": 32.0,
+    "max": 58.0
+  }
 }

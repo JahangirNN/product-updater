@@ -76,7 +76,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2757854+sw.jpg",
       "size": "0.37 oz",
       "variation_value": "Translucent",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 5216,
+      "source_price": 55.0
     },
     {
       "id": "2757870",
@@ -95,7 +97,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2757870+sw.jpg",
       "size": "0.37 oz",
       "variation_value": "Translucent Light",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 5216,
+      "source_price": 55.0
     },
     {
       "id": "2757888",
@@ -114,7 +118,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2757888+sw.jpg",
       "size": "0.37 oz",
       "variation_value": "Translucent Medium",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 5216,
+      "source_price": 55.0
     },
     {
       "id": "2757862",
@@ -133,7 +139,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2757862+sw.jpg",
       "size": "0.37 oz",
       "variation_value": "Translucent Deep",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 5216,
+      "source_price": 55.0
     },
     {
       "id": "2757896",
@@ -152,7 +160,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2757896+sw.jpg",
       "size": "0.37 oz",
       "variation_value": "Translucent Tan",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 5216,
+      "source_price": 55.0
     },
     {
       "id": "2857373",
@@ -171,7 +181,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2857373+sw.jpg",
       "size": "0.1 oz / 3 g",
       "variation_value": "Tranlucent",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     }
   ],
   "product_options": [
@@ -206,7 +218,16 @@
     "hourglass"
   ],
   "created_at": "2026-11-04T19:06:38Z",
-  "last_verified_at": "2026-11-04T19:06:38Z",
+  "last_verified_at": "2026-11-05T12:40:37Z",
   "id": "cc8f0496ee4b2c05",
-  "updated_at": "2026-11-04T19:06:38Z"
+  "updated_at": "2026-11-05T12:40:37Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 3035,
+    "max": 5216
+  },
+  "price_range_usd": {
+    "min": 32.0,
+    "max": 55.0
+  }
 }

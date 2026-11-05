@@ -73,7 +73,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2879385+sw.jpg",
       "size": "0.002 oz/0.06 g",
       "variation_value": "Ash",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "2466233",
@@ -92,7 +94,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2466233+sw.jpg",
       "size": "0.002 oz/ 0.06 g",
       "variation_value": "Light",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "2466241",
@@ -111,7 +115,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2466241+sw.jpg",
       "size": "0.002 oz/ 0.06 g",
       "variation_value": "Medium",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "2868461",
@@ -130,7 +136,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2868461+sw.jpg",
       "size": "0.002 oz/0.06 g",
       "variation_value": "Chestnut",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "2868487",
@@ -149,7 +157,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2868487+sw.jpg",
       "size": "0.002 oz/0.06 g",
       "variation_value": "Espresso",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "2466258",
@@ -168,7 +178,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2466258+sw.jpg",
       "size": "0.002 oz/ 0.06 g",
       "variation_value": "Dark",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     }
   ],
   "product_options": [
@@ -200,7 +212,8 @@
     "refy"
   ],
   "created_at": "2026-11-04T19:09:46Z",
-  "last_verified_at": "2026-11-04T19:09:46Z",
+  "last_verified_at": "2026-11-05T12:43:03Z",
   "id": "f84fa830929ead9c",
-  "updated_at": "2026-11-04T19:09:46Z"
+  "updated_at": "2026-11-05T12:43:03Z",
+  "last_synced_fx_rate": 94.834253
 }

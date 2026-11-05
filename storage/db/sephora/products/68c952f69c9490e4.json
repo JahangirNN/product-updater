@@ -78,7 +78,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3001617+sw.jpg",
       "size": "0.7 oz/20 g",
       "variation_value": "Translucent Sway",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3604,
+      "source_price": 38.0
     },
     {
       "id": "3001609",
@@ -97,7 +99,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3001609+sw.jpg",
       "size": "0.7 oz/20 g",
       "variation_value": "Translucent Fluttery",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3604,
+      "source_price": 38.0
     },
     {
       "id": "3001625",
@@ -116,7 +120,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3001625+sw.jpg",
       "size": "0.7 oz/20 g",
       "variation_value": "Translucent Toasty",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3604,
+      "source_price": 38.0
     },
     {
       "id": "3001633",
@@ -135,7 +141,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3001633+sw.jpg",
       "size": "0.7 oz/20 g",
       "variation_value": "Translucent Cozy",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3604,
+      "source_price": 38.0
     },
     {
       "id": "2840866",
@@ -154,7 +162,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2840866+sw.jpg",
       "size": "0.7 oz / 20 g",
       "variation_value": "Translucent Velvety",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3604,
+      "source_price": 38.0
     },
     {
       "id": "2840833",
@@ -173,7 +183,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2840833+sw.jpg",
       "size": "0.7 oz / 20 g",
       "variation_value": "Translucent Candy",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3604,
+      "source_price": 38.0
     },
     {
       "id": "2840841",
@@ -192,7 +204,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2840841+sw.jpg",
       "size": "0.7 oz / 20 g",
       "variation_value": "Translucent Buttery",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3604,
+      "source_price": 38.0
     },
     {
       "id": "2840858",
@@ -211,7 +225,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2840858+sw.jpg",
       "size": "0.7 oz / 20 g",
       "variation_value": "Translucent Peachy",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3604,
+      "source_price": 38.0
     },
     {
       "id": "2936003",
@@ -230,7 +246,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2936003+sw.jpg",
       "size": "0.21 oz/6 g",
       "variation_value": "Translucent Candy",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2371,
+      "source_price": 25.0
     }
   ],
   "product_options": [
@@ -269,7 +287,16 @@
     "kosas"
   ],
   "created_at": "2026-11-04T18:56:22Z",
-  "last_verified_at": "2026-11-04T18:56:22Z",
+  "last_verified_at": "2026-11-05T10:47:46Z",
   "id": "68c952f69c9490e4",
-  "updated_at": "2026-11-04T18:56:22Z"
+  "updated_at": "2026-11-05T10:47:46Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 2371,
+    "max": 3604
+  },
+  "price_range_usd": {
+    "min": 25.0,
+    "max": 38.0
+  }
 }

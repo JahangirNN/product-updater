@@ -245,6 +245,8 @@ def parse_sephora_payload(
             "title": v_title,
             "option1": v_title,
             "option2": sk_size if (sk_size and sk_val and sk_size != sk_val) else None,
+            "price": sk_price_inr,
+            "source_price": sk_price_usd,
             "source_price_usd": sk_price_usd,
             "current_price": sk_price_inr,
             "price_inr": sk_price_inr,

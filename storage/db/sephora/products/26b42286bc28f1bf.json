@@ -75,7 +75,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867620+sw.jpg",
       "size": "0.37 oz/10.5 g",
       "variation_value": "Soft Peach",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2867653",
@@ -94,7 +96,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867653+sw.jpg",
       "size": "0.37 oz/10.5 g",
       "variation_value": "Soft Coral",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2867661",
@@ -113,7 +117,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867661+sw.jpg",
       "size": "0.37 oz/10.5 g",
       "variation_value": "Sweet Pink",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2867638",
@@ -132,7 +138,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867638+sw.jpg",
       "size": "0.37 oz/10.5 g",
       "variation_value": "Pale Petal",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2867612",
@@ -151,7 +159,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867612+sw.jpg",
       "size": "0.37 oz/10.5 g",
       "variation_value": "Dusty Rose",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2867604",
@@ -170,7 +180,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867604+sw.jpg",
       "size": "0.37 oz/10.5 g",
       "variation_value": "Earthy Pink",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2867646",
@@ -189,7 +201,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867646+sw.jpg",
       "size": "0.37 oz/10.5 g",
       "variation_value": "Raspberry",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2867679",
@@ -208,7 +222,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867679+sw.jpg",
       "size": "0.37 oz/10.5 g",
       "variation_value": "Watermelon",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2867687",
@@ -227,7 +243,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867687+sw.jpg",
       "size": "0.37 oz/10.5 g",
       "variation_value": "Pomegranate",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2867588",
@@ -246,7 +264,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867588+sw.jpg",
       "size": "0.14 oz/4 g",
       "variation_value": "(Mini) Pale Petal",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1517,
+      "source_price": 16.0
     },
     {
       "id": "2867596",
@@ -265,7 +285,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867596+sw.jpg",
       "size": "0.14 oz/4 g",
       "variation_value": "(Mini) Watermelon",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1517,
+      "source_price": 16.0
     }
   ],
   "product_options": [
@@ -306,7 +328,16 @@
     "makeup-by-mario"
   ],
   "created_at": "2026-11-04T19:03:34Z",
-  "last_verified_at": "2026-11-04T19:03:34Z",
+  "last_verified_at": "2026-11-05T12:38:56Z",
   "id": "26b42286bc28f1bf",
-  "updated_at": "2026-11-04T19:03:34Z"
+  "updated_at": "2026-11-05T12:38:56Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 1517,
+    "max": 3224
+  },
+  "price_range_usd": {
+    "min": 16.0,
+    "max": 34.0
+  }
 }

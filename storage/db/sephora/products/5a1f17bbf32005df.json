@@ -76,7 +76,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2893022+sw.jpg",
       "size": "0.24 oz/7g",
       "variation_value": "Translucent 1",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     },
     {
       "id": "2893014",
@@ -95,7 +97,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2893014+sw.jpg",
       "size": "0.24 oz/7g",
       "variation_value": "Translucent 2",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     },
     {
       "id": "2892982",
@@ -114,7 +118,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2892982+sw.jpg",
       "size": "0.24 oz/7g",
       "variation_value": "Translucent 3",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     },
     {
       "id": "2892974",
@@ -133,7 +139,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2892974+sw.jpg",
       "size": "0.24 oz/7g",
       "variation_value": "Translucent 4",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     },
     {
       "id": "2893006",
@@ -152,7 +160,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2893006+sw.jpg",
       "size": "0.24 oz/7g",
       "variation_value": "Translucent 5",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     }
   ],
   "product_options": [
@@ -188,7 +198,8 @@
     "saie"
   ],
   "created_at": "2026-11-04T18:49:24Z",
-  "last_verified_at": "2026-11-04T18:49:24Z",
+  "last_verified_at": "2026-11-05T10:43:09Z",
   "id": "5a1f17bbf32005df",
-  "updated_at": "2026-11-04T18:49:24Z"
+  "updated_at": "2026-11-05T10:43:09Z",
+  "last_synced_fx_rate": 94.834253
 }

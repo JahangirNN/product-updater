@@ -79,7 +79,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2871721+sw.jpg",
       "size": "0.16 oz/4.5 g",
       "variation_value": "Wavelength",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2750,
+      "source_price": 29.0
     },
     {
       "id": "2871713",
@@ -98,7 +100,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2871713+sw.jpg",
       "size": "0.16 oz/4.5 g",
       "variation_value": "Heartbeat",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2750,
+      "source_price": 29.0
     },
     {
       "id": "2871705",
@@ -117,7 +121,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2871705+sw.jpg",
       "size": "0.16 oz/4.5 g",
       "variation_value": "Chills",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2750,
+      "source_price": 29.0
     },
     {
       "id": "2767473",
@@ -136,7 +142,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2767473+sw.jpg",
       "size": "0.16 / 4.5 g",
       "variation_value": "Blissed",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2750,
+      "source_price": 29.0
     },
     {
       "id": "2767507",
@@ -155,7 +163,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2767507+sw.jpg",
       "size": "0.16 / 4.5 g",
       "variation_value": "Hype",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2750,
+      "source_price": 29.0
     },
     {
       "id": "2767465",
@@ -174,7 +184,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2767465+sw.jpg",
       "size": "0.16 / 4.5 g",
       "variation_value": "Butterflies",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2750,
+      "source_price": 29.0
     },
     {
       "id": "2767531",
@@ -193,7 +205,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2767531+sw.jpg",
       "size": "0.16 / 4.5 g",
       "variation_value": "Adrenaline",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2750,
+      "source_price": 29.0
     },
     {
       "id": "2767523",
@@ -212,7 +226,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2767523+sw.jpg",
       "size": "0.16 / 4.5 g",
       "variation_value": "Thrill",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2750,
+      "source_price": 29.0
     },
     {
       "id": "2767499",
@@ -231,7 +247,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2767499+sw.jpg",
       "size": "0.16 / 4.5 g",
       "variation_value": "Dreamland",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2750,
+      "source_price": 29.0
     },
     {
       "id": "2767515",
@@ -250,7 +268,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2767515+sw.jpg",
       "size": "0.16 / 4.5 g",
       "variation_value": "Swoon",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2750,
+      "source_price": 29.0
     },
     {
       "id": "2767481",
@@ -269,7 +289,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2767481+sw.jpg",
       "size": "0.16 / 4.5 g",
       "variation_value": "Euphoria",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2750,
+      "source_price": 29.0
     },
     {
       "id": "3023736",
@@ -288,7 +310,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3023736+sw.jpg",
       "size": "0.07 oz/2 g",
       "variation_value": "Euphoria",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1328,
+      "source_price": 14.0
     },
     {
       "id": "3023769",
@@ -307,7 +331,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3023769+sw.jpg",
       "size": "0.07 oz/2 g",
       "variation_value": "Butterflies",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1328,
+      "source_price": 14.0
     }
   ],
   "product_options": [
@@ -349,7 +375,16 @@
     "kosas"
   ],
   "created_at": "2026-11-04T18:56:50Z",
-  "last_verified_at": "2026-11-04T18:56:50Z",
+  "last_verified_at": "2026-11-05T10:47:53Z",
   "id": "5bfed5c5b13e49c7",
-  "updated_at": "2026-11-04T18:56:50Z"
+  "updated_at": "2026-11-05T10:47:53Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 1328,
+    "max": 2750
+  },
+  "price_range_usd": {
+    "min": 14.0,
+    "max": 29.0
+  }
 }

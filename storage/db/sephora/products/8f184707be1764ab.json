@@ -67,7 +67,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2594331+sw.jpg",
       "size": "0.09 oz / 2.5 g",
       "variation_value": "Nectar",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2892024",
@@ -86,7 +88,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2892024+sw.jpg",
       "size": "0.09 oz/2.5 g",
       "variation_value": "Petal",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     }
   ],
   "product_options": [
@@ -116,7 +120,8 @@
     "westman-atelier"
   ],
   "created_at": "2026-11-04T18:54:40Z",
-  "last_verified_at": "2026-11-04T18:54:40Z",
+  "last_verified_at": "2026-11-05T10:46:47Z",
   "id": "8f184707be1764ab",
-  "updated_at": "2026-11-04T18:54:40Z"
+  "updated_at": "2026-11-05T10:46:47Z",
+  "last_synced_fx_rate": 94.834253
 }

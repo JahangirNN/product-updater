@@ -17,8 +17,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.834253,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "primary_image_url": "https://www.sephora.com/productimages/sku/s2968865-main-zoom.jpg",
   "images": [
     "https://www.sephora.com/productimages/sku/s2968865-main-zoom.jpg",
@@ -53,15 +53,17 @@
       "current_price": 2086,
       "price_inr": 2086,
       "compare_at_price": null,
-      "in_stock": false,
-      "is_active": false,
+      "in_stock": true,
+      "is_active": true,
       "barcode": "2968865",
       "image_url": "https://www.sephora.com/productimages/sku/s2968865-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2968865-swatch-zoom.jpg",
       "size": "",
       "variation_value": "2968865",
       "variation_type": "None",
-      "inventory_quantity": 0
+      "inventory_quantity": 10,
+      "price": 2086,
+      "source_price": 22.0
     }
   ],
   "product_options": [
@@ -90,9 +92,9 @@
     "summer-fridays"
   ],
   "created_at": "2026-11-04T18:35:13Z",
-  "last_verified_at": "2026-11-04T20:37:59Z",
+  "last_verified_at": "2026-11-05T12:44:08Z",
   "id": "f6872d983c820b2f",
-  "updated_at": "2026-11-04T20:37:59Z",
+  "updated_at": "2026-11-05T12:44:08Z",
   "last_synced_fx_rate": 94.834253,
   "shopify_sync_pending": true
 }

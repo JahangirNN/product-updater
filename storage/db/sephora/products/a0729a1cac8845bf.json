@@ -52,7 +52,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s1716414+sw.jpg",
       "size": "0.049 oz/ 1.4 g",
       "variation_value": "Dim Light",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     },
     {
       "id": "1849017",
@@ -71,7 +73,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s1849017+sw.jpg",
       "size": "0.049 oz/ 1.4 g",
       "variation_value": "Diffused Light",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     },
     {
       "id": "1849033",
@@ -90,7 +94,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s1849033+sw.jpg",
       "size": "0.049 oz/ 1.4 g",
       "variation_value": "Luminous Light",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     }
   ],
   "product_options": [
@@ -118,7 +124,8 @@
     "hourglass"
   ],
   "created_at": "2026-11-04T19:06:31Z",
-  "last_verified_at": "2026-11-04T19:06:31Z",
+  "last_verified_at": "2026-11-05T12:40:47Z",
   "id": "a0729a1cac8845bf",
-  "updated_at": "2026-11-04T19:06:31Z"
+  "updated_at": "2026-11-05T12:40:47Z",
+  "last_synced_fx_rate": 94.834253
 }

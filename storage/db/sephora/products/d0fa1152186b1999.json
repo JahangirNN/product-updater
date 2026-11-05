@@ -75,7 +75,10 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2675510-swatch-zoom.jpg",
       "size": "1.86 oz / 55 ml",
       "variation_value": "1.86 oz / 55 ml",
-      "variation_type": "Size"
+      "variation_type": "Size",
+      "inventory_quantity": 10,
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "2892933",
@@ -94,7 +97,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2892933-swatch-zoom.jpg",
       "size": "0.68 fl oz/20ml",
       "variation_value": "0.68 fl oz/20ml",
-      "variation_type": "Size"
+      "variation_type": "Size",
+      "price": 1328,
+      "source_price": 14.0
     }
   ],
   "product_options": [
@@ -126,7 +131,17 @@
     "tower-28-beauty"
   ],
   "created_at": "2026-11-04T18:52:10Z",
-  "last_verified_at": "2026-11-04T18:52:10Z",
+  "last_verified_at": "2026-11-05T10:44:39Z",
   "id": "d0fa1152186b1999",
-  "updated_at": "2026-11-04T18:52:10Z"
+  "updated_at": "2026-11-05T10:44:39Z",
+  "last_synced_fx_rate": 94.834253,
+  "shopify_sync_pending": true,
+  "price_range_inr": {
+    "min": 1328,
+    "max": 2276
+  },
+  "price_range_usd": {
+    "min": 14.0,
+    "max": 24.0
+  }
 }

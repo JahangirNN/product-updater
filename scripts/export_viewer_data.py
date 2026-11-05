@@ -422,13 +422,40 @@ def format_viewer_product(
 ) -> Dict[str, Any]:
     """Format and streamline product record for high-speed frontend catalog viewer consumption."""
     variants = []
+    parent_inr = int(round(float(prod.get("current_price") or prod.get("current_price_inr") or prod.get("price") or 0)))
+    parent_usd = float(prod.get("source_price") or prod.get("source_price_usd") or 0.0)
+
     for v in prod.get("variants", []):
         if not isinstance(v, dict):
             continue
         v_sku = v.get("sku", "")
         in_stock_val = bool(v.get("in_stock", False) or v.get("is_available", False))
-        price_val = str(v.get("price", ""))
-        source_price_val = float(v.get("source_price") or 0.0)
+        
+        # Resolve INR price: prioritize variant price fields, fallback to parent
+        raw_price = v.get("price") or v.get("current_price") or v.get("price_inr") or parent_inr
+        try:
+            price_int = int(round(float(raw_price)))
+        except (ValueError, TypeError):
+            price_int = parent_inr
+        price_val = str(price_int)
+
+        # Resolve USD source price: prioritize variant fields, fallback to parent
+        raw_src = v.get("source_price") or v.get("source_price_usd") or parent_usd
+        try:
+            source_price_val = round(float(raw_src), 2)
+        except (ValueError, TypeError):
+            source_price_val = parent_usd
+
+        # Compare at price
+        raw_compare = v.get("compare_at_price")
+        compare_val = None
+        if raw_compare is not None:
+            try:
+                c_int = int(round(float(raw_compare)))
+                if c_int > price_int:
+                    compare_val = str(c_int)
+            except (ValueError, TypeError):
+                pass
 
         # Cross-sibling canonical reconciliation:
         # If this variant corresponds to a sibling product in the catalog, always
@@ -437,9 +464,12 @@ def format_viewer_product(
             canon = canonical_variant_map[v_sku]
             in_stock_val = canon["in_stock"]
             if canon.get("price"):
-                price_val = canon["price"]
+                try:
+                    price_val = str(int(round(float(canon["price"]))))
+                except (ValueError, TypeError):
+                    price_val = canon["price"]
             if canon.get("source_price"):
-                source_price_val = canon["source_price"]
+                source_price_val = round(float(canon["source_price"]), 2)
 
         v_entry = {
             "sku": v_sku,
@@ -448,12 +478,30 @@ def format_viewer_product(
             "source_price": source_price_val,
             "in_stock": in_stock_val,
         }
+        if compare_val:
+            v_entry["compare_at_price"] = compare_val
         v_img = v.get("image_url") or v.get("image")
         if v_img:
             v_entry["image_url"] = v_img
         if v.get("option_values"):
             v_entry["option_values"] = v["option_values"]
         variants.append(v_entry)
+
+    # Dynamic price range harmonization across variants
+    v_inr_list = [int(v["price"]) for v in variants if v.get("price") and int(v["price"]) > 0]
+    v_usd_list = [float(v["source_price"]) for v in variants if v.get("source_price") and float(v["source_price"]) > 0]
+
+    price_range_inr = prod.get("price_range_inr")
+    if v_inr_list and min(v_inr_list) < max(v_inr_list):
+        price_range_inr = {"min": min(v_inr_list), "max": max(v_inr_list)}
+    elif price_range_inr and price_range_inr.get("min") == price_range_inr.get("max"):
+        price_range_inr = None
+
+    price_range_usd = prod.get("price_range_usd")
+    if v_usd_list and min(v_usd_list) < max(v_usd_list):
+        price_range_usd = {"min": round(min(v_usd_list), 2), "max": round(max(v_usd_list), 2)}
+    elif price_range_usd and price_range_usd.get("min") == price_range_usd.get("max"):
+        price_range_usd = None
 
     raw_desc = prod.get("descriptionHtml") or prod.get("description_html") or ""
     desc_html = raw_desc.strip()
@@ -490,11 +538,11 @@ def format_viewer_product(
         "vendor": prod.get("vendor", ""),
         "product_type": prod.get("product_type", ""),
         "source_sku": prod.get("source_sku") or prod.get("sku") or "",
-        "source_price": float(prod.get("source_price") or 0.0),
+        "source_price": float(prod.get("source_price") or prod.get("source_price_usd") or 0.0),
         "source_compare_at_price": prod.get("source_compare_at_price"),
-        "price_range_usd": prod.get("price_range_usd"),
-        "price_range_inr": prod.get("price_range_inr"),
-        "current_price": float(prod.get("current_price") or 0.0),
+        "price_range_usd": price_range_usd,
+        "price_range_inr": price_range_inr,
+        "current_price": float(parent_inr),
         "compare_at_price": prod.get("compare_at_price"),
         "currency": "INR",
         "source_currency": "USD",
@@ -523,6 +571,13 @@ def export_catalog(
     """
     Read all partitioned product records and export catalog.json and meta.json.
     """
+    if not os.path.exists(db_dir):
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        alt_db = os.path.join(base_dir, "storage", "db")
+        if os.path.exists(alt_db):
+            db_dir = alt_db
+            output_dir = os.path.join(base_dir, "frontend", "public", "data")
+
     os.makedirs(output_dir, exist_ok=True)
     all_products: List[Dict[str, Any]] = []
     raw_products: List[Dict[str, Any]] = []
@@ -546,13 +601,25 @@ def export_catalog(
                 with open(p_path, "r", encoding="utf-8") as f:
                     prod = json.load(f)
                     raw_products.append(prod)
-                    sku = prod.get("source_sku")
+                    sku = prod.get("source_sku") or prod.get("sku")
+                    p_inr = prod.get("current_price") or prod.get("current_price_inr") or prod.get("price") or 0
+                    p_usd = prod.get("source_price") or prod.get("source_price_usd") or 0.0
                     if sku:
                         canonical_variant_map[sku] = {
                             "in_stock": prod.get("availability") == "in_stock",
-                            "price": str(prod.get("current_price", "")),
-                            "source_price": float(prod.get("source_price") or 0.0)
+                            "price": str(int(round(float(p_inr)))),
+                            "source_price": float(p_usd)
                         }
+                    for cv in prod.get("variants", []):
+                        cv_sku = cv.get("sku")
+                        if cv_sku:
+                            cv_inr = cv.get("price") or cv.get("current_price") or cv.get("price_inr") or p_inr
+                            cv_usd = cv.get("source_price") or cv.get("source_price_usd") or p_usd
+                            canonical_variant_map[cv_sku] = {
+                                "in_stock": bool(cv.get("in_stock", False) or cv.get("is_available", False)),
+                                "price": str(int(round(float(cv_inr)))),
+                                "source_price": float(cv_usd)
+                            }
             except Exception as err:
                 print(f"[WARN] Failed to load {p_path}: {err}")
 

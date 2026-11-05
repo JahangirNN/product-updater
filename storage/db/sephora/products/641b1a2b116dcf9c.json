@@ -78,7 +78,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2843050+sw.jpg",
       "size": "0.38 oz / 11 g",
       "variation_value": "Red Bean Mochi",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1517,
+      "source_price": 16.0
     },
     {
       "id": "2843068",
@@ -97,7 +99,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2843068+sw.jpg",
       "size": "0.38 oz / 11 g",
       "variation_value": "Sugar Plum",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1517,
+      "source_price": 16.0
     },
     {
       "id": "2843092",
@@ -116,7 +120,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2843092+sw.jpg",
       "size": "0.38 oz / 11 g",
       "variation_value": "Confetti Cake",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1517,
+      "source_price": 16.0
     },
     {
       "id": "2735223",
@@ -135,7 +141,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2735223+sw.jpg",
       "size": "0.38oz",
       "variation_value": "Watermelon Kiwi",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1517,
+      "source_price": 16.0
     },
     {
       "id": "2735181",
@@ -154,7 +162,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2735181+sw.jpg",
       "size": "0.38 oz / 11 g",
       "variation_value": "Blood Orange Vanilla",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1517,
+      "source_price": 16.0
     },
     {
       "id": "2735215",
@@ -173,7 +183,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2735215+sw.jpg",
       "size": "0.38 oz / 11 g",
       "variation_value": "Ube Vanilla",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1517,
+      "source_price": 16.0
     },
     {
       "id": "2735199",
@@ -192,7 +204,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2735199+sw.jpg",
       "size": "0.38oz / 11g",
       "variation_value": "Dulce De Leche",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1517,
+      "source_price": 16.0
     },
     {
       "id": "2735207",
@@ -211,7 +225,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2735207+sw.jpg",
       "size": "0.38 oz / 11 g",
       "variation_value": "SOS Vanilla",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1517,
+      "source_price": 16.0
     },
     {
       "id": "3026234",
@@ -230,7 +246,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3026234+sw.jpg",
       "size": "0.18/5g",
       "variation_value": "3026234",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1897,
+      "source_price": 20.0
     }
   ],
   "product_options": [
@@ -269,7 +287,16 @@
     "tower-28-beauty"
   ],
   "created_at": "2026-11-04T18:52:03Z",
-  "last_verified_at": "2026-11-04T18:52:03Z",
+  "last_verified_at": "2026-11-05T10:44:40Z",
   "id": "641b1a2b116dcf9c",
-  "updated_at": "2026-11-04T18:52:03Z"
+  "updated_at": "2026-11-05T10:44:40Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 1517,
+    "max": 1897
+  },
+  "price_range_usd": {
+    "min": 16.0,
+    "max": 20.0
+  }
 }

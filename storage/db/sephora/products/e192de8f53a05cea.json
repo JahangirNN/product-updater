@@ -76,7 +76,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2414175+sw.jpg",
       "size": "0.5 oz",
       "variation_value": "Starglow",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1707,
+      "source_price": 18.0
     },
     {
       "id": "2834935",
@@ -95,7 +97,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2834935+sw.jpg",
       "size": "0.5 oz / 15 mL",
       "variation_value": "Warmglow",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1707,
+      "source_price": 18.0
     },
     {
       "id": "2679066",
@@ -114,7 +118,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2679066+sw.jpg",
       "size": "0.5 oz / 15 mL",
       "variation_value": "Sunglow",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1707,
+      "source_price": 18.0
     },
     {
       "id": "2787562",
@@ -133,7 +139,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2787562+sw.jpg",
       "size": "0.5 oz",
       "variation_value": "Roseglow",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1707,
+      "source_price": 18.0
     },
     {
       "id": "3026275",
@@ -152,7 +160,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3026275+sw.jpg",
       "size": "",
       "variation_value": "3026275",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     }
   ],
   "product_options": [
@@ -185,7 +195,16 @@
     "saie"
   ],
   "created_at": "2026-11-04T18:47:14Z",
-  "last_verified_at": "2026-11-04T18:47:14Z",
+  "last_verified_at": "2026-11-05T10:42:33Z",
   "id": "e192de8f53a05cea",
-  "updated_at": "2026-11-04T18:47:14Z"
+  "updated_at": "2026-11-05T10:42:33Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 1707,
+    "max": 3035
+  },
+  "price_range_usd": {
+    "min": 18.0,
+    "max": 32.0
+  }
 }

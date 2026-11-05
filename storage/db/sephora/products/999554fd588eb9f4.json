@@ -78,7 +78,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2895761+sw.jpg",
       "size": "0.3oz/10ml",
       "variation_value": "Jelly Bean - shimmery sheer baby pink + sweet pink jelly bean scent",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1897,
+      "source_price": 20.0
     },
     {
       "id": "2895993",
@@ -97,7 +99,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2895993+sw.jpg",
       "size": "0.3oz/10ml",
       "variation_value": "Ribbon - sheer pink",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1897,
+      "source_price": 20.0
     },
     {
       "id": "2896090",
@@ -116,7 +120,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2896090+sw.jpg",
       "size": "0.3oz/10ml",
       "variation_value": "Toast - rose taupe",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1897,
+      "source_price": 20.0
     },
     {
       "id": "2895936",
@@ -135,7 +141,10 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2895936+sw.jpg",
       "size": "0.3oz/10ml",
       "variation_value": "Salty Tan - soft mauve",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "inventory_quantity": 10,
+      "price": 1897,
+      "source_price": 20.0
     },
     {
       "id": "2896082",
@@ -154,7 +163,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2896082+sw.jpg",
       "size": "0.3ml/10ml",
       "variation_value": "Raspberry Jelly - crushed berry",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1897,
+      "source_price": 20.0
     },
     {
       "id": "2896009",
@@ -173,7 +184,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2896009+sw.jpg",
       "size": "0.3oz/10ml",
       "variation_value": "PB&J - warm berry brown",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1897,
+      "source_price": 20.0
     },
     {
       "id": "2896132",
@@ -192,7 +205,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2896132+sw.jpg",
       "size": "0.3oz/10ml",
       "variation_value": "Espresso - rich brown",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1897,
+      "source_price": 20.0
     },
     {
       "id": "3025855",
@@ -211,7 +226,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3025855+sw.jpg",
       "size": "0.3oz/10ml",
       "variation_value": "Pretzel - shimmery warm mauve + caramel-glazed pretzel scent",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1897,
+      "source_price": 20.0
     }
   ],
   "product_options": [
@@ -248,7 +265,9 @@
     "rhode"
   ],
   "created_at": "2026-11-04T18:58:44Z",
-  "last_verified_at": "2026-11-04T18:58:44Z",
+  "last_verified_at": "2026-11-05T10:49:02Z",
   "id": "999554fd588eb9f4",
-  "updated_at": "2026-11-04T18:58:44Z"
+  "updated_at": "2026-11-05T10:49:02Z",
+  "last_synced_fx_rate": 94.834253,
+  "shopify_sync_pending": true
 }

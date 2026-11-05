@@ -68,7 +68,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867307+sw.jpg",
       "size": "0.45 oz / 13.5 mL",
       "variation_value": "Super Black",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2655,
+      "source_price": 28.0
     },
     {
       "id": "2906048",
@@ -87,7 +89,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2906048+sw.jpg",
       "size": "0.45 oz/13.5 mL",
       "variation_value": "Perfect Brown",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2655,
+      "source_price": 28.0
     }
   ],
   "product_options": [
@@ -117,7 +121,8 @@
     "makeup-by-mario"
   ],
   "created_at": "2026-11-04T19:04:43Z",
-  "last_verified_at": "2026-11-04T19:04:43Z",
+  "last_verified_at": "2026-11-05T12:39:44Z",
   "id": "513a8999359c3e79",
-  "updated_at": "2026-11-04T19:04:43Z"
+  "updated_at": "2026-11-05T12:39:44Z",
+  "last_synced_fx_rate": 94.834253
 }

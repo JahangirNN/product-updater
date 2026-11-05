@@ -72,7 +72,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2426781+sw.jpg",
       "size": "0.24 oz/7 ml",
       "variation_value": "Perfect Black",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2655,
+      "source_price": 28.0
     },
     {
       "id": "2975779",
@@ -91,7 +93,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2975779+sw.jpg",
       "size": "0.24 oz/7 mL",
       "variation_value": "Brown",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2655,
+      "source_price": 28.0
     },
     {
       "id": "2975746",
@@ -110,7 +114,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2975746+sw.jpg",
       "size": "0.11 oz/3.5 mL",
       "variation_value": "Black",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1517,
+      "source_price": 16.0
     }
   ],
   "product_options": [
@@ -142,7 +148,16 @@
     "merit"
   ],
   "created_at": "2026-11-04T18:53:12Z",
-  "last_verified_at": "2026-11-04T18:53:12Z",
+  "last_verified_at": "2026-11-05T10:45:53Z",
   "id": "4ef213479c15a7fe",
-  "updated_at": "2026-11-04T18:53:12Z"
+  "updated_at": "2026-11-05T10:45:53Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 1517,
+    "max": 2655
+  },
+  "price_range_usd": {
+    "min": 16.0,
+    "max": 28.0
+  }
 }

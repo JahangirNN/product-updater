@@ -11,6 +11,9 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({ product, onSelect })
   const [imgLoaded, setImgLoaded] = useState(false);
   const [selectedVariantImg, setSelectedVariantImg] = useState<string | null>(null);
   const [activeVariantName, setActiveVariantName] = useState<string | null>(null);
+  const [activeVariantPrice, setActiveVariantPrice] = useState<number | null>(null);
+  const [activeVariantSourcePrice, setActiveVariantSourcePrice] = useState<number | null>(null);
+  const [activeVariantCompareAt, setActiveVariantCompareAt] = useState<number | null>(null);
 
   const primaryImg = product.images && product.images.length > 0
     ? product.images[0]
@@ -22,7 +25,14 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({ product, onSelect })
   const distinctColorways = React.useMemo(() => {
     const seenImgs = new Set<string>();
     const seenNames = new Set<string>();
-    const list: Array<{ name: string; img: string; inStock: boolean; price: string }> = [];
+    const list: Array<{
+      name: string;
+      img: string;
+      inStock: boolean;
+      price: string;
+      sourcePrice?: number;
+      compareAtPrice?: string | null;
+    }> = [];
 
     for (const v of product.variants || []) {
       const cOpt = v.option_values?.find((o: any) => o.option_name === 'Color')?.name;
@@ -40,7 +50,9 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({ product, onSelect })
           name: name.replace(/^us\s*[\d.]+\s*(?:\/\s*uk\s*[\d.]+\s*)?/i, '').trim() || name,
           img,
           inStock: v.in_stock,
-          price: v.price
+          price: v.price,
+          sourcePrice: v.source_price,
+          compareAtPrice: v.compare_at_price,
         });
       }
       if (list.length >= 6) break;
@@ -182,8 +194,27 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({ product, onSelect })
                       key={idx}
                       onClick={(e) => {
                         e.stopPropagation();
-                        setSelectedVariantImg(cw.img);
-                        setActiveVariantName(cw.name);
+                        if (displayImg === cw.img) {
+                          setSelectedVariantImg(null);
+                          setActiveVariantName(null);
+                          setActiveVariantPrice(null);
+                          setActiveVariantSourcePrice(null);
+                          setActiveVariantCompareAt(null);
+                        } else {
+                          setSelectedVariantImg(cw.img);
+                          setActiveVariantName(cw.name);
+                          const p = parseFloat(cw.price || '0');
+                          if (p > 0) setActiveVariantPrice(p);
+                          if (cw.sourcePrice && cw.sourcePrice > 0) {
+                            setActiveVariantSourcePrice(cw.sourcePrice);
+                          }
+                          if (cw.compareAtPrice) {
+                            const cp = parseFloat(cw.compareAtPrice);
+                            if (cp > 0) setActiveVariantCompareAt(cp);
+                          } else {
+                            setActiveVariantCompareAt(null);
+                          }
+                        }
                       }}
                       title={cw.name}
                       className={`relative w-4 h-4 rounded-full overflow-hidden border transition-all ${
@@ -266,28 +297,40 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({ product, onSelect })
           <div>
             {/* Primary INR Price */}
             <div className="flex items-baseline gap-1.5 flex-wrap">
-              {product.price_range_inr && product.price_range_inr.min < product.price_range_inr.max ? (
+              {activeVariantPrice ? (
+                <span className="text-sm sm:text-base font-bold text-amber-300 tracking-tight">
+                  ₹{Math.round(activeVariantPrice).toLocaleString('en-IN')}
+                </span>
+              ) : product.price_range_inr && product.price_range_inr.min < product.price_range_inr.max ? (
                 <span className="text-xs sm:text-sm font-bold text-white tracking-tight">
-                  ₹{product.price_range_inr.min.toLocaleString('en-IN')} – ₹{product.price_range_inr.max.toLocaleString('en-IN')}
+                  ₹{Math.round(product.price_range_inr.min).toLocaleString('en-IN')} – ₹{Math.round(product.price_range_inr.max).toLocaleString('en-IN')}
                 </span>
               ) : (
                 <span className="text-sm sm:text-base font-bold text-white tracking-tight">
-                  ₹{product.current_price?.toLocaleString('en-IN')}
+                  ₹{Math.round(product.current_price || 0).toLocaleString('en-IN')}
                 </span>
               )}
-              {product.compare_at_price && product.compare_at_price > product.current_price && (
+              {activeVariantCompareAt && activeVariantPrice && activeVariantCompareAt > activeVariantPrice ? (
                 <span className="text-[11px] text-zinc-500 line-through">
-                  ₹{product.compare_at_price?.toLocaleString('en-IN')}
+                  ₹{Math.round(activeVariantCompareAt).toLocaleString('en-IN')}
                 </span>
-              )}
+              ) : product.compare_at_price && product.compare_at_price > (product.current_price || 0) && !activeVariantPrice ? (
+                <span className="text-[11px] text-zinc-500 line-through">
+                  ₹{Math.round(product.compare_at_price).toLocaleString('en-IN')}
+                </span>
+              ) : null}
             </div>
           </div>
 
           {/* Secondary Source USD Price */}
           <div className="text-[11px] font-mono text-amber-400/80 font-medium whitespace-nowrap">
-            {product.price_range_usd && product.price_range_usd.min < product.price_range_usd.max
-              ? `$${product.price_range_usd.min.toFixed(0)} - $${product.price_range_usd.max.toFixed(0)} USD`
-              : `$${product.source_price?.toFixed(2)} USD`}
+            {activeVariantSourcePrice ? (
+              `$${activeVariantSourcePrice.toFixed(2)} USD`
+            ) : product.price_range_usd && product.price_range_usd.min < product.price_range_usd.max ? (
+              `$${product.price_range_usd.min.toFixed(0)} - $${product.price_range_usd.max.toFixed(0)} USD`
+            ) : (
+              `$${(product.source_price || 0).toFixed(2)} USD`
+            )}
           </div>
         </div>
       </div>

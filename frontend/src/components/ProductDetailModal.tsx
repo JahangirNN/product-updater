@@ -227,7 +227,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
   const maxActivePrice = activeColorPrices.length > 0 ? Math.max(...activeColorPrices) : product.current_price;
   const minActiveSource = activeColorSourcePrices.length > 0 ? Math.min(...activeColorSourcePrices) : product.source_price;
   const maxActiveSource = activeColorSourcePrices.length > 0 ? Math.max(...activeColorSourcePrices) : product.source_price;
-  const hasGlobalPriceRange = product.price_range_usd && product.price_range_usd.min < product.price_range_usd.max;
+  const hasGlobalPriceRange = (product.price_range_usd && product.price_range_usd.min < product.price_range_usd.max) || (product.price_range_inr && product.price_range_inr.min < product.price_range_inr.max);
 
   return (
     <div
@@ -341,30 +341,30 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                   {selectedVariant ? (
                     <>
                       <span className="text-xl sm:text-2xl font-extrabold text-amber-300">
-                        ₹{parseFloat(selectedVariant.price || '0').toLocaleString('en-IN')}
+                        ₹{Math.round(parseFloat(selectedVariant.price || '0') || product.current_price || 0).toLocaleString('en-IN')}
                       </span>
-                      {selectedVariant.compare_at_price && parseFloat(selectedVariant.compare_at_price) > parseFloat(selectedVariant.price) && (
+                      {selectedVariant.compare_at_price && parseFloat(selectedVariant.compare_at_price) > (parseFloat(selectedVariant.price || '0') || product.current_price || 0) && (
                         <span className="text-sm text-zinc-500 line-through">
-                          ₹{parseFloat(selectedVariant.compare_at_price).toLocaleString('en-IN')}
+                          ₹{Math.round(parseFloat(selectedVariant.compare_at_price)).toLocaleString('en-IN')}
                         </span>
                       )}
                     </>
                   ) : selectedColor === 'all' && hasGlobalPriceRange ? (
                     <span className="text-lg sm:text-2xl font-extrabold text-white">
-                      ₹{product.price_range_inr?.min?.toLocaleString('en-IN') || product.current_price?.toLocaleString('en-IN')} – ₹{product.price_range_inr?.max?.toLocaleString('en-IN') || product.current_price?.toLocaleString('en-IN')}
+                      ₹{Math.round(product.price_range_inr?.min || minActivePrice).toLocaleString('en-IN')} – ₹{Math.round(product.price_range_inr?.max || maxActivePrice).toLocaleString('en-IN')}
                     </span>
                   ) : minActivePrice < maxActivePrice ? (
                     <span className="text-lg sm:text-2xl font-extrabold text-white">
-                      ₹{minActivePrice.toLocaleString('en-IN')} – ₹{maxActivePrice.toLocaleString('en-IN')}
+                      ₹{Math.round(minActivePrice).toLocaleString('en-IN')} – ₹{Math.round(maxActivePrice).toLocaleString('en-IN')}
                     </span>
                   ) : (
                     <span className="text-xl sm:text-2xl font-extrabold text-white">
-                      ₹{minActivePrice?.toLocaleString('en-IN')}
+                      ₹{Math.round(minActivePrice || product.current_price || 0).toLocaleString('en-IN')}
                     </span>
                   )}
                   {!selectedVariant && product.compare_at_price && product.compare_at_price > minActivePrice && (
                     <span className="text-sm text-zinc-500 line-through">
-                      ₹{product.compare_at_price?.toLocaleString('en-IN')}
+                      ₹{Math.round(product.compare_at_price).toLocaleString('en-IN')}
                     </span>
                   )}
                 </div>
@@ -376,13 +376,13 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                 </div>
                 <div className="text-sm sm:text-base font-mono font-bold text-amber-400">
                   {selectedVariant ? (
-                    `$${selectedVariant.source_price?.toFixed(2)} USD`
+                    `$${((selectedVariant.source_price !== undefined && selectedVariant.source_price > 0) ? selectedVariant.source_price : (product.source_price || 0)).toFixed(2)} USD`
                   ) : selectedColor === 'all' && hasGlobalPriceRange ? (
-                    `$${product.price_range_usd?.min?.toFixed(2)} – $${product.price_range_usd?.max?.toFixed(2)} USD`
+                    `$${(product.price_range_usd?.min || minActiveSource).toFixed(2)} – $${(product.price_range_usd?.max || maxActiveSource).toFixed(2)} USD`
                   ) : minActiveSource < maxActiveSource ? (
                     `$${minActiveSource.toFixed(2)} – $${maxActiveSource.toFixed(2)} USD`
                   ) : (
-                    `$${minActiveSource.toFixed(2)} USD`
+                    `$${(minActiveSource || product.source_price || 0).toFixed(2)} USD`
                   )}
                 </div>
                 {product.forex_rate_used && (
@@ -545,7 +545,9 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                                   <span className="truncate">{color || 'Standard'}</span>
                                 </div>
                               </td>
-                              <td className="px-3 py-2 text-zinc-200 whitespace-nowrap">₹{parseFloat(v.price || '0').toLocaleString('en-IN')}</td>
+                              <td className="px-3 py-2 text-zinc-200 whitespace-nowrap">
+                                ₹{Math.round(parseFloat(v.price || '0') || product.current_price || 0).toLocaleString('en-IN')}
+                              </td>
                               <td className="px-3 py-2 text-right whitespace-nowrap">
                                 <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${v.in_stock ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' : 'bg-rose-500/20 text-rose-300 border border-rose-500/30'}`}>
                                   {v.in_stock ? 'In Stock' : 'Sold Out'}
@@ -605,7 +607,9 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                             </td>
                             <td className="px-3 py-2 text-amber-300 font-medium">{waist ? `Fits waist ${waist}` : '-'}</td>
                             <td className="px-3 py-2 text-zinc-400 font-sans">{color || 'Standard'}</td>
-                            <td className="px-3 py-2 text-zinc-200 whitespace-nowrap">₹{parseFloat(v.price || '0').toLocaleString('en-IN')}</td>
+                            <td className="px-3 py-2 text-zinc-200 whitespace-nowrap">
+                              ₹{Math.round(parseFloat(v.price || '0') || product.current_price || 0).toLocaleString('en-IN')}
+                            </td>
                             <td className="px-3 py-2 text-right whitespace-nowrap">
                               <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${v.in_stock ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' : 'bg-rose-500/20 text-rose-300 border border-rose-500/30'}`}>
                                 {v.in_stock ? 'In Stock' : 'Sold Out'}
@@ -630,8 +634,12 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                         <span className="text-[10px] text-zinc-400">Click a variant to switch photo</span>
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-56 overflow-y-auto pr-1">
-                        {product.variants.map((v: any, idx: number) => {
+                        {(displayedVariants.length > 0 ? displayedVariants : (product.variants || [])).map((v: any, idx: number) => {
                           const isVSelected = selectedVariantSku === v.sku;
+                          const vPrice = Math.round(parseFloat(v.price || '0') || product.current_price || 0);
+                          const vSource = (v.source_price !== undefined && v.source_price > 0) ? v.source_price : (product.source_price || 0);
+                          const vCompare = v.compare_at_price ? Math.round(parseFloat(v.compare_at_price)) : null;
+
                           return (
                             <button
                               key={idx}
@@ -658,12 +666,17 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                                   {isVSelected && <Check className="w-3 h-3 text-amber-400 flex-shrink-0" />}
                                   <span>{v.title || v.sku}</span>
                                 </div>
-                                <div className="flex items-center gap-1.5 mt-0.5">
+                                <div className="flex items-center gap-1.5 mt-0.5 flex-wrap">
                                   <span className="text-xs font-mono font-bold text-amber-400">
-                                    ₹{parseFloat(v.price || '0').toLocaleString('en-IN')}
+                                    ₹{vPrice.toLocaleString('en-IN')}
                                   </span>
+                                  {vCompare && vCompare > vPrice && (
+                                    <span className="text-[10px] text-zinc-500 line-through font-mono">
+                                      ₹{vCompare.toLocaleString('en-IN')}
+                                    </span>
+                                  )}
                                   <span className="text-[10px] text-zinc-500 font-mono">
-                                    (${v.source_price?.toFixed(2)})
+                                    (${vSource.toFixed(2)})
                                   </span>
                                 </div>
                               </div>

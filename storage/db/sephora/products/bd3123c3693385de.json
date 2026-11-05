@@ -67,7 +67,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2838803+sw-42.jpg",
       "size": "0.27 oz / 8 mL",
       "variation_value": "0.27 oz / 8 mL eau de parfum spray",
-      "variation_type": "Size + Concentration + Formulation"
+      "variation_type": "Size + Concentration + Formulation",
+      "price": 3035,
+      "source_price": 32.0
     },
     {
       "id": "2844777",
@@ -86,7 +88,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2844777+sw-42.jpg",
       "size": "1.7 oz / 50 mL",
       "variation_value": "1.7 oz / 50 mL eau de parfum spray",
-      "variation_type": "Size + Concentration + Formulation"
+      "variation_type": "Size + Concentration + Formulation",
+      "price": 7776,
+      "source_price": 82.0
     }
   ],
   "product_options": [
@@ -115,7 +119,16 @@
     "glossier"
   ],
   "created_at": "2026-11-04T19:01:08Z",
-  "last_verified_at": "2026-11-04T19:01:08Z",
+  "last_verified_at": "2026-11-05T10:50:33Z",
   "id": "bd3123c3693385de",
-  "updated_at": "2026-11-04T19:01:08Z"
+  "updated_at": "2026-11-05T10:50:33Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 3035,
+    "max": 7776
+  },
+  "price_range_usd": {
+    "min": 32.0,
+    "max": 82.0
+  }
 }

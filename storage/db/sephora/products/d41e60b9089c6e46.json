@@ -74,7 +74,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2606176+sw.jpg",
       "size": "0.29 oz / 8 mL",
       "variation_value": "Jet",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1897,
+      "source_price": 20.0
     },
     {
       "id": "2735587",
@@ -93,7 +95,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2735587+sw.jpg",
       "size": "0.29 / 8.50",
       "variation_value": "Drift",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1897,
+      "source_price": 20.0
     },
     {
       "id": "2714459",
@@ -112,7 +116,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2714459+sw.jpg",
       "size": "0.17 oz",
       "variation_value": "Jet",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1138,
+      "source_price": 12.0
     }
   ],
   "product_options": [
@@ -144,7 +150,16 @@
     "tower-28-beauty"
   ],
   "created_at": "2026-11-04T18:51:42Z",
-  "last_verified_at": "2026-11-04T18:51:42Z",
+  "last_verified_at": "2026-11-05T10:44:12Z",
   "id": "d41e60b9089c6e46",
-  "updated_at": "2026-11-04T18:51:42Z"
+  "updated_at": "2026-11-05T10:44:12Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 1138,
+    "max": 1897
+  },
+  "price_range_usd": {
+    "min": 12.0,
+    "max": 20.0
+  }
 }

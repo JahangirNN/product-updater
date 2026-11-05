@@ -79,7 +79,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2971190+sw.jpg",
       "size": "0.15 oz/4.5 g",
       "variation_value": "Soleil Parfait 1",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 7113,
+      "source_price": 75.0
     },
     {
       "id": "2971166",
@@ -98,7 +100,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2971166+sw.jpg",
       "size": "0.15 oz/4.5 g",
       "variation_value": "Soleil Parfait 2",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 7113,
+      "source_price": 75.0
     },
     {
       "id": "2971158",
@@ -117,7 +121,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2971158+sw.jpg",
       "size": "0.15 oz/4.5 g",
       "variation_value": "Soleil Parfait 3",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 7113,
+      "source_price": 75.0
     },
     {
       "id": "2971174",
@@ -136,7 +142,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2971174+sw.jpg",
       "size": "0.15 oz/4.5 g",
       "variation_value": "Soleil Parfait 4",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 7113,
+      "source_price": 75.0
     }
   ],
   "product_options": [
@@ -170,7 +178,8 @@
     "westman-atelier"
   ],
   "created_at": "2026-11-04T18:54:08Z",
-  "last_verified_at": "2026-11-04T18:54:08Z",
+  "last_verified_at": "2026-11-05T10:46:35Z",
   "id": "bd66e427aafd4e25",
-  "updated_at": "2026-11-04T18:54:08Z"
+  "updated_at": "2026-11-05T10:46:35Z",
+  "last_synced_fx_rate": 94.834253
 }

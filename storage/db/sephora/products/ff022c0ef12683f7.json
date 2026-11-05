@@ -61,7 +61,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s1606086+sw.jpg",
       "size": "",
       "variation_value": "Volume I",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 7113,
+      "source_price": 75.0
     },
     {
       "id": "2409464",
@@ -80,7 +82,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2409464+sw.jpg",
       "size": "",
       "variation_value": "Volume II",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 7113,
+      "source_price": 75.0
     },
     {
       "id": "2519767",
@@ -99,7 +103,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2519767+sw.jpg",
       "size": "",
       "variation_value": "Volume III",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 7113,
+      "source_price": 75.0
     }
   ],
   "product_options": [
@@ -129,7 +135,8 @@
     "hourglass"
   ],
   "created_at": "2026-11-04T19:06:00Z",
-  "last_verified_at": "2026-11-04T19:06:00Z",
+  "last_verified_at": "2026-11-05T12:40:17Z",
   "id": "ff022c0ef12683f7",
-  "updated_at": "2026-11-04T19:06:00Z"
+  "updated_at": "2026-11-05T12:40:17Z",
+  "last_synced_fx_rate": 94.834253
 }

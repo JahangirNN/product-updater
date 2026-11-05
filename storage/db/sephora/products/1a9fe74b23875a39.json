@@ -75,7 +75,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2885242+sw.jpg",
       "size": "0.4 oz/10 mL",
       "variation_value": "Hypnotize",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2655,
+      "source_price": 28.0
     },
     {
       "id": "2885259",
@@ -94,7 +96,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2885259+sw.jpg",
       "size": "0.2 oz/6.5 mL",
       "variation_value": "Hypnotize",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1612,
+      "source_price": 17.0
     },
     {
       "id": "3023710",
@@ -113,7 +117,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3023710+sw.jpg",
       "size": "0.4 oz/10 mL",
       "variation_value": "Bewitch",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2655,
+      "source_price": 28.0
     },
     {
       "id": "3023728",
@@ -132,7 +138,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3023728+sw.jpg",
       "size": "0.4 oz/10 mL",
       "variation_value": "Enigma",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2655,
+      "source_price": 28.0
     },
     {
       "id": "3023702",
@@ -151,7 +159,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3023702+sw.jpg",
       "size": "0.4 oz/10 mL",
       "variation_value": "Allure",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2655,
+      "source_price": 28.0
     }
   ],
   "product_options": [
@@ -186,7 +196,16 @@
     "kosas"
   ],
   "created_at": "2026-11-04T18:56:06Z",
-  "last_verified_at": "2026-11-04T18:56:06Z",
+  "last_verified_at": "2026-11-05T10:47:39Z",
   "id": "1a9fe74b23875a39",
-  "updated_at": "2026-11-04T18:56:06Z"
+  "updated_at": "2026-11-05T10:47:39Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 1612,
+    "max": 2655
+  },
+  "price_range_usd": {
+    "min": 17.0,
+    "max": 28.0
+  }
 }

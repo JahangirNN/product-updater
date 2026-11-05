@@ -75,7 +75,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2935948+sw.jpg",
       "size": "",
       "variation_value": "Illusion",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3319,
+      "source_price": 35.0
     },
     {
       "id": "2935989",
@@ -94,7 +96,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2935989+sw.jpg",
       "size": "",
       "variation_value": "Magic",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3319,
+      "source_price": 35.0
     }
   ],
   "product_options": [
@@ -125,7 +129,8 @@
     "kosas"
   ],
   "created_at": "2026-11-04T18:56:11Z",
-  "last_verified_at": "2026-11-04T18:56:11Z",
+  "last_verified_at": "2026-11-05T10:47:42Z",
   "id": "7600b899578f9dd1",
-  "updated_at": "2026-11-04T18:56:11Z"
+  "updated_at": "2026-11-05T10:47:42Z",
+  "last_synced_fx_rate": 94.834253
 }

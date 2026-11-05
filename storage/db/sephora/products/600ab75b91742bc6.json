@@ -77,7 +77,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2896058+sw.jpg",
       "size": "0.026oz/0.75g",
       "variation_value": "Lift - soft neutral pink",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "3009297",
@@ -89,14 +91,17 @@
       "current_price": 2276,
       "price_inr": 2276,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "3009297",
       "image_url": "https://www.sephora.com/productimages/sku/s3009297-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s3009297+sw.jpg",
       "size": "0.026oz/0.75g",
       "variation_value": "Push - soft neutral beige",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "inventory_quantity": 0,
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "2896108",
@@ -115,7 +120,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2896108+sw.jpg",
       "size": "0.026oz/0.75g",
       "variation_value": "Press - warm pinky nude",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "3009289",
@@ -134,7 +141,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3009289+sw.jpg",
       "size": "0.026/0.75g",
       "variation_value": "Squeeze - cool taupe",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "2896074",
@@ -153,7 +162,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2896074+sw.jpg",
       "size": "0.026oz/0.75g",
       "variation_value": "Lunge - rosy beige",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "2895951",
@@ -165,14 +176,17 @@
       "current_price": 2276,
       "price_inr": 2276,
       "compare_at_price": null,
-      "in_stock": false,
-      "is_active": false,
+      "in_stock": true,
+      "is_active": true,
       "barcode": "2895951",
       "image_url": "https://www.sephora.com/productimages/sku/s2895951-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2895951+sw.jpg",
       "size": "0.026oz/0.75g",
       "variation_value": "Twist - warm taupe",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "inventory_quantity": 10,
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "2895878",
@@ -191,7 +205,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2895878+sw.jpg",
       "size": "0.026oz/0.75g",
       "variation_value": "Balance - caramel brown",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "2895803",
@@ -210,7 +226,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2895803+sw.jpg",
       "size": "0.026oz/0.75g",
       "variation_value": "Lean - warm medium brown",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "3009305",
@@ -229,7 +247,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3009305+sw.jpg",
       "size": "0.026oz/0.75g",
       "variation_value": "Jump - chocolate brown",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "2896165",
@@ -248,7 +268,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2896165+sw.jpg",
       "size": "0.026oz/0.75g",
       "variation_value": "Stretch - neutral mocha brown",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "2896025",
@@ -267,7 +289,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2896025+sw.jpg",
       "size": "0.026oz/0.75g",
       "variation_value": "Flex - rich neutral brown",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "2895944",
@@ -286,7 +310,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2895944+sw.jpg",
       "size": "0.026oz/0.75g",
       "variation_value": "Spin - rich plum brown",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2276,
+      "source_price": 24.0
     },
     {
       "id": "2895852",
@@ -305,7 +331,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2895852+sw.jpg",
       "size": "0.026oz/0.75g",
       "variation_value": "Move - deep cool brown",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2276,
+      "source_price": 24.0
     }
   ],
   "product_options": [
@@ -348,7 +376,9 @@
     "rhode"
   ],
   "created_at": "2026-11-04T18:59:31Z",
-  "last_verified_at": "2026-11-04T18:59:31Z",
+  "last_verified_at": "2026-11-05T10:49:11Z",
   "id": "600ab75b91742bc6",
-  "updated_at": "2026-11-04T18:59:31Z"
+  "updated_at": "2026-11-05T10:49:11Z",
+  "last_synced_fx_rate": 94.834253,
+  "shopify_sync_pending": true
 }

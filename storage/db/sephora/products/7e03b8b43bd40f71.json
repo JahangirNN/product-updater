@@ -66,7 +66,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2519759-swatch-zoom.jpg",
       "size": "1 oz/ 30 mL",
       "variation_value": "1 oz/ 30 mL",
-      "variation_type": "Size"
+      "variation_type": "Size",
+      "price": 5500,
+      "source_price": 58.0
     },
     {
       "id": "2669034",
@@ -85,7 +87,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2669034-swatch-zoom.jpg",
       "size": "1.8 oz / 55 mL",
       "variation_value": "1.8 oz / 55 mL",
-      "variation_type": "Size"
+      "variation_type": "Size",
+      "price": 7113,
+      "source_price": 75.0
     },
     {
       "id": "2669026",
@@ -104,7 +108,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2669026-swatch-zoom.jpg",
       "size": "0.33 oz / 10 mL",
       "variation_value": "0.33 oz / 10 mL",
-      "variation_type": "Size"
+      "variation_type": "Size",
+      "price": 2276,
+      "source_price": 24.0
     }
   ],
   "product_options": [
@@ -133,7 +139,16 @@
     "hourglass"
   ],
   "created_at": "2026-11-04T19:07:23Z",
-  "last_verified_at": "2026-11-04T19:07:23Z",
+  "last_verified_at": "2026-11-05T12:41:08Z",
   "id": "7e03b8b43bd40f71",
-  "updated_at": "2026-11-04T19:07:23Z"
+  "updated_at": "2026-11-05T12:41:08Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 2276,
+    "max": 7113
+  },
+  "price_range_usd": {
+    "min": 24.0,
+    "max": 75.0
+  }
 }

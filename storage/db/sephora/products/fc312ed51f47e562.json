@@ -75,7 +75,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2087732+sw.jpg",
       "size": "Mini Size Translucent - .07 oz",
       "variation_value": "Translucent",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2071769",
@@ -94,7 +96,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2071769+sw.jpg",
       "size": "Standard Size Translucent - .36 oz / 10.5 g",
       "variation_value": "Translucent",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 4931,
+      "source_price": 52.0
     },
     {
       "id": "2691046",
@@ -113,7 +117,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2691046+sw.jpg",
       "size": "0.36 oz / 10.5 g",
       "variation_value": "Translucent Medium",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 4931,
+      "source_price": 52.0
     },
     {
       "id": "2691038",
@@ -132,7 +138,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2691038+sw.jpg",
       "size": "0.36 oz / 10.5 g",
       "variation_value": "Translucent Deep",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 4931,
+      "source_price": 52.0
     }
   ],
   "product_options": [
@@ -165,7 +173,16 @@
     "hourglass"
   ],
   "created_at": "2026-11-04T19:06:39Z",
-  "last_verified_at": "2026-11-04T19:06:39Z",
+  "last_verified_at": "2026-11-05T12:40:51Z",
   "id": "fc312ed51f47e562",
-  "updated_at": "2026-11-04T19:06:39Z"
+  "updated_at": "2026-11-05T12:40:51Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 2466,
+    "max": 4931
+  },
+  "price_range_usd": {
+    "min": 26.0,
+    "max": 52.0
+  }
 }

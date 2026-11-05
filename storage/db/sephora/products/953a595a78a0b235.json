@@ -68,7 +68,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3026259+sw-62.jpg",
       "size": ".30/9ml",
       "variation_value": ".30/9ml",
-      "variation_type": "Size + Concentration + Formulation"
+      "variation_type": "Size + Concentration + Formulation",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "3026267",
@@ -87,7 +89,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3026267+sw-62.jpg",
       "size": "1 oz/30 mL",
       "variation_value": "1 oz/30 mL",
-      "variation_type": "Size + Concentration + Formulation"
+      "variation_type": "Size + Concentration + Formulation",
+      "price": 8725,
+      "source_price": 92.0
     }
   ],
   "product_options": [
@@ -113,7 +117,16 @@
     "merit"
   ],
   "created_at": "2026-11-04T18:53:35Z",
-  "last_verified_at": "2026-11-04T18:53:35Z",
+  "last_verified_at": "2026-11-05T10:46:06Z",
   "id": "953a595a78a0b235",
-  "updated_at": "2026-11-04T18:53:35Z"
+  "updated_at": "2026-11-05T10:46:06Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 3224,
+    "max": 8725
+  },
+  "price_range_usd": {
+    "min": 34.0,
+    "max": 92.0
+  }
 }

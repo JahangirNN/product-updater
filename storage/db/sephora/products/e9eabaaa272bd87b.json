@@ -74,7 +74,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2687390+sw.jpg",
       "size": "0.001 oz / 0.03 g",
       "variation_value": "Taupe",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2181,
+      "source_price": 23.0
     },
     {
       "id": "2687408",
@@ -93,7 +95,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2687408+sw.jpg",
       "size": "0.001 oz / 0.03 g",
       "variation_value": "Soft Brown",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2181,
+      "source_price": 23.0
     },
     {
       "id": "2687416",
@@ -112,7 +116,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2687416+sw.jpg",
       "size": "0.001 oz / 0.03 g",
       "variation_value": "Medium Brown",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2181,
+      "source_price": 23.0
     },
     {
       "id": "2687424",
@@ -131,7 +137,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2687424+sw.jpg",
       "size": "0.001 oz / 0.03 g",
       "variation_value": "Dark Brown",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2181,
+      "source_price": 23.0
     },
     {
       "id": "2687432",
@@ -150,7 +158,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2687432+sw.jpg",
       "size": "0.001 oz / 0.03 g",
       "variation_value": "Brown Black",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2181,
+      "source_price": 23.0
     },
     {
       "id": "2687440",
@@ -169,7 +179,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2687440+sw.jpg",
       "size": "0.001 oz / 0.03 g",
       "variation_value": "Black",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2181,
+      "source_price": 23.0
     }
   ],
   "product_options": [
@@ -203,7 +215,8 @@
     "kosas"
   ],
   "created_at": "2026-11-04T18:57:22Z",
-  "last_verified_at": "2026-11-04T18:57:22Z",
+  "last_verified_at": "2026-11-05T10:48:00Z",
   "id": "e9eabaaa272bd87b",
-  "updated_at": "2026-11-04T18:57:22Z"
+  "updated_at": "2026-11-05T10:48:00Z",
+  "last_synced_fx_rate": 94.834253
 }

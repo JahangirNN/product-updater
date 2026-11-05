@@ -319,6 +319,7 @@ def apply_delta_to_product(
                         v_price_inr = int(round(convert_usd_to_inr(vd_sp, forex_rate)))
                         ev["price_inr"] = v_price_inr
                         ev["current_price"] = v_price_inr
+                        ev["price"] = str(v_price_inr)
                         has_changed = True
 
         updated["variants"] = existing_variants

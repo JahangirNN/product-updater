@@ -76,7 +76,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2981082+sw.jpg",
       "size": "2.2 fl oz/65 ml",
       "variation_value": "01",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2655,
+      "source_price": 28.0
     },
     {
       "id": "2981090",
@@ -95,7 +97,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2981090+sw.jpg",
       "size": "2.2 fl oz/65 ml",
       "variation_value": "02",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2655,
+      "source_price": 28.0
     },
     {
       "id": "2981108",
@@ -114,7 +118,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2981108+sw.jpg",
       "size": "2.2 fl oz/65 ml",
       "variation_value": "03",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2655,
+      "source_price": 28.0
     },
     {
       "id": "2979672",
@@ -133,7 +139,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2979672+sw.jpg",
       "size": "2.2 fl oz/65 ml",
       "variation_value": "04",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2655,
+      "source_price": 28.0
     }
   ],
   "product_options": [
@@ -165,7 +173,8 @@
     "rhode"
   ],
   "created_at": "2026-11-04T18:58:57Z",
-  "last_verified_at": "2026-11-04T18:58:57Z",
+  "last_verified_at": "2026-11-05T10:49:09Z",
   "id": "49bdb446545cf2cb",
-  "updated_at": "2026-11-04T18:58:57Z"
+  "updated_at": "2026-11-05T10:49:09Z",
+  "last_synced_fx_rate": 94.834253
 }

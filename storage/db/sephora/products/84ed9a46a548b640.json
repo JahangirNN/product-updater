@@ -79,7 +79,10 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2570364+sw.jpg",
       "size": "0.17 oz / 5 g",
       "variation_value": "Translucent",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "inventory_quantity": 10,
+      "price": 7113,
+      "source_price": 75.0
     },
     {
       "id": "2570372",
@@ -98,7 +101,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2570372+sw.jpg",
       "size": "0.17 oz / 5 g",
       "variation_value": "Pink Bubble",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 7113,
+      "source_price": 75.0
     },
     {
       "id": "2570380",
@@ -117,7 +122,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2570380+sw.jpg",
       "size": "0.17 oz / 5 g",
       "variation_value": "Crème",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 7113,
+      "source_price": 75.0
     },
     {
       "id": "2570398",
@@ -136,7 +143,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2570398+sw.jpg",
       "size": "0.17 oz / 5 g",
       "variation_value": "Dune",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 7113,
+      "source_price": 75.0
     },
     {
       "id": "2570406",
@@ -155,7 +164,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2570406+sw.jpg",
       "size": "0.17 oz / 5 g",
       "variation_value": "Café",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 7113,
+      "source_price": 75.0
     }
   ],
   "product_options": [
@@ -192,7 +203,9 @@
     "westman-atelier"
   ],
   "created_at": "2026-11-04T18:55:22Z",
-  "last_verified_at": "2026-11-04T18:55:22Z",
+  "last_verified_at": "2026-11-05T10:47:12Z",
   "id": "84ed9a46a548b640",
-  "updated_at": "2026-11-04T18:55:22Z"
+  "updated_at": "2026-11-05T10:47:12Z",
+  "last_synced_fx_rate": 94.834253,
+  "shopify_sync_pending": true
 }

@@ -75,7 +75,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2426773+sw.jpg",
       "size": "0.14 oz / 4 g",
       "variation_value": "Bounce",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     },
     {
       "id": "2567287",
@@ -94,7 +96,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2567287+sw.jpg",
       "size": "0.14 oz / 4 g",
       "variation_value": "Citrine",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     },
     {
       "id": "2426765",
@@ -113,7 +117,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2426765+sw.jpg",
       "size": "0.14 oz / 4 g",
       "variation_value": "Cava",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     },
     {
       "id": "2775203",
@@ -132,7 +138,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2775203+sw.jpg",
       "size": "0.14 oz / 4 g",
       "variation_value": "Solstice",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     }
   ],
   "product_options": [
@@ -166,7 +174,8 @@
     "merit"
   ],
   "created_at": "2026-11-04T18:53:07Z",
-  "last_verified_at": "2026-11-04T18:53:07Z",
+  "last_verified_at": "2026-11-05T10:45:48Z",
   "id": "b662b1f3a502847c",
-  "updated_at": "2026-11-04T18:53:07Z"
+  "updated_at": "2026-11-05T10:45:48Z",
+  "last_synced_fx_rate": 94.834253
 }

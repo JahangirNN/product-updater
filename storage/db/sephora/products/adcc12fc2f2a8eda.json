@@ -77,7 +77,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2649721+sw.jpg",
       "size": "0.10 oz / 3 g",
       "variation_value": "Lucite",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "2636728",
@@ -96,7 +98,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2636728+sw.jpg",
       "size": "0.10 oz / 3 g",
       "variation_value": "Villa",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "2649754",
@@ -115,7 +119,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2649754+sw.jpg",
       "size": "0.10 oz / 3 g",
       "variation_value": "Portrait",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "2818029",
@@ -134,7 +140,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2818029+sw.jpg",
       "size": "0.10 oz / 3 g",
       "variation_value": "Pony",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "2818011",
@@ -153,7 +161,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2818011+sw.jpg",
       "size": "0.10 oz / 3 g",
       "variation_value": "Cranberry",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "2649697",
@@ -172,7 +182,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2649697+sw.jpg",
       "size": "0.10 oz / 3 g",
       "variation_value": "Cachet",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "2649739",
@@ -184,14 +196,17 @@
       "current_price": 2086,
       "price_inr": 2086,
       "compare_at_price": null,
-      "in_stock": false,
-      "is_active": false,
+      "in_stock": true,
+      "is_active": true,
       "barcode": "2649739",
       "image_url": "https://www.sephora.com/productimages/sku/s2649739-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2649739+sw.jpg",
       "size": "0.10 oz / 3 g",
       "variation_value": "Ember",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "inventory_quantity": 10,
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "2868180",
@@ -210,7 +225,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2868180+sw.jpg",
       "size": "0.10 oz / 3 g",
       "variation_value": "Crest",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "2868222",
@@ -229,7 +246,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2868222+sw.jpg",
       "size": "0.10 oz / 3 g",
       "variation_value": "Flute",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     }
   ],
   "product_options": [
@@ -266,7 +285,9 @@
     "glossier"
   ],
   "created_at": "2026-11-04T19:00:57Z",
-  "last_verified_at": "2026-11-04T19:00:57Z",
+  "last_verified_at": "2026-11-05T10:50:21Z",
   "id": "adcc12fc2f2a8eda",
-  "updated_at": "2026-11-04T19:00:57Z"
+  "updated_at": "2026-11-05T10:50:21Z",
+  "last_synced_fx_rate": 94.834253,
+  "shopify_sync_pending": true
 }

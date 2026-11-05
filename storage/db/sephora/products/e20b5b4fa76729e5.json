@@ -71,7 +71,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2883379-swatch-zoom.jpg",
       "size": "6.8 oz/200 ml",
       "variation_value": "6.8 oz/200 ml",
-      "variation_type": "Size"
+      "variation_type": "Size",
+      "price": 2561,
+      "source_price": 27.0
     },
     {
       "id": "2945285",
@@ -90,7 +92,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2945285-swatch-zoom.jpg",
       "size": "1.69 oz/50 mL",
       "variation_value": "1.69 oz/50 mL",
-      "variation_type": "Size"
+      "variation_type": "Size",
+      "price": 1517,
+      "source_price": 16.0
     }
   ],
   "product_options": [
@@ -122,7 +126,16 @@
     "gisou"
   ],
   "created_at": "2026-11-04T18:41:08Z",
-  "last_verified_at": "2026-11-04T18:41:08Z",
+  "last_verified_at": "2026-11-05T10:39:04Z",
   "id": "e20b5b4fa76729e5",
-  "updated_at": "2026-11-04T18:41:08Z"
+  "updated_at": "2026-11-05T10:39:04Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 1517,
+    "max": 2561
+  },
+  "price_range_usd": {
+    "min": 16.0,
+    "max": 27.0
+  }
 }

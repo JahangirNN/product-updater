@@ -54,7 +54,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2029841+sw-62.jpg",
       "size": ".002 oz/ .06 g",
       "variation_value": "Bronze",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "1829308",
@@ -73,7 +75,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s1829308+sw-62.jpg",
       "size": "0.002 oz/ 0.06 g",
       "variation_value": "Canyon",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "1621523",
@@ -92,7 +96,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s1621523+sw-62.jpg",
       "size": "0.002 oz/ 0.06 g",
       "variation_value": "Obsidian",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     }
   ],
   "product_options": [
@@ -120,7 +126,8 @@
     "hourglass"
   ],
   "created_at": "2026-11-04T19:06:57Z",
-  "last_verified_at": "2026-11-04T19:06:57Z",
+  "last_verified_at": "2026-11-05T12:40:50Z",
   "id": "46e6659be4ced884",
-  "updated_at": "2026-11-04T19:06:57Z"
+  "updated_at": "2026-11-05T12:40:50Z",
+  "last_synced_fx_rate": 94.834253
 }

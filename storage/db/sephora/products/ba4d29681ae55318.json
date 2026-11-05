@@ -74,7 +74,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2912186+sw.jpg",
       "size": "0.3 oz/9 mL",
       "variation_value": "For The Girls",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2912178",
@@ -93,7 +95,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2912178+sw.jpg",
       "size": "0.3 oz/9 mL",
       "variation_value": "Mainstage",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2912160",
@@ -112,7 +116,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2912160+sw.jpg",
       "size": "0.3 oz/9 mL",
       "variation_value": "Unavailable",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2742542",
@@ -131,7 +137,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2742542+sw.jpg",
       "size": "0.3 oz",
       "variation_value": "Say Less",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2742559",
@@ -150,7 +158,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2742559+sw.jpg",
       "size": "0.3 oz",
       "variation_value": "Need Her",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2742518",
@@ -169,7 +179,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2742518+sw.jpg",
       "size": "0.3 oz",
       "variation_value": "Obviously",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2742526",
@@ -188,7 +200,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2742526+sw.jpg",
       "size": "0.3 oz",
       "variation_value": "Mine",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2556066",
@@ -207,7 +221,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2556066+sw.jpg",
       "size": "0.3 oz",
       "variation_value": "Full Syringe",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2518769",
@@ -226,7 +242,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2518769+sw.jpg",
       "size": "0.3 oz",
       "variation_value": "Pouty",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2518744",
@@ -245,7 +263,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2518744+sw.jpg",
       "size": "0.3 oz",
       "variation_value": "2 CC's",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2518751",
@@ -264,7 +284,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2518751+sw.jpg",
       "size": "0.3 oz",
       "variation_value": "Superficial",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2466,
+      "source_price": 26.0
     },
     {
       "id": "2760338",
@@ -283,7 +305,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2760338+sw.jpg",
       "size": "0.1 oz",
       "variation_value": "2 CC's",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1423,
+      "source_price": 15.0
     }
   ],
   "product_options": [
@@ -319,7 +343,16 @@
     "patrick-ta"
   ],
   "created_at": "2026-11-04T18:46:12Z",
-  "last_verified_at": "2026-11-04T18:46:12Z",
+  "last_verified_at": "2026-11-05T10:41:34Z",
   "id": "ba4d29681ae55318",
-  "updated_at": "2026-11-04T18:46:12Z"
+  "updated_at": "2026-11-05T10:41:34Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 1423,
+    "max": 2466
+  },
+  "price_range_usd": {
+    "min": 15.0,
+    "max": 26.0
+  }
 }

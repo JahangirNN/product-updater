@@ -73,7 +73,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2871390+sw.jpg",
       "size": "0.17 oz / 4.8 g",
       "variation_value": "Poppet & Ganache",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 7113,
+      "source_price": 75.0
     },
     {
       "id": "2869105",
@@ -92,7 +94,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2869105+sw.jpg",
       "size": "0.17 oz / 4.8 g",
       "variation_value": "Petal & Biscut",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 7113,
+      "source_price": 75.0
     },
     {
       "id": "2869121",
@@ -111,7 +115,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2869121+sw.jpg",
       "size": "0.17 oz / 4.8 g",
       "variation_value": "Tulle & Truffle",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 7113,
+      "source_price": 75.0
     }
   ],
   "product_options": [
@@ -143,7 +149,8 @@
     "westman-atelier"
   ],
   "created_at": "2026-11-04T18:54:54Z",
-  "last_verified_at": "2026-11-04T18:54:54Z",
+  "last_verified_at": "2026-11-05T10:46:54Z",
   "id": "adf7a2bfbf596a54",
-  "updated_at": "2026-11-04T18:54:54Z"
+  "updated_at": "2026-11-05T10:46:54Z",
+  "last_synced_fx_rate": 94.834253
 }

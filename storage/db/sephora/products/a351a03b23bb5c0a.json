@@ -79,7 +79,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2638146+sw.jpg",
       "size": "1 oz / 30 mL",
       "variation_value": "Fair Bronze",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2460467",
@@ -98,7 +100,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2460467+sw.jpg",
       "size": "1 oz/ 30 mL",
       "variation_value": "Light Bronze",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2460459",
@@ -117,7 +121,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2460459+sw.jpg",
       "size": "1 oz/ 30 mL",
       "variation_value": "Medium Bronze",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2638138",
@@ -136,7 +142,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2638138+sw.jpg",
       "size": "1 oz / 30 ml",
       "variation_value": "Tan Bronze",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2460442",
@@ -155,7 +163,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2460442+sw.jpg",
       "size": "1 oz/ 30 mL",
       "variation_value": "Deep Bronze",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     },
     {
       "id": "2482552",
@@ -174,7 +184,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2482552+sw.jpg",
       "size": "1 oz/ 30 mL",
       "variation_value": "Dark Bronze",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3224,
+      "source_price": 34.0
     }
   ],
   "product_options": [
@@ -208,7 +220,8 @@
     "saie"
   ],
   "created_at": "2026-11-04T18:49:53Z",
-  "last_verified_at": "2026-11-04T18:49:53Z",
+  "last_verified_at": "2026-11-05T10:43:47Z",
   "id": "a351a03b23bb5c0a",
-  "updated_at": "2026-11-04T18:49:53Z"
+  "updated_at": "2026-11-05T10:43:47Z",
+  "last_synced_fx_rate": 94.834253
 }

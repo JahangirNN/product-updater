@@ -70,7 +70,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2879393+sw.jpg",
       "size": "0.05 oz/1.5 mL",
       "variation_value": "Ash",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "2868495",
@@ -89,7 +91,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2868495+sw.jpg",
       "size": "0.05 oz/1.5 mL",
       "variation_value": "Chestnut",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "2868446",
@@ -108,7 +112,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2868446+sw.jpg",
       "size": "0.05 oz/1.5 mL",
       "variation_value": "Espresso",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 2086,
+      "source_price": 22.0
     },
     {
       "id": "2712792",
@@ -127,7 +133,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2712792+sw.jpg",
       "size": "0.05 oz/1.5 mL",
       "variation_value": "Dark",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1897,
+      "source_price": 20.0
     },
     {
       "id": "2712776",
@@ -146,7 +154,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2712776+sw.jpg",
       "size": "0.05 oz/1.5 mL",
       "variation_value": "Light",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 1897,
+      "source_price": 20.0
     }
   ],
   "product_options": [
@@ -176,7 +186,16 @@
     "refy"
   ],
   "created_at": "2026-11-04T19:10:14Z",
-  "last_verified_at": "2026-11-04T19:10:14Z",
+  "last_verified_at": "2026-11-05T12:43:26Z",
   "id": "e93e6d3bde686484",
-  "updated_at": "2026-11-04T19:10:14Z"
+  "updated_at": "2026-11-05T12:43:26Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 1897,
+    "max": 2086
+  },
+  "price_range_usd": {
+    "min": 20.0,
+    "max": 22.0
+  }
 }

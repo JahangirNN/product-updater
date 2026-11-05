@@ -75,7 +75,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2771533+sw-62.jpg",
       "size": "0.27 oz/ 8 mL",
       "variation_value": "0.27 oz/ 8 mL eau de parfum spray",
-      "variation_type": "Size + Concentration + Formulation"
+      "variation_type": "Size + Concentration + Formulation",
+      "price": 3035,
+      "source_price": 32.0
     },
     {
       "id": "2649770",
@@ -94,7 +96,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2649770+sw-62.jpg",
       "size": "1.7 oz / 50 mL",
       "variation_value": "1.7 oz / 50 mL eau de parfum spray",
-      "variation_type": "Size + Concentration + Formulation"
+      "variation_type": "Size + Concentration + Formulation",
+      "price": 7776,
+      "source_price": 82.0
     },
     {
       "id": "2737690",
@@ -113,7 +117,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2737690+sw-62.jpg",
       "size": "3.4 OZ / 100 ML EAU DE PARFUM SPRAY",
       "variation_value": "3.4 OZ / 100 ML EAU DE PARFUM SPRAY",
-      "variation_type": "Size + Concentration + Formulation"
+      "variation_type": "Size + Concentration + Formulation",
+      "price": 11001,
+      "source_price": 116.0
     },
     {
       "id": "3021706",
@@ -132,7 +138,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3021706+sw-62.jpg",
       "size": "1 x 0.27oz/8ml , 1 x 1.7oz/50ml",
       "variation_value": "1 x 0.27oz/8ml , 1 x 1.7oz/50ml eau de parfum",
-      "variation_type": "Size + Concentration + Formulation"
+      "variation_type": "Size + Concentration + Formulation",
+      "price": 8535,
+      "source_price": 90.0
     }
   ],
   "product_options": [
@@ -165,7 +173,16 @@
     "glossier"
   ],
   "created_at": "2026-11-04T19:00:31Z",
-  "last_verified_at": "2026-11-04T19:00:31Z",
+  "last_verified_at": "2026-11-05T10:49:49Z",
   "id": "9049d277d221a201",
-  "updated_at": "2026-11-04T19:00:31Z"
+  "updated_at": "2026-11-05T10:49:49Z",
+  "last_synced_fx_rate": 94.834253,
+  "price_range_inr": {
+    "min": 3035,
+    "max": 11001
+  },
+  "price_range_usd": {
+    "min": 32.0,
+    "max": 116.0
+  }
 }

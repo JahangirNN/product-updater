@@ -60,7 +60,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3019478+sw.jpg",
       "size": "2 x 0.08 oz/2 x 2.5g",
       "variation_value": "Light Medium / Perfect Pink",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     },
     {
       "id": "3019452",
@@ -79,7 +81,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3019452+sw.jpg",
       "size": "2 x 0.08 oz/2 x 2.5g",
       "variation_value": "Medium / Rose Crush",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     },
     {
       "id": "3019437",
@@ -98,7 +102,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s3019437+sw.jpg",
       "size": "2 x 0.08 oz/2 x 2.5g",
       "variation_value": "Dark / Strawberry Sunset",
-      "variation_type": "Color"
+      "variation_type": "Color",
+      "price": 3035,
+      "source_price": 32.0
     }
   ],
   "product_options": [
@@ -130,7 +136,8 @@
     "makeup-by-mario"
   ],
   "created_at": "2026-11-04T19:02:56Z",
-  "last_verified_at": "2026-11-04T19:02:56Z",
+  "last_verified_at": "2026-11-05T12:38:11Z",
   "id": "21e81a6fe5c30dd3",
-  "updated_at": "2026-11-04T19:02:56Z"
+  "updated_at": "2026-11-05T12:38:11Z",
+  "last_synced_fx_rate": 94.834253
 }

@@ -73,7 +73,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2601482+sw-62.jpg",
       "size": "2.4 oz / 70 mL",
       "variation_value": "Beachy Clean - notes of sandalwood, jasmine, vanilla",
-      "variation_type": "Type"
+      "variation_type": "Type",
+      "price": 1897,
+      "source_price": 20.0
     },
     {
       "id": "2375418",
@@ -92,7 +94,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2375418+sw-62.jpg",
       "size": "2.4 oz/ 70 mL",
       "variation_value": "2375418",
-      "variation_type": "Type"
+      "variation_type": "Type",
+      "price": 1897,
+      "source_price": 20.0
     },
     {
       "id": "2375400",
@@ -111,7 +115,9 @@
       "swatch_url": "https://www.sephora.com/productimages/sku/s2375400+sw-62.jpg",
       "size": "2.4 oz/ 70 mL",
       "variation_value": "2375400",
-      "variation_type": "Type"
+      "variation_type": "Type",
+      "price": 1897,
+      "source_price": 20.0
     }
   ],
   "product_options": [
@@ -144,7 +150,8 @@
     "kosas"
   ],
   "created_at": "2026-11-04T18:57:49Z",
-  "last_verified_at": "2026-11-04T18:57:49Z",
+  "last_verified_at": "2026-11-05T10:48:24Z",
   "id": "5c0ad4a806a81012",
-  "updated_at": "2026-11-04T18:57:49Z"
+  "updated_at": "2026-11-05T10:48:24Z",
+  "last_synced_fx_rate": 94.834253
 }
