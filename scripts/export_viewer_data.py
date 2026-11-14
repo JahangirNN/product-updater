@@ -242,6 +242,29 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
             return "Designer Sunglasses"
         return "Women's Luxury"
 
+    # Handbag taxonomy for Nordstrom & Nordstrom Rack
+    if source_store in ["nordstrom", "nordstromrack"]:
+        pt = product.get("product_type", "")
+        is_handbag = (
+            pt == "Handbags"
+            or source_store == "nordstromrack"
+            or any(w in text for w in ["bag", "tote", "crossbody", "satchel", "hobo", "clutch", "purse", "wallet", "wristlet", "backpack"])
+        )
+        if is_handbag:
+            if any(w in text for w in ["crossbody", "camera bag", "camera", "cross-body", "messenger"]):
+                return "Crossbody & Camera Bags"
+            elif any(w in text for w in ["tote", "carryall", "shopper"]):
+                return "Totes & Carryalls"
+            elif any(w in text for w in ["satchel", "top handle", "top-handle"]):
+                return "Satchels & Top Handle Bags"
+            elif any(w in text for w in ["mini", "wristlet", "clutch", "pouch", "wallet"]):
+                return "Mini Bags & Wristlets"
+            elif any(w in text for w in ["shoulder", "hobo", "flap bag", "baguette"]):
+                return "Shoulder & Hobo Bags"
+            elif any(w in text for w in ["backpack"]):
+                return "Backpacks"
+            return "Shoulder & Hobo Bags"
+
     # Footwear taxonomy for Nordstrom (On, HOKA, Salomon)
     if source_store == "nordstrom":
         if "waterproof" in title_lower or "waterproof" in handle_lower or "gtx" in title_lower or "gore-tex" in title_lower:
@@ -305,8 +328,22 @@ def classify_subgroup(product: Dict[str, Any]) -> str:
             return "Dunk Low"
         return "Nike Footwear"
 
-    # Jomashop Luxury & Designer Watches Taxonomy (ADR 0018)
+    # Jomashop Luxury & Designer Watches & Sunglasses Taxonomy (ADR 0018)
     if source_store == "jomashop":
+        pt = product.get("product_type", "")
+        if pt == "Sunglasses" or "sunglasses" in text or "sunglass" in text:
+            if any(w in text for w in ["aviator", "pilot", "navigator"]):
+                return "Aviator & Pilot Sunglasses"
+            elif any(w in text for w in ["cat eye", "cateye", "butterfly"]):
+                return "Cat Eye & Butterfly Sunglasses"
+            elif any(w in text for w in ["round", "oval", "circle"]):
+                return "Round & Oval Sunglasses"
+            elif any(w in text for w in ["shield", "sport", "wrap", "goggle", "radarlock", "radar", "sutro", "flak", "holbrook", "jawbreaker", "fuel cell", "gascan", "half jacket"]):
+                return "Sport & Shield Sunglasses"
+            elif any(w in text for w in ["square", "rectangle", "rectangular", "geometric", "wayfarer"]):
+                return "Square & Rectangular Sunglasses"
+            return "Square & Rectangular Sunglasses"
+
         vendor = str(product.get("vendor") or "").lower()
         series = str(specs.get("Series") or "").lower()
         t_check = f"{vendor} {series} {title_lower} {handle_lower}"
@@ -633,7 +670,15 @@ def export_catalog(
                 group_display = "Handbags"
             elif s_store == "nordstrom":
                 store_display = "Nordstrom"
-                group_display = "Shoes"
+                pt = prod.get("product_type", "")
+                t_lower = (prod.get("title", "") + " " + prod.get("handle", "")).lower()
+                if pt == "Handbags" or any(w in t_lower for w in ["bag", "tote", "crossbody", "satchel", "hobo", "clutch", "purse", "backpack"]):
+                    group_display = "Handbags"
+                else:
+                    group_display = "Shoes"
+            elif s_store == "nordstromrack":
+                store_display = "Nordstrom Rack"
+                group_display = "Handbags"
             elif s_store == "michaelkors":
                 store_display = "Michael Kors"
                 gender = prod.get("gender", "Women")
@@ -706,14 +751,19 @@ def export_catalog(
                     group_display = "Men's Shoes"
             elif s_store == "jomashop":
                 store_display = "Jomashop"
-                gender = prod.get("gender") or (prod.get("specifications") or {}).get("Gender") or ""
-                gender_text = f"{str(gender)} {str(prod.get('title', ''))}".lower()
-                if re.search(r"\b(women|womens|women\'s|ladies|lady)\b", gender_text):
-                    group_display = "Women's Watches"
-                elif re.search(r"\bunisex\b", gender_text):
-                    group_display = "Unisex Watches"
+                pt = prod.get("product_type", "")
+                t_lower = (prod.get("title", "") + " " + prod.get("handle", "")).lower()
+                if pt == "Sunglasses" or "sunglass" in t_lower:
+                    group_display = "Sunglasses"
                 else:
-                    group_display = "Men's Watches"
+                    gender = prod.get("gender") or (prod.get("specifications") or {}).get("Gender") or ""
+                    gender_text = f"{str(gender)} {str(prod.get('title', ''))}".lower()
+                    if re.search(r"\b(women|womens|women\'s|ladies|lady)\b", gender_text):
+                        group_display = "Women's Watches"
+                    elif re.search(r"\bunisex\b", gender_text):
+                        group_display = "Unisex Watches"
+                    else:
+                        group_display = "Men's Watches"
             elif s_store == "katespade":
                 store_display = "Kate Spade"
                 group_display = "Handbags"

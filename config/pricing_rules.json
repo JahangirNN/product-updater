@@ -172,6 +172,82 @@
           ]
         }
       }
+    },
+    "sephora": {
+      "default": {
+        "formula": "usd_tiered_percentage_markup",
+        "description": "Sephora Beauty Base Formula: <$20: +100%, $20-$30: +75%, $30-$40: +55%, >$40: +40% with .99 charm",
+        "round_nearest": 100,
+        "charm_offset": -1,
+        "brackets": [
+          { "max_usd": 20.0, "markup_percent": 1.00, "description": "Under $20: +100%" },
+          { "min_usd": 20.0, "max_usd": 30.0, "markup_percent": 0.75, "inclusive_min": true, "description": "$20 to $30 inclusive: +75%" },
+          { "min_usd": 30.0, "max_usd": 40.0, "markup_percent": 0.55, "inclusive_min": false, "description": "Above $30 to $40 inclusive: +55%" },
+          { "min_usd": 40.0, "markup_percent": 0.40, "description": "Above $40: +40%" }
+        ]
+      },
+      "brands": {
+        "rhode": {
+          "formula": "usd_tiered_percentage_markup",
+          "description": "Rhode custom tiered markup: <$20: +65%, $20-$30: +50%, $30-$40: +45%, >$40: +35% with .99 charm",
+          "round_nearest": 100,
+          "charm_offset": -1,
+          "brackets": [
+            { "max_usd": 20.0, "markup_percent": 0.65, "description": "<$20: +65%" },
+            { "min_usd": 20.0, "max_usd": 30.0, "markup_percent": 0.50, "inclusive_min": true, "description": "$20-$30: +50%" },
+            { "min_usd": 30.0, "max_usd": 40.0, "markup_percent": 0.45, "inclusive_min": false, "description": "$30-$40: +45%" },
+            { "min_usd": 40.0, "markup_percent": 0.35, "description": ">$40: +35%" }
+          ]
+        },
+        "Haus Labs": {
+          "formula": "usd_tiered_percentage_markup",
+          "description": "Haus Labs custom tiered markup: <$20: +85%, $20-$30: +65%, $30-$40: +50%, >$40: +40% with .99 charm",
+          "round_nearest": 100,
+          "charm_offset": -1,
+          "brackets": [
+            { "max_usd": 20.0, "markup_percent": 0.85, "description": "<$20: +85%" },
+            { "min_usd": 20.0, "max_usd": 30.0, "markup_percent": 0.65, "inclusive_min": true, "description": "$20-$30: +65%" },
+            { "min_usd": 30.0, "max_usd": 40.0, "markup_percent": 0.50, "inclusive_min": false, "description": "$30-$40: +50%" },
+            { "min_usd": 40.0, "markup_percent": 0.40, "description": ">$40: +40%" }
+          ]
+        },
+        "MAKEUP BY MARIO": {
+          "formula": "usd_tiered_percentage_markup",
+          "description": "Makeup by Mario custom tiered markup: <$20: +85%, $20-$30: +65%, $30-$40: +50%, >$40: +40% with .99 charm",
+          "round_nearest": 100,
+          "charm_offset": -1,
+          "brackets": [
+            { "max_usd": 20.0, "markup_percent": 0.85, "description": "<$20: +85%" },
+            { "min_usd": 20.0, "max_usd": 30.0, "markup_percent": 0.65, "inclusive_min": true, "description": "$20-$30: +65%" },
+            { "min_usd": 30.0, "max_usd": 40.0, "markup_percent": 0.50, "inclusive_min": false, "description": "$30-$40: +50%" },
+            { "min_usd": 40.0, "markup_percent": 0.40, "description": ">$40: +40%" }
+          ]
+        },
+        "Hourglass": {
+          "formula": "usd_tiered_percentage_markup",
+          "description": "Hourglass custom tiered markup: <$20: +80%, $20-$30: +60%, $30-$40: +45%, >$40: +35% with .99 charm",
+          "round_nearest": 100,
+          "charm_offset": -1,
+          "brackets": [
+            { "max_usd": 20.0, "markup_percent": 0.80, "description": "<$20: +80%" },
+            { "min_usd": 20.0, "max_usd": 30.0, "markup_percent": 0.60, "inclusive_min": true, "description": "$20-$30: +60%" },
+            { "min_usd": 30.0, "max_usd": 40.0, "markup_percent": 0.45, "inclusive_min": false, "description": "$30-$40: +45%" },
+            { "min_usd": 40.0, "markup_percent": 0.35, "description": ">$40: +35%" }
+          ]
+        },
+        "Westman Atelier": {
+          "formula": "usd_tiered_percentage_markup",
+          "description": "Westman Atelier custom tiered markup: <$20: +80%, $20-$30: +60%, $30-$40: +45%, >$40: +35% with .99 charm",
+          "round_nearest": 100,
+          "charm_offset": -1,
+          "brackets": [
+            { "max_usd": 20.0, "markup_percent": 0.80, "description": "<$20: +80%" },
+            { "min_usd": 20.0, "max_usd": 30.0, "markup_percent": 0.60, "inclusive_min": true, "description": "$20-$30: +60%" },
+            { "min_usd": 30.0, "max_usd": 40.0, "markup_percent": 0.45, "inclusive_min": false, "description": "$30-$40: +45%" },
+            { "min_usd": 40.0, "markup_percent": 0.35, "description": ">$40: +35%" }
+          ]
+        }
+      }
     }
   },
   "categories": {

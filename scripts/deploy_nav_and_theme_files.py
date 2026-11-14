@@ -7,7 +7,7 @@ sys.path.insert(0, PROJECT_ROOT)
 
 from storage.shopify_auth import execute_shopify_graphql
 
-THEME_ID = "gid://shopify/OnlineStoreTheme/197348655270"
+THEME_ID = "gid://shopify/OnlineStoreTheme/198751387814"
 
 THEME_FILES_MUTATION = """
 mutation themeFilesUpsert($files: [OnlineStoreThemeFilesUpsertFileInput!]!, $themeId: ID!) {
@@ -24,12 +24,13 @@ mutation themeFilesUpsert($files: [OnlineStoreThemeFilesUpsertFileInput!]!, $the
 """
 
 FILES_TO_DEPLOY = [
-    ("sections/header.liquid", os.path.join(PROJECT_ROOT, "theme", "sections", "header.liquid")),
-    ("sections/footer.liquid", os.path.join(PROJECT_ROOT, "theme", "sections", "footer.liquid")),
-    ("snippets/luxury-desktop-nav.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "luxury-desktop-nav.liquid")),
-    ("snippets/header-sidebar.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "header-sidebar.liquid")),
-    ("snippets/luxury-sidebar-panels.liquid", os.path.join(PROJECT_ROOT, "theme", "snippets", "luxury-sidebar-panels.liquid")),
-    ("layout/theme.liquid", os.path.join(PROJECT_ROOT, "theme", "layout", "theme.liquid")),
+    ("snippets/luxury-desktop-nav.liquid", os.path.join(PROJECT_ROOT, "horizon_clean_theme", "snippets", "luxury-desktop-nav.liquid")),
+    ("snippets/luxury-sidebar-panels.liquid", os.path.join(PROJECT_ROOT, "horizon_clean_theme", "snippets", "luxury-sidebar-panels.liquid")),
+    ("snippets/luxury_sidebar_navigation.liquid", os.path.join(PROJECT_ROOT, "horizon_clean_theme", "snippets", "luxury_sidebar_navigation.liquid")),
+    ("snippets/price.liquid", os.path.join(PROJECT_ROOT, "horizon_clean_theme", "snippets", "price.liquid")),
+    ("sections/header.liquid", os.path.join(PROJECT_ROOT, "horizon_clean_theme", "sections", "header.liquid")),
+    ("sections/brand-tiles.liquid", os.path.join(PROJECT_ROOT, "horizon_clean_theme", "sections", "brand-tiles.liquid")),
+    ("templates/index.json", os.path.join(PROJECT_ROOT, "horizon_clean_theme", "templates", "index.json")),
 ]
 
 def deploy():

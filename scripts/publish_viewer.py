@@ -12,6 +12,11 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 if sys.stdout.encoding != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
 
+# Ensure portable MinGit is on PATH if system git is not installed
+mingit_cmd = os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "..", "tools", "mingit", "cmd"))
+if os.path.exists(mingit_cmd) and mingit_cmd not in os.environ.get("PATH", ""):
+    os.environ["PATH"] = mingit_cmd + os.pathsep + os.environ.get("PATH", "")
+
 from typing import Tuple
 from scripts.export_viewer_data import export_catalog
 

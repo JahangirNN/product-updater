@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -79,7 +79,7 @@
       "source_compare_at_price": 425.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/t/i/tissot-prx-quartz-white-dial-mens-watch-t1374101701100-t1374101701100.jpg",
       "option_values": [
         {
@@ -112,11 +112,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T10:48:05Z",
-  "updated_at": "2026-10-29T05:38:03Z",
-  "last_verified_at": "2026-10-29T05:38:03Z",
+  "updated_at": "2026-11-14T07:06:58Z",
+  "last_verified_at": "2026-11-14T07:06:58Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838216224934",
   "shopify_handle": "tissot-prx-quartz-white-dial-mens-watch-t137-410-17-011-00",
-  "shopify_synced_at": "2026-10-26T17:56:07Z",
-  "last_synced_fx_rate": 95.160836
+  "shopify_synced_at": "2026-11-04T22:38:48Z",
+  "last_synced_fx_rate": 94.834253
 }

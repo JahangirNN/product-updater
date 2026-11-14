@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -69,7 +69,7 @@
       "source_compare_at_price": 995.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/m/o/movado-movado-museum-classic-quartz-black-dial-ladies-watch-0607847.jpg",
       "option_values": [
         {
@@ -102,11 +102,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T14:52:56Z",
-  "updated_at": "2026-10-29T03:37:19Z",
-  "last_verified_at": "2026-10-29T03:37:19Z",
-  "shopify_sync_pending": true,
+  "updated_at": "2026-11-14T07:07:47Z",
+  "last_verified_at": "2026-11-14T07:07:47Z",
+  "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838884790438",
   "shopify_handle": "movado-movado-museum-classic-black-dial-ladies-watch-0607847",
-  "shopify_synced_at": "2026-09-29T06:05:13Z",
-  "last_synced_fx_rate": 95.252751
+  "shopify_synced_at": "2026-11-13T17:02:43Z",
+  "last_synced_fx_rate": 94.086126
 }

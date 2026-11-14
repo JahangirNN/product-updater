@@ -15,8 +15,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.03698,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "material": "Stainless Steel",
   "specifications": {
     "Box Type": "Original Box",
@@ -71,7 +71,7 @@
       "source_compare_at_price": 275.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://cdn2.jomashop.com/media/catalog/product/m/i/michael-kors-mini-lexington-chronograph-quartz-crystal-ladies-watch-mk4926.jpg",
       "option_values": [
         {
@@ -104,11 +104,11 @@
     "watches"
   ],
   "created_at": "2026-09-22T10:48:06Z",
-  "updated_at": "2026-10-29T05:37:00Z",
-  "last_verified_at": "2026-10-29T05:37:00Z",
-  "shopify_sync_pending": true,
+  "updated_at": "2026-11-14T07:05:38Z",
+  "last_verified_at": "2026-11-14T07:05:38Z",
+  "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15838890688678",
   "shopify_handle": "michael-kors-mini-lexington-chronograph-quartz-crystal-ladies-watch-mk4926",
-  "shopify_synced_at": "2026-09-29T06:06:23Z",
-  "last_synced_fx_rate": 95.252751
+  "shopify_synced_at": "2026-11-04T18:35:13Z",
+  "last_synced_fx_rate": 94.834253
 }
