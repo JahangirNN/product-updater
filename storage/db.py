@@ -72,7 +72,24 @@ def save_product(product: Dict[str, Any], base_dir: str = "storage/db") -> Dict[
     product_id = product.get("id") or generate_product_id(store, sku)
     product["id"] = product_id
 
-    file_path = get_product_file_path(store, product_id, base_dir)
+    file_path = None
+    if product.get("file_path"):
+        cand = os.path.join(base_dir, product["file_path"]) if not os.path.isabs(product["file_path"]) else product["file_path"]
+        if os.path.exists(cand):
+            file_path = cand
+    if not file_path:
+        id_path = get_product_file_path(store, product_id, base_dir)
+        if os.path.exists(id_path):
+            file_path = id_path
+        elif sku:
+            sku_path = os.path.join(base_dir, store, "products", f"{sku}.json")
+            if os.path.exists(sku_path):
+                file_path = sku_path
+            else:
+                file_path = id_path
+        else:
+            file_path = id_path
+
     target_dir = os.path.dirname(file_path)
     os.makedirs(target_dir, exist_ok=True)
 
@@ -101,13 +118,31 @@ def save_product(product: Dict[str, Any], base_dir: str = "storage/db") -> Dict[
     return product
 
 
-def load_product(store: str, product_id: str, base_dir: str = "storage/db") -> Optional[Dict[str, Any]]:
-    """Read product JSON file from disk."""
-    file_path = get_product_file_path(store, product_id, base_dir)
-    if not os.path.exists(file_path):
-        return None
-    with open(file_path, "r", encoding="utf-8") as f:
-        return json.load(f)
+def load_product(store: str, product_id: str, base_dir: str = "storage/db", file_path: Optional[str] = None) -> Optional[Dict[str, Any]]:
+    """Read product JSON file from disk with fallback to sku/custom path."""
+    if file_path:
+        candidates = [
+            os.path.join(base_dir, file_path) if not os.path.isabs(file_path) else file_path,
+            os.path.join(base_dir, store, "products", os.path.basename(file_path)),
+            file_path
+        ]
+        for cand in candidates:
+            if os.path.exists(cand):
+                try:
+                    with open(cand, "r", encoding="utf-8") as f:
+                        return json.load(f)
+                except Exception:
+                    pass
+
+    standard_path = get_product_file_path(store, product_id, base_dir)
+    if os.path.exists(standard_path):
+        try:
+            with open(standard_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            pass
+
+    return None
 
 
 def build_and_save_index(base_dir: str = "storage/db") -> Dict[str, Any]:

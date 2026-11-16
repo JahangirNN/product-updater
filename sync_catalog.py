@@ -208,7 +208,7 @@ def poll_single_product(
                 "has_changed": False
             }
 
-        full_product = load_product(store, p_id)
+        full_product = load_product(store, p_id, file_path=product_stub.get("file_path"))
         if not full_product:
             return {
                 "status": "error",
