@@ -282,7 +282,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef56_mpl_a0",
       "option_values": [
         {
@@ -291,7 +291,7 @@
         }
       ],
       "price_current": 12383.0,
-      "is_available": false
+      "is_available": true
     }
   ],
   "product_options": [
@@ -346,17 +346,17 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:46:51Z",
-  "last_verified_at": "2026-11-16T15:47:06Z",
+  "last_verified_at": "2026-11-16T19:01:09Z",
   "id": "cd9a878caa0cf453",
   "product_id": "cd9a878caa0cf453",
   "store": "coach",
-  "updated_at": "2026-11-16T15:47:06Z",
+  "updated_at": "2026-11-16T19:01:11Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15848584183974",
   "shopify_handle": "phoebe-soft-loafer",
-  "shopify_synced_at": "2026-11-15T09:16:30Z",
+  "shopify_synced_at": "2026-11-16T19:01:09Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 94.289707,
+  "last_synced_fx_rate": 94.399626,
   "supplier_delisted": false
 }

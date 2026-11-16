@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-9144879-6",
   "source_price": 230.0,
   "source_compare_at_price": 230.0,
-  "current_price": 21680.0,
-  "compare_at_price": 21680.0,
+  "current_price": 21712.0,
+  "compare_at_price": 21712.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -231,7 +231,7 @@
       "source_compare_at_price": 230.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/78e830ef-ca93-4909-a970-105cc346b227.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -428,9 +428,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-11-16T15:46:27Z",
+  "last_verified_at": "2026-11-16T18:49:46Z",
   "created_at": "2026-09-17T19:02:11Z",
-  "updated_at": "2026-11-16T15:46:27Z",
+  "updated_at": "2026-11-16T18:49:48Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -440,12 +440,12 @@
     "max": 230.0
   },
   "price_range_inr": {
-    "min": 21680.0,
-    "max": 21680.0
+    "min": 21712.0,
+    "max": 21712.0
   },
-  "price": "21680.00",
+  "price": "21712.00",
   "shopify_product_id": "gid://shopify/Product/15848586281126",
   "shopify_handle": "salomon-x-alp-alpine-echoes",
-  "shopify_synced_at": "2026-11-16T03:44:09Z",
-  "last_synced_fx_rate": 94.262076
+  "shopify_synced_at": "2026-11-16T18:49:46Z",
+  "last_synced_fx_rate": 94.399626
 }

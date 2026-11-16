@@ -73,7 +73,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef36_mqv_a0",
       "option_values": [
         {
@@ -82,7 +82,7 @@
         }
       ],
       "price_current": 17758.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -157,7 +157,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef36_mqv_a0",
       "option_values": [
         {
@@ -166,7 +166,7 @@
         }
       ],
       "price_current": 17758.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -220,7 +220,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef36_mqv_a0",
       "option_values": [
         {
@@ -229,7 +229,7 @@
         }
       ],
       "price_current": 17758.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -347,17 +347,17 @@
     "women_shoes"
   ],
   "created_at": "2026-09-12T22:59:57Z",
-  "last_verified_at": "2026-11-16T15:41:57Z",
+  "last_verified_at": "2026-11-16T18:48:12Z",
   "id": "002e297d48d0c911",
   "product_id": "002e297d48d0c911",
   "store": "coach",
-  "updated_at": "2026-11-16T15:41:57Z",
+  "updated_at": "2026-11-16T18:48:14Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15848602402982",
   "shopify_handle": "brynn-sandal",
-  "shopify_synced_at": "2026-11-15T11:04:51Z",
+  "shopify_synced_at": "2026-11-16T18:48:12Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 94.289707,
+  "last_synced_fx_rate": 94.399626,
   "supplier_delisted": false
 }

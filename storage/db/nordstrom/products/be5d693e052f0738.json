@@ -47,7 +47,7 @@
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/cb0feb51-a322-40b6-a012-4f23836b7d59.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -346,7 +346,7 @@
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/cb0feb51-a322-40b6-a012-4f23836b7d59.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -428,9 +428,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-11-16T15:49:11Z",
+  "last_verified_at": "2026-11-16T18:52:29Z",
   "created_at": "2026-09-17T14:59:50Z",
-  "updated_at": "2026-11-16T15:49:13Z",
+  "updated_at": "2026-11-16T18:52:32Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "price_range_usd": {
@@ -444,6 +444,6 @@
   "price": "11800.00",
   "shopify_product_id": "gid://shopify/Product/15850879680678",
   "shopify_handle": "rincon-5-running-shoe-hoka-8735210-7",
-  "shopify_synced_at": "2026-11-16T15:49:11Z",
+  "shopify_synced_at": "2026-11-16T18:52:29Z",
   "last_synced_fx_rate": 94.399626
 }

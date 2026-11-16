@@ -9,8 +9,8 @@
   "source_sku": "ON-9040816-6.5",
   "source_price": 170.0,
   "source_compare_at_price": 170.0,
-  "current_price": 16025.0,
-  "compare_at_price": 16025.0,
+  "current_price": 16048.0,
+  "compare_at_price": 16048.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -47,7 +47,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/a05e67f3-3c72-4b18-a7a4-f0690818c1cf.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -334,9 +334,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-11-16T16:13:48Z",
+  "last_verified_at": "2026-11-16T19:17:41Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-11-16T16:13:48Z",
+  "updated_at": "2026-11-16T19:17:43Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -346,12 +346,12 @@
     "max": 170.0
   },
   "price_range_inr": {
-    "min": 16025.0,
-    "max": 16025.0
+    "min": 16048.0,
+    "max": 16048.0
   },
-  "price": "16025.00",
+  "price": "16048.00",
   "shopify_product_id": "gid://shopify/Product/15848582021286",
   "shopify_handle": "on-running-cloudmonster-void-sneaker-women",
-  "shopify_synced_at": "2026-11-16T04:09:09Z",
-  "last_synced_fx_rate": 94.262076
+  "shopify_synced_at": "2026-11-16T19:17:41Z",
+  "last_synced_fx_rate": 94.399626
 }

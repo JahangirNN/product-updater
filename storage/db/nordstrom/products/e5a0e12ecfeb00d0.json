@@ -70,7 +70,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/91a5b0a9-bd4a-4464-ab1b-366562a94105.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -481,9 +481,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-11-16T16:12:49Z",
+  "last_verified_at": "2026-11-16T19:16:50Z",
   "created_at": "2026-09-18T06:51:56Z",
-  "updated_at": "2026-11-16T16:12:51Z",
+  "updated_at": "2026-11-16T19:16:52Z",
   "price_range_usd": {
     "min": 200.0,
     "max": 200.0
@@ -496,7 +496,7 @@
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15850880467110",
   "shopify_handle": "salomon-xt-4-og-sneaker-men-salomon-7511611-5",
-  "shopify_synced_at": "2026-11-16T16:12:49Z",
+  "shopify_synced_at": "2026-11-16T19:16:50Z",
   "shopify_sync_pending": false,
   "price": "18880.00",
   "last_synced_fx_rate": 94.399626

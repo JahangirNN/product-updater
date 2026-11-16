@@ -181,7 +181,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cap61_pub_a0",
       "option_values": [
         {
@@ -190,7 +190,7 @@
         }
       ],
       "price_current": 9503.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -350,17 +350,17 @@
     "men_shoes"
   ],
   "created_at": "2026-09-13T00:49:11Z",
-  "last_verified_at": "2026-11-16T15:43:02Z",
+  "last_verified_at": "2026-11-16T18:50:52Z",
   "id": "fd9e66a44bff516c",
   "product_id": "fd9e66a44bff516c",
   "store": "coach",
-  "updated_at": "2026-11-16T15:43:02Z",
+  "updated_at": "2026-11-16T18:50:54Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15848584413350",
   "shopify_handle": "sport-sneaker",
-  "shopify_synced_at": "2026-11-15T11:07:45Z",
+  "shopify_synced_at": "2026-11-16T18:50:52Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 94.289707,
+  "last_synced_fx_rate": 94.399626,
   "supplier_delisted": false
 }

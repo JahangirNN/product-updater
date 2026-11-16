@@ -220,7 +220,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef37_mpl_a0",
       "option_values": [
         {
@@ -229,7 +229,7 @@
         }
       ],
       "price_current": 7045.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -241,7 +241,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef37_mpl_a0",
       "option_values": [
         {
@@ -250,7 +250,7 @@
         }
       ],
       "price_current": 7045.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -347,17 +347,17 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:43:52Z",
-  "last_verified_at": "2026-11-16T15:43:12Z",
+  "last_verified_at": "2026-11-16T18:51:12Z",
   "id": "8c479b3022c094fd",
   "product_id": "8c479b3022c094fd",
   "store": "coach",
   "shopify_sync_pending": false,
-  "updated_at": "2026-11-16T15:43:12Z",
+  "updated_at": "2026-11-16T18:51:14Z",
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15848580481190",
   "shopify_handle": "brynn-raffia-sandal",
-  "shopify_synced_at": "2026-11-15T05:03:47Z",
+  "shopify_synced_at": "2026-11-16T18:51:12Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 94.289707,
+  "last_synced_fx_rate": 94.399626,
   "supplier_delisted": false
 }

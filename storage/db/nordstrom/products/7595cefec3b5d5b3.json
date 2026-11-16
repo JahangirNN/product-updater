@@ -9,8 +9,8 @@
   "source_sku": "ON-7893058-5.5",
   "source_price": 150.0,
   "source_compare_at_price": 113.88,
-  "current_price": 14143.0,
-  "compare_at_price": 10738.0,
+  "current_price": 14160.0,
+  "compare_at_price": 10750.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -311,7 +311,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/cc600efe-6192-4206-a0cd-f6b23dfede93.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -442,9 +442,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-11-16T15:49:00Z",
+  "last_verified_at": "2026-11-16T18:51:58Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-11-16T15:49:00Z",
+  "updated_at": "2026-11-16T18:52:01Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -454,12 +454,12 @@
     "max": 150.0
   },
   "price_range_inr": {
-    "min": 14143.0,
-    "max": 14143.0
+    "min": 14160.0,
+    "max": 14160.0
   },
-  "price": "14143.00",
+  "price": "14160.00",
   "shopify_product_id": "gid://shopify/Product/15848581562534",
   "shopify_handle": "cloudsurfer-next-running-shoe-women",
-  "shopify_synced_at": "2026-11-15T03:08:42Z",
-  "last_synced_fx_rate": 94.289707
+  "shopify_synced_at": "2026-11-16T18:51:58Z",
+  "last_synced_fx_rate": 94.399626
 }

@@ -170,8 +170,8 @@
       "current_price": 6449,
       "price_inr": 6449,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "2887552",
       "image_url": "https://www.sephora.com/productimages/sku/s2887552-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2887552+sw-62.jpg",
@@ -179,7 +179,8 @@
       "variation_value": "Idealist",
       "variation_type": "Color",
       "price": 6449,
-      "source_price": 68.0
+      "source_price": 68.0,
+      "inventory_quantity": 0
     }
   ],
   "product_options": [
@@ -213,12 +214,13 @@
     "hourglass"
   ],
   "created_at": "2026-11-04T19:07:09Z",
-  "last_verified_at": "2026-11-16T15:45:06Z",
+  "last_verified_at": "2026-11-16T18:50:36Z",
   "id": "ca0711697c29f1d5",
-  "updated_at": "2026-11-16T15:45:06Z",
-  "last_synced_fx_rate": 94.834253,
+  "updated_at": "2026-11-16T18:50:37Z",
+  "last_synced_fx_rate": 94.399626,
   "shopify_product_id": "gid://shopify/Product/15994376421542",
   "shopify_handle": "hourglass-curator-eyeshadow-palettes-p473858",
-  "shopify_synced_at": "2026-11-12T13:29:32Z",
-  "shopify_image_synced": true
+  "shopify_synced_at": "2026-11-16T18:50:36Z",
+  "shopify_image_synced": true,
+  "shopify_sync_pending": false
 }

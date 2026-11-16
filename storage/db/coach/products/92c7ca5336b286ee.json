@@ -105,7 +105,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef06_mi5_a0",
       "option_values": [
         {
@@ -114,7 +114,7 @@
         }
       ],
       "price_current": 9291.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -126,7 +126,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef06_mi5_a0",
       "option_values": [
         {
@@ -135,7 +135,7 @@
         }
       ],
       "price_current": 9291.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -189,7 +189,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef06_mi5_a0",
       "option_values": [
         {
@@ -198,7 +198,7 @@
         }
       ],
       "price_current": 9291.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -210,7 +210,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef06_mi5_a0",
       "option_values": [
         {
@@ -219,7 +219,7 @@
         }
       ],
       "price_current": 9291.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -231,7 +231,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef06_mi5_a0",
       "option_values": [
         {
@@ -240,7 +240,7 @@
         }
       ],
       "price_current": 9291.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -294,7 +294,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef06_mi5_a0",
       "option_values": [
         {
@@ -303,7 +303,7 @@
         }
       ],
       "price_current": 9291.0,
-      "is_available": false
+      "is_available": true
     }
   ],
   "product_options": [
@@ -358,17 +358,17 @@
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:44:15Z",
-  "last_verified_at": "2026-11-16T15:46:15Z",
+  "last_verified_at": "2026-11-16T18:58:53Z",
   "id": "92c7ca5336b286ee",
   "product_id": "92c7ca5336b286ee",
   "store": "coach",
-  "updated_at": "2026-11-16T15:46:15Z",
+  "updated_at": "2026-11-16T18:58:57Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15848583692454",
   "shopify_handle": "two-band-buckle-sandal-in-signature-jacquard",
-  "shopify_synced_at": "2026-11-15T09:13:08Z",
+  "shopify_synced_at": "2026-11-16T18:58:53Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 94.289707,
+  "last_synced_fx_rate": 94.399626,
   "supplier_delisted": false
 }

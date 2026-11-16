@@ -14,8 +14,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "color": "Hemp/Pale Ivory/Sanddrift",
   "width": "Width - D - Medium",
   "material": "Premium upper with durable overlays and responsive traction outsole",
@@ -100,7 +100,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/Q4307200_01",
       "option_values": [
         {
@@ -113,7 +113,7 @@
         }
       ],
       "price_current": 9119.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -175,7 +175,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/Q4307200_01",
       "option_values": [
         {
@@ -188,7 +188,7 @@
         }
       ],
       "price_current": 9119.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -200,7 +200,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/Q4307200_01",
       "option_values": [
         {
@@ -213,7 +213,7 @@
         }
       ],
       "price_current": 9119.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -225,7 +225,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/Q4307200_01",
       "option_values": [
         {
@@ -238,7 +238,7 @@
         }
       ],
       "price_current": 9119.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -250,7 +250,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/Q4307200_01",
       "option_values": [
         {
@@ -263,7 +263,7 @@
         }
       ],
       "price_current": 9119.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -341,19 +341,20 @@
     "men's",
     "nike",
     "shoes",
-    "sizes-10"
+    "sizes-10",
+    "supplier-delisted"
   ],
   "groups": [
     "Nike Mind"
   ],
-  "last_verified_at": "2026-11-16T15:41:56Z",
+  "last_verified_at": "2026-11-16T18:47:33Z",
   "created_at": "2026-09-20T10:34:56Z",
-  "updated_at": "2026-11-16T15:41:58Z",
+  "updated_at": "2026-11-16T18:47:36Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851016356006",
   "shopify_handle": "nike-mind-001-mule-men-s-hemp-pale-ivory-sanddrift-q4307200",
-  "shopify_synced_at": "2026-11-16T15:41:56Z",
-  "delist_strikes": 0,
-  "supplier_delisted": false,
+  "shopify_synced_at": "2026-11-16T18:47:33Z",
+  "delist_strikes": 2,
+  "supplier_delisted": true,
   "last_synced_fx_rate": 94.399626
 }

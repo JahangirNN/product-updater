@@ -269,7 +269,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/d1c41a81-3688-480b-a480-c7f07863caa7.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -4162,9 +4162,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-11-16T16:05:47Z",
+  "last_verified_at": "2026-11-16T19:08:45Z",
   "created_at": "2026-09-17T14:57:58Z",
-  "updated_at": "2026-11-16T16:05:55Z",
+  "updated_at": "2026-11-16T19:08:53Z",
   "price_range_usd": {
     "min": 79.75,
     "max": 145.0
@@ -4179,7 +4179,7 @@
   "price": "13688.00",
   "shopify_product_id": "gid://shopify/Product/15848581791910",
   "shopify_handle": "mach-7-running-shoe-women",
-  "shopify_synced_at": "2026-11-16T16:05:47Z",
+  "shopify_synced_at": "2026-11-16T19:08:45Z",
   "last_synced_fx_rate": 94.399626,
   "delist_strikes": 0,
   "supplier_delisted": false

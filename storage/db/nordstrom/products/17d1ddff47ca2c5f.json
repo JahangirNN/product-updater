@@ -9,7 +9,7 @@
   "source_sku": "ON-9176832-5",
   "source_price": 180.0,
   "source_compare_at_price": null,
-  "current_price": 16936.0,
+  "current_price": 16992.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -70,7 +70,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/a6092f61-640a-49f5-bc49-23ecc092271f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -404,23 +404,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-11-16T16:10:18Z",
+  "last_verified_at": "2026-11-16T19:14:10Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-11-16T16:10:18Z",
+  "updated_at": "2026-11-16T19:14:12Z",
   "price_range_usd": {
     "min": 180.0,
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 16936.0,
-    "max": 16936.0
+    "min": 16992.0,
+    "max": 16992.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15848585199782",
   "shopify_handle": "cloudrunner-3-waterproof-running-shoe",
-  "shopify_synced_at": "2026-11-13T18:13:36Z",
+  "shopify_synced_at": "2026-11-16T19:14:10Z",
   "shopify_sync_pending": false,
-  "price": "16936.00",
-  "last_synced_fx_rate": 94.086126
+  "price": "16992.00",
+  "last_synced_fx_rate": 94.399626
 }

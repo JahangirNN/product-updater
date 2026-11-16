@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Synthetic and textile upper and lining, rubber and synthetic sole",
   "specifications": {
     "Brand": "HOKA",
@@ -246,7 +246,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -366,7 +366,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1ec6988a-9881-48ef-ac4d-1234741b64c1.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1179,7 +1179,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1341,7 +1341,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1388,7 +1388,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9c6c8d58-1a81-45a7-878e-92cee69ad1cd.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1916,9 +1916,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-11-16T15:50:26Z",
+  "last_verified_at": "2026-11-16T18:53:53Z",
   "created_at": "2026-09-18T06:45:15Z",
-  "updated_at": "2026-11-16T15:50:33Z",
+  "updated_at": "2026-11-16T18:54:00Z",
   "price_range_usd": {
     "min": 75.0,
     "max": 150.0
@@ -1928,11 +1928,11 @@
     "max": 14160.0
   },
   "status": "ACTIVE",
-  "is_active": false,
+  "is_active": true,
   "shopify_sync_pending": false,
   "price": "7080.00",
   "shopify_product_id": "gid://shopify/Product/15850877845670",
   "shopify_handle": "hoka-clifton-one9-sneaker-men",
-  "shopify_synced_at": "2026-11-16T15:50:26Z",
+  "shopify_synced_at": "2026-11-16T18:53:53Z",
   "last_synced_fx_rate": 94.399626
 }

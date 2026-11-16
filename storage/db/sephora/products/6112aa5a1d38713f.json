@@ -17,8 +17,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.834253,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "primary_image_url": "https://www.sephora.com/productimages/sku/s3024023-main-zoom.jpg",
   "images": [
     "https://www.sephora.com/productimages/sku/s3024023-main-zoom.jpg",
@@ -47,8 +47,8 @@
       "current_price": 7587,
       "price_inr": 7587,
       "compare_at_price": null,
-      "in_stock": false,
-      "is_active": false,
+      "in_stock": true,
+      "is_active": true,
       "barcode": "3024023",
       "image_url": "https://www.sephora.com/productimages/sku/s3024023-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s3024023-swatch-zoom.jpg",
@@ -56,7 +56,8 @@
       "variation_value": "3024023",
       "variation_type": "None",
       "price": 7587,
-      "source_price": 80.0
+      "source_price": 80.0,
+      "inventory_quantity": 10
     }
   ],
   "product_options": [
@@ -82,12 +83,13 @@
     "westman-atelier"
   ],
   "created_at": "2026-11-04T18:54:14Z",
-  "last_verified_at": "2026-11-16T15:41:30Z",
+  "last_verified_at": "2026-11-16T18:47:12Z",
   "id": "6112aa5a1d38713f",
-  "updated_at": "2026-11-16T15:41:30Z",
-  "last_synced_fx_rate": 94.834253,
+  "updated_at": "2026-11-16T18:47:14Z",
+  "last_synced_fx_rate": 94.399626,
   "shopify_product_id": "gid://shopify/Product/15993876218022",
   "shopify_handle": "westman-atelier-the-eyeshadow-palette-holiday-edit-p526423",
-  "shopify_synced_at": "2026-11-12T13:19:24Z",
-  "shopify_image_synced": true
+  "shopify_synced_at": "2026-11-16T18:47:12Z",
+  "shopify_image_synced": true,
+  "shopify_sync_pending": false
 }

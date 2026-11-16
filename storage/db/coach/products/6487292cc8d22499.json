@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Combat Boot In Signature Leather",
   "specifications": {
     "Material": "Combat Boot In Signature Leather",
@@ -133,7 +133,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccw08_e0s_a0",
       "option_values": [
         {
@@ -142,7 +142,7 @@
         }
       ],
       "price_current": 9870.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -344,16 +344,16 @@
     "men_shoes"
   ],
   "created_at": "2026-09-13T00:42:23Z",
-  "last_verified_at": "2026-11-16T15:44:54Z",
+  "last_verified_at": "2026-11-16T18:55:45Z",
   "id": "6487292cc8d22499",
   "product_id": "6487292cc8d22499",
   "store": "coach",
-  "updated_at": "2026-11-16T15:44:56Z",
-  "is_active": false,
+  "updated_at": "2026-11-16T18:55:47Z",
+  "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15848607121574",
   "shopify_handle": "combat-boot-in-signature-leather",
-  "shopify_synced_at": "2026-11-16T15:44:54Z",
+  "shopify_synced_at": "2026-11-16T18:55:45Z",
   "delist_strikes": 0,
   "last_synced_fx_rate": 94.399626,
   "supplier_delisted": false
