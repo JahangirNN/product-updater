@@ -1,391 +1,1924 @@
 {%- comment -%}
 ------------------------------------------------------------------------------------------------------------------------
-BRAND TILES SECTION (MINIMALIST BRAND PORTAL MATRIX)
+CURATED MAISONS — KINETIC ATELIER & LIVE VAULT THEATRE (brand-tiles.liquid)
 ------------------------------------------------------------------------------------------------------------------------
-High-elegance curated maison matrix displaying live style counts, glassmorphic card overlays,
-smooth hover elevation, and responsive reflow (4 columns desktop, 2 columns mobile).
+Refined 60fps GPU-accelerated luxury Maison showcase featuring:
+1. True overlapping CSS Grid-Stack (`grid-area: 1 / 1`) Maison Stage transitions — zero layout shift, zero hard cuts.
+2. Fixed-Geometry Hero Vitrine + 4-Piece Vertical Filmstrip Deck inside the Spotlight Theatre — zero flex-width text
+   reflow jitter, pure GPU opacity & scale3d transitions across 4 real catalog pieces per Maison.
+3. Pure Studio White (`#ffffff`) blending via opaque frame layers + optical studio normalization (`brightness/contrast`)
+   eliminating off-white grey boxes and crossfade double-exposure ghosting.
+4. Calm, unhurried luxury cadence (8.4s per Maison, 2.1s per piece) + interactive 3-frame lookbook reel & 3D tilt on hover.
+Zero AI imagery (ADR 0023): 100% real catalog product photography.
 {%- endcomment -%}
 
 <style>
   #shopify-section-{{ section.id }} {
-    --brand-matrix-columns-desktop: {{ section.settings.columns_desktop | default: 4 }};
-    --brand-card-aspect-ratio: {{ section.settings.card_aspect_ratio | default: '4 / 5' }};
+    --km-cols-desktop: {{ section.settings.columns_desktop | default: 4 }};
+    --km-cols-mobile: {{ section.settings.columns_mobile | default: 2 }};
+    --km-gold: #c9a876;
+    --km-gold-bright: #e5c99b;
+    --km-obsidian: #090909;
+    --km-ease: cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  #shopify-section-{{ section.id }} .brand-tiles-container {
+  #shopify-section-{{ section.id }} .km-vault {
     position: relative;
-    padding-block: var(--section-vertical-spacing, 3.5rem);
+    background-color: var(--km-obsidian);
+    color: #f4f1ea;
+    padding-block: clamp(3rem, 5.5vw, 5rem);
+    overflow: hidden;
+    border-top: 1px solid rgba(201, 168, 118, 0.24);
+    border-bottom: 1px solid rgba(201, 168, 118, 0.24);
+    isolation: isolate;
   }
 
-  #shopify-section-{{ section.id }} .brand-tiles-header {
-    margin-bottom: clamp(1.75rem, 3.5vw, 3rem);
+  /* Subtle Architectural Grid + Cursor Radial Spotlight */
+  #shopify-section-{{ section.id }} .km-vault::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(201, 168, 118, 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(201, 168, 118, 0.035) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 30%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  #shopify-section-{{ section.id }} .km-vault::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      680px circle at var(--km-mouse-x, 50%) var(--km-mouse-y, 28%),
+      rgba(201, 168, 118, 0.11),
+      transparent 65%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Giant Drifting Hollow Background Watermark */
+  #shopify-section-{{ section.id }} .km-watermark-layer {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    height: 210px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0.75;
+  }
+
+  #shopify-section-{{ section.id }} .km-watermark-track {
+    display: flex;
+    white-space: nowrap;
+    gap: 4rem;
+    animation: kmWatermarkDrift 42s linear infinite;
+    will-change: transform;
+  }
+
+  #shopify-section-{{ section.id }} .km-watermark-text {
+    font-family: var(--heading-font-family, inherit);
+    font-size: clamp(4rem, 10vw, 8.5rem);
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(201, 168, 118, 0.1);
+    user-select: none;
+    line-height: 1;
+    transition: opacity 0.45s var(--km-ease);
+  }
+
+  @keyframes kmWatermarkDrift {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+  }
+
+  #shopify-section-{{ section.id }} .km-container {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Top Section Header & Telemetry Controls */
+  #shopify-section-{{ section.id }} .km-header-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: 1rem;
+    margin-bottom: clamp(1.4rem, 2.6vw, 2rem);
   }
 
-  #shopify-section-{{ section.id }} .brand-tiles-subheading {
+  @media screen and (min-width: 900px) {
+    #shopify-section-{{ section.id }} .km-header-bar {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      text-align: left;
+    }
+  }
+
+  #shopify-section-{{ section.id }} .km-eyebrow-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 0.4rem;
+  }
+
+  #shopify-section-{{ section.id }} .km-live-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--km-gold);
+    box-shadow: 0 0 8px var(--km-gold);
+    animation: kmPulseDot 2.6s infinite ease-in-out;
+  }
+
+  @keyframes kmPulseDot {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.35); opacity: 0.45; }
+  }
+
+  #shopify-section-{{ section.id }} .km-subheading {
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--km-gold);
+    margin: 0;
+  }
+
+  #shopify-section-{{ section.id }} .km-heading {
+    font-family: var(--heading-font-family, inherit);
+    font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.12;
+  }
+
+  /* Header Kinetic Controls */
+  #shopify-section-{{ section.id }} .km-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(201, 168, 118, 0.25);
+    padding: 0.3rem 0.45rem;
+    backdrop-filter: blur(8px);
+  }
+
+  #shopify-section-{{ section.id }} .km-ctrl-btn {
+    appearance: none;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #f4f1ea;
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.38rem 0.68rem;
+    cursor: pointer;
+    transition: all 0.25s var(--km-ease);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  #shopify-section-{{ section.id }} .km-ctrl-btn:hover {
+    border-color: var(--km-gold);
+    color: var(--km-gold-bright);
+    background: rgba(201, 168, 118, 0.1);
+  }
+
+  #shopify-section-{{ section.id }} .km-ctrl-btn.is-paused {
+    border-color: rgba(201, 168, 118, 0.55);
+    color: var(--km-gold);
+  }
+
+  /* Interactive 12-Maison Selector Ribbon */
+  #shopify-section-{{ section.id }} .km-ribbon {
+    display: flex;
+    align-items: stretch;
+    gap: 0.45rem;
+    overflow-x: auto;
+    padding-bottom: 0.35rem;
+    margin-bottom: clamp(1.15rem, 2.2vw, 1.65rem);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+  }
+
+  #shopify-section-{{ section.id }} .km-ribbon::-webkit-scrollbar {
+    display: none;
+  }
+
+  #shopify-section-{{ section.id }} .km-ribbon-tab {
+    position: relative;
+    flex: 1 0 auto;
+    min-width: 116px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    padding: 0.6rem 0.8rem 0.72rem;
+    color: rgba(244, 241, 234, 0.6);
+    cursor: pointer;
+    text-align: left;
+    transition:
+      background 0.35s var(--km-ease),
+      border-color 0.35s var(--km-ease),
+      color 0.35s var(--km-ease),
+      transform 0.35s var(--km-ease);
+    overflow: hidden;
+  }
+
+  #shopify-section-{{ section.id }} .km-ribbon-tab:hover {
+    background: rgba(201, 168, 118, 0.08);
+    border-color: rgba(201, 168, 118, 0.35);
+    color: #ffffff;
+  }
+
+  #shopify-section-{{ section.id }} .km-ribbon-tab.is-active {
+    background: linear-gradient(135deg, rgba(201, 168, 118, 0.18) 0%, rgba(18, 18, 18, 0.96) 100%);
+    border-color: var(--km-gold);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  #shopify-section-{{ section.id }} .km-ribbon-tab__idx {
+    display: block;
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.54rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--km-gold);
+    margin-bottom: 0.14rem;
+  }
+
+  #shopify-section-{{ section.id }} .km-ribbon-tab__name {
+    display: block;
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  #shopify-section-{{ section.id }} .km-ribbon-tab__progress {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2.5px;
+    width: 100%;
+    background: linear-gradient(90deg, var(--km-gold), #fff3db);
+    transform: scaleX(0);
+    transform-origin: left center;
+    will-change: transform;
+  }
+
+  #shopify-section-{{ section.id }} .km-ribbon-tab.is-active .km-ribbon-tab__progress {
+    transform: scaleX(var(--km-progress, 0));
+  }
+
+  /* ============================================================================
+     PART I: THE LIVE SPOTLIGHT THEATRE (TRUE OVERLAPPING GRID-STACK + FIXED GEOMETRY)
+     ============================================================================ */
+  #shopify-section-{{ section.id }} .km-theatre {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    background: linear-gradient(145deg, #131313 0%, #0b0b0b 100%);
+    border: 1px solid rgba(201, 168, 118, 0.32);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+    margin-bottom: clamp(2.25rem, 4.5vw, 3.25rem);
+    overflow: hidden;
+  }
+
+  /* All 12 Maison Stages occupy the exact same grid cell (1 / 1) for zero-jump overlapping crossfades */
+  #shopify-section-{{ section.id }} .km-stage {
+    grid-area: 1 / 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate3d(0, 10px, 0);
+    transition:
+      opacity 0.65s var(--km-ease),
+      transform 0.65s var(--km-ease),
+      visibility 0.65s;
+    will-change: opacity, transform;
+  }
+
+  #shopify-section-{{ section.id }} .km-stage.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate3d(0, 0, 0);
+    z-index: 2;
+  }
+
+  @media screen and (min-width: 1024px) {
+    #shopify-section-{{ section.id }} .km-stage {
+      grid-template-columns: minmax(310px, 0.85fr) minmax(0, 1.55fr);
+      min-height: 430px;
+    }
+  }
+
+  /* Left Column: Maison Heritage & Telemetry */
+  #shopify-section-{{ section.id }} .km-stage__info {
+    padding: clamp(1.5rem, 2.8vw, 2.35rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+    border-bottom: 1px solid rgba(201, 168, 118, 0.16);
+    background: radial-gradient(circle at top left, rgba(201, 168, 118, 0.08), transparent 70%);
+  }
+
+  @media screen and (min-width: 1024px) {
+    #shopify-section-{{ section.id }} .km-stage__info {
+      border-bottom: none;
+      border-right: 1px solid rgba(201, 168, 118, 0.16);
+    }
+  }
+
+  #shopify-section-{{ section.id }} .km-stage__badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.9rem;
+  }
+
+  #shopify-section-{{ section.id }} .km-stage__index-pill {
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.26rem 0.58rem;
+    background: var(--km-gold);
+    color: #090909;
+  }
+
+  #shopify-section-{{ section.id }} .km-stage__origin-pill {
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 0.24rem 0.6rem;
+    border: 1px solid rgba(201, 168, 118, 0.4);
+    color: var(--km-gold-bright);
+  }
+
+  #shopify-section-{{ section.id }} .km-stage__title {
+    font-family: var(--heading-font-family, inherit);
+    font-size: clamp(1.6rem, 2.6vw, 2.25rem);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0 0 0.55rem;
+    line-height: 1.15;
+  }
+
+  #shopify-section-{{ section.id }} .km-stage__narrative {
+    font-family: var(--body-font-family, inherit);
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: rgba(244, 241, 234, 0.76);
+    margin: 0 0 1.25rem;
+  }
+
+  /* 3-Cell Live Telemetry Strip */
+  #shopify-section-{{ section.id }} .km-telemetry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.45rem;
+    margin-bottom: 1.35rem;
+  }
+
+  #shopify-section-{{ section.id }} .km-telemetry-cell {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.6rem 0.6rem;
+    min-width: 0;
+  }
+
+  #shopify-section-{{ section.id }} .km-telemetry-label {
+    display: block;
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(201, 168, 118, 0.82);
+    margin-bottom: 0.22rem;
+  }
+
+  #shopify-section-{{ section.id }} .km-telemetry-val {
+    display: block;
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Stage CTA Button */
+  #shopify-section-{{ section.id }} .km-stage__cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  #shopify-section-{{ section.id }} .km-stage__cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.82rem 1.45rem;
+    background: var(--km-gold);
+    color: #090909 !important;
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.3s var(--km-ease), box-shadow 0.3s var(--km-ease), background 0.3s var(--km-ease);
+  }
+
+  #shopify-section-{{ section.id }} .km-stage__cta:hover {
+    background: var(--km-gold-bright);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(201, 168, 118, 0.32);
+  }
+
+  /* Right Column: Fixed-Geometry Hero Vitrine + 4-Piece Filmstrip Selector (Zero Reflow Jitter!) */
+  #shopify-section-{{ section.id }} .km-stage__showcase {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: #0d0d0d;
+    min-width: 0;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 700px) {
+    #shopify-section-{{ section.id }} .km-stage__showcase {
+      grid-template-columns: minmax(0, 1.45fr) minmax(210px, 0.95fr);
+      align-items: stretch;
+    }
+  }
+
+  /* Primary Hero Vitrine Stage (Stacking 4 Slides in Grid Area 1/1 for Pure GPU Crossfade) */
+  #shopify-section-{{ section.id }} .km-hero-vitrine {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    background: #ffffff;
+    border: 1px solid rgba(201, 168, 118, 0.45);
+    overflow: hidden;
+    min-height: 320px;
+    min-width: 0;
+    width: 100%;
+  }
+
+  #shopify-section-{{ section.id }} .km-vitrine-slide {
+    grid-area: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+    text-decoration: none;
+    color: #111111;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale3d(0.97, 0.97, 1);
+    transition:
+      opacity 0.6s var(--km-ease),
+      transform 0.65s var(--km-ease),
+      visibility 0.6s;
+    will-change: opacity, transform;
+  }
+
+  #shopify-section-{{ section.id }} .km-vitrine-slide.is-focused {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: scale3d(1, 1, 1);
+    z-index: 2;
+  }
+
+  #shopify-section-{{ section.id }} .km-vitrine-slide__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0.9rem 0;
+    width: 100%;
+    min-width: 0;
+    z-index: 2;
+  }
+
+  #shopify-section-{{ section.id }} .km-vitrine-slide__badge {
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.56rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 0.22rem 0.55rem;
+    background: #111111;
+    color: var(--km-gold);
+  }
+
+  #shopify-section-{{ section.id }} .km-vitrine-slide__save {
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.56rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 0.2rem 0.48rem;
+    background: var(--km-gold);
+    color: #090909;
+  }
+
+  #shopify-section-{{ section.id }} .km-vitrine-slide__media {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+    background: #ffffff;
+    min-height: 220px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  #shopify-section-{{ section.id }} .km-vitrine-slide__img {
+    max-width: 100%;
+    max-height: 235px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    /* Normalize #f5f5f5 off-white studio backgrounds into pure #ffffff without ghost blending */
+    filter: brightness(1.055) contrast(1.055);
+    transition: transform 0.7s var(--km-ease);
+  }
+
+  #shopify-section-{{ section.id }} .km-vitrine-slide:hover .km-vitrine-slide__img {
+    transform: scale3d(1.05, 1.05, 1);
+  }
+
+  #shopify-section-{{ section.id }} .km-vitrine-slide__footer {
+    padding: 0.75rem 1rem 0.85rem;
+    background: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    width: 100%;
+    min-width: 0;
+  }
+
+  #shopify-section-{{ section.id }} .km-vitrine-slide__title {
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #111111;
+    margin: 0 0 0.3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #shopify-section-{{ section.id }} .km-vitrine-slide__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  #shopify-section-{{ section.id }} .km-vitrine-slide__price {
+    font-family: var(--body-font-family, inherit);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #111111;
+  }
+
+  #shopify-section-{{ section.id }} .km-vitrine-slide__cta {
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #947847;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: color 0.25s ease, transform 0.25s ease;
+  }
+
+  #shopify-section-{{ section.id }} .km-vitrine-slide:hover .km-vitrine-slide__cta {
+    color: #111111;
+    transform: translateX(3px);
+  }
+
+  /* 4-Piece Vertical Filmstrip Selector Stack (Fixed Geometry = Zero Reflow) */
+  #shopify-section-{{ section.id }} .km-filmstrip {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+    min-width: 0;
+  }
+
+  @media screen and (min-width: 700px) {
+    #shopify-section-{{ section.id }} .km-filmstrip {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: repeat(4, minmax(0, 1fr));
+      gap: 0.5rem;
+    }
+  }
+
+  #shopify-section-{{ section.id }} .km-strip-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.5rem 0.65rem;
+    background: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    color: #f4f1ea;
+    cursor: pointer;
+    overflow: hidden;
+    transition:
+      background 0.35s var(--km-ease),
+      border-color 0.35s var(--km-ease),
+      transform 0.35s var(--km-ease);
+  }
+
+  #shopify-section-{{ section.id }} .km-strip-item:hover {
+    background: #1b1b1b;
+    border-color: rgba(201, 168, 118, 0.45);
+  }
+
+  #shopify-section-{{ section.id }} .km-strip-item.is-focused {
+    background: linear-gradient(90deg, rgba(201, 168, 118, 0.18) 0%, rgba(22, 22, 22, 0.96) 100%);
+    border-color: var(--km-gold);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  }
+
+  #shopify-section-{{ section.id }} .km-strip-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--km-gold);
+    transform: scaleY(0);
+    transition: transform 0.35s var(--km-ease);
+  }
+
+  #shopify-section-{{ section.id }} .km-strip-item.is-focused::before {
+    transform: scaleY(1);
+  }
+
+  #shopify-section-{{ section.id }} .km-strip-item__thumb {
+    width: 54px;
+    height: 54px;
+    flex: 0 0 54px;
+    background: #ffffff;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  #shopify-section-{{ section.id }} .km-strip-item__thumb img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(1.045) contrast(1.045);
+  }
+
+  #shopify-section-{{ section.id }} .km-strip-item__meta {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  #shopify-section-{{ section.id }} .km-strip-item__num {
+    display: block;
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--km-gold);
+    margin-bottom: 0.12rem;
+  }
+
+  #shopify-section-{{ section.id }} .km-strip-item__title {
+    display: block;
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.64rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.15rem;
+  }
+
+  #shopify-section-{{ section.id }} .km-strip-item__price {
+    display: block;
+    font-family: var(--body-font-family, inherit);
+    font-size: 0.64rem;
+    color: rgba(244, 241, 234, 0.72);
+  }
+
+  /* ============================================================================
+     PART II: 12-MAISON 3D-TILT MULTI-FRAME PORTAL MATRIX (ZERO GHOST BLEED)
+     ============================================================================ */
+  #shopify-section-{{ section.id }} .km-matrix-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 1.15rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid rgba(201, 168, 118, 0.18);
+  }
+
+  #shopify-section-{{ section.id }} .km-matrix-title {
     font-family: var(--heading-font-family, inherit);
     font-size: 0.6875rem;
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #c9a876;
-    margin-bottom: 0.5rem;
-  }
-
-  #shopify-section-{{ section.id }} .brand-tiles-heading {
-    font-family: var(--heading-font-family, inherit);
-    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--color-foreground, #f0eee9);
+    color: var(--km-gold);
     margin: 0;
   }
 
-  #shopify-section-{{ section.id }} .brand-tiles-intro {
-    max-width: 600px;
-    margin: 0.75rem auto 0;
-    font-size: 0.9375rem;
-    color: rgba(240, 238, 233, 0.7);
-    line-height: 1.6;
+  #shopify-section-{{ section.id }} .km-matrix-hint {
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.58rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(244, 241, 234, 0.55);
   }
 
   #shopify-section-{{ section.id }} .brand-tiles-grid {
     display: grid;
-    grid-template-columns: repeat({{ section.settings.columns_mobile | default: 2 }}, 1fr);
-    gap: clamp(0.75rem, 1.5vw, 1.25rem);
+    grid-template-columns: repeat(var(--km-cols-mobile), minmax(0, 1fr));
+    gap: clamp(0.65rem, 1.6vw, 1.35rem);
+    perspective: 1200px;
   }
 
   @media screen and (min-width: 768px) {
     #shopify-section-{{ section.id }} .brand-tiles-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
 
   @media screen and (min-width: 1024px) {
     #shopify-section-{{ section.id }} .brand-tiles-grid {
-      grid-template-columns: repeat(var(--brand-matrix-columns-desktop), 1fr);
+      grid-template-columns: repeat(var(--km-cols-desktop), minmax(0, 1fr));
     }
   }
 
-  /* Brand Card Styling & Hover Elevation */
+  /* Individual 3D-Tilt Multi-Frame Maison Card */
   #shopify-section-{{ section.id }} .brand-card {
     position: relative;
-    border-radius: 4px;
+    background-color: #ffffff;
+    border: 1px solid rgba(201, 168, 118, 0.25);
     overflow: hidden;
-    background-color: #141414;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.4s ease,
-                box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(0);
+    transition:
+      transform 0.4s var(--km-ease),
+      border-color 0.35s ease,
+      box-shadow 0.35s ease;
+    will-change: transform;
   }
 
-  #shopify-section-{{ section.id }} .brand-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(201, 168, 118, 0.45);
-    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.65);
+  #shopify-section-{{ section.id }} .brand-card:hover,
+  #shopify-section-{{ section.id }} .brand-card.is-theatre-active {
+    border-color: var(--km-gold);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.55), 0 0 22px rgba(201, 168, 118, 0.2);
+  }
+
+  /* Specular Gold Glare Overlay on Hover */
+  #shopify-section-{{ section.id }} .brand-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      260px circle at var(--gx, 50%) var(--gy, 50%),
+      rgba(201, 168, 118, 0.18),
+      transparent 70%
+    );
+    opacity: 0;
+    pointer-events: none;
+    z-index: 8;
+    transition: opacity 0.3s ease;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card:hover::after {
+    opacity: 1;
+  }
+
+  /* 3-Segment Story Progress Bar at Top of Each Card */
+  #shopify-section-{{ section.id }} .brand-card__stories {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 7;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    padding: 6px 8px 0;
+    pointer-events: none;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card__story-seg {
+    height: 2.5px;
+    background: rgba(17, 17, 17, 0.14);
+    overflow: hidden;
+    border-radius: 2px;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card__story-fill {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.45s var(--km-ease), background 0.3s ease;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card:hover .brand-card__story-fill {
+    background: var(--km-gold);
+  }
+
+  #shopify-section-{{ section.id }} .brand-card__story-seg.is-active .brand-card__story-fill {
+    transform: scaleX(1);
   }
 
   #shopify-section-{{ section.id }} .brand-card__link {
-    display: block;
-    position: relative;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     color: inherit;
     width: 100%;
     height: 100%;
-    outline: none;
+    flex: 1 1 auto;
   }
 
   #shopify-section-{{ section.id }} .brand-card__media-box {
     position: relative;
     width: 100%;
-    aspect-ratio: var(--brand-card-aspect-ratio);
+    aspect-ratio: 1 / 1;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
-    background-color: #141414;
   }
 
-  #shopify-section-{{ section.id }} .brand-card__image {
+  /* Multi-Frame Image Stage with Opaque White Layering (Zero Ghost Bleed) */
+  #shopify-section-{{ section.id }} .brand-card__image-container {
+    position: relative;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
-    transform: scale(1.001);
-    transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    flex: 1 1 auto;
+    background-color: #ffffff;
+    overflow: hidden;
   }
 
-  #shopify-section-{{ section.id }} .brand-card:hover .brand-card__image {
-    transform: scale(1.08);
-  }
-
-  /* Shimmer Skeleton Placeholder */
-  #shopify-section-{{ section.id }} .brand-card__media-box::before {
-    content: '';
+  #shopify-section-{{ section.id }} .brand-card__frame {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(201, 168, 118, 0.04) 50%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    transform: translateX(-100%);
-    animation: brand-shimmer 2.2s infinite ease-in-out;
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  @keyframes brand-shimmer {
-    100% {
-      transform: translateX(100%);
-    }
-  }
-
-  /* Monogram Typographic Fallback */
-  #shopify-section-{{ section.id }} .brand-card__monogram {
-    width: 100%;
-    height: 100%;
+    padding: 2.1rem 1rem 1.6rem;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at center, #1c1c1c 0%, #0d0d0d 100%);
-    font-family: var(--heading-font-family, inherit);
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    color: rgba(201, 168, 118, 0.25);
-    text-transform: uppercase;
-    transition: color 0.4s ease, transform 0.4s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale3d(1.04, 1.04, 1);
+    transition:
+      opacity 0.6s var(--km-ease),
+      transform 0.75s var(--km-ease),
+      visibility 0.6s;
+    pointer-events: none;
+    will-change: opacity, transform;
   }
 
-  #shopify-section-{{ section.id }} .brand-card:hover .brand-card__monogram {
-    color: rgba(201, 168, 118, 0.5);
-    transform: scale(1.05);
+  #shopify-section-{{ section.id }} .brand-card__frame.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale3d(1, 1, 1);
+    z-index: 2;
   }
 
-  /* Style Count Badge Pill */
-  #shopify-section-{{ section.id }} .brand-card__pill {
+  #shopify-section-{{ section.id }} .brand-card:hover .brand-card__frame.is-active {
+    transform: scale3d(1.045, 1.045, 1);
+  }
+
+  #shopify-section-{{ section.id }} .brand-card__image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    /* Normalize #f5f5f5 off-white studio backgrounds into pure #ffffff */
+    filter: brightness(1.045) contrast(1.045);
+    display: block;
+  }
+
+  /* Top Badges on Matrix Card */
+  #shopify-section-{{ section.id }} .brand-card__spotlight-btn {
     position: absolute;
-    top: 0.875rem;
-    right: 0.875rem;
-    z-index: 5;
-    display: inline-flex;
-    align-items: center;
-    padding: 0.25rem 0.625rem;
-    border-radius: 9999px;
-    background: rgba(10, 10, 10, 0.8);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    border: 1px solid rgba(201, 168, 118, 0.4);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    color: #c9a876;
+    top: 0.9rem;
+    left: 0.65rem;
+    z-index: 9;
+    appearance: none;
+    background: rgba(17, 17, 17, 0.88);
+    border: 1px solid rgba(201, 168, 118, 0.45);
+    color: #ffffff;
     font-family: var(--heading-font-family, inherit);
-    font-size: 0.625rem;
+    font-size: 0.54rem;
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    transition: transform 0.25s ease, border-color 0.25s ease;
+    padding: 0.22rem 0.45rem;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
   }
 
-  #shopify-section-{{ section.id }} .brand-card:hover .brand-card__pill {
-    transform: translateY(-2px);
-    border-color: #c9a876;
+  #shopify-section-{{ section.id }} .brand-card__spotlight-btn:hover,
+  #shopify-section-{{ section.id }} .brand-card.is-theatre-active .brand-card__spotlight-btn {
+    background: var(--km-gold);
+    color: #090909;
+    border-color: var(--km-gold);
   }
 
-  /* Glassmorphic Overlay */
-  #shopify-section-{{ section.id }} .brand-card__overlay {
+  #shopify-section-{{ section.id }} .brand-card__pill {
     position: absolute;
-    inset-inline: 0;
-    bottom: 0;
-    z-index: 4;
-    padding: clamp(1rem, 2vw, 1.35rem);
-    background: linear-gradient(
-      180deg,
-      rgba(10, 10, 10, 0) 0%,
-      rgba(10, 10, 10, 0.65) 30%,
-      rgba(10, 10, 10, 0.95) 100%
-    );
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-top: 1px solid rgba(201, 168, 118, 0.15);
+    top: 0.9rem;
+    right: 0.65rem;
+    z-index: 6;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.48rem;
+    background: rgba(10, 10, 10, 0.88);
+    border: 1px solid rgba(201, 168, 118, 0.4);
+    color: var(--km-gold);
+    font-family: var(--heading-font-family, inherit);
+    font-size: 0.54rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* Interactive Frame Dot Switchers on Card */
+  #shopify-section-{{ section.id }} .brand-card__frame-dots {
+    position: absolute;
+    bottom: 0.45rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.2rem 0.45rem;
+    background: rgba(17, 17, 17, 0.78);
+    border-radius: 999px;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card__dot.is-active {
+    background: var(--km-gold);
+    transform: scale(1.35);
+  }
+
+  /* Card Footer Plate */
+  #shopify-section-{{ section.id }} .brand-card__overlay {
+    position: relative;
+    width: 100%;
+    flex: 1 0 auto;
+    padding: 0.75rem 0.9rem 0.9rem;
+    background-color: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    transition: background 0.3s ease, border-color 0.3s ease;
-  }
-
-  #shopify-section-{{ section.id }} .brand-card:hover .brand-card__overlay {
-    background: linear-gradient(
-      180deg,
-      rgba(10, 10, 10, 0) 0%,
-      rgba(10, 10, 10, 0.78) 30%,
-      rgba(10, 10, 10, 0.98) 100%
-    );
-    border-top-color: rgba(201, 168, 118, 0.4);
+    justify-content: space-between;
+    z-index: 5;
   }
 
   #shopify-section-{{ section.id }} .brand-card__kicker {
     font-family: var(--heading-font-family, inherit);
-    font-size: 0.5625rem;
+    font-size: 0.55rem;
     font-weight: 600;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: #c9a876;
-    margin-bottom: 0.25rem;
+    color: #947847;
+    margin-bottom: 0.16rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   #shopify-section-{{ section.id }} .brand-card__title {
     font-family: var(--heading-font-family, inherit);
-    font-size: clamp(0.9375rem, 1.5vw, 1.1875rem);
-    font-weight: 500;
-    letter-spacing: 0.12em;
+    font-size: clamp(0.85rem, 1.2vw, 1.05rem);
+    font-weight: 600;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #f0eee9;
+    color: #111111 !important;
     margin: 0;
-    line-height: 1.2;
-    transition: color 0.25s ease;
+    line-height: 1.22;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  #shopify-section-{{ section.id }} .brand-card:hover .brand-card__title {
-    color: #ffffff;
+  #shopify-section-{{ section.id }} .brand-card__meta-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.3rem;
+    margin-top: 0.45rem;
+    padding-top: 0.45rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  #shopify-section-{{ section.id }} .brand-card__floor {
+    font-family: var(--body-font-family, inherit);
+    font-size: 0.66rem;
+    color: #555555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #shopify-section-{{ section.id }} .brand-card__floor strong {
+    color: #111111;
+    font-weight: 600;
   }
 
   #shopify-section-{{ section.id }} .brand-card__action {
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
-    margin-top: 0.4rem;
+    gap: 0.2rem;
     font-family: var(--heading-font-family, inherit);
-    font-size: 0.625rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
+    font-size: 0.56rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #c9a876;
-    opacity: 0;
-    transform: translateY(3px);
-    transition: opacity 0.3s ease, transform 0.3s ease, color 0.25s ease;
+    color: #947847;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: transform 0.25s ease, color 0.25s ease;
   }
 
   #shopify-section-{{ section.id }} .brand-card:hover .brand-card__action {
-    opacity: 1;
-    transform: translateY(0);
-    color: #ffffff;
+    color: #111111;
+    transform: translateX(3px);
+  }
+
+  @media screen and (max-width: 699px) {
+    #shopify-section-{{ section.id }} .brand-card__spotlight-btn {
+      top: 0.7rem;
+      left: 0.45rem;
+      font-size: 0.46rem;
+      letter-spacing: 0.08em;
+      padding: 0.16rem 0.34rem;
+    }
+
+    #shopify-section-{{ section.id }} .brand-card__pill {
+      top: 0.7rem;
+      right: 0.45rem;
+      font-size: 0.46rem;
+      letter-spacing: 0.08em;
+      padding: 0.16rem 0.34rem;
+    }
+
+    #shopify-section-{{ section.id }} .brand-card__frame {
+      padding: 1.75rem 0.65rem 1.35rem;
+    }
+
+    #shopify-section-{{ section.id }} .brand-card__overlay {
+      padding: 0.55rem 0.6rem 0.65rem;
+    }
+
+    #shopify-section-{{ section.id }} .brand-card__kicker {
+      font-size: 0.48rem;
+      letter-spacing: 0.12em;
+    }
+
+    #shopify-section-{{ section.id }} .brand-card__title {
+      font-size: 0.78rem;
+    }
+
+    #shopify-section-{{ section.id }} .brand-card__floor {
+      font-size: 0.56rem;
+    }
+
+    #shopify-section-{{ section.id }} .brand-card__action {
+      font-size: 0.48rem;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #shopify-section-{{ section.id }} .km-watermark-track {
+      animation: none !important;
+    }
   }
 </style>
 
-<div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
-  <div class="container">
-    <div class="brand-tiles-container">
-      {%- if section.settings.title != blank or section.settings.subheading != blank -%}
-        <div class="brand-tiles-header">
-          {%- if section.settings.subheading != blank -%}
-            <p class="brand-tiles-subheading">{{ section.settings.subheading }}</p>
-          {%- endif -%}
-          {%- if section.settings.title != blank -%}
-            <h2 class="brand-tiles-heading">{{ section.settings.title }}</h2>
-          {%- endif -%}
-          {%- if section.settings.content != blank -%}
-            <div class="brand-tiles-intro">
-              {{ section.settings.content }}
-            </div>
-          {%- endif -%}
+{%- liquid
+  assign used_global_pids = '|'
+  assign used_global_imgs = '|'
+-%}
+
+<div class="km-vault" data-km-section="{{ section.id }}">
+  {%- comment -%} Giant Kinetic Drifting Watermark Layer {%- endcomment -%}
+  <div class="km-watermark-layer" aria-hidden="true">
+    <div class="km-watermark-track">
+      <span class="km-watermark-text" data-km-watermark-a>COACH · NEW YORK 1941 · TISSOT · SUISSE 1853 · VERSACE · MILANO 1978 ·</span>
+      <span class="km-watermark-text" data-km-watermark-b>COACH · NEW YORK 1941 · TISSOT · SUISSE 1853 · VERSACE · MILANO 1978 ·</span>
+    </div>
+  </div>
+
+  <div class="container km-container">
+    {%- comment -%} Header & Live Auto-Showcase Controls {%- endcomment -%}
+    <div class="km-header-bar">
+      <div>
+        <div class="km-eyebrow-row">
+          <span class="km-live-dot"></span>
+          <p class="km-subheading">{{ section.settings.subheading | default: 'Curated Maisons' }}</p>
         </div>
-      {%- endif -%}
-
-      <div class="brand-tiles-grid">
-        {%- if section.blocks.size > 0 -%}
-          {%- for block in section.blocks -%}
-            {%- liquid
-              assign collection = block.settings.collection
-              assign brand_title = block.settings.title | default: collection.title | default: 'Maison'
-              assign brand_subheading = block.settings.subheading
-              assign brand_url = block.settings.link_url | default: collection.url | default: routes.collections_url
-              assign brand_count = collection.all_products_count | default: collection.products_count | default: 0
-              assign brand_image = block.settings.image | default: collection.featured_image | default: collection.products.first.featured_media.preview_image
-            -%}
-
-            <div class="brand-card group" {{ block.shopify_attributes }}>
-              <a href="{{ brand_url }}" class="brand-card__link" aria-label="{{ brand_title | escape }}">
-                <div class="brand-card__media-box">
-                  {%- if brand_image != blank -%}
-                    {{- brand_image | image_url: width: 800 | image_tag:
-                      loading: 'lazy',
-                      sizes: '(max-width: 699px) 50vw, (max-width: 1024px) 33vw, 25vw',
-                      widths: '200,300,400,600,800',
-                      class: 'brand-card__image'
-                    -}}
-                  {%- else -%}
-                    <div class="brand-card__monogram">
-                      <span>{{ brand_title | slice: 0, 2 }}</span>
-                    </div>
-                  {%- endif -%}
-
-                  {%- if block.settings.show_style_count -%}
-                    <div class="brand-card__pill">
-                      <span>{{ brand_count }} {% if brand_count == 1 %}STYLE{% else %}STYLES{% endif %}</span>
-                    </div>
-                  {%- endif -%}
-
-                  <div class="brand-card__overlay">
-                    {%- if brand_subheading != blank -%}
-                      <span class="brand-card__kicker">{{ brand_subheading }}</span>
-                    {%- endif -%}
-                    <h3 class="brand-card__title">{{ brand_title }}</h3>
-                    <span class="brand-card__action">
-                      View Showroom &rarr;
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </div>
-          {%- endfor -%}
-        {%- else -%}
-          {%- comment -%} Default Curated Maisons when 0 blocks configured {%- endcomment -%}
-          {%- assign default_handles = 'coach,michael-kors,tissot,jw-pei,movado,citizen,versace,seiko,instant-ship,luxury-watches,designer-bags,wallets-leather-goods' | split: ',' -%}
-          {%- for handle in default_handles -%}
-            {%- liquid
-              assign col = collections[handle]
-              assign col_title = col.title | default: handle | capitalize
-              assign col_url = col.url | default: routes.collections_url | append: '/' | append: handle
-              assign col_count = col.all_products_count | default: 0
-              assign col_img = col.featured_image | default: col.products.first.featured_media.preview_image
-            -%}
-            <div class="brand-card group">
-              <a href="{{ col_url }}" class="brand-card__link" aria-label="{{ col_title | escape }}">
-                <div class="brand-card__media-box">
-                  {%- if col_img != blank -%}
-                    {{- col_img | image_url: width: 800 | image_tag:
-                      loading: 'lazy',
-                      sizes: '(max-width: 699px) 50vw, (max-width: 1024px) 33vw, 25vw',
-                      widths: '200,300,400,600,800',
-                      class: 'brand-card__image'
-                    -}}
-                  {%- else -%}
-                    <div class="brand-card__monogram">
-                      <span>{{ col_title | slice: 0, 2 }}</span>
-                    </div>
-                  {%- endif -%}
-
-                  <div class="brand-card__pill">
-                    <span>{{ col_count }} {% if col_count == 1 %}STYLE{% else %}STYLES{% endif %}</span>
-                  </div>
-
-                  <div class="brand-card__overlay">
-                    <span class="brand-card__kicker">Curated Maison</span>
-                    <h3 class="brand-card__title">{{ col_title }}</h3>
-                    <span class="brand-card__action">
-                      View Showroom &rarr;
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </div>
-          {%- endfor -%}
+        {%- if section.settings.title != blank -%}
+          <h2 class="km-heading">{{ section.settings.title }}</h2>
         {%- endif -%}
       </div>
+
+      <div class="km-controls" aria-label="Maison showcase controls">
+        <button type="button" class="km-ctrl-btn" data-km-prev aria-label="Previous Maison">&larr;</button>
+        <button type="button" class="km-ctrl-btn" data-km-toggle aria-label="Pause or resume auto-showcase">
+          <span data-km-toggle-label>AUTO-SHOWCASE</span>
+        </button>
+        <button type="button" class="km-ctrl-btn" data-km-next aria-label="Next Maison">&rarr;</button>
+      </div>
+    </div>
+
+    {%- capture ribbon_tabs_html -%}{%- endcapture -%}
+    {%- capture theatre_stages_html -%}{%- endcapture -%}
+    {%- capture matrix_cards_html -%}{%- endcapture -%}
+
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign idx0 = forloop.index0
+        assign idx_num = forloop.index
+        if idx_num < 10
+          assign idx_pad = '0' | append: idx_num
+        else
+          assign idx_pad = '' | append: idx_num
+        endif
+
+        assign collection = block.settings.collection
+        assign handle = collection.handle | default: ''
+        assign brand_title = block.settings.title | default: collection.title | default: 'Maison'
+        assign brand_subheading = block.settings.subheading | default: 'Certified Archive'
+        assign brand_url = block.settings.link_url | default: collection.url | default: routes.collections_url
+        assign brand_count = collection.all_products_count | default: collection.products_count | default: 0
+
+        if handle == 'coach'
+          assign narrative = 'American leathercraft heritage since 1941. Glove-tanned leather, signature turnlock hardware, and iconic New York shoulder & tote silhouettes.'
+          assign pool_handles = 'designer-bags,totes,crossbody-bags,wallets-leather-goods,coach' | split: ','
+        elsif handle == 'kate-spade'
+          assign narrative = 'Joyful New York sophistication since 1993. Crisp vibrant color palettes, iconic shoulder silhouettes, versatile crossbodies, and pristine pebbled leathercraft.'
+          assign pool_handles = 'designer-bags,crossbody-bags,totes,wallets-leather-goods,kate-spade' | split: ','
+        elsif handle == 'michael-kors'
+          assign narrative = 'Jet-set American luxury crafted in structured Saffiano leather, architectural totes, and polished chronograph timepieces.'
+          assign pool_handles = 'totes,crossbody-bags,michael-kors' | split: ','
+        elsif handle == 'tissot'
+          assign narrative = 'Swiss horological mastery rooted in Le Locle since 1853. Celebrated for integrated PRX models, Chemin des Tourelles, and Powermatic 80 calibers.'
+          assign pool_handles = '' | split: ','
+        elsif handle == 'jw-pei'
+          assign narrative = 'Los Angeles sculptural minimalism engineered from certified vegan leather. Iconic Gabbi, Joy, and Abacus architectural bag forms.'
+          assign pool_handles = '' | split: ','
+        elsif handle == 'movado'
+          assign narrative = 'Modernist Swiss horology immortalized by the legendary single-dot Museum dial, sculptural bracelets, and bold PVD cases.'
+          assign pool_handles = '' | split: ','
+        elsif handle == 'citizen'
+          assign narrative = 'Pioneering Japanese watchmaking since 1918, fusing proprietary light-powered Eco-Drive movements with titanium & sport chronographs.'
+          assign pool_handles = '' | split: ','
+        elsif handle == 'versace'
+          assign narrative = 'Unapologetic Milanese glamour featuring Greca-engraved bezels, three-dimensional Medusa emblems, and Swiss-made luxury calibers.'
+          assign pool_handles = '' | split: ','
+        elsif handle == 'seiko'
+          assign narrative = 'Tokyo mechanical precision since 1881. In-house automatic calibers, Presage cocktail dials, and enduring Prospex sport instruments.'
+          assign pool_handles = '' | split: ','
+        elsif handle == 'nike'
+          assign narrative = 'Court, runway, and streetwear icons spanning Air Force 1, Dunk Low, Air Max, and archival basketball silhouettes.'
+          assign pool_handles = '' | split: ','
+        elsif handle == 'on-running'
+          assign narrative = 'Swiss-engineered performance footwear built on patented CloudTec cushioning, Speedboard propulsion, and clean Zurich aesthetics.'
+          assign pool_handles = '' | split: ','
+        elsif handle == 'hoka'
+          assign narrative = 'Maximalist midsole geometry and featherweight MetaRocker engineering designed for supreme road, trail, and lifestyle recovery.'
+          assign pool_handles = '' | split: ','
+        elsif handle == 'salomon'
+          assign narrative = 'Born in the French Alps in 1947. Technical Sportstyle icons featuring Quicklace systems, Agile Chassis, and XT-6 trail heritage.'
+          assign pool_handles = '' | split: ','
+        else
+          assign narrative = 'Certified authentic pieces sourced directly through verified international luxury channels with full Maison warranty.'
+          assign pool_handles = '' | split: ','
+        endif
+
+        assign p1 = nil
+        assign p2 = nil
+        assign p3 = nil
+        assign p4 = nil
+        assign min_price = 0
+        assign card_prefixes = '|'
+
+        if collection != blank and collection.products_count > 0
+          for prod in collection.products limit: 50
+            if prod.price > 0
+              if min_price == 0 or prod.price < min_price
+                assign min_price = prod.price
+              endif
+            endif
+          endfor
+
+          if pool_handles.size > 0
+            for ph in pool_handles
+              assign sub_col = collections[ph]
+              if sub_col != blank and sub_col.products_count > 0
+                for prod in sub_col.products limit: 50
+                  assign vendor_ok = false
+                  assign v_up = prod.vendor | upcase
+                  if handle == 'coach' and v_up contains 'COACH'
+                    assign vendor_ok = true
+                  elsif handle == 'kate-spade' and v_up contains 'SPADE'
+                    assign vendor_ok = true
+                  elsif handle == 'michael-kors' and v_up contains 'KORS'
+                    assign vendor_ok = true
+                  endif
+
+                  assign p_media = prod.featured_media.preview_image | default: prod.featured_image
+                  if vendor_ok and p_media != blank
+                    assign pid_tok = '|' | append: prod.id | append: '|'
+                    assign raw_f = p_media.src | split: '/' | last | split: '?' | first
+                    assign stem = raw_f | split: '_' | first | split: '.' | first
+                    assign img_tok = '|' | append: stem | append: '|'
+                    assign pref = prod.title | slice: 0, 16 | upcase | strip
+                    assign pref_tok = '|' | append: pref | append: '|'
+
+                    unless used_global_pids contains pid_tok or used_global_imgs contains img_tok or card_prefixes contains pref_tok
+                      if p1 == nil
+                        assign p1 = prod
+                      elsif p2 == nil
+                        assign p2 = prod
+                      elsif p3 == nil
+                        assign p3 = prod
+                      elsif p4 == nil
+                        assign p4 = prod
+                      endif
+                      assign used_global_pids = used_global_pids | append: prod.id | append: '|'
+                      assign used_global_imgs = used_global_imgs | append: stem | append: '|'
+                      assign card_prefixes = card_prefixes | append: pref | append: '|'
+                      if p4 != nil
+                        break
+                      endif
+                    endunless
+                  endif
+                endfor
+              endif
+              if p4 != nil
+                break
+              endif
+            endfor
+          endif
+
+          if p4 == nil
+            for prod in collection.products limit: 50
+              assign p_media = prod.featured_media.preview_image | default: prod.featured_image
+              if p_media != blank
+                assign pid_tok = '|' | append: prod.id | append: '|'
+                assign raw_f = p_media.src | split: '/' | last | split: '?' | first
+                assign stem = raw_f | split: '_' | first | split: '.' | first
+                assign img_tok = '|' | append: stem | append: '|'
+                assign pref = prod.title | slice: 0, 16 | upcase | strip
+                assign pref_tok = '|' | append: pref | append: '|'
+
+                unless used_global_pids contains pid_tok or used_global_imgs contains img_tok or card_prefixes contains pref_tok
+                  if p1 == nil
+                    assign p1 = prod
+                  elsif p2 == nil
+                    assign p2 = prod
+                  elsif p3 == nil
+                    assign p3 = prod
+                  elsif p4 == nil
+                    assign p4 = prod
+                  endif
+                  assign used_global_pids = used_global_pids | append: prod.id | append: '|'
+                  assign used_global_imgs = used_global_imgs | append: stem | append: '|'
+                  assign card_prefixes = card_prefixes | append: pref | append: '|'
+                  if p4 != nil
+                    break
+                  endif
+                endunless
+              endif
+            endfor
+          endif
+
+          if p4 == nil
+            for prod in collection.products limit: 35
+              assign p_media = prod.featured_media.preview_image | default: prod.featured_image
+              if p_media != blank
+                assign pid_tok = '|' | append: prod.id | append: '|'
+                unless used_global_pids contains pid_tok
+                  if p1 == nil
+                    assign p1 = prod
+                  elsif p2 == nil
+                    assign p2 = prod
+                  elsif p3 == nil
+                    assign p3 = prod
+                  elsif p4 == nil
+                    assign p4 = prod
+                  endif
+                  assign used_global_pids = used_global_pids | append: prod.id | append: '|'
+                  if p4 != nil
+                    break
+                  endif
+                endunless
+              endif
+            endfor
+          endif
+        endif
+      -%}
+
+      {%- capture ribbon_tabs_html -%}{{ ribbon_tabs_html }}
+        <button
+          type="button"
+          class="km-ribbon-tab {% if forloop.first %}is-active{% endif %}"
+          data-km-tab="{{ idx0 }}"
+          data-km-watermark="{{ brand_title | upcase | escape }} · {{ brand_subheading | upcase | escape }} · "
+        >
+          <span class="km-ribbon-tab__idx">{{ idx_pad }} // MAISON</span>
+          <span class="km-ribbon-tab__name">{{ brand_title }}</span>
+          <span class="km-ribbon-tab__progress"></span>
+        </button>
+      {%- endcapture -%}
+
+      {%- capture theatre_stages_html -%}{{ theatre_stages_html }}
+        <div class="km-stage {% if forloop.first %}is-active{% endif %}" data-km-stage="{{ idx0 }}">
+          <div class="km-stage__info">
+            <div>
+              <div class="km-stage__badges">
+                <span class="km-stage__index-pill">MAISON {{ idx_pad }} / {{ section.blocks.size }}</span>
+                {%- if brand_subheading != blank -%}
+                  <span class="km-stage__origin-pill">{{ brand_subheading }}</span>
+                {%- endif -%}
+              </div>
+
+              <h3 class="km-stage__title">{{ brand_title }}</h3>
+              <p class="km-stage__narrative">{{ narrative }}</p>
+            </div>
+
+            <div>
+              <div class="km-telemetry-grid">
+                <div class="km-telemetry-cell">
+                  <span class="km-telemetry-label">VAULT ARCHIVE</span>
+                  <span class="km-telemetry-val">{{ brand_count }} STYLES</span>
+                </div>
+                <div class="km-telemetry-cell">
+                  <span class="km-telemetry-label">ENTRY FLOOR</span>
+                  <span class="km-telemetry-val">
+                    {%- if min_price > 0 -%}{{ min_price | money_without_trailing_zeros | replace: '.00', '' }}{%- else -%}Curated{%- endif -%}
+                  </span>
+                </div>
+                <div class="km-telemetry-cell">
+                  <span class="km-telemetry-label">PROVENANCE</span>
+                  <span class="km-telemetry-val">CERTIFIED</span>
+                </div>
+              </div>
+
+              <div class="km-stage__cta-row">
+                <a href="{{ brand_url }}" class="km-stage__cta">
+                  <span>ENTER {{ brand_title }} SHOWROOM</span>
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="km-stage__showcase">
+            {%- comment -%} Left of Showcase: Fixed-Geometry Hero Vitrine (4 Stacked GPU Slides) {%- endcomment -%}
+            <div class="km-hero-vitrine">
+              {%- for b_idx in (1..4) -%}
+                {%- liquid
+                  assign b_prod = nil
+                  if b_idx == 1
+                    assign b_prod = p1
+                  elsif b_idx == 2
+                    assign b_prod = p2 | default: p1
+                  elsif b_idx == 3
+                    assign b_prod = p3 | default: p2 | default: p1
+                  elsif b_idx == 4
+                    assign b_prod = p4 | default: p3 | default: p1
+                  endif
+                -%}
+                {%- if b_prod != nil -%}
+                  {%- liquid
+                    assign b_img = b_prod.featured_media.preview_image | default: b_prod.featured_image
+                    assign b_save = 0
+                    if b_prod.compare_at_price > b_prod.price
+                      assign b_diff = b_prod.compare_at_price | minus: b_prod.price
+                      assign b_save = b_diff | times: 100.0 | divided_by: b_prod.compare_at_price | round
+                    endif
+                  -%}
+                  <a
+                    href="{{ b_prod.url }}"
+                    class="km-vitrine-slide {% if b_idx == 1 %}is-focused{% endif %}"
+                    data-km-slide="{{ b_idx | minus: 1 }}"
+                  >
+                    <div class="km-vitrine-slide__top">
+                      <span class="km-vitrine-slide__badge">ARCHIVE PIECE 0{{ b_idx }} / 04</span>
+                      {%- if b_save > 0 -%}
+                        <span class="km-vitrine-slide__save">SAVE {{ b_save }}%</span>
+                      {%- endif -%}
+                    </div>
+
+                    <div class="km-vitrine-slide__media">
+                      {%- if b_img != blank -%}
+                        <img
+                          src="{{ b_img | image_url: width: 640 }}"
+                          alt="{{ b_prod.title | escape }}"
+                          class="km-vitrine-slide__img"
+                          width="360"
+                          height="360"
+                          loading="eager"
+                        />
+                      {%- endif -%}
+                    </div>
+
+                    <div class="km-vitrine-slide__footer">
+                      <h4 class="km-vitrine-slide__title">{{ b_prod.title }}</h4>
+                      <div class="km-vitrine-slide__meta">
+                        <span class="km-vitrine-slide__price">{{ b_prod.price | money_without_trailing_zeros | replace: '.00', '' }}</span>
+                        <span class="km-vitrine-slide__cta">VIEW PIECE &rarr;</span>
+                      </div>
+                    </div>
+                  </a>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+
+            {%- comment -%} Right of Showcase: 4-Piece Vertical Filmstrip Selector Stack (Zero Reflow) {%- endcomment -%}
+            <div class="km-filmstrip">
+              {%- for b_idx in (1..4) -%}
+                {%- liquid
+                  assign b_prod = nil
+                  if b_idx == 1
+                    assign b_prod = p1
+                  elsif b_idx == 2
+                    assign b_prod = p2 | default: p1
+                  elsif b_idx == 3
+                    assign b_prod = p3 | default: p2 | default: p1
+                  elsif b_idx == 4
+                    assign b_prod = p4 | default: p3 | default: p1
+                  endif
+                -%}
+                {%- if b_prod != nil -%}
+                  {%- assign b_img = b_prod.featured_media.preview_image | default: b_prod.featured_image -%}
+                  <a
+                    href="{{ b_prod.url }}"
+                    class="km-strip-item {% if b_idx == 1 %}is-focused{% endif %}"
+                    data-km-blade="{{ b_idx | minus: 1 }}"
+                  >
+                    <div class="km-strip-item__thumb">
+                      {%- if b_img != blank -%}
+                        <img
+                          src="{{ b_img | image_url: width: 160 }}"
+                          alt="{{ b_prod.title | escape }}"
+                          width="54"
+                          height="54"
+                          loading="eager"
+                        />
+                      {%- endif -%}
+                    </div>
+                    <div class="km-strip-item__meta">
+                      <span class="km-strip-item__num">PIECE 0{{ b_idx }}</span>
+                      <span class="km-strip-item__title">{{ b_prod.title }}</span>
+                      <span class="km-strip-item__price">{{ b_prod.price | money_without_trailing_zeros | replace: '.00', '' }}</span>
+                    </div>
+                  </a>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      {%- endcapture -%}
+
+      {%- capture matrix_cards_html -%}{{ matrix_cards_html }}
+        <div
+          class="brand-card {% if forloop.first %}is-theatre-active{% endif %}"
+          data-km-card="{{ idx0 }}"
+          {{ block.shopify_attributes }}
+        >
+          <div class="brand-card__stories" aria-hidden="true">
+            <span class="brand-card__story-seg is-active" data-km-seg="0"><span class="brand-card__story-fill"></span></span>
+            <span class="brand-card__story-seg" data-km-seg="1"><span class="brand-card__story-fill"></span></span>
+            <span class="brand-card__story-seg" data-km-seg="2"><span class="brand-card__story-fill"></span></span>
+          </div>
+
+          <button
+            type="button"
+            class="brand-card__spotlight-btn"
+            data-km-focus-trigger="{{ idx0 }}"
+            aria-label="Spotlight {{ brand_title | escape }} in stage"
+          >
+            {{ idx_pad }} · STAGE
+          </button>
+
+          {%- if block.settings.show_style_count -%}
+            <div class="brand-card__pill">
+              <span>{{ brand_count }} {% if brand_count == 1 %}STYLE{% else %}STYLES{% endif %}</span>
+            </div>
+          {%- endif -%}
+
+          <a href="{{ brand_url }}" class="brand-card__link" aria-label="{{ brand_title | escape }}">
+            <div class="brand-card__media-box">
+              <div class="brand-card__image-container">
+                {%- for f_idx in (1..3) -%}
+                  {%- liquid
+                    assign f_prod = nil
+                    if f_idx == 1
+                      assign f_prod = p1
+                    elsif f_idx == 2
+                      assign f_prod = p2 | default: p1
+                    elsif f_idx == 3
+                      assign f_prod = p3 | default: p2 | default: p1
+                    endif
+                    assign f_img = f_prod.featured_media.preview_image | default: f_prod.featured_image
+                  -%}
+                  <div class="brand-card__frame {% if f_idx == 1 %}is-active{% endif %}" data-km-frame="{{ f_idx | minus: 1 }}">
+                    {%- if f_img != blank -%}
+                      <img
+                        src="{{ f_img | image_url: width: 640 }}"
+                        alt="{{ f_prod.title | default: brand_title | escape }}"
+                        class="brand-card__image"
+                        width="400"
+                        height="400"
+                        loading="lazy"
+                      />
+                    {%- endif -%}
+                  </div>
+                {%- endfor -%}
+
+                <div class="brand-card__frame-dots">
+                  <button type="button" class="brand-card__dot is-active" data-km-dot="0" aria-label="Piece 1"></button>
+                  <button type="button" class="brand-card__dot" data-km-dot="1" aria-label="Piece 2"></button>
+                  <button type="button" class="brand-card__dot" data-km-dot="2" aria-label="Piece 3"></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="brand-card__overlay">
+              {%- if brand_subheading != blank -%}
+                <span class="brand-card__kicker">{{ brand_subheading }}</span>
+              {%- endif -%}
+              <h3 class="brand-card__title">{{ brand_title }}</h3>
+              <div class="brand-card__meta-footer">
+                {%- if min_price > 0 -%}
+                  <span class="brand-card__floor">From <strong>{{ min_price | money_without_trailing_zeros | replace: '.00', '' }}</strong></span>
+                {%- else -%}
+                  <span class="brand-card__floor">Certified Archive</span>
+                {%- endif -%}
+                <span class="brand-card__action">SHOWROOM &rarr;</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      {%- endcapture -%}
+    {%- endfor -%}
+
+    {%- comment -%} Render 12-Maison Selector Ribbon {%- endcomment -%}
+    <div class="km-ribbon" role="tablist" aria-label="Select Maison" data-km-ribbon>
+      {{ ribbon_tabs_html }}
+    </div>
+
+    {%- comment -%} Render Interactive Spotlight Theatre {%- endcomment -%}
+    <div class="km-theatre">
+      {{ theatre_stages_html }}
+    </div>
+
+    {%- comment -%} Render 12-Maison Multi-Frame 3D-Tilt Portal Matrix {%- endcomment -%}
+    <div class="km-matrix-header">
+      <p class="km-matrix-title">ALL CURATED MAISONS ({{ section.blocks.size }})</p>
+      <span class="km-matrix-hint">HOVER TO SCRUB 3-PIECE REEL · 3D TILT VITRINES</span>
+    </div>
+
+    <div class="brand-tiles-grid">
+      {{ matrix_cards_html }}
     </div>
   </div>
 </div>
+
+<script>
+  (function() {
+    const vault = document.querySelector('[data-km-section="{{ section.id }}"]');
+    if (!vault) return;
+
+    const ribbon = vault.querySelector('[data-km-ribbon]');
+    const tabs = Array.from(vault.querySelectorAll('[data-km-tab]'));
+    const stages = Array.from(vault.querySelectorAll('[data-km-stage]'));
+    const cards = Array.from(vault.querySelectorAll('[data-km-card]'));
+    const watermarkA = vault.querySelector('[data-km-watermark-a]');
+    const watermarkB = vault.querySelector('[data-km-watermark-b]');
+    const toggleBtn = vault.querySelector('[data-km-toggle]');
+    const toggleLabel = vault.querySelector('[data-km-toggle-label]');
+    const prevBtn = vault.querySelector('[data-km-prev]');
+    const nextBtn = vault.querySelector('[data-km-next]');
+
+    if (!tabs.length || !stages.length) return;
+
+    let activeIndex = 0;
+    let activeBlade = 0;
+    let isPaused = false;
+    let hoverPaused = false;
+    const STAGE_DURATION = 8400; /* 8.4s per Maison -> 2.1s per piece for calm, unhurried luxury cadence */
+    let elapsed = 0;
+    let lastTick = performance.now();
+
+    function setPieceFocus(stageEl, pieceIndex) {
+      const slides = stageEl.querySelectorAll('[data-km-slide]');
+      const blades = stageEl.querySelectorAll('[data-km-blade]');
+      slides.forEach((s, idx) => s.classList.toggle('is-focused', idx === pieceIndex));
+      blades.forEach((b, idx) => b.classList.toggle('is-focused', idx === pieceIndex));
+    }
+
+    function setActiveMaison(index, resetTimer) {
+      activeIndex = (index + tabs.length) % tabs.length;
+      if (resetTimer) {
+        elapsed = 0;
+        activeBlade = 0;
+      }
+
+      tabs.forEach((tab, idx) => {
+        const isCurrent = idx === activeIndex;
+        tab.classList.toggle('is-active', isCurrent);
+        if (!isCurrent) tab.style.setProperty('--km-progress', '0');
+        if (isCurrent && ribbon) {
+          const tabLeft = tab.offsetLeft - (ribbon.clientWidth / 2) + (tab.clientWidth / 2);
+          ribbon.scrollTo({ left: Math.max(0, tabLeft), behavior: 'smooth' });
+        }
+      });
+
+      stages.forEach((stage, idx) => {
+        const isCurrent = idx === activeIndex;
+        stage.classList.toggle('is-active', isCurrent);
+        if (isCurrent) {
+          setPieceFocus(stage, activeBlade);
+        }
+      });
+
+      cards.forEach((card, idx) => {
+        card.classList.toggle('is-theatre-active', idx === activeIndex);
+      });
+
+      const wmText = tabs[activeIndex].getAttribute('data-km-watermark') || '';
+      if (wmText && watermarkA && watermarkB) {
+        const repeated = wmText.repeat(4);
+        watermarkA.textContent = repeated;
+        watermarkB.textContent = repeated;
+      }
+    }
+
+    /* Bind Interactive Filmstrip Items inside Spotlight Theatre */
+    stages.forEach((stage) => {
+      const blades = stage.querySelectorAll('[data-km-blade]');
+      blades.forEach((blade, bIdx) => {
+        blade.addEventListener('mouseenter', () => {
+          activeBlade = bIdx;
+          setPieceFocus(stage, bIdx);
+        });
+      });
+    });
+
+    /* Bind Ribbon Tabs */
+    tabs.forEach((tab, idx) => {
+      tab.addEventListener('click', () => {
+        setActiveMaison(idx, true);
+      });
+    });
+
+    /* Bind Prev / Next / Pause Controls */
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => setActiveMaison(activeIndex - 1, true));
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => setActiveMaison(activeIndex + 1, true));
+    }
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        isPaused = !isPaused;
+        toggleBtn.classList.toggle('is-paused', isPaused);
+        if (toggleLabel) {
+          toggleLabel.textContent = isPaused ? 'PAUSED' : 'AUTO-SHOWCASE';
+        }
+      });
+    }
+
+    const theatreEl = vault.querySelector('.km-theatre');
+    if (theatreEl) {
+      theatreEl.addEventListener('mouseenter', () => { hoverPaused = true; });
+      theatreEl.addEventListener('mouseleave', () => { hoverPaused = false; });
+    }
+
+    /* Cursor Spotlight Tracking on Vault */
+    vault.addEventListener('pointermove', (e) => {
+      const rect = vault.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      vault.style.setProperty('--km-mouse-x', x.toFixed(1) + '%');
+      vault.style.setProperty('--km-mouse-y', y.toFixed(1) + '%');
+    }, { passive: true });
+
+    /* 3D Perspective Tilt + Multi-Frame Story Reels on 12 Matrix Cards */
+    function setCardFrame(card, frameIdx) {
+      const frames = card.querySelectorAll('[data-km-frame]');
+      const segs = card.querySelectorAll('[data-km-seg]');
+      const dots = card.querySelectorAll('[data-km-dot]');
+      if (!frames.length) return;
+      const safeIdx = frameIdx % frames.length;
+      card.setAttribute('data-current-frame', String(safeIdx));
+      frames.forEach((f, i) => f.classList.toggle('is-active', i === safeIdx));
+      segs.forEach((s, i) => s.classList.toggle('is-active', i <= safeIdx));
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === safeIdx));
+    }
+
+    cards.forEach((card, cardIdx) => {
+      card.setAttribute('data-current-frame', '0');
+      let hoverReelTimer = null;
+
+      /* 3D Tilt + Horizontal Cursor Scrub / Auto-Reel on Pointer Move */
+      card.addEventListener('pointerenter', () => {
+        const cur = parseInt(card.getAttribute('data-current-frame') || '0', 10);
+        setCardFrame(card, (cur + 1) % 3);
+        hoverReelTimer = setInterval(() => {
+          const c = parseInt(card.getAttribute('data-current-frame') || '0', 10);
+          setCardFrame(card, (c + 1) % 3);
+        }, 1400);
+      });
+
+      card.addEventListener('pointermove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const px = (e.clientX - rect.left) / rect.width;
+        const py = (e.clientY - rect.top) / rect.height;
+        const ry = (px - 0.5) * 8;
+        const rx = (0.5 - py) * 8;
+        card.style.setProperty('--rx', rx.toFixed(2) + 'deg');
+        card.style.setProperty('--ry', ry.toFixed(2) + 'deg');
+        card.style.setProperty('--gx', (px * 100).toFixed(1) + '%');
+        card.style.setProperty('--gy', (py * 100).toFixed(1) + '%');
+      }, { passive: true });
+
+      card.addEventListener('pointerleave', () => {
+        if (hoverReelTimer) {
+          clearInterval(hoverReelTimer);
+          hoverReelTimer = null;
+        }
+        card.style.setProperty('--rx', '0deg');
+        card.style.setProperty('--ry', '0deg');
+      });
+
+      /* Spotlight Trigger Button */
+      const spotBtn = card.querySelector('[data-km-focus-trigger]');
+      if (spotBtn) {
+        spotBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setActiveMaison(cardIdx, true);
+          if (theatreEl) {
+            theatreEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        });
+      }
+
+      /* Interactive Frame Dots */
+      card.querySelectorAll('[data-km-dot]').forEach((dot) => {
+        const dIdx = parseInt(dot.getAttribute('data-km-dot') || '0', 10);
+        dot.addEventListener('mouseenter', () => {
+          if (hoverReelTimer) {
+            clearInterval(hoverReelTimer);
+            hoverReelTimer = null;
+          }
+          setCardFrame(card, dIdx);
+        });
+        dot.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setCardFrame(card, dIdx);
+        });
+      });
+    });
+
+    /* Calm Single-Card Ambient Wave across the 12 Matrix Cards (every 2.6s, 1 card at a time) */
+    let waveStep = 0;
+    setInterval(() => {
+      if (document.hidden) return;
+      const card = cards[waveStep % cards.length];
+      if (card && !card.matches(':hover')) {
+        const cur = parseInt(card.getAttribute('data-current-frame') || '0', 10);
+        setCardFrame(card, (cur + 1) % 3);
+      }
+      waveStep = (waveStep + 1) % cards.length;
+    }, 2600);
+
+    /* Main 60fps RAF Loop for Spotlight Theatre & 4-Piece Vitrine Sub-Cycle */
+    function tick(now) {
+      const dt = now - lastTick;
+      lastTick = now;
+
+      if (!isPaused && !hoverPaused && !document.hidden) {
+        elapsed += dt;
+        const progress = Math.min(elapsed / STAGE_DURATION, 1);
+        const currentTab = tabs[activeIndex];
+        if (currentTab) {
+          currentTab.style.setProperty('--km-progress', progress.toFixed(3));
+        }
+
+        /* Sub-cycle the 4 pieces inside the active stage (0 -> 1 -> 2 -> 3) */
+        const targetBlade = Math.min(Math.floor(progress * 4), 3);
+        if (targetBlade !== activeBlade) {
+          activeBlade = targetBlade;
+          const currentStage = stages[activeIndex];
+          if (currentStage) setPieceFocus(currentStage, activeBlade);
+        }
+
+        if (elapsed >= STAGE_DURATION) {
+          setActiveMaison(activeIndex + 1, true);
+        }
+      }
+
+      requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+  })();
+</script>
 
 {% schema %}
 {
@@ -395,7 +1928,7 @@ smooth hover elevation, and responsive reflow (4 columns desktop, 2 columns mobi
   "disabled_on": {
     "groups": ["header", "custom.overlay"]
   },
-  "max_blocks": 12,
+  "max_blocks": 16,
   "settings": [
     {
       "type": "color_scheme",
@@ -511,10 +2044,10 @@ smooth hover elevation, and responsive reflow (4 columns desktop, 2 columns mobi
         { "type": "brand", "settings": { "collection": "citizen", "title": "Citizen", "subheading": "Eco-Drive Technology" } },
         { "type": "brand", "settings": { "collection": "versace", "title": "Versace", "subheading": "Italian Heritage" } },
         { "type": "brand", "settings": { "collection": "seiko", "title": "Seiko", "subheading": "Japanese Precision" } },
-        { "type": "brand", "settings": { "collection": "instant-ship", "title": "Ready to Ship", "subheading": "Dispatch in 24 Hours" } },
-        { "type": "brand", "settings": { "collection": "luxury-watches", "title": "Luxury Watches", "subheading": "Certified Calibers" } },
-        { "type": "brand", "settings": { "collection": "designer-bags", "title": "Designer Bags", "subheading": "Iconic Silhouettes" } },
-        { "type": "brand", "settings": { "collection": "wallets-leather-goods", "title": "Leather Goods", "subheading": "Wallets & Pouches" } }
+        { "type": "brand", "settings": { "collection": "nike", "title": "NIKE", "subheading": "Court & Air Heritage" } },
+        { "type": "brand", "settings": { "collection": "on-running", "title": "On Running", "subheading": "Swiss CloudTec" } },
+        { "type": "brand", "settings": { "collection": "hoka", "title": "HOKA", "subheading": "Maximalist Performance" } },
+        { "type": "brand", "settings": { "collection": "salomon", "title": "Salomon", "subheading": "Alpine Sportstyle" } }
       ]
     }
   ]

@@ -1,0 +1,1068 @@
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+SNEAKER RUNWAY SHOWCASE SECTION (LUXURY MAISON EDITION)
+------------------------------------------------------------------------------------------------------------------------
+Editorial, horizontal runway carousel for curated footwear collections.
+- Horizontal Runway carousel by default with smooth snap scroll & arrow navigation
+- Single UK sizing selector parity for Indian luxury customers
+- Quiet Luxury aesthetic aligned with The Rare Avenue maison design system
+- 100% self-contained scoped styles — zero external framework dependencies
+------------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
+<style>
+  /* --------------------------------------------------
+     1. ROOT SECTION & SCOPED RESETS
+     -------------------------------------------------- */
+  #shopify-section-{{ section.id }} .sneaker-runway-section {
+    position: relative;
+    padding-top: clamp(2.5rem, 4vw, 4rem);
+    padding-bottom: clamp(2.5rem, 4vw, 4rem);
+    background-color: var(--color-background, #f0eee9);
+    color: var(--color-foreground, #1a1a1a);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #shopify-section-{{ section.id }} *,
+  #shopify-section-{{ section.id }} *::before,
+  #shopify-section-{{ section.id }} *::after {
+    box-sizing: border-box;
+  }
+
+  #shopify-section-{{ section.id }} .runway-container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1rem, 3.5vw, 2.5rem);
+    padding-right: clamp(1rem, 3.5vw, 2.5rem);
+  }
+
+  /* --------------------------------------------------
+     2. SECTION HEADER & NAVIGATION CONTROLS
+     -------------------------------------------------- */
+  #shopify-section-{{ section.id }} .runway-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 1.75rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .runway-header {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+  }
+
+  #shopify-section-{{ section.id }} .runway-subheading {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9a876;
+    margin: 0 0 0.5rem;
+  }
+
+  #shopify-section-{{ section.id }} .runway-title {
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  /* Runway Controls: Tabs & Carousel Arrows */
+  #shopify-section-{{ section.id }} .runway-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .runway-controls {
+      width: auto;
+      justify-content: flex-end;
+    }
+  }
+
+  #shopify-section-{{ section.id }} .runway-nav-arrows {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  #shopify-section-{{ section.id }} .runway-arrow-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #ffffff;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+  }
+
+  #shopify-section-{{ section.id }} .runway-arrow-btn:hover {
+    border-color: #1a1a1a;
+    background: #1a1a1a;
+    color: #ffffff;
+  }
+
+  #shopify-section-{{ section.id }} .runway-arrow-btn svg {
+    width: 14px;
+    height: 14px;
+    stroke-width: 2;
+  }
+
+  /* Archetype Category Filter Tabs */
+  #shopify-section-{{ section.id }} .runway-tabs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 0.25rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  #shopify-section-{{ section.id }} .runway-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  #shopify-section-{{ section.id }} .runway-tab-btn {
+    border: none;
+    background: transparent;
+    color: #767676;
+    padding: 0.6rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+
+  #shopify-section-{{ section.id }} .runway-tab-btn:hover {
+    color: #1a1a1a;
+  }
+
+  #shopify-section-{{ section.id }} .runway-tab-btn.is-active {
+    color: #1a1a1a;
+    font-weight: 700;
+  }
+
+  #shopify-section-{{ section.id }} .runway-tab-btn.is-active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #1a1a1a;
+  }
+
+  /* --------------------------------------------------
+     3. HORIZONTAL RUNWAY TRACK (CAROUSEL BY DEFAULT)
+     -------------------------------------------------- */
+  #shopify-section-{{ section.id }} .runway-panel.is-hidden {
+    display: none !important;
+  }
+
+  #shopify-section-{{ section.id }} .runway-track {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-top: 0.25rem;
+    padding-bottom: 1.5rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #shopify-section-{{ section.id }} .runway-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card-wrapper {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+    width: 280px;
+  }
+
+  @media screen and (min-width: 640px) {
+    #shopify-section-{{ section.id }} .runway-card-wrapper {
+      flex: 0 0 320px;
+      width: 320px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    #shopify-section-{{ section.id }} .runway-card-wrapper {
+      flex: 0 0 340px;
+      width: 340px;
+    }
+  }
+
+  /* --------------------------------------------------
+     4. LUXURY RUNWAY CARD
+     -------------------------------------------------- */
+  #shopify-section-{{ section.id }} .runway-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    padding: 1.25rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201, 168, 118, 0.5);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Card Top Row */
+  #shopify-section-{{ section.id }} .runway-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__vendor {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #767676;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__tag {
+    font-size: 0.625rem;
+    font-weight: 700;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 0.15rem 0.45rem;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Neutral Studio Photography Stage */
+  #shopify-section-{{ section.id }} .runway-card__stage {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 2px;
+    margin: 0.25rem 0 0.85rem;
+    overflow: hidden;
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__media-link {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    text-decoration: none;
+    position: relative !important;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__image {
+    display: block !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    padding: 8px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px !important;
+    grid-area: auto !important;
+    transition: transform 0.4s ease;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card:hover .runway-card__image {
+    transform: scale(1.03);
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__placeholder {
+    height: 100%;
+    width: 100%;
+    opacity: 0.15;
+  }
+
+  /* Studio Stage Left/Right Chevron Navigation (Visible when > 1 image) */
+  #shopify-section-{{ section.id }} .runway-card__stage-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    z-index: 6;
+    opacity: 0;
+    transition: opacity 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__stage-nav svg {
+    width: 14px;
+    height: 14px;
+    pointer-events: none;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__stage-nav--prev {
+    left: 6px;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__stage-nav--next {
+    right: 6px;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__stage:hover .runway-card__stage-nav,
+  #shopify-section-{{ section.id }} .runway-card__stage:focus-within .runway-card__stage-nav {
+    opacity: 1;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__stage-nav:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+    border-color: #1a1a1a;
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    #shopify-section-{{ section.id }} .runway-card__stage-nav {
+      opacity: 0.85;
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  /* Micro Studio Orbit Dots */
+  #shopify-section-{{ section.id }} .runway-card__dots {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    z-index: 5;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background-color: #cbd5e1;
+    transition: all 0.2s ease;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__dot.is-active {
+    background-color: #1a1a1a;
+    transform: scale(1.2);
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__dot:hover:not(.is-active) {
+    background-color: #767676;
+  }
+
+  /* Info & Typography */
+  #shopify-section-{{ section.id }} .runway-card__info {
+    margin-bottom: 0.85rem;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 38px;
+    font-size: 0.8125rem;
+    line-height: 1.45;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    margin-bottom: 0.4rem;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__title:hover {
+    color: #c9a876;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__price {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #1a1a1a;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__compare-price {
+    font-size: 0.8125rem;
+    color: #8e8e8e;
+    text-decoration: line-through;
+    font-weight: 400;
+  }
+
+  /* --------------------------------------------------
+     5. SINGLE UK SIZING SELECTOR CHIPS
+     -------------------------------------------------- */
+  #shopify-section-{{ section.id }} .runway-card__sizing {
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    padding-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__size-label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.6875rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__size-title {
+    color: #767676;
+    font-weight: 600;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__size-active {
+    color: #1a1a1a;
+    font-weight: 700;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__size-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.3rem;
+    max-height: 80px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__size-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__size-pill {
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    border-radius: 2px;
+    padding: 0.35rem 0.15rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s ease;
+    width: 100%;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__size-pill:hover:not(:disabled):not(.is-active) {
+    border-color: #1a1a1a;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__size-pill.is-active {
+    border-color: #1a1a1a;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__size-pill:disabled,
+  #shopify-section-{{ section.id }} .runway-card__size-pill.is-sold-out {
+    border-color: #f2f2f2;
+    background-color: #fafafa;
+    color: #c4c4c4;
+    text-decoration: line-through;
+    cursor: not-allowed;
+  }
+
+  /* --------------------------------------------------
+     6. ADD TO BAG BUTTON
+     -------------------------------------------------- */
+  #shopify-section-{{ section.id }} .runway-card__form {
+    margin-top: auto;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__submit-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    border: 1px solid #1a1a1a;
+    padding: 0.75rem 1rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__submit-btn:hover:not(:disabled) {
+    background-color: #c9a876;
+    border-color: #c9a876;
+    color: #ffffff;
+  }
+
+  #shopify-section-{{ section.id }} .runway-card__submit-btn:disabled {
+    background-color: #e5e5e5;
+    border-color: #e5e5e5;
+    color: #999999;
+    cursor: not-allowed;
+  }
+
+  /* --------------------------------------------------
+     7. SECTION FOOTER
+     -------------------------------------------------- */
+  #shopify-section-{{ section.id }} .runway-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  #shopify-section-{{ section.id }} .runway-footer-link {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 0.25rem;
+    transition: all 0.2s ease;
+  }
+
+  #shopify-section-{{ section.id }} .runway-footer-link:hover {
+    color: #c9a876;
+    border-bottom-color: #c9a876;
+  }
+</style>
+
+<div class="sneaker-runway-section" data-section-id="{{ section.id }}">
+  <div class="runway-container">
+
+    <!-- Section Header -->
+    <div class="runway-header">
+      <div>
+        {%- if section.settings.subheading != blank -%}
+          <p class="runway-subheading">{{ section.settings.subheading | escape }}</p>
+        {%- endif -%}
+
+        <h2 class="runway-title">
+          {{ section.settings.title | default: 'The Footwear Runway' }}
+        </h2>
+      </div>
+
+      <!-- Controls: Navigation Arrows for the Runway Carousel -->
+      <div class="runway-controls">
+        <div class="runway-nav-arrows">
+          <button type="button" class="runway-arrow-btn" data-action="prev" aria-label="Previous drops">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button type="button" class="runway-arrow-btn" data-action="next" aria-label="Next drops">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Filter Tabs (Zero emojis, clean uppercase) -->
+    {%- if section.blocks.size > 1 -%}
+      <div class="runway-tabs">
+        {%- for block in section.blocks -%}
+          <button 
+            type="button"
+            class="runway-tab-btn {% if forloop.first %}is-active{% endif %}"
+            data-target-tab="runway-tab-{{ block.id }}"
+            {{ block.shopify_attributes }}
+          >
+            {{ block.settings.title | default: block.settings.collection.title }}
+          </button>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    <!-- Tab Panels (Each is a smooth Runway Track) -->
+    <div class="runway-content">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign target_collection = block.settings.collection
+          assign product_limit = block.settings.products_count | default: 8
+        -%}
+        <div 
+          id="runway-tab-{{ block.id }}" 
+          class="runway-panel {% unless forloop.first %}is-hidden{% endunless %}"
+          {{ block.shopify_attributes }}
+        >
+          <div class="runway-track">
+            {%- if target_collection != blank and target_collection.products_count > 0 -%}
+              {%- for product in target_collection.products limit: product_limit -%}
+                {%- render 'sneaker-vault-card', product: product, card_index: forloop.index -%}
+              {%- endfor -%}
+            {%- else -%}
+              <!-- Fallback to store collection or all shoes -->
+              {%- for product in collections['premium-footwear'].products limit: product_limit -%}
+                {%- render 'sneaker-vault-card', product: product, card_index: forloop.index -%}
+              {%- else -%}
+                {%- for product in collections['all'].products limit: 8 -%}
+                  {%- if product.type contains 'Shoe' or product.type contains 'Sneaker' or product.tags contains 'Footwear' -%}
+                    {%- render 'sneaker-vault-card', product: product, card_index: forloop.index -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- endfor -%}
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <!-- Section Footer Link -->
+    <div class="runway-footer">
+      <a href="/collections/premium-footwear" class="runway-footer-link">
+        View All Footwear
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  (function() {
+    function initSneakerRunway() {
+      const section = document.querySelector('[data-section-id="{{ section.id }}"]');
+      if (!section) return;
+
+      // 1. Runway Carousel Scroll Buttons
+      function getActiveTrack() {
+        const activePanel = section.querySelector('.runway-panel:not(.is-hidden)');
+        return activePanel ? activePanel.querySelector('.runway-track') : null;
+      }
+
+      section.querySelectorAll('.runway-arrow-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const track = getActiveTrack();
+          if (!track) return;
+
+          const scrollDistance = track.clientWidth * 0.75;
+          const direction = this.getAttribute('data-action') === 'next' ? 1 : -1;
+          track.scrollBy({ left: scrollDistance * direction, behavior: 'smooth' });
+        });
+      });
+
+      // 2. Multi-Image Stage Switcher (Touch Swipe, Mouse Drag, Prev/Next Arrows & Dots)
+      if (!window._rareAvenueStageSwipeInitialized) {
+        window._rareAvenueStageSwipeInitialized = true;
+        function preloadStageImages(stage) {
+          if (!stage || stage._imagesPreloaded) return;
+          stage._imagesPreloaded = true;
+          stage.querySelectorAll('.product-card__dot, .runway-card__dot').forEach(d => {
+            const s = d.getAttribute('data-img-src');
+            if (s) {
+              const preImg = new Image();
+              preImg.src = s;
+            }
+          });
+        }
+
+        function activateStageDot(stage, dot) {
+          if (!stage || !dot) return;
+          const newSrc = dot.getAttribute('data-img-src');
+          const targetId = dot.getAttribute('data-target');
+          const targetImg = stage.querySelector('.product-card__image, .runway-card__image') || (targetId && document.getElementById(targetId));
+          if (targetImg && newSrc) {
+            targetImg.src = newSrc;
+            if (targetImg.hasAttribute('srcset')) targetImg.removeAttribute('srcset');
+            const card = stage.closest('.product-card, .runway-card');
+            if (card) card._lockedStageImg = newSrc;
+          }
+          stage.querySelectorAll('.product-card__dot, .runway-card__dot').forEach(d => d.classList.remove('is-active'));
+          dot.classList.add('is-active');
+        }
+
+        function stepStageImage(stage, direction) {
+          if (!stage) return false;
+          const dots = Array.from(stage.querySelectorAll('.product-card__dot, .runway-card__dot'));
+          if (dots.length <= 1) return false;
+          preloadStageImages(stage);
+          let activeIdx = dots.findIndex(d => d.classList.contains('is-active'));
+          if (activeIdx < 0) activeIdx = 0;
+          const nextIdx = (activeIdx + direction + dots.length) % dots.length;
+          activateStageDot(stage, dots[nextIdx]);
+          return true;
+        }
+
+        document.addEventListener('mouseover', function(e) {
+          const stage = e.target.closest('.product-card__stage[data-swipeable-stage="true"], .runway-card__stage[data-swipeable-stage="true"]');
+          if (stage) preloadStageImages(stage);
+        }, { passive: true });
+
+        document.addEventListener('click', function(e) {
+          const dot = e.target.closest('.product-card__dot, .runway-card__dot');
+          if (!dot) return;
+          e.preventDefault();
+          e.stopPropagation();
+          const stage = dot.closest('.product-card__stage, .runway-card__stage');
+          if (stage) {
+            preloadStageImages(stage);
+            activateStageDot(stage, dot);
+          }
+        });
+
+        document.addEventListener('click', function(e) {
+          const navBtn = e.target.closest('.product-card__stage-nav, .runway-card__stage-nav');
+          if (!navBtn) return;
+          e.preventDefault();
+          e.stopPropagation();
+          const stage = navBtn.closest('.product-card__stage, .runway-card__stage');
+          const dir = parseInt(navBtn.getAttribute('data-stage-dir') || '1', 10);
+          if (stage) stepStageImage(stage, dir);
+        });
+
+        document.addEventListener('click', function(e) {
+          const stage = e.target.closest('.product-card__stage, .runway-card__stage');
+          if (stage && stage._justSwipedAt && (Date.now() - stage._justSwipedAt < 400)) {
+            e.preventDefault();
+            e.stopPropagation();
+            stage._justSwipedAt = 0;
+          }
+        }, true);
+
+        let activeTouch = null;
+        document.addEventListener('touchstart', function(e) {
+          if (e.touches.length !== 1) return;
+          if (e.target.closest('.product-card__stage-nav, .runway-card__stage-nav, .product-card__dot, .runway-card__dot')) return;
+          const stage = e.target.closest('.product-card__stage, .runway-card__stage');
+          if (!stage) return;
+          const dots = stage.querySelectorAll('.product-card__dot, .runway-card__dot');
+          if (dots.length <= 1) return;
+          preloadStageImages(stage);
+          activeTouch = {
+            stage: stage,
+            startX: e.touches[0].clientX,
+            startY: e.touches[0].clientY,
+            lastX: e.touches[0].clientX,
+            isHorizontal: null
+          };
+        }, { passive: true });
+
+        document.addEventListener('touchmove', function(e) {
+          if (!activeTouch || e.touches.length !== 1) return;
+          const dx = e.touches[0].clientX - activeTouch.startX;
+          const dy = e.touches[0].clientY - activeTouch.startY;
+          activeTouch.lastX = e.touches[0].clientX;
+          if (activeTouch.isHorizontal === null && (Math.abs(dx) > 8 || Math.abs(dy) > 8)) {
+            activeTouch.isHorizontal = Math.abs(dx) > Math.abs(dy) * 1.15;
+          }
+          if (activeTouch.isHorizontal) {
+            if (e.cancelable) e.preventDefault();
+            e.stopPropagation();
+          }
+        }, { passive: false });
+
+        document.addEventListener('touchend', function() {
+          if (!activeTouch) return;
+          const dx = activeTouch.lastX - activeTouch.startX;
+          if (activeTouch.isHorizontal && Math.abs(dx) >= 25) {
+            stepStageImage(activeTouch.stage, dx < 0 ? 1 : -1);
+            activeTouch.stage._justSwipedAt = Date.now();
+          }
+          activeTouch = null;
+        }, { passive: true });
+
+        let activeDrag = null;
+        document.addEventListener('mousedown', function(e) {
+          if (e.button !== 0) return;
+          if (e.target.closest('.product-card__stage-nav, .runway-card__stage-nav, .product-card__dot, .runway-card__dot')) return;
+          const stage = e.target.closest('.product-card__stage, .runway-card__stage');
+          if (!stage) return;
+          const dots = stage.querySelectorAll('.product-card__dot, .runway-card__dot');
+          if (dots.length <= 1) return;
+          preloadStageImages(stage);
+          activeDrag = {
+            stage: stage,
+            startX: e.clientX,
+            startY: e.clientY,
+            lastX: e.clientX,
+            moved: false
+          };
+        });
+
+        document.addEventListener('mousemove', function(e) {
+          if (!activeDrag) return;
+          const dx = e.clientX - activeDrag.startX;
+          const dy = e.clientY - activeDrag.startY;
+          activeDrag.lastX = e.clientX;
+          if (Math.abs(dx) > 10 && Math.abs(dx) > Math.abs(dy)) {
+            activeDrag.moved = true;
+          }
+        });
+
+        document.addEventListener('mouseup', function() {
+          if (!activeDrag) return;
+          const dx = activeDrag.lastX - activeDrag.startX;
+          if (activeDrag.moved && Math.abs(dx) >= 25) {
+            stepStageImage(activeDrag.stage, dx < 0 ? 1 : -1);
+            activeDrag.stage._justSwipedAt = Date.now();
+          }
+          activeDrag = null;
+        });
+      }
+
+      // 3. Single UK Size Pill Selection
+      section.querySelectorAll('.runway-card__size-pill').forEach(pill => {
+        pill.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          if (this.disabled) return;
+
+          const variantId = this.getAttribute('data-variant-id');
+          const sizeName = this.getAttribute('data-size-name');
+          const card = this.closest('.runway-card');
+          if (!card) return;
+
+          card.querySelectorAll('.runway-card__size-pill').forEach(p => p.classList.remove('is-active'));
+          this.classList.add('is-active');
+
+          const sizeLabel = card.querySelector('.runway-card__size-active');
+          if (sizeLabel) sizeLabel.textContent = sizeName;
+
+          const input = card.querySelector('.runway-variant-id-input');
+          if (input) input.value = variantId;
+
+          const submitBtn = card.querySelector('.runway-card__submit-btn');
+          if (submitBtn) submitBtn.disabled = false;
+        });
+      });
+
+      // 4. AJAX Cart Form Add to Native Prestige Drawer
+      section.querySelectorAll('.runway-card__form').forEach(form => {
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const btn = this.querySelector('.runway-card__submit-btn');
+          const originalText = btn.innerHTML;
+          btn.disabled = true;
+          btn.innerHTML = '<span class="runway-btn-text">Adding...</span>';
+
+          try {
+            const formData = new FormData(this);
+            const res = await fetch('/cart/add.js', {
+              method: 'POST',
+              body: formData,
+              headers: { 'X-Requested-With': 'XMLHttpRequest' }
+            });
+
+            if (res.ok) {
+              btn.innerHTML = '<span class="runway-btn-text">Added</span>';
+              document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', { bubbles: true }));
+              document.documentElement.dispatchEvent(new CustomEvent('cart:change', { bubbles: true }));
+
+              const cartDrawer = document.querySelector('cart-drawer') || document.querySelector('#cart-drawer');
+              if (cartDrawer && typeof cartDrawer.open === 'function') {
+                cartDrawer.open();
+              } else if (cartDrawer && typeof cartDrawer.show === 'function') {
+                cartDrawer.show();
+              } else {
+                const drawerToggle = document.querySelector('[data-action="open-drawer"][data-drawer-id="sidebar-cart"]') || document.querySelector('a[href="/cart"]');
+                if (drawerToggle) drawerToggle.click();
+              }
+
+              setTimeout(() => {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+              }, 2000);
+            } else {
+              btn.innerHTML = '<span class="runway-btn-text">Sold Out</span>';
+              setTimeout(() => {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+              }, 2000);
+            }
+          } catch (err) {
+            console.error('Cart add error:', err);
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+          }
+        });
+      });
+
+      // 5. Archetype Tabs Switcher
+      section.querySelectorAll('.runway-tab-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target-tab');
+
+          section.querySelectorAll('.runway-tab-btn').forEach(b => b.classList.remove('is-active'));
+          this.classList.add('is-active');
+
+          section.querySelectorAll('.runway-panel').forEach(panel => {
+            panel.classList.toggle('is-hidden', panel.id !== targetId);
+          });
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initSneakerRunway);
+    } else {
+      initSneakerRunway();
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "The Footwear Runway",
+  "class": "shopify-section--sneaker-runway",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Curated Footwear"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "The Footwear Runway"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "archetype_tab",
+      "name": "Archetype Collection",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Tab Label",
+          "default": "Terrace & Retro"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Target Collection"
+        },
+        {
+          "type": "range",
+          "id": "products_count",
+          "label": "Products to Show",
+          "min": 4,
+          "max": 16,
+          "step": 2,
+          "default": 8
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "The Footwear Runway",
+      "blocks": [
+        {
+          "type": "archetype_tab",
+          "settings": {
+            "title": "Terrace & Retro",
+            "collection": "premium-footwear",
+            "products_count": 8
+          }
+        },
+        {
+          "type": "archetype_tab",
+          "settings": {
+            "title": "Men's Footwear",
+            "collection": "mens-shoes",
+            "products_count": 8
+          }
+        },
+        {
+          "type": "archetype_tab",
+          "settings": {
+            "title": "Women's Footwear",
+            "collection": "womens-shoes",
+            "products_count": 8
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

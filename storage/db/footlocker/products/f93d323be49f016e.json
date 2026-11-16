@@ -10,12 +10,12 @@
   "source_price": 109.99,
   "source_compare_at_price": 155.0,
   "current_price": 10563.0,
-  "compare_at_price": 14756.0,
+  "compare_at_price": 14632.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.957344,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "color": "White/Hot Lava/Violet Mist",
   "width": "Width - B - Medium",
   "material": "Breathable mesh upper with durable synthetic overlays and rubber traction outsole",
@@ -250,7 +250,7 @@
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/M6804112_01",
       "option_values": [
         {
@@ -263,7 +263,7 @@
         }
       ],
       "price_current": 10563.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -300,7 +300,7 @@
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/M6804112_01",
       "option_values": [
         {
@@ -313,7 +313,7 @@
         }
       ],
       "price_current": 10563.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -481,21 +481,20 @@
     "nike",
     "running-shoes",
     "sizes-15",
-    "supplier-delisted",
     "vomero",
     "women's"
   ],
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-10-29T05:58:25Z",
+  "last_verified_at": "2026-11-16T15:43:47Z",
   "created_at": "2026-09-18T20:48:15Z",
-  "updated_at": "2026-10-29T05:58:26Z",
+  "updated_at": "2026-11-16T15:43:50Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851016487078",
   "shopify_handle": "nike-vomero-18-women-s-m6804112",
-  "shopify_synced_at": "2026-10-29T05:58:25Z",
-  "delist_strikes": 4,
-  "supplier_delisted": true,
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-16T15:43:47Z",
+  "delist_strikes": 0,
+  "supplier_delisted": false,
+  "last_synced_fx_rate": 94.399626
 }

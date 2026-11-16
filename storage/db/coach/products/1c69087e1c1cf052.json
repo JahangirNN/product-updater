@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Signature jacquard, leather and man-made leather upper",
   "specifications": {
     "Heel Height": "Heel Height: 2.0\"",
@@ -50,7 +50,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cch97_s8w_a0",
       "option_values": [
         {
@@ -58,7 +58,8 @@
           "name": "US 5 / UK 3"
         }
       ],
-      "price_current": 5655.0
+      "price_current": 5655.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -78,7 +79,8 @@
           "name": "US 5.5 / UK 3.5"
         }
       ],
-      "price_current": 5655.0
+      "price_current": 5655.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -98,7 +100,8 @@
           "name": "US 6 / UK 4"
         }
       ],
-      "price_current": 5655.0
+      "price_current": 5655.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -118,7 +121,8 @@
           "name": "US 6.5 / UK 4.5"
         }
       ],
-      "price_current": 5655.0
+      "price_current": 5655.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -130,7 +134,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cch97_s8w_a0",
       "option_values": [
         {
@@ -138,7 +142,8 @@
           "name": "US 7 / UK 5"
         }
       ],
-      "price_current": 5655.0
+      "price_current": 5655.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -158,7 +163,8 @@
           "name": "US 7.5 / UK 5.5"
         }
       ],
-      "price_current": 5655.0
+      "price_current": 5655.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -178,7 +184,8 @@
           "name": "US 8 / UK 6"
         }
       ],
-      "price_current": 5655.0
+      "price_current": 5655.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -198,7 +205,8 @@
           "name": "US 8.5 / UK 6.5"
         }
       ],
-      "price_current": 5655.0
+      "price_current": 5655.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -218,7 +226,8 @@
           "name": "US 9 / UK 7"
         }
       ],
-      "price_current": 5655.0
+      "price_current": 5655.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -238,7 +247,8 @@
           "name": "US 9.5 / UK 7.5"
         }
       ],
-      "price_current": 5655.0
+      "price_current": 5655.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -258,7 +268,8 @@
           "name": "US 10 / UK 8"
         }
       ],
-      "price_current": 5655.0
+      "price_current": 5655.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -278,7 +289,8 @@
           "name": "US 11 / UK 9"
         }
       ],
-      "price_current": 5655.0
+      "price_current": 5655.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -326,23 +338,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Shoes & Footwear"
+    "Shoes & Footwear",
+    "Women"
   ],
   "groups": [
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:39:12Z",
-  "last_verified_at": "2026-10-29T03:37:29Z",
+  "last_verified_at": "2026-11-16T15:44:09Z",
   "id": "1c69087e1c1cf052",
   "product_id": "1c69087e1c1cf052",
   "store": "coach",
-  "updated_at": "2026-10-29T03:37:29Z",
+  "updated_at": "2026-11-16T15:44:12Z",
   "shopify_sync_pending": false,
-  "is_active": true,
+  "is_active": false,
   "shopify_product_id": "gid://shopify/Product/15848584642726",
   "shopify_handle": "lucy-loafer-in-signature-jacquard",
-  "shopify_synced_at": "2026-10-28T11:40:49Z",
+  "shopify_synced_at": "2026-11-16T15:44:09Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.399626,
+  "supplier_delisted": false
 }

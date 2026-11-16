@@ -10,12 +10,12 @@
   "source_price": 110.0,
   "source_compare_at_price": null,
   "current_price": 10559.0,
-  "compare_at_price": 10472.0,
+  "compare_at_price": 10384.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "color": "White/Wonder White",
   "width": "Width - D - Medium",
   "material": "Premium upper with durable overlays and responsive traction outsole",
@@ -51,7 +51,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/JS3867_01",
       "option_values": [
         {
@@ -64,7 +64,7 @@
         }
       ],
       "price_current": 10559.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -370,20 +370,19 @@
     "footwear",
     "men's",
     "shoes",
-    "sizes-11",
-    "supplier-delisted"
+    "sizes-11"
   ],
   "groups": [
     "adidas Handball Spezial"
   ],
-  "last_verified_at": "2026-10-29T03:37:06Z",
+  "last_verified_at": "2026-11-16T15:45:02Z",
   "created_at": "2026-09-20T10:34:57Z",
-  "updated_at": "2026-10-29T03:37:08Z",
+  "updated_at": "2026-11-16T15:45:05Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851006099622",
   "shopify_handle": "adidas-originals-handball-spezial-men-s-white-wonder-white-js3867",
-  "shopify_synced_at": "2026-10-29T03:37:06Z",
-  "delist_strikes": 2,
-  "supplier_delisted": true,
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-16T15:45:02Z",
+  "delist_strikes": 0,
+  "supplier_delisted": false,
+  "last_synced_fx_rate": 94.399626
 }

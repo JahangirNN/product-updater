@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "High Line Sneaker In Signature Canvas",
   "specifications": {
     "Material": "High Line Sneaker In Signature Canvas",
@@ -52,7 +52,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdf79_eew_a0",
       "option_values": [
         {
@@ -60,7 +60,8 @@
           "name": "US 9 / UK 7"
         }
       ],
-      "price_current": 5187.0
+      "price_current": 5187.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -80,7 +81,8 @@
           "name": "US 9.5 / UK 7.5"
         }
       ],
-      "price_current": 5187.0
+      "price_current": 5187.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -98,23 +100,25 @@
   ],
   "tags": [
     "COACH",
+    "Shoes & Footwear",
     "Women",
-    "Shoes & Footwear"
+    "supplier-delisted"
   ],
   "groups": [
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:44:04Z",
-  "last_verified_at": "2026-10-29T03:39:12Z",
+  "last_verified_at": "2026-11-16T15:43:35Z",
   "id": "8f7deaff24bdc010",
   "product_id": "8f7deaff24bdc010",
   "store": "coach",
-  "updated_at": "2026-10-29T03:39:12Z",
+  "updated_at": "2026-11-16T15:43:37Z",
   "shopify_sync_pending": false,
-  "is_active": true,
+  "is_active": false,
   "shopify_product_id": "gid://shopify/Product/15848583659686",
   "shopify_handle": "high-line-sneaker-in-signature-canvas-cdf79-eew-9-b",
-  "shopify_synced_at": "2026-10-28T15:43:30Z",
-  "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-16T15:43:35Z",
+  "delist_strikes": 22,
+  "last_synced_fx_rate": 93.851604,
+  "supplier_delisted": true
 }

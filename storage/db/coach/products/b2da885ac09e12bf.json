@@ -60,7 +60,8 @@
           "name": "US 5 / UK 3"
         }
       ],
-      "price_current": 5702.0
+      "price_current": 5702.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -80,7 +81,8 @@
           "name": "US 5.5 / UK 3.5"
         }
       ],
-      "price_current": 5702.0
+      "price_current": 5702.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -100,7 +102,8 @@
           "name": "US 6 / UK 4"
         }
       ],
-      "price_current": 5702.0
+      "price_current": 5702.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -120,7 +123,8 @@
           "name": "US 6.5 / UK 4.5"
         }
       ],
-      "price_current": 5702.0
+      "price_current": 5702.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -140,7 +144,8 @@
           "name": "US 7 / UK 5"
         }
       ],
-      "price_current": 5702.0
+      "price_current": 5702.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -160,7 +165,8 @@
           "name": "US 7.5 / UK 5.5"
         }
       ],
-      "price_current": 5702.0
+      "price_current": 5702.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -180,7 +186,8 @@
           "name": "US 8 / UK 6"
         }
       ],
-      "price_current": 5702.0
+      "price_current": 5702.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -200,7 +207,8 @@
           "name": "US 8.5 / UK 6.5"
         }
       ],
-      "price_current": 5702.0
+      "price_current": 5702.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -220,7 +228,8 @@
           "name": "US 9 / UK 7"
         }
       ],
-      "price_current": 5702.0
+      "price_current": 5702.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -240,7 +249,8 @@
           "name": "US 9.5 / UK 7.5"
         }
       ],
-      "price_current": 5702.0
+      "price_current": 5702.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -260,7 +270,8 @@
           "name": "US 10 / UK 8"
         }
       ],
-      "price_current": 5702.0
+      "price_current": 5702.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -280,7 +291,8 @@
           "name": "US 11 / UK 9"
         }
       ],
-      "price_current": 5702.0
+      "price_current": 5702.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -328,23 +340,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Shoes & Footwear"
+    "Shoes & Footwear",
+    "Women"
   ],
   "groups": [
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:45:46Z",
-  "last_verified_at": "2026-10-29T03:37:08Z",
+  "last_verified_at": "2026-11-16T15:42:08Z",
   "id": "b2da885ac09e12bf",
   "product_id": "b2da885ac09e12bf",
   "store": "coach",
   "is_active": false,
   "shopify_sync_pending": false,
-  "updated_at": "2026-10-29T03:37:08Z",
+  "updated_at": "2026-11-16T15:42:08Z",
   "shopify_product_id": "gid://shopify/Product/15848584020134",
   "shopify_handle": "block-heel-sandal",
-  "shopify_synced_at": "2026-10-28T03:35:37Z",
+  "shopify_synced_at": "2026-11-13T23:05:36Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.269051
+  "last_synced_fx_rate": 94.834253,
+  "supplier_delisted": false
 }

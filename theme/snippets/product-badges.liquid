@@ -30,7 +30,10 @@ Supported variables
         {%- assign custom_badges = product.metafields.custom.badges.value -%}
 
         {%- for custom_badge in custom_badges -%}
-          <span class="badge badge--custom badge--{{ custom_badge | handle }}">{{ custom_badge }}</span>
+          {%- assign cb_lower = custom_badge | downcase -%}
+          {%- unless cb_lower contains 'ready to ship' or cb_lower contains 'instant ship' -%}
+            <span class="badge badge--custom badge--{{ custom_badge | handle }}">{{ custom_badge }}</span>
+          {%- endunless -%}
         {%- endfor -%}
 
         {%- assign has_ready_to_ship_badge = false -%}
@@ -44,7 +47,7 @@ Supported variables
         {%- if has_ready_to_ship_badge == false -%}
           {%- for tag in product.tags -%}
             {%- assign tag_lower = tag | downcase -%}
-            {%- if tag_lower == 'ready to ship' or tag_lower == 'instant-ship' or tag_lower == 'ready-to-ship' -%}
+            {%- if tag_lower == 'ready to ship' or tag_lower == 'instant-ship' or tag_lower == 'ready-to-ship' or tag_lower == 'manual-instant-ship-active' -%}
               <span class="badge badge--custom badge--ready-to-ship">Ready to Ship</span>
               {%- break -%}
             {%- endif -%}

@@ -9,7 +9,7 @@
   "source_sku": "HOKA-8735079-5",
   "source_price": 170.0,
   "source_compare_at_price": null,
-  "current_price": 16196.0,
+  "current_price": 16025.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -103,7 +103,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/007b0146-ca45-46e1-947b-d92b69bb683e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -149,7 +149,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/007b0146-ca45-46e1-947b-d92b69bb683e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -195,7 +195,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/007b0146-ca45-46e1-947b-d92b69bb683e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -218,7 +218,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/007b0146-ca45-46e1-947b-d92b69bb683e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -287,7 +287,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/007b0146-ca45-46e1-947b-d92b69bb683e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -333,7 +333,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/007b0146-ca45-46e1-947b-d92b69bb683e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -356,7 +356,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/007b0146-ca45-46e1-947b-d92b69bb683e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -379,7 +379,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f97ed98d-7fbb-4400-800e-d2441ef47452.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -678,7 +678,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/f97ed98d-7fbb-4400-800e-d2441ef47452.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -765,25 +765,25 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T05:38:54Z",
+  "last_verified_at": "2026-11-16T16:11:47Z",
   "created_at": "2026-09-17T15:01:36Z",
-  "updated_at": "2026-10-29T05:38:54Z",
+  "updated_at": "2026-11-16T16:11:47Z",
   "price_range_usd": {
     "min": 170.0,
     "max": 175.0
   },
   "price_range_inr": {
-    "min": 16196.0,
-    "max": 16672.0
+    "min": 16025.0,
+    "max": 16496.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "16196.00",
+  "price": "16025.00",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15848580677798",
   "shopify_handle": "w-clifton-11-gtx-glm",
-  "shopify_synced_at": "2026-10-28T21:40:29Z",
-  "last_synced_fx_rate": 95.269051,
+  "shopify_synced_at": "2026-11-15T21:16:40Z",
+  "last_synced_fx_rate": 94.262076,
   "delist_strikes": 0,
   "supplier_delisted": false
 }

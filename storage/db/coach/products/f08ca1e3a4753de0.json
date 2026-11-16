@@ -66,7 +66,8 @@
           "name": "Brass/Black"
         }
       ],
-      "price_current": 18718.0
+      "price_current": 18718.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -86,7 +87,8 @@
           "name": "Brass/Maple"
         }
       ],
-      "price_current": 18718.0
+      "price_current": 18718.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -106,7 +108,8 @@
           "name": "Brass/Dark Chocolate"
         }
       ],
-      "price_current": 18718.0
+      "price_current": 18718.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -127,23 +130,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Shoulder Bags"
+    "Shoulder Bags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:48:20Z",
-  "last_verified_at": "2026-10-29T03:36:35Z",
+  "last_verified_at": "2026-11-16T15:46:39Z",
   "id": "f08ca1e3a4753de0",
   "product_id": "f08ca1e3a4753de0",
   "store": "coach",
-  "updated_at": "2026-10-29T03:36:35Z",
+  "updated_at": "2026-11-16T15:46:39Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841798357158",
   "shopify_handle": "brooklyn-shoulder-bag-26-cft42-b4z5d",
-  "shopify_synced_at": "2026-09-29T05:57:03Z",
+  "shopify_synced_at": "2026-11-14T01:15:52Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

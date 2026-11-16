@@ -9,7 +9,7 @@
   "source_sku": "ON-7672890-7",
   "source_price": 170.0,
   "source_compare_at_price": null,
-  "current_price": 16184.0,
+  "current_price": 16048.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -847,7 +847,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/febead3e-22b5-4cbc-96e8-4d43b4f43f74.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1008,7 +1008,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/febead3e-22b5-4cbc-96e8-4d43b4f43f74.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1077,7 +1077,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/b77df1f0-e310-47c6-91a2-506d2a3e0fd0.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1100,7 +1100,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/b77df1f0-e310-47c6-91a2-506d2a3e0fd0.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -3037,23 +3037,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T05:39:15Z",
+  "last_verified_at": "2026-11-16T15:51:33Z",
   "created_at": "2026-09-17T14:19:11Z",
-  "updated_at": "2026-10-29T05:39:22Z",
+  "updated_at": "2026-11-16T15:51:40Z",
   "price_range_usd": {
     "min": 170.0,
     "max": 170.0
   },
   "price_range_inr": {
-    "min": 16184.0,
-    "max": 16184.0
+    "min": 16048.0,
+    "max": 16048.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "16184.00",
+  "price": "16048.00",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15850878107814",
   "shopify_handle": "cloudnova-2-training-sneaker-men",
-  "shopify_synced_at": "2026-10-29T05:39:15Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-16T15:51:33Z",
+  "last_synced_fx_rate": 94.399626
 }

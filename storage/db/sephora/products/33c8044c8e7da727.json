@@ -62,7 +62,8 @@
       "variation_value": "3028453",
       "variation_type": "None",
       "price": 29873,
-      "source_price": 315.0
+      "source_price": 315.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -74,20 +75,29 @@
     }
   ],
   "tags": [
+    "Beauty",
+    "Cosmetics",
+    "Sephora",
+    "Skincare",
     "Summer Fridays",
     "Value & Gift Sets",
-    "Beauty",
-    "Sephora",
-    "Cosmetics",
-    "Skincare"
+    "supplier-delisted"
   ],
   "groups": [
     "beauty",
     "summer-fridays"
   ],
   "created_at": "2026-11-04T18:36:34Z",
-  "last_verified_at": "2026-11-05T04:38:34Z",
+  "last_verified_at": "2026-11-16T15:41:34Z",
   "id": "33c8044c8e7da727",
-  "updated_at": "2026-11-05T04:38:34Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:41:36Z",
+  "last_synced_fx_rate": 94.834253,
+  "delist_strikes": 29,
+  "shopify_product_id": "gid://shopify/Product/15993719062694",
+  "shopify_handle": "summer-fridays-the-lip-butter-balm-vault-gift-set-with-18-hydrating-flavors-p526211",
+  "shopify_synced_at": "2026-11-16T15:41:34Z",
+  "shopify_image_synced": true,
+  "supplier_delisted": true,
+  "shopify_sync_pending": false,
+  "primary_image": "https://www.sephora.com/productimages/sku/s3028453-main-zoom.jpg"
 }

@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Mini Rowan Crossbody Bag In Signature Canvas",
   "specifications": {
     "Material": "Mini Rowan Crossbody Bag In Signature Canvas",
@@ -75,14 +75,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw328_imblk_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -94,14 +95,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw328_imchk_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Gold/Chalk"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -120,7 +122,8 @@
           "option_name": "Color",
           "name": "Im/Emerald"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -140,7 +143,8 @@
           "name": "Gold/Walnut/Black"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 17182.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -160,7 +164,8 @@
           "name": "Gold/Navy"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 17182.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -180,7 +185,8 @@
           "name": "Gold/Sand/Chalk"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 17182.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -192,14 +198,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cen22_svpmz_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Silver/Black Brown"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -211,14 +218,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceq65_imwbr_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Gold/Warm Brown"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -237,7 +245,8 @@
           "option_name": "Color",
           "name": "Gold/Light Blue"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -256,7 +265,8 @@
           "option_name": "Color",
           "name": "Gold/Crimson"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -275,7 +285,8 @@
           "option_name": "Color",
           "name": "Gold/Pink"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -294,7 +305,8 @@
           "option_name": "Color",
           "name": "Gold/Pistachio"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -313,7 +325,8 @@
           "option_name": "Color",
           "name": "Gold/Indigo"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -332,7 +345,8 @@
           "option_name": "Color",
           "name": "Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -351,7 +365,8 @@
           "option_name": "Color",
           "name": "Gold/Peony"
         }
-      ]
+      ],
+      "is_available": false
     }
   ],
   "product_options": [
@@ -405,23 +420,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Crossbody Bags"
+    "Crossbody Bags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:38:40Z",
-  "last_verified_at": "2026-10-29T05:36:25Z",
+  "last_verified_at": "2026-11-16T15:47:03Z",
   "id": "0e5de08eeaef824f",
   "product_id": "0e5de08eeaef824f",
   "store": "coach",
-  "updated_at": "2026-10-29T05:36:29Z",
-  "is_active": true,
+  "updated_at": "2026-11-16T15:47:03Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841761329318",
   "shopify_handle": "mini-rowan-crossbody-bag-in-signature-canvas",
-  "shopify_synced_at": "2026-10-29T05:36:25Z",
+  "shopify_synced_at": "2026-11-14T01:17:15Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.834253,
+  "supplier_delisted": false
 }

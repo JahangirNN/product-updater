@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.199335,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Smooth Leather",
   "specifications": {
     "Material": "Smooth Leather",
@@ -54,15 +54,16 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KK171_650",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KK171_650",
         "https://katespade.scene7.com/is/image/KateSpade/KK171_650_1",
         "https://katespade.scene7.com/is/image/KateSpade/KK171_650_3"
       ],
-      "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KK171_650"
+      "inventory_quantity": 0,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KK171_650",
+      "is_available": false
     }
   ],
   "product_options": [
@@ -76,18 +77,26 @@
     }
   ],
   "tags": [
-    "Kate Spade",
-    "Women",
     "Handbags",
-    "Totes & Carryalls"
+    "Kate Spade",
+    "Totes & Carryalls",
+    "Women",
+    "supplier-delisted"
   ],
   "groups": [
     "handbags"
   ],
   "created_at": "2026-10-29T05:25:30Z",
-  "last_verified_at": "2026-10-29T07:37:34Z",
+  "last_verified_at": "2026-11-16T15:50:55Z",
   "_elapsed_ms": 3169.447499909438,
   "id": "ba116c13040fb8da",
-  "updated_at": "2026-10-29T07:37:34Z",
-  "last_synced_fx_rate": 95.29615
+  "updated_at": "2026-11-16T15:50:57Z",
+  "last_synced_fx_rate": 94.834253,
+  "shopify_product_id": "gid://shopify/Product/15915096473766",
+  "shopify_handle": "bubble-gum-mini-tote",
+  "shopify_synced_at": "2026-11-16T15:50:55Z",
+  "shopify_sync_pending": false,
+  "delist_strikes": 28,
+  "supplier_delisted": true,
+  "is_active": false
 }

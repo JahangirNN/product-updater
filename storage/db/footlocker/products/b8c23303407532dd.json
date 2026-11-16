@@ -10,7 +10,7 @@
   "source_price": 89.99,
   "source_compare_at_price": 110.0,
   "current_price": 8642.0,
-  "compare_at_price": 10472.0,
+  "compare_at_price": 10384.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -76,7 +76,7 @@
       "source_compare_at_price": 110.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/2A164110_a1",
       "option_values": [
         {
@@ -89,7 +89,7 @@
         }
       ],
       "price_current": 8642.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -126,7 +126,7 @@
       "source_compare_at_price": 110.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/2A164110_a1",
       "option_values": [
         {
@@ -139,7 +139,7 @@
         }
       ],
       "price_current": 8633.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -226,7 +226,7 @@
       "source_compare_at_price": 110.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/2A164110_a1",
       "option_values": [
         {
@@ -239,7 +239,7 @@
         }
       ],
       "price_current": 8638.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -403,14 +403,14 @@
   "groups": [
     "ASICS Shoes"
   ],
-  "last_verified_at": "2026-10-29T03:36:35Z",
+  "last_verified_at": "2026-11-16T15:44:52Z",
   "created_at": "2026-09-20T10:38:24Z",
-  "updated_at": "2026-10-29T03:36:37Z",
+  "updated_at": "2026-11-16T15:44:52Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851013210278",
   "shopify_handle": "asics-gel-1130-women-s-white-navy-2a164110",
-  "shopify_synced_at": "2026-10-29T03:36:35Z",
+  "shopify_synced_at": "2026-11-05T08:52:09Z",
   "delist_strikes": 0,
   "supplier_delisted": false,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.834253
 }

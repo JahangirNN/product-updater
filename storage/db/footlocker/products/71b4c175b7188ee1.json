@@ -10,7 +10,7 @@
   "source_price": 170.0,
   "source_compare_at_price": null,
   "current_price": 16318.0,
-  "compare_at_price": 16184.0,
+  "compare_at_price": 16048.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -123,7 +123,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/B8929002_01",
       "option_values": [
         {
@@ -147,7 +147,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/B8929002_01",
       "option_values": [
         {
@@ -472,12 +472,12 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-10-29T05:41:44Z",
+  "last_verified_at": "2026-11-16T15:43:03Z",
   "created_at": "2026-09-18T20:48:20Z",
-  "updated_at": "2026-10-29T05:41:44Z",
+  "updated_at": "2026-11-16T15:43:03Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851009507494",
   "shopify_handle": "nike-zoom-vomero-5-women-s-dark-team-red-black-burgundy-crush-b8929002",
-  "shopify_synced_at": "2026-10-28T05:35:27Z",
-  "last_synced_fx_rate": 95.269051
+  "shopify_synced_at": "2026-11-06T08:58:52Z",
+  "last_synced_fx_rate": 94.620171
 }

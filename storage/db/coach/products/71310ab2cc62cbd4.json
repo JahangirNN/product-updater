@@ -91,7 +91,8 @@
           "name": "Brass/Maple"
         }
       ],
-      "price_current": 28317.0
+      "price_current": 28317.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -111,7 +112,8 @@
           "name": "Brass/Black"
         }
       ],
-      "price_current": 28317.0
+      "price_current": 28317.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -131,7 +133,8 @@
           "name": "Brass/Merlot"
         }
       ],
-      "price_current": 28317.0
+      "price_current": 28317.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -151,7 +154,8 @@
           "name": "Brass/Scarlet"
         }
       ],
-      "price_current": 28317.0
+      "price_current": 28317.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -171,7 +175,8 @@
           "name": "Brass/Warm Brown"
         }
       ],
-      "price_current": 28317.0
+      "price_current": 28317.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -191,7 +196,8 @@
           "name": "Brass/Dark Chocolate"
         }
       ],
-      "price_current": 28317.0
+      "price_current": 28317.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -211,7 +217,8 @@
           "name": "Tan Sig Multi"
         }
       ],
-      "price_current": 26417.0
+      "price_current": 26417.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -231,7 +238,8 @@
           "name": "Maple/Stone Multi"
         }
       ],
-      "price_current": 26397.0
+      "price_current": 26397.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -251,7 +259,8 @@
           "name": "Olive/Clay Multi"
         }
       ],
-      "price_current": 26397.0
+      "price_current": 26397.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -271,7 +280,8 @@
           "name": "Black/Clay Multi"
         }
       ],
-      "price_current": 26397.0
+      "price_current": 26397.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -291,7 +301,8 @@
           "name": "Brass/Maple"
         }
       ],
-      "price_current": 9599.0
+      "price_current": 9599.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -303,7 +314,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdu75_b4na_a0",
       "option_values": [
         {
@@ -311,7 +322,8 @@
           "name": "Brass/Natural"
         }
       ],
-      "price_current": 23997.0
+      "price_current": 23997.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -331,7 +343,8 @@
           "name": "Brass/Muted Olive"
         }
       ],
-      "price_current": 11999.0
+      "price_current": 11999.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -351,7 +364,8 @@
           "name": "Brass/Dark Fuchsia"
         }
       ],
-      "price_current": 23997.0
+      "price_current": 23997.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -371,7 +385,8 @@
           "name": "Brass/Maple Multi"
         }
       ],
-      "price_current": 47515.0
+      "price_current": 47515.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -391,7 +406,8 @@
           "name": "Brass/Amber Brown"
         }
       ],
-      "price_current": 66713.0
+      "price_current": 66713.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -411,7 +427,8 @@
           "name": "Brass/Black Natural"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -431,7 +448,8 @@
           "name": "Brass/Black"
         }
       ],
-      "price_current": 13439.0
+      "price_current": 13439.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -491,23 +509,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Shoulder Bags"
+    "Shoulder Bags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:42:47Z",
-  "last_verified_at": "2026-10-29T03:38:37Z",
+  "last_verified_at": "2026-11-16T15:45:12Z",
   "id": "71310ab2cc62cbd4",
   "product_id": "71310ab2cc62cbd4",
   "store": "coach",
-  "updated_at": "2026-10-29T03:38:37Z",
+  "updated_at": "2026-11-16T15:45:12Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15841765785766",
   "shopify_handle": "brooklyn-shoulder-bag-28",
-  "shopify_synced_at": "2026-10-27T04:51:29Z",
+  "shopify_synced_at": "2026-11-15T23:47:47Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.160836
+  "last_synced_fx_rate": 94.262076,
+  "supplier_delisted": false
 }

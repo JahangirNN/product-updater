@@ -9,7 +9,7 @@
   "source_sku": "ON-8996208-7",
   "source_price": 280.0,
   "source_compare_at_price": null,
-  "current_price": 26675.0,
+  "current_price": 26393.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -330,7 +330,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/aecb3740-2db5-4a71-99c9-fbda6cb08cbc.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -514,7 +514,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/279954cd-9f08-4f5f-a859-fdbca6f89651.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -712,23 +712,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:59:51Z",
+  "last_verified_at": "2026-11-16T16:03:05Z",
   "created_at": "2026-09-18T07:08:16Z",
-  "updated_at": "2026-10-29T03:59:51Z",
+  "updated_at": "2026-11-16T16:03:05Z",
   "price_range_usd": {
     "min": 280.0,
     "max": 280.0
   },
   "price_range_inr": {
-    "min": 26675.0,
-    "max": 26675.0
+    "min": 26393.0,
+    "max": 26393.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": false,
-  "price": "26675.00",
+  "price": "26393.00",
   "shopify_product_id": "gid://shopify/Product/15850878959782",
   "shopify_handle": "x-paf-cloudboom-volt-running-shoe-men",
-  "shopify_synced_at": "2026-10-27T23:59:57Z",
-  "last_synced_fx_rate": 95.269051
+  "shopify_synced_at": "2026-11-16T03:59:23Z",
+  "last_synced_fx_rate": 94.262076
 }

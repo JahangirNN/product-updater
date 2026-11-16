@@ -68,7 +68,8 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 7199.0
+      "price_current": 7199.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -88,7 +89,8 @@
           "name": "Brass/Maple"
         }
       ],
-      "price_current": 7199.0
+      "price_current": 7199.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -108,7 +110,8 @@
           "name": "Brass/Olive"
         }
       ],
-      "price_current": 2880.0
+      "price_current": 2880.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -128,7 +131,8 @@
           "name": "Brass/Amber Brown"
         }
       ],
-      "price_current": 7199.0
+      "price_current": 7199.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -148,7 +152,8 @@
           "name": "Brass/Poppy"
         }
       ],
-      "price_current": 7199.0
+      "price_current": 7199.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -175,23 +180,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Wallets & Small Goods"
+    "Wallets & Small Goods",
+    "Women"
   ],
   "groups": [
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:48:31Z",
-  "last_verified_at": "2026-10-29T03:36:40Z",
+  "last_verified_at": "2026-11-16T15:43:48Z",
   "id": "f3fb7f64567ff6ff",
   "product_id": "f3fb7f64567ff6ff",
   "store": "coach",
-  "updated_at": "2026-10-29T03:36:40Z",
+  "updated_at": "2026-11-16T15:43:48Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841770274982",
   "shopify_handle": "essential-card-case",
-  "shopify_synced_at": "2026-09-29T05:57:08Z",
+  "shopify_synced_at": "2026-11-14T01:04:35Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

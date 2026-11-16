@@ -1,0 +1,173 @@
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+SNEAKER RUNWAY CARD COMPONENT (LUXURY MAISON EDITION)
+------------------------------------------------------------------------------------------------------------------------
+Editorial, minimalist footwear card engineered for The Rare Avenue.
+- Studio presentation with pure neutral background
+- Single UK sizing selector chips with live inventory state
+- Instant AJAX Add-to-Cart with Prestige drawer synchronization
+- Zero emojis, zero artificial 3D skew, pure quiet luxury
+------------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
+{%- liquid
+  assign first_avail_variant = product.selected_or_first_available_variant | default: product.variants.first
+  assign primary_media = first_avail_variant.featured_media | default: product.featured_media | default: product.media.first
+
+  assign card_price = first_avail_variant.price
+  assign card_compare_at_price = first_avail_variant.compare_at_price
+
+  assign has_discount = false
+  if card_compare_at_price > card_price
+    assign has_discount = true
+    assign discount_diff = card_compare_at_price | minus: card_price
+    assign discount_percent = discount_diff | times: 100.0 | divided_by: card_compare_at_price | round
+  endif
+
+  assign vendor_name = product.vendor | default: 'The Rare Avenue'
+  if vendor_name == 'My Store' or vendor_name == 'General'
+    assign vendor_name = 'The Rare Avenue'
+  endif
+
+  assign is_ready_to_ship = false
+  for tag in product.tags
+    assign t_down = tag | downcase
+    if t_down == 'ready to ship' or t_down == 'instant-ship' or t_down == 'ready-to-ship' or t_down == 'manual-instant-ship-active'
+      assign is_ready_to_ship = true
+      break
+    endif
+  endfor
+-%}
+
+<div class="runway-card-wrapper" data-product-id="{{ product.id }}">
+  <div class="runway-card">
+
+    <!-- Card Top: Maison Vendor & Subtle Discount Tag -->
+    <div class="runway-card__header">
+      <span class="runway-card__vendor">{{ vendor_name }}</span>
+      <div class="product-card__tags-group">
+        {%- if is_ready_to_ship -%}
+          <span class="product-card__ready-tag">
+            <span class="product-card__ready-dot"></span>Ready to Ship
+          </span>
+        {%- endif -%}
+        {%- if has_discount -%}
+          <span class="runway-card__tag">-{{ discount_percent }}%</span>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <!-- Studio Photography Stage -->
+    <div class="runway-card__stage" {% if product.media.size > 1 %}data-swipeable-stage="true"{% endif %}>
+      <a href="{{ product.url }}" class="runway-card__media-link" draggable="false">
+        {%- if primary_media != blank -%}
+          <img 
+            id="runway-img-{{ product.id }}"
+            src="{{ primary_media | image_url: width: 600 }}"
+            alt="{{ primary_media.alt | default: product.title | escape }}"
+            loading="lazy"
+            width="600"
+            height="600"
+            class="runway-card__image"
+            draggable="false"
+          />
+        {%- else -%}
+          {{ 'product-1' | placeholder_svg_tag: 'runway-card__placeholder' }}
+        {%- endif -%}
+      </a>
+
+      <!-- Studio Angle Switcher Controls (Swipe + Prev/Next + Micro Indicators when > 1 image) -->
+      {%- if product.media.size > 1 -%}
+        <button type="button" class="runway-card__stage-nav runway-card__stage-nav--prev" data-stage-dir="-1" aria-label="Previous image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button type="button" class="runway-card__stage-nav runway-card__stage-nav--next" data-stage-dir="1" aria-label="Next image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+        <div class="runway-card__dots">
+          {%- for med in product.media limit: 6 -%}
+            <button 
+              type="button"
+              class="runway-card__dot {% if forloop.first %}is-active{% endif %}"
+              data-img-src="{{ med | image_url: width: 600 }}"
+              data-target="runway-img-{{ product.id }}"
+              data-dot-index="{{ forloop.index0 }}"
+              aria-label="Angle {{ forloop.index }}"
+            ></button>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+    <!-- Product Title & Pricing -->
+    <div class="runway-card__info">
+      <a href="{{ product.url }}" class="runway-card__title">
+        {{ product.title }}
+      </a>
+
+      <div class="runway-card__price-row">
+        <span class="runway-card__price">{{ card_price | money }}</span>
+        {%- if has_discount -%}
+          <span class="runway-card__compare-price">{{ card_compare_at_price | money }}</span>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <!-- Unified Single UK Sizing Matrix (Indian & UK Standards Parity) -->
+    {%- if product.variants.size > 1 -%}
+      <div class="runway-card__sizing">
+        <div class="runway-card__size-label-row">
+          <span class="runway-card__size-title">Size (UK)</span>
+          <span class="runway-card__size-active">
+            {%- if first_avail_variant -%}
+              {{ first_avail_variant.title | split: '/' | first | strip }}
+            {%- else -%}
+              Sold Out
+            {%- endif -%}
+          </span>
+        </div>
+
+        <div class="runway-card__size-grid">
+          {%- for variant in product.variants limit: 12 -%}
+            {%- liquid
+              assign raw_size = variant.title
+              if raw_size contains '/'
+                assign raw_size = raw_size | split: '/' | first | strip
+              endif
+            -%}
+            <button 
+              type="button"
+              class="runway-card__size-pill {% if variant.available == false %}is-sold-out{% elsif variant.id == first_avail_variant.id %}is-active{% endif %}"
+              data-variant-id="{{ variant.id }}"
+              data-size-name="{{ raw_size | escape }}"
+              {% unless variant.available %}disabled{% endunless %}
+            >
+              {{ raw_size }}
+            </button>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    <!-- Express Bag Reserve Form -->
+    <form method="post" action="/cart/add" class="runway-card__form">
+      <input type="hidden" name="id" value="{{ first_avail_variant.id }}" class="runway-variant-id-input" />
+      <input type="hidden" name="quantity" value="1" />
+
+      <button 
+        type="submit" 
+        class="runway-card__submit-btn"
+        {% if first_avail_variant.available == false or product.available == false %}disabled{% endif %}
+      >
+        <span class="runway-btn-text">
+          {%- if product.available -%}
+            Add to Bag
+          {%- else -%}
+            Sold Out
+          {%- endif -%}
+        </span>
+      </button>
+    </form>
+
+  </div>
+</div>

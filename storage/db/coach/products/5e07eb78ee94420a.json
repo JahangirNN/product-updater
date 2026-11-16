@@ -62,7 +62,8 @@
           "name": "Silver/Amber Brown"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -82,7 +83,8 @@
           "name": "Gunmetal/Saddle"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -102,7 +104,8 @@
           "name": "Gunmetal/Black"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -122,7 +125,8 @@
           "name": "Silver/OLIVE"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -153,16 +157,17 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:42:10Z",
-  "last_verified_at": "2026-10-29T03:38:20Z",
+  "last_verified_at": "2026-11-16T15:44:47Z",
   "id": "5e07eb78ee94420a",
   "product_id": "5e07eb78ee94420a",
   "store": "coach",
-  "updated_at": "2026-10-29T03:38:20Z",
+  "updated_at": "2026-11-16T15:44:47Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841765195942",
   "shopify_handle": "card-case-with-money-clip",
-  "shopify_synced_at": "2026-10-08T16:04:03Z",
+  "shopify_synced_at": "2026-11-14T01:09:22Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

@@ -72,7 +72,8 @@
           "name": "Navy/Green"
         }
       ],
-      "price_current": 33596.0
+      "price_current": 33596.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -92,7 +93,8 @@
           "name": "Tan Multi."
         }
       ],
-      "price_current": 33596.0
+      "price_current": 33596.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -112,7 +114,8 @@
           "name": "Black Signature"
         }
       ],
-      "price_current": 33596.0
+      "price_current": 33596.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -132,7 +135,8 @@
           "name": "Black/Light Tan"
         }
       ],
-      "price_current": 40796.0
+      "price_current": 40796.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -152,7 +156,8 @@
           "name": "Denim Blue"
         }
       ],
-      "price_current": 43195.0
+      "price_current": 43195.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -172,7 +177,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 19822.0
+      "price_current": 19822.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -192,7 +198,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 21598.0
+      "price_current": 21598.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -212,7 +219,8 @@
           "name": "Black/Light Tan Multi"
         }
       ],
-      "price_current": 43195.0
+      "price_current": 43195.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -232,7 +240,8 @@
           "name": "Dark Denim"
         }
       ],
-      "price_current": 37916.0
+      "price_current": 37916.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -252,7 +261,8 @@
           "name": "Black/Light Tan"
         }
       ],
-      "price_current": 62393.0
+      "price_current": 62393.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -272,7 +282,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 33596.0
+      "price_current": 33596.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -292,7 +303,8 @@
           "name": "Honeycomb"
         }
       ],
-      "price_current": 33596.0
+      "price_current": 33596.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -331,23 +343,24 @@
   ],
   "tags": [
     "COACH",
-    "Men",
-    "Crossbody Bags"
+    "Crossbody Bags",
+    "Men"
   ],
   "groups": [
     "men_bags"
   ],
   "created_at": "2026-09-13T00:44:02Z",
-  "last_verified_at": "2026-10-29T03:39:15Z",
+  "last_verified_at": "2026-11-16T15:43:26Z",
   "id": "8df948ee6d68e4e2",
   "product_id": "8df948ee6d68e4e2",
   "store": "coach",
-  "updated_at": "2026-10-29T03:39:15Z",
+  "updated_at": "2026-11-16T15:43:26Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15841766899878",
   "shopify_handle": "dakota-crossbody-bag",
-  "shopify_synced_at": "2026-10-20T15:33:32Z",
+  "shopify_synced_at": "2026-11-14T21:04:15Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.052511
+  "last_synced_fx_rate": 94.289707,
+  "supplier_delisted": false
 }

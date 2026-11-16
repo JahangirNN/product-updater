@@ -83,7 +83,8 @@
           "name": "Brass/Black"
         }
       ],
-      "price_current": 21598.0
+      "price_current": 21598.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -95,7 +96,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cer84_b4yu1_a0",
       "option_values": [
         {
@@ -103,7 +104,8 @@
           "name": "Brass/Amber Brown"
         }
       ],
-      "price_current": 21598.0
+      "price_current": 21598.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -123,7 +125,8 @@
           "name": "Brass/Candy Apple"
         }
       ],
-      "price_current": 21598.0
+      "price_current": 21598.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -143,7 +146,8 @@
           "name": "Brass/Dark Fuchsia"
         }
       ],
-      "price_current": 21598.0
+      "price_current": 21598.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -163,7 +167,8 @@
           "name": "Brass/Dark Chocolate"
         }
       ],
-      "price_current": 21598.0
+      "price_current": 21598.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -190,23 +195,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Handbags"
+    "Handbags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:47:39Z",
-  "last_verified_at": "2026-10-29T03:37:17Z",
+  "last_verified_at": "2026-11-16T15:43:58Z",
   "id": "df77a6fd5ceb6d05",
   "product_id": "df77a6fd5ceb6d05",
   "store": "coach",
-  "updated_at": "2026-10-29T03:37:17Z",
+  "updated_at": "2026-11-16T15:43:58Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15841798029478",
   "shopify_handle": "jade-drawstring-bag-cer86-b4tfm",
-  "shopify_synced_at": "2026-10-21T09:26:11Z",
+  "shopify_synced_at": "2026-11-14T01:05:33Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.052511
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

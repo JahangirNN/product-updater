@@ -67,7 +67,8 @@
           "name": "Gold/Blush Pink"
         }
       ],
-      "price_current": 19197.0
+      "price_current": 19197.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -82,18 +83,18 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Shoulder Bags"
+    "Shoulder Bags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:42:36Z",
-  "last_verified_at": "2026-10-29T03:38:31Z",
+  "last_verified_at": "2026-11-16T15:45:04Z",
   "id": "6a172b6d58601e4e",
   "product_id": "6a172b6d58601e4e",
   "store": "coach",
-  "updated_at": "2026-10-29T03:38:32Z",
+  "updated_at": "2026-11-16T15:45:06Z",
   "is_active": false,
   "shopify_sync_pending": false,
   "price_range_usd": {
@@ -106,7 +107,8 @@
   },
   "shopify_product_id": "gid://shopify/Product/15841765621926",
   "shopify_handle": "etta-small-flap-shoulder-bag-with-floral-appliqu",
-  "shopify_synced_at": "2026-10-29T03:38:31Z",
+  "shopify_synced_at": "2026-11-16T15:45:04Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.399626,
+  "supplier_delisted": false
 }

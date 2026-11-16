@@ -9,7 +9,7 @@
   "source_sku": "KN308-201",
   "source_price": 139.0,
   "source_compare_at_price": null,
-  "current_price": 13233,
+  "current_price": 13078.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -319,7 +319,7 @@
       "option1": "Dusk Rose",
       "option2": null,
       "option3": null,
-      "price": "13233",
+      "price": "13078.0",
       "compare_at_price": null,
       "source_price": 139.0,
       "source_compare_at_price": null,
@@ -342,7 +342,7 @@
       "option1": "Hot Fudge",
       "option2": null,
       "option3": null,
-      "price": "13233",
+      "price": "13078.0",
       "compare_at_price": null,
       "source_price": 139.0,
       "source_compare_at_price": null,
@@ -371,14 +371,14 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KN308_500",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KN308_500",
         "https://katespade.scene7.com/is/image/KateSpade/KN308_500_1",
         "https://katespade.scene7.com/is/image/KateSpade/KN308_500_2"
       ],
-      "inventory_quantity": 10,
+      "inventory_quantity": 0,
       "image_url": "https://katespade.scene7.com/is/image/KateSpade/KN308_500"
     },
     {
@@ -438,9 +438,13 @@
     "handbags"
   ],
   "created_at": "2026-10-29T05:27:27Z",
-  "last_verified_at": "2026-10-29T07:40:59Z",
+  "last_verified_at": "2026-11-16T15:50:20Z",
   "_elapsed_ms": 3303.989499923773,
   "id": "6e04c4d5841ebfcd",
-  "updated_at": "2026-10-29T07:40:59Z",
-  "last_synced_fx_rate": 95.29615
+  "updated_at": "2026-11-16T15:50:20Z",
+  "last_synced_fx_rate": 94.086126,
+  "shopify_product_id": "gid://shopify/Product/15915083661478",
+  "shopify_handle": "knott-suede-carryall-bag",
+  "shopify_synced_at": "2026-11-13T12:38:20Z",
+  "shopify_sync_pending": false
 }

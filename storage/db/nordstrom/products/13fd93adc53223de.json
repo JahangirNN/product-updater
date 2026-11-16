@@ -9,7 +9,7 @@
   "source_sku": "ON-9138703-7",
   "source_price": 170.0,
   "source_compare_at_price": null,
-  "current_price": 16184.0,
+  "current_price": 16025.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -55,10 +55,10 @@
       "id": 913870300,
       "sku": "NORDSTROM-9138703-8",
       "title": "UK 7.5 - White / Midnight",
-      "price": "16324.00",
-      "compare_at_price": null,
+      "price": "16085.00",
+      "compare_at_price": "16164.00",
       "source_price": 170.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -72,7 +72,8 @@
           "option_name": "Color",
           "name": "White / Midnight"
         }
-      ]
+      ],
+      "price_current": 16085.0
     },
     {
       "id": 913870301,
@@ -125,7 +126,7 @@
       "id": 913870303,
       "sku": "NORDSTROM-9138703-7.5",
       "title": "UK 7 - White / Midnight",
-      "price": "15980.00",
+      "price": "16138.00",
       "compare_at_price": "16298.00",
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
@@ -143,7 +144,7 @@
           "name": "White / Midnight"
         }
       ],
-      "price_current": 15980.0
+      "price_current": 16138.0
     },
     {
       "id": 913870304,
@@ -356,7 +357,7 @@
       "id": 913870313,
       "sku": "NORDSTROM-9138703-IVOR-7.5",
       "title": "UK 7 - Ivory / Maroon",
-      "price": "15980.00",
+      "price": "16138.00",
       "compare_at_price": "16324.00",
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
@@ -374,7 +375,7 @@
           "name": "Ivory / Maroon"
         }
       ],
-      "price_current": 15980.0
+      "price_current": 16138.0
     },
     {
       "id": 913870314,
@@ -428,7 +429,7 @@
       "id": 913870316,
       "sku": "NORDSTROM-9138703-IVOR-8",
       "title": "UK 7.5 - Ivory / Maroon",
-      "price": "16298.00",
+      "price": "16085.00",
       "compare_at_price": "16324.00",
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
@@ -446,7 +447,7 @@
           "name": "Ivory / Maroon"
         }
       ],
-      "price_current": 16298.0
+      "price_current": 16085.0
     },
     {
       "id": 913870317,
@@ -668,7 +669,7 @@
       "id": 913870326,
       "sku": "NORDSTROM-9138703-BLAC-7.5",
       "title": "UK 7 - Black / White",
-      "price": "15980.00",
+      "price": "16138.00",
       "compare_at_price": "16298.00",
       "source_price": 170.0,
       "source_compare_at_price": 170.0,
@@ -686,7 +687,7 @@
           "name": "Black / White"
         }
       ],
-      "price_current": 15980.0
+      "price_current": 16138.0
     },
     {
       "id": 913870327,
@@ -900,10 +901,10 @@
       "id": 913870336,
       "sku": "NORDSTROM-9138703-BLAC-8",
       "title": "UK 7.5 - Black / White",
-      "price": "16324.00",
-      "compare_at_price": null,
+      "price": "16085.00",
+      "compare_at_price": "16164.00",
       "source_price": 170.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -917,7 +918,8 @@
           "option_name": "Color",
           "name": "Black / White"
         }
-      ]
+      ],
+      "price_current": 16085.0
     },
     {
       "id": 913870337,
@@ -1065,23 +1067,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T05:47:39Z",
+  "last_verified_at": "2026-11-16T15:57:52Z",
   "created_at": "2026-09-18T06:45:03Z",
-  "updated_at": "2026-10-29T05:47:39Z",
+  "updated_at": "2026-11-16T15:57:52Z",
   "price_range_usd": {
     "min": 170.0,
     "max": 170.0
   },
   "price_range_inr": {
-    "min": 16184.0,
-    "max": 16184.0
+    "min": 16025.0,
+    "max": 16025.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "16184.00",
+  "price": "16025.00",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15850876174502",
   "shopify_handle": "the-roger-wildcard-sneaker-men",
-  "shopify_synced_at": "2026-10-28T21:48:07Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-16T03:55:11Z",
+  "last_synced_fx_rate": 94.262076
 }

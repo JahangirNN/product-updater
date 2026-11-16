@@ -130,7 +130,7 @@ def trip_circuit_breaker(
 
 def record_throttle(
     store_name: str,
-    threshold: int = 2,
+    threshold: int = 5,
     cooldown_seconds: float = 1200.0
 ) -> bool:
     """
@@ -155,6 +155,19 @@ def record_success(store_name: str) -> None:
     store_lock = _get_store_lock(store)
     with store_lock:
         _CONSECUTIVE_THROTTLES[store] = 0
+
+
+def reset_store_throttles(store_name: Optional[str] = None) -> None:
+    """
+    Reset consecutive throttle counters for a specific store or all stores.
+    Used at cycle initialization so prior cycle errors do not cause item #1 to trip the circuit breaker on cold runs.
+    """
+    with _GLOBAL_LOCK:
+        if store_name:
+            clean_store = store_name.strip()
+            _CONSECUTIVE_THROTTLES[clean_store] = 0
+        else:
+            _CONSECUTIVE_THROTTLES.clear()
 
 
 def create_store_limiter(store_name: str) -> Dict[str, Any]:
@@ -184,7 +197,7 @@ def create_store_limiter(store_name: str) -> Dict[str, Any]:
         return trip_circuit_breaker(store, cd)
 
     def _safe_throttle(*args, **kwargs):
-        th = kwargs.get("threshold", 2)
+        th = kwargs.get("threshold", 5)
         cd = kwargs.get("cooldown_seconds", kwargs.get("cooldown", 1200.0))
         for a in args:
             if isinstance(a, int):
@@ -201,6 +214,7 @@ def create_store_limiter(store_name: str) -> Dict[str, Any]:
         "get_cooldown_remaining": lambda: get_cooldown_remaining(store),
         "record_throttle": _safe_throttle,
         "record_success": lambda: record_success(store),
+        "reset_throttles": lambda: reset_store_throttles(store),
         "configure": lambda rps=DEFAULT_REQUESTS_PER_SECOND, delay=DEFAULT_DELAY_SECONDS: configure_store_rate_limits(store, rps, delay),
         "get_limits": lambda: get_store_rate_limits(store)
     }

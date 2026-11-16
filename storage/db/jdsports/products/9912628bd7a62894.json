@@ -12,12 +12,12 @@
   "source_price": 110.0,
   "source_compare_at_price": null,
   "current_price": 10559.0,
-  "compare_at_price": 12376.0,
+  "compare_at_price": 12201.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -121,7 +121,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IF3944_100_P1",
       "option_values": [
         {
@@ -133,7 +133,7 @@
           "name": "Sail/Fauna Brown/Sail/Metallic Gold"
         }
       ],
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -246,7 +246,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IF3944_100_P1",
       "option_values": [
         {
@@ -258,7 +258,7 @@
           "name": "Sail/Fauna Brown/Sail/Metallic Gold"
         }
       ],
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -477,7 +477,8 @@
     "JD Sports",
     "Nike",
     "Nike Dunk Low",
-    "Women's"
+    "Women's",
+    "supplier-delisted"
   ],
   "groups": [
     "footwear",
@@ -486,13 +487,13 @@
     "women's-shoes"
   ],
   "created_at": "2026-09-20T16:08:18Z",
-  "updated_at": "2026-10-29T05:38:18Z",
-  "last_verified_at": "2026-10-29T05:38:18Z",
+  "updated_at": "2026-11-16T15:44:43Z",
+  "last_verified_at": "2026-11-16T15:44:41Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851454988454",
   "shopify_handle": "womens-nike-dunk-low-se-casual-shoes-sail-fauna-brown-sail-metallic-gold-3289744",
-  "shopify_synced_at": "2026-10-23T15:54:25Z",
-  "delist_strikes": 0,
-  "supplier_delisted": false,
-  "last_synced_fx_rate": 94.901331
+  "shopify_synced_at": "2026-11-16T15:44:41Z",
+  "delist_strikes": 25,
+  "supplier_delisted": true,
+  "last_synced_fx_rate": 93.851604
 }

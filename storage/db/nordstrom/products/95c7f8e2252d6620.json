@@ -9,7 +9,7 @@
   "source_sku": "ON-9043396-5",
   "source_price": 180.0,
   "source_compare_at_price": null,
-  "current_price": 17136.0,
+  "current_price": 16992.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -1329,23 +1329,25 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:58:53Z",
+  "last_verified_at": "2026-11-16T16:11:26Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-10-29T03:58:53Z",
+  "updated_at": "2026-11-16T16:11:30Z",
   "price_range_usd": {
     "min": 180.0,
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 17136.0,
-    "max": 17136.0
+    "min": 16992.0,
+    "max": 16992.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15850878828710",
   "shopify_handle": "on-running-cloud-x-tempo-training-shoe-on-9043396-5",
-  "shopify_synced_at": "2026-10-29T00:05:30Z",
-  "price": "17136.00",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-16T16:11:26Z",
+  "price": "16992.00",
+  "last_synced_fx_rate": 94.399626,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

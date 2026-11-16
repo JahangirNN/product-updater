@@ -9,7 +9,7 @@
   "source_sku": "HOKA-8131927-8",
   "source_price": 155.0,
   "source_compare_at_price": null,
-  "current_price": 14750.0,
+  "current_price": 14632.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -161,9 +161,9 @@
       "id": 813192704,
       "sku": "HOKA-8131927-8",
       "title": "UK 6 - Stucco / Asphalt Grey",
-      "price": "7080.00",
+      "price": "8843.00",
       "compare_at_price": "14878.00",
-      "source_price": 74.4,
+      "source_price": 93.0,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -179,7 +179,7 @@
           "name": "Stucco / Asphalt Grey"
         }
       ],
-      "price_current": 7080.0
+      "price_current": 8843.0
     },
     {
       "id": 813192705,
@@ -232,9 +232,9 @@
       "id": 813192707,
       "sku": "HOKA-8131927-5",
       "title": "UK 3 - Stucco / Asphalt Grey",
-      "price": "7171.00",
+      "price": "8769.00",
       "compare_at_price": "14873.00",
-      "source_price": 74.4,
+      "source_price": 93.0,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -250,15 +250,15 @@
           "name": "Stucco / Asphalt Grey"
         }
       ],
-      "price_current": 7171.0
+      "price_current": 8769.0
     },
     {
       "id": 813192708,
       "sku": "HOKA-8131927-7",
       "title": "UK 5 - Stucco / Asphalt Grey",
-      "price": "7080.00",
+      "price": "8843.00",
       "compare_at_price": "14873.00",
-      "source_price": 74.4,
+      "source_price": 93.0,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -274,15 +274,15 @@
           "name": "Stucco / Asphalt Grey"
         }
       ],
-      "price_current": 7080.0
+      "price_current": 8843.0
     },
     {
       "id": 813192710,
       "sku": "HOKA-8131927-6",
       "title": "UK 4 - Stucco / Asphalt Grey",
-      "price": "7171.00",
+      "price": "8769.00",
       "compare_at_price": "14873.00",
-      "source_price": 74.4,
+      "source_price": 93.0,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -298,15 +298,15 @@
           "name": "Stucco / Asphalt Grey"
         }
       ],
-      "price_current": 7171.0
+      "price_current": 8769.0
     },
     {
       "id": 813192711,
       "sku": "HOKA-8131927-5.5",
       "title": "UK 3.5 - Stucco / Asphalt Grey",
-      "price": "14873.00",
+      "price": "8769.00",
       "compare_at_price": "14878.00",
-      "source_price": 155.0,
+      "source_price": 93.0,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -321,15 +321,16 @@
           "option_name": "Color",
           "name": "Stucco / Asphalt Grey"
         }
-      ]
+      ],
+      "price_current": 8769.0
     },
     {
       "id": 813192712,
       "sku": "HOKA-8131927-6.5",
       "title": "UK 4.5 - Stucco / Asphalt Grey",
-      "price": "14873.00",
+      "price": "8769.00",
       "compare_at_price": "14878.00",
-      "source_price": 155.0,
+      "source_price": 93.0,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -344,7 +345,8 @@
           "option_name": "Color",
           "name": "Stucco / Asphalt Grey"
         }
-      ]
+      ],
+      "price_current": 8769.0
     },
     {
       "id": 813192713,
@@ -841,7 +843,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/00ccd0d1-36ca-410b-a6d3-b9a2759d6cfa.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1364,10 +1366,10 @@
       "id": 813192769,
       "sku": "HOKA-8131927-ELEC-11",
       "title": "UK 9 - Electric Lemon / Electric",
-      "price": "14878.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": null,
+      "price": "8779.00",
+      "compare_at_price": "14632.00",
+      "source_price": 93.0,
+      "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -1381,16 +1383,17 @@
           "option_name": "Color",
           "name": "Electric Lemon / Electric"
         }
-      ]
+      ],
+      "price_current": 8779.0
     },
     {
       "id": 813192770,
       "sku": "HOKA-8131927-ELEC-12",
       "title": "UK 10 - Electric Lemon / Electric",
-      "price": "14878.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": null,
+      "price": "8779.00",
+      "compare_at_price": "14632.00",
+      "source_price": 93.0,
+      "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -1404,7 +1407,8 @@
           "option_name": "Color",
           "name": "Electric Lemon / Electric"
         }
-      ]
+      ],
+      "price_current": 8779.0
     },
     {
       "id": 813192771,
@@ -1479,13 +1483,13 @@
       "id": 813192774,
       "sku": "HOKA-8131927-ELEC-7.5",
       "title": "UK 5.5 - Electric Lemon / Electric",
-      "price": "14878.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": null,
+      "price": "8779.00",
+      "compare_at_price": "14632.00",
+      "source_price": 93.0,
+      "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/242d522a-6df3-4de8-acac-65233ce5e854.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1496,7 +1500,8 @@
           "option_name": "Color",
           "name": "Electric Lemon / Electric"
         }
-      ]
+      ],
+      "price_current": 8779.0
     },
     {
       "id": 813192775,
@@ -1548,10 +1553,10 @@
       "id": 813192777,
       "sku": "HOKA-8131927-ELEC-9.5",
       "title": "UK 7.5 - Electric Lemon / Electric",
-      "price": "14878.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": null,
+      "price": "8779.00",
+      "compare_at_price": "14632.00",
+      "source_price": 93.0,
+      "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -1565,7 +1570,8 @@
           "option_name": "Color",
           "name": "Electric Lemon / Electric"
         }
-      ]
+      ],
+      "price_current": 8779.0
     },
     {
       "id": 813192778,
@@ -1577,7 +1583,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/242d522a-6df3-4de8-acac-65233ce5e854.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1594,10 +1600,10 @@
       "id": 813192779,
       "sku": "HOKA-8131927-ELEC-8.5",
       "title": "UK 6.5 - Electric Lemon / Electric",
-      "price": "14878.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": null,
+      "price": "8779.00",
+      "compare_at_price": "14632.00",
+      "source_price": 93.0,
+      "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -1611,16 +1617,17 @@
           "option_name": "Color",
           "name": "Electric Lemon / Electric"
         }
-      ]
+      ],
+      "price_current": 8779.0
     },
     {
       "id": 813192780,
       "sku": "HOKA-8131927-ELEC-10.5",
       "title": "UK 8.5 - Electric Lemon / Electric",
-      "price": "14878.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": null,
+      "price": "8779.00",
+      "compare_at_price": "14632.00",
+      "source_price": 93.0,
+      "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -1634,16 +1641,17 @@
           "option_name": "Color",
           "name": "Electric Lemon / Electric"
         }
-      ]
+      ],
+      "price_current": 8779.0
     },
     {
       "id": 813192781,
       "sku": "HOKA-8131927-ELEC-10",
       "title": "UK 8 - Electric Lemon / Electric",
-      "price": "14878.00",
-      "compare_at_price": null,
-      "source_price": 155.0,
-      "source_compare_at_price": null,
+      "price": "8779.00",
+      "compare_at_price": "14632.00",
+      "source_price": 93.0,
+      "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -1657,7 +1665,8 @@
           "option_name": "Color",
           "name": "Electric Lemon / Electric"
         }
-      ]
+      ],
+      "price_current": 8779.0
     },
     {
       "id": 813192782,
@@ -1765,23 +1774,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:48:28Z",
+  "last_verified_at": "2026-11-16T16:09:10Z",
   "created_at": "2026-09-17T14:53:56Z",
-  "updated_at": "2026-10-29T03:48:28Z",
+  "updated_at": "2026-11-16T16:09:14Z",
   "price_range_usd": {
-    "min": 74.4,
+    "min": 93.0,
     "max": 155.0
   },
   "price_range_inr": {
-    "min": 7080.0,
-    "max": 14750.0
+    "min": 8779.0,
+    "max": 14632.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": false,
-  "price": "14750.00",
+  "price": "14632.00",
   "shopify_product_id": "gid://shopify/Product/15848581529766",
   "shopify_handle": "hoka-challenger-8-trail-running-shoe-women-regular-wide",
-  "shopify_synced_at": "2026-10-27T04:55:36Z",
-  "last_synced_fx_rate": 95.160836
+  "shopify_synced_at": "2026-11-16T16:09:10Z",
+  "last_synced_fx_rate": 94.399626
 }

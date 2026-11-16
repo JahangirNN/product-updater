@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Signature jacquard and shiny smooth leather",
   "specifications": {
     "Material": "Signature jacquard and shiny smooth leather",
@@ -61,7 +61,8 @@
           "name": "IM/Dark Brown Chalk"
         }
       ],
-      "price_current": 5759.0
+      "price_current": 5759.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -73,7 +74,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cen15_imwbr_a0",
       "option_values": [
         {
@@ -81,7 +82,8 @@
           "name": "Gold/Warm Brown"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -101,7 +103,8 @@
           "name": "Silver/Oak/Maple"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -121,7 +124,8 @@
           "name": "Silver/BLACK"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -145,23 +149,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Wallets & Small Goods"
+    "Wallets & Small Goods",
+    "Women"
   ],
   "groups": [
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:46:36Z",
-  "last_verified_at": "2026-10-29T05:36:52Z",
+  "last_verified_at": "2026-11-16T15:43:27Z",
   "id": "c9c0f24c20e9d7e6",
   "product_id": "c9c0f24c20e9d7e6",
   "store": "coach",
-  "updated_at": "2026-10-29T05:36:52Z",
-  "shopify_sync_pending": true,
-  "is_active": true,
+  "updated_at": "2026-11-16T15:43:30Z",
+  "shopify_sync_pending": false,
+  "is_active": false,
   "shopify_product_id": "gid://shopify/Product/15841768964262",
   "shopify_handle": "ashton-wristlet-in-signature-jacquard",
-  "shopify_synced_at": "2026-09-29T05:56:30Z",
+  "shopify_synced_at": "2026-11-16T15:43:27Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.399626,
+  "supplier_delisted": false
 }

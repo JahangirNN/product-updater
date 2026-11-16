@@ -72,7 +72,8 @@
           "name": "US 5 / UK 3"
         }
       ],
-      "price_current": 7445.0
+      "price_current": 7445.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -92,7 +93,8 @@
           "name": "US 5.5 / UK 3.5"
         }
       ],
-      "price_current": 7445.0
+      "price_current": 7445.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -104,7 +106,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceg16_l77_a0",
       "option_values": [
         {
@@ -112,7 +114,8 @@
           "name": "US 6 / UK 4"
         }
       ],
-      "price_current": 7445.0
+      "price_current": 7445.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -124,7 +127,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceg16_l77_a0",
       "option_values": [
         {
@@ -132,7 +135,8 @@
           "name": "US 6.5 / UK 4.5"
         }
       ],
-      "price_current": 7445.0
+      "price_current": 7445.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -152,7 +156,8 @@
           "name": "US 7 / UK 5"
         }
       ],
-      "price_current": 7445.0
+      "price_current": 7445.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -172,7 +177,8 @@
           "name": "US 7.5 / UK 5.5"
         }
       ],
-      "price_current": 7445.0
+      "price_current": 7445.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -184,7 +190,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceg16_l77_a0",
       "option_values": [
         {
@@ -192,7 +198,8 @@
           "name": "US 8 / UK 6"
         }
       ],
-      "price_current": 7445.0
+      "price_current": 7445.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -204,7 +211,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceg16_l77_a0",
       "option_values": [
         {
@@ -212,7 +219,8 @@
           "name": "US 8.5 / UK 6.5"
         }
       ],
-      "price_current": 7445.0
+      "price_current": 7445.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -224,7 +232,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceg16_l77_a0",
       "option_values": [
         {
@@ -232,7 +240,8 @@
           "name": "US 9 / UK 7"
         }
       ],
-      "price_current": 7445.0
+      "price_current": 7445.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -252,7 +261,8 @@
           "name": "US 9.5 / UK 7.5"
         }
       ],
-      "price_current": 7445.0
+      "price_current": 7445.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -272,7 +282,8 @@
           "name": "US 10 / UK 8"
         }
       ],
-      "price_current": 7445.0
+      "price_current": 7445.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -284,7 +295,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceg16_l77_a0",
       "option_values": [
         {
@@ -292,7 +303,8 @@
           "name": "US 11 / UK 9"
         }
       ],
-      "price_current": 7445.0
+      "price_current": 7445.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -340,23 +352,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Shoes & Footwear"
+    "Shoes & Footwear",
+    "Women"
   ],
   "groups": [
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:42:42Z",
-  "last_verified_at": "2026-10-29T03:38:33Z",
+  "last_verified_at": "2026-11-16T15:45:08Z",
   "id": "6f0ec2c307cebfa1",
   "product_id": "6f0ec2c307cebfa1",
   "store": "coach",
-  "updated_at": "2026-10-29T03:38:33Z",
+  "updated_at": "2026-11-16T15:45:08Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15848607416486",
   "shopify_handle": "retro-runner-ceg16-l77-9-5-b",
-  "shopify_synced_at": "2026-10-28T19:42:56Z",
+  "shopify_synced_at": "2026-11-14T01:10:24Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

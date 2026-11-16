@@ -65,7 +65,8 @@
           "name": "Gunmetal/Black"
         }
       ],
-      "price_current": 5663.0
+      "price_current": 5663.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -84,7 +85,8 @@
           "option_name": "Color",
           "name": "Gunmetal/Dark Stone"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -96,7 +98,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ch090_qbtp_a0",
       "option_values": [
         {
@@ -104,7 +106,8 @@
           "name": "Black Antique Nickel/Taupe"
         }
       ],
-      "price_current": 5663.0
+      "price_current": 5663.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -116,7 +119,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ch090_qbsd_a0",
       "option_values": [
         {
@@ -124,7 +127,8 @@
           "name": "Gunmetal/Saddle"
         }
       ],
-      "price_current": 5663.0
+      "price_current": 5663.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -144,7 +148,8 @@
           "name": "Gunmetal/Olive"
         }
       ],
-      "price_current": 5663.0
+      "price_current": 5663.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -163,7 +168,8 @@
           "option_name": "Color",
           "name": "Gunmetal/Sable"
         }
-      ]
+      ],
+      "is_available": false
     }
   ],
   "product_options": [
@@ -200,16 +206,17 @@
     "men_wallets"
   ],
   "created_at": "2026-09-12T23:00:00Z",
-  "last_verified_at": "2026-10-29T03:37:21Z",
+  "last_verified_at": "2026-11-16T15:43:55Z",
   "id": "0423bf6bf818dab1",
   "product_id": "0423bf6bf818dab1",
   "store": "coach",
-  "updated_at": "2026-10-29T03:37:21Z",
+  "updated_at": "2026-11-16T15:43:55Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15841760936102",
   "shopify_handle": "slim-money-clip-billfold-wallet",
-  "shopify_synced_at": "2026-09-29T05:53:27Z",
+  "shopify_synced_at": "2026-11-14T01:05:13Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.199335,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Crossgrain leather",
   "specifications": {
     "Material": "Crossgrain leather",
@@ -55,15 +55,16 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KK827_960",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KK827_960",
         "https://katespade.scene7.com/is/image/KateSpade/KK827_960_1",
         "https://katespade.scene7.com/is/image/KateSpade/KK827_960_3"
       ],
-      "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KK827_960"
+      "inventory_quantity": 0,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KK827_960",
+      "is_available": false
     }
   ],
   "product_options": [
@@ -77,18 +78,26 @@
     }
   ],
   "tags": [
-    "Kate Spade",
-    "Women",
     "Handbags",
-    "Totes & Carryalls"
+    "Kate Spade",
+    "Totes & Carryalls",
+    "Women",
+    "supplier-delisted"
   ],
   "groups": [
     "handbags"
   ],
   "created_at": "2026-10-29T05:29:29Z",
-  "last_verified_at": "2026-10-29T07:44:04Z",
+  "last_verified_at": "2026-11-16T15:49:34Z",
   "_elapsed_ms": 2699.402099940926,
   "id": "350c3d47c1e4ede4",
-  "updated_at": "2026-10-29T07:44:04Z",
-  "last_synced_fx_rate": 95.29615
+  "updated_at": "2026-11-16T15:49:36Z",
+  "last_synced_fx_rate": 95.050072,
+  "shopify_product_id": "gid://shopify/Product/15915077632166",
+  "shopify_handle": "suite-tote-bag",
+  "shopify_synced_at": "2026-11-16T15:49:34Z",
+  "shopify_sync_pending": false,
+  "delist_strikes": 8,
+  "supplier_delisted": true,
+  "is_active": false
 }

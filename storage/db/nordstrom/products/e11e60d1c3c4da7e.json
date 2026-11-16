@@ -9,8 +9,8 @@
   "source_sku": "ON-8899602-6",
   "source_price": 160.0,
   "source_compare_at_price": 160.0,
-  "current_price": 15232.0,
-  "compare_at_price": 15232.0,
+  "current_price": 15104.0,
+  "compare_at_price": 15104.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -46,7 +46,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/8c21a002-4e2b-47c7-954e-ad69e89601c2.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -70,7 +70,7 @@
       "source_compare_at_price": 160.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/8c21a002-4e2b-47c7-954e-ad69e89601c2.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -360,9 +360,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:58:36Z",
+  "last_verified_at": "2026-11-16T16:04:04Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-10-29T03:58:36Z",
+  "updated_at": "2026-11-16T16:04:06Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -372,12 +372,12 @@
     "max": 160.0
   },
   "price_range_inr": {
-    "min": 15232.0,
-    "max": 15232.0
+    "min": 15104.0,
+    "max": 15104.0
   },
-  "price": "15232.00",
+  "price": "15104.00",
   "shopify_product_id": "gid://shopify/Product/15848587362470",
   "shopify_handle": "cloudsurfer-2-running-shoe-women",
-  "shopify_synced_at": "2026-10-28T20:02:10Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-16T16:04:04Z",
+  "last_synced_fx_rate": 94.399626
 }

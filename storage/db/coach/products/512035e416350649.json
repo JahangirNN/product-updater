@@ -58,7 +58,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 10463.0
+      "price_current": 10463.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -78,7 +79,8 @@
           "name": "Dark Saddle"
         }
       ],
-      "price_current": 10463.0
+      "price_current": 10463.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -103,16 +105,17 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:41:37Z",
-  "last_verified_at": "2026-10-29T03:39:42Z",
+  "last_verified_at": "2026-11-16T15:46:08Z",
   "id": "512035e416350649",
   "product_id": "512035e416350649",
   "store": "coach",
-  "updated_at": "2026-10-29T03:39:42Z",
+  "updated_at": "2026-11-16T15:46:08Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841764769958",
   "shopify_handle": "boxed-3-in-1-wallet-gift-set",
-  "shopify_synced_at": "2026-10-08T16:03:00Z",
+  "shopify_synced_at": "2026-11-14T01:13:31Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

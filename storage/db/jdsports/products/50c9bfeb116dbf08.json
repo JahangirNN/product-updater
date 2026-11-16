@@ -12,12 +12,12 @@
   "source_price": 70.0,
   "source_compare_at_price": null,
   "current_price": 6719.0,
-  "compare_at_price": 9520.0,
+  "compare_at_price": 9483.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -57,7 +57,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -81,7 +82,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -105,7 +107,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -129,7 +132,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -153,7 +157,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -177,7 +182,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -201,7 +207,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -225,7 +232,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -238,7 +246,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/FQ1833_100_P1",
       "option_values": [
         {
@@ -249,7 +257,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -273,7 +282,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -286,7 +296,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/FQ1833_100_P1",
       "option_values": [
         {
@@ -297,7 +307,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -321,7 +332,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -345,7 +357,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -369,7 +382,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -393,7 +407,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -417,7 +432,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -441,7 +457,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -465,7 +482,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -489,7 +507,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -513,7 +532,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -537,7 +557,8 @@
           "option_name": "Color",
           "name": "Sail/Coconut Milk/Team Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     }
   ],
   "product_options": [
@@ -619,12 +640,13 @@
     }
   ],
   "tags": [
-    "Nike",
-    "Footwear",
     "Adult",
-    "Men's",
+    "Footwear",
     "JD Sports",
-    "Nike Air Max"
+    "Men's",
+    "Nike",
+    "Nike Air Max",
+    "supplier-delisted"
   ],
   "groups": [
     "footwear",
@@ -633,11 +655,13 @@
     "shoes"
   ],
   "created_at": "2026-09-20T15:48:34Z",
-  "updated_at": "2026-10-29T05:37:24Z",
-  "last_verified_at": "2026-10-29T05:37:24Z",
+  "updated_at": "2026-11-16T15:42:43Z",
+  "last_verified_at": "2026-11-16T15:42:41Z",
   "shopify_product_id": "gid://shopify/Product/15851450138790",
   "shopify_handle": "mens-nike-air-max-alpha-trainer-6-training-shoes-sail-coconut-milk-team-gold-black-3736906",
-  "shopify_synced_at": "2026-10-10T06:10:02Z",
+  "shopify_synced_at": "2026-11-16T15:42:41Z",
   "shopify_sync_pending": false,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.834253,
+  "delist_strikes": 39,
+  "supplier_delisted": true
 }

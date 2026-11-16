@@ -59,7 +59,8 @@
           "name": "Gold/Light Blue"
         }
       ],
-      "price_current": 2880.0
+      "price_current": 2880.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -79,7 +80,8 @@
           "name": "Gold/Crimson"
         }
       ],
-      "price_current": 2880.0
+      "price_current": 2880.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -99,7 +101,8 @@
           "name": "Gold/Navy"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -119,7 +122,8 @@
           "name": "Gold/Black Currant"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -131,7 +135,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfw86_svn2w_a0",
       "option_values": [
         {
@@ -139,7 +143,8 @@
           "name": "Silver/Blue Jay"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -159,7 +164,8 @@
           "name": "Im/Magenta"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -179,7 +185,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -199,7 +206,8 @@
           "name": "Gold/Chalk"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -219,7 +227,8 @@
           "name": "Gold/Dark Stone"
         }
       ],
-      "price_current": 2880.0
+      "price_current": 2880.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -239,7 +248,8 @@
           "name": "Gold/Poppy"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -259,7 +269,8 @@
           "name": "Gold/Maple"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -279,7 +290,8 @@
           "name": "Gold/Chalk Multi"
         }
       ],
-      "price_current": 2880.0
+      "price_current": 2880.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -299,7 +311,8 @@
           "name": "Gold/Light Pink"
         }
       ],
-      "price_current": 2880.0
+      "price_current": 2880.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -319,7 +332,8 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -339,7 +353,8 @@
           "name": "Silver/True Red"
         }
       ],
-      "price_current": 2880.0
+      "price_current": 2880.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -359,7 +374,8 @@
           "name": "Gold/Pink Multi"
         }
       ],
-      "price_current": 2882.0
+      "price_current": 2882.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -379,7 +395,8 @@
           "name": "Gold/Pistachio"
         }
       ],
-      "price_current": 3648.0
+      "price_current": 3648.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -399,7 +416,8 @@
           "name": "Gold/Carnation"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -419,7 +437,8 @@
           "name": "Gold/Powder Pink"
         }
       ],
-      "price_current": 2880.0
+      "price_current": 2880.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -439,7 +458,8 @@
           "name": "Gold/Brown"
         }
       ],
-      "price_current": 2160.0
+      "price_current": 2160.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -459,7 +479,8 @@
           "name": "Silver/IVORY"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -479,7 +500,8 @@
           "name": "Gold/Cinnamon"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -499,7 +521,8 @@
           "name": "Gold/Indigo"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -518,7 +541,8 @@
           "option_name": "Color",
           "name": "Gold/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -538,7 +562,8 @@
           "name": "Silver/PEONY"
         }
       ],
-      "price_current": 3398.0
+      "price_current": 3398.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -558,7 +583,8 @@
           "name": "Gold/Chalk"
         }
       ],
-      "price_current": 3398.0
+      "price_current": 3398.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -578,7 +604,8 @@
           "name": "Silver/SAND MULTI"
         }
       ],
-      "price_current": 2534.0
+      "price_current": 2534.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -598,7 +625,8 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -617,7 +645,8 @@
           "option_name": "Color",
           "name": "Gold/Chalk Multi"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -636,7 +665,8 @@
           "option_name": "Color",
           "name": "Silver/Black Multi"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -656,7 +686,8 @@
           "name": "Gold/Taupe"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -676,7 +707,8 @@
           "name": "Gold/Chalk"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -696,7 +728,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -716,7 +749,8 @@
           "name": "Gold/Midnight"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -736,7 +770,8 @@
           "name": "Gold/Sand Multi"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -756,7 +791,8 @@
           "name": "Silver/Black/Black"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -776,7 +812,8 @@
           "name": "Silver/Denim/Dark Denim"
         }
       ],
-      "price_current": 3332.0
+      "price_current": 3332.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -881,23 +918,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Wallets & Small Goods"
+    "Wallets & Small Goods",
+    "Women"
   ],
   "groups": [
     "women_wallets"
   ],
   "created_at": "2026-09-12T23:00:02Z",
-  "last_verified_at": "2026-10-29T03:37:23Z",
+  "last_verified_at": "2026-11-16T15:44:01Z",
   "id": "0536a106459ff92b",
   "product_id": "0536a106459ff92b",
   "store": "coach",
-  "updated_at": "2026-10-29T03:37:23Z",
+  "updated_at": "2026-11-16T15:44:02Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841760968870",
   "shopify_handle": "corner-zip-wristlet-in-signature-canvas-with-floral-print",
-  "shopify_synced_at": "2026-10-28T11:40:24Z",
+  "shopify_synced_at": "2026-11-14T01:05:47Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

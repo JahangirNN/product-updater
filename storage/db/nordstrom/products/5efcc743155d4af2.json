@@ -7,14 +7,14 @@
   "vendor": "NORDSTROM",
   "product_type": "Athletic Shoes",
   "source_sku": "HOKA-7886037-5",
-  "source_price": 140.0,
+  "source_price": 70.0,
   "source_compare_at_price": null,
-  "current_price": 13323.0,
+  "current_price": 6600.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Synthetic and textile upper, rubber sole",
   "specifications": {
     "Brand": "NORDSTROM",
@@ -88,7 +88,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/aa7fa075-46ac-493b-bb22-f7ca1295756b.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -956,9 +956,9 @@
       "id": 788603739,
       "sku": "NORDSTROM-7886037-DAWN-7",
       "title": "UK 5 - Dawn Light / Vanilla",
-      "price": "7461.00",
+      "price": "6570.00",
       "compare_at_price": "13505.00",
-      "source_price": 78.4,
+      "source_price": 70.0,
       "source_compare_at_price": 140.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -974,15 +974,15 @@
           "name": "Dawn Light / Vanilla"
         }
       ],
-      "price_current": 7461.0
+      "price_current": 6570.0
     },
     {
       "id": 788603740,
       "sku": "NORDSTROM-7886037-DAWN-9",
       "title": "UK 7 - Dawn Light / Vanilla",
-      "price": "7461.00",
+      "price": "6570.00",
       "compare_at_price": "13505.00",
-      "source_price": 78.4,
+      "source_price": 70.0,
       "source_compare_at_price": 140.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -998,15 +998,15 @@
           "name": "Dawn Light / Vanilla"
         }
       ],
-      "price_current": 7461.0
+      "price_current": 6570.0
     },
     {
       "id": 788603741,
       "sku": "NORDSTROM-7886037-DAWN-11",
       "title": "UK 9 - Dawn Light / Vanilla",
-      "price": "7461.00",
+      "price": "6570.00",
       "compare_at_price": "13505.00",
-      "source_price": 78.4,
+      "source_price": 70.0,
       "source_compare_at_price": 140.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1022,15 +1022,15 @@
           "name": "Dawn Light / Vanilla"
         }
       ],
-      "price_current": 7461.0
+      "price_current": 6570.0
     },
     {
       "id": 788603742,
       "sku": "NORDSTROM-7886037-DAWN-7.5",
       "title": "UK 5.5 - Dawn Light / Vanilla",
-      "price": "7461.00",
+      "price": "6570.00",
       "compare_at_price": "13505.00",
-      "source_price": 78.4,
+      "source_price": 70.0,
       "source_compare_at_price": 140.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1046,16 +1046,16 @@
           "name": "Dawn Light / Vanilla"
         }
       ],
-      "price_current": 7461.0
+      "price_current": 6570.0
     },
     {
       "id": 788603743,
       "sku": "NORDSTROM-7886037-DAWN-6.5",
       "title": "UK 4.5 - Dawn Light / Vanilla",
-      "price": "13438.00",
-      "compare_at_price": null,
-      "source_price": 140.0,
-      "source_compare_at_price": null,
+      "price": "6600.00",
+      "compare_at_price": "13201.00",
+      "source_price": 70.0,
+      "source_compare_at_price": 140.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -1069,15 +1069,16 @@
           "option_name": "Color",
           "name": "Dawn Light / Vanilla"
         }
-      ]
+      ],
+      "price_current": 6600.0
     },
     {
       "id": 788603744,
       "sku": "NORDSTROM-7886037-DAWN-8",
       "title": "UK 6 - Dawn Light / Vanilla",
-      "price": "7461.00",
+      "price": "6570.00",
       "compare_at_price": "13505.00",
-      "source_price": 78.4,
+      "source_price": 70.0,
       "source_compare_at_price": 140.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1093,16 +1094,16 @@
           "name": "Dawn Light / Vanilla"
         }
       ],
-      "price_current": 7461.0
+      "price_current": 6570.0
     },
     {
       "id": 788603745,
       "sku": "NORDSTROM-7886037-DAWN-6",
       "title": "UK 4 - Dawn Light / Vanilla",
-      "price": "13438.00",
-      "compare_at_price": null,
-      "source_price": 140.0,
-      "source_compare_at_price": null,
+      "price": "6600.00",
+      "compare_at_price": "13201.00",
+      "source_price": 70.0,
+      "source_compare_at_price": 140.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -1116,16 +1117,17 @@
           "option_name": "Color",
           "name": "Dawn Light / Vanilla"
         }
-      ]
+      ],
+      "price_current": 6600.0
     },
     {
       "id": 788603746,
       "sku": "NORDSTROM-7886037-DAWN-5",
       "title": "UK 3 - Dawn Light / Vanilla",
-      "price": "13438.00",
-      "compare_at_price": null,
-      "source_price": 140.0,
-      "source_compare_at_price": null,
+      "price": "6600.00",
+      "compare_at_price": "13201.00",
+      "source_price": 70.0,
+      "source_compare_at_price": 140.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -1139,15 +1141,16 @@
           "option_name": "Color",
           "name": "Dawn Light / Vanilla"
         }
-      ]
+      ],
+      "price_current": 6600.0
     },
     {
       "id": 788603747,
       "sku": "NORDSTROM-7886037-DAWN-10",
       "title": "UK 8 - Dawn Light / Vanilla",
-      "price": "7461.00",
+      "price": "6570.00",
       "compare_at_price": "13505.00",
-      "source_price": 78.4,
+      "source_price": 70.0,
       "source_compare_at_price": 140.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1163,16 +1166,16 @@
           "name": "Dawn Light / Vanilla"
         }
       ],
-      "price_current": 7461.0
+      "price_current": 6570.0
     },
     {
       "id": 788603748,
       "sku": "NORDSTROM-7886037-DAWN-5.5",
       "title": "UK 3.5 - Dawn Light / Vanilla",
-      "price": "13438.00",
-      "compare_at_price": null,
-      "source_price": 140.0,
-      "source_compare_at_price": null,
+      "price": "6600.00",
+      "compare_at_price": "13201.00",
+      "source_price": 70.0,
+      "source_compare_at_price": 140.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -1186,15 +1189,16 @@
           "option_name": "Color",
           "name": "Dawn Light / Vanilla"
         }
-      ]
+      ],
+      "price_current": 6600.0
     },
     {
       "id": 788603749,
       "sku": "NORDSTROM-7886037-DAWN-8.5",
       "title": "UK 6.5 - Dawn Light / Vanilla",
-      "price": "7461.00",
+      "price": "6570.00",
       "compare_at_price": "13505.00",
-      "source_price": 78.4,
+      "source_price": 70.0,
       "source_compare_at_price": 140.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1210,15 +1214,15 @@
           "name": "Dawn Light / Vanilla"
         }
       ],
-      "price_current": 7461.0
+      "price_current": 6570.0
     },
     {
       "id": 788603750,
       "sku": "NORDSTROM-7886037-DAWN-10.5",
       "title": "UK 8.5 - Dawn Light / Vanilla",
-      "price": "7461.00",
+      "price": "6570.00",
       "compare_at_price": "13505.00",
-      "source_price": 78.4,
+      "source_price": 70.0,
       "source_compare_at_price": 140.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1234,15 +1238,15 @@
           "name": "Dawn Light / Vanilla"
         }
       ],
-      "price_current": 7461.0
+      "price_current": 6570.0
     },
     {
       "id": 788603751,
       "sku": "NORDSTROM-7886037-DAWN-9.5",
       "title": "UK 7.5 - Dawn Light / Vanilla",
-      "price": "7461.00",
+      "price": "6570.00",
       "compare_at_price": "13505.00",
-      "source_price": 78.4,
+      "source_price": 70.0,
       "source_compare_at_price": 140.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1258,7 +1262,7 @@
           "name": "Dawn Light / Vanilla"
         }
       ],
-      "price_current": 7461.0
+      "price_current": 6570.0
     }
   ],
   "product_options": [
@@ -1337,23 +1341,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:49:14Z",
+  "last_verified_at": "2026-11-16T16:00:05Z",
   "created_at": "2026-09-17T14:56:47Z",
-  "updated_at": "2026-10-29T03:49:14Z",
+  "updated_at": "2026-11-16T16:00:05Z",
   "price_range_usd": {
-    "min": 78.4,
+    "min": 70.0,
     "max": 140.0
   },
   "price_range_inr": {
-    "min": 7461.0,
-    "max": 13323.0
+    "min": 6600.0,
+    "max": 13201.0
   },
   "status": "ACTIVE",
-  "is_active": true,
+  "is_active": false,
   "shopify_sync_pending": false,
-  "price": "13323.00",
+  "price": "6600.00",
   "shopify_product_id": "gid://shopify/Product/15848581365926",
   "shopify_handle": "infini-hike-tc-sandal-women",
-  "shopify_synced_at": "2026-10-27T04:56:17Z",
-  "last_synced_fx_rate": 95.160836
+  "shopify_synced_at": "2026-11-14T20:01:14Z",
+  "last_synced_fx_rate": 94.289707
 }

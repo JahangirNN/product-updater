@@ -17,6 +17,20 @@ from typing import Dict, Any, List, Tuple, Optional
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from storage.forex import get_usd_to_inr_rate
+from storage.pricing_engine import resolve_storefront_pricing
+
+
+def _safe_float(val: Any) -> float:
+    """Defensively convert price/currency string or number to clean positive float."""
+    if val is None:
+        return 0.0
+    if isinstance(val, (int, float)):
+        return float(val) if val > 0 else 0.0
+    try:
+        clean = re.sub(r'[^\d.]', '', str(val))
+        return float(clean) if clean else 0.0
+    except (ValueError, TypeError):
+        return 0.0
 
 
 def resolve_authentic_vendor(prod: Dict[str, Any]) -> str:
@@ -41,6 +55,34 @@ def resolve_authentic_vendor(prod: Dict[str, Any]) -> str:
     # 3. Michael Kors
     if store == "michaelkors" or "michael kors" in text or "michael michael kors" in text:
         return "MICHAEL Michael Kors" if "michael michael kors" in raw_vendor.lower() else "Michael Kors"
+
+    # 3b. Kate Spade
+    if store == "katespade" or "kate spade" in text:
+        return "Kate Spade"
+
+    # 3c. Tory Burch
+    if "tory burch" in text or raw_vendor.lower() == "tory burch":
+        return "Tory Burch"
+
+    # 3d. Marc Jacobs
+    if "marc jacobs" in text or "the marc jacobs" in text or raw_vendor.lower() in ("marc jacobs", "the marc jacobs"):
+        return "Marc Jacobs"
+
+    # 3e. Kurt Geiger London
+    if "kurt geiger" in text or raw_vendor.lower() in ("kurt geiger", "kurt geiger london"):
+        return "Kurt Geiger London"
+
+    # 3f. Designer Eyewear (Carrera, Oakley, Hugo Boss, Miu Miu, Calvin Klein)
+    if "carrera" in text or raw_vendor.lower() == "carrera":
+        return "Carrera"
+    if "oakley" in text or raw_vendor.lower() == "oakley":
+        return "Oakley"
+    if "hugo boss" in text or "boss" in raw_vendor.lower() or raw_vendor.lower() == "hugo boss":
+        return "Hugo Boss"
+    if "miu miu" in text or raw_vendor.lower() == "miu miu":
+        return "Miu Miu"
+    if "calvin klein" in text or raw_vendor.lower() in ("calvin klein", "ck"):
+        return "Calvin Klein"
 
     # 4. Nordstrom running shoes (Salomon, On, HOKA)
     if store == "nordstrom" or raw_vendor.lower() == "nordstrom":
@@ -78,8 +120,33 @@ def resolve_authentic_vendor(prod: Dict[str, Any]) -> str:
             return raw_vendor
         return "Luxury Timepieces"
 
+    # 7. Sephora Curated Beauty Brands
+    if store == "sephora" or "sephora" in url:
+        brand_map = {
+            "summer fridays": "Summer Fridays",
+            "gisou": "Gisou",
+            "haus labs": "Haus Labs",
+            "patrick ta": "PATRICK TA",
+            "saie": "Saie",
+            "tower 28": "Tower 28 Beauty",
+            "merit": "MERIT",
+            "westman atelier": "Westman Atelier",
+            "kosas": "Kosas",
+            "rhode": "rhode",
+            "glossier": "Glossier",
+            "makeup by mario": "MAKEUP BY MARIO",
+            "hourglass": "Hourglass",
+            "refy": "REFY"
+        }
+        for k, v in brand_map.items():
+            if k in raw_vendor.lower() or k in title.lower():
+                return v
+        if raw_vendor and raw_vendor.lower() not in ("sephora", "unknown"):
+            return raw_vendor
+        return "The Rare Avenue"
+
     # Default fallback - clean supplier names
-    if raw_vendor and raw_vendor.lower() not in ("jomashop", "nordstrom", "footlocker", "finishline", "jdsports", "unknown"):
+    if raw_vendor and raw_vendor.lower() not in ("jomashop", "nordstrom", "footlocker", "finishline", "jdsports", "katespadeoutlet", "unknown"):
         return raw_vendor
     return "The Rare Avenue"
 
@@ -124,7 +191,19 @@ def resolve_gender(prod: Dict[str, Any]) -> str:
     if re.search(r"\bunisex|gender inclusive\b", url):
         return "Unisex"
 
-    return "Women" if prod.get("source_store") == "jwpei" else "Men"
+    # 4. Department fallback by silhouette and maison (ADR 0023)
+    raw_v = (prod.get("vendor") or prod.get("brand") or "").lower()
+    raw_pt = str(prod.get("product_type") or "").lower()
+    bag_sil = resolve_luxury_bag_silhouette(prod)
+    is_bag = bool(bag_sil) or any(b in raw_pt for b in ["bag", "handbag", "crossbody", "tote", "satchel", "shoulder", "clutch"]) or any(b in title for b in ["bag", "handbag", "crossbody", "tote", "satchel", "shoulder", "clutch"])
+
+    if is_bag or prod.get("source_store") in ("jwpei", "sephora", "katespade") or any(b in raw_v for b in ["tory burch", "marc jacobs", "kurt geiger", "kate spade", "jw pei", "coach"]):
+        return "Women"
+
+    if raw_pt in ("sunglasses", "eyewear") or "sunglass" in title:
+        return "Unisex"
+
+    return "Men"
 
 
 def is_wallet_product(prod: Dict[str, Any]) -> bool:
@@ -136,6 +215,16 @@ def is_wallet_product(prod: Dict[str, Any]) -> bool:
     raw_pt = str(prod.get("product_type") or "").strip().lower()
     title = str(prod.get("title") or "").strip().lower()
     text = f"{raw_pt} {title}".lower()
+
+    # Primary bag silhouettes without explicit wallet terms are bags, not wallets
+    primary_bag_terms = ["crossbody", "tote", "shoulder", "satchel", "backpack", "bucket", "hobo", "messenger"]
+    explicit_wallet_terms = [
+        "wallet", "billfold", "card case", "cardcase", "cardholder", "card holder",
+        "coin purse", "money clip", "passcase", "wristlet", "passport case", "passport cover",
+        "passport wallet", "magsafe", "key pouch", "key case"
+    ]
+    if any(b in text for b in primary_bag_terms) and not any(w in text for w in explicit_wallet_terms):
+        return False
 
     wallet_terms = [
         "wallet", "billfold", "card case", "cardcase", "cardholder", "card holder",
@@ -169,7 +258,29 @@ def resolve_luxury_bag_silhouette(prod: Dict[str, Any]) -> Optional[str]:
         return None
     if store == "michaelkors" and (raw_pt in ("Sandals", "Sneakers", "Sunglasses", "Shoes", "Flats", "Belts", "Boots", "Apparel") or prod.get("source_sku") in ("MK0017", "MK0018")):
         return None
-    if store not in ("coach", "jwpei", "michaelkors") and not any(k in text for k in ["bag", "tote", "crossbody", "wallet", "backpack", "clutch", "satchel", "pouch", "wristlet", "card case", "cardholder", "billfold"]):
+
+    # Exclude leather care, cleaning, sprays, protectors, and small jewelry accessories with word boundary
+    care_and_acc_regex = r"\b(cleaner|protector|spray|polish|conditioner|care kit|refresher|stain remover|waterproof|umbrella|perfume|fragrance|jewelry|earring|earrings|bracelet|bracelets|necklace|necklaces)\b"
+    if re.search(care_and_acc_regex, text):
+        return None
+
+    # Standalone keychains and key rings (guard against bags, wallets, and card cases)
+    if re.search(r"\b(keychain|keychains|key ring|key rings)\b", text):
+        if not any(b in text for b in ["bag", "tote", "crossbody", "shoulder", "satchel", "carryall", "backpack", "bucket", "hobo", "messenger", "pouch", "clutch", "evening", "vanity", "wallet", "card case", "cardcase", "cardholder", "card holder", "coin purse", "billfold", "wristlet"]):
+            return None
+
+    # Standalone bag charms / key charms (guard against bags with decorative charms)
+    if re.search(r"\b(bag charm|bag charms|key charm|key charms)\b", text):
+        text_without_charm = re.sub(r"\b(bag charm|bag charms|key charm|key charms)\b", "", text)
+        if not any(b in text_without_charm for b in ["bag", "tote", "crossbody", "shoulder", "satchel", "carryall", "backpack", "bucket", "hobo", "messenger", "pouch", "clutch", "evening", "vanity"]):
+            return None
+
+    # Standalone charms and rings (guard against 'fringe' and bags with decorative charms)
+    if re.search(r"\b(charm|charms|ring|rings)\b", text):
+        if not any(b in text for b in ["bag", "tote", "crossbody", "shoulder", "satchel", "carryall", "backpack", "wallet", "clutch", "pouch", "vanity"]):
+            return None
+
+    if store not in ("coach", "jwpei", "michaelkors", "katespade") and not any(k in text for k in ["bag", "tote", "crossbody", "wallet", "backpack", "clutch", "satchel", "pouch", "wristlet", "card case", "cardholder", "billfold"]):
         return None
 
     # 1. Wallets & Small Leather Goods (Evaluated first to prevent wristlets/card cases matching bags)
@@ -215,8 +326,25 @@ def resolve_product_type(prod: Dict[str, Any]) -> str:
     title = str(prod.get("title", "")).lower()
     text = f"{raw_pt} {title}".lower()
 
-    if store == "jomashop" or (bool(re.search(r"\bwatches?\b", text)) and "watch hunger stop" not in text):
+    if store == "sephora":
+        if raw_pt:
+            return raw_pt
+        cat = (prod.get("specifications") or {}).get("Category")
+        if cat:
+            return str(cat).strip()
+        return "Beauty & Cosmetics"
+
+    if store == "jomashop":
+        if raw_pt == "Sunglasses" or any(w in text for w in ["sunglass", "sunglasses", "eyewear"]):
+            return "Sunglasses"
         return "Watches"
+
+    if bool(re.search(r"\bwatches?\b", text)) and "watch hunger stop" not in text:
+        return "Watches"
+
+    care_terms = ["cleaner", "protector", "spray", "polish", "conditioner", "care kit", "stain remover", "refresher", "waterproof"]
+    if any(k in text for k in care_terms):
+        return "Product Care & Accessories"
 
     # Check luxury bag silhouette first for bag stores / bag products
     bag_sil = resolve_luxury_bag_silhouette(prod)
@@ -264,12 +392,120 @@ def resolve_product_type(prod: Dict[str, Any]) -> str:
     return "Accessories"
 
 
+def extract_variant_color(v: Dict[str, Any]) -> Optional[str]:
+    """Extract authentic color name from variant metadata across all dropship formats."""
+    # 0. Sephora explicit variation value
+    if v.get("variation_type") == "Color" and v.get("variation_value"):
+        val = str(v["variation_value"]).strip()
+        if val and not val.isdigit() and len(val) > 1:
+            return val
+
+    # 1. Direct color field
+    if v.get("color") and isinstance(v["color"], str) and v["color"].strip():
+        return v["color"].strip()
+
+    # 2. From option_values array
+    for ov in v.get("option_values") or []:
+        if isinstance(ov, dict):
+            opt_name = (ov.get("option_name") or ov.get("name") or "").strip().lower()
+            if opt_name in ("color", "colour"):
+                val = ov.get("name") or ov.get("value")
+                if val and isinstance(val, str) and val.strip():
+                    return val.strip()
+
+    # 3. From selectedOptions array (Shopify GraphQL format)
+    for so in v.get("selectedOptions") or []:
+        if isinstance(so, dict):
+            opt_name = (so.get("name") or "").strip().lower()
+            if opt_name in ("color", "colour"):
+                val = so.get("value")
+                if val and isinstance(val, str) and val.strip():
+                    return val.strip()
+
+    # 4. Check if title contains a color part after delimiter, e.g. "US 6 / UK 4 - Black"
+    v_title = str(v.get("title") or "").strip()
+    if " - " in v_title:
+        parts = v_title.split(" - ")
+        candidate = parts[-1].strip()
+        if candidate and not re.match(r"^(us|uk|eu)?\s*\d+(\.\d+)?", candidate, re.IGNORECASE):
+            return candidate
+
+    # 5. If title itself is not a generic size / default title, consider it
+    if v_title and not re.match(r"^(us|uk|eu)?\s*\d+(\.\d+)?", v_title, re.IGNORECASE):
+        if v_title.lower() not in ("default title", "default", "standard", "one size"):
+            return v_title
+
+    return None
+
+
+COLOR_FAMILY_PATTERNS: List[Tuple[str, str]] = [
+    ("Black", r"\b(black|noir|nero|ebony|onyx|black croc|jet black)\b"),
+    ("White", r"\b(white|blanc|bianco|chalk|sail|ivory|cream|snow|off-white|off white|eggshell|white croc)\b"),
+    ("Brown", r"\b(brown|marron|cognac|camel|walnut|chocolate|espresso|chestnut|mahogany|caramel|cedar|toffee|mocha|saddle|whiskey)\b"),
+    ("Beige", r"\b(beige|sand|taupe|nude|tan|oatmeal|biscuit|khaki|wheat|linen|buff|sesame|ecru|stone)\b"),
+    ("Grey", r"\b(grey|gray|gris|smoke|heather|fog|slate|charcoal|anthracite|ash|pewter|graphite)\b"),
+    ("Silver", r"\b(silver|chrome|argent|platinum|steel|stainless|aluminum)\b"),
+    ("Gold", r"\b(gold|golden|gilt|brass|bronze|champagne)\b"),
+    ("Blue", r"\b(blue|bleu|navy|cobalt|royal|azure|sky|teal|cyan|indigo|sapphire|cerulean|marine|ocean|midnight|aqua|turquoise|denim)\b"),
+    ("Green", r"\b(green|vert|olive|moss|sage|lime|mint|forest|emerald|fir|jade|pine|pistachio|cypress|spruce)\b"),
+    ("Red", r"\b(red|rouge|burgundy|maroon|crimson|wine|bordeaux|ruby|cherry|scarlet|garnet|merlot|oxblood|dates)\b"),
+    ("Pink", r"\b(pink|blush|coral|peach|salmon|magenta|fuchsia|rose|particle rose)\b"),
+    ("Yellow", r"\b(yellow|amber|mustard|sunflower|citron|volt)\b"),
+    ("Orange", r"\b(orange|rust|tangerine|terracotta|apricot)\b"),
+    ("Multi", r"\b(multi|multicolor|multi-color|print|pattern|floral|camo|two-tone|two tone|striped|tie-dye|rainbow)\b"),
+]
+
+
+def resolve_color_family(raw_color: str, title: str = "") -> List[str]:
+    """Resolve raw variant color string or product title into standardized luxury color families."""
+    combined = f"{raw_color} {title}".lower()
+    families: List[str] = []
+
+    if "rose gold" in combined:
+        families.extend(["Gold", "Pink"])
+
+    for family, pattern in COLOR_FAMILY_PATTERNS:
+        if family in families:
+            continue
+        if raw_color and re.search(pattern, raw_color.lower()):
+            families.append(family)
+
+    if not families and title:
+        for family, pattern in COLOR_FAMILY_PATTERNS:
+            if family in families:
+                continue
+            if re.search(pattern, title.lower()):
+                families.append(family)
+
+    return families[:2] if families else ["Multi"]
+
+
+def is_product_delisted(prod: Dict[str, Any]) -> bool:
+    """
+    Pure functional evaluator to determine whether a catalog product is confirmed delisted.
+    Adheres to ADR 0015 and ADR 0021.
+    """
+    try:
+        strikes = int(prod.get("delist_strikes", 0) or 0)
+    except (ValueError, TypeError):
+        strikes = 0
+
+    return bool(
+        prod.get("supplier_delisted")
+        or prod.get("delisted")
+        or strikes >= 2
+        or prod.get("status") == "not_found"
+        or prod.get("availability") == "delisted"
+    )
+
+
 def generate_taxonomy_tags(prod: Dict[str, Any], vendor: str, product_type: str, gender: str) -> List[str]:
     """Generate high-precision tags for automated Shopify Smart Collections."""
+    store = (prod.get("source_store") or prod.get("store") or "").lower()
     tags = list(prod.get("tags") or [])
     
     # Clean out any old retailer supplier tags
-    tags = [t for t in tags if not any(leak in t.lower() for leak in ["jomashop", "nordstrom", "footlocker", "finishline", "jdsports"])]
+    tags = [t for t in tags if not any(leak in t.lower() for leak in ["jomashop", "nordstrom", "footlocker", "finishline", "jdsports", "katespadeoutlet"])]
 
     # 1. Master Category Tags & Silhouettes
     bag_sil = resolve_luxury_bag_silhouette(prod)
@@ -282,6 +518,7 @@ def generate_taxonomy_tags(prod: Dict[str, Any], vendor: str, product_type: str,
             "Wallets & Small Leather Goods",
             "Wallets",
             "Wallets & Accessories",
+            "Wallets & Leather Goods",
             "Accessories",
             "Small Leather Goods"
         ]
@@ -323,6 +560,20 @@ def generate_taxonomy_tags(prod: Dict[str, Any], vendor: str, product_type: str,
         tags.extend(["Accessories", "Wallets & Accessories", product_type])
     elif product_type in ("Sunglasses", "Eyewear"):
         tags.extend(["Eyewear", "Sunglasses", "Designer Eyewear", "Designer Sunglasses"])
+    elif store == "sephora" or any(b in vendor.lower() for b in ["summer fridays", "gisou", "haus labs", "patrick ta", "saie", "tower 28", "merit", "westman atelier", "kosas", "rhode", "glossier", "makeup by mario", "hourglass", "refy"]):
+        tags.extend(["Beauty", "Cosmetics", "Luxury Beauty"])
+        cat = str((prod.get("specifications") or {}).get("Category", "")).lower()
+        pt_down = product_type.lower()
+        if "skin" in cat or "skin" in pt_down or any(w in pt_down for w in ["balm", "moisturizer", "serum", "cleaner", "mask"]):
+            tags.append("Skincare")
+        if "makeup" in cat or any(w in pt_down for w in ["blush", "foundation", "bronzer", "lipstick", "lip ", "eyebrow", "mascara", "highlighter", "powder", "tint", "eye"]):
+            tags.append("Makeup")
+        if "hair" in cat or "fragrance" in cat or any(w in pt_down for w in ["hair", "mist", "fragrance"]):
+            tags.append("Haircare")
+        if "set" in cat or "set" in pt_down or "mini" in pt_down:
+            tags.append("Value & Gift Sets")
+        if "brush" in pt_down or "tool" in pt_down:
+            tags.append("Brushes & Applicators")
 
     # 2. Gender Department Tags
     if gender == "Men":
@@ -343,23 +594,41 @@ def generate_taxonomy_tags(prod: Dict[str, Any], vendor: str, product_type: str,
         tags.append("Coach")
     elif vendor in ("Michael Kors", "MICHAEL Michael Kors"):
         tags.extend(["Michael Kors", "MICHAEL Michael Kors"])
+    elif vendor == "Kate Spade":
+        tags.extend(["Kate Spade New York", "Brand:Kate Spade New York"])
 
     # 4. Sizing Category for Shoes
     sizing_cat = prod.get("sizing_category")
     if sizing_cat:
         tags.append(sizing_cat)
 
-    # 5. Ready to Ship & Instant Ship Tags for In-Stock Products
-    is_in_stock = (
-        prod.get("availability") == "in_stock"
-        or prod.get("in_stock") is True
-        or any(
-            (isinstance(v, dict) and (v.get("available") is True or (v.get("inventory_quantity") or 0) > 0 or (v.get("inventoryQuantity") or 0) > 0))
-            for v in (prod.get("variants") or [])
-        )
-    )
-    if is_in_stock:
-        tags.extend(["Ready to Ship", "instant-ship"])
+    # 5. Standard Luxury Color Family Tags (Option A: Color:Black, Color:Brown, etc.)
+    color_families: set = set()
+    variants = prod.get("variants") or []
+    for v in variants:
+        if isinstance(v, dict):
+            c = extract_variant_color(v)
+            if c:
+                for fam in resolve_color_family(c, prod.get("title", "")):
+                    color_families.add(fam)
+    if not color_families:
+        for fam in resolve_color_family("", prod.get("title", "")):
+            color_families.add(fam)
+    for fam in color_families:
+        tags.append(f"Color:{fam}")
+
+    # 6. Ready to Ship tags are managed exclusively by manual curation
+    # (Disabled automatic injection of Ready to Ship and instant-ship on all in-stock catalog products)
+
+    # 7. Delisted Operational Tags & Active Shipping Tag Stripping (ADR 0015, ADR 0021)
+    is_delisted = is_product_delisted(prod)
+    if is_delisted:
+        shipping_tags = {"ready to ship", "instant-ship", "manual-instant-ship-active"}
+        tags = [t for t in tags if t.lower() not in shipping_tags]
+        if "supplier-delisted" not in tags:
+            tags.append("supplier-delisted")
+    else:
+        tags = [t for t in tags if t.lower() != "supplier-delisted"]
 
     return sorted(list(set(tags)))
 
@@ -386,46 +655,6 @@ BROKEN_IMAGE_URLS = {
     "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1773380505326-uhmm4qxo338.jpg?v=1773387755",
     "https://cdn2.jomashop.com/media/catalog/product/m/i/michael-kors-billie-chronograph-quartz-mens-watch-mk9254.jpg",
 }
-
-
-def extract_variant_color(v: Dict[str, Any]) -> Optional[str]:
-    """Extract authentic color name from variant metadata across all dropship formats."""
-    # 1. Direct color field
-    if v.get("color") and isinstance(v["color"], str) and v["color"].strip():
-        return v["color"].strip()
-
-    # 2. From option_values array
-    for ov in v.get("option_values") or []:
-        if isinstance(ov, dict):
-            opt_name = (ov.get("option_name") or ov.get("name") or "").strip().lower()
-            if opt_name in ("color", "colour"):
-                val = ov.get("name") or ov.get("value")
-                if val and isinstance(val, str) and val.strip():
-                    return val.strip()
-
-    # 3. From selectedOptions array (Shopify GraphQL format)
-    for so in v.get("selectedOptions") or []:
-        if isinstance(so, dict):
-            opt_name = (so.get("name") or "").strip().lower()
-            if opt_name in ("color", "colour"):
-                val = so.get("value")
-                if val and isinstance(val, str) and val.strip():
-                    return val.strip()
-
-    # 4. Check if title contains a color part after delimiter, e.g. "US 6 / UK 4 - Black"
-    v_title = str(v.get("title") or "").strip()
-    if " - " in v_title:
-        parts = v_title.split(" - ")
-        candidate = parts[-1].strip()
-        if candidate and not re.match(r"^(us|uk|eu)?\s*\d+(\.\d+)?", candidate, re.IGNORECASE):
-            return candidate
-
-    # 5. If title itself is not a generic size / default title, consider it
-    if v_title and not re.match(r"^(us|uk|eu)?\s*\d+(\.\d+)?", v_title, re.IGNORECASE):
-        if v_title.lower() not in ("default title", "default", "standard", "one size"):
-            return v_title
-
-    return None
 
 
 def resolve_variant_image(v: Dict[str, Any], prod: Dict[str, Any], broken_urls: Optional[set] = None) -> Optional[str]:
@@ -597,15 +826,29 @@ def resolve_options_and_variants(
     source_sku = prod.get("source_sku") or prod.get("id") or ""
     bag_sil = resolve_luxury_bag_silhouette(prod)
 
-    # 1. Single or No-Variant fallback (e.g. Bags with One Size)
+    store = (prod.get("source_store") or prod.get("store") or "").lower()
+    vendor = prod.get("vendor") or prod.get("brand") or resolve_authentic_vendor(prod)
+
+    is_delisted = is_product_delisted(prod)
+
+    base_source_price = _safe_float(source_price) or _safe_float(prod.get("source_price")) or _safe_float(prod.get("price_current"))
+    base_comp_price = _safe_float(compare_source) or _safe_float(prod.get("source_compare_at_price")) or _safe_float(prod.get("compare_at_price_source"))
+
+    # 1. Single or No-Variant fallback (e.g. Bags with One Size or Single Beauty Tools)
+    if store == "sephora" and len(variants_raw) == 1:
+        v0 = variants_raw[0] if isinstance(variants_raw[0], dict) else {}
+        vt = str(v0.get("variation_type") or "")
+        vv = str(v0.get("variation_value") or "").strip()
+        if vt in ("None", "") or vv.isdigit() or vv == "":
+            variants_raw = []
+
     if not variants_raw or not isinstance(variants_raw, list) or len(variants_raw) == 0:
-        inr_price = float(round(source_price * forex_rate))
-        compare_str = None
-        if compare_source and float(compare_source) > source_price:
-            compare_str = f"{float(round(float(compare_source) * forex_rate)):.2f}"
+        comp_arg = base_comp_price if base_comp_price > 0.0 else None
+        inr_price, compare_price_val = resolve_storefront_pricing(base_source_price, comp_arg, store, product_type, forex_rate, vendor=vendor)
+        compare_str = f"{compare_price_val:.2f}" if compare_price_val is not None else None
 
         sku_val = f"RARE-{source_sku}" if not str(source_sku).startswith("RARE-") else source_sku
-        is_in_stock = (prod.get("availability") == "in_stock") or (prod.get("in_stock") is True)
+        is_in_stock = not is_delisted and ((prod.get("availability") == "in_stock") or (prod.get("in_stock") is True))
         
         primary_img = (prod.get("images") or [None])[0] or prod.get("image") or prod.get("image_url")
         single_var_dict = {
@@ -640,10 +883,51 @@ def resolve_options_and_variants(
                     if clean_name and clean_name not in ordered_dim_names:
                         ordered_dim_names.append(clean_name)
 
+    unique_colors = {
+        extract_variant_color(v)
+        for v in variants_raw
+        if isinstance(v, dict) and extract_variant_color(v)
+    }
+    meaningful_colors = {
+        c for c in unique_colors
+        if c.lower() not in ("default", "default title", "standard", "one size")
+    }
+
     # If no option_values or option names discovered, infer from product attributes
     if not ordered_dim_names:
         if product_type == "Watches":
-            ordered_dim_names = ["Case Diameter"]
+            has_color = len(meaningful_colors) > 1 or any(v.get("color") for v in variants_raw if isinstance(v, dict))
+            has_diameter = any(v.get("case_diameter") for v in variants_raw if isinstance(v, dict)) or bool((prod.get("specifications") or {}).get("Case Diameter")) or bool(prod.get("case_diameter"))
+            if has_diameter and has_color:
+                ordered_dim_names = ["Case Diameter", "Color"]
+            elif has_color:
+                ordered_dim_names = ["Color"]
+            else:
+                ordered_dim_names = ["Case Diameter"]
+        elif store == "sephora":
+            valid_shades = set()
+            for v in variants_raw:
+                if isinstance(v, dict):
+                    vt = v.get("variation_type")
+                    vv = str(v.get("variation_value") or "").strip()
+                    if vt == "Color" and vv and not vv.isdigit():
+                        valid_shades.add(vv)
+                    elif vt != "Size" and vv and not vv.isdigit():
+                        sz = str(v.get("size") or "").strip()
+                        if vv != sz:
+                            valid_shades.add(vv)
+
+            unique_sizes = {str(v.get("size") or "").strip() for v in variants_raw if isinstance(v, dict)}
+            unique_sizes.discard("")
+
+            if len(valid_shades) > 1 and len(unique_sizes) > 1:
+                ordered_dim_names = ["Color", "Size"]
+            elif len(valid_shades) > 1:
+                ordered_dim_names = ["Color"]
+            elif len(unique_sizes) > 1 or any(v.get("variation_type") == "Size" for v in variants_raw if isinstance(v, dict)):
+                ordered_dim_names = ["Size"]
+            else:
+                ordered_dim_names = ["Option"]
         else:
             has_color = any(v.get("color") for v in variants_raw if isinstance(v, dict))
             has_size = any(v.get("size") for v in variants_raw if isinstance(v, dict))
@@ -664,8 +948,28 @@ def resolve_options_and_variants(
                 else:
                     ordered_dim_names = ["Option"]
 
+    # Ensure Color dimension is included if variants have distinct colors and no color dimension exists yet
+    has_any_color_dim = any("color" in d.lower() or "colour" in d.lower() for d in ordered_dim_names)
+    if not has_any_color_dim and len(meaningful_colors) > 1 and len(ordered_dim_names) < 3:
+        ordered_dim_names.append("Color")
+
     # Limit to maximum 3 options (Shopify GraphQL limit)
     ordered_dim_names = ordered_dim_names[:3]
+
+    # Defensive Consolidation: collapse dual or legacy size dimensions into a single "Size" dimension preferring UK
+    has_us_dim = any("size (us)" in d.lower() for d in ordered_dim_names)
+    has_uk_dim = any("size (uk)" in d.lower() for d in ordered_dim_names)
+    dual_sizing_detected = has_us_dim or has_uk_dim
+    if dual_sizing_detected:
+        consolidated_dims: List[str] = []
+        for d in ordered_dim_names:
+            if "size" in d.lower():
+                if "Size" not in consolidated_dims:
+                    consolidated_dims.append("Size")
+            else:
+                if d not in consolidated_dims:
+                    consolidated_dims.append(d)
+        ordered_dim_names = consolidated_dims[:3]
 
     has_color_dim = "Color" in ordered_dim_names
 
@@ -699,9 +1003,19 @@ def resolve_options_and_variants(
         if isinstance(v.get("option_values"), list):
             for ov in v["option_values"]:
                 if isinstance(ov, dict):
-                    on = "Color" if ov.get("option_name", "").strip() in ("Color", "Colour") else ov.get("option_name", "").strip()
+                    raw_name = ov.get("option_name") or ""
+                    on = "Color" if raw_name.strip() in ("Color", "Colour") else raw_name.strip()
                     if on:
                         var_opt_map[on] = str(ov.get("name") or "").strip()[:40]
+
+        # Defensive mapping: if dual size options exist in raw data, collapse into Size preferring UK
+        if dual_sizing_detected or (("Size (UK)" in var_opt_map or "Size (US)" in var_opt_map) and "Size" in ordered_dim_names):
+            uk_val = var_opt_map.get("Size (UK)")
+            us_val = var_opt_map.get("Size (US)")
+            if uk_val:
+                var_opt_map["Size"] = uk_val
+            elif us_val:
+                var_opt_map["Size"] = us_val
 
         # Fill any missing dimensions from variant fields
         row_values: List[str] = []
@@ -711,11 +1025,31 @@ def resolve_options_and_variants(
             val = var_opt_map.get(d)
             if not val:
                 if d == "Color":
-                    val = str(v.get("color") or (v.get("title") if not v.get("size") else "") or "Default").strip()[:40]
+                    if store == "sephora":
+                        vv = str(v.get("variation_value") or "").strip()
+                        if vv and not vv.isdigit():
+                            val = vv[:40]
+                        elif vv and vv.isdigit():
+                            val = "Limited Edition"
+                        else:
+                            val = str(extract_variant_color(v) or v.get("color") or "Default").strip()[:40]
+                    else:
+                        val = str(extract_variant_color(v) or v.get("color") or (v.get("title") if not v.get("size") else "") or "Default").strip()[:40]
                 elif d == "Size":
-                    val = str(v.get("size") or v.get("title") or "Standard").strip()[:40]
+                    if store == "sephora":
+                        raw_sz = str(v.get("size") or "").strip()
+                        if raw_sz:
+                            norm_sz = re.sub(r'\s*/\s*', ' / ', raw_sz)
+                            norm_sz = re.sub(r'(?i)\bml\b', 'mL', norm_sz)
+                            norm_sz = re.sub(r'\b0\.2\s*oz\b', '0.20 oz', norm_sz)
+                            val = norm_sz[:40]
+                        else:
+                            val = "Full Size" if "Color" in ordered_dim_names else "Standard"
+                    else:
+                        val = str(v.get("size") or v.get("title") or "Standard").strip()[:40]
                 elif d == "Case Diameter":
-                    val = str(v.get("case_diameter") or v.get("size") or v.get("title") or "Standard").strip()[:40]
+                    spec_diam = (prod.get("specifications") or {}).get("Case Diameter")
+                    val = str(v.get("case_diameter") or spec_diam or (v.get("size") if not (extract_variant_color(v) and extract_variant_color(v) == v.get("size")) else "") or (v.get("title") if not (extract_variant_color(v) and extract_variant_color(v) == v.get("title")) else "") or "Standard").strip()[:40]
                 else:
                     val = str(v.get("title") or "Default").strip()[:40]
             if not val:
@@ -740,15 +1074,57 @@ def resolve_options_and_variants(
             seen_variants[row_key] = (chosen_v, opt_val_list, chosen_img)
 
     # 4. Construct ProductSet variant inputs
+    # OOS Variant Price Floor Alignment (Option A): Pre-calculate minimum in-stock variant price across all variants
+    min_instock_inr_price: Optional[float] = None
+    if not is_delisted:
+        instock_prices = []
+        for row_key, (v_check, _, _) in seen_variants.items():
+            if "in_stock" in v_check:
+                is_stk = bool(v_check.get("in_stock"))
+            elif v_check.get("availability") is not None:
+                is_stk = (v_check.get("availability") == "in_stock")
+            else:
+                is_stk = (prod.get("availability") == "in_stock") or (prod.get("in_stock") is True)
+            if is_stk:
+                p_src = _safe_float(v_check.get("source_price")) or _safe_float(v_check.get("price_source"))
+                if p_src <= 0.0:
+                    p_src = base_source_price
+                if p_src > 0.0:
+                    p_comp = _safe_float(v_check.get("source_compare_at_price")) or _safe_float(v_check.get("compare_at_price_source"))
+                    p_comp_float = p_comp if p_comp > 0.0 else (base_comp_price if base_comp_price > 0.0 else None)
+                    p_inr, _ = resolve_storefront_pricing(p_src, p_comp_float, store, product_type, forex_rate, vendor=vendor)
+                    instock_prices.append(p_inr)
+        if instock_prices:
+            min_instock_inr_price = min(instock_prices)
+
     variant_inputs: List[Dict[str, Any]] = []
     for row_key, (v, opt_val_list, v_img) in seen_variants.items():
-        v_source_price = float(v.get("source_price") or prod.get("source_price") or source_price or 0.0)
-        v_inr_price = float(round(v_source_price * forex_rate))
+        v_raw_price = _safe_float(v.get("source_price")) or _safe_float(v.get("price_source"))
+        v_source_price = v_raw_price if v_raw_price > 0.0 else base_source_price
 
-        v_compare_source = v.get("source_compare_at_price") or compare_source
+        v_raw_comp = _safe_float(v.get("source_compare_at_price")) or _safe_float(v.get("compare_at_price_source"))
+        v_compare_source_float = v_raw_comp if v_raw_comp > 0.0 else (base_comp_price if base_comp_price > 0.0 else None)
+
+        v_inr_price, v_calc_compare = resolve_storefront_pricing(
+            v_source_price, v_compare_source_float, store, product_type, forex_rate, vendor=vendor
+        )
+
+        if is_delisted:
+            v_is_stock = False
+        elif "in_stock" in v:
+            v_is_stock = bool(v.get("in_stock"))
+        elif v.get("availability") is not None:
+            v_is_stock = (v.get("availability") == "in_stock")
+        else:
+            v_is_stock = (prod.get("availability") == "in_stock") or (prod.get("in_stock") is True)
+
+        # OOS Price Floor: If variant is OOS and cheaper than lowest in-stock variant, clamp price to min in-stock price
+        if not v_is_stock and min_instock_inr_price is not None and v_inr_price < min_instock_inr_price:
+            v_inr_price = min_instock_inr_price
+
         v_compare_str = None
-        if v_compare_source and float(v_compare_source) > v_source_price:
-            v_compare_str = f"{float(round(float(v_compare_source) * forex_rate)):.2f}"
+        if v_calc_compare is not None and v_calc_compare > v_inr_price:
+            v_compare_str = f"{v_calc_compare:.2f}"
 
         v_sku = v.get("sku") or source_sku or ""
         if v_sku and not v_sku.startswith("RARE-"):
@@ -756,12 +1132,6 @@ def resolve_options_and_variants(
 
         v_barcode = v.get("barcode") or v.get("upc") or v.get("ean")
 
-        if "in_stock" in v:
-            v_is_stock = bool(v.get("in_stock"))
-        elif v.get("availability") is not None:
-            v_is_stock = (v.get("availability") == "in_stock")
-        else:
-            v_is_stock = (prod.get("availability") == "in_stock") or (prod.get("in_stock") is True)
         var_dict = {
             "optionValues": opt_val_list,
             "price": f"{v_inr_price:.2f}",
@@ -814,18 +1184,17 @@ def resolve_options_and_variants(
 
     # Edge case: if all variants were somehow pruned, provide fallback
     if not variant_inputs:
-        inr_price = float(round(source_price * forex_rate))
-        compare_str = None
-        if compare_source and float(compare_source) > source_price:
-            compare_str = f"{float(round(float(compare_source) * forex_rate)):.2f}"
+        comp_arg = base_comp_price if base_comp_price > 0.0 else None
+        inr_price, compare_price_val = resolve_storefront_pricing(base_source_price, comp_arg, store, product_type, forex_rate, vendor=vendor)
+        compare_str = f"{compare_price_val:.2f}" if compare_price_val is not None else None
         primary_img = (prod.get("images") or [None])[0] or prod.get("image") or prod.get("image_url")
         var_fallback = {
             "optionValues": [{"optionName": "Title", "name": "Default Title"}],
             "price": f"{inr_price:.2f}",
             "compareAtPrice": compare_str,
             "sku": f"RARE-{source_sku}",
-            "inventoryPolicy": "CONTINUE" if (prod.get("availability") == "in_stock") else "DENY",
-            "inventoryItem": {"tracked": False if (prod.get("availability") == "in_stock") else True}
+            "inventoryPolicy": "CONTINUE" if (not is_delisted and prod.get("availability") == "in_stock") else "DENY",
+            "inventoryItem": {"tracked": False if (not is_delisted and prod.get("availability") == "in_stock") else True}
         }
         if primary_img and isinstance(primary_img, str) and primary_img.startswith("http") and primary_img not in BROKEN_IMAGE_URLS:
             var_fallback["file"] = {
@@ -894,37 +1263,37 @@ def format_luxury_watch_description_html(prod: Dict[str, Any]) -> str:
             # Sanitize any accidental leak
             clean_val = str(val).replace("Jomashop", "The Rare Avenue").replace("jomashop", "The Rare Avenue")
             spec_rows.append(
-                f'<tr style="border-bottom: 1px solid #f0f0f0;">'
-                f'<td style="padding: 8px 12px; font-weight: 600; width: 38%; color: #4b5563;">{label}</td>'
-                f'<td style="padding: 8px 12px; color: #111827;">{clean_val}</td>'
+                f'<tr style="border-bottom: 1px solid rgba(0, 0, 0, 0.06);">'
+                f'<td style="padding: 12px 16px 12px 0; font-weight: 600; width: 38%; color: #888888; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; border: none; border-bottom: 1px solid rgba(0, 0, 0, 0.06);">{label}</td>'
+                f'<td style="padding: 12px 0; color: #1a1a1a; font-size: 13px; font-weight: 500; border: none; border-bottom: 1px solid rgba(0, 0, 0, 0.06);">{clean_val}</td>'
                 f'</tr>'
             )
             
     spec_table_html = "\n".join(spec_rows)
 
     return f'''<div class="luxury-watch-overview" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1a1a1a;">
-  <div class="watch-highlights" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px;">
-    <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px;">
-      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; font-weight: 600;">Movement</div>
-      <div style="font-size: 14px; font-weight: 600; color: #111827; margin-top: 2px;">{movement}</div>
+  <div class="watch-highlights" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0; border-top: 1px solid rgba(0,0,0,0.08); border-bottom: 1px solid rgba(0,0,0,0.08); background: #faf9f6; margin: 20px 0 24px 0; padding: 0;">
+    <div style="padding: 12px 14px; border-right: 1px solid rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: center;">
+      <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: #888888; font-weight: 700; margin-bottom: 4px;">Movement</div>
+      <div style="font-size: 12px; font-weight: 600; color: #1a1a1a; margin-top: 0; line-height: 1.35;">{movement}</div>
     </div>
-    <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px;">
-      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; font-weight: 600;">Case Diameter</div>
-      <div style="font-size: 14px; font-weight: 600; color: #111827; margin-top: 2px;">{case_diam}</div>
+    <div style="padding: 12px 14px; border-right: 1px solid rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: center;">
+      <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: #888888; font-weight: 700; margin-bottom: 4px;">Case Diameter</div>
+      <div style="font-size: 12px; font-weight: 600; color: #1a1a1a; margin-top: 0; line-height: 1.35;">{case_diam}</div>
     </div>
-    <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px;">
-      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; font-weight: 600;">Water Resistance</div>
-      <div style="font-size: 14px; font-weight: 600; color: #111827; margin-top: 2px;">{water_res}</div>
+    <div style="padding: 12px 14px; border-right: 1px solid rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: center;">
+      <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: #888888; font-weight: 700; margin-bottom: 4px;">Water Resistance</div>
+      <div style="font-size: 12px; font-weight: 600; color: #1a1a1a; margin-top: 0; line-height: 1.35;">{water_res}</div>
     </div>
-    <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px;">
-      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; font-weight: 600;">Crystal</div>
-      <div style="font-size: 14px; font-weight: 600; color: #111827; margin-top: 2px;">{crystal}</div>
+    <div style="padding: 12px 14px; display: flex; flex-direction: column; justify-content: center;">
+      <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: #888888; font-weight: 700; margin-bottom: 4px;">Crystal</div>
+      <div style="font-size: 12px; font-weight: 600; color: #1a1a1a; margin-top: 0; line-height: 1.35;">{crystal}</div>
     </div>
   </div>
 
-  <div class="watch-specifications" style="margin-top: 24px;">
-    <h3 style="font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 12px; border-bottom: 2px solid #e5e7eb; padding-bottom: 6px;">Technical Specifications</h3>
-    <table style="width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.5;">
+  <div class="watch-specifications" style="margin: 36px 0 32px 0;">
+    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #1a1a1a; margin-bottom: 14px; border: none; padding: 0;">Technical Specifications</h3>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.5; border-top: 1px solid rgba(0,0,0,0.08);">
       <tbody>
 {spec_table_html}
       </tbody>
@@ -932,7 +1301,7 @@ def format_luxury_watch_description_html(prod: Dict[str, Any]) -> str:
   </div>
 
   <details class="size-guide-accordion" style="margin: 24px 0 16px; padding: 12px 16px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff;">
-    <summary style="font-weight: 600; cursor: pointer; font-size: 14px; color: #111827;">📏 Watch Sizing &amp; Case Dimension Guide</summary>
+    <summary style="font-weight: 600; cursor: pointer; font-size: 14px; color: #111827;">Watch Sizing &amp; Case Dimension Guide</summary>
     <div style="margin-top: 12px;">
       <p style="font-size: 12px; color: #6b7280; margin-bottom: 8px;">Standard wrist circumference &amp; case diameter matching guide:</p>
       <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
@@ -1065,7 +1434,17 @@ def format_luxury_bag_description_html(prod: Dict[str, Any]) -> str:
     summary_match = re.search(r'<p class="product-summary">([\s\S]*?)</p>', raw_desc)
     existing_summary = summary_match.group(1).strip() if summary_match else ""
     
-    if existing_summary and len(existing_summary) > 20:
+    is_raw_bullet_dump = bool(
+        existing_summary and (
+            "Style No." in existing_summary or
+            "Zip-top closure" in existing_summary or
+            "credit card slots" in existing_summary.lower() or
+            "drop 7 1/2" in existing_summary or
+            ("lining" in existing_summary.lower() and "." not in existing_summary[:35])
+        )
+    )
+    
+    if existing_summary and len(existing_summary) > 20 and not is_raw_bullet_dump:
         summary_text = existing_summary
     else:
         summary_text = (
@@ -1092,9 +1471,9 @@ def format_luxury_bag_description_html(prod: Dict[str, Any]) -> str:
     spec_rows = []
     for lbl, val in clean_specs:
         spec_rows.append(
-            f'<tr style="border-bottom: 1px solid #f0f0f0;">'
-            f'<td style="padding: 8px 12px; font-weight: 600; width: 38%; color: #4b5563;">{lbl}</td>'
-            f'<td style="padding: 8px 12px; color: #111827;">{val}</td>'
+            f'<tr style="border-bottom: 1px solid rgba(0, 0, 0, 0.06);">'
+            f'<td style="padding: 12px 16px 12px 0; font-weight: 600; width: 38%; color: #888888; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; border: none; border-bottom: 1px solid rgba(0, 0, 0, 0.06);">{lbl}</td>'
+            f'<td style="padding: 12px 0; color: #1a1a1a; font-size: 13px; font-weight: 500; border: none; border-bottom: 1px solid rgba(0, 0, 0, 0.06);">{val}</td>'
             f'</tr>'
         )
     spec_table_html = "\n".join(spec_rows)
@@ -1115,42 +1494,12 @@ def format_luxury_bag_description_html(prod: Dict[str, Any]) -> str:
     _add_dim("Shoulder / Crossbody Strap Drop", strap_drop)
     _add_dim("Capacity Profile", capacity)
 
-    dim_table_html = "\n".join(dim_rows) if dim_rows else (
-        '<tr><td style="padding: 6px 10px; color: #6b7280;" colspan="2">Standard luxury sizing profile. Accommodates daily essentials.</td></tr>'
-    )
-
-    highlight_mat = material.split(",")[0].strip()[:30]
-    highlight_hw = hardware.split(",")[0].strip()[:30] if hardware else 'Luxury Custom'
-
-    return f'''<div class="luxury-bag-overview" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1a1a1a;">
-  <p class="product-summary" style="font-size: 14px; line-height: 1.6; color: #374151; margin-bottom: 20px;">{summary_text}</p>
-
-  <div class="bag-highlights" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px;">
-    <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px;">
-      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; font-weight: 600;">Silhouette</div>
-      <div style="font-size: 13px; font-weight: 600; color: #111827; margin-top: 2px;">{sil}</div>
-    </div>
-    <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px;">
-      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; font-weight: 600;">Material</div>
-      <div style="font-size: 13px; font-weight: 600; color: #111827; margin-top: 2px;">{highlight_mat}</div>
-    </div>
-    <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px;">
-      <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; font-weight: 600;">Hardware</div>
-      <div style="font-size: 13px; font-weight: 600; color: #111827; margin-top: 2px;">{highlight_hw}</div>
-    </div>
-  </div>
-
-  <div class="bag-specifications" style="margin-top: 24px;">
-    <h3 style="font-size: 15px; font-weight: 700; color: #111827; margin-bottom: 12px; border-bottom: 2px solid #e5e7eb; padding-bottom: 6px;">Product Specifications</h3>
-    <table style="width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.5;">
-      <tbody>
-{spec_table_html}
-      </tbody>
-    </table>
-  </div>
-
+    accordion_html = ""
+    if dim_rows:
+        dim_table_html = "\n".join(dim_rows)
+        accordion_html = f'''
   <details class="size-guide-accordion" style="margin: 24px 0 16px; padding: 12px 16px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff;">
-    <summary style="font-weight: 600; cursor: pointer; font-size: 14px; color: #111827;">📏 Bag Dimensions &amp; Fit Guide</summary>
+    <summary style="font-weight: 600; cursor: pointer; font-size: 14px; color: #111827;">Bag Dimensions &amp; Fit Guide</summary>
     <div style="margin-top: 12px;">
       <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
         <tbody>
@@ -1158,10 +1507,41 @@ def format_luxury_bag_description_html(prod: Dict[str, Any]) -> str:
         </tbody>
       </table>
     </div>
-  </details>
+  </details>'''
 
-  <div class="authenticity-guarantee" style="margin-top: 16px; padding: 12px 16px; background: #fdfbf7; border: 1px solid #f3ebd8; border-radius: 8px; font-size: 12px; color: #785e28;">
-    <strong>The Rare Avenue Authenticity Guarantee:</strong> 100% genuine luxury designer piece sourced directly from authentic manufacturer collections, accompanied by original documentation and verified authenticity guarantee.
+    highlight_mat = material.split(",")[0].strip()[:30]
+    highlight_hw = hardware.split(",")[0].strip()[:30] if hardware else 'Luxury Custom'
+
+    return f'''<div class="luxury-bag-overview" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1a1a1a;">
+  <p class="product-summary" style="font-size: 13px; line-height: 1.65; color: #444444; margin-bottom: 20px;">{summary_text}</p>
+
+  <div class="bag-highlights" style="display: flex; flex-direction: row; align-items: stretch; border-top: 1px solid rgba(0,0,0,0.08); border-bottom: 1px solid rgba(0,0,0,0.08); background: #faf9f6; margin: 20px 0 24px 0; padding: 0;">
+    <div style="flex: 1 1 0; min-width: 0; padding: 12px 14px; border-right: 1px solid rgba(0,0,0,0.06); text-align: left; display: flex; flex-direction: column; justify-content: center;">
+      <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: #888888; font-weight: 700; margin-bottom: 4px;">Silhouette</div>
+      <div style="font-size: 12px; font-weight: 600; color: #1a1a1a; margin-top: 0; line-height: 1.35;">{sil}</div>
+    </div>
+    <div style="flex: 1 1 0; min-width: 0; padding: 12px 14px; border-right: 1px solid rgba(0,0,0,0.06); text-align: left; display: flex; flex-direction: column; justify-content: center;">
+      <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: #888888; font-weight: 700; margin-bottom: 4px;">Material</div>
+      <div style="font-size: 12px; font-weight: 600; color: #1a1a1a; margin-top: 0; line-height: 1.35;">{highlight_mat}</div>
+    </div>
+    <div style="flex: 1 1 0; min-width: 0; padding: 12px 14px; text-align: left; display: flex; flex-direction: column; justify-content: center;">
+      <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: #888888; font-weight: 700; margin-bottom: 4px;">Hardware</div>
+      <div style="font-size: 12px; font-weight: 600; color: #1a1a1a; margin-top: 0; line-height: 1.35;">{highlight_hw}</div>
+    </div>
+  </div>
+
+  <div class="bag-specifications" style="margin: 36px 0 32px 0;">
+    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #1a1a1a; margin-bottom: 14px; border: none; padding: 0;">Product Specifications</h3>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.5; border-top: 1px solid rgba(0, 0, 0, 0.08);">
+      <tbody>
+{spec_table_html}
+      </tbody>
+    </table>
+  </div>
+{accordion_html}
+
+  <div class="authenticity-guarantee" style="margin-top: 20px; padding: 12px 16px; background: #faf9f6; border: 1px solid rgba(0,0,0,0.08); font-size: 11px; line-height: 1.5; color: #555555;">
+    <strong style="font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #1a1a1a;">The Rare Avenue Authenticity Guarantee:</strong> 100% genuine luxury designer piece sourced directly from authentic manufacturer collections, accompanied by original documentation and verified authenticity guarantee.
   </div>
 </div>'''
 
@@ -1272,9 +1652,25 @@ def prepare_product_set_payload(prod: Dict[str, Any], forex_rate: Optional[float
             "contentType": "IMAGE"
         })
 
-    is_in_stock = (prod.get("availability") == "in_stock") or (prod.get("in_stock") is True) or any(
-        (v.get("inventoryPolicy") == "CONTINUE") for v in variants
-    )
+    is_delisted = is_product_delisted(prod)
+
+    if is_delisted:
+        for v in variants:
+            v["inventoryPolicy"] = "DENY"
+            v["inventoryItem"] = {"tracked": True}
+        is_active = False
+    else:
+        is_in_stock = (prod.get("availability") == "in_stock") or (prod.get("in_stock") is True) or any(
+            (v.get("inventoryPolicy") == "CONTINUE") for v in variants
+        )
+        # Strict Zero-Image Rule: Any product without verified images MUST be DRAFT
+        raw_images = prod.get("images") or []
+        has_valid_images = bool(
+            (media_files and len(media_files) > 0) or
+            (raw_images and len(raw_images) > 0) or
+            (primary_img and isinstance(primary_img, str) and primary_img.startswith("http"))
+        )
+        is_active = is_in_stock and has_valid_images
 
     payload = {
         "title": title,
@@ -1282,23 +1678,20 @@ def prepare_product_set_payload(prod: Dict[str, Any], forex_rate: Optional[float
         "productType": product_type,
         "descriptionHtml": desc_html,
         "tags": tags,
-        "status": "ACTIVE" if is_in_stock else "DRAFT",
+        "status": "ACTIVE" if is_active else "DRAFT",
         "productOptions": options,
         "variants": variants
     }
 
-    if media_files:
+    if prod.get("shopify_image_synced") and prod.get("shopify_product_id"):
+        # Image assets are already permanently hosted on Shopify CDN (cdn.shopify.com)
+        # Omit external files and variant file references to prevent 403 downloads on Sephora CDN
+        for v in variants:
+            v.pop("file", None)
+    elif media_files:
         payload["files"] = media_files
 
-    if is_in_stock:
-        payload["metafields"] = [
-            {
-                "namespace": "custom",
-                "key": "badges",
-                "type": "list.single_line_text_field",
-                "value": json.dumps(["Ready to Ship"])
-            }
-        ]
+    # Custom badge metafields are preserved for manually curated products
 
     if prod.get("shopify_product_id"):
         payload["id"] = prod["shopify_product_id"]

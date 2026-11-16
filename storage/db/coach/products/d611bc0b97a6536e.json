@@ -64,7 +64,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cet94_mwoy2_a0",
       "option_values": [
         {
@@ -72,7 +72,8 @@
           "name": "Matte Black/Black Signature"
         }
       ],
-      "price_current": 16222.0
+      "price_current": 16222.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -92,7 +93,8 @@
           "name": "Sv/Black Currant"
         }
       ],
-      "price_current": 16222.0
+      "price_current": 16222.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -112,7 +114,8 @@
           "name": "Silver/BLACK"
         }
       ],
-      "price_current": 16222.0
+      "price_current": 16222.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -132,7 +135,8 @@
           "name": "Silver/POPPY"
         }
       ],
-      "price_current": 16222.0
+      "price_current": 16222.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -152,7 +156,8 @@
           "name": "SV/Walnut/Black"
         }
       ],
-      "price_current": 18142.0
+      "price_current": 18142.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -172,7 +177,8 @@
           "name": "Silver/Light Indigo"
         }
       ],
-      "price_current": 18142.0
+      "price_current": 18142.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -192,7 +198,8 @@
           "name": "Silver/Deep Blue Multi"
         }
       ],
-      "price_current": 8639.0
+      "price_current": 8639.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -212,7 +219,8 @@
           "name": "Silver/BLUE MULTI"
         }
       ],
-      "price_current": 10799.0
+      "price_current": 10799.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -232,7 +240,8 @@
           "name": "Gunmetal/Tan/Black"
         }
       ],
-      "price_current": 16222.0
+      "price_current": 16222.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -252,7 +261,8 @@
           "name": "Gunmetal/Charcoal/Black"
         }
       ],
-      "price_current": 16222.0
+      "price_current": 16222.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -272,7 +282,8 @@
           "name": "Gunmetal/Chalk/Black"
         }
       ],
-      "price_current": 8639.0
+      "price_current": 8639.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -292,7 +303,8 @@
           "name": "Gunmetal/Grey/Charcoal"
         }
       ],
-      "price_current": 16222.0
+      "price_current": 16222.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -304,7 +316,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cx071_qbbk_a0",
       "option_values": [
         {
@@ -312,7 +324,8 @@
           "name": "Gunmetal/Black"
         }
       ],
-      "price_current": 16222.0
+      "price_current": 16222.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -363,23 +376,24 @@
   ],
   "tags": [
     "COACH",
-    "Men",
-    "Handbags"
+    "Handbags",
+    "Men"
   ],
   "groups": [
     "men_bags"
   ],
   "created_at": "2026-09-13T00:47:13Z",
-  "last_verified_at": "2026-10-29T05:37:38Z",
+  "last_verified_at": "2026-11-16T15:41:39Z",
   "id": "d611bc0b97a6536e",
   "product_id": "d611bc0b97a6536e",
   "store": "coach",
-  "updated_at": "2026-10-29T05:37:38Z",
+  "updated_at": "2026-11-16T15:41:39Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841797767334",
   "shopify_handle": "racer-sling-pack-in-signature-canvas-cv763-qbmi5",
-  "shopify_synced_at": "2026-10-29T01:37:41Z",
+  "shopify_synced_at": "2026-11-14T23:04:16Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.289707,
+  "supplier_delisted": false
 }

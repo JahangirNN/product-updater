@@ -6,10 +6,10 @@
   "vendor": "JW PEI",
   "product_type": "2T240",
   "source_sku": "2T240-2",
-  "source_price": 109.0,
+  "source_price": 69.0,
   "source_compare_at_price": 109.0,
-  "current_price": 10338.0,
-  "compare_at_price": 10377.0,
+  "current_price": 6561.0,
+  "compare_at_price": 10290.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -61,9 +61,9 @@
       "id": 43833331089442,
       "sku": "2T240-2",
       "title": "White",
-      "price": "10463.00",
+      "price": "6561.00",
       "compare_at_price": null,
-      "source_price": 109.0,
+      "source_price": 69.0,
       "source_compare_at_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -75,7 +75,7 @@
           "name": "White"
         }
       ],
-      "price_current": 10463.0
+      "price_current": 6561.0
     },
     {
       "id": 43833354453026,
@@ -156,17 +156,17 @@
   "validation_warnings": [],
   "id": "c51519ac3245b414",
   "created_at": "2026-09-09T15:48:21Z",
-  "updated_at": "2026-10-29T03:37:03Z",
-  "last_verified_at": "2026-10-29T03:37:03Z",
+  "updated_at": "2026-11-16T15:48:44Z",
+  "last_verified_at": "2026-11-16T15:48:44Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841783283878",
   "shopify_handle": "jenny-human-shaped-handle-handbag-white",
-  "shopify_synced_at": "2026-09-29T06:00:53Z",
+  "shopify_synced_at": "2026-11-03T08:41:57Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T240-2-FRONT1.jpg?v=1753932327",
   "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T240-2-FRONT1.jpg?v=1753932327",
   "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\c51519ac3245b414.json",
   "archived": true,
   "canonical_product_id": "gid://shopify/Product/15841773977766",
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 95.082494
 }

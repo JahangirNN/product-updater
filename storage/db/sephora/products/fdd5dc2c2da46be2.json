@@ -11,8 +11,8 @@
   "source_price": 82.0,
   "source_price_usd": 82.0,
   "source_compare_at_price": null,
-  "current_price": 7776,
-  "current_price_inr": 7776,
+  "current_price": 7696,
+  "current_price_inr": 7696,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -119,10 +119,10 @@
     "glossier"
   ],
   "created_at": "2026-11-04T19:01:07Z",
-  "last_verified_at": "2026-11-05T10:50:30Z",
+  "last_verified_at": "2026-11-16T15:43:35Z",
   "id": "fdd5dc2c2da46be2",
-  "updated_at": "2026-11-05T10:50:30Z",
-  "last_synced_fx_rate": 94.834253,
+  "updated_at": "2026-11-16T15:43:35Z",
+  "last_synced_fx_rate": 93.851604,
   "price_range_inr": {
     "min": 3035,
     "max": 7776
@@ -130,5 +130,11 @@
   "price_range_usd": {
     "min": 32.0,
     "max": 82.0
-  }
+  },
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15994688733350",
+  "shopify_handle": "glossier-glossier-you-r-ve-eau-de-parfum-p513616",
+  "shopify_synced_at": "2026-11-12T16:19:09Z",
+  "shopify_image_synced": true,
+  "primary_image": "https://www.sephora.com/productimages/sku/s2819282-main-zoom.jpg"
 }

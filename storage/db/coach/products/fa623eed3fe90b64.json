@@ -52,14 +52,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx56_impop_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Gold/Poppy"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -71,14 +72,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx56_svn2w_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Silver/Blue Jay"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -90,7 +92,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx55_imblk_a0",
       "option_values": [
         {
@@ -98,7 +100,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -110,7 +113,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cgg17_imwbr_a0",
       "option_values": [
         {
@@ -118,7 +121,8 @@
           "name": "Gold/Warm Brown"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -138,7 +142,8 @@
           "name": "Gold/Bright Cherry"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -150,7 +155,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cec13_svb9c_a0",
       "option_values": [
         {
@@ -158,7 +163,8 @@
           "name": "Silver/Light Sand"
         }
       ],
-      "price_current": 4803.0
+      "price_current": 4803.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -178,7 +184,8 @@
           "name": "Gold/Light Pistachio"
         }
       ],
-      "price_current": 3600.0
+      "price_current": 3600.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -198,7 +205,8 @@
           "name": "Gold/Soft Pink"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -218,7 +226,8 @@
           "name": "Gold/Pink Multi"
         }
       ],
-      "price_current": 3650.0
+      "price_current": 3650.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -238,7 +247,8 @@
           "name": "Gold/Light Lemon"
         }
       ],
-      "price_current": 3648.0
+      "price_current": 3648.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -250,7 +260,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx55_imblk_a0",
       "option_values": [
         {
@@ -258,7 +268,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -270,7 +281,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cec51_svmpl_a0",
       "option_values": [
         {
@@ -278,7 +289,8 @@
           "name": "Silver/Maple"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -298,7 +310,8 @@
           "name": "Gold/Carnation"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -318,7 +331,8 @@
           "name": "Gold/Pistachio"
         }
       ],
-      "price_current": 3600.0
+      "price_current": 3600.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -338,7 +352,8 @@
           "name": "Gold/Soft Yellow"
         }
       ],
-      "price_current": 4799.0
+      "price_current": 4799.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -358,7 +373,8 @@
           "name": "Gold/Oak Multi"
         }
       ],
-      "price_current": 3974.0
+      "price_current": 3974.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -370,7 +386,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cec53_imylw_a0",
       "option_values": [
         {
@@ -378,7 +394,8 @@
           "name": "Gold/Yellow"
         }
       ],
-      "price_current": 3974.0
+      "price_current": 3974.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -390,7 +407,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cec53_impin_a0",
       "option_values": [
         {
@@ -398,7 +415,8 @@
           "name": "Gold/Pink"
         }
       ],
-      "price_current": 3974.0
+      "price_current": 3974.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -418,7 +436,8 @@
           "name": "Gold/Maple"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -438,7 +457,8 @@
           "name": "IM/Amber Brown"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -458,7 +478,8 @@
           "name": "Gold/Powder Pink"
         }
       ],
-      "price_current": 3398.0
+      "price_current": 3398.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -478,7 +499,8 @@
           "name": "Gold/Indigo"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -490,7 +512,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfx55_imblk_a0",
       "option_values": [
         {
@@ -498,7 +520,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -510,14 +533,15 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccs83_imoat_a0",
       "option_values": [
         {
           "option_name": "Color",
           "name": "Gold/Oat"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -537,7 +561,8 @@
           "name": "Gold/Peony"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -557,7 +582,8 @@
           "name": "Gold/Chalk"
         }
       ],
-      "price_current": 3974.0
+      "price_current": 3974.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -577,7 +603,8 @@
           "name": "Silver/BLACK"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -589,7 +616,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw883_imxdm_a0",
       "option_values": [
         {
@@ -597,7 +624,8 @@
           "name": "Gold/Sand/Chalk"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -609,7 +637,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw883_imxaq_a0",
       "option_values": [
         {
@@ -617,7 +645,8 @@
           "name": "Gold/Walnut/Black"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -637,7 +666,8 @@
           "name": "Gold/Tan/Black"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -649,7 +679,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw883_svpwh_a0",
       "option_values": [
         {
@@ -657,7 +687,8 @@
           "name": "Silver/Sand/Taupe"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -669,7 +700,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw883_imxu5_a0",
       "option_values": [
         {
@@ -677,7 +708,8 @@
           "name": "Gold/White/Chalk"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -697,7 +729,8 @@
           "name": "Gold/Sand Multi"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -716,7 +749,8 @@
           "option_name": "Color",
           "name": "Gold/Chalk Multi"
         }
-      ]
+      ],
+      "is_available": false
     }
   ],
   "product_options": [
@@ -824,23 +858,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Wallets & Small Goods"
+    "Wallets & Small Goods",
+    "Women"
   ],
   "groups": [
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:48:59Z",
-  "last_verified_at": "2026-10-29T03:36:48Z",
+  "last_verified_at": "2026-11-16T15:43:48Z",
   "id": "fa623eed3fe90b64",
   "product_id": "fa623eed3fe90b64",
   "store": "coach",
-  "updated_at": "2026-10-29T03:36:52Z",
+  "updated_at": "2026-11-16T15:43:48Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15841770602662",
   "shopify_handle": "zip-card-case-in-signature-leather",
-  "shopify_synced_at": "2026-10-29T03:36:48Z",
+  "shopify_synced_at": "2026-11-16T11:46:53Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.262076,
+  "supplier_delisted": false
 }

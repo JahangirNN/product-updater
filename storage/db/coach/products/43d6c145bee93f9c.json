@@ -56,7 +56,8 @@
           "name": "Mahogany Multi"
         }
       ],
-      "price_current": 7583.0
+      "price_current": 7583.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -78,16 +79,17 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:41:07Z",
-  "last_verified_at": "2026-10-29T03:37:20Z",
+  "last_verified_at": "2026-11-16T15:46:52Z",
   "id": "43d6c145bee93f9c",
   "product_id": "43d6c145bee93f9c",
   "store": "coach",
-  "updated_at": "2026-10-29T03:37:20Z",
+  "updated_at": "2026-11-16T15:46:52Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841764245670",
   "shopify_handle": "3-in-1-wallet-in-signature-canvas",
-  "shopify_synced_at": "2026-10-08T16:01:49Z",
+  "shopify_synced_at": "2026-11-14T01:16:29Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

@@ -6,14 +6,14 @@
   "vendor": "JW PEI",
   "product_type": "8T116X001",
   "source_sku": "8T116X001-31",
-  "source_price": 99.0,
+  "source_price": 68.0,
   "source_compare_at_price": 99.0,
-  "current_price": 9389.0,
-  "compare_at_price": 9425.0,
+  "current_price": 6466.0,
+  "compare_at_price": 9291.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Vegan Leather",
   "specifications": {
     "Main Material": "Vegan Leather",
@@ -49,7 +49,7 @@
       "source_compare_at_price": 99.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/unnamed_df31b535-1322-49b3-9831-59466eb58673.jpg?v=1766716155",
       "option_values": [
         {
@@ -57,19 +57,20 @@
           "name": "Black"
         }
       ],
-      "price_current": 9500.0
+      "price_current": 9500.0,
+      "is_available": false
     },
     {
       "id": 44672741015586,
       "sku": "8T116X001-31",
       "title": "Dark Brown",
-      "price": "9503.00",
+      "price": "6466.00",
       "compare_at_price": null,
-      "source_price": 99.0,
+      "source_price": 68.0,
       "source_compare_at_price": 99.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1778817636867-9pyzzp7r9qb.jpg?v=1778827224",
       "option_values": [
         {
@@ -77,7 +78,8 @@
           "name": "Dark Brown"
         }
       ],
-      "price_current": 9503.0
+      "price_current": 6466.0,
+      "is_available": false
     },
     {
       "id": 44719125561378,
@@ -89,7 +91,7 @@
       "source_compare_at_price": 129.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1778817596661-oit3svdy8mj.jpg?v=1778827180",
       "option_values": [
         {
@@ -97,7 +99,8 @@
           "name": "Ivory"
         }
       ],
-      "price_current": 12378.0
+      "price_current": 12378.0,
+      "is_available": false
     },
     {
       "id": 44754752438306,
@@ -109,7 +112,7 @@
       "source_compare_at_price": 129.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1787043243450-3kcz1kqfbyc.jpg?v=1787049023",
       "option_values": [
         {
@@ -117,7 +120,8 @@
           "name": "Pink"
         }
       ],
-      "price_current": 12378.0
+      "price_current": 12378.0,
+      "is_available": false
     },
     {
       "id": 44754752798754,
@@ -129,7 +133,7 @@
       "source_compare_at_price": 129.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1773391783559-g19538zgeo.jpg?v=1773392065",
       "option_values": [
         {
@@ -137,7 +141,8 @@
           "name": "Lavender"
         }
       ],
-      "price_current": 12378.0
+      "price_current": 12378.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -169,9 +174,10 @@
     "26CODE20",
     "26RAM12",
     "26USMD",
-    "bags",
     "Collection VI",
-    "Collection VIII-CA"
+    "Collection VIII-CA",
+    "bags",
+    "supplier-delisted"
   ],
   "groups": [
     "handbags"
@@ -180,17 +186,19 @@
   "validation_warnings": [],
   "id": "29c7f78a1cda68a5",
   "created_at": "2026-09-09T15:49:56Z",
-  "updated_at": "2026-10-29T03:38:37Z",
-  "last_verified_at": "2026-10-29T03:38:37Z",
-  "is_active": true,
+  "updated_at": "2026-11-16T15:42:13Z",
+  "last_verified_at": "2026-11-16T15:42:11Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841773944998",
   "shopify_handle": "brooke-mini-belted-embellished-top-handle-bag-dark-brown",
-  "shopify_synced_at": "2026-09-29T05:58:17Z",
+  "shopify_synced_at": "2026-11-16T15:42:11Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1778817636867-9pyzzp7r9qb.jpg?v=1778827224",
   "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1778817636867-9pyzzp7r9qb.jpg?v=1778827224",
   "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\29c7f78a1cda68a5.json",
   "archived": true,
   "canonical_product_id": "gid://shopify/Product/15841773486246",
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "delist_strikes": 23,
+  "supplier_delisted": true
 }

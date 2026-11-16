@@ -7,14 +7,14 @@
   "product_type": "Crossbody Bags",
   "gender": "Women",
   "source_sku": "KM388-500",
-  "source_price": 258.0,
+  "source_price": 96.75,
   "source_compare_at_price": null,
-  "current_price": 24586.0,
+  "current_price": 9175.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.199335,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Suede",
   "specifications": {
     "Material": "Suede",
@@ -76,7 +76,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KJ656_001",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KJ656_001",
@@ -84,7 +84,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KJ656_001_2"
       ],
       "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KJ656_001"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KJ656_001",
+      "is_available": false
     },
     {
       "id": null,
@@ -99,7 +100,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KJ656_404",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KJ656_404",
@@ -107,7 +108,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KJ656_404_3"
       ],
       "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KJ656_404"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KJ656_404",
+      "is_available": false
     },
     {
       "id": null,
@@ -122,7 +124,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KM388_500",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KM388_500",
@@ -130,7 +132,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KM388_500_3"
       ],
       "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KM388_500"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KM388_500",
+      "is_available": false
     },
     {
       "id": null,
@@ -153,7 +156,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KM388_200_3"
       ],
       "inventory_quantity": 0,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KM388_200"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KM388_200",
+      "is_available": false
     },
     {
       "id": null,
@@ -168,7 +172,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KO360_960",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KO360_960",
@@ -176,7 +180,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO360_960_3"
       ],
       "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO360_960"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO360_960",
+      "is_available": false
     },
     {
       "id": null,
@@ -191,7 +196,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KO361_300",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KO361_300",
@@ -199,7 +204,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO361_300_3"
       ],
       "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO361_300"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO361_300",
+      "is_available": false
     },
     {
       "id": null,
@@ -214,7 +220,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KO577_250",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KO577_250",
@@ -222,7 +228,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO577_250_3"
       ],
       "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO577_250"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO577_250",
+      "is_available": false
     },
     {
       "id": null,
@@ -237,7 +244,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KO580_600",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KO580_600",
@@ -245,7 +252,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO580_600_2"
       ],
       "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO580_600"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO580_600",
+      "is_available": false
     }
   ],
   "product_options": [
@@ -266,19 +274,26 @@
     }
   ],
   "tags": [
+    "Crossbody Bags",
+    "Handbags",
     "Kate Spade",
     "Women",
-    "Handbags",
-    "Crossbody Bags"
+    "supplier-delisted"
   ],
   "groups": [
     "handbags"
   ],
   "created_at": "2026-10-29T05:26:04Z",
-  "last_verified_at": "2026-10-29T07:38:37Z",
+  "last_verified_at": "2026-11-16T15:43:40Z",
   "_elapsed_ms": 2797.8133999276906,
   "id": "6a67c10d1cfcef8b",
-  "updated_at": "2026-10-29T07:38:37Z",
-  "last_synced_fx_rate": 95.29615,
-  "shopify_sync_pending": true
+  "updated_at": "2026-11-16T15:43:42Z",
+  "last_synced_fx_rate": 94.834253,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15915083268262",
+  "shopify_handle": "deco-suede-mini-crossbody",
+  "shopify_synced_at": "2026-11-16T15:43:40Z",
+  "delist_strikes": 19,
+  "supplier_delisted": true,
+  "is_active": false
 }

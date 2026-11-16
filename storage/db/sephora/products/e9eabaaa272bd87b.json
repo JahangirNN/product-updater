@@ -67,8 +67,8 @@
       "current_price": 2181,
       "price_inr": 2181,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "2687390",
       "image_url": "https://www.sephora.com/productimages/sku/s2687390-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2687390+sw.jpg",
@@ -76,7 +76,8 @@
       "variation_value": "Taupe",
       "variation_type": "Color",
       "price": 2181,
-      "source_price": 23.0
+      "source_price": 23.0,
+      "inventory_quantity": 0
     },
     {
       "id": "2687408",
@@ -215,8 +216,14 @@
     "kosas"
   ],
   "created_at": "2026-11-04T18:57:22Z",
-  "last_verified_at": "2026-11-05T10:48:00Z",
+  "last_verified_at": "2026-11-16T15:42:32Z",
   "id": "e9eabaaa272bd87b",
-  "updated_at": "2026-11-05T10:48:00Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:42:32Z",
+  "last_synced_fx_rate": 94.289707,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15994571358374",
+  "shopify_handle": "kosas-brow-pop-nano-ultra-fine-detailing-feathering-eyebrow-pencil-p506794",
+  "shopify_synced_at": "2026-11-15T03:04:43Z",
+  "shopify_image_synced": true,
+  "primary_image": "https://www.sephora.com/productimages/sku/s2687390-main-zoom.jpg"
 }

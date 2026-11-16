@@ -65,7 +65,8 @@
           "name": "US 5 / UK 3"
         }
       ],
-      "price_current": 16798.0
+      "price_current": 16798.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -85,7 +86,8 @@
           "name": "US 5.5 / UK 3.5"
         }
       ],
-      "price_current": 16798.0
+      "price_current": 16798.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -105,7 +107,8 @@
           "name": "US 6 / UK 4"
         }
       ],
-      "price_current": 16798.0
+      "price_current": 16798.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -125,7 +128,8 @@
           "name": "US 6.5 / UK 4.5"
         }
       ],
-      "price_current": 16798.0
+      "price_current": 16798.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -145,7 +149,8 @@
           "name": "US 7 / UK 5"
         }
       ],
-      "price_current": 16798.0
+      "price_current": 16798.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -165,7 +170,8 @@
           "name": "US 7.5 / UK 5.5"
         }
       ],
-      "price_current": 16798.0
+      "price_current": 16798.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -185,7 +191,8 @@
           "name": "US 8 / UK 6"
         }
       ],
-      "price_current": 16798.0
+      "price_current": 16798.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -205,7 +212,8 @@
           "name": "US 8.5 / UK 6.5"
         }
       ],
-      "price_current": 16798.0
+      "price_current": 16798.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -225,7 +233,8 @@
           "name": "US 9 / UK 7"
         }
       ],
-      "price_current": 16798.0
+      "price_current": 16798.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -245,7 +254,8 @@
           "name": "US 9.5 / UK 7.5"
         }
       ],
-      "price_current": 16798.0
+      "price_current": 16798.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -265,7 +275,8 @@
           "name": "US 10 / UK 8"
         }
       ],
-      "price_current": 16798.0
+      "price_current": 16798.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -285,7 +296,8 @@
           "name": "US 11 / UK 9"
         }
       ],
-      "price_current": 16798.0
+      "price_current": 16798.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -333,23 +345,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Shoes & Footwear"
+    "Shoes & Footwear",
+    "Women"
   ],
   "groups": [
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:48:10Z",
-  "last_verified_at": "2026-10-29T05:38:48Z",
+  "last_verified_at": "2026-11-16T15:43:41Z",
   "id": "eda2185619e94967",
   "product_id": "eda2185619e94967",
   "store": "coach",
-  "updated_at": "2026-10-29T05:38:48Z",
+  "updated_at": "2026-11-16T15:43:41Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15848610627750",
   "shopify_handle": "astor-loafer",
-  "shopify_synced_at": "2026-10-10T08:31:16Z",
+  "shopify_synced_at": "2026-11-14T01:04:21Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

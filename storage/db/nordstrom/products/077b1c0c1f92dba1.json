@@ -9,7 +9,7 @@
   "source_sku": "ON-9142124-5",
   "source_price": 51.2,
   "source_compare_at_price": null,
-  "current_price": 4878.0,
+  "current_price": 4817.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -415,23 +415,25 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:52:23Z",
+  "last_verified_at": "2026-11-16T16:01:28Z",
   "created_at": "2026-09-18T05:44:42Z",
-  "updated_at": "2026-10-29T03:52:23Z",
+  "updated_at": "2026-11-16T16:01:28Z",
   "price_range_usd": {
     "min": 51.2,
     "max": 64.0
   },
   "price_range_inr": {
-    "min": 4878.0,
-    "max": 6097.0
+    "min": 4817.0,
+    "max": 6022.0
   },
   "status": "ACTIVE",
   "is_active": false,
-  "price": "4878.00",
+  "price": "4817.00",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15850875748518",
   "shopify_handle": "cloud-x-4-ad-athletic-shoe-women",
-  "shopify_synced_at": "2026-10-28T04:00:51Z",
-  "last_synced_fx_rate": 95.269051
+  "shopify_synced_at": "2026-11-13T23:19:53Z",
+  "last_synced_fx_rate": 94.086126,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

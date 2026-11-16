@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-8784394-6",
   "source_price": 185.0,
   "source_compare_at_price": 185.0,
-  "current_price": 17612.0,
-  "compare_at_price": 17612.0,
+  "current_price": 17444.0,
+  "compare_at_price": 17444.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -185,7 +185,7 @@
       "source_compare_at_price": 185.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/635630b8-3064-4f82-b2f7-d1dda567878f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -208,7 +208,7 @@
       "source_compare_at_price": 185.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/635630b8-3064-4f82-b2f7-d1dda567878f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -272,9 +272,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T04:01:05Z",
+  "last_verified_at": "2026-11-16T15:54:22Z",
   "created_at": "2026-09-17T18:54:41Z",
-  "updated_at": "2026-10-29T04:01:07Z",
+  "updated_at": "2026-11-16T15:54:22Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -284,12 +284,12 @@
     "max": 185.0
   },
   "price_range_inr": {
-    "min": 17612.0,
-    "max": 17612.0
+    "min": 17444.0,
+    "max": 17444.0
   },
-  "price": "17612.00",
+  "price": "17444.00",
   "shopify_product_id": "gid://shopify/Product/15848585658534",
   "shopify_handle": "gender-inclusive-xt-6-steel-streets-running-shoe",
-  "shopify_synced_at": "2026-10-29T04:01:05Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-14T23:13:05Z",
+  "last_synced_fx_rate": 94.289707
 }

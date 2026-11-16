@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-5702496-5",
   "source_price": 180.0,
   "source_compare_at_price": 185.0,
-  "current_price": 17136.0,
-  "compare_at_price": 17612.0,
+  "current_price": 16972.0,
+  "compare_at_price": 17444.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -231,7 +231,7 @@
       "source_compare_at_price": 185.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/9aba878f-f455-430a-80df-60a8112272f2.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -558,9 +558,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T01:41:15Z",
+  "last_verified_at": "2026-11-16T16:01:00Z",
   "created_at": "2026-09-18T06:50:14Z",
-  "updated_at": "2026-10-29T01:41:16Z",
+  "updated_at": "2026-11-16T16:01:00Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "price_range_usd": {
@@ -568,14 +568,14 @@
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 17136.0,
-    "max": 17136.0
+    "min": 16972.0,
+    "max": 16972.0
   },
-  "price": "17136.00",
+  "price": "16972.00",
   "shopify_product_id": "gid://shopify/Product/15850877452454",
   "shopify_handle": "gender-inclusive-xt-6-sneaker",
-  "shopify_synced_at": "2026-10-29T01:41:15Z",
-  "last_synced_fx_rate": 95.199335,
+  "shopify_synced_at": "2026-11-14T20:02:58Z",
+  "last_synced_fx_rate": 94.289707,
   "delist_strikes": 0,
   "supplier_delisted": false
 }

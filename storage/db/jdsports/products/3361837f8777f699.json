@@ -57,7 +57,8 @@
           "option_name": "Color",
           "name": "Soft Pearl/Pink Smoke"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -81,7 +82,8 @@
           "option_name": "Color",
           "name": "Soft Pearl/Pink Smoke"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -105,7 +107,8 @@
           "option_name": "Color",
           "name": "Soft Pearl/Pink Smoke"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -129,7 +132,8 @@
           "option_name": "Color",
           "name": "Soft Pearl/Pink Smoke"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -153,7 +157,8 @@
           "option_name": "Color",
           "name": "Soft Pearl/Pink Smoke"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -177,7 +182,8 @@
           "option_name": "Color",
           "name": "Soft Pearl/Pink Smoke"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -201,7 +207,8 @@
           "option_name": "Color",
           "name": "Soft Pearl/Pink Smoke"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -225,7 +232,8 @@
           "option_name": "Color",
           "name": "Soft Pearl/Pink Smoke"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -249,7 +257,8 @@
           "option_name": "Color",
           "name": "Soft Pearl/Pink Smoke"
         }
-      ]
+      ],
+      "is_available": true
     }
   ],
   "product_options": [
@@ -295,12 +304,12 @@
     }
   ],
   "tags": [
-    "Nike",
     "Footwear",
-    "Toddler",
-    "Kids'",
     "JD Sports",
-    "Nike Dunk Low"
+    "Kids'",
+    "Nike",
+    "Nike Dunk Low",
+    "Toddler"
   ],
   "groups": [
     "footwear",
@@ -309,13 +318,15 @@
     "shoes"
   ],
   "created_at": "2026-09-20T16:06:41Z",
-  "updated_at": "2026-10-29T03:37:12Z",
-  "last_verified_at": "2026-10-29T03:37:12Z",
+  "updated_at": "2026-11-16T15:46:15Z",
+  "last_verified_at": "2026-11-16T15:46:13Z",
   "shopify_product_id": "gid://shopify/Product/15851447746726",
   "shopify_handle": "kids-toddler-nike-dunk-low-casual-shoes-soft-pearl-pink-smoke-3833113",
-  "shopify_synced_at": "2026-10-10T06:13:45Z",
+  "shopify_synced_at": "2026-11-16T15:46:13Z",
   "shopify_sync_pending": false,
   "price": "5522.00",
   "price_current": 5522.0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.399626,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-7526540-5",
   "source_price": 150.0,
   "source_compare_at_price": 150.0,
-  "current_price": 14274.0,
-  "compare_at_price": 14274.0,
+  "current_price": 14160.0,
+  "compare_at_price": 14160.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -47,7 +47,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1391d60a-6d03-4f36-89ca-7db6780cbfc8.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -70,7 +70,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1391d60a-6d03-4f36-89ca-7db6780cbfc8.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -558,9 +558,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T01:41:21Z",
+  "last_verified_at": "2026-11-16T15:51:14Z",
   "created_at": "2026-09-18T06:48:22Z",
-  "updated_at": "2026-10-29T01:41:21Z",
+  "updated_at": "2026-11-16T15:51:16Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "price_range_usd": {
@@ -568,12 +568,12 @@
     "max": 150.0
   },
   "price_range_inr": {
-    "min": 14274.0,
-    "max": 14274.0
+    "min": 14160.0,
+    "max": 14160.0
   },
-  "price": "14274.00",
+  "price": "14160.00",
   "shopify_product_id": "gid://shopify/Product/15850880663718",
   "shopify_handle": "xa-pro-3d-sneaker-unisex",
-  "shopify_synced_at": "2026-10-26T05:56:09Z",
-  "last_synced_fx_rate": 95.160836
+  "shopify_synced_at": "2026-11-16T15:51:14Z",
+  "last_synced_fx_rate": 94.399626
 }

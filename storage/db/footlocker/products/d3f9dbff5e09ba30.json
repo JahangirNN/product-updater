@@ -10,12 +10,12 @@
   "source_price": 120.0,
   "source_compare_at_price": null,
   "current_price": 11519.0,
-  "compare_at_price": 11424.0,
+  "compare_at_price": 11328.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "color": "Collegiate Green/Pink Spark/Gold Metallic",
   "width": "Width - B - Medium",
   "material": "Premium upper with durable overlays and responsive traction outsole",
@@ -46,7 +46,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://images.footlocker.com/is/image/EBFL2/IH1496",
       "option_values": [
         {
@@ -278,12 +278,12 @@
   "groups": [
     "adidas Handball Spezial"
   ],
-  "last_verified_at": "2026-10-29T05:56:08Z",
+  "last_verified_at": "2026-11-16T15:41:36Z",
   "created_at": "2026-09-20T10:34:57Z",
-  "updated_at": "2026-10-29T05:56:08Z",
+  "updated_at": "2026-11-16T15:41:36Z",
   "shopify_product_id": "gid://shopify/Product/15851014193318",
   "shopify_handle": "adidas-originals-handball-spezial-women-s-collegiate-green-pink-spark-gold-metallic-ih1496",
-  "shopify_synced_at": "2026-10-07T03:49:45Z",
+  "shopify_synced_at": "2026-11-05T17:11:50Z",
   "shopify_sync_pending": false,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.620171
 }

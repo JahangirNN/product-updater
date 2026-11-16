@@ -11,6 +11,138 @@
         --product-list-items-per-row: {{ section.settings.products_per_row_desktop }};
       }
     }
+
+    /* --------------------------------------------------
+       QUIET LUXURY SECTION HEADER & EDITORIAL TABS
+       -------------------------------------------------- */
+    #shopify-section-{{ section.id }} .featured-collections__header-wrapper {
+      margin-bottom: 1.75rem;
+    }
+
+    #shopify-section-{{ section.id }} .featured-collections__header-text {
+      margin-bottom: 0.75rem;
+    }
+
+    #shopify-section-{{ section.id }} .featured-collections__subheading {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #c9a876;
+      margin: 0 0 0.5rem;
+    }
+
+    #shopify-section-{{ section.id }} .featured-collections__title {
+      font-size: clamp(1.6rem, 3vw, 2.25rem);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    #shopify-section-{{ section.id }} .featured-collections__tabs {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    #shopify-section-{{ section.id }} .featured-collections__tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    #shopify-section-{{ section.id }} .featured-collections__tab-btn {
+      border: none;
+      background: transparent;
+      color: #767676;
+      padding: 0.6rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      white-space: nowrap;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    #shopify-section-{{ section.id }} .featured-collections__tab-btn:hover {
+      color: #1a1a1a;
+    }
+
+    #shopify-section-{{ section.id }} .featured-collections__tab-btn[aria-current="true"],
+    #shopify-section-{{ section.id }} .featured-collections__tab-btn.is-active {
+      color: #1a1a1a;
+      font-weight: 700;
+    }
+
+    #shopify-section-{{ section.id }} .featured-collections__tab-btn[aria-current="true"]::after,
+    #shopify-section-{{ section.id }} .featured-collections__tab-btn.is-active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #1a1a1a;
+    }
+
+    #shopify-section-{{ section.id }} .featured-collections__footer {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    #shopify-section-{{ section.id }} .featured-collections__footer-link {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #1a1a1a;
+      text-decoration: none;
+      border-bottom: 1px solid #1a1a1a;
+      padding-bottom: 0.25rem;
+      transition: all 0.2s ease;
+    }
+
+    #shopify-section-{{ section.id }} .featured-collections__footer-link:hover {
+      color: #c9a876;
+      border-bottom-color: #c9a876;
+    }
+
+    #shopify-section-{{ section.id }} .product-list--carousel {
+      gap: 1.25rem;
+      padding-top: 0.25rem;
+      padding-bottom: 1.5rem;
+    }
+
+    #shopify-section-{{ section.id }} .prev-next-button {
+      width: 38px !important;
+      height: 38px !important;
+      border-radius: 50% !important;
+      border: 1px solid rgba(0, 0, 0, 0.12) !important;
+      background: #ffffff !important;
+      color: #1a1a1a !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      cursor: pointer !important;
+      transition: all 0.2s ease !important;
+      padding: 0 !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    #shopify-section-{{ section.id }} .prev-next-button:hover:not(:disabled) {
+      border-color: #1a1a1a !important;
+      background: #1a1a1a !important;
+      color: #ffffff !important;
+    }
   </style>
 
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
@@ -20,21 +152,27 @@
       {%- assign wrapper_carousel_id = 'featured-collections-carousel-' | append: section.id -%}
 
       <div class="section-stack">
-        <div class="v-stack justify-self-center gap-4 text-center sm:gap-5">
-          {%- if section.settings.subheading != blank -%}
-            <p class="h6 text-center">{{- section.settings.subheading -}}</p>
-          {%- endif -%}
+        <div class="featured-collections__header-wrapper">
+          <div class="featured-collections__header-text text-start">
+            {%- if section.settings.subheading != blank -%}
+              <p class="featured-collections__subheading">{{- section.settings.subheading -}}</p>
+            {%- endif -%}
+
+            {%- if section.settings.title != blank -%}
+              <h2 class="featured-collections__title">{{- section.settings.title -}}</h2>
+            {%- elsif section.blocks.size == 1 -%}
+              <h2 class="featured-collections__title">{{ section.blocks.first.settings.title | default: section.blocks.first.settings.collection.title | default: 'Collection' }}</h2>
+            {%- endif -%}
+          </div>
 
           {%- if section.blocks.size > 1 -%}
-            <carousel-navigation align-selected class="featured-collections-navigation scroll-area bleed" aria-controls="{{ wrapper_carousel_id }}">
+            <carousel-navigation align-selected class="featured-collections__tabs scroll-area bleed" aria-controls="{{ wrapper_carousel_id }}">
               {%- for block in section.blocks -%}
-                <button class="h2" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+                <button type="button" class="featured-collections__tab-btn" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
                   {{- block.settings.title | default: block.settings.collection.title | default: 'Collection' -}}
                 </button>
               {%- endfor -%}
             </carousel-navigation>
-          {%- else -%}
-            <h2 class="h2">{{ section.blocks.first.settings.title | default: section.blocks.first.settings.collection.title | default: 'Collection' }}</h2>
           {%- endif -%}
         </div>
 
@@ -43,10 +181,6 @@
             <div class="featured-collections-carousel__item {% if forloop.first %}is-selected{% endif %}" {{ block.shopify_attributes }}>
               {%- capture product_list -%}
                 {%- assign should_reveal = false -%}
-
-                {%- if settings.stagger_products_apparition and forloop.first -%}
-                  {%- assign should_reveal = true -%}
-                {%- endif -%}
 
                 {%- for product in block.settings.collection.products limit: block.settings.products_count -%}
                   {%- render 'product-card', product: product, reveal: should_reveal, position: forloop.index, hide_product_information: section.settings.hide_product_information, block: block -%}
@@ -88,8 +222,10 @@
               {%- if block.settings.link_text != blank -%}
                 {%- assign button_link = block.settings.link_url | default: block.settings.collection.url | default: '#' -%}
 
-                <div class="justify-self-center">
-                  {%- render 'button', href: button_link, content: block.settings.link_text -%}
+                <div class="featured-collections__footer">
+                  <a href="{{ button_link }}" class="featured-collections__footer-link">
+                    {{ block.settings.link_text }}
+                  </a>
                 </div>
               {%- endif -%}
             </div>
@@ -197,6 +333,12 @@
       "type": "inline_richtext",
       "id": "subheading",
       "label": "t:global.text.subheading",
+      "default": "Featured collection"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "t:global.text.heading",
       "default": "Featured collection"
     }
   ],

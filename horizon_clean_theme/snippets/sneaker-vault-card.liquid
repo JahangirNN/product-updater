@@ -1,0 +1,236 @@
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+SNEAKER RUNWAY CARD COMPONENT (LUXURY MAISON EDITION)
+------------------------------------------------------------------------------------------------------------------------
+Editorial, minimalist footwear card engineered for The Rare Avenue.
+- Studio presentation with pure neutral background
+- Single UK sizing selector chips with live inventory state
+- Instant AJAX Add-to-Cart with Horizon cart drawer synchronization
+- Zero emojis, zero artificial 3D skew, pure quiet luxury
+------------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
+{%- liquid
+  assign first_avail_variant = product.selected_or_first_available_variant | default: product.variants.first
+  assign primary_media = first_avail_variant.featured_media | default: product.featured_media | default: product.media.first
+
+  assign card_price = first_avail_variant.price
+  assign card_compare_at_price = first_avail_variant.compare_at_price
+
+  assign has_discount = false
+  if card_compare_at_price > card_price
+    assign has_discount = true
+    assign discount_diff = card_compare_at_price | minus: card_price
+    assign discount_percent = discount_diff | times: 100.0 | divided_by: card_compare_at_price | round
+  endif
+
+  assign vendor_name = product.vendor | default: 'The Rare Avenue'
+  if vendor_name == 'My Store' or vendor_name == 'General'
+    assign vendor_name = 'The Rare Avenue'
+  endif
+
+  assign is_ready_to_ship = false
+  for tag in product.tags
+    assign t_down = tag | downcase
+    if t_down == 'ready to ship' or t_down == 'instant-ship' or t_down == 'ready-to-ship' or t_down == 'manual-instant-ship-active'
+      assign is_ready_to_ship = true
+      break
+    endif
+  endfor
+-%}
+
+<div class="runway-card-wrapper" data-product-id="{{ product.id }}">
+  <div class="runway-card">
+
+    <!-- Card Top: Maison Vendor & Subtle Discount Tag -->
+    <div class="runway-card__header">
+      <span class="runway-card__vendor">{{ vendor_name }}</span>
+      <div class="product-card__tags-group">
+        {%- if is_ready_to_ship -%}
+          <span class="product-card__ready-tag">
+            <span class="product-card__ready-dot"></span>Ready to Ship
+          </span>
+        {%- endif -%}
+        {%- if has_discount -%}
+          <span class="runway-card__tag">-{{ discount_percent }}%</span>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <!-- Studio Photography Stage -->
+    <div class="runway-card__stage" {% if product.media.size > 1 %}data-swipeable-stage="true"{% endif %}>
+      <a href="{{ product.url }}" class="runway-card__media-link" draggable="false">
+        {%- if primary_media != blank -%}
+          <img 
+            id="runway-img-{{ product.id }}"
+            src="{{ primary_media | image_url: width: 600 }}"
+            alt="{{ primary_media.alt | default: product.title | escape }}"
+            loading="lazy"
+            width="600"
+            height="600"
+            class="runway-card__image"
+            draggable="false"
+          />
+        {%- else -%}
+          {{ 'product-1' | placeholder_svg_tag: 'runway-card__placeholder' }}
+        {%- endif -%}
+      </a>
+
+      <!-- Studio Angle Switcher Controls (Swipe + Prev/Next + Micro Indicators when > 1 image) -->
+      {%- if product.media.size > 1 -%}
+        <button type="button" class="runway-card__stage-nav runway-card__stage-nav--prev" data-stage-dir="-1" aria-label="Previous image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button type="button" class="runway-card__stage-nav runway-card__stage-nav--next" data-stage-dir="1" aria-label="Next image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+        <div class="runway-card__dots">
+          {%- for med in product.media limit: 6 -%}
+            <button 
+              type="button"
+              class="runway-card__dot {% if forloop.first %}is-active{% endif %}"
+              data-img-src="{{ med | image_url: width: 600 }}"
+              data-target="runway-img-{{ product.id }}"
+              data-dot-index="{{ forloop.index0 }}"
+              aria-label="Angle {{ forloop.index }}"
+            ></button>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+    <!-- Product Title & Pricing -->
+    <div class="runway-card__info">
+      <a href="{{ product.url }}" class="runway-card__title">
+        {{ product.title }}
+      </a>
+
+      <div class="runway-card__price-row">
+        <span class="runway-card__price">{{ card_price | money_without_trailing_zeros | replace: '.00', '' }}</span>
+        {%- if has_discount -%}
+          <span class="runway-card__compare-price">{{ card_compare_at_price | money_without_trailing_zeros | replace: '.00', '' }}</span>
+        {%- endif -%}
+      </div>
+
+      <!-- Color Variant Picture Thumbnails -->
+      {%- liquid
+        assign color_opt_idx = nil
+        for opt in product.options_with_values
+          assign opt_lower = opt.name | downcase
+          if opt_lower contains 'color' or opt_lower contains 'colour'
+            assign color_opt_idx = forloop.index
+            break
+          endif
+        endfor
+
+        assign color_prop = nil
+        if color_opt_idx == 1
+          assign color_prop = 'option1'
+        elsif color_opt_idx == 2
+          assign color_prop = 'option2'
+        elsif color_opt_idx == 3
+          assign color_prop = 'option3'
+        endif
+      -%}
+      {%- if color_prop != nil -%}
+        {%- liquid
+          assign seen_rv_colors = ''
+          assign rv_color_count = 0
+        -%}
+        {%- capture runway_colors_html -%}
+          {%- for variant in product.variants -%}
+            {%- assign c_val = variant[color_prop] | strip -%}
+            {%- if c_val != blank -%}
+              {%- assign c_tok = '|' | append: c_val | append: '|' -%}
+              {%- unless seen_rv_colors contains c_tok -%}
+                {%- assign seen_rv_colors = seen_rv_colors | append: c_tok -%}
+                {%- assign rv_color_count = rv_color_count | plus: 1 -%}
+                {%- if rv_color_count <= 5 -%}
+                  {%- assign v_media = variant.featured_media | default: variant.featured_image -%}
+                  {%- if v_media != blank -%}
+                    <button
+                      type="button"
+                      class="runway-card__color-btn{% if variant.id == first_avail_variant.id or rv_color_count == 1 %} is-active{% endif %}"
+                      data-variant-id="{{ variant.id }}"
+                      data-img-src="{{ v_media | image_url: width: 600 }}"
+                      data-target="runway-img-{{ product.id }}"
+                      title="{{ c_val | escape }}"
+                      aria-label="{{ c_val | escape }}"
+                    >
+                      <img src="{{ v_media | image_url: width: 44, height: 44, crop: 'center' }}" alt="{{ c_val | escape }}" loading="lazy" width="22" height="22" class="runway-card__color-img" />
+                    </button>
+                  {%- endif -%}
+                {%- endif -%}
+              {%- endunless -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endcapture -%}
+        {%- if rv_color_count > 1 and runway_colors_html != blank -%}
+          <div class="runway-card__colors" style="display: flex; align-items: center; gap: 0.35rem; margin-top: 0.5rem; flex-wrap: wrap;">
+            {{ runway_colors_html }}
+            {%- if rv_color_count > 5 -%}
+              <span style="font-size: 0.6875rem; color: #777; font-weight: 600;">+{{ rv_color_count | minus: 5 }}</span>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- endif -%}
+    </div>
+
+    <!-- Unified Single UK Sizing Matrix (Indian & UK Standards Parity) -->
+    {%- if product.variants.size > 1 -%}
+      <div class="runway-card__sizing">
+        <div class="runway-card__size-label-row">
+          <span class="runway-card__size-title">Size (UK)</span>
+          <span class="runway-card__size-active">
+            {%- if first_avail_variant -%}
+              {{ first_avail_variant.title | split: '/' | first | strip }}
+            {%- else -%}
+              Sold Out
+            {%- endif -%}
+          </span>
+        </div>
+
+        <div class="runway-card__size-grid">
+          {%- for variant in product.variants limit: 12 -%}
+            {%- liquid
+              assign raw_size = variant.title
+              if raw_size contains '/'
+                assign raw_size = raw_size | split: '/' | first | strip
+              endif
+            -%}
+            <button 
+              type="button"
+              class="runway-card__size-pill {% if variant.available == false %}is-sold-out{% elsif variant.id == first_avail_variant.id %}is-active{% endif %}"
+              data-variant-id="{{ variant.id }}"
+              data-size-name="{{ raw_size | escape }}"
+              {% unless variant.available %}disabled{% endunless %}
+            >
+              {{ raw_size }}
+            </button>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    <!-- Express Bag Reserve Form -->
+    <form method="post" action="/cart/add" class="runway-card__form">
+      <input type="hidden" name="id" value="{{ first_avail_variant.id }}" class="runway-variant-id-input" />
+      <input type="hidden" name="quantity" value="1" />
+
+      <button 
+        type="submit" 
+        class="runway-card__submit-btn"
+        {% if first_avail_variant.available == false or product.available == false %}disabled{% endif %}
+      >
+        <span class="runway-btn-text">
+          {%- if product.available -%}
+            Add to Bag
+          {%- else -%}
+            Sold Out
+          {%- endif -%}
+        </span>
+      </button>
+    </form>
+
+  </div>
+</div>

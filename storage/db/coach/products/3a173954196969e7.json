@@ -62,7 +62,8 @@
           "name": "US 7 / UK 6.5"
         }
       ],
-      "price_current": 9599.0
+      "price_current": 9599.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -82,7 +83,8 @@
           "name": "US 7.5 / UK 7"
         }
       ],
-      "price_current": 9599.0
+      "price_current": 9599.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -102,7 +104,8 @@
           "name": "US 8 / UK 7.5"
         }
       ],
-      "price_current": 9599.0
+      "price_current": 9599.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -122,7 +125,8 @@
           "name": "US 8.5 / UK 8"
         }
       ],
-      "price_current": 9599.0
+      "price_current": 9599.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -142,7 +146,8 @@
           "name": "US 9 / UK 8.5"
         }
       ],
-      "price_current": 9599.0
+      "price_current": 9599.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -162,7 +167,8 @@
           "name": "US 9.5 / UK 9"
         }
       ],
-      "price_current": 9599.0
+      "price_current": 9599.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -182,7 +188,8 @@
           "name": "US 10 / UK 9.5"
         }
       ],
-      "price_current": 9599.0
+      "price_current": 9599.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -202,7 +209,8 @@
           "name": "US 10.5 / UK 10"
         }
       ],
-      "price_current": 9599.0
+      "price_current": 9599.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -222,7 +230,8 @@
           "name": "US 11 / UK 10.5"
         }
       ],
-      "price_current": 9599.0
+      "price_current": 9599.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -242,7 +251,8 @@
           "name": "US 11.5 / UK 11"
         }
       ],
-      "price_current": 9599.0
+      "price_current": 9599.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -262,7 +272,8 @@
           "name": "US 12 / UK 11.5"
         }
       ],
-      "price_current": 9599.0
+      "price_current": 9599.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -282,7 +293,8 @@
           "name": "US 13 / UK 12.5"
         }
       ],
-      "price_current": 9599.0
+      "price_current": 9599.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -337,16 +349,17 @@
     "men_shoes"
   ],
   "created_at": "2026-09-13T00:40:53Z",
-  "last_verified_at": "2026-10-29T03:39:21Z",
+  "last_verified_at": "2026-11-16T15:45:27Z",
   "id": "3a173954196969e7",
   "product_id": "3a173954196969e7",
   "store": "coach",
-  "updated_at": "2026-10-29T03:39:21Z",
+  "updated_at": "2026-11-16T15:45:27Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15848605581478",
   "shopify_handle": "loafer-with-signature-print",
-  "shopify_synced_at": "2026-10-27T08:51:03Z",
+  "shopify_synced_at": "2026-11-15T09:11:11Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.269051
+  "last_synced_fx_rate": 94.289707,
+  "supplier_delisted": false
 }

@@ -321,13 +321,13 @@ class TestMarqueeEdgeCasesAndMediaFallbacks(unittest.TestCase):
         3. collection.products.first.featured_media.preview_image
         4. placeholder SVG
         """
-        pattern = r"assign card_image = (block\.settings\.image) \| default: (collection\.featured_image) \| default: (collection\.products\.first\.featured_media\.preview_image)"
+        pattern = r"assign card_image = (block\.settings\.image)(?: \| default: (collection\.image))? \| default: (collection\.featured_image) \| default: (collection\.products\.first\.featured_media\.preview_image)"
         matches = re.findall(pattern, self.raw_content)
         self.assertEqual(len(matches), 2)
         for m in matches:
             self.assertEqual(m[0], "block.settings.image")
-            self.assertEqual(m[1], "collection.featured_image")
-            self.assertEqual(m[2], "collection.products.first.featured_media.preview_image")
+            self.assertEqual(m[2], "collection.featured_image")
+            self.assertEqual(m[3], "collection.products.first.featured_media.preview_image")
 
     def test_placeholder_cycle_symmetry_between_groups(self):
         """

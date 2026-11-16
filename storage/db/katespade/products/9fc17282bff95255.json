@@ -85,14 +85,14 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KM495_302",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KM495_302",
         "https://katespade.scene7.com/is/image/KateSpade/KM495_302_1",
         "https://katespade.scene7.com/is/image/KateSpade/KM495_302_2"
       ],
-      "inventory_quantity": 10,
+      "inventory_quantity": 0,
       "image_url": "https://katespade.scene7.com/is/image/KateSpade/KM495_302"
     },
     {
@@ -141,9 +141,13 @@
     "handbags"
   ],
   "created_at": "2026-10-29T05:26:44Z",
-  "last_verified_at": "2026-10-29T07:39:43Z",
+  "last_verified_at": "2026-11-16T15:48:41Z",
   "_elapsed_ms": 2769.6373999351636,
   "id": "9fc17282bff95255",
-  "updated_at": "2026-10-29T07:39:43Z",
-  "last_synced_fx_rate": 95.29615
+  "updated_at": "2026-11-16T15:48:41Z",
+  "last_synced_fx_rate": 95.082494,
+  "shopify_product_id": "gid://shopify/Product/15915091722406",
+  "shopify_handle": "halo-mini-leather-bucket-bag",
+  "shopify_synced_at": "2026-11-03T08:36:40Z",
+  "shopify_sync_pending": false
 }

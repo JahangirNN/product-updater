@@ -77,7 +77,8 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -97,7 +98,8 @@
           "name": "Brass/Dark Fuchsia"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -117,7 +119,8 @@
           "name": "Brass/Deep Sky Multi"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -137,7 +140,8 @@
           "name": "Brass/Black"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -157,7 +161,8 @@
           "name": "Brass/Olive"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -177,7 +182,8 @@
           "name": "Brass/Black Currant"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -197,7 +203,8 @@
           "name": "Brass/Navy"
         }
       ],
-      "price_current": 6479.0
+      "price_current": 6479.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -217,7 +224,8 @@
           "name": "Brass/Maple"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -237,7 +245,8 @@
           "name": "Brass/Scarlet"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -257,7 +266,8 @@
           "name": "Brass/Toffee"
         }
       ],
-      "price_current": 7775.0
+      "price_current": 7775.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -277,7 +287,8 @@
           "name": "Brass/Fuchsia"
         }
       ],
-      "price_current": 10079.0
+      "price_current": 10079.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -297,7 +308,8 @@
           "name": "Brass/Pink Multi"
         }
       ],
-      "price_current": 11759.0
+      "price_current": 11759.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -317,7 +329,8 @@
           "name": "Brass/Chalk"
         }
       ],
-      "price_current": 11759.0
+      "price_current": 11759.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -337,7 +350,8 @@
           "name": "Brass/Kelly Green"
         }
       ],
-      "price_current": 10079.0
+      "price_current": 10079.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -357,7 +371,8 @@
           "name": "Brass/Maple"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -377,7 +392,8 @@
           "name": "Brass/Melon Pink"
         }
       ],
-      "price_current": 7775.0
+      "price_current": 7775.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -441,16 +457,17 @@
     "women_wristlets"
   ],
   "created_at": "2026-09-13T00:38:48Z",
-  "last_verified_at": "2026-10-29T05:36:46Z",
+  "last_verified_at": "2026-11-16T15:43:33Z",
   "id": "13a161e019e4f3bc",
   "product_id": "13a161e019e4f3bc",
   "store": "coach",
-  "updated_at": "2026-10-29T05:36:46Z",
+  "updated_at": "2026-11-16T15:43:33Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841761525926",
   "shopify_handle": "plaza-bag-in-signature-canvas",
-  "shopify_synced_at": "2026-10-14T17:26:51Z",
+  "shopify_synced_at": "2026-11-14T09:04:42Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

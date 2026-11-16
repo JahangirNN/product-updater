@@ -10,7 +10,7 @@
   "source_price": 170.0,
   "source_compare_at_price": null,
   "current_price": 16318.0,
-  "compare_at_price": 16184.0,
+  "compare_at_price": 16048.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -99,7 +99,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/F0731007_01",
       "option_values": [
         {
@@ -147,7 +147,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/F0731007_01",
       "option_values": [
         {
@@ -219,7 +219,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/F0731007_01",
       "option_values": [
         {
@@ -243,7 +243,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/F0731007_01",
       "option_values": [
         {
@@ -499,12 +499,12 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-10-29T05:37:34Z",
+  "last_verified_at": "2026-11-16T15:43:04Z",
   "created_at": "2026-09-18T20:48:02Z",
-  "updated_at": "2026-10-29T05:37:34Z",
+  "updated_at": "2026-11-16T15:43:06Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851007606950",
   "shopify_handle": "nike-vomero-5-men-s-grey-grey-beige-f0731007",
-  "shopify_synced_at": "2026-10-24T06:44:32Z",
-  "last_synced_fx_rate": 94.901331
+  "shopify_synced_at": "2026-11-16T15:43:04Z",
+  "last_synced_fx_rate": 94.399626
 }

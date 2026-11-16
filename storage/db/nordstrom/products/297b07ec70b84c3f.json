@@ -9,7 +9,7 @@
   "source_sku": "HOKA-8539270-7",
   "source_price": 145.0,
   "source_compare_at_price": null,
-  "current_price": 13804.0,
+  "current_price": 13688.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -141,7 +141,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ccf550df-4cf6-4464-bfa4-3e5c9a0dc5df.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -164,7 +164,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/ccf550df-4cf6-4464-bfa4-3e5c9a0dc5df.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -187,7 +187,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/ccf550df-4cf6-4464-bfa4-3e5c9a0dc5df.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -279,7 +279,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ccf550df-4cf6-4464-bfa4-3e5c9a0dc5df.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -302,7 +302,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/ccf550df-4cf6-4464-bfa4-3e5c9a0dc5df.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -405,23 +405,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T05:38:25Z",
+  "last_verified_at": "2026-11-16T16:01:05Z",
   "created_at": "2026-09-18T06:57:27Z",
-  "updated_at": "2026-10-29T05:38:25Z",
+  "updated_at": "2026-11-16T16:01:08Z",
   "price_range_usd": {
     "min": 145.0,
     "max": 145.0
   },
   "price_range_inr": {
-    "min": 13804.0,
-    "max": 13804.0
+    "min": 13688.0,
+    "max": 13688.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15850876600486",
   "shopify_handle": "hoka-mach-remastered-sneaker-men",
-  "shopify_synced_at": "2026-10-28T21:39:49Z",
+  "shopify_synced_at": "2026-11-16T16:01:05Z",
   "shopify_sync_pending": false,
-  "price": "13804.00",
-  "last_synced_fx_rate": 95.199335
+  "price": "13688.00",
+  "last_synced_fx_rate": 94.399626
 }

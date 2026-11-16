@@ -2292,14 +2292,39 @@ onFacetUpdate_fn = function(event) {
   const isPagination = this.classList?.contains("contents") && (firstEl?.classList?.contains("pagination__link") || Boolean(this.closest("nav.pagination")));
   const currentPathname = window.location.pathname || (window.location.href ? new URL(window.location.href).pathname : "");
 
-  if (!isClearAll && !isNativeRemoval) {
-    if (isTagLink || isPagination || (currentPathname && targetUrl.pathname !== currentPathname)) {
-      const currentParams = new URLSearchParams(window.location.search);
-      currentParams.forEach((value, key) => {
-        if (key.startsWith("filter.") && !targetUrl.searchParams.getAll(key).includes(value)) {
-          targetUrl.searchParams.append(key, value);
-        }
-      });
+  if (!isClearAll) {
+    const currentParams = new URLSearchParams(window.location.search);
+    
+    // Always preserve active vendors and sort_by unless this is Clear All
+    currentParams.getAll("filter.p.vendor").forEach((value) => {
+      if (!targetUrl.searchParams.getAll("filter.p.vendor").includes(value)) {
+        targetUrl.searchParams.append("filter.p.vendor", value);
+      }
+    });
+    // Also include any checked vendor checkboxes from DOM (e.g. checked in drawer/sidebar before link click)
+    document.querySelectorAll("input[name='filter.p.vendor']:checked").forEach(cb => {
+      if (!targetUrl.searchParams.getAll("filter.p.vendor").includes(cb.value)) {
+        targetUrl.searchParams.append("filter.p.vendor", cb.value);
+      }
+    });
+
+    if (currentParams.get("sort_by") && !targetUrl.searchParams.get("sort_by")) {
+      targetUrl.searchParams.set("sort_by", currentParams.get("sort_by"));
+    }
+
+    if (!isNativeRemoval) {
+      if (isTagLink || isPagination || (currentPathname && targetUrl.pathname !== currentPathname)) {
+        currentParams.forEach((value, key) => {
+          if (key.startsWith("filter.") && !targetUrl.searchParams.getAll(key).includes(value)) {
+            targetUrl.searchParams.append(key, value);
+          }
+        });
+        document.querySelectorAll("input[name='filter.v.availability']:checked").forEach(cb => {
+          if (!targetUrl.searchParams.getAll("filter.v.availability").includes(cb.value)) {
+            targetUrl.searchParams.append("filter.v.availability", cb.value);
+          }
+        });
+      }
     }
   }
   
@@ -2353,20 +2378,51 @@ delegate.on("toggle", "facets-form details", (event, detailsElement) => {
   });
 }, true);
 var KNOWN_BRAND_MAP = {
+  "asics": "asics",
   "coach": "coach",
-  "michael kors": "michael-kors",
-  "michael michael kors": "michael-kors",
-  "jw pei": "jw-pei",
-  "on": "on",
-  "on running": "on",
-  "tissot": "tissot",
-  "movado": "movado",
-  "seiko": "seiko",
-  "versace": "versace",
   "citizen": "citizen",
   "ferragamo": "ferragamo",
+  "hoka": "hoka",
+  "jw pei": "jw-pei",
+  "jw-pei": "jw-pei",
+  "michael kors": "michael-kors",
+  "michael michael kors": "michael-kors",
+  "michael-kors": "michael-kors",
+  "michael-michael-kors": "michael-kors",
+  "movado": "movado",
+  "nike": "nike",
+  "on": "on",
+  "on running": "on",
+  "on-running": "on",
+  "salomon": "salomon",
+  "seiko": "seiko",
+  "tissot": "tissot",
+  "versace": "versace",
+  "adidas": "adidas",
   "marc jacobs": "marc-jacobs",
-  "marc by marc jacobs": "marc-jacobs"
+  "marc by marc jacobs": "marc-jacobs",
+  "marc-jacobs": "marc-jacobs"
+};
+
+var KNOWN_TAG_TO_VENDOR = {
+  "asics": "ASICS",
+  "coach": "COACH",
+  "citizen": "Citizen",
+  "ferragamo": "Ferragamo",
+  "hoka": "HOKA",
+  "jw-pei": "JW PEI",
+  "michael-kors": "Michael Kors",
+  "michael-michael-kors": "Michael Kors",
+  "movado": "Movado",
+  "nike": "Nike",
+  "on": "On",
+  "on-running": "On",
+  "salomon": "Salomon",
+  "seiko": "Seiko",
+  "tissot": "Tissot",
+  "versace": "Versace",
+  "adidas": "adidas",
+  "marc-jacobs": "Marc Jacobs"
 };
 
 function getKnownBrandTags() {
@@ -2390,10 +2446,22 @@ function getBrandTagFromVendor(vendor) {
   return norm.replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
+function getVendorFromBrandTag(tag) {
+  const norm = tag.toLowerCase().trim();
+  if (KNOWN_TAG_TO_VENDOR[norm]) return KNOWN_TAG_TO_VENDOR[norm];
+  const checkboxes = document.querySelectorAll("input[name='filter.p.vendor']");
+  for (const cb of checkboxes) {
+    if (cb.getAttribute("data-vendor-tag")?.toLowerCase().trim() === norm) {
+      return cb.value;
+    }
+  }
+  return null;
+}
+
 function isKnownBrandTag(tag) {
   const t = tag.toLowerCase().trim();
   const knownTags = getKnownBrandTags();
-  return knownTags.has(t);
+  return knownTags.has(t) || Boolean(KNOWN_TAG_TO_VENDOR[t]);
 }
 
 function renderBrandActiveFacets(container, selectedVendors) {
@@ -2403,7 +2471,14 @@ function renderBrandActiveFacets(container, selectedVendors) {
       el.remove();
     }
   });
-  if (selectedVendors.length === 0) return;
+  if (selectedVendors.length === 0) {
+    const totalRemaining = container.querySelectorAll(".removable-facet").length;
+    if (totalRemaining === 0) {
+      const rawClear = container.querySelector(".facets-clear-all-wrapper, .facets-clear-all");
+      if (rawClear) rawClear.remove();
+    }
+    return;
+  }
 
   const closeIconSvg = '<svg class="icon icon-close" width="10" height="10" viewBox="0 0 10 10" fill="none" style="pointer-events: none;"><path d="M1 1L9 9M9 1L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
   const rawClearAll = container.querySelector(".facets-clear-all");
@@ -2412,9 +2487,14 @@ function renderBrandActiveFacets(container, selectedVendors) {
     if (rawClearAll.parentNode === container) {
       clearTarget = rawClearAll;
     } else {
-      const wrapper = rawClearAll.closest(".facets-clear-all-wrapper");
-      if (wrapper && wrapper.parentNode === container) {
-        clearTarget = wrapper;
+      const facetLink = rawClearAll.closest("facet-link");
+      if (facetLink && facetLink.parentNode === container) {
+        clearTarget = facetLink;
+      } else {
+        const wrapper = rawClearAll.closest(".facets-clear-all-wrapper");
+        if (wrapper && wrapper.parentNode === container) {
+          clearTarget = wrapper;
+        }
       }
     }
   }
@@ -2444,10 +2524,10 @@ function renderBrandActiveFacets(container, selectedVendors) {
   }
 }
 
-function renderSearchActiveFacets(container, selectedVendors, selectedSilhouettes) {
+function renderSearchActiveFacets(container, selectedVendors, selectedSilhouettes, selectedColors = []) {
   if (!container) return;
-  container.querySelectorAll(".brand-removable-facet, .silhouette-removable-facet").forEach(el => el.remove());
-  if (selectedVendors.length === 0 && selectedSilhouettes.length === 0) return;
+  container.querySelectorAll(".brand-removable-facet, .silhouette-removable-facet, .color-removable-facet").forEach(el => el.remove());
+  if (selectedVendors.length === 0 && selectedSilhouettes.length === 0 && selectedColors.length === 0) return;
 
   const closeIconSvg = '<svg class="icon icon-close" width="10" height="10" viewBox="0 0 10 10" fill="none" style="pointer-events: none;"><path d="M1 1L9 9M9 1L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
   const rawClearAll = container.querySelector(".facets-clear-all");
@@ -2456,9 +2536,14 @@ function renderSearchActiveFacets(container, selectedVendors, selectedSilhouette
     if (rawClearAll.parentNode === container) {
       clearTarget = rawClearAll;
     } else {
-      const wrapper = rawClearAll.closest(".facets-clear-all-wrapper");
-      if (wrapper && wrapper.parentNode === container) {
-        clearTarget = wrapper;
+      const facetLink = rawClearAll.closest("facet-link");
+      if (facetLink && facetLink.parentNode === container) {
+        clearTarget = facetLink;
+      } else {
+        const wrapper = rawClearAll.closest(".facets-clear-all-wrapper");
+        if (wrapper && wrapper.parentNode === container) {
+          clearTarget = wrapper;
+        }
       }
     }
   }
@@ -2497,6 +2582,22 @@ function renderSearchActiveFacets(container, selectedVendors, selectedSilhouette
         ${closeIconSvg}
       </button>
       <span class="text-subdued">Category: ${label}</span>
+    `;
+    if (clearTarget) {
+      container.insertBefore(facetDiv, clearTarget);
+    } else {
+      container.appendChild(facetDiv);
+    }
+  });
+
+  selectedColors.forEach(color => {
+    const facetDiv = document.createElement("div");
+    facetDiv.className = "removable-facet color-removable-facet";
+    facetDiv.innerHTML = `
+      <button type="button" class="tap-area link-faded color-facet-remove" data-color-remove="${encodeURIComponent(color)}" aria-label="Remove filter Color: ${color}" style="background: none; border: none; padding: 0; cursor: pointer; display: inline-flex; align-items: center;">
+        ${closeIconSvg}
+      </button>
+      <span class="text-subdued">Color: ${color}</span>
     `;
     if (clearTarget) {
       container.insertBefore(facetDiv, clearTarget);
@@ -2581,11 +2682,26 @@ document.addEventListener("click", (event) => {
     return;
   }
 
+  const colorRemoveBtn = event.target.closest("[data-color-remove]");
+  if (colorRemoveBtn) {
+    event.preventDefault();
+    event.stopPropagation();
+    const color = decodeURIComponent(colorRemoveBtn.getAttribute("data-color-remove") || "");
+    const checkboxes = document.querySelectorAll('input[name="filter.p.color"]');
+    checkboxes.forEach(cb => {
+      if (cb.value.toLowerCase().trim() === color.toLowerCase().trim()) {
+        cb.checked = false;
+      }
+    });
+    submitFacetsForm();
+    return;
+  }
+
   const clearAllBtn = event.target.closest("[data-brand-clear-all], .facets-clear-all");
   if (clearAllBtn) {
     event.preventDefault();
     event.stopPropagation();
-    const checkboxes = document.querySelectorAll('input[name="filter.p.vendor"], input[name="filter.p.silhouette"], input[name="filter.v.availability"]');
+    const checkboxes = document.querySelectorAll('input[name="filter.p.vendor"], input[name="filter.p.silhouette"], input[name="filter.p.color"], input[name="filter.v.availability"]');
     checkboxes.forEach(cb => {
       cb.checked = false;
     });
@@ -2619,14 +2735,15 @@ document.addEventListener("click", (event) => {
 
     const pathParts = window.location.pathname.split("/").filter(Boolean);
     let cleanPath = window.location.pathname;
-    if (pathParts.length >= 3 && pathParts[0] === "collections") {
-      const baseCollectionPath = `/collections/${pathParts[1]}`;
-      const rawTags = pathParts[2].split("+");
-      const nonBrandTags = rawTags.filter(t => !isKnownBrandTag(t));
-      cleanPath = nonBrandTags.length > 0 ? `${baseCollectionPath}/${nonBrandTags.join("+")}` : baseCollectionPath;
+    if (pathParts.length >= 2 && pathParts[0] === "collections") {
+      cleanPath = `/collections/${pathParts[1]}`;
     }
 
     const targetUrl = new URL(cleanPath, window.location.origin);
+    const currentParams = new URLSearchParams(window.location.search);
+    if (currentParams.get("sort_by")) {
+      targetUrl.searchParams.set("sort_by", currentParams.get("sort_by"));
+    }
     if (sectionId) {
       targetUrl.searchParams.set("section_id", sectionId);
     }
@@ -2652,6 +2769,7 @@ document.addEventListener("facet:update", async (event) => {
   if (isSearch) {
     const selectedVendors = url.searchParams.getAll("filter.p.vendor");
     const selectedSilhouettes = url.searchParams.getAll("filter.p.silhouette");
+    const selectedColors = url.searchParams.getAll("filter.p.color");
 
     const rawQ = url.searchParams.get("q") || "";
     const baseQ = extractCleanSearchQuery(rawQ);
@@ -2700,6 +2818,15 @@ document.addEventListener("facet:update", async (event) => {
           effectiveQ += " " + silTerms[0];
         } else {
           effectiveQ += " (" + silTerms.join(" OR ") + ")";
+        }
+      }
+
+      if (selectedColors.length > 0) {
+        const colorTerms = selectedColors.map(c => `tag:"Color:${c}"`);
+        if (colorTerms.length === 1) {
+          effectiveQ += " " + colorTerms[0];
+        } else {
+          effectiveQ += " (" + colorTerms.join(" OR ") + ")";
         }
       }
 
@@ -2759,6 +2886,11 @@ document.addEventListener("facet:update", async (event) => {
         cb.checked = selectedSilhouettes.includes(cb.value);
       });
 
+      // Synchronize color checkboxes (both sidebar and drawer)
+      newShopifySection.querySelectorAll("input[name='filter.p.color']").forEach(cb => {
+        cb.checked = selectedColors.includes(cb.value);
+      });
+
       // Preserve details open states
       newShopifySection.querySelectorAll("facets-form details").forEach((detailsElement) => {
         const inputNames = [...new Set(Array.from(detailsElement.querySelectorAll('input[name*="filter."]'), (item) => item.name))];
@@ -2784,7 +2916,7 @@ document.addEventListener("facet:update", async (event) => {
 
       // Render active facets chips
       let activeFacetsContainer = newShopifySection.querySelector(".active-facets");
-      if (!activeFacetsContainer && (selectedVendors.length > 0 || selectedSilhouettes.length > 0)) {
+      if (!activeFacetsContainer && (selectedVendors.length > 0 || selectedSilhouettes.length > 0 || selectedColors.length > 0)) {
         const colMain = newShopifySection.querySelector(".collection__main");
         const prodList = newShopifySection.querySelector("product-list");
         if (colMain && prodList) {
@@ -2794,7 +2926,7 @@ document.addEventListener("facet:update", async (event) => {
         }
       }
       if (activeFacetsContainer) {
-        renderSearchActiveFacets(activeFacetsContainer, selectedVendors, selectedSilhouettes);
+        renderSearchActiveFacets(activeFacetsContainer, selectedVendors, selectedSilhouettes, selectedColors);
       }
 
       // Synchronize pagination links so they carry all selected filters
@@ -2812,6 +2944,11 @@ document.addEventListener("facet:update", async (event) => {
           selectedSilhouettes.forEach(s => {
             if (!linkUrl.searchParams.getAll("filter.p.silhouette").includes(s)) {
               linkUrl.searchParams.append("filter.p.silhouette", s);
+            }
+          });
+          selectedColors.forEach(c => {
+            if (!linkUrl.searchParams.getAll("filter.p.color").includes(c)) {
+              linkUrl.searchParams.append("filter.p.color", c);
             }
           });
           a.href = linkUrl.toString();
@@ -2833,7 +2970,9 @@ document.addEventListener("facet:update", async (event) => {
       }
     } catch (e) {
       document.documentElement.dispatchEvent(new CustomEvent("theme:loading:end", { bubbles: true }));
-      console.error("Search facet update error:", e);
+      if (e.name !== "AbortError") {
+        console.error("Search facet update error:", e);
+      }
     }
     return;
   }
@@ -2846,6 +2985,13 @@ document.addEventListener("facet:update", async (event) => {
     baseCollectionPath = `/collections/${pathParts[1]}`;
     const rawTags = pathParts[2].split("+");
     nonBrandTags = rawTags.filter(t => !isKnownBrandTag(t));
+    const pathBrandTags = rawTags.filter(t => isKnownBrandTag(t));
+    pathBrandTags.forEach(bt => {
+      const v = getVendorFromBrandTag(bt);
+      if (v && !url.searchParams.getAll("filter.p.vendor").some(existing => existing.toLowerCase().trim() === v.toLowerCase().trim())) {
+        url.searchParams.append("filter.p.vendor", v);
+      }
+    });
   } else if (pathParts.length === 2 && pathParts[0] === "collections") {
     baseCollectionPath = `/collections/${pathParts[1]}`;
   }
@@ -2974,6 +3120,22 @@ document.addEventListener("facet:update", async (event) => {
       cb.checked = isChecked;
     });
 
+    // Synchronize availability filter checkboxes
+    const activeAvailability = url.searchParams.getAll("filter.v.availability");
+    newShopifySection.querySelectorAll("input[name='filter.v.availability']").forEach((cb) => {
+      cb.checked = activeAvailability.includes(cb.value);
+    });
+
+    // Synchronize price inputs
+    const minPrice = url.searchParams.get("filter.v.price.gte") || "";
+    const maxPrice = url.searchParams.get("filter.v.price.lte") || "";
+    newShopifySection.querySelectorAll("input[name='filter.v.price.gte']").forEach(input => {
+      input.value = minPrice;
+    });
+    newShopifySection.querySelectorAll("input[name='filter.v.price.lte']").forEach(input => {
+      input.value = maxPrice;
+    });
+
     // Render active facets chips
     let activeFacetsContainer = newShopifySection.querySelector(".active-facets");
     if (!activeFacetsContainer && selectedVendors.length > 0) {
@@ -3004,7 +3166,9 @@ document.addEventListener("facet:update", async (event) => {
     }
   } catch (e) {
     document.documentElement.dispatchEvent(new CustomEvent("theme:loading:end", { bubbles: true }));
-    console.error("Facet update error:", e);
+    if (e.name !== "AbortError") {
+      console.error("Facet update error:", e);
+    }
   }
 });
 

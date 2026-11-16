@@ -10,7 +10,7 @@
   "source_price": 110.0,
   "source_compare_at_price": null,
   "current_price": 10559.0,
-  "compare_at_price": 10472.0,
+  "compare_at_price": 10384.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -53,7 +53,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KI2188_01",
       "option_values": [
         {
@@ -65,7 +65,8 @@
           "name": "Warm Vanilla/Thermal Chrome/Gum"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -89,7 +90,8 @@
           "name": "Warm Vanilla/Thermal Chrome/Gum"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -113,7 +115,8 @@
           "name": "Warm Vanilla/Thermal Chrome/Gum"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -137,7 +140,8 @@
           "name": "Warm Vanilla/Thermal Chrome/Gum"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -149,7 +153,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KI2188_01",
       "option_values": [
         {
@@ -161,7 +165,8 @@
           "name": "Warm Vanilla/Thermal Chrome/Gum"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -185,7 +190,8 @@
           "name": "Warm Vanilla/Thermal Chrome/Gum"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -197,7 +203,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KI2188_01",
       "option_values": [
         {
@@ -209,7 +215,8 @@
           "name": "Warm Vanilla/Thermal Chrome/Gum"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -233,7 +240,8 @@
           "name": "Warm Vanilla/Thermal Chrome/Gum"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -257,7 +265,8 @@
           "name": "Warm Vanilla/Thermal Chrome/Gum"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -269,7 +278,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KI2188_01",
       "option_values": [
         {
@@ -281,7 +290,8 @@
           "name": "Warm Vanilla/Thermal Chrome/Gum"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -305,7 +315,8 @@
           "name": "Warm Vanilla/Thermal Chrome/Gum"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -329,7 +340,8 @@
           "name": "Warm Vanilla/Thermal Chrome/Gum"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -341,7 +353,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KI2188_01",
       "option_values": [
         {
@@ -353,7 +365,8 @@
           "name": "Warm Vanilla/Thermal Chrome/Gum"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -414,18 +427,20 @@
     "adidas",
     "footwear",
     "shoes",
-    "women's",
-    "sizes-13"
+    "sizes-13",
+    "women's"
   ],
   "groups": [
     "adidas Handball Spezial"
   ],
-  "last_verified_at": "2026-10-29T03:37:49Z",
+  "last_verified_at": "2026-11-16T15:46:27Z",
   "created_at": "2026-09-20T10:34:57Z",
-  "updated_at": "2026-10-29T03:37:51Z",
+  "updated_at": "2026-11-16T15:46:27Z",
   "shopify_product_id": "gid://shopify/Product/15851007377574",
   "shopify_handle": "adidas-originals-handball-spezial-women-s-warm-vanilla-thermal-chrome-gum-ki2188",
-  "shopify_synced_at": "2026-10-29T03:37:49Z",
+  "shopify_synced_at": "2026-11-16T07:45:36Z",
   "shopify_sync_pending": false,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.262076,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

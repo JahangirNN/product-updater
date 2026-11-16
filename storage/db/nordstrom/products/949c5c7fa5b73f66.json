@@ -9,8 +9,8 @@
   "source_sku": "HOKA-8428289-5",
   "source_price": 145.0,
   "source_compare_at_price": 145.0,
-  "current_price": 13774.0,
-  "compare_at_price": 13774.0,
+  "current_price": 13688.0,
+  "compare_at_price": 13688.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -139,7 +139,7 @@
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/3b314a9c-093c-476b-b79c-54a1ca72d760.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -185,7 +185,7 @@
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/3b314a9c-093c-476b-b79c-54a1ca72d760.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -454,9 +454,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T04:00:31Z",
+  "last_verified_at": "2026-11-16T15:46:19Z",
   "created_at": "2026-09-17T14:57:55Z",
-  "updated_at": "2026-10-29T04:00:31Z",
+  "updated_at": "2026-11-16T15:46:21Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -466,14 +466,14 @@
     "max": 145.0
   },
   "price_range_inr": {
-    "min": 13774.0,
-    "max": 13774.0
+    "min": 13688.0,
+    "max": 13688.0
   },
-  "price": "13774.00",
+  "price": "13688.00",
   "shopify_product_id": "gid://shopify/Product/15848581693606",
   "shopify_handle": "mach-remastered-sneaker-women",
-  "shopify_synced_at": "2026-10-28T00:01:26Z",
-  "last_synced_fx_rate": 94.995216,
+  "shopify_synced_at": "2026-11-16T15:46:19Z",
+  "last_synced_fx_rate": 94.399626,
   "delist_strikes": 0,
   "supplier_delisted": false
 }

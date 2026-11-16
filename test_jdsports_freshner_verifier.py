@@ -93,8 +93,8 @@ def test_sync_engine_catalog_recognition():
 
     cfg = load_delta_config("config/delta_config.json")
     jds_conf = cfg.get("store_configs", {}).get("jdsports", {})
-    if jds_conf and jds_conf.get("engine") == "http":
-        record_pass("1.1 Delta Config Recognition", f"JD Sports configured with HTTP engine, rps={jds_conf.get('requests_per_second')}, delay={jds_conf.get('delay_seconds')}s")
+    if jds_conf and jds_conf.get("engine") in ("http", "camoufox"):
+        record_pass("1.1 Delta Config Recognition", f"JD Sports configured with {jds_conf.get('engine')} engine, rps={jds_conf.get('requests_per_second')}, delay={jds_conf.get('delay_seconds')}s")
     else:
         record_fail("1.1 Delta Config Recognition", "JD Sports store config missing or invalid")
 

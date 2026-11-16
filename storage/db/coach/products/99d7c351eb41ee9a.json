@@ -92,7 +92,8 @@
           "name": "Silver/True Blue"
         }
       ],
-      "price_current": 14398.0
+      "price_current": 14398.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -112,7 +113,8 @@
           "name": "Silver/Sport Red"
         }
       ],
-      "price_current": 14398.0
+      "price_current": 14398.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -132,7 +134,8 @@
           "name": "Silver/Chalk"
         }
       ],
-      "price_current": 14398.0
+      "price_current": 14398.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -152,7 +155,8 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 14398.0
+      "price_current": 14398.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -176,24 +180,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Handbags"
+    "Handbags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:44:32Z",
-  "last_verified_at": "2026-10-29T03:40:01Z",
+  "last_verified_at": "2026-11-16T15:46:23Z",
   "id": "99d7c351eb41ee9a",
   "product_id": "99d7c351eb41ee9a",
   "store": "coach",
-  "updated_at": "2026-10-29T03:40:01Z",
+  "updated_at": "2026-11-16T15:46:23Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15841767456934",
   "shopify_handle": "stadium-swinger-bag",
-  "shopify_synced_at": "2026-10-22T09:51:56Z",
+  "shopify_synced_at": "2026-11-14T01:14:38Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 94.995216,
+  "last_synced_fx_rate": 94.086126,
   "supplier_delisted": false
 }

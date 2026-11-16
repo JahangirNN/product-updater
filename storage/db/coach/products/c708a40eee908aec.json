@@ -52,7 +52,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cz397_qbnrx_a0",
       "option_values": [
         {
@@ -60,7 +60,8 @@
           "name": "Gunmetal/Tan/Black"
         }
       ],
-      "price_current": 9996.0
+      "price_current": 9996.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -80,7 +81,8 @@
           "name": "Gunmetal/Charcoal/Black"
         }
       ],
-      "price_current": 9996.0
+      "price_current": 9996.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -99,7 +101,8 @@
           "option_name": "Color",
           "name": "Gunmetal/Tan Multi"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -119,7 +122,8 @@
           "name": "Gunmetal/Khaki/Charcoal"
         }
       ],
-      "price_current": 9996.0
+      "price_current": 9996.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -143,23 +147,24 @@
   ],
   "tags": [
     "COACH",
-    "Men",
-    "Handbags"
+    "Handbags",
+    "Men"
   ],
   "groups": [
     "men_bags"
   ],
   "created_at": "2026-09-13T00:46:30Z",
-  "last_verified_at": "2026-10-29T03:40:51Z",
+  "last_verified_at": "2026-11-16T15:42:49Z",
   "id": "c708a40eee908aec",
   "product_id": "c708a40eee908aec",
   "store": "coach",
-  "updated_at": "2026-10-29T03:40:51Z",
+  "updated_at": "2026-11-16T15:42:49Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841768865958",
   "shopify_handle": "sullivan-pack-in-blocked-signature-canvas",
-  "shopify_synced_at": "2026-10-28T11:52:45Z",
+  "shopify_synced_at": "2026-11-13T23:08:48Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

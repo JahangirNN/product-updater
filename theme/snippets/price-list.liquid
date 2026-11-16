@@ -161,11 +161,7 @@ Supported variables
 
         assign variant = matched_filter_variant | default: product.selected_or_first_available_variant | default: product.variants.first
       else
-        if product.price_varies and settings.product_price_strategy != 'from_price'
-          assign variant = product.variants | sort: 'price' | last | default: product.selected_or_first_available_variant
-        else
-          assign variant = product.variants | sort: 'price' | first | default: product.selected_or_first_available_variant
-        endif
+        assign variant = product.selected_or_first_available_variant | default: product.variants.first
       endif
 
       if settings.currency_code_enabled

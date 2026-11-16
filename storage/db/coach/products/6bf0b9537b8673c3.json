@@ -77,7 +77,8 @@
           "name": "Dark Moss"
         }
       ],
-      "price_current": 28317.0
+      "price_current": 28317.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -97,7 +98,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 28317.0
+      "price_current": 28317.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -117,7 +119,8 @@
           "name": "Light Maroon"
         }
       ],
-      "price_current": 28317.0
+      "price_current": 28317.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -137,7 +140,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 57114.0
+      "price_current": 57114.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -157,24 +161,25 @@
     }
   ],
   "tags": [
+    "Backpacks",
     "COACH",
-    "Men",
-    "Backpacks"
+    "Men"
   ],
   "groups": [
     "men_bags"
   ],
   "created_at": "2026-09-13T00:42:39Z",
-  "last_verified_at": "2026-10-29T03:38:34Z",
+  "last_verified_at": "2026-11-16T15:45:06Z",
   "id": "6bf0b9537b8673c3",
   "product_id": "6bf0b9537b8673c3",
   "store": "coach",
-  "updated_at": "2026-10-29T03:38:34Z",
+  "updated_at": "2026-11-16T15:45:07Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841765687462",
   "shopify_handle": "logan-backpack-in-signature-nylon",
-  "shopify_synced_at": "2026-10-08T16:04:52Z",
+  "shopify_synced_at": "2026-11-14T01:10:19Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

@@ -1,53 +1,94 @@
 {%- comment -%}
-----------------------------------------------------------------------------------------------------------------------
-PRODUCT CARD COMPONENT
-----------------------------------------------------------------------------------------------------------------------
-
-This component is used in collection and featured collection to render a single product as a card
-
-********************************************
-Supported variables
-********************************************
-
-* product: the product to render
-* stacked: define if the product is stacked or not on mobile
-* reveal: if set to true, the card will be revealed on scroll through animation
-* position: the position of the card in the list. If specified, the theme will eagerly load the first 3 cards images
-* show_badges: show or not the badges (default to true if nothing is set).
-* show_rating: show or not the rating. If nothing is set, the theme uses the default product card setting
-* show_vendor: show or not the vendor. If nothing is set, the theme uses the default product card setting
-* show_quick_buy: show or not the quick buy (which open a modal if the product contains more than 1 choice)
-* show_secondary_image: show or not the secondary media on hover. If nothing is set, the theme uses the default product card setting
-* show_swatches: show or not the swatches. The swatch type is inferred from setting, and will default to true if nothing is set.
-* hide_product_information: if set to true, all content (vendor, badge, title...) are not rendered, to create image-based grid
-* quick_buy_context: a unique text to dissociate quick buy if the same product is embedded multiple times
+------------------------------------------------------------------------------------------------------------------------
+QUIET LUXURY PRODUCT CARD COMPONENT (MAISON RUNWAY EDITION)
+------------------------------------------------------------------------------------------------------------------------
+Editorial, minimalist product card engineered for The Rare Avenue.
+- Crisp white background (#ffffff) with refined 1px border (rgba(0,0,0,0.08)) and subtle hover lift
+- Studio Photography Stage with clean 1:1 square framing, subtle hover zoom (scale(1.03)), angle preview dots
+- Tracked uppercase vendor (#767676, letter-spacing 0.14em) and discrete discount badge (-X%)
+- Tracked uppercase product title (2-line clamp) & INR price row (Rs. X,XXX.00)
+- Visual Image Swatches for Color variants with Quiet Luxury focus ring & diagonal sold-out slash
+- Interactive Sizing Pills for Size options with active state selection and sold-out strikethrough
+- Full-Width Architectural "Add to Bag" button (#1a1a1a, 0px border-radius) via AJAX /cart/add.js with Prestige drawer
+- Zero emojis anywhere, zero AI/3D gimmicks, pure luxury boutique refinement
+------------------------------------------------------------------------------------------------------------------------
 {%- endcomment -%}
 
 {%- liquid
-  if hide_product_information
-    assign show_badges = false
-    assign show_rating = false
-    assign show_vendor = false
-    assign show_title = false
-    assign show_prices = false
-    assign show_swatches = false
-    assign show_quick_buy = show_quick_buy | default: settings.show_quick_buy, allow_false: true
-    assign show_secondary_image = show_secondary_image | default: settings.show_secondary_image, allow_false: true
-  else
-    assign show_badges = show_badges | default: true, allow_false: true
-    assign show_rating = show_rating | default: settings.show_product_rating, allow_false: true
-    if show_vendor == nil
-      assign show_vendor = true
-    endif
-    assign show_quick_buy = show_quick_buy | default: settings.show_quick_buy, allow_false: true
-    assign show_title = true
-    assign show_prices = true
-    assign show_secondary_image = show_secondary_image | default: settings.show_secondary_image, allow_false: true
-    assign show_swatches = show_swatches | default: true, allow_false: true
+  assign first_avail_variant = product.selected_or_first_available_variant | default: product.variants.first
+  assign primary_media = first_avail_variant.featured_media | default: product.featured_media | default: product.media.first
+
+  assign card_price = first_avail_variant.price
+  assign card_compare_at_price = first_avail_variant.compare_at_price
+
+  assign has_discount = false
+  if card_compare_at_price > card_price
+    assign has_discount = true
+    assign discount_diff = card_compare_at_price | minus: card_price
+    assign discount_percent = discount_diff | times: 100.0 | divided_by: card_compare_at_price | round
   endif
 
-  assign card_vendor = product.vendor
-  if card_vendor == blank or card_vendor == 'My Store' or card_vendor == 'General'
+  assign card_vendor = product.vendor | default: ''
+  assign vendor_up = card_vendor | upcase
+  if vendor_up contains 'MICHAEL KORS' or vendor_up contains 'MICHAEL MICHAEL KORS'
+    assign card_vendor = 'Michael Kors'
+  elsif vendor_up contains 'COACH'
+    assign card_vendor = 'COACH'
+  elsif vendor_up contains 'JW PEI'
+    assign card_vendor = 'JW PEI'
+  elsif vendor_up contains 'TISSOT'
+    assign card_vendor = 'Tissot'
+  elsif vendor_up contains 'SEIKO'
+    assign card_vendor = 'Seiko'
+  elsif vendor_up contains 'CITIZEN'
+    assign card_vendor = 'Citizen'
+  elsif vendor_up contains 'VERSACE'
+    assign card_vendor = 'Versace'
+  elsif vendor_up contains 'MOVADO'
+    assign card_vendor = 'Movado'
+  elsif vendor_up contains 'FERRAGAMO'
+    assign card_vendor = 'Ferragamo'
+  elsif vendor_up contains 'SALOMON'
+    assign card_vendor = 'Salomon'
+  elsif vendor_up contains 'HOKA'
+    assign card_vendor = 'HOKA'
+  elsif vendor_up contains 'NIKE'
+    assign card_vendor = 'Nike'
+  elsif vendor_up contains 'JORDAN'
+    assign card_vendor = 'Jordan'
+  elsif vendor_up contains 'ADIDAS'
+    assign card_vendor = 'adidas'
+  elsif vendor_up contains 'ASICS'
+    assign card_vendor = 'ASICS'
+  elsif vendor_up contains 'SUMMER FRIDAYS'
+    assign card_vendor = 'Summer Fridays'
+  elsif vendor_up contains 'GISOU'
+    assign card_vendor = 'Gisou'
+  elsif vendor_up contains 'HAUS LABS'
+    assign card_vendor = 'Haus Labs'
+  elsif vendor_up contains 'PATRICK TA'
+    assign card_vendor = 'PATRICK TA'
+  elsif vendor_up contains 'SAIE'
+    assign card_vendor = 'Saie'
+  elsif vendor_up contains 'TOWER 28'
+    assign card_vendor = 'Tower 28 Beauty'
+  elsif vendor_up contains 'MERIT'
+    assign card_vendor = 'MERIT'
+  elsif vendor_up contains 'WESTMAN ATELIER'
+    assign card_vendor = 'Westman Atelier'
+  elsif vendor_up contains 'KOSAS'
+    assign card_vendor = 'Kosas'
+  elsif vendor_up contains 'RHODE'
+    assign card_vendor = 'rhode'
+  elsif vendor_up contains 'GLOSSIER'
+    assign card_vendor = 'Glossier'
+  elsif vendor_up contains 'MAKEUP BY MARIO'
+    assign card_vendor = 'MAKEUP BY MARIO'
+  elsif vendor_up contains 'HOURGLASS'
+    assign card_vendor = 'Hourglass'
+  elsif vendor_up contains 'REFY'
+    assign card_vendor = 'REFY'
+  elsif card_vendor == blank or card_vendor == 'My Store' or card_vendor == 'General'
     assign title_up = product.title | upcase
     if title_up contains 'MICHAEL KORS' or title_up contains 'MICHAEL MICHAEL KORS'
       assign card_vendor = 'Michael Kors'
@@ -79,170 +120,1060 @@ Supported variables
       assign card_vendor = 'adidas'
     elsif title_up contains 'ASICS'
       assign card_vendor = 'ASICS'
+    elsif title_up contains 'SUMMER FRIDAYS'
+      assign card_vendor = 'Summer Fridays'
+    elsif title_up contains 'GISOU'
+      assign card_vendor = 'Gisou'
+    elsif title_up contains 'HAUS LABS'
+      assign card_vendor = 'Haus Labs'
+    elsif title_up contains 'PATRICK TA'
+      assign card_vendor = 'PATRICK TA'
+    elsif title_up contains 'SAIE'
+      assign card_vendor = 'Saie'
+    elsif title_up contains 'TOWER 28'
+      assign card_vendor = 'Tower 28 Beauty'
+    elsif title_up contains 'MERIT'
+      assign card_vendor = 'MERIT'
+    elsif title_up contains 'WESTMAN ATELIER'
+      assign card_vendor = 'Westman Atelier'
+    elsif title_up contains 'KOSAS'
+      assign card_vendor = 'Kosas'
+    elsif title_up contains 'RHODE'
+      assign card_vendor = 'rhode'
+    elsif title_up contains 'GLOSSIER'
+      assign card_vendor = 'Glossier'
+    elsif title_up contains 'MAKEUP BY MARIO'
+      assign card_vendor = 'MAKEUP BY MARIO'
+    elsif title_up contains 'HOURGLASS'
+      assign card_vendor = 'Hourglass'
+    elsif title_up contains 'REFY'
+      assign card_vendor = 'REFY'
+    else
+      assign card_vendor = 'The Rare Avenue'
     endif
   endif
+
+  assign is_footwear = false
+  if product.type contains 'Shoe' or product.type contains 'Sneaker' or product.type contains 'Sandal' or product.tags contains 'Footwear'
+    assign is_footwear = true
+  endif
+
+  assign first_avail_variant = product.selected_or_first_available_variant | default: product.variants.first
+
+  assign color_opt = nil
+  assign size_opt = nil
+  assign case_opt = nil
+  assign other_opt = nil
+
+  for option in product.options_with_values
+    assign opt_name_clean = option.name | strip
+    assign opt_name_down = opt_name_clean | downcase
+
+    if opt_name_down contains 'color' or opt_name_down contains 'colour'
+      assign color_opt = option
+    elsif opt_name_down contains 'size'
+      assign size_opt = option
+    elsif opt_name_down contains 'diameter' or opt_name_down contains 'case'
+      assign case_opt = option
+    elsif opt_name_clean != 'Title' and opt_name_clean != 'Default Title'
+      if other_opt == nil
+        assign other_opt = option
+      endif
+    endif
+  endfor
+
+  if is_footwear and size_opt == nil
+    for option in product.options_with_values
+      assign opt_name_down = option.name | downcase
+      if opt_name_down != 'color' and opt_name_down != 'colour' and option.name != 'Title' and option.name != 'Default Title'
+        assign size_opt = option
+        break
+      endif
+    endfor
+  endif
+
+  assign show_color_swatches = false
+  if color_opt != nil
+    if color_opt.values.size > 1
+      assign show_color_swatches = true
+    elsif product.variants.size > 1 and size_opt == nil
+      assign show_color_swatches = true
+    endif
+  elsif is_footwear == false and case_opt == nil and product.variants.size > 1
+    assign show_color_swatches = true
+  endif
+
+  assign show_size_pills = false
+  if size_opt != nil and size_opt.values.size > 1
+    assign show_size_pills = true
+  elsif is_footwear and product.variants.size > 1
+    assign show_size_pills = true
+  elsif other_opt != nil and product.variants.size > 1 and color_opt == nil and case_opt == nil and is_footwear
+    assign show_size_pills = true
+  endif
+
+  assign active_color_name = ''
+  if color_opt != nil
+    assign col_idx = color_opt.position | minus: 1
+    assign active_color_name = first_avail_variant.options[col_idx] | default: first_avail_variant.title
+    if active_color_name == blank
+      assign active_color_name = color_opt.values.first
+    endif
+  elsif show_color_swatches
+    assign active_color_name = first_avail_variant.title
+  endif
+
+  assign raw_size_option_name = ''
+  if is_footwear
+    assign raw_size_option_name = 'Size (UK)'
+  elsif size_opt != nil
+    assign raw_size_option_name = size_opt.name
+  elsif other_opt != nil
+    assign raw_size_option_name = other_opt.name
+  else
+    assign raw_size_option_name = 'Size'
+  endif
+
+  assign active_size_pill_label = ''
+  if size_opt != nil
+    assign s_idx = size_opt.position | minus: 1
+    assign active_size_pill_label = first_avail_variant.options[s_idx] | default: first_avail_variant.title
+  else
+    assign active_size_pill_label = first_avail_variant.title
+  endif
+
+  if is_footwear and active_size_pill_label contains '/'
+    assign part1 = active_size_pill_label | split: '/' | first | strip
+    assign part2 = active_size_pill_label | split: '/' | last | strip
+    if part2 contains 'UK'
+      assign active_size_pill_label = part2
+    elsif part1 contains 'UK'
+      assign active_size_pill_label = part1
+    else
+      assign active_size_pill_label = part1
+    endif
+  endif
+  if first_avail_variant.available == false
+    assign active_size_pill_label = 'Sold Out'
+  endif
+
+  assign is_ready_to_ship = false
+  for tag in product.tags
+    assign t_down = tag | downcase
+    if t_down == 'ready to ship' or t_down == 'instant-ship' or t_down == 'ready-to-ship' or t_down == 'manual-instant-ship-active'
+      assign is_ready_to_ship = true
+      break
+    endif
+  endfor
 -%}
 
-<product-card class="product-card" {% if reveal %}reveal-on-scroll="true"{% endif %} handle="{{ product.handle | escape }}" data-vendor="{{ card_vendor | default: product.vendor | escape }}">
-  {%- comment -%}
-  --------------------------------------------------------------------------------------------------------------------
-  PRODUCT MEDIA
-  --------------------------------------------------------------------------------------------------------------------
-  {%- endcomment -%}
+<product-card class="product-card" {% if reveal %}reveal-on-scroll="true"{% endif %} handle="{{ product.handle | escape }}" data-vendor="{{ card_vendor | escape }}" data-product-id="{{ product.id }}">
 
-  {%- if product.media.size > 0 -%}
-    <div class="product-card__figure">
-      {%- if show_badges -%}
-        {%- render 'product-badges', product: product, vertical: true, context: 'card' -%}
+  <!-- Card Top: Maison Vendor & Subtle Discount Tag -->
+  <div class="product-card__header">
+    <span class="product-card__vendor">{{ card_vendor }}</span>
+    <div class="product-card__tags-group">
+      {%- if is_ready_to_ship -%}
+        <span class="product-card__ready-tag">
+          <span class="product-card__ready-dot"></span>Ready to Ship
+        </span>
       {%- endif -%}
+      <span class="product-card__tag" {% unless has_discount %}style="display: none;"{% endunless %}>
+        {%- if has_discount -%}-{{ discount_percent }}%{%- endif -%}
+      </span>
+    </div>
+  </div>
 
-      <a href="{{ product.url }}" class="product-card__media" draggable="false" data-instant>
-        {%- capture sizes -%}
-          {%- if stacked -%}
-            (max-width: 699px) calc(100vw / {{ section.settings.products_per_row_mobile }}), (max-width: 999px) calc(100vw / {{ 3 | at_most: section.settings.products_per_row_desktop | default: 3 }} - 64px), calc((100vw - 96px) / {{ section.settings.products_per_row_desktop | default: 3 }} - (24px / {{ section.settings.products_per_row_desktop | default: 3 }} * {{ section.settings.products_per_row_desktop | default: 3 | minus: 1 }}))
-          {%- else -%}
-            (max-width: 699px) 74vw, (max-width: 999px) 38vw, calc((100vw - 96px) / {{ section.settings.products_per_row_desktop | default: 3 }} - (24px / {{ section.settings.products_per_row_desktop | default: 3 }} * {{ section.settings.products_per_row_desktop | default: 3 | minus: 1 }}))
-          {%- endif -%}
-        {%- endcapture -%}
+  <!-- Studio Photography Stage -->
+  <div class="product-card__stage" {% if product.media.size > 1 %}data-swipeable-stage="true"{% endif %}>
+    <a href="{{ product.url }}{% if first_avail_variant.id %}?variant={{ first_avail_variant.id }}{% endif %}" class="product-card__media-link" data-instant draggable="false">
+      {%- if primary_media != blank -%}
+        <img 
+          id="product-img-{{ product.id }}"
+          src="{{ primary_media | image_url: width: 600 }}"
+          alt="{{ primary_media.alt | default: product.title | escape }}"
+          loading="{% if position <= 4 %}eager{% else %}lazy{% endif %}"
+          width="600"
+          height="600"
+          class="product-card__image"
+          draggable="false"
+        />
+      {%- else -%}
+        {{ 'product-1' | placeholder_svg_tag: 'product-card__placeholder' }}
+      {%- endif -%}
+    </a>
 
-        {%- liquid
-          assign main_media_loading_strategy = nil
-          
-          if section.index > 3 or position > 3
-            assign main_media_loading_strategy = 'lazy'
-          endif
+    <!-- Studio Angle Switcher Controls (Swipe + Prev/Next + Micro Indicators when > 1 image) -->
+    {%- if product.media.size > 1 -%}
+      <button type="button" class="product-card__stage-nav product-card__stage-nav--prev" data-stage-dir="-1" aria-label="Previous image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button type="button" class="product-card__stage-nav product-card__stage-nav--next" data-stage-dir="1" aria-label="Next image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+      <div class="product-card__dots">
+        {%- for med in product.media limit: 6 -%}
+          <button 
+            type="button" 
+            class="product-card__dot {% if forloop.first %}is-active{% endif %}"
+            data-img-src="{{ med | image_url: width: 600 }}"
+            data-target="product-img-{{ product.id }}"
+            data-dot-index="{{ forloop.index0 }}"
+            aria-label="Angle {{ forloop.index }}"
+          ></button>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
 
-          assign primary_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media
-        -%}
+  <!-- Product Title & Pricing -->
+  <div class="product-card__info">
+    <a href="{{ product.url }}{% if first_avail_variant.id %}?variant={{ first_avail_variant.id }}{% endif %}" class="product-card__title" data-instant>
+      {{ product.title }}
+    </a>
 
-        {%- capture main_image_classes -%}product-card__image product-card__image--primary {% if settings.product_image_aspect_ratio contains 'crop' %}object-cover{% endif %} aspect-{{ settings.product_image_aspect_ratio | split: '_' | first }}{%- endcapture -%}
-        {{- primary_media | image_url: width: primary_media.width | image_tag: loading: main_media_loading_strategy, sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', draggable: 'false', class: main_image_classes -}}
+    <div class="product-card__price-row">
+      {%- if product.price_varies -%}
+        <span class="product-card__price">{{ product.price_min | money }} &ndash; {{ product.price_max | money }}</span>
+      {%- else -%}
+        <span class="product-card__price">{{ card_price | money }}</span>
+      {%- endif -%}
+      <span class="product-card__compare-price" {% unless has_discount %}style="display: none;"{% endunless %}>
+        {%- if has_discount -%}{{ card_compare_at_price | money }}{%- endif -%}
+      </span>
+    </div>
+  </div>
 
-        {%- liquid
-          if show_secondary_image and product.media.size > 1
-            assign next_media = product.media[primary_media.position] | default: product.media[1]
+  <!-- Interactive Visual Color Swatches -->
+  {%- if show_color_swatches -%}
+    <div class="product-card__swatches">
+      <div class="product-card__color-header product-card__swatch-label-row">
+        <span class="product-card__color-title product-card__swatch-title">COLOR:</span>
+        <span class="product-card__color-active product-card__swatch-active">{{ active_color_name }}</span>
+      </div>
 
-            if next_media != blank
-             echo next_media | image_url: width: next_media.width | image_tag: class: 'product-card__image product-card__image--secondary', loading: 'lazy', fetchpriority: 'low', sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', draggable: 'false', aria-hidden: 'true'
-            endif
-          endif
-        -%}
-      </a>
+      <div class="product-card__swatch-list product-card__swatches-grid">
+        {%- if color_opt != nil -%}
+          {%- for color_val in color_opt.values -%}
+            {%- liquid
+              assign matching_variant = nil
+              assign color_is_available = false
+              assign col_pos = color_opt.position
 
-      {%- if show_quick_buy and product.available -%}
-        {%- if product.variants.size == 1 and product.selling_plan_groups.size == 0 -%}
-          <product-form>
-            {%- form 'product', product -%}
-              <input type="hidden" name="on_success" value="force_open_drawer">
-              <input type="hidden" name="quantity" value="1">
-              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-              <button type="submit" class="product-card__quick-add-button">
-                <span class="sr-only">{{ 'product.general.add_to_cart_button' | t }}</span>
-                {%- render 'icon' with 'plus' -%}
-              </button>
-            {%- endform -%}
-          </product-form>
+              for variant in product.variants
+                assign var_val = ''
+                if col_pos == 1
+                  assign var_val = variant.option1
+                elsif col_pos == 2
+                  assign var_val = variant.option2
+                elsif col_pos == 3
+                  assign var_val = variant.option3
+                endif
+
+                if var_val == color_val
+                  if matching_variant == nil
+                    assign matching_variant = variant
+                  endif
+                  if variant.available
+                    assign color_is_available = true
+                    assign matching_variant = variant
+                    break
+                  endif
+                endif
+              endfor
+
+              if matching_variant == nil
+                assign matching_variant = product.variants[forloop.index0] | default: first_avail_variant
+              endif
+
+              assign swatch_media = matching_variant.featured_media | default: matching_variant.image | default: product.featured_media | default: product.media.first
+              assign swatch_thumb_url = swatch_media | image_url: width: 80, height: 80, crop: 'center'
+              assign swatch_stage_url = swatch_media | image_url: width: 600
+
+              assign is_swatch_active = false
+              if color_val == active_color_name
+                assign is_swatch_active = true
+              elsif active_color_name == blank and forloop.first
+                assign is_swatch_active = true
+              endif
+            -%}
+
+            <button 
+              type="button" 
+              class="product-card__swatch-btn product-card__swatch {% if is_swatch_active %}is-active{% endif %} {% unless color_is_available %}is-sold-out{% endunless %}"
+              data-variant-id="{{ matching_variant.id }}"
+              data-color-name="{{ color_val | escape }}"
+              data-price="{{ matching_variant.price | money | escape }}"
+              data-compare-price="{% if matching_variant.compare_at_price > matching_variant.price %}{{ matching_variant.compare_at_price | money | escape }}{% endif %}"
+              data-variant-image="{{ swatch_stage_url }}"
+              data-available="{% if color_is_available %}true{% else %}false{% endif %}"
+              aria-label="{{ color_val | escape }}{% unless color_is_available %} (Sold Out){% endunless %}"
+            >
+              {%- if swatch_thumb_url != blank -%}
+                <img 
+                  src="{{ swatch_thumb_url }}" 
+                  alt="{{ color_val | escape }}" 
+                  class="product-card__swatch-img" 
+                  width="30" 
+                  height="30" 
+                  loading="lazy" 
+                />
+              {%- endif -%}
+            </button>
+          {%- endfor -%}
         {%- else -%}
-          {%- capture quick_buy_id -%}product-quick-buy-{{ section.id }}-{{ block.id }}-{{ quick_buy_context }}-{{ product.id }}{%- endcapture -%}
+          {%- for variant in product.variants -%}
+            {%- liquid
+              assign color_val = variant.title
+              assign color_is_available = variant.available
+              assign swatch_media = variant.featured_media | default: variant.image | default: product.featured_media | default: product.media.first
+              assign swatch_thumb_url = swatch_media | image_url: width: 80, height: 80, crop: 'center'
+              assign swatch_stage_url = swatch_media | image_url: width: 600
 
-          <button type="button" aria-controls="{{ quick_buy_id }}" class="product-card__quick-add-button">
-            <span class="sr-only">{{ 'product.general.choose_options' | t }}</span>
-            {%- render 'icon' with 'plus' -%}
-          </button>
-
-          <quick-buy-modal handle="{{ product.handle }}?variant={{ product.selected_or_first_available_variant.id }}" class="quick-buy-modal modal" id="{{ quick_buy_id }}">
-          </quick-buy-modal>
+              assign is_swatch_active = false
+              if variant.id == first_avail_variant.id
+                assign is_swatch_active = true
+              endif
+            -%}
+            <button 
+              type="button" 
+              class="product-card__swatch-btn product-card__swatch {% if is_swatch_active %}is-active{% endif %} {% unless color_is_available %}is-sold-out{% endunless %}"
+              data-variant-id="{{ variant.id }}"
+              data-color-name="{{ color_val | escape }}"
+              data-price="{{ variant.price | money | escape }}"
+              data-compare-price="{% if variant.compare_at_price > variant.price %}{{ variant.compare_at_price | money | escape }}{% endif %}"
+              data-variant-image="{{ swatch_stage_url }}"
+              data-available="{% if color_is_available %}true{% else %}false{% endif %}"
+              aria-label="{{ color_val | escape }}{% unless color_is_available %} (Sold Out){% endunless %}"
+            >
+              {%- if swatch_thumb_url != blank -%}
+                <img 
+                  src="{{ swatch_thumb_url }}" 
+                  alt="{{ color_val | escape }}" 
+                  class="product-card__swatch-img" 
+                  width="30" 
+                  height="30" 
+                  loading="lazy" 
+                />
+              {%- endif -%}
+            </button>
+          {%- endfor -%}
         {%- endif -%}
-      {%- endif -%}
+      </div>
     </div>
   {%- endif -%}
 
-  {%- comment -%}
-  --------------------------------------------------------------------------------------------------------------------
-  PRODUCT INFO
-  --------------------------------------------------------------------------------------------------------------------
-  {%- endcomment -%}
+  <!-- Interactive Sizing / Variant Pills -->
+  {%- if show_size_pills -%}
+    <div class="product-card__sizing">
+      <div class="product-card__size-label-row">
+        <span class="product-card__size-title">{{ raw_size_option_name }}</span>
+        <span class="product-card__size-active">{{ active_size_pill_label }}</span>
+      </div>
 
-  <div class="product-card__info empty:hidden">
-    {%- assign text_class = '' -%}
+      <div class="product-card__size-grid">
+        {%- if size_opt != nil -%}
+          {%- for size_val in size_opt.values limit: 12 -%}
+            {%- liquid
+              assign clean_size_display = size_val
+              if is_footwear and clean_size_display contains '/'
+                assign part1 = clean_size_display | split: '/' | first | strip
+                assign part2 = clean_size_display | split: '/' | last | strip
+                if part2 contains 'UK'
+                  assign clean_size_display = part2
+                elsif part1 contains 'UK'
+                  assign clean_size_display = part1
+                else
+                  assign clean_size_display = part1
+                endif
+              endif
 
-    {%- if settings.product_card_text_font == 'heading' -%}
-      {%- assign text_class = 'h6' -%}
-    {%- endif -%}
+              assign matching_var = nil
+              assign is_var_avail = false
+              for v in product.variants
+                assign v_size = ''
+                assign v_col = ''
+                if size_opt.position == 1
+                  assign v_size = v.option1
+                elsif size_opt.position == 2
+                  assign v_size = v.option2
+                elsif size_opt.position == 3
+                  assign v_size = v.option3
+                endif
 
-    {%- if show_title or show_prices or show_vendor and card_vendor != blank -%}
-      <div class="v-stack justify-items-center gap-2">
-        {%- if show_vendor and card_vendor != blank -%}
-          {%- capture vendor_class -%}product-card__vendor smallcaps {% if settings.product_card_text_font == 'heading' %}heading{% endif %}{% endcapture %}
-          {%- render 'vendor', vendor: card_vendor, product: product, class: vendor_class -%}
-        {%- endif -%}
+                if color_opt != nil
+                  if color_opt.position == 1
+                    assign v_col = v.option1
+                  elsif color_opt.position == 2
+                    assign v_col = v.option2
+                  elsif color_opt.position == 3
+                    assign v_col = v.option3
+                  endif
+                endif
 
-        {%- if show_title or show_prices -%}
-          <div class="v-stack justify-items-center gap-1">
-            {%- if show_title -%}
-              <a href="{{ product.url }}" class="product-title {% if text_class != blank %}{{ text_class }}{% endif %} {% if settings.product_title_max_lines > 0 %}line-clamp{% endif %}" {% if settings.product_title_max_lines > 0 %}style="--line-clamp-count: {{ settings.product_title_max_lines }}"{% endif %} data-instant>
-                {{- product.title -}}
-              </a>
-            {%- endif -%}
+                if v_size == size_val
+                  if color_opt == nil or v_col == active_color_name
+                    if matching_var == nil
+                      assign matching_var = v
+                    endif
+                    if v.available
+                      assign is_var_avail = true
+                      assign matching_var = v
+                      break
+                    endif
+                  endif
+                endif
+              endfor
 
-            {%- if show_prices -%}
-              {%- render 'price-list', product: product, context: 'card' -%}
-            {%- endif -%}
-          </div>
+              if matching_var == nil
+                assign matching_var = first_avail_variant
+              endif
+
+              assign is_pill_active = false
+              if matching_var.id == first_avail_variant.id and is_var_avail
+                assign is_pill_active = true
+              endif
+
+              assign var_media_url = ''
+              if matching_var.featured_media != blank
+                assign var_media_url = matching_var.featured_media | image_url: width: 600
+              elsif matching_var.image != blank
+                assign var_media_url = matching_var.image | image_url: width: 600
+              endif
+            -%}
+            <button 
+              type="button"
+              class="product-card__size-pill {% unless is_var_avail %}is-sold-out{% endunless %} {% if is_pill_active %}is-active{% endif %}"
+              data-variant-id="{{ matching_var.id }}"
+              data-size-name="{{ clean_size_display | escape }}"
+              data-raw-size="{{ size_val | escape }}"
+              data-price="{{ matching_var.price | money | escape }}"
+              data-compare-price="{% if matching_var.compare_at_price > matching_var.price %}{{ matching_var.compare_at_price | money | escape }}{% endif %}"
+              {% if var_media_url != blank %}data-variant-image="{{ var_media_url }}"{% endif %}
+              {% unless is_var_avail %}disabled{% endunless %}
+            >
+              {{ clean_size_display }}
+            </button>
+          {%- endfor -%}
+        {%- else -%}
+          {%- for variant in product.variants limit: 12 -%}
+            {%- liquid
+              assign clean_size_display = variant.title
+              if is_footwear and clean_size_display contains '/'
+                assign part1 = clean_size_display | split: '/' | first | strip
+                assign part2 = clean_size_display | split: '/' | last | strip
+                if part2 contains 'UK'
+                  assign clean_size_display = part2
+                elsif part1 contains 'UK'
+                  assign clean_size_display = part1
+                else
+                  assign clean_size_display = part1
+                endif
+              endif
+
+              assign var_media_url = ''
+              if variant.featured_media != blank
+                assign var_media_url = variant.featured_media | image_url: width: 600
+              elsif variant.image != blank
+                assign var_media_url = variant.image | image_url: width: 600
+              endif
+            -%}
+            <button 
+              type="button"
+              class="product-card__size-pill {% unless variant.available %}is-sold-out{% endunless %} {% if variant.id == first_avail_variant.id %}is-active{% endif %}"
+              data-variant-id="{{ variant.id }}"
+              data-size-name="{{ clean_size_display | escape }}"
+              data-raw-size="{{ variant.title | escape }}"
+              data-price="{{ variant.price | money | escape }}"
+              data-compare-price="{% if variant.compare_at_price > variant.price %}{{ variant.compare_at_price | money | escape }}{% endif %}"
+              {% if var_media_url != blank %}data-variant-image="{{ var_media_url }}"{% endif %}
+              {% unless variant.available %}disabled{% endunless %}
+            >
+              {{ clean_size_display }}
+            </button>
+          {%- endfor -%}
         {%- endif -%}
       </div>
-    {%- endif -%}
+    </div>
+  {%- elsif case_opt != nil -%}
+    <div class="product-card__spec-indicator">
+      <span class="product-card__spec-label">CASE DIAMETER:</span>
+      <span class="product-card__spec-value">{{ case_opt.values.first }}</span>
+    </div>
+  {%- elsif show_color_swatches == false -%}
+    <div class="product-card__sizing-spacer"></div>
+  {%- endif -%}
 
-    {%- if show_swatches and settings.product_color_display != 'hide' -%}
-      {%- liquid
-        assign matched_product_option = nil
-        assign color_label_list = 'general.label.color' | t | replace: ', ', ',' | downcase | split: ','
-        
-        # First, we try to find an option named explicitly "color" in the store's language
-        for color_label in color_label_list
-          if product.options_by_name[color_label] != blank
-            assign matched_product_option = product.options_by_name[color_label]
-            break
-          endif
-        endfor
+  <script type="application/json" class="product-card__variants-data">
+    [
+      {%- for v in product.variants -%}
+        {
+          "id": {{ v.id }},
+          "title": {{ v.title | json }},
+          "option1": {{ v.option1 | json }},
+          "option2": {{ v.option2 | json }},
+          "option3": {{ v.option3 | json }},
+          "available": {{ v.available | json }},
+          "price": {{ v.price | money | json }},
+          "compare_at_price": {% if v.compare_at_price > v.price %}{{ v.compare_at_price | money | json }}{% else %}null{% endif %},
+          "image": {% if v.featured_media != blank %}{{ v.featured_media | image_url: width: 600 | json }}{% elsif v.image != blank %}{{ v.image | image_url: width: 600 | json }}{% else %}null{% endif %}
+        }{% unless forloop.last %},{% endunless %}
+      {%- endfor -%}
+    ]
+  </script>
 
-        # If we didn't find an option named "color", we try to find an option that has swatches, as this is probably
-        # the color option that the merchant want to use for swatches
-        if matched_product_option == blank
-          for product_option in product.options_with_values
-            assign values_with_swatch = product_option.values | where: 'swatch'
+  <!-- Full-Width Architectural "Add to Bag" Button -->
+  <form method="post" action="/cart/add" class="product-card__form">
+    <input type="hidden" name="id" value="{{ first_avail_variant.id }}" class="product-card__variant-id-input" />
+    <input type="hidden" name="quantity" value="1" />
 
-            if values_with_swatch.size > 0
-              assign matched_product_option = product_option
-              break
-            endif
-          endfor
-        endif
-      -%}
+    <button 
+      type="submit" 
+      class="product-card__submit-btn"
+      {% if first_avail_variant.available == false or product.available == false %}disabled{% endif %}
+    >
+      <span class="product-card__btn-text">
+        {%- if product.available and first_avail_variant.available -%}
+          Add to Bag
+        {%- else -%}
+          Sold Out
+        {%- endif -%}
+      </span>
+    </button>
+  </form>
 
-      {%- if matched_product_option != blank and matched_product_option.values.size > 1 -%}
-        {%- case settings.product_color_display -%}
-          {%- when 'count' -%}
-            <p class="smallcaps text-subdued">{{- 'product.general.available_colors_count' | t: count: matched_product_option.values.size -}}</p>
-
-          {%- when 'swatch' -%}
-            <fieldset class="h-stack wrap justify-center gap-1">
-              <legend class="sr-only">{{ matched_product_option.name }}</legend>
-              
-              {%- capture param_name -%}swatch-{{ quick_buy_context }}-{{ section.id }}-{{ block.id }}-{{ product.id }}-{{ matched_product_option.position }}{%- endcapture -%}
-
-              {%- liquid
-                for option_value in matched_product_option.values
-                  render 'option-value', type: 'swatch', option_value: option_value, param_name: param_name, option_position: matched_product_option.position, output_variant_media: true, size: 'sm', product: product
-                endfor
-              -%}
-            </fieldset>
-        {%- endcase -%}
-      {%- endif -%}
-    {%- endif -%}
-
-    {%- if show_rating -%}
-      {%- render 'product-rating', product: product, show_empty: settings.show_product_rating_if_empty, display_mode: settings.product_rating_mode -%}
-    {%- endif -%}
-  </div>
 </product-card>
+
+<script>
+  if (!window._rareAvenueProductCardsInitialized) {
+    window._rareAvenueProductCardsInitialized = true;
+    (function() {
+      function updateCardUrl(card, variantId) {
+        if (!variantId) return;
+        card.querySelectorAll('a.product-card__media-link, a.product-card__title').forEach(link => {
+          try {
+            const url = new URL(link.href, window.location.origin);
+            url.searchParams.set('variant', variantId);
+            link.href = url.pathname + url.search;
+          } catch(err) {}
+        });
+      }
+
+      // 1. Multi-Image Stage Switcher (Touch Swipe, Mouse Drag, Prev/Next Arrows & Dots)
+      if (!window._rareAvenueStageSwipeInitialized) {
+        window._rareAvenueStageSwipeInitialized = true;
+        function preloadStageImages(stage) {
+          if (!stage || stage._imagesPreloaded) return;
+          stage._imagesPreloaded = true;
+        stage.querySelectorAll('.product-card__dot, .runway-card__dot').forEach(d => {
+          const s = d.getAttribute('data-img-src');
+          if (s) {
+            const preImg = new Image();
+            preImg.src = s;
+          }
+        });
+      }
+
+      function activateStageDot(stage, dot) {
+        if (!stage || !dot) return;
+        const newSrc = dot.getAttribute('data-img-src');
+        const targetId = dot.getAttribute('data-target');
+        const targetImg = stage.querySelector('.product-card__image, .runway-card__image') || (targetId && document.getElementById(targetId));
+        if (targetImg && newSrc) {
+          targetImg.src = newSrc;
+          if (targetImg.hasAttribute('srcset')) targetImg.removeAttribute('srcset');
+          const card = stage.closest('.product-card, .runway-card');
+          if (card) card._lockedStageImg = newSrc;
+        }
+        stage.querySelectorAll('.product-card__dot, .runway-card__dot').forEach(d => d.classList.remove('is-active'));
+        dot.classList.add('is-active');
+      }
+
+      function stepStageImage(stage, direction) {
+        if (!stage) return false;
+        const dots = Array.from(stage.querySelectorAll('.product-card__dot, .runway-card__dot'));
+        if (dots.length <= 1) return false;
+        preloadStageImages(stage);
+        let activeIdx = dots.findIndex(d => d.classList.contains('is-active'));
+        if (activeIdx < 0) activeIdx = 0;
+        const nextIdx = (activeIdx + direction + dots.length) % dots.length;
+        activateStageDot(stage, dots[nextIdx]);
+        return true;
+      }
+
+      // Preload on stage hover (desktop)
+      document.addEventListener('mouseover', function(e) {
+        const stage = e.target.closest('.product-card__stage[data-swipeable-stage="true"], .runway-card__stage[data-swipeable-stage="true"]');
+        if (stage) preloadStageImages(stage);
+      }, { passive: true });
+
+      // Dot Click
+      document.addEventListener('click', function(e) {
+        const dot = e.target.closest('.product-card__dot, .runway-card__dot');
+        if (!dot) return;
+        e.preventDefault();
+        e.stopPropagation();
+        const stage = dot.closest('.product-card__stage, .runway-card__stage');
+        if (stage) {
+          preloadStageImages(stage);
+          activateStageDot(stage, dot);
+        }
+      });
+
+      // Prev / Next Arrow Click
+      document.addEventListener('click', function(e) {
+        const navBtn = e.target.closest('.product-card__stage-nav, .runway-card__stage-nav');
+        if (!navBtn) return;
+        e.preventDefault();
+        e.stopPropagation();
+        const stage = navBtn.closest('.product-card__stage, .runway-card__stage');
+        const dir = parseInt(navBtn.getAttribute('data-stage-dir') || '1', 10);
+        if (stage) stepStageImage(stage, dir);
+      });
+
+      // Suppress accidental link navigation immediately following a swipe or drag
+      document.addEventListener('click', function(e) {
+        const stage = e.target.closest('.product-card__stage, .runway-card__stage');
+        if (stage && stage._justSwipedAt && (Date.now() - stage._justSwipedAt < 400)) {
+          e.preventDefault();
+          e.stopPropagation();
+          stage._justSwipedAt = 0;
+        }
+      }, true);
+
+      // Touch Swipe Left / Right on Image Stage
+      let activeTouch = null;
+      document.addEventListener('touchstart', function(e) {
+        if (e.touches.length !== 1) return;
+        if (e.target.closest('.product-card__stage-nav, .runway-card__stage-nav, .product-card__dot, .runway-card__dot')) return;
+        const stage = e.target.closest('.product-card__stage, .runway-card__stage');
+        if (!stage) return;
+        const dots = stage.querySelectorAll('.product-card__dot, .runway-card__dot');
+        if (dots.length <= 1) return;
+        preloadStageImages(stage);
+        activeTouch = {
+          stage: stage,
+          startX: e.touches[0].clientX,
+          startY: e.touches[0].clientY,
+          lastX: e.touches[0].clientX,
+          isHorizontal: null
+        };
+      }, { passive: true });
+
+      document.addEventListener('touchmove', function(e) {
+        if (!activeTouch || e.touches.length !== 1) return;
+        const dx = e.touches[0].clientX - activeTouch.startX;
+        const dy = e.touches[0].clientY - activeTouch.startY;
+        activeTouch.lastX = e.touches[0].clientX;
+
+        if (activeTouch.isHorizontal === null && (Math.abs(dx) > 8 || Math.abs(dy) > 8)) {
+          activeTouch.isHorizontal = Math.abs(dx) > Math.abs(dy) * 1.15;
+        }
+
+        if (activeTouch.isHorizontal) {
+          if (e.cancelable) e.preventDefault();
+          e.stopPropagation();
+        }
+      }, { passive: false });
+
+      document.addEventListener('touchend', function(e) {
+        if (!activeTouch) return;
+        const dx = activeTouch.lastX - activeTouch.startX;
+        if (activeTouch.isHorizontal && Math.abs(dx) >= 25) {
+          stepStageImage(activeTouch.stage, dx < 0 ? 1 : -1);
+          activeTouch.stage._justSwipedAt = Date.now();
+        }
+        activeTouch = null;
+      }, { passive: true });
+
+      // Mouse Drag Left / Right on Image Stage (Desktop)
+      let activeDrag = null;
+      document.addEventListener('mousedown', function(e) {
+        if (e.button !== 0) return;
+        if (e.target.closest('.product-card__stage-nav, .runway-card__stage-nav, .product-card__dot, .runway-card__dot')) return;
+        const stage = e.target.closest('.product-card__stage, .runway-card__stage');
+        if (!stage) return;
+        const dots = stage.querySelectorAll('.product-card__dot, .runway-card__dot');
+        if (dots.length <= 1) return;
+        preloadStageImages(stage);
+        activeDrag = {
+          stage: stage,
+          startX: e.clientX,
+          startY: e.clientY,
+          lastX: e.clientX,
+          moved: false
+        };
+      });
+
+      document.addEventListener('mousemove', function(e) {
+        if (!activeDrag) return;
+        const dx = e.clientX - activeDrag.startX;
+        const dy = e.clientY - activeDrag.startY;
+        activeDrag.lastX = e.clientX;
+        if (Math.abs(dx) > 10 && Math.abs(dx) > Math.abs(dy)) {
+          activeDrag.moved = true;
+        }
+      });
+
+      document.addEventListener('mouseup', function() {
+        if (!activeDrag) return;
+        const dx = activeDrag.lastX - activeDrag.startX;
+        if (activeDrag.moved && Math.abs(dx) >= 25) {
+          stepStageImage(activeDrag.stage, dx < 0 ? 1 : -1);
+          activeDrag.stage._justSwipedAt = Date.now();
+        }
+        activeDrag = null;
+      });
+      }
+
+
+      // 2. Interactive Visual Color Swatches
+      // Hover preview (desktop): preview variant image on hover
+      document.addEventListener('mouseover', function(e) {
+        const swatch = e.target.closest('.product-card__swatch-btn');
+        if (!swatch) return;
+        const card = swatch.closest('.product-card');
+        if (!card) return;
+        const img = card.querySelector('.product-card__image');
+        if (!img) return;
+
+        if (!card._lockedStageImg) {
+          const activeSwatch = card.querySelector('.product-card__swatch-btn.is-active');
+          card._lockedStageImg = (activeSwatch && activeSwatch.getAttribute('data-variant-image')) || img.src;
+        }
+
+        const previewSrc = swatch.getAttribute('data-variant-image');
+        if (previewSrc && img.src !== previewSrc) {
+          img.src = previewSrc;
+          if (img.hasAttribute('srcset')) img.removeAttribute('srcset');
+        }
+      });
+
+      document.addEventListener('mouseout', function(e) {
+        const swatch = e.target.closest('.product-card__swatch-btn');
+        if (!swatch) return;
+        const related = e.relatedTarget;
+        if (swatch.contains(related)) return;
+
+        const card = swatch.closest('.product-card');
+        if (!card) return;
+        if (related && related.closest && related.closest('.product-card__swatch-btn')) return;
+
+        const img = card.querySelector('.product-card__image');
+        if (!img) return;
+
+        const activeSwatch = card.querySelector('.product-card__swatch-btn.is-active');
+        const restoreSrc = (activeSwatch && activeSwatch.getAttribute('data-variant-image')) || card._lockedStageImg;
+        if (restoreSrc && img.src !== restoreSrc) {
+          img.src = restoreSrc;
+          if (img.hasAttribute('srcset')) img.removeAttribute('srcset');
+        }
+      });
+
+      // Swatch Click: lock selection, switch image, update active label, price, variant input, and reconcile size pills
+      document.addEventListener('click', function(e) {
+        const swatch = e.target.closest('.product-card__swatch-btn');
+        if (!swatch) return;
+        e.preventDefault();
+        e.stopPropagation();
+
+        const card = swatch.closest('.product-card');
+        if (!card) return;
+
+        let variantId = swatch.getAttribute('data-variant-id');
+        const colorName = swatch.getAttribute('data-color-name');
+        let price = swatch.getAttribute('data-price');
+        let comparePrice = swatch.getAttribute('data-compare-price');
+        const variantImg = swatch.getAttribute('data-variant-image');
+        let isAvailable = swatch.getAttribute('data-available') === 'true' || swatch.getAttribute('data-available') === '1';
+
+        // 1. Move active ring to this swatch
+        card.querySelectorAll('.product-card__swatch-btn').forEach(s => s.classList.remove('is-active'));
+        swatch.classList.add('is-active');
+
+        // 2. Lock stage photo
+        if (variantImg) {
+          card._lockedStageImg = variantImg;
+          const img = card.querySelector('.product-card__image');
+          if (img) {
+            img.src = variantImg;
+            if (img.hasAttribute('srcset')) img.removeAttribute('srcset');
+          }
+        }
+
+        // 3. Dynamically update active color label text
+        const colorLabel = card.querySelector('.product-card__color-active, .product-card__swatch-active');
+        if (colorLabel && colorName) colorLabel.textContent = colorName;
+
+        // 4. Multi-option reconciliation (Color + Size)
+        const variantsDataEl = card.querySelector('.product-card__variants-data');
+        const sizePills = card.querySelectorAll('.product-card__size-pill');
+
+        if (variantsDataEl && sizePills.length > 0) {
+          try {
+            const vars = JSON.parse(variantsDataEl.textContent);
+
+            let activePill = card.querySelector('.product-card__size-pill.is-active');
+            let activeSizeRaw = activePill ? (activePill.getAttribute('data-raw-size') || activePill.getAttribute('data-size-name')) : null;
+            let activePillAvailableInNewColor = false;
+            let firstAvailablePill = null;
+            let firstAvailableVariant = null;
+
+            sizePills.forEach(pill => {
+              const pillRawSize = pill.getAttribute('data-raw-size') || pill.getAttribute('data-size-name');
+              const matchedVar = vars.find(v => 
+                (v.option1 === colorName || v.option2 === colorName || v.option3 === colorName || v.title.includes(colorName)) &&
+                (v.option1 === pillRawSize || v.option2 === pillRawSize || v.option3 === pillRawSize || v.title.includes(pillRawSize))
+              );
+
+              if (matchedVar && matchedVar.available) {
+                pill.classList.remove('is-sold-out');
+                pill.disabled = false;
+                pill.setAttribute('data-variant-id', matchedVar.id);
+                if (matchedVar.price) pill.setAttribute('data-price', matchedVar.price);
+                if (matchedVar.compare_at_price) pill.setAttribute('data-compare-price', matchedVar.compare_at_price);
+
+                if (!firstAvailablePill) {
+                  firstAvailablePill = pill;
+                  firstAvailableVariant = matchedVar;
+                }
+                if (pillRawSize === activeSizeRaw) {
+                  activePillAvailableInNewColor = true;
+                  variantId = matchedVar.id;
+                  price = matchedVar.price;
+                  comparePrice = matchedVar.compare_at_price;
+                  isAvailable = true;
+                }
+              } else {
+                pill.classList.add('is-sold-out');
+                pill.disabled = true;
+                if (matchedVar) pill.setAttribute('data-variant-id', matchedVar.id);
+              }
+            });
+
+            if (!activePillAvailableInNewColor) {
+              if (firstAvailablePill && firstAvailableVariant) {
+                sizePills.forEach(p => p.classList.remove('is-active'));
+                firstAvailablePill.classList.add('is-active');
+                const newSizeName = firstAvailablePill.getAttribute('data-size-name');
+                const sizeLabel = card.querySelector('.product-card__size-active');
+                if (sizeLabel && newSizeName) sizeLabel.textContent = newSizeName;
+
+                variantId = firstAvailableVariant.id;
+                price = firstAvailableVariant.price;
+                comparePrice = firstAvailableVariant.compare_at_price;
+                isAvailable = true;
+              } else {
+                sizePills.forEach(p => p.classList.remove('is-active'));
+                const sizeLabel = card.querySelector('.product-card__size-active');
+                if (sizeLabel) sizeLabel.textContent = 'Sold Out';
+                isAvailable = false;
+              }
+            }
+          } catch(err) {
+            console.error('Swatch size reconciliation error:', err);
+          }
+        }
+
+        // 5. Update price and compare-at price
+        const priceEl = card.querySelector('.product-card__price');
+        if (priceEl && price) priceEl.textContent = price;
+
+        const comparePriceEl = card.querySelector('.product-card__compare-price');
+        const tagEl = card.querySelector('.product-card__tag');
+        if (comparePriceEl) {
+          if (comparePrice) {
+            comparePriceEl.textContent = comparePrice;
+            comparePriceEl.style.display = '';
+          } else {
+            comparePriceEl.style.display = 'none';
+          }
+        }
+        if (tagEl) {
+          if (comparePrice && price) {
+            const numP = parseFloat(price.replace(/[^0-9.]/g, ''));
+            const numC = parseFloat(comparePrice.replace(/[^0-9.]/g, ''));
+            if (numC > numP && numC > 0) {
+              const pct = Math.round(((numC - numP) / numC) * 100);
+              tagEl.textContent = `-${pct}%`;
+              tagEl.style.display = '';
+            } else {
+              tagEl.style.display = 'none';
+            }
+          } else {
+            tagEl.style.display = 'none';
+          }
+        }
+
+        // 6. Update hidden variant ID input
+        const input = card.querySelector('.product-card__variant-id-input');
+        if (input && variantId) input.value = variantId;
+
+        // 7. Update PDP links with ?variant=
+        if (variantId) updateCardUrl(card, variantId);
+
+        // 8. Update Add to Bag button availability
+        const submitBtn = card.querySelector('.product-card__submit-btn');
+        if (submitBtn) {
+          const btnText = submitBtn.querySelector('.product-card__btn-text');
+          if (isAvailable) {
+            submitBtn.disabled = false;
+            if (btnText) btnText.textContent = 'Add to Bag';
+          } else {
+            submitBtn.disabled = true;
+            if (btnText) btnText.textContent = 'Sold Out';
+          }
+        }
+      });
+
+      // 3. Interactive Sizing / Variant Pills
+      document.addEventListener('click', function(e) {
+        const pill = e.target.closest('.product-card__size-pill');
+        if (!pill || pill.disabled) return;
+        e.preventDefault();
+        e.stopPropagation();
+
+        const card = pill.closest('.product-card');
+        if (!card) return;
+
+        let variantId = pill.getAttribute('data-variant-id');
+        const sizeName = pill.getAttribute('data-size-name');
+        const rawSize = pill.getAttribute('data-raw-size') || sizeName;
+        let price = pill.getAttribute('data-price');
+        let comparePrice = pill.getAttribute('data-compare-price');
+        let variantImg = pill.getAttribute('data-variant-image');
+
+        card.querySelectorAll('.product-card__size-pill').forEach(p => p.classList.remove('is-active'));
+        pill.classList.add('is-active');
+
+        const sizeLabel = card.querySelector('.product-card__size-active');
+        if (sizeLabel && sizeName) sizeLabel.textContent = sizeName;
+
+        // Multi-option check if active color exists
+        const activeSwatch = card.querySelector('.product-card__swatch-btn.is-active');
+        const activeColorName = activeSwatch ? activeSwatch.getAttribute('data-color-name') : null;
+        const variantsDataEl = card.querySelector('.product-card__variants-data');
+
+        if (activeColorName && variantsDataEl) {
+          try {
+            const vars = JSON.parse(variantsDataEl.textContent);
+            const matched = vars.find(v => 
+              (v.option1 === activeColorName || v.option2 === activeColorName || v.option3 === activeColorName || v.title.includes(activeColorName)) &&
+              (v.option1 === rawSize || v.option2 === rawSize || v.option3 === rawSize || v.title.includes(rawSize))
+            );
+            if (matched) {
+              variantId = matched.id;
+              if (matched.price) price = matched.price;
+              if (matched.compare_at_price) comparePrice = matched.compare_at_price;
+              if (matched.image) variantImg = matched.image;
+            }
+          } catch(err) {}
+        }
+
+        const input = card.querySelector('.product-card__variant-id-input');
+        if (input && variantId) input.value = variantId;
+
+        const priceEl = card.querySelector('.product-card__price');
+        if (priceEl && price) priceEl.textContent = price;
+
+        const comparePriceEl = card.querySelector('.product-card__compare-price');
+        const tagEl = card.querySelector('.product-card__tag');
+        if (comparePriceEl) {
+          if (comparePrice) {
+            comparePriceEl.textContent = comparePrice;
+            comparePriceEl.style.display = '';
+          } else {
+            comparePriceEl.style.display = 'none';
+          }
+        }
+        if (tagEl) {
+          if (comparePrice && price) {
+            const numP = parseFloat(price.replace(/[^0-9.]/g, ''));
+            const numC = parseFloat(comparePrice.replace(/[^0-9.]/g, ''));
+            if (numC > numP && numC > 0) {
+              const pct = Math.round(((numC - numP) / numC) * 100);
+              tagEl.textContent = `-${pct}%`;
+              tagEl.style.display = '';
+            } else {
+              tagEl.style.display = 'none';
+            }
+          } else {
+            tagEl.style.display = 'none';
+          }
+        }
+
+        if (variantImg) {
+          card._lockedStageImg = variantImg;
+          const img = card.querySelector('.product-card__image');
+          if (img) {
+            img.src = variantImg;
+            if (img.hasAttribute('srcset')) img.removeAttribute('srcset');
+          }
+        }
+
+        if (variantId) updateCardUrl(card, variantId);
+
+        const submitBtn = card.querySelector('.product-card__submit-btn');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          const btnText = submitBtn.querySelector('.product-card__btn-text');
+          if (btnText) btnText.textContent = 'Add to Bag';
+        }
+      });
+
+      // 4. AJAX Cart Add to Prestige Native Drawer
+      document.addEventListener('submit', async function(e) {
+        const form = e.target.closest('.product-card__form');
+        if (!form) return;
+        e.preventDefault();
+
+        const btn = form.querySelector('.product-card__submit-btn');
+        const btnText = form.querySelector('.product-card__btn-text');
+        const originalText = btnText ? btnText.textContent : 'Add to Bag';
+
+        if (btn) btn.disabled = true;
+        if (btnText) btnText.textContent = 'Adding...';
+
+        try {
+          const formData = new FormData(form);
+          const res = await fetch('/cart/add.js', {
+            method: 'POST',
+            body: formData,
+            headers: { 'X-Requested-With': 'XMLHttpRequest' }
+          });
+
+          if (res.ok) {
+            if (btnText) btnText.textContent = 'Added';
+            document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', { bubbles: true }));
+            document.documentElement.dispatchEvent(new CustomEvent('cart:change', { bubbles: true }));
+
+            const cartDrawer = document.querySelector('cart-drawer') || document.querySelector('#cart-drawer');
+            if (cartDrawer && typeof cartDrawer.open === 'function') {
+              cartDrawer.open();
+            } else if (cartDrawer && typeof cartDrawer.show === 'function') {
+              cartDrawer.show();
+            } else {
+              const drawerToggle = document.querySelector('[data-action="open-drawer"][data-drawer-id="sidebar-cart"]') || document.querySelector('a[href="/cart"]');
+              if (drawerToggle) drawerToggle.click();
+            }
+
+            setTimeout(() => {
+              if (btn) btn.disabled = false;
+              if (btnText) btnText.textContent = originalText;
+            }, 2000);
+          } else {
+            if (btnText) btnText.textContent = 'Sold Out';
+            setTimeout(() => {
+              if (btn) btn.disabled = false;
+              if (btnText) btnText.textContent = originalText;
+            }, 2000);
+          }
+        } catch (err) {
+          console.error('Product card cart error:', err);
+          if (btn) btn.disabled = false;
+          if (btnText) btnText.textContent = originalText;
+        }
+      });
+    })();
+  }
+</script>

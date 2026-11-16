@@ -7,9 +7,9 @@
   "product_type": "Shoulder Bags",
   "gender": "Women",
   "source_sku": "CFN74 IMA7U",
-  "source_price": 189.0,
+  "source_price": 199.0,
   "source_compare_at_price": null,
-  "current_price": 18082.0,
+  "current_price": 18676.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -66,9 +66,9 @@
       "id": null,
       "sku": "CFO89 IMMPL",
       "title": "Gold/Maple",
-      "price": "18082.00",
+      "price": "18764.00",
       "compare_at_price": null,
-      "source_price": 189.0,
+      "source_price": 199.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -80,7 +80,8 @@
           "name": "Gold/Maple"
         }
       ],
-      "price_current": 18142.0
+      "price_current": 18764.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -100,15 +101,16 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 18142.0
+      "price_current": 18142.0,
+      "is_available": false
     },
     {
       "id": null,
       "sku": "CFN73 IMN2W",
       "title": "Im/Blue Jay",
-      "price": "18082.00",
+      "price": "18676.00",
       "compare_at_price": null,
-      "source_price": 189.0,
+      "source_price": 199.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -120,15 +122,16 @@
           "name": "Im/Blue Jay"
         }
       ],
-      "price_current": 18142.0
+      "price_current": 18676.0,
+      "is_available": false
     },
     {
       "id": null,
       "sku": "CFN74 IMA7U",
       "title": "Gold/Truffle",
-      "price": "18082.00",
+      "price": "18676.00",
       "compare_at_price": null,
-      "source_price": 189.0,
+      "source_price": 199.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -140,7 +143,8 @@
           "name": "Gold/Truffle"
         }
       ],
-      "price_current": 18142.0
+      "price_current": 18676.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -160,7 +164,8 @@
           "name": "Gold/Navy"
         }
       ],
-      "price_current": 18142.0
+      "price_current": 18142.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -172,7 +177,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfn74_imyn0_a0",
       "option_values": [
         {
@@ -180,7 +185,8 @@
           "name": "Gold/Light Khaki/Vintage Brown"
         }
       ],
-      "price_current": 18142.0
+      "price_current": 18142.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -200,7 +206,8 @@
           "name": "Gold/Maple"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 19102.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -220,7 +227,8 @@
           "name": "Im/Magenta"
         }
       ],
-      "price_current": 18142.0
+      "price_current": 18142.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -253,23 +261,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Shoulder Bags"
+    "Shoulder Bags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:38:43Z",
-  "last_verified_at": "2026-10-29T05:36:34Z",
+  "last_verified_at": "2026-11-16T15:46:29Z",
   "id": "0fb2924d1fe727e7",
   "product_id": "0fb2924d1fe727e7",
   "store": "coach",
-  "updated_at": "2026-10-29T05:36:34Z",
+  "updated_at": "2026-11-16T15:46:29Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15841761427622",
   "shopify_handle": "emeilia-shoulder-bag-in-signature-chenille",
-  "shopify_synced_at": "2026-10-27T10:41:04Z",
+  "shopify_synced_at": "2026-11-15T01:10:44Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.269051
+  "last_synced_fx_rate": 94.289707,
+  "supplier_delisted": false
 }

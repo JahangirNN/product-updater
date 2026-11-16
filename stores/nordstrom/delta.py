@@ -170,6 +170,9 @@ def check_price_and_stock(
                         item_lookup[(s_norm, c_low)] = sz_item
                         if s_norm not in item_lookup or sz_item.get("in_stock"):
                             item_lookup[s_norm] = sz_item
+                    # Index colorway directly for handbags/accessories
+                    if cw.get("sizes"):
+                        item_lookup[c_low] = cw["sizes"][0]
 
             # Map granular per-size stock for every variant
             variants_delta = []
@@ -186,8 +189,8 @@ def check_price_and_stock(
 
                 # Extract US size and color
                 us_sz = ""
-                v_col = ""
-                for opt in v.get("option_values", []):
+                v_col = (v.get("color") or "").strip().lower()
+                for opt in v.get("option_values") or []:
                     if "US" in opt.get("option_name", ""):
                         us_sz = opt.get("name", "")
                     if "Color" in opt.get("option_name", ""):
@@ -197,9 +200,12 @@ def check_price_and_stock(
                     v_title = v.get("title", "")
                     us_sz = v_title.split("/")[0].strip() if "/" in v_title else v_title
 
+                if not v_col and v.get("title"):
+                    v_col = v.get("title", "").strip().lower()
+
                 norm_sz = norm_size_string(us_sz)
 
-                item_match = item_lookup.get((norm_sz, v_col)) or item_lookup.get(norm_sz)
+                item_match = item_lookup.get((norm_sz, v_col)) or (item_lookup.get(v_col) if v_col else None) or item_lookup.get(norm_sz)
                 if item_match:
                     var_avail = bool(item_match.get("in_stock", False))
                     var_price = float(item_match.get("price_usd") or 0.0) or old_v_price or curr_price

@@ -29,6 +29,8 @@ from storage.db import (
     append_delta_event
 )
 from storage.forex import get_usd_to_inr_rate
+from storage.pricing_engine import resolve_storefront_pricing
+from storage.shopify_taxonomy import resolve_product_type, resolve_authentic_vendor
 from storage.logger import (
     init_logger,
     log_info,
@@ -50,6 +52,7 @@ from storage.shopify_sync import sync_delta_to_shopify
 
 DEFAULT_CONFIG_PATH = "config/delta_config.json"
 DEFAULT_HEADERS = DEFAULT_BROWSER_HEADERS
+FX_DRIFT_THRESHOLD_INR: float = 2.0
 _CAMOUFOX_SERIAL_LOCK = threading.Lock()
 
 
@@ -247,16 +250,159 @@ def poll_single_product(
                 "error": f"Invalid return type from delta check: {type(delta_res)}"
             }
 
+        status = delta_res.get("status")
         now_iso = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+        # 1. Delist Strikes & Resilience Threshold Logic (ADR 0015, ADR 0021)
+        current_strikes = int(full_product.get("delist_strikes", 0) or 0)
+        # Confirmed HTTP 404 requires explicit is_http_404 flag AND status 404 (soft-404s never bypass Strike 1)
+        is_http_404 = bool(delta_res.get("is_http_404") and delta_res.get("http_status", 404) == 404)
+        confirmed_delisted = False
+        had_delist_state = (current_strikes > 0 or full_product.get("supplier_delisted") or "supplier-delisted" in (full_product.get("tags") or []))
+
+        if status == "success":
+            # Auto-Restock Restoration: valid product data resets strikes and restores active state
+            if had_delist_state:
+                full_product["delist_strikes"] = 0
+                full_product["supplier_delisted"] = False
+                tags = [t for t in (full_product.get("tags") or []) if t != "supplier-delisted"]
+                full_product["tags"] = tags
+                log_info(f"[{store.upper()}] Product {p_id} ({full_product.get('handle')}) restored by supplier. Reset strikes to 0 and cleared supplier-delisted.")
+
+        elif status == "not_found":
+            if is_http_404:
+                # Confirmed HTTP 404: immediately mark confirmed delisted (strikes >= 2)
+                confirmed_delisted = True
+                full_product["delist_strikes"] = max(current_strikes + 1, 2)
+                log_warning(f"[{store.upper()}] Product {p_id} ({full_product.get('handle')}) confirmed delisted via HTTP 404.")
+            else:
+                # Soft-404 / missing schema: resilient strike threshold
+                if current_strikes == 0:
+                    # 1st failure: increment strike counter, log warning, do not alter Shopify status
+                    full_product["delist_strikes"] = 1
+                    full_product["last_verified_at"] = now_iso
+                    full_product["updated_at"] = now_iso
+                    if not dry_run:
+                        save_product(full_product)
+                    log_warning(f"[{store.upper()}] Product {p_id} ({full_product.get('handle')}) delist strike 1/2: {delta_res.get('message', 'Page missing schema / soft-404')}. Preserving Shopify status.")
+                    delta_res["id"] = p_id
+                    delta_res["store"] = store
+                    delta_res["has_changed"] = False
+                    return delta_res
+                else:
+                    # 2+ consecutive failures: confirmed delisted!
+                    confirmed_delisted = True
+                    full_product["delist_strikes"] = current_strikes + 1
+                    log_warning(f"[{store.upper()}] Product {p_id} ({full_product.get('handle')}) strike {full_product['delist_strikes']}/2+: confirmed delisted ({delta_res.get('message')}).")
+
+        if confirmed_delisted:
+            full_product["supplier_delisted"] = True
+            full_product["availability"] = "out_of_stock"
+            full_product["is_active"] = False
+            for v in full_product.get("variants", []):
+                v["in_stock"] = False
+                v["is_available"] = False
+            curr_tags = set(full_product.get("tags") or [])
+            shipping_tags = {"ready to ship", "instant-ship", "manual-instant-ship-active"}
+            curr_tags = {t for t in curr_tags if t.lower() not in shipping_tags}
+            curr_tags.add("supplier-delisted")
+            full_product["tags"] = sorted(list(curr_tags))
 
         # Apply delta to product model (stamps last_verified_at ONLY on success or not_found)
         updated_product, has_changed = store_mod.apply_delta_to_product(full_product, delta_res, forex_rate)
 
-        if not dry_run:
-            # Only persist updated product if check succeeded or product was delisted
-            if delta_res.get("status") in ("success", "not_found"):
-                save_product(updated_product)
+        if confirmed_delisted:
+            has_changed = True
+            updated_product["supplier_delisted"] = True
+            updated_product["delist_strikes"] = full_product["delist_strikes"]
+            updated_product["availability"] = "out_of_stock"
+            updated_product["is_active"] = False
+            for v in updated_product.get("variants", []):
+                v["in_stock"] = False
+                v["is_available"] = False
+            curr_tags = set(updated_product.get("tags") or [])
+            shipping_tags = {"ready to ship", "instant-ship", "manual-instant-ship-active"}
+            curr_tags = {t for t in curr_tags if t.lower() not in shipping_tags}
+            curr_tags.add("supplier-delisted")
+            updated_product["tags"] = sorted(list(curr_tags))
+        elif status == "success" and had_delist_state:
+            has_changed = True
+            updated_product["delist_strikes"] = 0
+            updated_product["supplier_delisted"] = False
+            updated_product["tags"] = [t for t in (updated_product.get("tags") or []) if t.lower() != "supplier-delisted"]
+            if updated_product.get("availability") == "in_stock":
+                # Strict Zero-Image Rule: Never restore to active if product lacks authentic images
+                has_imgs = bool(updated_product.get("images")) or bool(updated_product.get("primary_image"))
+                updated_product["is_active"] = True if has_imgs else False
 
+        # Intelligent Forex Drift Gate (ADR 0028)
+        price_changed = bool(delta_res.get("price_changed", False))
+        stock_changed = bool(delta_res.get("stock_changed", False))
+        variant_stock_changed = bool(delta_res.get("variant_stock_changed", False))
+        variant_price_changed = bool(delta_res.get("variant_price_changed", False))
+
+        supplier_changed = price_changed or stock_changed or variant_stock_changed or variant_price_changed
+
+        if supplier_changed:
+            updated_product["last_synced_fx_rate"] = forex_rate
+        elif status == "success" and not confirmed_delisted:
+            raw_last_fx = updated_product.get("last_synced_fx_rate") if "last_synced_fx_rate" in updated_product else full_product.get("last_synced_fx_rate")
+            if raw_last_fx is None:
+                updated_product["last_synced_fx_rate"] = forex_rate
+            else:
+                try:
+                    last_synced_fx = float(raw_last_fx)
+                    if abs(forex_rate - last_synced_fx) >= FX_DRIFT_THRESHOLD_INR:
+                        has_changed = True
+                        delta_res["forex_drift_detected"] = True
+                        delta_res["price_changed"] = True
+                        updated_product["last_synced_fx_rate"] = forex_rate
+                        handle = updated_product.get("handle") or product_stub.get("handle")
+                        log_info(
+                            f"[DRIFT] Re-anchoring product {p_id} ({handle}) due to FX drift >= ₹{FX_DRIFT_THRESHOLD_INR} "
+                            f"(old FX: {last_synced_fx:.2f}, live FX: {forex_rate:.2f})"
+                        )
+                    else:
+                        updated_product["last_synced_fx_rate"] = last_synced_fx
+                except (ValueError, TypeError):
+                    updated_product["last_synced_fx_rate"] = forex_rate
+
+        # Resolve storefront INR price via pricing engine filter layer
+        raw_src_p = delta_res.get("current_source_price") or updated_product.get("source_price")
+        try:
+            new_src_price = float(raw_src_p) if raw_src_p is not None else 0.0
+        except (ValueError, TypeError):
+            new_src_price = 0.0
+        prod_type = resolve_product_type(updated_product)
+        store_key = (updated_product.get("source_store") or updated_product.get("store") or store or "").lower()
+        raw_comp = delta_res.get("current_compare_at_price") or delta_res.get("current_compare_price") or updated_product.get("source_compare_at_price") or updated_product.get("compare_at_price_source")
+        vendor = updated_product.get("vendor") or updated_product.get("brand") or resolve_authentic_vendor(updated_product)
+        storefront_price_inr, _ = resolve_storefront_pricing(new_src_price, raw_comp, store_key, prod_type, forex_rate, vendor=vendor)
+        delta_res["new_storefront_price_inr"] = storefront_price_inr
+
+        # Attach calculated storefront price to any variant price shifts
+        changed_v_prices = delta_res.get("changed_variant_prices", [])
+        if changed_v_prices and isinstance(changed_v_prices, list):
+            var_map = {
+                v.get("sku"): v for v in updated_product.get("variants", [])
+                if isinstance(v, dict) and v.get("sku")
+            }
+            for cvp in changed_v_prices:
+                if isinstance(cvp, dict):
+                    v_new_src = cvp.get("new_source_price")
+                    if v_new_src is not None and "new_storefront_price_inr" not in cvp:
+                        v_sku = cvp.get("sku")
+                        v_dict = var_map.get(v_sku, {})
+                        v_comp = cvp.get("source_compare_at_price") or v_dict.get("source_compare_at_price") or v_dict.get("compare_at_price_source") or raw_comp
+                        try:
+                            v_inr, _ = resolve_storefront_pricing(
+                                float(v_new_src), v_comp, store_key, prod_type, forex_rate, vendor=vendor
+                            )
+                            cvp["new_storefront_price_inr"] = v_inr
+                        except (ValueError, TypeError):
+                            pass
+
+        if not dry_run:
             if has_changed:
                 shopify_synced = False
                 if updated_product.get("shopify_product_id"):
@@ -265,6 +411,10 @@ def poll_single_product(
                     except Exception as s_err:
                         log_shopify_error(f"Shopify live sync exception for {p_id} ({updated_product.get('title', '')[:30]}): {s_err}", exc=s_err)
                 
+                updated_product["shopify_sync_pending"] = not shopify_synced
+                if shopify_synced:
+                    updated_product["shopify_synced_at"] = now_iso
+
                 # Enqueue event for Shopify sync log & audit
                 event_entry = {
                     "event_id": f"evt_{int(time.time()*1000)}_{p_id[:8]}",
@@ -277,16 +427,21 @@ def poll_single_product(
                     "old_source_price": delta_res.get("old_source_price"),
                     "new_source_price": delta_res.get("current_source_price"),
                     "new_current_price_inr": updated_product.get("current_price"),
+                    "new_storefront_price_inr": storefront_price_inr,
                     "stock_changed": delta_res.get("stock_changed", False),
                     "old_availability": delta_res.get("old_availability"),
                     "new_availability": delta_res.get("availability"),
                     "variant_stock_changed": delta_res.get("variant_stock_changed", False),
                     "changed_variants": delta_res.get("changed_variants", []),
                     "variant_price_changed": delta_res.get("variant_price_changed", False),
-                    "changed_variant_prices": delta_res.get("changed_variant_prices", []),
+                    "changed_variant_prices": changed_v_prices,
                     "shopify_sync_pending": not shopify_synced
                 }
                 append_delta_event(event_entry)
+
+            # Persist updated product if check succeeded or product was delisted
+            if delta_res.get("status") in ("success", "not_found"):
+                save_product(updated_product)
 
         delta_res["id"] = p_id
         delta_res["store"] = store
@@ -336,6 +491,8 @@ def sync_store_batch(
     delay_sec = store_conf.get("delay_seconds", 1.5 if engine == "camoufox" else default_conf.get("default_delay_seconds", 0.5))
     timeout_sec = store_conf.get("timeout_seconds", 45.0 if engine == "camoufox" else default_conf.get("default_timeout_seconds", 8.0))
     store_limiter = rate_limiter.create_store_limiter(store_name)
+    # Reset consecutive throttle counter at beginning of store sweep so prior cycle errors do not cause item #1 to trip circuit breaker
+    rate_limiter.reset_store_throttles(store_name)
     results: List[Dict[str, Any]] = []
 
     if engine == "camoufox":
@@ -614,9 +771,13 @@ def run_catalog_sync(
 
         is_due, elapsed = is_product_due(p, store_interval, force=force)
         if is_due:
-            due_products.append((p, store_interval))
+            due_products.append((p, store_interval, elapsed))
         else:
             skipped_count += 1
+
+    # LRU sorting: Prioritize starved/stalest products first (highest elapsed time, unverified first)
+    due_products.sort(key=lambda item: item[2], reverse=True)
+    due_products = [(p, store_interval) for p, store_interval, _ in due_products]
 
     log_info(f"Products Due for Sync: {len(due_products)}")
     log_info(f"Products Skipped:      {skipped_count} (checked within last {base_interval:.1f}m)")
@@ -668,6 +829,7 @@ def run_catalog_sync(
     completed = 0
 
     log_info(f"Launching parallel store sync across {len(by_store)} active stores: {list(by_store.keys())}")
+    rate_limiter.reset_store_throttles()
 
     # Launch all store batches in parallel threads (JW PEI HTTP pool + Nordstrom Camoufox browser worker)
     with ThreadPoolExecutor(max_workers=max(len(by_store), 1)) as store_executor:

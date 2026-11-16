@@ -7,12 +7,12 @@
   "vendor": "MICHAEL Michael Kors",
   "product_type": "Wallets",
   "gender": "Women",
-  "current_price": 9360,
-  "source_price": 98.0,
+  "current_price": 5622.0,
+  "source_price": 59.0,
   "currency": "INR",
   "source_currency": "USD",
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "featured_image": "https://assets.michaelkors.com/transform/ECOM_Image_Large/9de13cd4-da98-400e-94ca-0d1c326d020a/32F5GJ6T1B-252-1335_1-tif",
   "images": [
     "https://assets.michaelkors.com/transform/ECOM_Image_Large/9de13cd4-da98-400e-94ca-0d1c326d020a/32F5GJ6T1B-252-1335_1-tif",
@@ -22,12 +22,12 @@
     {
       "sku": "32F5GJ6T1B",
       "title": "1335",
-      "price": "9360.00",
+      "price": "5622.00",
       "compare_at_price": null,
-      "source_price": 98.0,
+      "source_price": 59.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.michaelkors.com/transform/ECOM_Image_Large/9de13cd4-da98-400e-94ca-0d1c326d020a/32F5GJ6T1B-252-1335_1-tif",
       "option_values": [
         {
@@ -35,7 +35,7 @@
           "name": "1335"
         }
       ],
-      "price_current": 9407.0
+      "price_current": 5622.0
     }
   ],
   "options": [
@@ -62,14 +62,16 @@
     "wallets",
     "women"
   ],
-  "last_verified_at": "2026-10-29T05:36:21Z",
+  "last_verified_at": "2026-11-16T15:42:45Z",
   "id": "d754fa8d9ab747e6",
   "created_at": "2026-09-11T18:30:36Z",
-  "updated_at": "2026-10-29T05:36:21Z",
+  "updated_at": "2026-11-16T15:42:45Z",
   "descriptionHtml": "<div class=\"product-description\"><p class=\"product-summary\">Jet Set Signature Logo Passport Wallet by Michael Kors.</p></div>",
   "shopify_product_id": "gid://shopify/Product/15841794031782",
   "shopify_handle": "jet-set-signature-logo-passport-wallet",
-  "shopify_synced_at": "2026-09-29T06:03:30Z",
+  "shopify_synced_at": "2026-11-12T12:18:42Z",
   "shopify_sync_pending": false,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 93.851604,
+  "source_compare_at_price": 98.0,
+  "compare_at_price": 9251.0
 }

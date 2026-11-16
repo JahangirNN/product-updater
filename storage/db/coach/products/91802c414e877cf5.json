@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Smooth calf leather",
   "specifications": {
     "Material": "Smooth calf leather",
@@ -52,7 +52,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cbi47_svsmu_a0",
       "option_values": [
         {
@@ -60,7 +60,8 @@
           "name": "Silver/Deep Blue"
         }
       ],
-      "price_current": 9445.0
+      "price_current": 9445.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -75,23 +76,24 @@
   ],
   "tags": [
     "COACH",
-    "Men",
-    "Handbags"
+    "Handbags",
+    "Men"
   ],
   "groups": [
     "men_bags"
   ],
   "created_at": "2026-09-13T00:44:06Z",
-  "last_verified_at": "2026-10-29T03:39:51Z",
+  "last_verified_at": "2026-11-16T15:46:11Z",
   "id": "91802c414e877cf5",
   "product_id": "91802c414e877cf5",
   "store": "coach",
-  "updated_at": "2026-10-29T03:39:51Z",
-  "is_active": true,
+  "updated_at": "2026-11-16T15:46:11Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841766965414",
   "shopify_handle": "racer-small-belt-bag",
-  "shopify_synced_at": "2026-10-28T11:49:28Z",
+  "shopify_synced_at": "2026-11-14T01:13:50Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

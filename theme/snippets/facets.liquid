@@ -96,9 +96,17 @@ Supported variables
     }
   </style>
   {%- liquid
-    assign form_action = request.path
+    assign known_brands_str = 'asics,coach,citizen,ferragamo,hoka,jw-pei,michael-kors,movado,nike,on,salomon,seiko,tissot,versace,adidas,marc-jacobs'
+
+    assign is_men_active = false
+    assign is_women_active = false
+    assign active_gender_tag = ''
+    assign active_silhouette_tag = ''
+    assign active_color_tag = ''
+    assign active_vendor_tag = ''
+    assign non_brand_tags_joined = ''
+
     if request.page_type == 'collection' and collection.url != blank
-      assign non_brand_tags = ''
       for tag in current_tags
         assign t_handle = tag | handleize
         if t_handle == 'on-running'
@@ -106,35 +114,94 @@ Supported variables
         elsif t_handle == 'michael-michael-kors'
           assign t_handle = 'michael-kors'
         endif
-        assign is_brand_tag = false
-        for vendor in collection.all_vendors
-          assign v_handle = vendor | handleize
-          if v_handle == 'on-running'
-            assign v_handle = 'on'
-          elsif v_handle == 'michael-michael-kors'
-            assign v_handle = 'michael-kors'
-          endif
-          if v_handle == t_handle
-            assign is_brand_tag = true
-            break
-          endif
-        endfor
-        if is_brand_tag == false
-          if non_brand_tags == ''
-            assign non_brand_tags = t_handle
-          else
-            assign non_brand_tags = non_brand_tags | append: '+' | append: t_handle
-          endif
+
+        if t_handle == 'men' or t_handle == 'mens'
+          assign is_men_active = true
+          assign active_gender_tag = 'men'
+        elsif t_handle == 'women' or t_handle == 'womens'
+          assign is_women_active = true
+          assign active_gender_tag = 'women'
+        elsif t_handle == 'satchels' or t_handle == 'crossbody-bags' or t_handle == 'totes' or t_handle == 'shoulder-bags' or t_handle == 'backpacks' or t_handle == 'wallets'
+          assign active_silhouette_tag = t_handle
+        elsif t_handle contains 'color-'
+          assign active_color_tag = t_handle
+        elsif known_brands_str contains t_handle
+          assign active_vendor_tag = t_handle
         endif
       endfor
 
-      if non_brand_tags != ''
-        assign form_action = collection.url | append: '/' | append: non_brand_tags
+      if active_gender_tag != ''
+        assign non_brand_tags_joined = active_gender_tag
+      endif
+      if active_silhouette_tag != ''
+        if non_brand_tags_joined == ''
+          assign non_brand_tags_joined = active_silhouette_tag
+        else
+          assign non_brand_tags_joined = non_brand_tags_joined | append: '+' | append: active_silhouette_tag
+        endif
+      endif
+      if active_color_tag != ''
+        if non_brand_tags_joined == ''
+          assign non_brand_tags_joined = active_color_tag
+        else
+          assign non_brand_tags_joined = non_brand_tags_joined | append: '+' | append: active_color_tag
+        endif
+      endif
+
+      if non_brand_tags_joined != ''
+        assign form_action = collection.url | append: '/' | append: non_brand_tags_joined
       else
         assign form_action = collection.url
       endif
     elsif request.page_type == 'search'
       assign form_action = routes.search_url
+    else
+      assign form_action = request.path
+    endif
+
+    assign facet_query_params = ''
+    for filter in results.filters
+      if filter.param_name == 'filter.p.vendor'
+        for av in filter.active_values
+          if facet_query_params == ''
+            assign facet_query_params = 'filter.p.vendor=' | append: av.value
+          else
+            assign facet_query_params = facet_query_params | append: '&filter.p.vendor=' | append: av.value
+          endif
+        endfor
+      elsif filter.param_name == 'filter.v.availability'
+        for av in filter.active_values
+          if av.value == '1'
+            if facet_query_params == ''
+              assign facet_query_params = 'filter.v.availability=1'
+            else
+              assign facet_query_params = facet_query_params | append: '&filter.v.availability=1'
+            endif
+          endif
+        endfor
+      elsif filter.type == 'price_range'
+        if filter.min_value.value != blank
+          if facet_query_params == ''
+            assign facet_query_params = 'filter.v.price.gte=' | append: filter.min_value.value
+          else
+            assign facet_query_params = facet_query_params | append: '&filter.v.price.gte=' | append: filter.min_value.value
+          endif
+        endif
+        if filter.max_value.value != blank
+          if facet_query_params == ''
+            assign facet_query_params = 'filter.v.price.lte=' | append: filter.max_value.value
+          else
+            assign facet_query_params = facet_query_params | append: '&filter.v.price.lte=' | append: filter.max_value.value
+          endif
+        endif
+      endif
+    endfor
+    if results.sort_by != blank
+      if facet_query_params == ''
+        assign facet_query_params = 'sort_by=' | append: results.sort_by
+      else
+        assign facet_query_params = facet_query_params | append: '&sort_by=' | append: results.sort_by
+      endif
     endif
   -%}
   <form method="GET" action="{{ form_action }}" class="facets">
@@ -201,54 +268,39 @@ Supported variables
           endif
         -%}
 
-        {%- liquid
-          assign is_men_active = false
-          assign is_women_active = false
-          for tag in current_tags
-            assign tag_lower = tag | downcase
-            if tag_lower == 'men' or tag_lower == 'mens' or tag_lower == "men's"
-              assign is_men_active = true
-            elsif tag_lower == 'women' or tag_lower == 'womens' or tag_lower == "women's"
-              assign is_women_active = true
-            endif
-          endfor
-
-          assign is_all_gender_active = false
-          if is_men_active == false and is_women_active == false
-            assign is_all_gender_active = true
-          endif
-
-          assign is_bag_collection = false
-          if collection.handle == 'womens-handbags' or collection.handle == 'mens-bags' or collection.handle == 'designer-bags' or collection.handle == 'luxury-bags'
-            assign is_bag_collection = true
-          endif
-
-          assign active_vendor_tag = ''
-          assign active_silhouette_tag = ''
-          for tag in current_tags
-            assign t_handle = tag | handleize
-            if t_handle == 'on-running'
-              assign t_handle = 'on'
-            elsif t_handle == 'michael-michael-kors'
-              assign t_handle = 'michael-kors'
-            endif
-
-            if t_handle == 'satchels' or t_handle == 'crossbody-bags' or t_handle == 'totes' or t_handle == 'shoulder-bags' or t_handle == 'backpacks' or t_handle == 'wallets'
-              assign active_silhouette_tag = t_handle
-            elsif t_handle != 'men' and t_handle != 'mens' and t_handle != 'women' and t_handle != 'womens'
-              assign active_vendor_tag = t_handle
-            endif
-          endfor
-        -%}
-
         {%- if show_gender_filter -%}
           {%- capture gender_filter_content -%}
             <div class="v-stack gap-2.5">
               {%- capture all_gender_url -%}
-                {%- if collection.handle == 'designer-bags' or collection.handle == 'luxury-bags' -%}
-                  /collections/designer-bags
-                {%- elsif active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
-                {%- if results.sort_by != blank and collection.handle != 'designer-bags' and collection.handle != 'luxury-bags' %}?sort_by={{ results.sort_by }}{% endif -%}
+                {%- liquid
+                  assign tag_parts = ''
+                  if active_silhouette_tag != ''
+                    assign tag_parts = active_silhouette_tag
+                  endif
+                  if active_color_tag != ''
+                    if tag_parts == ''
+                      assign tag_parts = active_color_tag
+                    else
+                      assign tag_parts = tag_parts | append: '+' | append: active_color_tag
+                    endif
+                  endif
+                  if active_vendor_tag != ''
+                    if tag_parts == ''
+                      assign tag_parts = active_vendor_tag
+                    else
+                      assign tag_parts = tag_parts | append: '+' | append: active_vendor_tag
+                    endif
+                  endif
+                  if tag_parts != ''
+                    assign res_url = collection.url | append: '/' | append: tag_parts
+                  else
+                    assign res_url = collection.url
+                  endif
+                  if facet_query_params != ''
+                    assign res_url = res_url | append: '?' | append: facet_query_params
+                  endif
+                  echo res_url
+                -%}
               {%- endcapture -%}
               <div class="checkbox-control">
                 <facet-link class="block w-full">
@@ -262,46 +314,108 @@ Supported variables
               </div>
 
               {%- capture men_gender_url -%}
-                {%- if collection.handle == 'designer-eyewear' -%}
-                  /collections/mens-sunglasses
-                {%- elsif collection.handle == 'designer-bags' or collection.handle == 'luxury-bags' -%}
-                  /collections/mens-bags
-                {%- elsif is_men_active -%}
-                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
-                {%- else -%}
-                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/men+{{ active_vendor_tag }}{%- else -%}{{ collection.url }}/men{%- endif -%}
-                {%- endif -%}
-                {%- if results.sort_by != blank and collection.handle != 'designer-eyewear' and collection.handle != 'designer-bags' and collection.handle != 'luxury-bags' %}?sort_by={{ results.sort_by }}{% endif -%}
+                {%- liquid
+                  if is_men_active
+                    assign target_gender = ''
+                  else
+                    assign target_gender = 'men'
+                  endif
+                  assign tag_parts = ''
+                  if target_gender != ''
+                    assign tag_parts = target_gender
+                  endif
+                  if active_silhouette_tag != ''
+                    if tag_parts == ''
+                      assign tag_parts = active_silhouette_tag
+                    else
+                      assign tag_parts = tag_parts | append: '+' | append: active_silhouette_tag
+                    endif
+                  endif
+                  if active_color_tag != ''
+                    if tag_parts == ''
+                      assign tag_parts = active_color_tag
+                    else
+                      assign tag_parts = tag_parts | append: '+' | append: active_color_tag
+                    endif
+                  endif
+                  if active_vendor_tag != ''
+                    if tag_parts == ''
+                      assign tag_parts = active_vendor_tag
+                    else
+                      assign tag_parts = tag_parts | append: '+' | append: active_vendor_tag
+                    endif
+                  endif
+                  if tag_parts != ''
+                    assign res_url = collection.url | append: '/' | append: tag_parts
+                  else
+                    assign res_url = collection.url
+                  endif
+                  if facet_query_params != ''
+                    assign res_url = res_url | append: '?' | append: facet_query_params
+                  endif
+                  echo res_url
+                -%}
               {%- endcapture -%}
               <div class="checkbox-control">
                 <facet-link class="block w-full">
                   <a href="{{ men_gender_url | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                     <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
                       <span class="luxury-facet-checkbox{% if is_men_active %} luxury-facet-checkbox--active{% endif %}"></span>
-                      <span class="{% if is_men_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Men's{% if collection.handle == 'designer-eyewear' %} (25){% endif %}</span>
+                      <span class="{% if is_men_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Men's</span>
                     </span>
                   </a>
                 </facet-link>
               </div>
 
               {%- capture women_gender_url -%}
-                {%- if collection.handle == 'designer-eyewear' -%}
-                  /collections/womens-sunglasses
-                {%- elsif collection.handle == 'designer-bags' or collection.handle == 'luxury-bags' -%}
-                  /collections/womens-handbags
-                {%- elsif is_women_active -%}
-                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
-                {%- else -%}
-                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/women+{{ active_vendor_tag }}{%- else -%}{{ collection.url }}/women{%- endif -%}
-                {%- endif -%}
-                {%- if results.sort_by != blank and collection.handle != 'designer-eyewear' and collection.handle != 'designer-bags' and collection.handle != 'luxury-bags' %}?sort_by={{ results.sort_by }}{% endif -%}
+                {%- liquid
+                  if is_women_active
+                    assign target_gender = ''
+                  else
+                    assign target_gender = 'women'
+                  endif
+                  assign tag_parts = ''
+                  if target_gender != ''
+                    assign tag_parts = target_gender
+                  endif
+                  if active_silhouette_tag != ''
+                    if tag_parts == ''
+                      assign tag_parts = active_silhouette_tag
+                    else
+                      assign tag_parts = tag_parts | append: '+' | append: active_silhouette_tag
+                    endif
+                  endif
+                  if active_color_tag != ''
+                    if tag_parts == ''
+                      assign tag_parts = active_color_tag
+                    else
+                      assign tag_parts = tag_parts | append: '+' | append: active_color_tag
+                    endif
+                  endif
+                  if active_vendor_tag != ''
+                    if tag_parts == ''
+                      assign tag_parts = active_vendor_tag
+                    else
+                      assign tag_parts = tag_parts | append: '+' | append: active_vendor_tag
+                    endif
+                  endif
+                  if tag_parts != ''
+                    assign res_url = collection.url | append: '/' | append: tag_parts
+                  else
+                    assign res_url = collection.url
+                  endif
+                  if facet_query_params != ''
+                    assign res_url = res_url | append: '?' | append: facet_query_params
+                  endif
+                  echo res_url
+                -%}
               {%- endcapture -%}
               <div class="checkbox-control">
                 <facet-link class="block w-full">
                   <a href="{{ women_gender_url | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
                     <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
                       <span class="luxury-facet-checkbox{% if is_women_active %} luxury-facet-checkbox--active{% endif %}"></span>
-                      <span class="{% if is_women_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Women's{% if collection.handle == 'designer-eyewear' %} (40){% endif %}</span>
+                      <span class="{% if is_women_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">Women's</span>
                     </span>
                   </a>
                 </facet-link>
@@ -318,8 +432,11 @@ Supported variables
 
         {%- liquid
           assign show_silhouette_filter = false
-          if is_bag_collection
-            assign show_silhouette_filter = true
+          if request.page_type == 'collection'
+            assign col_handle = collection.handle | downcase
+            if col_handle contains 'bag' or col_handle contains 'handbag' or col_handle contains 'accessories' or col_handle == 'all'
+              assign show_silhouette_filter = true
+            endif
           elsif request.page_type == 'search'
             assign has_bag_product = false
             assign has_watch_product = false
@@ -386,21 +503,44 @@ Supported variables
                 assign sil_active = false
                 if active_silhouette_tag == 'satchels'
                   assign sil_active = true
+                  assign target_sil = ''
+                else
+                  assign target_sil = 'satchels'
+                endif
+                assign tag_parts = ''
+                if active_gender_tag != ''
+                  assign tag_parts = active_gender_tag
+                endif
+                if target_sil != ''
+                  if tag_parts == ''
+                    assign tag_parts = target_sil
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: target_sil
+                  endif
+                endif
+                if active_color_tag != ''
+                  if tag_parts == ''
+                    assign tag_parts = active_color_tag
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: active_color_tag
+                  endif
+                endif
+                if active_vendor_tag != ''
+                  if tag_parts == ''
+                    assign tag_parts = active_vendor_tag
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: active_vendor_tag
+                  endif
+                endif
+                if tag_parts != ''
+                  assign sil_url_satchels = collection.url | append: '/' | append: tag_parts
+                else
+                  assign sil_url_satchels = collection.url
+                endif
+                if facet_query_params != ''
+                  assign sil_url_satchels = sil_url_satchels | append: '?' | append: facet_query_params
                 endif
               -%}
-              {%- capture sil_url_satchels -%}
-                {%- if sil_active -%}
-                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
-                {%- else -%}
-                  {%- if active_vendor_tag != '' -%}
-                    {%- assign sorted_sil_tags = active_vendor_tag | append: ',' | append: 'satchels' | split: ',' | sort | join: '+' -%}
-                    {{ collection.url }}/{{ sorted_sil_tags }}
-                  {%- else -%}
-                    {{ collection.url }}/satchels
-                  {%- endif -%}
-                {%- endif -%}
-                {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
-              {%- endcapture -%}
               <div class="checkbox-control">
                 <facet-link class="block w-full">
                   <a href="{{ sil_url_satchels | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
@@ -417,21 +557,44 @@ Supported variables
                 assign sil_active = false
                 if active_silhouette_tag == 'crossbody-bags'
                   assign sil_active = true
+                  assign target_sil = ''
+                else
+                  assign target_sil = 'crossbody-bags'
+                endif
+                assign tag_parts = ''
+                if active_gender_tag != ''
+                  assign tag_parts = active_gender_tag
+                endif
+                if target_sil != ''
+                  if tag_parts == ''
+                    assign tag_parts = target_sil
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: target_sil
+                  endif
+                endif
+                if active_color_tag != ''
+                  if tag_parts == ''
+                    assign tag_parts = active_color_tag
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: active_color_tag
+                  endif
+                endif
+                if active_vendor_tag != ''
+                  if tag_parts == ''
+                    assign tag_parts = active_vendor_tag
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: active_vendor_tag
+                  endif
+                endif
+                if tag_parts != ''
+                  assign sil_url_crossbody = collection.url | append: '/' | append: tag_parts
+                else
+                  assign sil_url_crossbody = collection.url
+                endif
+                if facet_query_params != ''
+                  assign sil_url_crossbody = sil_url_crossbody | append: '?' | append: facet_query_params
                 endif
               -%}
-              {%- capture sil_url_crossbody -%}
-                {%- if sil_active -%}
-                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
-                {%- else -%}
-                  {%- if active_vendor_tag != '' -%}
-                    {%- assign sorted_sil_tags = active_vendor_tag | append: ',' | append: 'crossbody-bags' | split: ',' | sort | join: '+' -%}
-                    {{ collection.url }}/{{ sorted_sil_tags }}
-                  {%- else -%}
-                    {{ collection.url }}/crossbody-bags
-                  {%- endif -%}
-                {%- endif -%}
-                {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
-              {%- endcapture -%}
               <div class="checkbox-control">
                 <facet-link class="block w-full">
                   <a href="{{ sil_url_crossbody | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
@@ -448,21 +611,44 @@ Supported variables
                 assign sil_active = false
                 if active_silhouette_tag == 'totes'
                   assign sil_active = true
+                  assign target_sil = ''
+                else
+                  assign target_sil = 'totes'
+                endif
+                assign tag_parts = ''
+                if active_gender_tag != ''
+                  assign tag_parts = active_gender_tag
+                endif
+                if target_sil != ''
+                  if tag_parts == ''
+                    assign tag_parts = target_sil
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: target_sil
+                  endif
+                endif
+                if active_color_tag != ''
+                  if tag_parts == ''
+                    assign tag_parts = active_color_tag
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: active_color_tag
+                  endif
+                endif
+                if active_vendor_tag != ''
+                  if tag_parts == ''
+                    assign tag_parts = active_vendor_tag
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: active_vendor_tag
+                  endif
+                endif
+                if tag_parts != ''
+                  assign sil_url_totes = collection.url | append: '/' | append: tag_parts
+                else
+                  assign sil_url_totes = collection.url
+                endif
+                if facet_query_params != ''
+                  assign sil_url_totes = sil_url_totes | append: '?' | append: facet_query_params
                 endif
               -%}
-              {%- capture sil_url_totes -%}
-                {%- if sil_active -%}
-                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
-                {%- else -%}
-                  {%- if active_vendor_tag != '' -%}
-                    {%- assign sorted_sil_tags = active_vendor_tag | append: ',' | append: 'totes' | split: ',' | sort | join: '+' -%}
-                    {{ collection.url }}/{{ sorted_sil_tags }}
-                  {%- else -%}
-                    {{ collection.url }}/totes
-                  {%- endif -%}
-                {%- endif -%}
-                {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
-              {%- endcapture -%}
               <div class="checkbox-control">
                 <facet-link class="block w-full">
                   <a href="{{ sil_url_totes | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
@@ -479,21 +665,44 @@ Supported variables
                 assign sil_active = false
                 if active_silhouette_tag == 'shoulder-bags'
                   assign sil_active = true
+                  assign target_sil = ''
+                else
+                  assign target_sil = 'shoulder-bags'
+                endif
+                assign tag_parts = ''
+                if active_gender_tag != ''
+                  assign tag_parts = active_gender_tag
+                endif
+                if target_sil != ''
+                  if tag_parts == ''
+                    assign tag_parts = target_sil
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: target_sil
+                  endif
+                endif
+                if active_color_tag != ''
+                  if tag_parts == ''
+                    assign tag_parts = active_color_tag
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: active_color_tag
+                  endif
+                endif
+                if active_vendor_tag != ''
+                  if tag_parts == ''
+                    assign tag_parts = active_vendor_tag
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: active_vendor_tag
+                  endif
+                endif
+                if tag_parts != ''
+                  assign sil_url_shoulder = collection.url | append: '/' | append: tag_parts
+                else
+                  assign sil_url_shoulder = collection.url
+                endif
+                if facet_query_params != ''
+                  assign sil_url_shoulder = sil_url_shoulder | append: '?' | append: facet_query_params
                 endif
               -%}
-              {%- capture sil_url_shoulder -%}
-                {%- if sil_active -%}
-                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
-                {%- else -%}
-                  {%- if active_vendor_tag != '' -%}
-                    {%- assign sorted_sil_tags = active_vendor_tag | append: ',' | append: 'shoulder-bags' | split: ',' | sort | join: '+' -%}
-                    {{ collection.url }}/{{ sorted_sil_tags }}
-                  {%- else -%}
-                    {{ collection.url }}/shoulder-bags
-                  {%- endif -%}
-                {%- endif -%}
-                {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
-              {%- endcapture -%}
               <div class="checkbox-control">
                 <facet-link class="block w-full">
                   <a href="{{ sil_url_shoulder | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
@@ -510,21 +719,44 @@ Supported variables
                 assign sil_active = false
                 if active_silhouette_tag == 'backpacks'
                   assign sil_active = true
+                  assign target_sil = ''
+                else
+                  assign target_sil = 'backpacks'
+                endif
+                assign tag_parts = ''
+                if active_gender_tag != ''
+                  assign tag_parts = active_gender_tag
+                endif
+                if target_sil != ''
+                  if tag_parts == ''
+                    assign tag_parts = target_sil
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: target_sil
+                  endif
+                endif
+                if active_color_tag != ''
+                  if tag_parts == ''
+                    assign tag_parts = active_color_tag
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: active_color_tag
+                  endif
+                endif
+                if active_vendor_tag != ''
+                  if tag_parts == ''
+                    assign tag_parts = active_vendor_tag
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: active_vendor_tag
+                  endif
+                endif
+                if tag_parts != ''
+                  assign sil_url_backpacks = collection.url | append: '/' | append: tag_parts
+                else
+                  assign sil_url_backpacks = collection.url
+                endif
+                if facet_query_params != ''
+                  assign sil_url_backpacks = sil_url_backpacks | append: '?' | append: facet_query_params
                 endif
               -%}
-              {%- capture sil_url_backpacks -%}
-                {%- if sil_active -%}
-                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
-                {%- else -%}
-                  {%- if active_vendor_tag != '' -%}
-                    {%- assign sorted_sil_tags = active_vendor_tag | append: ',' | append: 'backpacks' | split: ',' | sort | join: '+' -%}
-                    {{ collection.url }}/{{ sorted_sil_tags }}
-                  {%- else -%}
-                    {{ collection.url }}/backpacks
-                  {%- endif -%}
-                {%- endif -%}
-                {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
-              {%- endcapture -%}
               <div class="checkbox-control">
                 <facet-link class="block w-full">
                   <a href="{{ sil_url_backpacks | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
@@ -541,21 +773,44 @@ Supported variables
                 assign sil_active = false
                 if active_silhouette_tag == 'wallets'
                   assign sil_active = true
+                  assign target_sil = ''
+                else
+                  assign target_sil = 'wallets'
+                endif
+                assign tag_parts = ''
+                if active_gender_tag != ''
+                  assign tag_parts = active_gender_tag
+                endif
+                if target_sil != ''
+                  if tag_parts == ''
+                    assign tag_parts = target_sil
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: target_sil
+                  endif
+                endif
+                if active_color_tag != ''
+                  if tag_parts == ''
+                    assign tag_parts = active_color_tag
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: active_color_tag
+                  endif
+                endif
+                if active_vendor_tag != ''
+                  if tag_parts == ''
+                    assign tag_parts = active_vendor_tag
+                  else
+                    assign tag_parts = tag_parts | append: '+' | append: active_vendor_tag
+                  endif
+                endif
+                if tag_parts != ''
+                  assign sil_url_wallets = collection.url | append: '/' | append: tag_parts
+                else
+                  assign sil_url_wallets = collection.url
+                endif
+                if facet_query_params != ''
+                  assign sil_url_wallets = sil_url_wallets | append: '?' | append: facet_query_params
                 endif
               -%}
-              {%- capture sil_url_wallets -%}
-                {%- if sil_active -%}
-                  {%- if active_vendor_tag != '' -%}{{ collection.url }}/{{ active_vendor_tag }}{%- else -%}{{ collection.url }}{%- endif -%}
-                {%- else -%}
-                  {%- if active_vendor_tag != '' -%}
-                    {%- assign sorted_sil_tags = active_vendor_tag | append: ',' | append: 'wallets' | split: ',' | sort | join: '+' -%}
-                    {{ collection.url }}/{{ sorted_sil_tags }}
-                  {%- else -%}
-                    {{ collection.url }}/wallets
-                  {%- endif -%}
-                {%- endif -%}
-                {%- if results.sort_by != blank %}?sort_by={{ results.sort_by }}{% endif -%}
-              {%- endcapture -%}
               <div class="checkbox-control">
                 <facet-link class="block w-full">
                   <a href="{{ sil_url_wallets | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
@@ -661,6 +916,18 @@ Supported variables
                       break
                     endif
                   endfor
+                  unless is_vendor_active
+                    for filter in results.filters
+                      if filter.param_name == 'filter.p.vendor'
+                        for av in filter.active_values
+                          if av.value == display_vendor or av.value == vendor
+                            assign is_vendor_active = true
+                            break
+                          endif
+                        endfor
+                      endif
+                    endfor
+                  endunless
 
                   assign filter_tag_param = vendor_handle
                   if vendor_handle == 'on-running'
@@ -680,13 +947,192 @@ Supported variables
           {%- endcapture -%}
 
           {%- assign brand_open = open_filters_by_default -%}
-          {%- if active_vendor_tag != '' -%}
+          {%- if active_vendor_tag != '' or facet_query_params contains 'filter.p.vendor' -%}
             {%- assign brand_open = true -%}
           {%- endif -%}
           {%- render 'accordion', title: 'Brand', content: brand_filter_content, open: brand_open, show_arrow: true -%}
         {%- endif -%}
 
+        {%- comment -%}
+        ------------------------------------------------------------------------------------------------------------------------
+        COLOR FACET (Option A: 20px Circular Luxury Dot + Tracked Name + Focus Ring)
+        ------------------------------------------------------------------------------------------------------------------------
+        {%- endcomment -%}
+        {%- liquid
+          assign show_color_filter = false
+          assign facet_colors_str = ''
+
+          assign all_luxury_colors = 'Black:color-black:#111111,White:color-white:#FFFFFF,Brown:color-brown:#6E473B,Beige:color-beige:#D4C4B5,Grey:color-grey:#9E9E9E,Silver:color-silver:linear-gradient(135deg\,#E8E8E8\,#B0B0B0),Gold:color-gold:linear-gradient(135deg\,#E6C875\,#B89035),Blue:color-blue:#1B365D,Green:color-green:#2D4739,Red:color-red:#8B1E28,Pink:color-pink:#D99B9B,Yellow:color-yellow:#E5C438,Orange:color-orange:#D96B27,Multi:color-multi:linear-gradient(135deg\,#D48872\,#4A90E2\,#6BCB77)' | split: ','
+
+          if request.page_type == 'collection'
+            for color_def in all_luxury_colors
+              assign parts = color_def | split: ':'
+              assign c_name = parts[0]
+              assign c_handle = parts[1]
+              assign c_canonical_tag = 'Color:' | append: c_name
+
+              assign color_found = false
+              for tag in collection.all_tags
+                assign t_handle = tag | handleize
+                if t_handle == c_handle or tag == c_canonical_tag
+                  assign color_found = true
+                  break
+                endif
+              endfor
+
+              if color_found
+                assign show_color_filter = true
+                if facet_colors_str == blank
+                  assign facet_colors_str = color_def
+                else
+                  assign facet_colors_str = facet_colors_str | append: ':::' | append: color_def
+                endif
+              endif
+            endfor
+          elsif request.page_type == 'search'
+            for color_def in all_luxury_colors
+              assign parts = color_def | split: ':'
+              assign c_name = parts[0]
+              assign c_handle = parts[1]
+              assign c_canonical_tag = 'Color:' | append: c_name
+
+              assign color_found = false
+              for item in results.results
+                if item.object_type == 'product'
+                  for tag in item.tags
+                    assign t_handle = tag | handleize
+                    if t_handle == c_handle or tag == c_canonical_tag
+                      assign color_found = true
+                      break
+                    endif
+                  endfor
+                  if color_found
+                    break
+                  endif
+                endif
+              endfor
+
+              if color_found
+                assign show_color_filter = true
+                if facet_colors_str == blank
+                  assign facet_colors_str = color_def
+                else
+                  assign facet_colors_str = facet_colors_str | append: ':::' | append: color_def
+                endif
+              endif
+            endfor
+          endif
+        -%}
+
+        {%- if show_color_filter -%}
+          {%- capture color_filter_content -%}
+            <div class="luxury-color-facet-list v-stack gap-2.5">
+              {%- assign active_color_tag = '' -%}
+              {%- for tag in current_tags -%}
+                {%- assign t_handle = tag | handleize -%}
+                {%- if t_handle contains 'color-' -%}
+                  {%- assign active_color_tag = t_handle -%}
+                  {%- break -%}
+                {%- endif -%}
+              {%- endfor -%}
+
+              {%- assign facet_colors_array = facet_colors_str | split: ':::' -%}
+              {%- for color_def in facet_colors_array -%}
+                {%- liquid
+                  assign parts = color_def | split: ':'
+                  assign color_name = parts[0]
+                  assign color_handle = parts[1]
+                  assign color_swatch = parts[2] | replace: '\,', ','
+
+                  assign is_color_active = false
+                  if active_color_tag == color_handle
+                    assign is_color_active = true
+                    assign target_color = ''
+                  else
+                    assign target_color = color_handle
+                  endif
+
+                  assign color_url = ''
+                  if request.page_type == 'collection'
+                    assign tag_parts = ''
+                    if active_gender_tag != ''
+                      assign tag_parts = active_gender_tag
+                    endif
+                    if active_silhouette_tag != ''
+                      if tag_parts == ''
+                        assign tag_parts = active_silhouette_tag
+                      else
+                        assign tag_parts = tag_parts | append: '+' | append: active_silhouette_tag
+                      endif
+                    endif
+                    if target_color != ''
+                      if tag_parts == ''
+                        assign tag_parts = target_color
+                      else
+                        assign tag_parts = tag_parts | append: '+' | append: target_color
+                      endif
+                    endif
+                    if active_vendor_tag != ''
+                      if tag_parts == ''
+                        assign tag_parts = active_vendor_tag
+                      else
+                        assign tag_parts = tag_parts | append: '+' | append: active_vendor_tag
+                      endif
+                    endif
+
+                    if tag_parts != ''
+                      assign color_url = collection.url | append: '/' | append: tag_parts
+                    else
+                      assign color_url = collection.url
+                    endif
+                    if facet_query_params != ''
+                      assign color_url = color_url | append: '?' | append: facet_query_params
+                    endif
+                  endif
+                -%}
+
+                {%- if request.page_type == 'search' -%}
+                  {%- capture color_input_id -%}checkbox-{{ id_prefix }}-color-{{ color_handle }}{%- endcapture -%}
+                  <div class="checkbox-control" style="display: flex; align-items: center; gap: 0.75rem; padding: 3px 0;">
+                    <input id="{{ color_input_id }}" class="luxury-brand-checkbox luxury-color-checkbox" type="checkbox" name="filter.p.color" value="{{ color_name }}" data-color-tag="{{ color_handle }}" {% if is_color_active %}checked{% endif %}>
+                    <label for="{{ color_input_id }}" class="tap-area text-subdued font-medium" style="cursor: pointer; letter-spacing: 0.02em; user-select: none; display: flex; align-items: center; gap: 0.6rem;">
+                      <span class="luxury-color-swatch-dot" style="background: {{ color_swatch }}; {% if color_name == 'White' %}border: 1px solid rgba(0,0,0,0.25);{% endif %}"></span>
+                      <span>{{ color_name }}</span>
+                    </label>
+                  </div>
+                {%- else -%}
+                  <div class="checkbox-control">
+                    <facet-link class="block w-full">
+                      <a href="{{ color_url | strip }}" data-tag-link="true" class="tap-area text-subdued no-hover-underline luxury-color-facet-link" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0;">
+                        <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
+                          <span class="luxury-facet-checkbox{% if is_color_active %} luxury-facet-checkbox--active{% endif %}"></span>
+                          <span class="luxury-color-swatch-dot{% if is_color_active %} is-active{% endif %}" style="background: {{ color_swatch }}; {% if color_name == 'White' %}border: 1px solid rgba(0,0,0,0.25);{% endif %}"></span>
+                          <span class="{% if is_color_active %}font-semibold text-primary{% else %}text-subdued{% endif %}" style="letter-spacing: 0.02em;">{{ color_name }}</span>
+                        </span>
+                      </a>
+                    </facet-link>
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          {%- endcapture -%}
+
+          {%- assign color_open = open_filters_by_default -%}
+          {%- if active_color_tag != '' -%}
+            {%- assign color_open = true -%}
+          {%- endif -%}
+          {%- render 'accordion', title: 'Color', content: color_filter_content, open: color_open, show_arrow: true -%}
+        {%- endif -%}
+
         {%- for filter in results.filters -%}
+          {%- comment -%}
+            Defensive suppression: All 0-stock products are auto-downgraded to DRAFT
+            and hidden from the storefront. Availability filter is redundant and a no-op.
+          {%- endcomment -%}
+          {%- if filter.param_name == 'filter.v.availability' -%}
+            {%- continue -%}
+          {%- endif -%}
+
           {%- capture filter_content -%}
             {%- if filter.type == 'boolean' or filter.param_name == 'filter.v.availability' -%}
               {%- if filter.param_name == 'filter.v.availability' -%}

@@ -7,14 +7,14 @@
   "vendor": "On",
   "product_type": "Athletic Shoes",
   "source_sku": "ON-8684114-7",
-  "source_price": 180.0,
+  "source_price": 132.99,
   "source_compare_at_price": 180.0,
-  "current_price": 17136.0,
-  "compare_at_price": 17136.0,
+  "current_price": 12540.0,
+  "compare_at_price": 16972.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Textile and synthetic upper, rubber and synthetic sole",
   "specifications": {
     "Brand": "On",
@@ -272,9 +272,9 @@
       "id": 868411410,
       "sku": "ON-8684114-12",
       "title": "UK 11.5 - CHAI/ IVORY",
-      "price": "10124.00",
+      "price": "12645.00",
       "compare_at_price": "18247.00",
-      "source_price": 106.39,
+      "source_price": 132.99,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -290,15 +290,15 @@
           "name": "CHAI/ IVORY"
         }
       ],
-      "price_current": 10124.0
+      "price_current": 12645.0
     },
     {
       "id": 868411411,
       "sku": "ON-8684114-12.5",
       "title": "UK 12 - CHAI/ IVORY",
-      "price": "10124.00",
+      "price": "12645.00",
       "compare_at_price": "18329.00",
-      "source_price": 106.39,
+      "source_price": 132.99,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -314,19 +314,19 @@
           "name": "CHAI/ IVORY"
         }
       ],
-      "price_current": 10124.0
+      "price_current": 12645.0
     },
     {
       "id": 868411412,
       "sku": "ON-8684114-13",
       "title": "UK 12.5 - CHAI/ IVORY",
-      "price": "17364.00",
+      "price": "12540.00",
       "compare_at_price": "18247.00",
-      "source_price": 180.0,
+      "source_price": 132.99,
       "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/70f46d37-bf0d-4b90-98f9-66a15a708ab8.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -338,7 +338,7 @@
           "name": "CHAI/ IVORY"
         }
       ],
-      "price_current": 17364.0
+      "price_current": 12540.0
     },
     {
       "id": 868411413,
@@ -367,10 +367,10 @@
       "id": 868411414,
       "sku": "ON-8684114-15",
       "title": "UK 14.5 - CHAI/ IVORY",
-      "price": "17348.00",
-      "compare_at_price": "17284.00",
-      "source_price": 180.0,
-      "source_compare_at_price": 180.0,
+      "price": "12540.00",
+      "compare_at_price": "17915.00",
+      "source_price": 132.99,
+      "source_compare_at_price": 190.0,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": false,
@@ -385,7 +385,7 @@
           "name": "CHAI/ IVORY"
         }
       ],
-      "price_current": 17348.0
+      "price_current": 12540.0
     }
   ],
   "product_options": [
@@ -459,24 +459,24 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:37:38Z",
+  "last_verified_at": "2026-11-16T15:44:12Z",
   "created_at": "2026-09-17T14:19:11Z",
-  "updated_at": "2026-10-29T03:37:38Z",
-  "is_active": true,
+  "updated_at": "2026-11-16T15:44:12Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "price_range_usd": {
-    "min": 106.39,
-    "max": 180.0
+    "min": 132.99,
+    "max": 132.99
   },
   "price_range_inr": {
-    "min": 10128.0,
-    "max": 17136.0
+    "min": 12540.0,
+    "max": 12540.0
   },
-  "price": "17136.00",
+  "price": "12540.00",
   "shopify_product_id": "gid://shopify/Product/15850879713446",
   "shopify_handle": "cloudsurfer-max-running-sneaker-men",
-  "shopify_synced_at": "2026-10-28T19:39:20Z",
-  "last_synced_fx_rate": 95.199335,
+  "shopify_synced_at": "2026-11-15T01:04:55Z",
+  "last_synced_fx_rate": 94.289707,
   "delist_strikes": 0,
   "supplier_delisted": false
 }

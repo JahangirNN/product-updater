@@ -10,33 +10,33 @@
     #shopify-section-{{ section.id }} .marquee-collection-section {
       position: relative;
       overflow: hidden;
-      background: var(--color-background, #0a0a0a);
-      color: var(--color-foreground, #f0eee9);
-      padding-block: var(--section-vertical-spacing, 3rem);
+      background: var(--color-background, #f0eee9);
+      color: var(--color-foreground, #1a1a1a);
+      padding-block: var(--section-vertical-spacing, 3.5rem);
     }
 
     #shopify-section-{{ section.id }} .marquee-collection-header {
-      margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+      margin-bottom: clamp(1.75rem, 3.5vw, 2.75rem);
       padding-inline: var(--container-gutter, 1.25rem);
     }
 
     #shopify-section-{{ section.id }} .marquee-collection-subheading {
       font-family: var(--heading-font-family, inherit);
-      font-size: 0.6875rem;
+      font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: #c9a876;
+      color: #947847;
       margin-bottom: 0.5rem;
     }
 
     #shopify-section-{{ section.id }} .marquee-collection-heading {
       font-family: var(--heading-font-family, inherit);
-      font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-      font-weight: 500;
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 400;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #f0eee9;
+      color: #111111;
       margin: 0;
     }
 
@@ -58,7 +58,6 @@
     #shopify-section-{{ section.id }} .marquee-rail__viewport {
       width: 100%;
       overflow: hidden;
-      contain: paint layout;
     }
 
     #shopify-section-{{ section.id }} .marquee-rail__track {
@@ -66,19 +65,23 @@
       width: max-content;
       will-change: transform;
       transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
       animation-name: marquee-scroll-{{ section.settings.direction }};
       animation-duration: var(--marquee-speed);
       animation-timing-function: linear;
       animation-iteration-count: infinite;
     }
 
-    #shopify-section-{{ section.id }} .marquee-rail[data-pause-on-hover]:hover .marquee-rail__track,
-    #shopify-section-{{ section.id }} .marquee-rail[data-pause-on-hover]:focus-within .marquee-rail__track {
-      animation-play-state: paused;
-    }
+    /* Hardware-accelerated pause on hover (GPU compositor thread) */
+    {%- if section.settings.pause_on_hover -%}
+      #shopify-section-{{ section.id }} .marquee-rail:hover .marquee-rail__track,
+      #shopify-section-{{ section.id }} .marquee-rail.is-hovered .marquee-rail__track {
+        animation-play-state: paused;
+      }
+    {%- endif -%}
 
     #shopify-section-{{ section.id }} .marquee-rail.is-dragging .marquee-rail__track {
-      animation-play-state: paused !important;
+      animation-play-state: paused;
     }
 
     #shopify-section-{{ section.id }} .marquee-rail__group {
@@ -106,7 +109,7 @@
       }
     }
 
-    /* Card Presentation & Zero Layout Shift (CLS = 0) */
+    /* Card Presentation & Isolated Paint Boundary */
     #shopify-section-{{ section.id }} .marquee-card {
       position: relative;
       width: var(--marquee-card-width-desktop);
@@ -114,6 +117,12 @@
       text-decoration: none;
       color: inherit;
       display: block;
+      contain: content;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card:hover {
+      transform: translateY(-4px);
     }
 
     @media screen and (max-width: 699px) {
@@ -133,41 +142,27 @@
     #shopify-section-{{ section.id }} .marquee-card__media {
       position: relative;
       width: 100%;
-      aspect-ratio: 4 / 5;
-      background-color: #141414;
+      background-color: #ffffff;
       border-radius: 4px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.07);
+      transition: border-color 0.25s ease;
+      display: flex;
+      flex-direction: column;
     }
 
     #shopify-section-{{ section.id }} .marquee-card:hover .marquee-card__media {
-      border-color: rgba(201, 168, 118, 0.35);
-      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+      border-color: rgba(201, 168, 118, 0.65);
     }
 
-    /* Obsidian Skeleton Shimmer Placeholder */
-    #shopify-section-{{ section.id }} .marquee-card__media::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        90deg,
-        rgba(20, 20, 20, 0) 0%,
-        rgba(201, 168, 118, 0.08) 50%,
-        rgba(20, 20, 20, 0) 100%
-      );
-      transform: translateX(-100%);
-      animation: marquee-shimmer 2.2s infinite ease-in-out;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    @keyframes marquee-shimmer {
-      100% {
-        transform: translateX(100%);
-      }
+    /* Pre-Stacked 4-Piece Studio Stage (Zero DOM .src mutation or image decode lag on hover) */
+    #shopify-section-{{ section.id }} .marquee-card__image-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background-color: #ffffff;
+      overflow: hidden;
     }
 
     #shopify-section-{{ section.id }} .marquee-card__image {
@@ -175,44 +170,97 @@
       inset: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      padding: 1.35rem 1.25rem 0.75rem;
+      object-fit: contain;
       object-position: center;
-      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      background-color: #ffffff;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1;
+      transition: opacity 0.16s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card__image.is-active {
+      opacity: 1;
       z-index: 2;
     }
 
-    #shopify-section-{{ section.id }} .marquee-card:hover .marquee-card__image {
-      transform: scale(1.06);
+    #shopify-section-{{ section.id }} .marquee-card:hover .marquee-card__image.is-active {
+      transform: scale3d(1.04, 1.04, 1);
+    }
+
+    /* Interactive 4-Piece Portfolio Thumbnail Strip */
+    #shopify-section-{{ section.id }} .marquee-card__thumbs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.4rem;
+      padding: 0.45rem 0.85rem 0.65rem;
+      background-color: #ffffff;
+      border-top: 1px solid rgba(0, 0, 0, 0.04);
+      z-index: 6;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card__thumb {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      width: 100%;
+      border-radius: 3px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background-color: #ffffff;
+      padding: 3px;
+      cursor: pointer;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card__thumb:hover {
+      border-color: #947847;
+      transform: translate3d(0, -1px, 0);
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card__thumb.is-active {
+      border-color: #111111;
+      outline: 1px solid #111111;
+      outline-offset: -1px;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card__thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      pointer-events: none;
+      display: block;
     }
 
     /* Floating Product Count Badge Pill */
     #shopify-section-{{ section.id }} .marquee-card__pill {
       position: absolute;
-      top: 0.875rem;
-      right: 0.875rem;
+      top: 0.75rem;
+      right: 0.75rem;
       z-index: 10;
       display: inline-flex;
       align-items: center;
-      padding: 0.3rem 0.65rem;
+      padding: 0.22rem 0.55rem;
       border-radius: 9999px;
-      background: rgba(10, 10, 10, 0.72);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(201, 168, 118, 0.45);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+      background: #111111;
+      border: 1px solid rgba(201, 168, 118, 0.35);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.25s ease, border-color 0.25s ease;
       pointer-events: none;
     }
 
     #shopify-section-{{ section.id }} .marquee-card:hover .marquee-card__pill {
-      transform: translateY(-2px);
+      transform: translate3d(0, -2px, 0);
       border-color: #c9a876;
-      background: rgba(10, 10, 10, 0.85);
     }
 
     #shopify-section-{{ section.id }} .marquee-card__pill-text {
       font-family: var(--heading-font-family, inherit);
-      font-size: 0.625rem;
+      font-size: 0.5625rem;
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -220,86 +268,95 @@
       white-space: nowrap;
     }
 
-    /* Glassmorphic Card Overlay */
+    /* Minimalist Luxury Card Footer */
     #shopify-section-{{ section.id }} .marquee-card__overlay {
-      position: absolute;
-      inset-inline: 0;
-      bottom: 0;
-      padding: 1.25rem 1rem 1rem;
-      background: linear-gradient(
-        180deg,
-        rgba(10, 10, 10, 0) 0%,
-        rgba(10, 10, 10, 0.65) 40%,
-        rgba(10, 10, 10, 0.95) 100%
-      );
-      backdrop-filter: blur(12px) saturate(160%);
-      -webkit-backdrop-filter: blur(12px) saturate(160%);
-      border-top: 1px solid rgba(201, 168, 118, 0.2);
+      position: relative;
+      width: 100%;
+      flex: 0 0 auto;
+      padding: 0.8rem 1rem 0.95rem;
+      background-color: #ffffff;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       z-index: 5;
-      transition: backdrop-filter 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-    }
-
-    #shopify-section-{{ section.id }} .marquee-card:hover .marquee-card__overlay {
-      backdrop-filter: blur(16px) saturate(180%);
-      -webkit-backdrop-filter: blur(16px) saturate(180%);
-      border-top-color: rgba(201, 168, 118, 0.5);
-      background: linear-gradient(
-        180deg,
-        rgba(10, 10, 10, 0) 0%,
-        rgba(10, 10, 10, 0.75) 35%,
-        rgba(10, 10, 10, 0.98) 100%
-      );
+      text-align: left;
     }
 
     #shopify-section-{{ section.id }} .marquee-card__kicker {
       font-family: var(--heading-font-family, inherit);
-      font-size: 0.625rem;
-      font-weight: 500;
+      font-size: 0.5625rem;
+      font-weight: 600;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: #c9a876;
-      margin-bottom: 0.25rem;
+      color: #947847;
+      margin-bottom: 0.2rem;
       display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     #shopify-section-{{ section.id }} .marquee-card__title {
       font-family: var(--heading-font-family, inherit);
-      font-size: 1rem;
-      font-weight: 500;
-      line-height: 1.3;
-      letter-spacing: 0.14em;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #f0eee9;
+      color: #111111 !important;
       margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       transition: color 0.25s ease;
     }
 
     #shopify-section-{{ section.id }} .marquee-card:hover .marquee-card__title {
-      color: #ffffff;
+      color: #000000 !important;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card__meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-top: 0.45rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card__price-floor {
+      font-family: var(--body-font-family, inherit);
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: #555555;
+      white-space: nowrap;
+    }
+
+    #shopify-section-{{ section.id }} .marquee-card__price-floor strong {
+      color: #111111;
+      font-weight: 600;
     }
 
     #shopify-section-{{ section.id }} .marquee-card__action {
       display: inline-flex;
       align-items: center;
-      gap: 0.3rem;
+      gap: 0.25rem;
       font-family: var(--heading-font-family, inherit);
       font-size: 0.625rem;
       font-weight: 600;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #c9a876;
-      margin-top: 0.4rem;
-      opacity: 0;
-      transform: translateY(4px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
+      color: #947847;
+      white-space: nowrap;
+      transition: transform 0.25s ease, color 0.25s ease;
     }
 
     #shopify-section-{{ section.id }} .marquee-card:hover .marquee-card__action {
-      opacity: 1;
-      transform: translateY(0);
+      color: #111111;
+      transform: translate3d(2px, 0, 0);
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -310,13 +367,317 @@
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
       }
-      #shopify-section-{{ section.id }} .marquee-card__media::before {
-        animation: none !important;
-      }
     }
   </style>
 
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | default: '#0a0a0a' | md5 -%}
+
+  {%- comment -%}
+    Build deduplicated portfolio cards once so every card across the entire section showcases
+    unique hero imagery and 4 distinct product silhouettes from its Maison/Category.
+  {%- endcomment -%}
+  {%- assign used_product_ids = '|' -%}
+  {%- assign used_image_keys = '|' -%}
+  {%- capture marquee_cards_html -%}
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign collection = block.settings.collection
+        assign card_title = block.settings.title | default: collection.title | default: 'Maison Collection'
+        assign card_alt = card_title | escape
+        assign card_url = block.settings.url | default: collection.url | default: '#'
+        assign card_count = block.settings.custom_count | default: collection.all_products_count
+
+        assign p1 = nil
+        assign p2 = nil
+        assign p3 = nil
+        assign p4 = nil
+        assign card_model_prefixes = '|'
+        assign min_price = 0
+
+        if collection != blank and collection.products_count > 0
+          for prod in collection.products limit: 50
+            if prod.price > 0
+              if min_price == 0 or prod.price < min_price
+                assign min_price = prod.price
+              endif
+            endif
+          endfor
+
+          comment
+            Curated multi-source pools for flagship category & maison cards so each card showcases
+            maximum brand/silhouette diversity rather than a single import batch.
+          endcomment
+          if collection.handle == 'designer-bags'
+            assign pool_handles = 'totes,michael-kors,jw-pei,crossbody-bags' | split: ','
+          elsif collection.handle == 'premium-footwear'
+            assign pool_handles = 'nike,on-running,adidas,hoka' | split: ','
+          elsif collection.handle == 'luxury-watches'
+            assign pool_handles = 'tissot,movado,citizen,versace' | split: ','
+          elsif collection.handle == 'coach'
+            assign pool_handles = 'designer-bags,totes,wallets-leather-goods,coach' | split: ','
+          else
+            assign pool_handles = '' | split: ','
+          endif
+
+          if pool_handles.size > 0
+            for ph in pool_handles
+              assign sub_col = collections[ph]
+              if sub_col != blank and sub_col.products_count > 0
+                for prod in sub_col.products limit: 45
+                  assign vendor_match = true
+                  if collection.handle == 'coach'
+                    assign v_up = prod.vendor | upcase
+                    unless v_up contains 'COACH'
+                      assign vendor_match = false
+                    endunless
+                  endif
+
+                  assign p_media = prod.featured_media.preview_image | default: prod.featured_image
+                  if vendor_match and p_media != blank
+                    assign pid_token = '|' | append: prod.id | append: '|'
+                    assign raw_file = p_media.src | split: '/' | last | split: '?' | first
+                    assign img_stem = raw_file | split: '_' | first | split: '.' | first
+                    assign img_token = '|' | append: img_stem | append: '|'
+                    assign model_prefix = prod.title | slice: 0, 18 | upcase | strip
+                    assign model_token = '|' | append: model_prefix | append: '|'
+
+                    unless used_product_ids contains pid_token or used_image_keys contains img_token or card_model_prefixes contains model_token
+                      if p1 == nil
+                        assign p1 = prod
+                        assign used_product_ids = used_product_ids | append: prod.id | append: '|'
+                        assign used_image_keys = used_image_keys | append: img_stem | append: '|'
+                        assign card_model_prefixes = card_model_prefixes | append: model_prefix | append: '|'
+                        break
+                      elsif p2 == nil
+                        assign p2 = prod
+                        assign used_product_ids = used_product_ids | append: prod.id | append: '|'
+                        assign used_image_keys = used_image_keys | append: img_stem | append: '|'
+                        assign card_model_prefixes = card_model_prefixes | append: model_prefix | append: '|'
+                        break
+                      elsif p3 == nil
+                        assign p3 = prod
+                        assign used_product_ids = used_product_ids | append: prod.id | append: '|'
+                        assign used_image_keys = used_image_keys | append: img_stem | append: '|'
+                        assign card_model_prefixes = card_model_prefixes | append: model_prefix | append: '|'
+                        break
+                      elsif p4 == nil
+                        assign p4 = prod
+                        assign used_product_ids = used_product_ids | append: prod.id | append: '|'
+                        assign used_image_keys = used_image_keys | append: img_stem | append: '|'
+                        assign card_model_prefixes = card_model_prefixes | append: model_prefix | append: '|'
+                        break
+                      endif
+                    endunless
+                  endif
+                endfor
+              endif
+            endfor
+          endif
+
+          comment
+            Distinct model prefix pass on the collection's own products
+          endcomment
+          if p4 == nil
+            for prod in collection.products limit: 50
+              assign p_media = prod.featured_media.preview_image | default: prod.featured_image
+              if p_media != blank
+                assign pid_token = '|' | append: prod.id | append: '|'
+                assign raw_file = p_media.src | split: '/' | last | split: '?' | first
+                assign img_stem = raw_file | split: '_' | first | split: '.' | first
+                assign img_token = '|' | append: img_stem | append: '|'
+                assign model_prefix = prod.title | slice: 0, 18 | upcase | strip
+                assign model_token = '|' | append: model_prefix | append: '|'
+                unless used_product_ids contains pid_token or used_image_keys contains img_token or card_model_prefixes contains model_token
+                  if p1 == nil
+                    assign p1 = prod
+                    assign used_product_ids = used_product_ids | append: prod.id | append: '|'
+                    assign used_image_keys = used_image_keys | append: img_stem | append: '|'
+                    assign card_model_prefixes = card_model_prefixes | append: model_prefix | append: '|'
+                  elsif p2 == nil
+                    assign p2 = prod
+                    assign used_product_ids = used_product_ids | append: prod.id | append: '|'
+                    assign used_image_keys = used_image_keys | append: img_stem | append: '|'
+                    assign card_model_prefixes = card_model_prefixes | append: model_prefix | append: '|'
+                  elsif p3 == nil
+                    assign p3 = prod
+                    assign used_product_ids = used_product_ids | append: prod.id | append: '|'
+                    assign used_image_keys = used_image_keys | append: img_stem | append: '|'
+                    assign card_model_prefixes = card_model_prefixes | append: model_prefix | append: '|'
+                  elsif p4 == nil
+                    assign p4 = prod
+                    assign used_product_ids = used_product_ids | append: prod.id | append: '|'
+                    assign used_image_keys = used_image_keys | append: img_stem | append: '|'
+                    assign card_model_prefixes = card_model_prefixes | append: model_prefix | append: '|'
+                  endif
+                endunless
+              endif
+            endfor
+          endif
+
+          comment
+            Final fallback pass ensuring 4 unique products
+          endcomment
+          if p4 == nil
+            for prod in collection.products limit: 35
+              assign p_media = prod.featured_media.preview_image | default: prod.featured_image
+              if p_media != blank
+                assign pid_token = '|' | append: prod.id | append: '|'
+                assign raw_file = p_media.src | split: '/' | last | split: '?' | first
+                assign img_stem = raw_file | split: '_' | first | split: '.' | first
+                assign img_token = '|' | append: img_stem | append: '|'
+                unless used_product_ids contains pid_token or used_image_keys contains img_token
+                  if p1 == nil
+                    assign p1 = prod
+                    assign used_product_ids = used_product_ids | append: prod.id | append: '|'
+                    assign used_image_keys = used_image_keys | append: img_stem | append: '|'
+                  elsif p2 == nil
+                    assign p2 = prod
+                    assign used_product_ids = used_product_ids | append: prod.id | append: '|'
+                    assign used_image_keys = used_image_keys | append: img_stem | append: '|'
+                  elsif p3 == nil
+                    assign p3 = prod
+                    assign used_product_ids = used_product_ids | append: prod.id | append: '|'
+                    assign used_image_keys = used_image_keys | append: img_stem | append: '|'
+                  elsif p4 == nil
+                    assign p4 = prod
+                    assign used_product_ids = used_product_ids | append: prod.id | append: '|'
+                    assign used_image_keys = used_image_keys | append: img_stem | append: '|'
+                  endif
+                endunless
+              endif
+            endfor
+          endif
+        endif
+
+        assign card_image = block.settings.image
+        if card_image == blank and p1 != nil
+          assign card_image = p1.featured_media.preview_image | default: p1.featured_image
+        endif
+        if card_image == blank
+          assign card_image = collection.image | default: collection.featured_image | default: collection.products.first.featured_media.preview_image
+        endif
+      -%}
+
+      <div class="marquee-card" {{ block.shopify_attributes }}>
+        <a href="{{ card_url }}" class="marquee-card__link" draggable="false">
+          <div class="marquee-card__media">
+            <div class="marquee-card__image-container">
+              {%- if p1 != nil and p2 != nil -%}
+                {%- for idx in (1..4) -%}
+                  {%- liquid
+                    assign stage_prod = nil
+                    if idx == 1
+                      assign stage_prod = p1
+                    elsif idx == 2
+                      assign stage_prod = p2
+                    elsif idx == 3
+                      assign stage_prod = p3
+                    elsif idx == 4
+                      assign stage_prod = p4
+                    endif
+                  -%}
+                  {%- if stage_prod != nil -%}
+                    {%- assign stage_img = stage_prod.featured_media.preview_image | default: stage_prod.featured_image -%}
+                    <img
+                      src="{{ stage_img | image_url: width: 440 }}"
+                      alt="{{ stage_prod.title | default: card_alt | escape }}"
+                      width="280"
+                      height="280"
+                      loading="{% if idx == 1 %}eager{% else %}lazy{% endif %}"
+                      decoding="async"
+                      class="marquee-card__image {% if idx == 1 %}is-active{% endif %}"
+                      data-stage-idx="{{ idx }}"
+                      draggable="false"
+                    />
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- elsif card_image != blank -%}
+                <img
+                  src="{{ card_image | image_url: width: 440 }}"
+                  alt="{{ card_alt }}"
+                  width="280"
+                  height="280"
+                  loading="eager"
+                  decoding="async"
+                  class="marquee-card__image is-active"
+                  data-stage-idx="1"
+                  draggable="false"
+                />
+              {%- else -%}
+                {%- capture placeholder_index -%}{% cycle '1', '2', '3', '4', '5', '6' %}{%- endcapture -%}
+                {{- 'collection-' | append: placeholder_index | placeholder_svg_tag: 'placeholder marquee-card__image is-active' -}}
+              {%- endif -%}
+
+              <div class="marquee-card__pill">
+                <span class="marquee-card__pill-text">
+                  {%- if card_count != blank and card_count > 0 -%}
+                    {{ card_count }} {% if card_count == 1 %}PIECE{% else %}PIECES{% endif %}
+                  {%- else -%}
+                    EXPLORE
+                  {%- endif -%}
+                </span>
+              </div>
+            </div>
+
+            {%- if p1 != nil and p2 != nil -%}
+              <div class="marquee-card__thumbs" aria-label="{{ card_alt }} preview pieces">
+                {%- for idx in (1..4) -%}
+                  {%- liquid
+                    assign thumb_prod = nil
+                    if idx == 1
+                      assign thumb_prod = p1
+                    elsif idx == 2
+                      assign thumb_prod = p2
+                    elsif idx == 3
+                      assign thumb_prod = p3
+                    elsif idx == 4
+                      assign thumb_prod = p4
+                    endif
+                  -%}
+                  {%- if thumb_prod != nil -%}
+                    {%- assign thumb_img = thumb_prod.featured_media.preview_image | default: thumb_prod.featured_image -%}
+                    <button
+                      type="button"
+                      class="marquee-card__thumb {% if idx == 1 %}is-active{% endif %}"
+                      data-thumb-idx="{{ idx }}"
+                      aria-label="Preview {{ thumb_prod.title | escape }}"
+                    >
+                      <img
+                        src="{{ thumb_img | image_url: width: 120 }}"
+                        alt="{{ thumb_prod.title | escape }}"
+                        width="56"
+                        height="56"
+                        loading="lazy"
+                        decoding="async"
+                        draggable="false"
+                      />
+                    </button>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+
+            <div class="marquee-card__overlay">
+              {%- if block.settings.subheading != blank -%}
+                <span class="marquee-card__kicker">{{ block.settings.subheading }}</span>
+              {%- endif -%}
+              <h3 class="marquee-card__title">{{ card_title }}</h3>
+              <div class="marquee-card__meta-row">
+                {%- if min_price > 0 -%}
+                  <span class="marquee-card__price-floor">From <strong>{{ min_price | money }}</strong></span>
+                {%- else -%}
+                  <span class="marquee-card__price-floor">Curated Edit</span>
+                {%- endif -%}
+                <span class="marquee-card__action">
+                  DISCOVER &rarr;
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    {%- endfor -%}
+  {%- endcapture -%}
 
   <div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %} marquee-collection-section">
     <div class="section-stack">
@@ -346,112 +707,12 @@
           <div class="marquee-rail__track">
             {%- comment -%} Group A: Semantic primary collection cards {%- endcomment -%}
             <div class="marquee-rail__group" data-group="a">
-              {%- for block in section.blocks -%}
-                {%- assign collection = block.settings.collection -%}
-                {%- assign card_title = block.settings.title | default: collection.title | default: 'Maison Collection' -%}
-                {%- assign card_alt = card_title | escape -%}
-                {%- assign card_url = block.settings.url | default: collection.url | default: '#' -%}
-                {%- assign card_image = block.settings.image | default: collection.featured_image | default: collection.products.first.featured_media.preview_image -%}
-                {%- assign card_count = block.settings.custom_count | default: collection.all_products_count -%}
-
-                <div class="marquee-card" {{ block.shopify_attributes }}>
-                  <a href="{{ card_url }}" class="marquee-card__link" draggable="false">
-                    <div class="marquee-card__media">
-                      {%- if card_image != blank -%}
-                        {{- card_image | image_url: width: 800 | image_tag:
-                          loading: 'lazy',
-                          sizes: '(max-width: 699px) 240px, 320px',
-                          widths: '240,320,480,640,800',
-                          class: 'marquee-card__image',
-                          alt: card_alt,
-                          draggable: 'false'
-                        -}}
-                      {%- else -%}
-                        {%- capture placeholder_index -%}{% cycle '1', '2', '3', '4', '5', '6' %}{%- endcapture -%}
-                        {{- 'collection-' | append: placeholder_index | placeholder_svg_tag: 'placeholder marquee-card__image' -}}
-                      {%- endif -%}
-
-                      <div class="marquee-card__pill">
-                        <span class="marquee-card__pill-text">
-                          {%- if card_count != blank and card_count > 0 -%}
-                            {{ card_count }} {% if card_count == 1 %}PIECE{% else %}PIECES{% endif %}
-                          {%- else -%}
-                            EXPLORE
-                          {%- endif -%}
-                        </span>
-                      </div>
-
-                      <div class="marquee-card__overlay">
-                        {%- if block.settings.subheading != blank -%}
-                          <span class="marquee-card__kicker">{{ block.settings.subheading }}</span>
-                        {%- endif -%}
-                        <h3 class="marquee-card__title">{{ card_title }}</h3>
-                        <span class="marquee-card__action">
-                          DISCOVER
-                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
-                            <path d="M1 5H9M9 5L5.5 1.5M9 5L5.5 8.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              {%- endfor -%}
+              {{ marquee_cards_html }}
             </div>
 
             {%- comment -%} Group B: Cloned collection cards for seamless continuous infinite loop {%- endcomment -%}
             <div class="marquee-rail__group" data-group="b" aria-hidden="true">
-              {%- for block in section.blocks -%}
-                {%- assign collection = block.settings.collection -%}
-                {%- assign card_title = block.settings.title | default: collection.title | default: 'Maison Collection' -%}
-                {%- assign card_alt_b = card_title | escape -%}
-                {%- assign card_url = block.settings.url | default: collection.url | default: '#' -%}
-                {%- assign card_image = block.settings.image | default: collection.featured_image | default: collection.products.first.featured_media.preview_image -%}
-                {%- assign card_count = block.settings.custom_count | default: collection.all_products_count -%}
-
-                <div class="marquee-card" aria-hidden="true">
-                  <a href="{{ card_url }}" class="marquee-card__link" tabindex="-1" aria-hidden="true" draggable="false">
-                    <div class="marquee-card__media">
-                      {%- if card_image != blank -%}
-                        {{- card_image | image_url: width: 800 | image_tag:
-                          loading: 'lazy',
-                          sizes: '(max-width: 699px) 240px, 320px',
-                          widths: '240,320,480,640,800',
-                          class: 'marquee-card__image',
-                          alt: card_alt_b,
-                          draggable: 'false'
-                        -}}
-                      {%- else -%}
-                        {%- capture placeholder_index_b -%}{% cycle '1', '2', '3', '4', '5', '6' %}{%- endcapture -%}
-                        {{- 'collection-' | append: placeholder_index_b | placeholder_svg_tag: 'placeholder marquee-card__image' -}}
-                      {%- endif -%}
-
-                      <div class="marquee-card__pill">
-                        <span class="marquee-card__pill-text">
-                          {%- if card_count != blank and card_count > 0 -%}
-                            {{ card_count }} {% if card_count == 1 %}PIECE{% else %}PIECES{% endif %}
-                          {%- else -%}
-                            EXPLORE
-                          {%- endif -%}
-                        </span>
-                      </div>
-
-                      <div class="marquee-card__overlay">
-                        {%- if block.settings.subheading != blank -%}
-                          <span class="marquee-card__kicker">{{ block.settings.subheading }}</span>
-                        {%- endif -%}
-                        <h3 class="marquee-card__title">{{ card_title }}</h3>
-                        <span class="marquee-card__action">
-                          DISCOVER
-                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
-                            <path d="M1 5H9M9 5L5.5 1.5M9 5L5.5 8.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              {%- endfor -%}
+              {{ marquee_cards_html }}
             </div>
           </div>
         </div>
@@ -461,6 +722,42 @@
 
   <script>
     (function() {
+      if (!window._rareAvenueMarqueeThumbsInitialized) {
+        window._rareAvenueMarqueeThumbsInitialized = true;
+
+        function activateMarqueeThumb(thumb) {
+          if (!thumb || thumb.classList.contains('is-active')) return;
+          const card = thumb.closest('.marquee-card');
+          if (!card) return;
+          const targetIdx = thumb.getAttribute('data-thumb-idx');
+          if (!targetIdx) return;
+
+          const thumbs = card.querySelectorAll('.marquee-card__thumb');
+          for (let i = 0; i < thumbs.length; i++) {
+            thumbs[i].classList.toggle('is-active', thumbs[i] === thumb);
+          }
+
+          const stageImgs = card.querySelectorAll('.marquee-card__image');
+          for (let i = 0; i < stageImgs.length; i++) {
+            stageImgs[i].classList.toggle('is-active', stageImgs[i].getAttribute('data-stage-idx') === targetIdx);
+          }
+        }
+
+        document.addEventListener('pointerover', function(e) {
+          if (e.pointerType === 'touch') return;
+          const thumb = e.target.closest && e.target.closest('.marquee-card__thumb');
+          if (thumb) activateMarqueeThumb(thumb);
+        }, { passive: true });
+
+        document.addEventListener('click', function(e) {
+          const thumb = e.target.closest && e.target.closest('.marquee-card__thumb');
+          if (!thumb) return;
+          e.preventDefault();
+          e.stopPropagation();
+          activateMarqueeThumb(thumb);
+        }, true);
+      }
+
       if (customElements.get('marquee-collection-rail')) return;
 
       class MarqueeCollectionRail extends HTMLElement {
@@ -468,207 +765,142 @@
           super();
           this.track = null;
           this.groupA = null;
-          this.groupB = null;
+          this.groupWidth = 0;
+          this.speedSeconds = 60;
+          this.direction = 'left';
+          this.isPointerDown = false;
           this.isDragging = false;
-          this.hasMoved = false;
           this.startX = 0;
-          this.lastX = 0;
-          this.lastTime = 0;
-          this.velocity = 0;
-          this.currentX = 0;
-          this.rafId = null;
+          this.startY = 0;
+          this.startTransX = 0;
+          this.currentTransX = 0;
+          this.resizeObserver = null;
 
           this.onPointerDown = this.onPointerDown.bind(this);
           this.onPointerMove = this.onPointerMove.bind(this);
           this.onPointerUp = this.onPointerUp.bind(this);
           this.onPointerCancel = this.onPointerCancel.bind(this);
-          this.glide = this.glide.bind(this);
         }
 
         connectedCallback() {
           this.track = this.querySelector('.marquee-rail__track');
           this.groupA = this.querySelector('.marquee-rail__group[data-group="a"]');
-          this.groupB = this.querySelector('.marquee-rail__group[data-group="b"]');
+          if (!this.track || !this.groupA) return;
 
-          if (!this.track) return;
+          this.speedSeconds = Math.max(5, parseFloat(this.dataset.speed) || 60);
+          this.direction = this.dataset.direction === 'right' ? 'right' : 'left';
 
-          this.track.addEventListener('pointerdown', this.onPointerDown, { passive: false });
-          this.track.addEventListener('pointermove', this.onPointerMove, { passive: false });
-          this.track.addEventListener('pointerup', this.onPointerUp, { passive: false });
-          this.track.addEventListener('pointercancel', this.onPointerCancel, { passive: false });
+          this.updateGroupWidth();
+
+          if ('ResizeObserver' in window) {
+            this.resizeObserver = new ResizeObserver(() => {
+              this.updateGroupWidth();
+            });
+            this.resizeObserver.observe(this.groupA);
+          }
+
+          this.track.addEventListener('pointerdown', this.onPointerDown, { passive: true });
+          window.addEventListener('pointermove', this.onPointerMove, { passive: true });
+          window.addEventListener('pointerup', this.onPointerUp, { passive: true });
+          window.addEventListener('pointercancel', this.onPointerCancel, { passive: true });
         }
 
         disconnectedCallback() {
-          if (this.rafId) cancelAnimationFrame(this.rafId);
+          if (this.resizeObserver) this.resizeObserver.disconnect();
           if (this.track) {
             this.track.removeEventListener('pointerdown', this.onPointerDown);
-            this.track.removeEventListener('pointermove', this.onPointerMove);
-            this.track.removeEventListener('pointerup', this.onPointerUp);
-            this.track.removeEventListener('pointercancel', this.onPointerCancel);
           }
+          window.removeEventListener('pointermove', this.onPointerMove);
+          window.removeEventListener('pointerup', this.onPointerUp);
+          window.removeEventListener('pointercancel', this.onPointerCancel);
         }
 
-        getGroupWidth() {
-          if (this.groupA && this.groupA.offsetWidth > 0) {
-            return this.groupA.offsetWidth;
-          }
-          return (this.track ? this.track.offsetWidth / 2 : 0);
+        updateGroupWidth() {
+          if (!this.groupA) return;
+          this.groupWidth = this.groupA.offsetWidth || (this.track.offsetWidth / 2) || 6600;
         }
 
-        getCurrentTransformX() {
+        getTrackCurrentX() {
           if (!this.track) return 0;
           const style = window.getComputedStyle(this.track);
-          const transform = style.transform || style.webkitTransform;
-          if (!transform || transform === 'none') return 0;
-
-          try {
-            const matrix = new DOMMatrix(transform);
-            return matrix.m41 || 0;
-          } catch (e) {
-            const values = transform.match(/matrix.*\((.+)\)/);
-            if (values && values[1]) {
-              const parts = values[1].split(', ');
-              return parseFloat(parts[4]) || 0;
-            }
-            return 0;
-          }
+          const matrix = new DOMMatrixReadOnly(style.transform);
+          return matrix.m41;
         }
 
         onPointerDown(e) {
           if (e.button !== 0 && e.pointerType === 'mouse') return;
-          if (this.rafId) {
-            cancelAnimationFrame(this.rafId);
-            this.rafId = null;
-          }
+          if (e.target && e.target.closest && e.target.closest('.marquee-card__thumb')) return;
 
-          const currentX = this.getCurrentTransformX();
-          const groupWidth = this.getGroupWidth();
-
-          this.currentX = currentX;
-          if (groupWidth > 0) {
-            while (this.currentX > 0) this.currentX -= groupWidth;
-            while (this.currentX < -groupWidth) this.currentX += groupWidth;
-          }
-
-          this.track.style.animation = 'none';
-          this.track.style.willChange = 'transform';
-          this.track.style.transform = `translate3d(${this.currentX}px, 0, 0)`;
-
-          this.isDragging = true;
-          this.hasMoved = false;
+          this.isPointerDown = true;
+          this.isDragging = false;
           this.startX = e.clientX;
-          this.lastX = e.clientX;
-          this.lastTime = performance.now();
-          this.velocity = 0;
-
-          this.classList.add('is-dragging');
-          try {
-            this.track.setPointerCapture(e.pointerId);
-          } catch (_) {}
+          this.startY = e.clientY;
+          this.startTransX = this.getTrackCurrentX();
+          this.currentTransX = this.startTransX;
         }
 
         onPointerMove(e) {
-          if (!this.isDragging) return;
+          if (!this.isPointerDown) return;
 
-          const now = performance.now();
-          const dt = Math.max(1, now - this.lastTime);
-          const dx = e.clientX - this.lastX;
+          const totalDx = e.clientX - this.startX;
+          const totalDy = e.clientY - this.startY;
 
-          if (Math.abs(e.clientX - this.startX) > 4) {
-            this.hasMoved = true;
+          if (!this.isDragging) {
+            if (Math.abs(totalDy) > Math.abs(totalDx) && Math.abs(totalDy) > 6) {
+              this.isPointerDown = false;
+              return;
+            }
+            if (Math.abs(totalDx) > 5) {
+              this.isDragging = true;
+              this.classList.add('is-dragging');
+              this.track.style.animation = 'none';
+              this.track.style.transform = `translate3d(${this.startTransX}px, 0, 0)`;
+            } else {
+              return;
+            }
           }
 
-          this.currentX += dx;
-          // Instantaneous velocity (px/ms)
-          this.velocity = dx / dt;
-
-          this.lastX = e.clientX;
-          this.lastTime = now;
-
-          const groupWidth = this.getGroupWidth();
-          if (groupWidth > 0) {
-            while (this.currentX > 0) this.currentX -= groupWidth;
-            while (this.currentX < -groupWidth) this.currentX += groupWidth;
-          }
-
-          this.track.style.transform = `translate3d(${this.currentX}px, 0, 0)`;
+          this.currentTransX = this.startTransX + totalDx;
+          this.track.style.transform = `translate3d(${this.currentTransX}px, 0, 0)`;
         }
 
-        onPointerUp(e) {
-          if (!this.isDragging) return;
-          this.isDragging = false;
-          this.classList.remove('is-dragging');
+        onPointerUp() {
+          if (!this.isPointerDown) return;
+          this.isPointerDown = false;
 
-          try {
-            if (this.track.hasPointerCapture(e.pointerId)) {
-              this.track.releasePointerCapture(e.pointerId);
+          if (this.isDragging) {
+            this.isDragging = false;
+            this.classList.remove('is-dragging');
+
+            this.updateGroupWidth();
+            const gw = this.groupWidth || 6600;
+
+            let normX = this.currentTransX;
+            if (normX >= 0) {
+              normX = (normX % gw) - gw;
+            } else if (normX < -gw) {
+              normX = -((-normX) % gw);
             }
-          } catch (_) {}
 
-          if (this.hasMoved) {
+            const progress = (-normX) / gw;
+            const delay = -(progress * this.speedSeconds);
+
+            this.track.style.transform = '';
+            this.track.style.animation = `marquee-scroll-${this.direction} ${this.speedSeconds}s linear infinite`;
+            this.track.style.animationDelay = `${delay.toFixed(3)}s`;
+
             const suppressClick = (evt) => {
               evt.preventDefault();
               evt.stopPropagation();
               window.removeEventListener('click', suppressClick, true);
             };
             window.addEventListener('click', suppressClick, true);
-          }
-
-          if (Math.abs(this.velocity) > 0.08) {
-            this.rafId = requestAnimationFrame(this.glide);
-          } else {
-            this.resumeCssAnimation();
+            setTimeout(() => window.removeEventListener('click', suppressClick, true), 100);
           }
         }
 
-        onPointerCancel(e) {
-          this.onPointerUp(e);
-        }
-
-        glide() {
-          if (this.isDragging) return;
-
-          // Exponential friction deceleration
-          this.velocity *= 0.95;
-          this.currentX += this.velocity * 16.67;
-
-          const groupWidth = this.getGroupWidth();
-          if (groupWidth > 0) {
-            while (this.currentX > 0) this.currentX -= groupWidth;
-            while (this.currentX < -groupWidth) this.currentX += groupWidth;
-          }
-
-          this.track.style.transform = `translate3d(${this.currentX}px, 0, 0)`;
-
-          if (Math.abs(this.velocity) > 0.02) {
-            this.rafId = requestAnimationFrame(this.glide);
-          } else {
-            this.resumeCssAnimation();
-          }
-        }
-
-        resumeCssAnimation() {
-          const groupWidth = this.getGroupWidth();
-          if (!groupWidth || groupWidth <= 0) return;
-
-          const speed = parseFloat(this.dataset.speed) || 35;
-          const direction = this.dataset.direction || 'left';
-
-          // Normalized progress [0, 1)
-          let progress = 0;
-          if (direction === 'left') {
-            progress = (-this.currentX) / groupWidth;
-          } else {
-            progress = (this.currentX + groupWidth) / groupWidth;
-          }
-          progress = ((progress % 1) + 1) % 1;
-
-          const delay = -(progress * speed);
-          const animName = direction === 'right' ? 'marquee-scroll-right' : 'marquee-scroll-left';
-
-          this.track.style.animation = `${animName} ${speed}s linear infinite`;
-          this.track.style.animationDelay = `${delay}s`;
-          this.track.style.transform = '';
+        onPointerCancel() {
+          this.onPointerUp();
         }
       }
 
@@ -685,7 +917,7 @@
   "disabled_on": {
     "groups": ["header", "custom.overlay"]
   },
-  "max_blocks": 16,
+  "max_blocks": 24,
   "settings": [
     {
       "type": "color_scheme",

@@ -9,7 +9,7 @@
   "source_sku": "ON-8684104-5",
   "source_price": 180.0,
   "source_compare_at_price": null,
-  "current_price": 17136.0,
+  "current_price": 16972.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -2952,23 +2952,25 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T05:46:49Z",
+  "last_verified_at": "2026-11-16T16:08:48Z",
   "created_at": "2026-09-18T07:05:47Z",
-  "updated_at": "2026-10-29T05:46:49Z",
+  "updated_at": "2026-11-16T16:08:48Z",
   "price_range_usd": {
     "min": 180.0,
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 17136.0,
-    "max": 17136.0
+    "min": 16972.0,
+    "max": 16972.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "17136.00",
+  "price": "16972.00",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15850876534950",
   "shopify_handle": "cloudsurfer-max-running-sneaker-women",
-  "shopify_synced_at": "2026-10-28T21:46:28Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-14T21:15:20Z",
+  "last_synced_fx_rate": 94.289707,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

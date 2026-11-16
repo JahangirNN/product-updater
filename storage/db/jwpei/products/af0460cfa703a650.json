@@ -6,14 +6,14 @@
   "vendor": "JW PEI",
   "product_type": "2T325X001",
   "source_sku": "2T325X001-5",
-  "source_price": 129.0,
+  "source_price": 77.0,
   "source_compare_at_price": 129.0,
-  "current_price": 12235.0,
-  "compare_at_price": 12281.0,
+  "current_price": 7321.0,
+  "compare_at_price": 12178.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Vegan Leather",
   "specifications": {
     "Main Material": "Vegan Leather",
@@ -43,13 +43,13 @@
       "id": 45063768473634,
       "sku": "2T325X001-5",
       "title": "Navy",
-      "price": "12383.00",
+      "price": "7321.00",
       "compare_at_price": null,
-      "source_price": 129.0,
+      "source_price": 77.0,
       "source_compare_at_price": 129.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1780470570409-pa89jm5ra5f.jpg?v=1780480472",
       "option_values": [
         {
@@ -57,7 +57,7 @@
           "name": "Navy"
         }
       ],
-      "price_current": 12383.0
+      "price_current": 7321.0
     }
   ],
   "product_options": [
@@ -88,17 +88,17 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-09T15:50:14Z",
-  "updated_at": "2026-10-29T03:39:05Z",
-  "last_verified_at": "2026-10-29T03:39:05Z",
-  "is_active": true,
+  "updated_at": "2026-11-16T15:42:46Z",
+  "last_verified_at": "2026-11-16T15:42:46Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841782071462",
   "shopify_handle": "elena-classic-top-handle-bag-navy",
-  "shopify_synced_at": "2026-09-29T06:00:34Z",
+  "shopify_synced_at": "2026-11-14T15:04:59Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1780470570409-pa89jm5ra5f.jpg?v=1780480472",
   "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1780470570409-pa89jm5ra5f.jpg?v=1780480472",
   "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\af0460cfa703a650.json",
   "archived": true,
   "canonical_product_id": "gid://shopify/Product/15841776369830",
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.289707
 }

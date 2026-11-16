@@ -9,8 +9,8 @@
   "source_sku": "HOKA-9052810-7",
   "source_price": 180.0,
   "source_compare_at_price": 180.0,
-  "current_price": 17136.0,
-  "compare_at_price": 17136.0,
+  "current_price": 16972.0,
+  "compare_at_price": 16972.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -47,7 +47,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9fbcbc43-a058-4fd3-9525-19f14ff10346.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -231,7 +231,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/9fbcbc43-a058-4fd3-9525-19f14ff10346.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -300,7 +300,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9fbcbc43-a058-4fd3-9525-19f14ff10346.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -323,7 +323,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9fbcbc43-a058-4fd3-9525-19f14ff10346.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -402,22 +402,24 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:55:09Z",
+  "last_verified_at": "2026-11-16T15:45:10Z",
   "created_at": "2026-09-18T06:52:52Z",
-  "updated_at": "2026-10-29T03:55:09Z",
+  "updated_at": "2026-11-16T15:45:10Z",
   "price_range_usd": {
     "min": 180.0,
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 17136.0,
-    "max": 17136.0
+    "min": 16972.0,
+    "max": 16972.0
   },
-  "price": "17136.00",
+  "price": "16972.00",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15850879320230",
   "shopify_handle": "mafate-speed-4-lite-sneaker-men-hoka-9052810-7",
-  "shopify_synced_at": "2026-10-28T19:56:48Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-14T13:37:33Z",
+  "last_synced_fx_rate": 94.289707,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

@@ -9,7 +9,7 @@
   "source_sku": "SALOMON-8841083-6",
   "source_price": 300.0,
   "source_compare_at_price": null,
-  "current_price": 28560.0,
+  "current_price": 28226.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -139,7 +139,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/f0398628-4709-49ca-9b33-de1afde41c8b.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -404,23 +404,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:55:59Z",
+  "last_verified_at": "2026-11-16T15:47:40Z",
   "created_at": "2026-09-17T19:02:04Z",
-  "updated_at": "2026-10-29T03:56:01Z",
+  "updated_at": "2026-11-16T15:47:40Z",
   "price_range_usd": {
     "min": 300.0,
     "max": 300.0
   },
   "price_range_inr": {
-    "min": 28560.0,
-    "max": 28560.0
+    "min": 28226.0,
+    "max": 28226.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": false,
-  "price": "28560.00",
+  "price": "28226.00",
   "shopify_product_id": "gid://shopify/Product/15850879484070",
   "shopify_handle": "tepiaz-advanced-water-repellent-hiking-boot-men",
-  "shopify_synced_at": "2026-10-29T03:55:59Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-13T19:14:32Z",
+  "last_synced_fx_rate": 94.086126
 }

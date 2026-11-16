@@ -72,7 +72,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 47515.0
+      "price_current": 47515.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -92,7 +93,8 @@
           "name": "Maple"
         }
       ],
-      "price_current": 47515.0
+      "price_current": 47515.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -110,23 +112,24 @@
   ],
   "tags": [
     "COACH",
-    "Men",
-    "Handbags"
+    "Handbags",
+    "Men"
   ],
   "groups": [
     "men_bags"
   ],
   "created_at": "2026-09-13T00:43:06Z",
-  "last_verified_at": "2026-10-29T03:38:43Z",
+  "last_verified_at": "2026-11-16T15:45:23Z",
   "id": "7a0418cd746bc49e",
   "product_id": "7a0418cd746bc49e",
   "store": "coach",
-  "updated_at": "2026-10-29T03:38:43Z",
+  "updated_at": "2026-11-16T15:45:23Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841766146214",
   "shopify_handle": "metropolitan-workbag",
-  "shopify_synced_at": "2026-10-08T16:05:41Z",
+  "shopify_synced_at": "2026-11-14T01:11:13Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

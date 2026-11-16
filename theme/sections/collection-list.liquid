@@ -48,6 +48,120 @@
         {%- endif -%}
       }
     }
+
+    #shopify-section-{{ section.id }} .content-over-media {
+      aspect-ratio: 3 / 4 !important;
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    #shopify-section-{{ section.id }} .collection-card {
+      display: flex !important;
+      flex-direction: column !important;
+      height: 100% !important;
+    }
+
+    #shopify-section-{{ section.id }} .collection-card .content-over-media {
+      background-color: #ffffff !important;
+      border-radius: 4px !important;
+      border: 1px solid rgba(0, 0, 0, 0.07) !important;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03) !important;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease !important;
+      overflow: hidden !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+      aspect-ratio: 3 / 4 !important;
+    }
+
+    #shopify-section-{{ section.id }} .collection-card:hover .content-over-media {
+      transform: translateY(-4px) !important;
+      border-color: rgba(201, 168, 118, 0.5) !important;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    #shopify-section-{{ section.id }} .collection-card .content-over-media img {
+      width: 100% !important;
+      height: 100% !important;
+      max-height: 100% !important;
+      object-fit: contain !important;
+      padding: 1.25rem 1rem !important;
+      box-sizing: border-box !important;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    #shopify-section-{{ section.id }} .collection-card:hover img {
+      transform: scale(1.06) !important;
+    }
+
+    #shopify-section-{{ section.id }} .collection-card__content {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      align-self: stretch !important;
+      place-self: stretch !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      flex-grow: 1 !important;
+      padding-top: 0.875rem !important;
+      text-align: center !important;
+      margin-inline: auto !important;
+    }
+
+    #shopify-section-{{ section.id }} .collection-card__subheading {
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.625rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.18em !important;
+      text-transform: uppercase !important;
+      color: #947847 !important;
+      margin-bottom: 0.25rem !important;
+      width: 100% !important;
+      text-align: center !important;
+    }
+
+    #shopify-section-{{ section.id }} .collection-card__heading {
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.9375rem !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase !important;
+      color: #111111 !important;
+      margin: 0 0 0.35rem 0 !important;
+      line-height: 1.3 !important;
+      min-height: 2.6em !important;
+      width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      word-break: normal !important;
+      white-space: normal !important;
+      hyphens: none !important;
+    }
+
+    #shopify-section-{{ section.id }} .collection-card__link-text {
+      margin-top: auto !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      align-self: center !important;
+      gap: 0.3rem !important;
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.6875rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.14em !important;
+      text-transform: uppercase !important;
+      color: #947847 !important;
+      text-align: center !important;
+      transition: color 0.25s ease, transform 0.25s ease !important;
+    }
+
+    #shopify-section-{{ section.id }} .collection-card:hover .collection-card__link-text {
+      color: #000000 !important;
+      transform: translateX(3px) !important;
+    }
   </style>
 
   {%- comment -%}
@@ -80,28 +194,32 @@
 
             {%- assign card_title = block.settings.title | default: collection.title -%}
             {%- capture collection_card_info -%}
-              <div class="collection-card__content color-scheme color-scheme--{{ block.settings.color_scheme.id }} prose prose--tight {{ block.settings.content_position }}">
+              <div class="collection-card__content {% unless section.settings.show_text_outside %}color-scheme color-scheme--{{ block.settings.color_scheme.id }} {{ block.settings.content_position }}{% else %}text-center{% endunless %} prose prose--tight">
                 {%- if block.settings.subheading != blank -%}
-                  <p class="h6">{{- block.settings.subheading -}}</p>
+                  <p class="h6 collection-card__subheading">{{- block.settings.subheading -}}</p>
                 {%- endif -%}
 
                 {%- if card_title != blank -%}
-                  <p class="h3">{{- card_title -}}</p>
+                  <p class="{% if section.settings.show_text_outside %}collection-card__heading{% else %}h3{% endif %}">{{- card_title -}}</p>
                 {%- endif -%}
 
                 {%- if block.settings.button_text != blank -%}
-                  {%- render 'button', type: 'button', content: block.settings.button_text, style: block.settings.button_style, focusable: false -%}
+                  {%- if section.settings.show_text_outside -%}
+                    <span class="collection-card__link-text">{{ block.settings.button_text | escape }} &rarr;</span>
+                  {%- else -%}
+                    {%- render 'button', type: 'button', content: block.settings.button_text, style: block.settings.button_style, focusable: false -%}
+                  {%- endif -%}
                 {%- endif -%}
               </div>
             {%- endcapture -%}
 
             {%- capture collection_card_content -%}
               <div class="content-over-media content-over-media--{{ section.settings.image_size }}" style="--content-over-media-overlay: {{ block.settings.overlay_color.rgb }} / {{ block.settings.overlay_opacity | divided_by: 100.0 }};">
-                {%- assign image = block.settings.image | default: collection.featured_image | default: collection.products.first.featured_media.preview_image -%}
+                {%- assign image = block.settings.image | default: collection.image | default: collection.featured_image | default: collection.products.first.featured_media.preview_image -%}
                 {%- capture sizes -%}(max-width: 699px) 100vw, {% if block.settings.expand_collection %}100vw{% else %}(max-width: 1149px) {{ 100 | divided_by: section.settings.collections_per_row_desktop | at_least: 50 }}vw, {{ 100 | divided_by: section.settings.collections_per_row_desktop }}vw{% endif %}{%- endcapture -%}
 
                 {%- if image != blank -%}
-                  {{- image | image_url: width: image.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400', class: 'zoom-image group-hover:zoom', draggable: 'false' -}}
+                  {{- image | image_url: width: image.width | image_tag: loading: 'eager', sizes: sizes, widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400', class: 'zoom-image group-hover:zoom', draggable: 'false' -}}
                 {%- else -%}
                   {%- capture collection_placeholder -%}{%- cycle 'collection-1', 'collection-2', 'collection-3' -%}{%- endcapture -%}
                   {{- collection_placeholder | placeholder_svg_tag: 'placeholder zoom-image group-hover:zoom' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"' -}}
@@ -200,6 +318,10 @@
           "label": "t:global.sizes.original_image_ratio"
         },
         {
+          "value": "portrait",
+          "label": "Portrait (4:5)"
+        },
+        {
           "value": "xs",
           "label": "t:global.sizes.x_small"
         },
@@ -240,7 +362,7 @@
       "type": "range",
       "id": "collections_per_row_desktop",
       "min": 1,
-      "max": 5,
+      "max": 6,
       "label": "t:sections.collection_list.collections_per_row_desktop",
       "default": 3
     },

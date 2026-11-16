@@ -8,6 +8,16 @@ Pure functions only, zero classes (ADR 0005, ADR 0009).
 import os
 import sys
 from typing import Any, Optional
+if sys.stdout and hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+if sys.stderr and hasattr(sys.stderr, "reconfigure"):
+    try:
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
 
 _INITIALIZED = False
 
@@ -28,8 +38,8 @@ def init_logger(
     general_log_name: str = "freshner.log",
     error_log_name: str = "errors.log",
     shopify_error_log_name: str = "shopify_errors.log",
-    rotation_general: str = "50 MB",
-    rotation_error: str = "50 MB",
+    rotation_general: str = "500 MB",
+    rotation_error: str = "500 MB",
     rotation_shopify: str = "20 MB",
     retention_general: str = "14 days",
     retention_error: str = "30 days",

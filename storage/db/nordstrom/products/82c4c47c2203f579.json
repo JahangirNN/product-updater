@@ -9,8 +9,8 @@
   "source_sku": "ON-8996186-5",
   "source_price": 280.0,
   "source_compare_at_price": 280.0,
-  "current_price": 26656.0,
-  "compare_at_price": 26656.0,
+  "current_price": 26432.0,
+  "compare_at_price": 26432.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -47,7 +47,7 @@
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1aaa29d4-70be-47c4-99a2-be24e37d10a9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -70,7 +70,7 @@
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1aaa29d4-70be-47c4-99a2-be24e37d10a9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -93,7 +93,7 @@
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1aaa29d4-70be-47c4-99a2-be24e37d10a9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -116,7 +116,7 @@
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1aaa29d4-70be-47c4-99a2-be24e37d10a9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -139,7 +139,7 @@
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1aaa29d4-70be-47c4-99a2-be24e37d10a9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -162,7 +162,7 @@
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1aaa29d4-70be-47c4-99a2-be24e37d10a9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -185,7 +185,7 @@
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1aaa29d4-70be-47c4-99a2-be24e37d10a9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -208,7 +208,7 @@
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1aaa29d4-70be-47c4-99a2-be24e37d10a9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -231,7 +231,7 @@
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1aaa29d4-70be-47c4-99a2-be24e37d10a9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -278,7 +278,7 @@
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1aaa29d4-70be-47c4-99a2-be24e37d10a9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -296,13 +296,13 @@
       "id": 899618611,
       "sku": "ON-8996186-11",
       "title": "UK 9 - Ember Pebble",
-      "price": "26877.00",
+      "price": "26278.00",
       "compare_at_price": null,
       "source_price": 280.0,
       "source_compare_at_price": 280.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1aaa29d4-70be-47c4-99a2-be24e37d10a9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -313,7 +313,8 @@
           "option_name": "Color",
           "name": "Ember Pebble"
         }
-      ]
+      ],
+      "price_current": 26278.0
     }
   ],
   "product_options": [
@@ -378,9 +379,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T05:46:23Z",
+  "last_verified_at": "2026-11-16T16:07:06Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-10-29T05:46:23Z",
+  "updated_at": "2026-11-16T16:07:08Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "price_range_usd": {
@@ -388,14 +389,14 @@
     "max": 280.0
   },
   "price_range_inr": {
-    "min": 26656.0,
-    "max": 26656.0
+    "min": 26432.0,
+    "max": 26432.0
   },
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15850878533798",
   "shopify_handle": "x-paf-cloudboom-volt-running-shoe-women",
-  "shopify_synced_at": "2026-10-29T01:43:25Z",
-  "price": "26656.00",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-16T16:07:06Z",
+  "price": "26432.00",
+  "last_synced_fx_rate": 94.399626
 }

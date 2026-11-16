@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.199335,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Suede",
   "specifications": {
     "Material": "Suede",
@@ -74,7 +74,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KK057_100_3"
       ],
       "inventory_quantity": 0,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KK057_100"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KK057_100",
+      "is_available": false
     },
     {
       "id": null,
@@ -97,7 +98,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KK057_001_3"
       ],
       "inventory_quantity": 0,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KK057_001"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KK057_001",
+      "is_available": false
     },
     {
       "id": null,
@@ -120,7 +122,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KK057_651_2"
       ],
       "inventory_quantity": 0,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KK057_651"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KK057_651",
+      "is_available": false
     },
     {
       "id": null,
@@ -143,7 +146,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KK909_020_2"
       ],
       "inventory_quantity": 0,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KK909_020"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KK909_020",
+      "is_available": false
     },
     {
       "id": null,
@@ -158,15 +162,16 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KM595_650",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KM595_650",
         "https://katespade.scene7.com/is/image/KateSpade/KM595_650_1",
         "https://katespade.scene7.com/is/image/KateSpade/KM595_650_2"
       ],
-      "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KM595_650"
+      "inventory_quantity": 0,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KM595_650",
+      "is_available": false
     }
   ],
   "product_options": [
@@ -184,18 +189,25 @@
     }
   ],
   "tags": [
+    "Handbags",
     "Kate Spade",
     "Women",
-    "Handbags"
+    "supplier-delisted"
   ],
   "groups": [
     "handbags"
   ],
   "created_at": "2026-10-29T05:27:06Z",
-  "last_verified_at": "2026-10-29T07:40:24Z",
+  "last_verified_at": "2026-11-16T15:48:09Z",
   "_elapsed_ms": 3268.3153999969363,
   "id": "771b250bf318c68e",
-  "updated_at": "2026-10-29T07:40:24Z",
-  "last_synced_fx_rate": 95.29615,
-  "shopify_sync_pending": true
+  "updated_at": "2026-11-16T15:48:12Z",
+  "last_synced_fx_rate": 94.834253,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15915085299878",
+  "shopify_handle": "kayla-mini-bag",
+  "shopify_synced_at": "2026-11-16T15:48:09Z",
+  "delist_strikes": 36,
+  "supplier_delisted": true,
+  "is_active": false
 }

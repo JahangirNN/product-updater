@@ -72,7 +72,8 @@
           "name": "Silver/Tan Black"
         }
       ],
-      "price_current": 13343.0
+      "price_current": 13343.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -92,7 +93,8 @@
           "name": "Silver/Black Signature"
         }
       ],
-      "price_current": 13343.0
+      "price_current": 13343.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -112,7 +114,8 @@
           "name": "Sv/Black Currant"
         }
       ],
-      "price_current": 13343.0
+      "price_current": 13343.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -133,23 +136,24 @@
   ],
   "tags": [
     "COACH",
-    "Men",
-    "Crossbody Bags"
+    "Crossbody Bags",
+    "Men"
   ],
   "groups": [
     "men_bags"
   ],
   "created_at": "2026-09-13T00:45:52Z",
-  "last_verified_at": "2026-10-29T03:40:35Z",
+  "last_verified_at": "2026-11-16T15:42:29Z",
   "id": "b62891097d71e03b",
   "product_id": "b62891097d71e03b",
   "store": "coach",
-  "updated_at": "2026-10-29T03:40:35Z",
+  "updated_at": "2026-11-16T15:42:29Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841797046438",
   "shopify_handle": "small-finn-crossbody-bag-with-pouch-in-signature-canvas-cey42-svtal",
-  "shopify_synced_at": "2026-10-27T08:55:03Z",
+  "shopify_synced_at": "2026-11-13T23:07:23Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.269051
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

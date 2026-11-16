@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.199335,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Crinkle Metallic Leather",
   "specifications": {
     "Material": "Crinkle Metallic Leather",
@@ -55,7 +55,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KN229_020",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KN229_020",
@@ -63,7 +63,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KN229_020_3"
       ],
       "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KN229_020"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KN229_020",
+      "is_available": false
     }
   ],
   "product_options": [
@@ -77,18 +78,26 @@
     }
   ],
   "tags": [
+    "Crossbody Bags",
+    "Handbags",
     "Kate Spade",
     "Women",
-    "Handbags",
-    "Crossbody Bags"
+    "supplier-delisted"
   ],
   "groups": [
     "handbags"
   ],
   "created_at": "2026-10-29T05:27:08Z",
-  "last_verified_at": "2026-10-29T07:40:24Z",
+  "last_verified_at": "2026-11-16T15:48:34Z",
   "_elapsed_ms": 2424.4196999352425,
   "id": "caa05f0aa262cd4e",
-  "updated_at": "2026-10-29T07:40:24Z",
-  "last_synced_fx_rate": 95.29615
+  "updated_at": "2026-11-16T15:48:36Z",
+  "last_synced_fx_rate": 95.29615,
+  "shopify_product_id": "gid://shopify/Product/15915098243238",
+  "shopify_handle": "kayla-small-swingpack",
+  "shopify_synced_at": "2026-11-16T15:48:34Z",
+  "shopify_sync_pending": false,
+  "delist_strikes": 29,
+  "supplier_delisted": true,
+  "is_active": false
 }

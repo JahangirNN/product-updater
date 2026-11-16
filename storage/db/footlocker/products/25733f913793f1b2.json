@@ -10,7 +10,7 @@
   "source_price": 139.99,
   "source_compare_at_price": 170.0,
   "current_price": 13438.0,
-  "compare_at_price": 16184.0,
+  "compare_at_price": 16029.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -58,7 +58,8 @@
           "name": "Metallic Silver/Dark Grey/Black"
         }
       ],
-      "price_current": 13438.0
+      "price_current": 13438.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -82,7 +83,8 @@
           "name": "Metallic Silver/Dark Grey/Black"
         }
       ],
-      "price_current": 13574.0
+      "price_current": 13574.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -106,7 +108,8 @@
           "name": "Metallic Silver/Dark Grey/Black"
         }
       ],
-      "price_current": 13438.0
+      "price_current": 13438.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -130,15 +133,16 @@
           "name": "Metallic Silver/Dark Grey/Black"
         }
       ],
-      "price_current": 13438.0
+      "price_current": 13438.0,
+      "is_available": false
     },
     {
       "id": null,
       "sku": "I1694001-9.5",
       "title": "UK 8.5 - Metallic Silver/Dark Grey/Black",
-      "price": "16318.00",
+      "price": "13246.00",
       "compare_at_price": "16318.00",
-      "source_price": 170.0,
+      "source_price": 139.99,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -154,7 +158,8 @@
           "name": "Metallic Silver/Dark Grey/Black"
         }
       ],
-      "price_current": 16318.0
+      "price_current": 13246.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -178,7 +183,8 @@
           "name": "Metallic Silver/Dark Grey/Black"
         }
       ],
-      "price_current": 13438.0
+      "price_current": 13438.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -202,7 +208,8 @@
           "name": "Metallic Silver/Dark Grey/Black"
         }
       ],
-      "price_current": 13438.0
+      "price_current": 13438.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -226,7 +233,8 @@
           "name": "Metallic Silver/Dark Grey/Black"
         }
       ],
-      "price_current": 13438.0
+      "price_current": 13438.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -250,7 +258,8 @@
           "name": "Metallic Silver/Dark Grey/Black"
         }
       ],
-      "price_current": 13438.0
+      "price_current": 13438.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -274,15 +283,16 @@
           "name": "Metallic Silver/Dark Grey/Black"
         }
       ],
-      "price_current": 13438.0
+      "price_current": 13438.0,
+      "is_available": false
     },
     {
       "id": null,
       "sku": "I1694001-12.5",
       "title": "UK 11.5 - Metallic Silver/Dark Grey/Black",
-      "price": "16318.00",
+      "price": "13246.00",
       "compare_at_price": "16318.00",
-      "source_price": 170.0,
+      "source_price": 139.99,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -298,15 +308,16 @@
           "name": "Metallic Silver/Dark Grey/Black"
         }
       ],
-      "price_current": 16318.0
+      "price_current": 13246.0,
+      "is_available": false
     },
     {
       "id": null,
       "sku": "I1694001-13",
       "title": "UK 12 - Metallic Silver/Dark Grey/Black",
-      "price": "16318.00",
+      "price": "13289.00",
       "compare_at_price": "16318.00",
-      "source_price": 170.0,
+      "source_price": 139.99,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -322,15 +333,16 @@
           "name": "Metallic Silver/Dark Grey/Black"
         }
       ],
-      "price_current": 16318.0
+      "price_current": 13289.0,
+      "is_available": false
     },
     {
       "id": null,
       "sku": "I1694001-14",
       "title": "UK 13 - Metallic Silver/Dark Grey/Black",
-      "price": "16318.00",
+      "price": "13246.00",
       "compare_at_price": "16318.00",
-      "source_price": 170.0,
+      "source_price": 139.99,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -346,15 +358,16 @@
           "name": "Metallic Silver/Dark Grey/Black"
         }
       ],
-      "price_current": 16318.0
+      "price_current": 13246.0,
+      "is_available": false
     },
     {
       "id": null,
       "sku": "I1694001-15",
       "title": "UK 14 - Metallic Silver/Dark Grey/Black",
-      "price": "16318.00",
+      "price": "13246.00",
       "compare_at_price": "16318.00",
-      "source_price": 170.0,
+      "source_price": 139.99,
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -370,7 +383,8 @@
           "name": "Metallic Silver/Dark Grey/Black"
         }
       ],
-      "price_current": 16318.0
+      "price_current": 13246.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -431,21 +445,24 @@
     }
   ],
   "tags": [
-    "nike",
     "footwear",
-    "shoes",
     "men's",
-    "sizes-14"
+    "nike",
+    "shoes",
+    "sizes-14",
+    "supplier-delisted"
   ],
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-10-29T06:07:32Z",
+  "last_verified_at": "2026-11-16T15:44:27Z",
   "created_at": "2026-09-20T10:38:22Z",
-  "updated_at": "2026-10-29T06:07:32Z",
+  "updated_at": "2026-11-16T15:44:29Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851006886054",
   "shopify_handle": "nike-vomero-5-men-s-metallic-silver-dark-grey-black-i1694001",
-  "shopify_synced_at": "2026-10-17T03:25:57Z",
-  "last_synced_fx_rate": 95.10014
+  "shopify_synced_at": "2026-11-16T15:44:27Z",
+  "last_synced_fx_rate": 94.262076,
+  "delist_strikes": 7,
+  "supplier_delisted": true
 }

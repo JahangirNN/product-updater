@@ -106,7 +106,8 @@
           "name": "Brass/Dark Fuchsia"
         }
       ],
-      "price_current": 9119.0
+      "price_current": 9119.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -126,7 +127,8 @@
           "name": "Brass/Black"
         }
       ],
-      "price_current": 9119.0
+      "price_current": 9119.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -146,7 +148,8 @@
           "name": "Brass/Navy"
         }
       ],
-      "price_current": 5471.0
+      "price_current": 5471.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -165,7 +168,8 @@
           "option_name": "Color",
           "name": "Brass/Toffee"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -185,7 +189,8 @@
           "name": "Brass/Maple"
         }
       ],
-      "price_current": 9119.0
+      "price_current": 9119.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -205,7 +210,8 @@
           "name": "Brass/Scarlet"
         }
       ],
-      "price_current": 9119.0
+      "price_current": 9119.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -225,7 +231,8 @@
           "name": "Brass/Black Brown Multi"
         }
       ],
-      "price_current": 8399.0
+      "price_current": 8399.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -245,7 +252,8 @@
           "name": "Brass/Melon Pink"
         }
       ],
-      "price_current": 5471.0
+      "price_current": 5471.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -265,7 +273,8 @@
           "name": "Brass/Maple"
         }
       ],
-      "price_current": 9119.0
+      "price_current": 9119.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -308,16 +317,17 @@
     "women_wristlets"
   ],
   "created_at": "2026-09-13T00:41:03Z",
-  "last_verified_at": "2026-10-29T03:39:27Z",
+  "last_verified_at": "2026-11-16T15:45:42Z",
   "id": "40cd8cdb74e93582",
   "product_id": "40cd8cdb74e93582",
   "store": "coach",
-  "updated_at": "2026-10-29T03:39:27Z",
+  "updated_at": "2026-11-16T15:45:42Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841764180134",
   "shopify_handle": "plaza-bag-18",
-  "shopify_synced_at": "2026-10-23T12:04:54Z",
+  "shopify_synced_at": "2026-11-14T01:12:23Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 94.593871
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

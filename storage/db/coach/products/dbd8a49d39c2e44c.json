@@ -61,7 +61,8 @@
           "name": "Gunmetal/Black"
         }
       ],
-      "price_current": 12594.0
+      "price_current": 12594.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -76,23 +77,24 @@
   ],
   "tags": [
     "COACH",
-    "Men",
-    "Crossbody Bags"
+    "Crossbody Bags",
+    "Men"
   ],
   "groups": [
     "men_bags"
   ],
   "created_at": "2026-09-13T00:47:29Z",
-  "last_verified_at": "2026-10-29T05:37:54Z",
+  "last_verified_at": "2026-11-16T15:41:44Z",
   "id": "dbd8a49d39c2e44c",
   "product_id": "dbd8a49d39c2e44c",
   "store": "coach",
-  "updated_at": "2026-10-29T05:37:54Z",
+  "updated_at": "2026-11-16T15:41:44Z",
   "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841769586854",
   "shopify_handle": "graham-crossbody-bag",
-  "shopify_synced_at": "2026-10-28T07:35:38Z",
+  "shopify_synced_at": "2026-11-14T23:04:43Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 95.29615,
+  "supplier_delisted": false
 }

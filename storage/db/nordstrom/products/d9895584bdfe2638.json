@@ -9,7 +9,7 @@
   "source_sku": "ON-9129527-5.5",
   "source_price": 180.0,
   "source_compare_at_price": null,
-  "current_price": 17027.0,
+  "current_price": 16967.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -107,7 +107,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/bce113d0-2d04-4ed8-86a5-557ffc1d1c17.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -314,7 +314,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/bce113d0-2d04-4ed8-86a5-557ffc1d1c17.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -383,7 +383,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ceffa0e7-c204-42b2-8f4a-9c5a3d69401e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -590,7 +590,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ceffa0e7-c204-42b2-8f4a-9c5a3d69401e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -774,7 +774,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/334571b9-a665-4afb-a15c-825a5b1ff659.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -912,7 +912,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/334571b9-a665-4afb-a15c-825a5b1ff659.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -958,7 +958,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/2b34fc99-58b2-4868-b8a0-508acc3b7386.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1211,7 +1211,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/2b34fc99-58b2-4868-b8a0-508acc3b7386.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1325,23 +1325,25 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:57:48Z",
+  "last_verified_at": "2026-11-16T16:15:47Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-10-29T03:57:48Z",
+  "updated_at": "2026-11-16T16:15:47Z",
   "price_range_usd": {
     "min": 180.0,
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 17027.0,
-    "max": 17027.0
+    "min": 16967.0,
+    "max": 16967.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "17027.00",
+  "price": "16967.00",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15850880073894",
   "shopify_handle": "the-roger-clubhouse-pro-2-tennis-shoe-on-9129527-5-5",
-  "shopify_synced_at": "2026-10-23T04:33:11Z",
-  "last_synced_fx_rate": 94.593871
+  "shopify_synced_at": "2026-11-16T08:10:27Z",
+  "last_synced_fx_rate": 94.262076,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

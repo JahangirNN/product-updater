@@ -27,6 +27,10 @@
               "url": "/collections/womens-handbags/jw-pei"
             },
             {
+              "title": "Kate Spade",
+              "url": "/collections/womens-handbags/kate-spade"
+            },
+            {
               "title": "Michael Kors",
               "url": "/collections/womens-handbags/michael-kors"
             },
@@ -337,6 +341,141 @@
       ]
     },
     {
+      "title": "Beauty & Cosmetics",
+      "type": "department",
+      "url": "/collections/beauty",
+      "items": [
+        {
+          "title": "Luxury Skincare & Lip Care",
+          "type": "category",
+          "url": "/collections/skincare",
+          "items": [
+            {
+              "title": "Shop All Skincare",
+              "url": "/collections/skincare"
+            },
+            {
+              "title": "Summer Fridays",
+              "url": "/collections/summer-fridays"
+            },
+            {
+              "title": "rhode",
+              "url": "/collections/rhode"
+            },
+            {
+              "title": "Gisou",
+              "url": "/collections/gisou"
+            },
+            {
+              "title": "Glossier",
+              "url": "/collections/glossier"
+            },
+            {
+              "title": "Tower 28 Beauty",
+              "url": "/collections/tower-28"
+            }
+          ]
+        },
+        {
+          "title": "Designer Makeup & Complexion",
+          "type": "category",
+          "url": "/collections/makeup",
+          "items": [
+            {
+              "title": "Explore Makeup",
+              "url": "/collections/makeup"
+            },
+            {
+              "title": "Haus Labs by Lady Gaga",
+              "url": "/collections/haus-labs"
+            },
+            {
+              "title": "Westman Atelier",
+              "url": "/collections/westman-atelier"
+            },
+            {
+              "title": "PATRICK TA",
+              "url": "/collections/patrick-ta"
+            },
+            {
+              "title": "MAKEUP BY MARIO",
+              "url": "/collections/makeup-by-mario"
+            },
+            {
+              "title": "Hourglass",
+              "url": "/collections/hourglass"
+            },
+            {
+              "title": "Saie",
+              "url": "/collections/saie"
+            },
+            {
+              "title": "MERIT",
+              "url": "/collections/merit"
+            },
+            {
+              "title": "Kosas",
+              "url": "/collections/kosas"
+            }
+          ]
+        },
+        {
+          "title": "Luxury Haircare & Body",
+          "type": "category",
+          "url": "/collections/haircare",
+          "items": [
+            {
+              "title": "Explore Hair & Body",
+              "url": "/collections/haircare"
+            },
+            {
+              "title": "Gisou Honey Infused",
+              "url": "/collections/gisou"
+            },
+            {
+              "title": "Summer Fridays Body",
+              "url": "/collections/summer-fridays"
+            },
+            {
+              "title": "REFY Sculpt & Glow",
+              "url": "/collections/refy"
+            },
+            {
+              "title": "Glossier Fragrance",
+              "url": "/collections/glossier"
+            }
+          ]
+        },
+        {
+          "title": "Value & Gift Sets",
+          "type": "category",
+          "url": "/collections/beauty-sets",
+          "items": [
+            {
+              "title": "Shop All Sets",
+              "url": "/collections/beauty-sets"
+            },
+            {
+              "title": "Lip Balm & Butter Sets",
+              "url": "/collections/beauty-sets"
+            },
+            {
+              "title": "Hydration Travel Kits",
+              "url": "/collections/beauty-sets"
+            },
+            {
+              "title": "Dewy Glow Routines",
+              "url": "/collections/beauty-sets"
+            },
+            {
+              "title": "Mini Discovery Edits",
+              "url": "/collections/beauty-sets"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "Brands",
       "type": "department",
       "url": "/collections",
@@ -378,6 +517,36 @@
             {
               "title": "Totes & Carryalls",
               "url": "/collections/jw-pei/totes"
+            }
+          ]
+        },
+        {
+          "title": "Kate Spade",
+          "url": "/collections/kate-spade",
+          "items": [
+            {
+              "title": "All Kate Spade Showroom",
+              "url": "/collections/kate-spade"
+            },
+            {
+              "title": "Women's Handbags",
+              "url": "/collections/womens-handbags/kate-spade"
+            },
+            {
+              "title": "Crossbody Bags",
+              "url": "/collections/kate-spade/crossbody-bags"
+            },
+            {
+              "title": "Shoulder Bags",
+              "url": "/collections/kate-spade/shoulder-bags"
+            },
+            {
+              "title": "Satchels & Top Handles",
+              "url": "/collections/kate-spade/satchels"
+            },
+            {
+              "title": "Totes & Carryalls",
+              "url": "/collections/kate-spade/totes"
             }
           ]
         },
@@ -468,6 +637,62 @@
         {
           "title": "HOKA",
           "url": "/collections/all?filter.p.vendor=HOKA"
+        },
+        {
+          "title": "Summer Fridays",
+          "url": "/collections/summer-fridays"
+        },
+        {
+          "title": "rhode",
+          "url": "/collections/rhode"
+        },
+        {
+          "title": "Gisou",
+          "url": "/collections/gisou"
+        },
+        {
+          "title": "Haus Labs",
+          "url": "/collections/haus-labs"
+        },
+        {
+          "title": "PATRICK TA",
+          "url": "/collections/patrick-ta"
+        },
+        {
+          "title": "Westman Atelier",
+          "url": "/collections/westman-atelier"
+        },
+        {
+          "title": "Saie",
+          "url": "/collections/saie"
+        },
+        {
+          "title": "Hourglass",
+          "url": "/collections/hourglass"
+        },
+        {
+          "title": "MERIT",
+          "url": "/collections/merit"
+        },
+        {
+          "title": "Kosas",
+          "url": "/collections/kosas"
+        },
+        {
+          "title": "Glossier",
+          "url": "/collections/glossier"
+        },
+        {
+          "title": "MAKEUP BY MARIO",
+          "url": "/collections/makeup-by-mario"
+        },
+        {
+          "title": "REFY",
+          "url": "/collections/refy"
+        },
+        {
+          "title": "Tower 28 Beauty",
+          "url": "/collections/tower-28"
         }
       ]
     }

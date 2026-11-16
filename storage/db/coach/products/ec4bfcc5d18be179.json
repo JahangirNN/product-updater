@@ -60,7 +60,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ceb80_qsr_a0",
       "option_values": [
         {
@@ -68,7 +68,8 @@
           "name": "Spice Orange"
         }
       ],
-      "price_current": 5759.0
+      "price_current": 5759.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -88,7 +89,8 @@
           "name": "True Blue"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -108,7 +110,8 @@
           "name": "Graphite Gray"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -128,7 +131,8 @@
           "name": "Chestnut"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -148,7 +152,8 @@
           "name": "Deep Blue Multi"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -168,7 +173,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -188,7 +194,8 @@
           "name": "Black Antique Nickel/Black"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -228,16 +235,17 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:48:08Z",
-  "last_verified_at": "2026-10-29T05:38:48Z",
+  "last_verified_at": "2026-11-16T15:43:38Z",
   "id": "ec4bfcc5d18be179",
   "product_id": "ec4bfcc5d18be179",
   "store": "coach",
-  "updated_at": "2026-10-29T05:38:48Z",
+  "updated_at": "2026-11-16T15:43:38Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841798258854",
   "shopify_handle": "id-billfold-wallet-ceb80-gph",
-  "shopify_synced_at": "2026-10-27T04:42:59Z",
+  "shopify_synced_at": "2026-11-14T01:04:15Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.160836
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

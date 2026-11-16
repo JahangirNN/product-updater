@@ -7,14 +7,14 @@
   "vendor": "HOKA",
   "product_type": "Athletic Shoes",
   "source_sku": "HOKA-8131883-7.5",
-  "source_price": 150.0,
+  "source_price": 60.0,
   "source_compare_at_price": 150.0,
-  "current_price": 14290.0,
-  "compare_at_price": 14290.0,
+  "current_price": 5657.0,
+  "compare_at_price": 14143.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Textile and synthetic upper and lining/rubber and synthetic sole",
   "specifications": {
     "Brand": "HOKA",
@@ -65,13 +65,13 @@
       "id": 813188301,
       "sku": "HOKA-8131883-8",
       "title": "UK 7 - Grout Putty",
-      "price": "14470.00",
+      "price": "5631.00",
       "compare_at_price": "14398.00",
-      "source_price": 150.0,
+      "source_price": 60.0,
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/c9b8ac3b-acc1-4821-9b1a-7d61a0f38e79.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -83,15 +83,15 @@
           "name": "Grout Putty"
         }
       ],
-      "price_current": 14470.0
+      "price_current": 5631.0
     },
     {
       "id": 813188302,
       "sku": "HOKA-8131883-9",
       "title": "UK 8 - Grout Putty",
-      "price": "10802.00",
+      "price": "5631.00",
       "compare_at_price": "14398.00",
-      "source_price": 112.5,
+      "source_price": 60.0,
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -106,15 +106,16 @@
           "option_name": "Color",
           "name": "Grout Putty"
         }
-      ]
+      ],
+      "price_current": 5631.0
     },
     {
       "id": 813188303,
       "sku": "HOKA-8131883-10",
       "title": "UK 9 - Grout Putty",
-      "price": "8564.00",
+      "price": "5631.00",
       "compare_at_price": "14398.00",
-      "source_price": 90.0,
+      "source_price": 60.0,
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -130,19 +131,19 @@
           "name": "Grout Putty"
         }
       ],
-      "price_current": 8564.0
+      "price_current": 5631.0
     },
     {
       "id": 813188304,
       "sku": "HOKA-8131883-11",
       "title": "UK 10 - Grout Putty",
-      "price": "14274.00",
+      "price": "5631.00",
       "compare_at_price": "14398.00",
-      "source_price": 150.0,
+      "source_price": 60.0,
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/c9b8ac3b-acc1-4821-9b1a-7d61a0f38e79.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -154,15 +155,15 @@
           "name": "Grout Putty"
         }
       ],
-      "price_current": 14274.0
+      "price_current": 5631.0
     },
     {
       "id": 813188305,
       "sku": "HOKA-8131883-12",
       "title": "UK 11 - Grout Putty",
-      "price": "8564.00",
+      "price": "5631.00",
       "compare_at_price": "14398.00",
-      "source_price": 90.0,
+      "source_price": 60.0,
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -178,15 +179,15 @@
           "name": "Grout Putty"
         }
       ],
-      "price_current": 8564.0
+      "price_current": 5631.0
     },
     {
       "id": 813188306,
       "sku": "HOKA-8131883-13",
       "title": "UK 12 - Grout Putty",
-      "price": "8564.00",
+      "price": "5631.00",
       "compare_at_price": "14398.00",
-      "source_price": 90.0,
+      "source_price": 60.0,
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -202,7 +203,7 @@
           "name": "Grout Putty"
         }
       ],
-      "price_current": 8564.0
+      "price_current": 5631.0
     }
   ],
   "product_options": [
@@ -252,24 +253,24 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:53:04Z",
+  "last_verified_at": "2026-11-16T15:53:36Z",
   "created_at": "2026-09-17T14:50:54Z",
-  "updated_at": "2026-10-29T03:53:04Z",
+  "updated_at": "2026-11-16T15:53:36Z",
   "status": "ACTIVE",
   "validation_warnings": [],
-  "is_active": true,
+  "is_active": false,
   "shopify_sync_pending": false,
   "price_range_usd": {
-    "min": 90.0,
+    "min": 60.0,
     "max": 150.0
   },
   "price_range_inr": {
-    "min": 8574.0,
-    "max": 14290.0
+    "min": 5657.0,
+    "max": 14143.0
   },
-  "price": "14290.00",
+  "price": "5657.00",
   "shopify_product_id": "gid://shopify/Product/15848581628070",
   "shopify_handle": "arahi-8-stability-running-shoe-men",
-  "shopify_synced_at": "2026-10-27T23:48:04Z",
-  "last_synced_fx_rate": 95.269051
+  "shopify_synced_at": "2026-11-14T19:47:34Z",
+  "last_synced_fx_rate": 94.289707
 }

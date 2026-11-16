@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.199335,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Pebbled leather",
   "specifications": {
     "Material": "Pebbled leather",
@@ -74,7 +74,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KO122_001",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KO122_001",
@@ -82,7 +82,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO122_001_3"
       ],
       "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO122_001"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO122_001",
+      "is_available": false
     },
     {
       "id": null,
@@ -105,7 +106,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO122_404_4"
       ],
       "inventory_quantity": 0,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO122_404"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO122_404",
+      "is_available": false
     },
     {
       "id": null,
@@ -128,7 +130,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO122_200_4"
       ],
       "inventory_quantity": 0,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO122_200"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO122_200",
+      "is_available": false
     },
     {
       "id": null,
@@ -143,7 +146,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KO122_651",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KO122_651",
@@ -151,7 +154,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO122_651_4"
       ],
       "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO122_651"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO122_651",
+      "is_available": false
     },
     {
       "id": null,
@@ -166,7 +170,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KO122_251",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KO122_251",
@@ -174,7 +178,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO122_251_3"
       ],
       "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO122_251"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO122_251",
+      "is_available": false
     },
     {
       "id": null,
@@ -197,7 +202,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO134_701_3"
       ],
       "inventory_quantity": 0,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO134_701"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO134_701",
+      "is_available": false
     },
     {
       "id": null,
@@ -212,7 +218,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KO532_700",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KO532_700",
@@ -220,7 +226,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO532_700_4"
       ],
       "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO532_700"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO532_700",
+      "is_available": false
     }
   ],
   "product_options": [
@@ -240,19 +247,25 @@
     }
   ],
   "tags": [
-    "Kate Spade",
-    "Women",
+    "Crossbody Bags",
     "Handbags",
-    "Crossbody Bags"
+    "Kate Spade",
+    "Women"
   ],
   "groups": [
     "handbags"
   ],
   "created_at": "2026-10-29T05:29:29Z",
-  "last_verified_at": "2026-10-29T07:44:01Z",
+  "last_verified_at": "2026-11-16T15:41:21Z",
   "_elapsed_ms": 2933.4579000715166,
   "id": "244d6828eadaab59",
-  "updated_at": "2026-10-29T07:44:01Z",
-  "last_synced_fx_rate": 95.29615,
-  "shopify_sync_pending": true
+  "updated_at": "2026-11-16T15:41:21Z",
+  "last_synced_fx_rate": 95.073571,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15915075633318",
+  "shopify_handle": "sutton-floral-mini-crossbody-bag",
+  "shopify_synced_at": "2026-11-15T15:41:23Z",
+  "delist_strikes": 0,
+  "supplier_delisted": false,
+  "is_active": false
 }

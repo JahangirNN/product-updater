@@ -16,8 +16,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -171,7 +171,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/CJ9179_001_P1",
       "option_values": [
         {
@@ -183,7 +183,7 @@
           "name": "Black/Black"
         }
       ],
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -221,7 +221,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/CJ9179_001_P1",
       "option_values": [
         {
@@ -233,7 +233,7 @@
           "name": "Black/Black"
         }
       ],
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -505,8 +505,7 @@
     "JD Sports",
     "Men's",
     "Nike",
-    "Nike Air Force",
-    "supplier-delisted"
+    "Nike Air Force"
   ],
   "groups": [
     "footwear",
@@ -515,13 +514,13 @@
     "shoes"
   ],
   "created_at": "2026-09-20T15:59:22Z",
-  "updated_at": "2026-10-29T05:37:06Z",
-  "last_verified_at": "2026-10-29T05:37:05Z",
+  "updated_at": "2026-11-16T15:42:06Z",
+  "last_verified_at": "2026-11-16T15:42:06Z",
   "shopify_product_id": "gid://shopify/Product/15851460001958",
   "shopify_handle": "mens-nike-air-force-1-07-wb-casual-shoes-black-black-3413256",
-  "shopify_synced_at": "2026-10-29T05:37:05Z",
+  "shopify_synced_at": "2026-11-15T15:42:08Z",
   "shopify_sync_pending": false,
-  "last_synced_fx_rate": 95.160836,
-  "delist_strikes": 19,
-  "supplier_delisted": true
+  "last_synced_fx_rate": 94.262076,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

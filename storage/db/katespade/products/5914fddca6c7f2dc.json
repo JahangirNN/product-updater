@@ -7,14 +7,14 @@
   "product_type": "Satchels & Top Handles",
   "gender": "Women",
   "source_sku": "KF553-100",
-  "source_price": 111.75,
+  "source_price": 74.25,
   "source_compare_at_price": null,
-  "current_price": 10649.0,
+  "current_price": 7041.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.199335,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Refined grain leather",
   "specifications": {
     "Material": "Refined grain leather",
@@ -110,14 +110,14 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KF553_100",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KF553_100",
         "https://katespade.scene7.com/is/image/KateSpade/KF553_100_1",
         "https://katespade.scene7.com/is/image/KateSpade/KF553_100_3"
       ],
-      "inventory_quantity": 10,
+      "inventory_quantity": 0,
       "image_url": "https://katespade.scene7.com/is/image/KateSpade/KF553_100"
     },
     {
@@ -167,10 +167,13 @@
     "handbags"
   ],
   "created_at": "2026-10-29T05:28:47Z",
-  "last_verified_at": "2026-10-29T07:42:57Z",
+  "last_verified_at": "2026-11-16T15:41:33Z",
   "_elapsed_ms": 5466.422599973157,
   "id": "5914fddca6c7f2dc",
-  "updated_at": "2026-10-29T07:42:57Z",
-  "last_synced_fx_rate": 95.29615,
-  "shopify_sync_pending": true
+  "updated_at": "2026-11-16T15:41:33Z",
+  "last_synced_fx_rate": 94.086126,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15915081466022",
+  "shopify_handle": "phoebe-small-top-handle-bag",
+  "shopify_synced_at": "2026-11-14T11:04:25Z"
 }

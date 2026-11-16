@@ -1,0 +1,1417 @@
+{
+  "timestamp": "2026-11-16T15:16:37.011834+00:00",
+  "total_products_target": 47,
+  "total_products_verified": 47,
+  "total_images_verified": 583,
+  "total_images_uploaded": 168,
+  "zero_media_remaining_count": 0,
+  "zero_media_remaining": [],
+  "store_breakdown": {
+    "jomashop": {
+      "products": 3,
+      "verified_images": 9,
+      "media_attached": 9
+    },
+    "jwpei": {
+      "products": 15,
+      "verified_images": 52,
+      "media_attached": 46
+    },
+    "sephora": {
+      "products": 29,
+      "verified_images": 522,
+      "media_attached": 116
+    }
+  },
+  "products": [
+    {
+      "shopify_id": "gid://shopify/Product/15838215667878",
+      "store": "jomashop",
+      "title": "Tissot Chemin des Tourelles Automatic Mother of Pearl Dial Ladies Watch T099.207.22.118.02",
+      "handle": "tissot-watch-t099-207-22-118-02",
+      "verified_images_count": 3,
+      "verified_sample_url": "https://cdn2.jomashop.com/media/catalog/product/t/i/tissot-chemin-des-tourelles-automatic-mother-of-pearl-dial-ladies-watch-t099-207-22-118-02-t0992072211802.jpg",
+      "uploaded_count": 3,
+      "shopify_media_count": 3,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860471201958",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860471267494",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860471529638",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:50:57.785165+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15838888853670",
+      "store": "jomashop",
+      "title": "Seiko Prospex Chronograph Quartz Blue Dial Men's Watch SSC965",
+      "handle": "seiko-prospex-chronograph-quartz-blue-dial-mens-watch-ssc965",
+      "verified_images_count": 3,
+      "verified_sample_url": "https://cdn2.jomashop.com/media/catalog/product/s/e/seiko-prospex-chronograph-quartz-blue-dial-mens-watch-ssc965_1.jpg",
+      "uploaded_count": 3,
+      "shopify_media_count": 3,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860477460646",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860477493414",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860477558950",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:51:17.586618+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15838894031014",
+      "store": "jomashop",
+      "title": "Citizen Promaster Dive Quartz Black Dial Men's Watch BN0264-53E",
+      "handle": "citizen-promaster-dive-quartz-black-dial-mens-watch-bn0264-53e",
+      "verified_images_count": 3,
+      "verified_sample_url": "https://cdn2.jomashop.com/media/catalog/product/c/i/citizen-promaster-dive-quartz-black-dial-mens-watch-bn026453e_1.jpg",
+      "uploaded_count": 3,
+      "shopify_media_count": 3,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860477984934",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860478050470",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860479131814",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:51:39.474982+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15841771126950",
+      "store": "jwpei",
+      "title": "Maelle Faux Ostrich Grain Dachshund Charm Double Handle Bag",
+      "handle": "maelle-faux-ostrich-grain-dachshund-charm-double-handle-bag-brown",
+      "verified_images_count": 2,
+      "verified_sample_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1790242346455-h5g04eada1f.jpg?v=1790243815",
+      "uploaded_count": 2,
+      "shopify_media_count": 2,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860479852710",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860480049318",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:51:52.340393+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15841771225254",
+      "store": "jwpei",
+      "title": "Maelle Faux Ostrich Grain Dachshund Charm Double Handle Bag - Dark Brown",
+      "handle": "maelle-faux-ostrich-grain-dachshund-charm-double-handle-bag-dark-brown",
+      "verified_images_count": 2,
+      "verified_sample_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1790242378742-q6g8hb3l96g.jpg?v=1790244130",
+      "uploaded_count": 2,
+      "shopify_media_count": 2,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860480376998",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860480573606",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:52:04.100973+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15841772142758",
+      "store": "jwpei",
+      "title": "Lucia Elephant-Effect Top Handle Bag",
+      "handle": "lucia-elephant-effect-top-handle-bag-dark-brown",
+      "verified_images_count": 5,
+      "verified_sample_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/qo63h7gl34.jpg?v=1792131868",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860482572454",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860482736294",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860482867366",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860483063974",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:52:39.209343+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15841773093030",
+      "store": "jwpei",
+      "title": "Maelle Dachshund Charm Double Handle Bag - Dark Brown",
+      "handle": "maelle-dachshund-charm-double-handle-bag-dark-brown",
+      "verified_images_count": 6,
+      "verified_sample_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/ucispxozxp.jpg?v=1792136588",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860485947558",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860486209702",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860487028902",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860487520422",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:53:09.294605+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15841773256870",
+      "store": "jwpei",
+      "title": "Maelle Dachshund Charm Double Handle Bag - Dark Khaki",
+      "handle": "maelle-dachshund-charm-double-handle-bag-dark-khaki",
+      "verified_images_count": 2,
+      "verified_sample_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1789725982473-0ool44zgpush.jpg?v=1789892327",
+      "uploaded_count": 2,
+      "shopify_media_count": 2,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860489158822",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860490043558",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:53:21.460026+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15841773551782",
+      "store": "jwpei",
+      "title": "Veda Vintage Finish Bowler Bag - Saddle Brown",
+      "handle": "veda-vintage-finish-bowler-bag-saddle-brown",
+      "verified_images_count": 4,
+      "verified_sample_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1791973504160-zvuob2zi0jq.jpg?v=1792123725",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860492566694",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860492992678",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860493451430",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860493975718",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:53:47.884824+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15841775616166",
+      "store": "jwpei",
+      "title": "Maelle Dachshund Charm Double Handle Bag - Black",
+      "handle": "maelle-dachshund-charm-double-handle-bag-black",
+      "verified_images_count": 2,
+      "verified_sample_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1789725943173-l52a6dte1gj.jpg?v=1789892432",
+      "uploaded_count": 2,
+      "shopify_media_count": 2,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860495941798",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860496171174",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:54:01.534015+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15841776631974",
+      "store": "jwpei",
+      "title": "Lucia Elephant-Effect Top Handle Bag - Stone Gray",
+      "handle": "lucia-elephant-effect-top-handle-bag-stone-gray",
+      "verified_images_count": 5,
+      "verified_sample_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1791974763022-v53sbcw4nwo.jpg?v=1792133971",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860503576742",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860503740582",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860504690854",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860505247910",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:54:35.438502+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15841777778854",
+      "store": "jwpei",
+      "title": "Maelle Faux Ostrich Grain Dachshund Charm Double Handle Bag - Berry Red",
+      "handle": "maelle-faux-ostrich-grain-dachshund-charm-double-handle-bag-berry-red",
+      "verified_images_count": 2,
+      "verified_sample_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1790242491564-d0sif6mx00o.jpg?v=1790243605",
+      "uploaded_count": 2,
+      "shopify_media_count": 2,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860506460326",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860506919078",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:54:46.374688+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15841777844390",
+      "store": "jwpei",
+      "title": "Maelle Dachshund Charm Double Handle Bag - Dark Blue",
+      "handle": "maelle-dachshund-charm-double-handle-bag-dark-blue",
+      "verified_images_count": 2,
+      "verified_sample_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1789725962668-93czsww0rzp.jpg?v=1789892378",
+      "uploaded_count": 2,
+      "shopify_media_count": 2,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860507902118",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860509278374",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:54:58.817964+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15841780301990",
+      "store": "jwpei",
+      "title": "Lucia Elongated Top Handle Bag - Dark Brown",
+      "handle": "lucia-elongated-top-handle-bag-dark-brown",
+      "verified_images_count": 4,
+      "verified_sample_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1w9z9t7exac.jpg?v=1793786439",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860515733670",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860516454566",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860516782246",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860517273766",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:55:23.820552+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15841781022886",
+      "store": "jwpei",
+      "title": "Thea East-West Top Handle Bag - Black",
+      "handle": "thea-east-west-top-handle-bag-black",
+      "verified_images_count": 4,
+      "verified_sample_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1791974847526-pxomsy8qe.jpg?v=1792134106",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860520059046",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860520124582",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860520157350",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860520550566",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:55:52.446018+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15841781481638",
+      "store": "jwpei",
+      "title": "Lucia Elephant-Effect Top Handle Bag - Black",
+      "handle": "lucia-elephant-effect-top-handle-bag-black",
+      "verified_images_count": 5,
+      "verified_sample_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1791882880172-7wje3y82qgg.jpg?v=1791967498",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860521500838",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860521730214",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860521762982",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860521828518",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:56:26.758472+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15841783251110",
+      "store": "jwpei",
+      "title": "Lucia Elephant-Effect Top Handle Bag - Slate Gray",
+      "handle": "lucia-elephant-effect-top-handle-bag-slate-gray",
+      "verified_images_count": 5,
+      "verified_sample_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1791974697828-22oy1fcgf2e.jpg?v=1792134215",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860524056742",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860524122278",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860524744870",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860525105318",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:56:58.666445+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15841786167462",
+      "store": "jwpei",
+      "title": "Maelle Faux Suede Dachshund Charm Double Handle Bag - Burgundy",
+      "handle": "maelle-faux-suede-dachshund-charm-double-handle-bag-burgundy",
+      "verified_images_count": 2,
+      "verified_sample_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1790242440372-myk03m5ecx.jpg?v=1790243542",
+      "uploaded_count": 2,
+      "shopify_media_count": 2,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860525727910",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860525957286",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:57:10.966346+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15993205555366",
+      "store": "sephora",
+      "title": "Honey Gloss Ceramide Therapy Hydrating Hair Mask",
+      "handle": "gisou-honey-gloss-ceramide-therapy-hydrating-hair-mask-p515172",
+      "verified_images_count": 21,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2876241-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860528808102",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860528873638",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860528939174",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860529201318",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:57:53.116011+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15993205719206",
+      "store": "sephora",
+      "title": "Ambient Soft Glow Foundation",
+      "handle": "hourglass-ambient-soft-glow-foundation-p501154",
+      "verified_images_count": 25,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2586741-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860531396774",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860531462310",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860531724454",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860531789990",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:58:38.416699+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15993603850406",
+      "store": "sephora",
+      "title": "Mini Ultra Suede® Sculpting Lip Pencil Trio Gift Set",
+      "handle": "makeup-by-mario-mini-ultra-suede-sculpting-lip-pencil-trio-gift-set-p525996",
+      "verified_images_count": 7,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s3019445-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860535132326",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860535460006",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860536049830",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860536574118",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:59:05.317055+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15993647890598",
+      "store": "sephora",
+      "title": "Honey Infused Hydrating Lip Oil",
+      "handle": "gisou-honey-infused-hydrating-lip-oil-p505233",
+      "verified_images_count": 25,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s3015534-main-zoom-1.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860541030566",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860541096102",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860541161638",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860541325478",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T14:59:51.763949+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15993704054950",
+      "store": "sephora",
+      "title": "Mini Blush Veil & Skin Enhancer Duo™",
+      "handle": "makeup-by-mario-mini-blush-veil-skin-enhancer-duo-p526005",
+      "verified_images_count": 12,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s3019478-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860544503974",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860544569510",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860544635046",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860544700582",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:00:20.884537+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15993706545318",
+      "store": "sephora",
+      "title": "Swipe All-Over Hydrating Serum Concealer with 18-HR Wear",
+      "handle": "tower-28-beauty-swipe-all-over-hydrating-serum-concealer-with-18-hr-wear-p507142",
+      "verified_images_count": 25,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2945038-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860550303910",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860550533286",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860550631590",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860550664358",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:01:14.540096+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15993719062694",
+      "store": "sephora",
+      "title": "The Lip Butter Balm Vault Gift Set with 18 Hydrating Flavors",
+      "handle": "summer-fridays-the-lip-butter-balm-vault-gift-set-with-18-hydrating-flavors-p526211",
+      "verified_images_count": 8,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s3028453-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860553416870",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860554367142",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860556857510",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860557709478",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:01:43.333788+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15993748193446",
+      "store": "sephora",
+      "title": "1.5MM Mechanical Gel Eye Liner",
+      "handle": "hourglass-1-5mm-mechanical-gel-eye-liner-p388106",
+      "verified_images_count": 8,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2029841-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860560920742",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860561739942",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860561772710",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860562198694",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:02:08.612847+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15993871204518",
+      "store": "sephora",
+      "title": "Peptide Lip Shape Contouring Lip Shaper",
+      "handle": "rhode-peptide-lip-shape-contouring-lip-shaper-p517509",
+      "verified_images_count": 25,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2896058-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860566065318",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860566261926",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860566360230",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860566589606",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:03:10.629556+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15993931006118",
+      "store": "sephora",
+      "title": "Brush Essentials Makeup Brush Gift Set with Travel Case",
+      "handle": "saie-brush-essentials-makeup-brush-gift-set-with-travel-case-p526187",
+      "verified_images_count": 7,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s3026317-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860568981670",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860569047206",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860569243814",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860569309350",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:03:36.867306+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994034552998",
+      "store": "sephora",
+      "title": "Vanish™ Seamless Finish Foundation Stick",
+      "handle": "hourglass-vanish-seamless-finish-foundation-stick-p410532",
+      "verified_images_count": 25,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s1841030-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860572291238",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860572324006",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860572586150",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860572618918",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:04:21.817332+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994076266662",
+      "store": "sephora",
+      "title": "Pocket Blush Buildable Hydrating Cream Blush",
+      "handle": "rhode-pocket-blush-buildable-hydrating-cream-blush-p517483",
+      "verified_images_count": 25,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2896181-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860575174822",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860575633574",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860576354470",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860576714918",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:05:21.664827+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994086817958",
+      "store": "sephora",
+      "title": "Soulgazer Eye-intensifying Mascara and Eyeliner Gift Set",
+      "handle": "kosas-soulgazer-eye-intensifying-mascara-and-eyeliner-gift-set-p526630",
+      "verified_images_count": 11,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s3023744-main-zoom-2.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860580909222",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860581138598",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860581630118",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860582580390",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:06:04.033528+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994174439590",
+      "store": "sephora",
+      "title": "Ultra Suede® Sculpting Lip Pencil",
+      "handle": "makeup-by-mario-ultra-suede-sculpting-lip-pencil-p477838",
+      "verified_images_count": 25,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2502193-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860588511398",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860588839078",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860589494438",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860590280870",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:06:46.227499+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994204291238",
+      "store": "sephora",
+      "title": "Suprême Bio-Complex Liquid Foundation With Exosomes + Peptides",
+      "handle": "westman-atelier-supr-me-bio-complex-liquid-foundation-with-exosomes-peptides-p525193",
+      "verified_images_count": 25,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2897361-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860598603942",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860599029926",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860599521446",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860600012966",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:07:38.953995+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994209042598",
+      "store": "sephora",
+      "title": "Unreal Radiant Glow Liquid Highlighter",
+      "handle": "hourglass-unreal-radiant-glow-liquid-highlighter-p521357",
+      "verified_images_count": 25,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2957108-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860607287462",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860607484070",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860608467110",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860609089702",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:08:26.676371+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994213499046",
+      "store": "sephora",
+      "title": "Peptide Lip Tint Nourishing Glaze",
+      "handle": "rhode-peptide-lip-tint-nourishing-glaze-p517552",
+      "verified_images_count": 25,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2895761-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860614037670",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860614889638",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860615119014",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860615381158",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:09:08.487923+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994219004070",
+      "store": "sephora",
+      "title": "Lip Liner Sharpener",
+      "handle": "glossier-lip-liner-sharpener-p511968",
+      "verified_images_count": 6,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2771525-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860616954022",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860625408166",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860625703078",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860625899686",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:09:25.286125+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994226770086",
+      "store": "sephora",
+      "title": "Peptide Eye Prep Depuffing Eye Patches",
+      "handle": "rhode-peptide-eye-prep-depuffing-eye-patches-p518591",
+      "verified_images_count": 14,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2908697-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860645036198",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860647395494",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860649951398",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860650639526",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:09:56.845959+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994262814886",
+      "store": "sephora",
+      "title": "Ambient Lighting Edit Unlocked Palette",
+      "handle": "hourglass-ambient-lighting-edit-unlocked-palette-p526297",
+      "verified_images_count": 25,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2988871-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860657422502",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860657782950",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860658143398",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860658765990",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:11:00.816648+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994419019942",
+      "store": "sephora",
+      "title": "Shade Slick Hydrating Tinted Lip Oil",
+      "handle": "merit-shade-slick-hydrating-tinted-lip-oil-p468691",
+      "verified_images_count": 25,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2426732-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860663451814",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860663615654",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860664041638",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860664303782",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:11:43.468497+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994445004966",
+      "store": "sephora",
+      "title": "Beauty Butter Matte Powder Bronzer",
+      "handle": "westman-atelier-beauty-butter-matte-powder-bronzer-p468434",
+      "verified_images_count": 25,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2434082-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860672135334",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860672397478",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860672692390",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860673413286",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:12:28.892627+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994471841958",
+      "store": "sephora",
+      "title": "SoftSculpt® Cream Contour & Bronzer Shaping Stick",
+      "handle": "makeup-by-mario-softsculpt-cream-contour-bronzer-shaping-stick-p516546",
+      "verified_images_count": 25,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2867489-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860680130726",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860680360102",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860680786086",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860681408678",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:13:15.443150+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994514112678",
+      "store": "sephora",
+      "title": "Mario's Face and Eye Trio Cosmetic Brush Set",
+      "handle": "makeup-by-mario-mario-s-face-and-eye-trio-cosmetic-brush-set-p525941",
+      "verified_images_count": 5,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s3019460-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860682719398",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860682883238",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860683243686",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860683407526",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:13:32.846330+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994571358374",
+      "store": "sephora",
+      "title": "Brow Pop Nano Ultra-Fine Detailing + Feathering Eyebrow Pencil",
+      "handle": "kosas-brow-pop-nano-ultra-fine-detailing-feathering-eyebrow-pencil-p506794",
+      "verified_images_count": 25,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2687390-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860688617638",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860689469606",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860689731750",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860690124966",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:14:20.968320+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994632732838",
+      "store": "sephora",
+      "title": "Major Dimension Precision Gel Eyeliner",
+      "handle": "patrick-ta-major-dimension-precision-gel-eyeliner-p473146",
+      "verified_images_count": 14,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2463982-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860695007398",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860695367846",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860696449190",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860697301158",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:15:01.397095+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994665959590",
+      "store": "sephora",
+      "title": "On the Glow Mini Glowy Super Gel™ with Mini Vanity Case Gift Set",
+      "handle": "saie-on-the-glow-mini-glowy-super-gel-with-mini-vanity-case-gift-set-p527790",
+      "verified_images_count": 5,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s3040632-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860699562150",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860699857062",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860700512422",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860700741798",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:15:30.550848+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994688733350",
+      "store": "sephora",
+      "title": "Glossier You Rêve Eau de Parfum",
+      "handle": "glossier-glossier-you-r-ve-eau-de-parfum-p513616",
+      "verified_images_count": 17,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s2819282-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860704837798",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860705067174",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860705362086",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860705624230",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:16:02.763160+00:00"
+    },
+    {
+      "shopify_id": "gid://shopify/Product/15994697220262",
+      "store": "sephora",
+      "title": "Ambient® Lighting Palette",
+      "handle": "hourglass-ambient-lighting-palette-p382309",
+      "verified_images_count": 12,
+      "verified_sample_url": "https://www.sephora.com/productimages/sku/s1606086-main-zoom.jpg",
+      "uploaded_count": 4,
+      "shopify_media_count": 4,
+      "shopify_status": "DRAFT",
+      "shopify_inventory": 0,
+      "media_nodes": [
+        {
+          "id": "gid://shopify/MediaImage/71860709097638",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860709327014",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860709720230",
+          "status": "READY"
+        },
+        {
+          "id": "gid://shopify/MediaImage/71860710244518",
+          "status": "READY"
+        }
+      ],
+      "verified_at": "2026-11-16T15:16:37.011834+00:00"
+    }
+  ]
+}

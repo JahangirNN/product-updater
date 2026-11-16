@@ -1,0 +1,634 @@
+{%- comment -%}
+  The Rare Avenue x CheckCheck Official 3rd-Party Authentication Snippet
+  Integrates CheckCheck Connect Shopify App & Trust Kit Branding (ADR 0029)
+{%- endcomment -%}
+
+{%- liquid
+  assign coa_url = product.metafields.checkcheck.coa_url | default: product.metafields.checkcheck.certificate_url
+  assign coa_id = product.metafields.checkcheck.check_id | default: product.metafields.checkcheck.cert_id
+  assign coa_pdf = product.metafields.checkcheck.coa_pdf_url | default: product.metafields.checkcheck.pdf_url
+  assign auth_result = product.metafields.checkcheck.result | default: product.metafields.checkcheck.status | upcase
+  assign has_live_coa = false
+  if coa_url != blank
+    assign has_live_coa = true
+  endif
+-%}
+
+<style>
+  /* ==========================================================================
+     CHECKCHECK QUIET LUXURY TRUST STRIP & PROTOCOL DRAWER
+     ========================================================================== */
+  .ra-checkcheck-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.65rem;
+    padding: 0.45rem 0.85rem;
+    margin: 0.625rem 0 0.85rem 0;
+    background: #faf9f6;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-left: 3px solid #10b981;
+    border-radius: 2px;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .ra-checkcheck-strip:hover {
+    border-color: rgba(0, 0, 0, 0.16);
+    background: #f7f6f2;
+  }
+
+  .ra-checkcheck-strip__left {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    min-width: 0;
+  }
+
+  .ra-checkcheck-badge-icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a1a;
+    color: #10b981;
+    border-radius: 50%;
+  }
+
+  .ra-checkcheck-strip__content {
+    min-width: 0;
+  }
+
+  .ra-checkcheck-strip__title {
+    font-family: var(--text-font-family);
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    line-height: 1.2;
+  }
+
+  .ra-checkcheck-pill-partner {
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: #e6f4ea;
+    color: #137333;
+    padding: 1px 4px;
+    border-radius: 2px;
+    line-height: 1.2;
+  }
+
+  .ra-checkcheck-strip__desc {
+    font-size: 0.625rem;
+    color: #666666;
+    margin-top: 0.1rem;
+    line-height: 1.25;
+  }
+
+  .ra-checkcheck-strip__trigger {
+    background: transparent;
+    border: none;
+    color: #1a1a1a;
+    font-family: var(--text-font-family);
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 0.2rem 0.35rem;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .ra-checkcheck-strip__trigger:hover {
+    color: #c9a876;
+  }
+
+  /* Slide-Out Drawer / Modal */
+  .ra-cc-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 2147483647;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .ra-cc-modal-backdrop.is-open {
+    display: flex;
+    opacity: 1;
+  }
+
+  .ra-cc-modal-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    max-width: 580px;
+    width: 100%;
+    max-height: calc(100vh - 3rem);
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.35);
+    transform: translateY(16px);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-sizing: border-box;
+    padding: 2.25rem 2rem 2rem;
+  }
+
+  .ra-cc-modal-backdrop.is-open .ra-cc-modal-card {
+    transform: translateY(0);
+  }
+
+  .ra-cc-close-btn {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.85rem;
+    width: 34px;
+    height: 34px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: #f2f1ed;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    color: #1a1a1a !important;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 0;
+    line-height: 1;
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+
+  .ra-cc-close-btn:hover,
+  .ra-cc-close-btn:active {
+    background: #e4e3dd;
+    transform: scale(1.05);
+  }
+
+  .ra-cc-close-btn svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+    stroke: #1a1a1a !important;
+  }
+
+  .ra-cc-modal-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .ra-cc-partner-lockup {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ra-cc-title {
+    font-family: var(--heading-font-family);
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    margin: 0;
+  }
+
+  .ra-cc-subtitle {
+    font-size: 0.75rem;
+    color: #777777;
+    margin-top: 0.35rem;
+    letter-spacing: 0.04em;
+  }
+
+  /* Protocol Step Cards */
+  .ra-cc-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .ra-cc-step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 0.85rem 1rem;
+    background: #faf9f6;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 2px;
+  }
+
+  .ra-cc-step-num {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    color: #ffffff;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .ra-cc-step-text strong {
+    font-family: var(--text-font-family);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  .ra-cc-step-text p {
+    font-size: 0.7188rem;
+    color: #666666;
+    margin: 0;
+    line-height: 1.45;
+  }
+
+  /* Certificate Showcase Box */
+  .ra-cc-cert-box {
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+    background: #ffffff;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    border-radius: 2px;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.06);
+  }
+
+  .ra-cc-cert-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: 0.75rem;
+  }
+
+  .ra-cc-cert-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #10b981;
+  }
+
+  .ra-cc-cert-meta {
+    font-size: 0.6875rem;
+    font-family: monospace;
+    color: #888888;
+  }
+
+  .ra-cc-cert-body {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .ra-cc-cert-details {
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: #333333;
+  }
+
+  .ra-cc-cert-details span {
+    color: #777777;
+    display: inline-block;
+    width: 110px;
+  }
+
+  .ra-cc-cert-qr {
+    text-align: center;
+    padding: 0.5rem;
+    background: #fbfaf8;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+  }
+
+  .ra-cc-cert-qr svg {
+    width: 48px;
+    height: 48px;
+    display: block;
+  }
+
+  .ra-cc-cert-qr-label {
+    font-size: 0.5625rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #777777;
+    margin-top: 0.25rem;
+    display: block;
+  }
+
+  .ra-cc-coa-btn {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background: #1a1a1a;
+    color: #ffffff;
+    font-family: var(--text-font-family);
+    font-size: 0.7188rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid #1a1a1a;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+
+  .ra-cc-coa-btn:hover {
+    background: #c9a876;
+    border-color: #c9a876;
+    color: #1a1a1a;
+  }
+
+  .ra-cc-footer-guarantee {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    font-size: 0.6875rem;
+    color: #777777;
+    line-height: 1.5;
+  }
+
+  .ra-cc-footer-guarantee strong {
+    color: #1a1a1a;
+  }
+
+  .ra-cc-dismiss-btn {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.65rem 1rem;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    font-family: var(--text-font-family);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #666666;
+    cursor: pointer;
+    text-align: center;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .ra-cc-dismiss-btn:hover {
+    color: #1a1a1a;
+    border-color: #1a1a1a;
+    background: #f7f6f2;
+  }
+
+  @media (max-width: 640px) {
+    .ra-checkcheck-strip {
+      padding: 0.4rem 0.65rem;
+      gap: 0.5rem;
+    }
+    .ra-checkcheck-strip__desc {
+      font-size: 0.5938rem;
+    }
+    .ra-cc-modal-card {
+      padding: 1.25rem 1rem 1rem;
+      max-height: 85vh;
+    }
+    .ra-cc-title {
+      font-size: 0.9375rem;
+    }
+    .ra-cc-step-item {
+      padding: 0.65rem 0.75rem;
+    }
+    .ra-cc-step-text p {
+      font-size: 0.6563rem;
+    }
+    .ra-cc-close-btn {
+      top: 0.65rem;
+      right: 0.65rem;
+      width: 30px;
+      height: 30px;
+    }
+    .ra-cc-close-btn svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+</style>
+
+<!-- PDP Trust Strip -->
+{%- unless hide_strip -%}
+<div class="ra-checkcheck-strip">
+  <div class="ra-checkcheck-strip__left">
+    <div class="ra-checkcheck-badge-icon">
+      <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+      </svg>
+    </div>
+    <div class="ra-checkcheck-strip__content">
+      <div class="ra-checkcheck-strip__title">
+        {%- if has_live_coa -%}
+          100% VERIFIED AUTHENTIC · COA #{{ coa_id | default: "PASS" }}
+          <span class="ra-checkcheck-pill-partner">Verified</span>
+        {%- else -%}
+          VERIFIED AUTHENTIC · CHECKCHECK
+          <span class="ra-checkcheck-pill-partner">Official</span>
+        {%- endif -%}
+      </div>
+      <div class="ra-checkcheck-strip__desc">
+        {%- if has_live_coa -%}
+          Official 3rd-party Certificate of Authenticity.
+        {%- else -%}
+          4-Hour Dual-Expert Inspection &middot; Serialized Security Tag
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+  <button type="button" class="ra-checkcheck-strip__trigger" onclick="openCheckCheckDrawer()">
+    {%- if has_live_coa -%}
+      View COA &rarr;
+    {%- else -%}
+      View Proof &rarr;
+    {%- endif -%}
+  </button>
+</div>
+{%- endunless -%}
+
+<!-- Authenticity Protocol Slide-Out Modal -->
+<div id="checkcheck-authenticity-drawer" class="ra-cc-modal-backdrop" aria-hidden="true" onclick="if(event.target===this) closeCheckCheckDrawer();">
+  <div class="ra-cc-modal-card" role="dialog" aria-modal="true" aria-labelledby="ra-cc-modal-title">
+    <button type="button" class="ra-cc-close-btn" onclick="closeCheckCheckDrawer()" aria-label="Close dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    
+    <div class="ra-cc-modal-header">
+      <div class="ra-cc-partner-lockup">
+        <span style="font-family: var(--heading-font-family); font-weight: 700; letter-spacing: 0.18em; font-size: 0.8125rem; color: #1a1a1a;">THE RARE AVENUE</span>
+        <span style="color: #c9a876; font-size: 0.8125rem; font-weight: 600;">&times;</span>
+        <img src="{{ 'checkcheck-wordmark.svg' | asset_url }}" alt="CheckCheck" style="height: 15px; width: auto; vertical-align: middle; display: inline-block;" loading="lazy">
+      </div>
+      <h2 id="ra-cc-modal-title" class="ra-cc-title">Official Authenticity Protocol</h2>
+      <p class="ra-cc-subtitle">Dual-Expert 3rd-Party Verification · 4-Hour Turnaround SLA</p>
+    </div>
+
+    <!-- 3-Step Protocol -->
+    <div class="ra-cc-steps">
+      <div class="ra-cc-step-item">
+        <div class="ra-cc-step-num">1</div>
+        <div class="ra-cc-step-text">
+          <strong>Physical Intake Inspection</strong>
+          <p>Every piece sourced from authorized luxury retailers arrives at our Indian fulfillment vault. Specialists inspect box typography, factory batch stamps, micro-stitching, and UV luminescence.</p>
+        </div>
+      </div>
+
+      <div class="ra-cc-step-item">
+        <div class="ra-cc-step-num">2</div>
+        <div class="ra-cc-step-text">
+          <strong>Independent CheckCheck Audit</strong>
+          <p>High-resolution macro images of inner size tags, footbeds, hardware, and date codes are submitted to CheckCheck's specialized luxury evaluators with an expedited 4-hour SLA.</p>
+        </div>
+      </div>
+
+      <div class="ra-cc-step-item">
+        <div class="ra-cc-step-num">3</div>
+        <div class="ra-cc-step-text">
+          <strong>Tamper-Proof Tagging & Scannable Delivery</strong>
+          <p>Passed items receive a serialized CheckCheck green security tag and an individual Certificate of Authenticity card with a live QR code directly verifiable on CheckCheck’s servers.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificate Card -->
+    <div class="ra-cc-cert-box">
+      <div class="ra-cc-cert-header">
+        <div class="ra-cc-cert-badge">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+          {%- if has_live_coa -%}
+            Certificate of Authenticity #{{ coa_id }}
+          {%- else -%}
+            Sample CheckCheck Certificate
+          {%- endif -%}
+        </div>
+        <span class="ra-cc-cert-meta">STATUS: VERIFIED PASS</span>
+      </div>
+
+      <div class="ra-cc-cert-body">
+        <div class="ra-cc-cert-details">
+          <div><span>Product:</span> <strong>{{ product.title | truncate: 32 }}</strong></div>
+          <div><span>Vendor / Brand:</span> <strong>{{ product.vendor }}</strong></div>
+          <div><span>Auditor:</span> <strong>CheckCheck Luxury Lab</strong></div>
+          <div><span>Security Tag:</span> <strong>Serialized NFC / QR Included</strong></div>
+        </div>
+
+        <div class="ra-cc-cert-qr">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.8">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+            <path d="M10 3v4"></path>
+            <path d="M14 10h4"></path>
+            <path d="M10 17v4"></path>
+            <path d="M7 10h4"></path>
+          </svg>
+          <span class="ra-cc-cert-qr-label">Live QR</span>
+        </div>
+      </div>
+
+      {%- if has_live_coa -%}
+        <a href="{{ coa_url }}" target="_blank" rel="noopener noreferrer" class="ra-cc-coa-btn">
+          Open Official CheckCheck Certificate &rarr;
+        </a>
+      {%- else -%}
+        <a href="https://getcheckcheck.com" target="_blank" rel="noopener noreferrer" class="ra-cc-coa-btn">
+          Verify Partner Registry on CheckCheck.com &rarr;
+        </a>
+      {%- endif -%}
+    </div>
+
+    <!-- Guarantee Footer -->
+    <div class="ra-cc-footer-guarantee">
+      <strong>The Rare Avenue Triple Guarantee:</strong> If any piece fails authentication, you receive an immediate 100% full refund with zero deductions. Tamper-evident tags guarantee uncompromised provenance.
+    </div>
+
+    <button type="button" class="ra-cc-dismiss-btn" onclick="closeCheckCheckDrawer()">
+      Close Protocol
+    </button>
+  </div>
+</div>
+
+<script>
+  function ensureCheckCheckInBody() {
+    var modal = document.getElementById('checkcheck-authenticity-drawer');
+    if (modal && modal.parentElement !== document.body) {
+      document.body.appendChild(modal);
+    }
+    return modal;
+  }
+
+  function openCheckCheckDrawer() {
+    var modal = ensureCheckCheckInBody();
+    if (modal) {
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeCheckCheckDrawer() {
+    var modal = document.getElementById('checkcheck-authenticity-drawer');
+    if (modal) {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ensureCheckCheckInBody);
+  } else {
+    ensureCheckCheckInBody();
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeCheckCheckDrawer();
+  });
+</script>

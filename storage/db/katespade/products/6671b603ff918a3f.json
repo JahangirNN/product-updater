@@ -7,14 +7,14 @@
   "product_type": "Totes & Carryalls",
   "gender": "Women",
   "source_sku": "K8150-101",
-  "source_price": 66.75,
+  "source_price": 78.75,
   "source_compare_at_price": null,
-  "current_price": 6355,
+  "current_price": 7409.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.199335,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Saffiano Leather",
   "specifications": {
     "Material": "Saffiano Leather",
@@ -49,20 +49,20 @@
       "option1": "Meringue",
       "option2": null,
       "option3": null,
-      "price": "6355",
+      "price": "7409.0",
       "compare_at_price": null,
-      "source_price": 66.75,
+      "source_price": 78.75,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/K8150_101",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/K8150_101",
         "https://katespade.scene7.com/is/image/KateSpade/K8150_101_1",
         "https://katespade.scene7.com/is/image/KateSpade/K8150_101_3"
       ],
-      "inventory_quantity": 10,
+      "inventory_quantity": 0,
       "image_url": "https://katespade.scene7.com/is/image/KateSpade/K8150_101"
     }
   ],
@@ -86,9 +86,13 @@
     "handbags"
   ],
   "created_at": "2026-10-29T05:26:59Z",
-  "last_verified_at": "2026-10-29T07:40:10Z",
+  "last_verified_at": "2026-11-16T15:47:44Z",
   "_elapsed_ms": 3088.8124000048265,
   "id": "6671b603ff918a3f",
-  "updated_at": "2026-10-29T07:40:10Z",
-  "last_synced_fx_rate": 95.29615
+  "updated_at": "2026-11-16T15:47:44Z",
+  "last_synced_fx_rate": 94.289707,
+  "shopify_product_id": "gid://shopify/Product/15915082612902",
+  "shopify_handle": "jana-tote",
+  "shopify_synced_at": "2026-11-15T11:09:51Z",
+  "shopify_sync_pending": false
 }

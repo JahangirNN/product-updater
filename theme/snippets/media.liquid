@@ -57,7 +57,7 @@ Supported variables
           assign playsinline = playsinline | default: autoplay, allow_false: true
           assign muted = muted | default: autoplay, allow_false: true
 
-          echo media | video_tag: controls: controls, playsinline: playsinline, muted: muted, loop: loop, preload: preload_attribute, image_size: '400x'
+          echo media | video_tag: autoplay: autoplay, controls: controls, playsinline: playsinline, muted: muted, loop: loop, preload: preload_attribute, image_size: '400x'
         -%}
       {%- else -%}
         <template>

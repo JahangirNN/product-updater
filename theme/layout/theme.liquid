@@ -41,6 +41,24 @@
       <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer></script>
     {%- endif -%}
 
+    {%- comment -%}Defensive Route Redirection for generic watch / accessory URLs{%- endcomment -%}
+    {%- assign current_req_path = request.path | downcase | remove_last: '/' -%}
+    {%- if current_req_path == '/collections/watches' or collection.handle == 'watches' -%}
+      <meta http-equiv="refresh" content="0; url=/collections/luxury-watches">
+    {%- elsif current_req_path == '/collections/accessories' or collection.handle == 'accessories' -%}
+      <meta http-equiv="refresh" content="0; url=/collections/wallets-accessories">
+    {%- endif -%}
+    <script>
+      (function() {
+        var path = window.location.pathname.toLowerCase().replace(/\/+$/, "");
+        if (path === "/collections/watches" || path.endsWith("/collections/watches")) {
+          window.location.replace("/collections/luxury-watches" + window.location.search + window.location.hash);
+        } else if (path === "/collections/accessories" || path.endsWith("/collections/accessories")) {
+          window.location.replace("/collections/wallets-accessories" + window.location.search + window.location.hash);
+        }
+      })();
+    </script>
+
     <script type="importmap">
       {%- comment -%}On Safari 16.3 and lower, a polyfill is used to load importmap{%- endcomment -%}
       {

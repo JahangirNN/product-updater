@@ -62,8 +62,8 @@
       "current_price": 2845,
       "price_inr": 2845,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "2087708",
       "image_url": "https://www.sephora.com/productimages/sku/s2087708-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2087708+sw.jpg",
@@ -71,7 +71,8 @@
       "variation_value": "Foil",
       "variation_type": "Color",
       "price": 2845,
-      "source_price": 30.0
+      "source_price": 30.0,
+      "inventory_quantity": 0
     },
     {
       "id": "2087682",
@@ -104,15 +105,15 @@
       "current_price": 2845,
       "price_inr": 2845,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "2251619",
       "image_url": "https://www.sephora.com/productimages/sku/s2251619-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2251619+sw.jpg",
       "size": "",
       "variation_value": "Ray",
       "variation_type": "Color",
-      "inventory_quantity": 10,
+      "inventory_quantity": 0,
       "price": 2845,
       "source_price": 30.0
     }
@@ -143,9 +144,13 @@
     "hourglass"
   ],
   "created_at": "2026-11-04T19:08:38Z",
-  "last_verified_at": "2026-11-05T12:42:07Z",
+  "last_verified_at": "2026-11-16T15:45:41Z",
   "id": "a10cf46114309e38",
-  "updated_at": "2026-11-05T12:42:07Z",
-  "last_synced_fx_rate": 94.834253,
-  "shopify_sync_pending": true
+  "updated_at": "2026-11-16T15:45:41Z",
+  "last_synced_fx_rate": 94.620171,
+  "shopify_sync_pending": true,
+  "shopify_product_id": "gid://shopify/Product/15994224083110",
+  "shopify_handle": "hourglass-scattered-light-glitter-eyeshadow-p433811",
+  "shopify_synced_at": "2026-11-12T13:25:45Z",
+  "shopify_image_synced": true
 }

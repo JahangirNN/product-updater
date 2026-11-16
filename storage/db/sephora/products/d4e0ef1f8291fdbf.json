@@ -91,8 +91,8 @@
       "current_price": 7113,
       "price_inr": 7113,
       "compare_at_price": null,
-      "in_stock": false,
-      "is_active": false,
+      "in_stock": true,
+      "is_active": true,
       "barcode": "2434074",
       "image_url": "https://www.sephora.com/productimages/sku/s2434074-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2434074+sw.jpg",
@@ -100,7 +100,8 @@
       "variation_value": "Soleil riche",
       "variation_type": "Color",
       "price": 7113,
-      "source_price": 75.0
+      "source_price": 75.0,
+      "inventory_quantity": 10
     },
     {
       "id": "2507481",
@@ -154,8 +155,14 @@
     "westman-atelier"
   ],
   "created_at": "2026-11-04T18:55:34Z",
-  "last_verified_at": "2026-11-05T10:47:26Z",
+  "last_verified_at": "2026-11-16T15:42:04Z",
   "id": "d4e0ef1f8291fdbf",
-  "updated_at": "2026-11-05T10:47:26Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:42:04Z",
+  "last_synced_fx_rate": 94.086126,
+  "shopify_product_id": "gid://shopify/Product/15994445004966",
+  "shopify_handle": "westman-atelier-beauty-butter-matte-powder-bronzer-p468434",
+  "shopify_synced_at": "2026-11-13T14:55:50Z",
+  "shopify_image_synced": true,
+  "shopify_sync_pending": false,
+  "primary_image": "https://www.sephora.com/productimages/sku/s2434082-main-zoom.jpg"
 }

@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Small Finn Crossbody Bag With Pouch In Maxi Signature Canvas",
   "specifications": {
     "Material": "Small Finn Crossbody Bag With Pouch In Maxi Signature Canvas",
@@ -53,7 +53,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccg19_qbnrx_a0",
       "option_values": [
         {
@@ -61,7 +61,8 @@
           "name": "Gunmetal/Tan/Black"
         }
       ],
-      "price_current": 13343.0
+      "price_current": 13343.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -76,23 +77,24 @@
   ],
   "tags": [
     "COACH",
-    "Men",
-    "Crossbody Bags"
+    "Crossbody Bags",
+    "Men"
   ],
   "groups": [
     "men_bags"
   ],
   "created_at": "2026-09-13T00:42:21Z",
-  "last_verified_at": "2026-10-29T03:38:25Z",
+  "last_verified_at": "2026-11-16T15:44:54Z",
   "id": "643c9bd068815c14",
   "product_id": "643c9bd068815c14",
   "store": "coach",
-  "updated_at": "2026-10-29T03:38:25Z",
-  "is_active": true,
+  "updated_at": "2026-11-16T15:44:54Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841765392550",
   "shopify_handle": "small-finn-crossbody-bag-with-pouch-in-maxi-signature-canvas",
-  "shopify_synced_at": "2026-10-24T10:52:44Z",
+  "shopify_synced_at": "2026-11-14T01:09:42Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 94.901331
+  "last_synced_fx_rate": 95.29615,
+  "supplier_delisted": false
 }

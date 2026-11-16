@@ -57,7 +57,8 @@
           "option_name": "Color",
           "name": "Vast Grey/Sail"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -81,7 +82,8 @@
           "option_name": "Color",
           "name": "Vast Grey/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -105,7 +107,8 @@
           "option_name": "Color",
           "name": "Vast Grey/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -129,7 +132,8 @@
           "option_name": "Color",
           "name": "Vast Grey/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -153,7 +157,8 @@
           "option_name": "Color",
           "name": "Vast Grey/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -177,7 +182,8 @@
           "option_name": "Color",
           "name": "Vast Grey/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -201,7 +207,8 @@
           "option_name": "Color",
           "name": "Vast Grey/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -225,7 +232,8 @@
           "option_name": "Color",
           "name": "Vast Grey/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -249,7 +257,8 @@
           "option_name": "Color",
           "name": "Vast Grey/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -273,7 +282,8 @@
           "option_name": "Color",
           "name": "Vast Grey/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -297,7 +307,8 @@
           "option_name": "Color",
           "name": "Vast Grey/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -321,7 +332,8 @@
           "option_name": "Color",
           "name": "Vast Grey/Sail"
         }
-      ]
+      ],
+      "is_available": true
     }
   ],
   "product_options": [
@@ -376,11 +388,11 @@
     }
   ],
   "tags": [
-    "Nike",
     "Footwear",
-    "Preschool",
+    "JD Sports",
     "Kids'",
-    "JD Sports"
+    "Nike",
+    "Preschool"
   ],
   "groups": [
     "footwear",
@@ -389,13 +401,15 @@
     "shoes"
   ],
   "created_at": "2026-09-20T16:00:36Z",
-  "updated_at": "2026-10-29T03:36:52Z",
-  "last_verified_at": "2026-10-29T03:36:52Z",
+  "updated_at": "2026-11-16T15:45:39Z",
+  "last_verified_at": "2026-11-16T15:45:34Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851446075558",
   "shopify_handle": "little-kids-nike-force-1-low-casual-shoes-vast-grey-sail-3832562",
-  "shopify_synced_at": "2026-10-13T21:28:07Z",
+  "shopify_synced_at": "2026-11-16T15:45:34Z",
   "price": "7751.00",
   "price_current": 7751.0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.399626,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

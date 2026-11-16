@@ -6,10 +6,10 @@
   "vendor": "JW PEI",
   "product_type": "4B48",
   "source_sku": "4B48-31",
-  "source_price": 129.0,
+  "source_price": 102.0,
   "source_compare_at_price": 129.0,
-  "current_price": 12235.0,
-  "compare_at_price": 12281.0,
+  "current_price": 9698.0,
+  "compare_at_price": 12178.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -102,9 +102,9 @@
       "id": 44711829766178,
       "sku": "4B48-31",
       "title": "Taupe",
-      "price": "12383.00",
+      "price": "9698.00",
       "compare_at_price": null,
-      "source_price": 129.0,
+      "source_price": 102.0,
       "source_compare_at_price": 129.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -116,7 +116,7 @@
           "name": "Taupe"
         }
       ],
-      "price_current": 12383.0
+      "price_current": 9698.0
     },
     {
       "id": 45198479917090,
@@ -294,17 +294,17 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:35:36Z",
-  "updated_at": "2026-10-29T03:37:48Z",
-  "last_verified_at": "2026-10-29T03:37:48Z",
+  "updated_at": "2026-11-16T15:49:43Z",
+  "last_verified_at": "2026-11-16T15:49:43Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841785512102",
   "shopify_handle": "yara-hand-woven-bucket-bag-taupe",
-  "shopify_synced_at": "2026-09-29T06:01:31Z",
+  "shopify_synced_at": "2026-11-16T07:48:18Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1783071928203-qhkh4er1djq.jpg?v=1783309611",
   "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1783071928203-qhkh4er1djq.jpg?v=1783309611",
   "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\e634f00276f62b34.json",
   "archived": true,
   "canonical_product_id": "gid://shopify/Product/15841773158566",
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.262076
 }

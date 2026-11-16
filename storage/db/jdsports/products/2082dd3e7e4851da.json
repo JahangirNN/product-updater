@@ -12,7 +12,7 @@
   "source_price": 55.0,
   "source_compare_at_price": 92.0,
   "current_price": 5326.0,
-  "compare_at_price": 8758.0,
+  "compare_at_price": 8685.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -170,7 +170,7 @@
       "source_compare_at_price": 92.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/CW1590_100_P1?bg=rgb%28237%2C237%2C237%29&fmt=auto&w=1200&h=1200",
       "option_values": [
         {
@@ -260,13 +260,13 @@
     "shoes"
   ],
   "created_at": "2026-09-20T04:58:14Z",
-  "updated_at": "2026-10-29T03:36:52Z",
-  "last_verified_at": "2026-10-29T03:36:52Z",
+  "updated_at": "2026-11-16T15:45:41Z",
+  "last_verified_at": "2026-11-16T15:45:41Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851446042790",
   "shopify_handle": "big-kids-nike-dunk-low-casual-shoes-white-black-white-cw1590",
-  "shopify_synced_at": "2026-10-28T19:36:39Z",
+  "shopify_synced_at": "2026-10-29T14:39:28Z",
   "price": "5326.00",
   "price_current": 5326.0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 95.29615
 }

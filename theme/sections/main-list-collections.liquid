@@ -64,7 +64,8 @@ LIQUID
               {%- assign collections_to_show = section.settings.collections | default: collections -%}
 
               {%- for collection in collections_to_show -%}
-                {%- if collection.featured_image == blank or section.settings.collections == empty and collection.handle == 'frontpage' -%}
+                {%- assign collection_img = collection.image | default: collection.featured_image -%}
+                {%- if collection_img == blank or section.settings.collections == empty and collection.handle == 'frontpage' -%}
                   {%- continue -%}
                 {%- endif -%}
 
@@ -78,7 +79,7 @@ LIQUID
                       {%- assign loading_strategy = 'lazy' -%}
                     {%- endif -%}
 
-                    {{- collection.featured_image | image_url: width: collection.featured_image.width | image_tag: loading: loading_strategy, sizes: sizes, widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400', class: 'zoom-image group-hover:zoom', draggable: 'false' -}}
+                    {{- collection_img | image_url: width: collection_img.width | image_tag: loading: loading_strategy, sizes: sizes, widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400', class: 'zoom-image group-hover:zoom', draggable: 'false' -}}
 
                     <div class="collection-card__content prose prose--tight {{ section.settings.content_position }}" style="{% render 'surface', text_color: section.settings.text_color %}">
                       <p class="h3">{{ collection.title }}</p>

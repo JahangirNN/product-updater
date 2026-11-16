@@ -7,9 +7,9 @@
   "product_type": "Tote Bags",
   "gender": "Women",
   "source_sku": "CGG26 SV/BK",
-  "source_price": 199.0,
+  "source_price": 189.0,
   "source_compare_at_price": null,
-  "current_price": 19039.0,
+  "current_price": 17941.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -51,9 +51,9 @@
       "id": null,
       "sku": "CGG26 SV/BK",
       "title": "Silver/Black",
-      "price": "19039.00",
+      "price": "17941.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -65,15 +65,16 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 17941.0,
+      "is_available": true
     },
     {
       "id": null,
       "sku": "CEW20 IMWBR",
       "title": "Gold/Warm Brown",
-      "price": "19039.00",
+      "price": "17941.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -85,7 +86,8 @@
           "name": "Gold/Warm Brown"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 17941.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -105,15 +107,16 @@
           "name": "Gold/Pistachio"
         }
       ],
-      "price_current": 11327.0
+      "price_current": 11327.0,
+      "is_available": false
     },
     {
       "id": null,
       "sku": "CEW04 IMBLK",
       "title": "Gold/Black",
-      "price": "19039.00",
+      "price": "17941.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -125,7 +128,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 17941.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -145,7 +149,8 @@
           "name": "Gold/Carnation"
         }
       ],
-      "price_current": 11327.0
+      "price_current": 11327.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -157,7 +162,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cew04_imblk_a0",
       "option_values": [
         {
@@ -165,7 +170,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 19102.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -177,7 +183,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccd71_imv2r_a0",
       "option_values": [
         {
@@ -185,7 +191,8 @@
           "name": "Gold/Dark Stone"
         }
       ],
-      "price_current": 17003.0
+      "price_current": 17003.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -197,7 +204,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccd71_imchk_a0",
       "option_values": [
         {
@@ -205,7 +212,8 @@
           "name": "Gold/Chalk"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 19102.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -217,7 +225,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cgg26_svbk_a0",
       "option_values": [
         {
@@ -225,7 +233,8 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 19102.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -245,7 +254,8 @@
           "name": "Silver/Jasmine"
         }
       ],
-      "price_current": 11327.0
+      "price_current": 11327.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -265,19 +275,20 @@
           "name": "Gold/Indigo"
         }
       ],
-      "price_current": 14169.0
+      "price_current": 14169.0,
+      "is_available": false
     },
     {
       "id": null,
       "sku": "CDL99 IMBLK",
       "title": "Gold/Black",
-      "price": "19039.00",
+      "price": "17941.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cew04_imblk_a0",
       "option_values": [
         {
@@ -285,7 +296,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 17941.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -304,15 +316,16 @@
           "option_name": "Color",
           "name": "Gold/Peony"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "CCD49 IMBLK",
       "title": "Gold/Black",
-      "price": "19039.00",
+      "price": "17941.00",
       "compare_at_price": null,
-      "source_price": 199.0,
+      "source_price": 189.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -324,7 +337,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 17941.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -343,7 +357,8 @@
           "option_name": "Color",
           "name": "Gold/Oat"
         }
-      ]
+      ],
+      "is_available": false
     }
   ],
   "product_options": [
@@ -388,24 +403,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Tote Bags"
+    "Tote Bags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:38:36Z",
-  "last_verified_at": "2026-10-29T05:36:24Z",
+  "last_verified_at": "2026-11-16T15:47:04Z",
   "id": "0c8de562738192cc",
   "product_id": "0c8de562738192cc",
   "store": "coach",
-  "updated_at": "2026-10-29T05:36:24Z",
+  "updated_at": "2026-11-16T15:47:04Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841761263782",
   "shopify_handle": "station-tote-bag",
-  "shopify_synced_at": "2026-10-22T09:42:35Z",
+  "shopify_synced_at": "2026-11-15T01:12:04Z",
   "delist_strikes": 0,
   "supplier_delisted": false,
-  "last_synced_fx_rate": 94.995216
+  "last_synced_fx_rate": 94.289707
 }

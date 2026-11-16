@@ -10,7 +10,7 @@
   "source_price": 129.99,
   "source_compare_at_price": null,
   "current_price": 12348.0,
-  "compare_at_price": 16184.0,
+  "compare_at_price": 16048.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -51,7 +51,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/3A388024_01",
       "option_values": [
         {
@@ -147,7 +147,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/3A388024_01",
       "option_values": [
         {
@@ -195,7 +195,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/3A388024_01",
       "option_values": [
         {
@@ -213,13 +213,13 @@
       "id": null,
       "sku": "3A388024-9.5",
       "title": "UK 7.5 - Piedmont Grey/Piedmont Grey",
-      "price": "16318.00",
+      "price": "12388.00",
       "compare_at_price": null,
-      "source_price": 170.0,
+      "source_price": 129.99,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/3A388024_01",
       "option_values": [
         {
@@ -231,7 +231,7 @@
           "name": "Piedmont Grey/Piedmont Grey"
         }
       ],
-      "price_current": 16318.0
+      "price_current": 12388.0
     },
     {
       "id": null,
@@ -310,12 +310,12 @@
   "groups": [
     "ASICS Shoes"
   ],
-  "last_verified_at": "2026-10-29T05:39:47Z",
+  "last_verified_at": "2026-11-16T15:43:50Z",
   "created_at": "2026-09-20T10:34:57Z",
-  "updated_at": "2026-10-29T05:39:49Z",
+  "updated_at": "2026-11-16T15:43:50Z",
   "shopify_product_id": "gid://shopify/Product/15851015078054",
   "shopify_handle": "asics-gel-kayano-20-women-s-piedmont-grey-piedmont-grey-3a388024",
-  "shopify_synced_at": "2026-10-29T05:39:47Z",
+  "shopify_synced_at": "2026-11-12T08:51:33Z",
   "shopify_sync_pending": false,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 93.851604
 }

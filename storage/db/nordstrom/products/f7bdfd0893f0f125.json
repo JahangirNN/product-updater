@@ -9,7 +9,7 @@
   "source_sku": "ON-9043821-5",
   "source_price": 180.0,
   "source_compare_at_price": null,
-  "current_price": 17136.0,
+  "current_price": 16972.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -82,7 +82,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/7eeea977-1afd-401b-87d3-f64ef24d90ce.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1019,23 +1019,25 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T04:01:11Z",
+  "last_verified_at": "2026-11-16T15:56:51Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-10-29T04:01:11Z",
+  "updated_at": "2026-11-16T15:56:51Z",
   "price_range_usd": {
     "min": 180.0,
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 17136.0,
-    "max": 17136.0
+    "min": 16972.0,
+    "max": 16972.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "17136.00",
+  "price": "16972.00",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15848585822374",
   "shopify_handle": "cloudmonster-1-running-shoe",
-  "shopify_synced_at": "2026-10-28T20:08:36Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-14T19:56:09Z",
+  "last_synced_fx_rate": 94.289707,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

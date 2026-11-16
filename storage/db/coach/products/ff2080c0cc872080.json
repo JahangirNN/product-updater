@@ -64,7 +64,8 @@
           "name": "US 5 / UK 3"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -84,7 +85,8 @@
           "name": "US 6 / UK 4"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -104,7 +106,8 @@
           "name": "US 7 / UK 5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -124,7 +127,8 @@
           "name": "US 8 / UK 6"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -144,7 +148,8 @@
           "name": "US 9 / UK 7"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -164,7 +169,8 @@
           "name": "US 10 / UK 8"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -184,7 +190,8 @@
           "name": "US 11 / UK 9"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -217,23 +224,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Shoes & Footwear"
+    "Shoes & Footwear",
+    "Women"
   ],
   "groups": [
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:49:17Z",
-  "last_verified_at": "2026-10-29T03:39:13Z",
+  "last_verified_at": "2026-11-16T15:43:18Z",
   "id": "ff2080c0cc872080",
   "product_id": "ff2080c0cc872080",
   "store": "coach",
-  "updated_at": "2026-10-29T03:39:13Z",
+  "updated_at": "2026-11-16T15:43:18Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15848611053734",
   "shopify_handle": "archival-buckle-clog-with-signature-jacquard",
-  "shopify_synced_at": "2026-10-01T11:04:36Z",
+  "shopify_synced_at": "2026-11-15T05:03:53Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.289707,
+  "supplier_delisted": false
 }

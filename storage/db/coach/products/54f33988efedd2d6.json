@@ -95,7 +95,8 @@
           "name": "Brass/Clay"
         }
       ],
-      "price_current": 9359.0
+      "price_current": 9359.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -115,7 +116,8 @@
           "name": "Brass/Light Citron"
         }
       ],
-      "price_current": 18718.0
+      "price_current": 18718.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -135,7 +137,8 @@
           "name": "Brass/Dark Chocolate"
         }
       ],
-      "price_current": 18718.0
+      "price_current": 18718.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -155,7 +158,8 @@
           "name": "Brass/Dark Fuchsia"
         }
       ],
-      "price_current": 18718.0
+      "price_current": 18718.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -175,7 +179,8 @@
           "name": "Brass/Deep Sky Multi"
         }
       ],
-      "price_current": 18718.0
+      "price_current": 18718.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -202,23 +207,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Handbags"
+    "Handbags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:41:44Z",
-  "last_verified_at": "2026-10-29T03:38:03Z",
+  "last_verified_at": "2026-11-16T15:44:32Z",
   "id": "54f33988efedd2d6",
   "product_id": "54f33988efedd2d6",
   "store": "coach",
   "shopify_sync_pending": false,
-  "updated_at": "2026-10-29T03:38:03Z",
+  "updated_at": "2026-11-16T15:44:32Z",
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15841764868262",
   "shopify_handle": "barrel-bag",
-  "shopify_synced_at": "2026-10-28T11:42:49Z",
+  "shopify_synced_at": "2026-11-14T01:08:16Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

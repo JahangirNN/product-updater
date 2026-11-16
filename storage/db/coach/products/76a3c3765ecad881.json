@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Natural grain leather",
   "specifications": {
     "Material": "Natural grain leather",
@@ -50,7 +50,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cee07_blc_a0",
       "option_values": [
         {
@@ -58,7 +58,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 15118.0
+      "price_current": 15118.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -80,16 +81,17 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:42:55Z",
-  "last_verified_at": "2026-10-29T03:38:39Z",
+  "last_verified_at": "2026-11-16T15:45:16Z",
   "id": "76a3c3765ecad881",
   "product_id": "76a3c3765ecad881",
   "store": "coach",
-  "updated_at": "2026-10-29T03:38:39Z",
-  "is_active": true,
+  "updated_at": "2026-11-16T15:45:16Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841765949606",
   "shopify_handle": "3-in-1-wallet-with-ellie-graphic",
-  "shopify_synced_at": "2026-10-08T16:05:26Z",
+  "shopify_synced_at": "2026-11-14T01:10:53Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 95.29615,
+  "supplier_delisted": false
 }

@@ -113,8 +113,8 @@
       "current_price": 2276,
       "price_inr": 2276,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "2489599",
       "image_url": "https://www.sephora.com/productimages/sku/s2489599-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2489599+sw.jpg",
@@ -122,7 +122,8 @@
       "variation_value": "Taupe",
       "variation_type": "Color",
       "price": 2276,
-      "source_price": 24.0
+      "source_price": 24.0,
+      "inventory_quantity": 0
     },
     {
       "id": "2426757",
@@ -134,8 +135,8 @@
       "current_price": 2276,
       "price_inr": 2276,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "2426757",
       "image_url": "https://www.sephora.com/productimages/sku/s2426757-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2426757+sw.jpg",
@@ -143,7 +144,8 @@
       "variation_value": "Sangria",
       "variation_type": "Color",
       "price": 2276,
-      "source_price": 24.0
+      "source_price": 24.0,
+      "inventory_quantity": 0
     },
     {
       "id": "2849909",
@@ -265,8 +267,14 @@
     "merit"
   ],
   "created_at": "2026-11-04T18:53:15Z",
-  "last_verified_at": "2026-11-05T10:45:59Z",
+  "last_verified_at": "2026-11-16T15:41:22Z",
   "id": "d0d75709f9319b8a",
-  "updated_at": "2026-11-05T10:45:59Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:41:22Z",
+  "last_synced_fx_rate": 93.851604,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15994419019942",
+  "shopify_handle": "merit-shade-slick-hydrating-tinted-lip-oil-p468691",
+  "shopify_synced_at": "2026-11-12T16:23:48Z",
+  "shopify_image_synced": true,
+  "primary_image": "https://www.sephora.com/productimages/sku/s2426732-main-zoom.jpg"
 }

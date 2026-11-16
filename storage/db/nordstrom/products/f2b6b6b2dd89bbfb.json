@@ -9,7 +9,7 @@
   "source_sku": "HOKA-9052798-7",
   "source_price": 170.0,
   "source_compare_at_price": null,
-  "current_price": 16184.0,
+  "current_price": 16029.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -93,7 +93,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/021bfd3f-55bd-4b7a-a164-8c7bb4aeca53.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -139,7 +139,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/021bfd3f-55bd-4b7a-a164-8c7bb4aeca53.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -277,7 +277,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/021bfd3f-55bd-4b7a-a164-8c7bb4aeca53.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -300,7 +300,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/021bfd3f-55bd-4b7a-a164-8c7bb4aeca53.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -323,7 +323,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/021bfd3f-55bd-4b7a-a164-8c7bb4aeca53.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -404,23 +404,25 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T05:46:37Z",
+  "last_verified_at": "2026-11-16T16:01:34Z",
   "created_at": "2026-09-17T14:58:48Z",
-  "updated_at": "2026-10-29T05:46:37Z",
+  "updated_at": "2026-11-16T16:01:34Z",
   "price_range_usd": {
     "min": 170.0,
     "max": 170.0
   },
   "price_range_inr": {
-    "min": 16184.0,
-    "max": 16184.0
+    "min": 16029.0,
+    "max": 16029.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "16184.00",
+  "price": "16029.00",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15848582578342",
   "shopify_handle": "mafate-speed-2-sneaker-men",
-  "shopify_synced_at": "2026-10-28T21:46:04Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-15T03:18:56Z",
+  "last_synced_fx_rate": 94.289707,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Jack Messenger Bag In Signature Canvas",
   "specifications": {
     "Material": "Jack Messenger Bag In Signature Canvas",
@@ -57,7 +57,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdx85_svbk_a0",
       "option_values": [
         {
@@ -65,7 +65,8 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 17182.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -77,7 +78,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdx85_svmpl_a0",
       "option_values": [
         {
@@ -85,7 +86,8 @@
           "name": "Silver/Maple"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 17182.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -97,7 +99,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdx87_qbnrx_a0",
       "option_values": [
         {
@@ -105,7 +107,8 @@
           "name": "Gunmetal/Tan/Black"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 17182.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -125,7 +128,8 @@
           "name": "Silver/Black Signature"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 17182.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -145,7 +149,8 @@
           "name": "Silver/Blue"
         }
       ],
-      "price_current": 15282.0
+      "price_current": 15282.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -172,23 +177,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Handbags"
+    "Handbags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:43:59Z",
-  "last_verified_at": "2026-10-29T03:39:12Z",
+  "last_verified_at": "2026-11-16T15:43:25Z",
   "id": "8d9959c8a0be88f2",
   "product_id": "8d9959c8a0be88f2",
   "store": "coach",
-  "updated_at": "2026-10-29T03:39:12Z",
+  "updated_at": "2026-11-16T15:43:25Z",
   "shopify_sync_pending": false,
-  "is_active": true,
+  "is_active": false,
   "shopify_product_id": "gid://shopify/Product/15841766867110",
   "shopify_handle": "jack-messenger-bag-in-signature-canvas",
-  "shopify_synced_at": "2026-10-28T11:46:36Z",
+  "shopify_synced_at": "2026-11-15T23:43:55Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.262076,
+  "supplier_delisted": false
 }

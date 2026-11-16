@@ -9,8 +9,8 @@
   "source_sku": "HOKA-8430922-7",
   "source_price": 155.0,
   "source_compare_at_price": 155.0,
-  "current_price": 14756.0,
-  "compare_at_price": 14756.0,
+  "current_price": 14615.0,
+  "compare_at_price": 14615.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -253,9 +253,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T04:03:04Z",
+  "last_verified_at": "2026-11-16T16:02:30Z",
   "created_at": "2026-09-17T14:56:05Z",
-  "updated_at": "2026-10-29T04:03:04Z",
+  "updated_at": "2026-11-16T16:02:30Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -265,12 +265,14 @@
     "max": 155.0
   },
   "price_range_inr": {
-    "min": 14756.0,
-    "max": 14756.0
+    "min": 14615.0,
+    "max": 14615.0
   },
-  "price": "14756.00",
+  "price": "14615.00",
   "shopify_product_id": "gid://shopify/Product/15848582545574",
   "shopify_handle": "hoka-transport-2-gore-tex-waterproof-sneaker-men",
-  "shopify_synced_at": "2026-10-28T20:11:52Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-15T21:03:01Z",
+  "last_synced_fx_rate": 94.289707,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

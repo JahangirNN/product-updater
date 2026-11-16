@@ -79,7 +79,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 17182.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -99,7 +100,8 @@
           "name": "Gold/Chalk"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 17182.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -119,7 +121,8 @@
           "name": "Silver/Black Brown"
         }
       ],
-      "price_current": 17014.0
+      "price_current": 17014.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -139,7 +142,8 @@
           "name": "Gold/Tan/Brown"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 17182.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -159,7 +163,8 @@
           "name": "Silver/Sand/Taupe"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 17182.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -179,7 +184,8 @@
           "name": "Gold/Walnut/Black"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 17182.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -199,7 +205,8 @@
           "name": "Gold/Soft Pink"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 17182.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -232,23 +239,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Crossbody Bags"
+    "Crossbody Bags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:46:47Z",
-  "last_verified_at": "2026-10-29T05:37:03Z",
+  "last_verified_at": "2026-11-16T15:47:03Z",
   "id": "cb5e201ce209ae0a",
   "product_id": "cb5e201ce209ae0a",
   "store": "coach",
-  "updated_at": "2026-10-29T05:37:05Z",
+  "updated_at": "2026-11-16T15:47:03Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15841769095334",
   "shopify_handle": "rainer-crossbody-bag-18-with-quilting",
-  "shopify_synced_at": "2026-10-29T05:37:03Z",
+  "shopify_synced_at": "2026-11-14T01:17:29Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

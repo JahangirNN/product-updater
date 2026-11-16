@@ -9,12 +9,12 @@
   "source_sku": "ON-7895207-7",
   "source_price": 150.0,
   "source_compare_at_price": null,
-  "current_price": 14290.0,
+  "current_price": 14078.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Synthetic and textile upper, rubber and synthetic sole",
   "specifications": {
     "Brand": "On",
@@ -279,7 +279,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/2f98989e-d59f-4fbe-94b8-6903d3780946.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -680,7 +680,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/e904a67c-c565-4896-8470-2d482831c999.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -774,7 +774,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/09129bfb-67cb-498c-a070-0e4acf3146c3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1176,7 +1176,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/c80ffb1f-f3d0-450f-be30-d9dc432d969e.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1488,23 +1488,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:39:23Z",
+  "last_verified_at": "2026-11-16T15:45:34Z",
   "created_at": "2026-09-17T14:19:11Z",
-  "updated_at": "2026-10-29T03:39:23Z",
+  "updated_at": "2026-11-16T15:45:34Z",
   "price_range_usd": {
     "min": 150.0,
     "max": 150.0
   },
   "price_range_inr": {
-    "min": 14290.0,
-    "max": 14290.0
+    "min": 14078.0,
+    "max": 14078.0
   },
   "status": "ACTIVE",
-  "is_active": false,
-  "price": "14290.00",
+  "is_active": true,
+  "price": "14078.00",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15850875945126",
   "shopify_handle": "cloudsurfer-next-running-shoe-men",
-  "shopify_synced_at": "2026-10-27T19:51:24Z",
-  "last_synced_fx_rate": 95.269051
+  "shopify_synced_at": "2026-11-12T08:57:53Z",
+  "last_synced_fx_rate": 93.851604
 }

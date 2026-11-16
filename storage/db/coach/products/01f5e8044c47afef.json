@@ -49,7 +49,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cew40_lib_a0",
       "option_values": [
         {
@@ -57,7 +57,8 @@
           "name": "US 7 / UK 6.5"
         }
       ],
-      "price_current": 12995.0
+      "price_current": 12995.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -77,7 +78,8 @@
           "name": "US 8 / UK 7.5"
         }
       ],
-      "price_current": 12995.0
+      "price_current": 12995.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -97,7 +99,8 @@
           "name": "US 9 / UK 8.5"
         }
       ],
-      "price_current": 12995.0
+      "price_current": 12995.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -117,7 +120,8 @@
           "name": "US 10 / UK 9.5"
         }
       ],
-      "price_current": 12995.0
+      "price_current": 12995.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -137,7 +141,8 @@
           "name": "US 11 / UK 10.5"
         }
       ],
-      "price_current": 12995.0
+      "price_current": 12995.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -149,7 +154,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cew40_lib_a0",
       "option_values": [
         {
@@ -157,7 +162,8 @@
           "name": "US 12 / UK 11.5"
         }
       ],
-      "price_current": 12995.0
+      "price_current": 12995.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -169,7 +175,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cew40_lib_a0",
       "option_values": [
         {
@@ -177,7 +183,8 @@
           "name": "US 13 / UK 12.5"
         }
       ],
-      "price_current": 12995.0
+      "price_current": 12995.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -217,16 +224,17 @@
     "men_shoes"
   ],
   "created_at": "2026-09-12T23:00:00Z",
-  "last_verified_at": "2026-10-29T03:37:17Z",
+  "last_verified_at": "2026-11-16T15:46:48Z",
   "id": "01f5e8044c47afef",
   "product_id": "01f5e8044c47afef",
   "store": "coach",
-  "updated_at": "2026-10-29T03:37:17Z",
+  "updated_at": "2026-11-16T15:46:48Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15848603910310",
   "shopify_handle": "sport-clog-in-loved-leather",
-  "shopify_synced_at": "2026-10-28T07:38:34Z",
+  "shopify_synced_at": "2026-11-14T01:16:00Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

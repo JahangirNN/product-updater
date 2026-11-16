@@ -9,7 +9,7 @@
   "source_sku": "ON-9176213-7",
   "source_price": 180.0,
   "source_compare_at_price": null,
-  "current_price": 17136.0,
+  "current_price": 16967.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -237,7 +237,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/98f3dd9d-04db-4b97-9386-73b30f067de3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -283,7 +283,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/98f3dd9d-04db-4b97-9386-73b30f067de3.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -651,7 +651,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/68645d59-3ed8-4a5e-ae01-9a5daa51ea21.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -674,7 +674,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/68645d59-3ed8-4a5e-ae01-9a5daa51ea21.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -760,23 +760,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T04:03:09Z",
+  "last_verified_at": "2026-11-16T16:15:58Z",
   "created_at": "2026-09-17T14:19:11Z",
-  "updated_at": "2026-10-29T04:03:09Z",
+  "updated_at": "2026-11-16T16:15:58Z",
   "price_range_usd": {
     "min": 180.0,
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 17136.0,
-    "max": 17136.0
+    "min": 16967.0,
+    "max": 16967.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "17136.00",
+  "price": "16967.00",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15850880630950",
   "shopify_handle": "cloudrunner-3-waterproof-running-shoe-on-9176213-7",
-  "shopify_synced_at": "2026-10-28T12:08:37Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-16T12:14:04Z",
+  "last_synced_fx_rate": 94.262076
 }

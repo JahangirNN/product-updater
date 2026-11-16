@@ -65,7 +65,8 @@
           "name": "US 5 / UK 3"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -85,7 +86,8 @@
           "name": "US 5.5 / UK 3.5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -97,7 +99,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef54_blk_a0",
       "option_values": [
         {
@@ -105,7 +107,8 @@
           "name": "US 6 / UK 4"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -117,7 +120,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef54_blk_a0",
       "option_values": [
         {
@@ -125,7 +128,8 @@
           "name": "US 6.5 / UK 4.5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -145,7 +149,8 @@
           "name": "US 7 / UK 5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -165,7 +170,8 @@
           "name": "US 7.5 / UK 5.5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -177,7 +183,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef54_blk_a0",
       "option_values": [
         {
@@ -185,7 +191,8 @@
           "name": "US 8 / UK 6"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -197,7 +204,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef54_blk_a0",
       "option_values": [
         {
@@ -205,7 +212,8 @@
           "name": "US 8.5 / UK 6.5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -225,7 +233,8 @@
           "name": "US 9 / UK 7"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -245,7 +254,8 @@
           "name": "US 9.5 / UK 7.5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -265,7 +275,8 @@
           "name": "US 10 / UK 8"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -285,7 +296,8 @@
           "name": "US 11 / UK 9"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -333,23 +345,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Shoes & Footwear"
+    "Shoes & Footwear",
+    "Women"
   ],
   "groups": [
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:44:41Z",
-  "last_verified_at": "2026-10-29T03:40:11Z",
+  "last_verified_at": "2026-11-16T15:46:26Z",
   "id": "9d8c02f119e59a91",
   "product_id": "9d8c02f119e59a91",
   "store": "coach",
-  "updated_at": "2026-10-29T03:40:11Z",
+  "updated_at": "2026-11-16T15:46:26Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15848608596134",
   "shopify_handle": "brynn-thong-sandal",
-  "shopify_synced_at": "2026-10-24T10:57:54Z",
+  "shopify_synced_at": "2026-11-15T09:13:45Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 94.901331
+  "last_synced_fx_rate": 94.289707,
+  "supplier_delisted": false
 }

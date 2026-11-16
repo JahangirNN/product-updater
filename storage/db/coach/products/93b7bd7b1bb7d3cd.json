@@ -56,7 +56,8 @@
           "name": "Black Brown"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -76,7 +77,8 @@
           "name": "Brown"
         }
       ],
-      "price_current": 4703.0
+      "price_current": 4703.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -96,7 +98,8 @@
           "name": "Blue"
         }
       ],
-      "price_current": 3686.0
+      "price_current": 3686.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -116,7 +119,8 @@
           "name": "Vintage Brown"
         }
       ],
-      "price_current": 4703.0
+      "price_current": 4703.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -136,7 +140,8 @@
           "name": "Blue Multi"
         }
       ],
-      "price_current": 3686.0
+      "price_current": 3686.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -156,7 +161,8 @@
           "name": "Green"
         }
       ],
-      "price_current": 4703.0
+      "price_current": 4703.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -176,7 +182,8 @@
           "name": "Grey Multi."
         }
       ],
-      "price_current": 4703.0
+      "price_current": 4703.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -195,7 +202,8 @@
           "option_name": "Color",
           "name": "Toffee & Black"
         }
-      ]
+      ],
+      "is_available": false
     }
   ],
   "product_options": [
@@ -238,16 +246,17 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:44:16Z",
-  "last_verified_at": "2026-10-29T03:39:53Z",
+  "last_verified_at": "2026-11-16T15:46:58Z",
   "id": "93b7bd7b1bb7d3cd",
   "product_id": "93b7bd7b1bb7d3cd",
   "store": "coach",
-  "updated_at": "2026-10-29T03:39:54Z",
+  "updated_at": "2026-11-16T15:47:02Z",
   "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841767162022",
   "shopify_handle": "id-card-wallet-in-signature-canvas-with-patches",
-  "shopify_synced_at": "2026-10-29T03:39:53Z",
+  "shopify_synced_at": "2026-11-16T15:46:58Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.399626,
+  "supplier_delisted": false
 }

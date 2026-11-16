@@ -6,14 +6,14 @@
   "vendor": "JW PEI",
   "product_type": "2T33",
   "source_sku": "2T33-72",
-  "source_price": 89.0,
+  "source_price": 54.0,
   "source_compare_at_price": 89.0,
-  "current_price": 8515.0,
-  "compare_at_price": 8473.0,
+  "current_price": 5134.0,
+  "compare_at_price": 8353.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Vegan Leather",
   "specifications": {
     "Bag Dimensions": "7.8'' W × 6.9'' H× 2.8'' D (19.8cm x 17.5cmx 7cm)",
@@ -38,7 +38,7 @@
       "source_compare_at_price": 139.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-1ArtificalCrystalMiniTopHandleBag-Black_1_9a0fbd9b-9cbe-4a44-a408-1a261cd095fa.jpg?v=1784716428",
       "option_values": [
         {
@@ -46,7 +46,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 13338.0
+      "price_current": 13338.0,
+      "is_available": false
     },
     {
       "id": 40510215716898,
@@ -58,7 +59,7 @@
       "source_compare_at_price": 89.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/products/2T33-0FauxFurMiniTopHandleBag-Orange_2_eaa3ec3a-853c-4ba4-9e85-9049f146a3d2.jpg?v=1752239443",
       "option_values": [
         {
@@ -66,7 +67,8 @@
           "name": "Orange"
         }
       ],
-      "price_current": 8540.0
+      "price_current": 8540.0,
+      "is_available": false
     },
     {
       "id": 43028625260578,
@@ -86,19 +88,20 @@
           "name": "Pink"
         }
       ],
-      "price_current": 11419.0
+      "price_current": 11419.0,
+      "is_available": false
     },
     {
       "id": 40785944903714,
       "sku": "2T33-72",
       "title": "Standard",
-      "price": "8543.00",
+      "price": "5134.00",
       "compare_at_price": null,
-      "source_price": 89.0,
+      "source_price": 54.0,
       "source_compare_at_price": 89.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/products/2T33-72FauxFurMiniTopHandleBag-GrassGreen_3_a012d533-7fd0-4f26-bbe7-80b82da08d4d.jpg?v=1752239376",
       "option_values": [
         {
@@ -106,7 +109,8 @@
           "name": "Standard"
         }
       ],
-      "price_current": 8543.0
+      "price_current": 5134.0,
+      "is_available": false
     },
     {
       "id": 41066037346338,
@@ -118,7 +122,7 @@
       "source_compare_at_price": 139.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-45_1366b0a7-6dd5-470c-9fe0-b51b3e576705.jpg?v=1752239262",
       "option_values": [
         {
@@ -126,7 +130,8 @@
           "name": "Red"
         }
       ],
-      "price_current": 13338.0
+      "price_current": 13338.0,
+      "is_available": false
     },
     {
       "id": 40510209720354,
@@ -138,7 +143,7 @@
       "source_compare_at_price": 89.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/products/2T33-4Frront_fa5ae5e6-958d-4449-9893-a46cd1ae026d.jpg?v=1752239446",
       "option_values": [
         {
@@ -146,7 +151,8 @@
           "name": "Pink"
         }
       ],
-      "price_current": 8540.0
+      "price_current": 8540.0,
+      "is_available": false
     },
     {
       "id": 41067220795426,
@@ -158,7 +164,7 @@
       "source_compare_at_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-54-1.jpg?v=1752239194",
       "option_values": [
         {
@@ -166,7 +172,8 @@
           "name": "Blue"
         }
       ],
-      "price_current": 14298.0
+      "price_current": 14298.0,
+      "is_available": false
     },
     {
       "id": 41080959991842,
@@ -178,7 +185,7 @@
       "source_compare_at_price": 139.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-82-1.jpg?v=1752239173",
       "option_values": [
         {
@@ -186,7 +193,8 @@
           "name": "Yellow"
         }
       ],
-      "price_current": 13338.0
+      "price_current": 13338.0,
+      "is_available": false
     },
     {
       "id": 44289848049698,
@@ -198,7 +206,7 @@
       "source_compare_at_price": 89.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-17-FRONT.jpg?v=1766137126",
       "option_values": [
         {
@@ -206,7 +214,8 @@
           "name": "Black Croc"
         }
       ],
-      "price_current": 8540.0
+      "price_current": 8540.0,
+      "is_available": false
     },
     {
       "id": 44289848115234,
@@ -218,7 +227,7 @@
       "source_compare_at_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-16-FRONT.jpg?v=1765945777",
       "option_values": [
         {
@@ -226,7 +235,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 10459.0
+      "price_current": 10459.0,
+      "is_available": false
     },
     {
       "id": 44289848148002,
@@ -238,7 +248,7 @@
       "source_compare_at_price": 99.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-41-FRONT.jpg?v=1766137243",
       "option_values": [
         {
@@ -246,7 +256,8 @@
           "name": "Burgundy"
         }
       ],
-      "price_current": 9500.0
+      "price_current": 9500.0,
+      "is_available": false
     },
     {
       "id": 45894510837794,
@@ -258,7 +269,7 @@
       "source_compare_at_price": 89.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1784882469576-dumvrqxtiw4.jpg?v=1784887100",
       "option_values": [
         {
@@ -266,7 +277,8 @@
           "name": "Pink"
         }
       ],
-      "price_current": 8540.0
+      "price_current": 8540.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -325,14 +337,15 @@
     "26USMD",
     "ALLPRODUCT",
     "BACK TO SCHOOL II",
-    "bags",
     "BESTSELLER2023",
     "Collection IV",
     "Collection VII-AE",
     "Collection VII-CA",
     "Collection VII-SMC",
     "Collection VIII-AU",
-    "FW22-1"
+    "FW22-1",
+    "bags",
+    "supplier-delisted"
   ],
   "groups": [
     "handbags"
@@ -341,17 +354,19 @@
   "validation_warnings": [],
   "id": "4a493d3fc19fa103",
   "created_at": "2026-09-09T15:47:10Z",
-  "updated_at": "2026-10-29T05:36:59Z",
-  "last_verified_at": "2026-10-29T05:36:59Z",
-  "is_active": true,
+  "updated_at": "2026-11-16T15:45:25Z",
+  "last_verified_at": "2026-11-16T15:45:22Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841776074918",
   "shopify_handle": "abacus-faux-fur-mini-top-handle-bag-grass-green",
-  "shopify_synced_at": "2026-10-16T10:15:12Z",
+  "shopify_synced_at": "2026-11-16T15:45:22Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/products/2T33-72FauxFurMiniTopHandleBag-GrassGreen_3_a012d533-7fd0-4f26-bbe7-80b82da08d4d.jpg?v=1752239376",
   "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/products/2T33-72FauxFurMiniTopHandleBag-GrassGreen_3_a012d533-7fd0-4f26-bbe7-80b82da08d4d.jpg?v=1752239376",
   "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\4a493d3fc19fa103.json",
   "archived": true,
   "canonical_product_id": "gid://shopify/Product/15841772175526",
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "delist_strikes": 23,
+  "supplier_delisted": true
 }

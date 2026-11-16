@@ -64,7 +64,8 @@
           "name": "US 7 / UK 6.5"
         }
       ],
-      "price_current": 12328.0
+      "price_current": 12328.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -84,7 +85,8 @@
           "name": "US 7.5 / UK 7"
         }
       ],
-      "price_current": 12328.0
+      "price_current": 12328.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -104,7 +106,8 @@
           "name": "US 8 / UK 7.5"
         }
       ],
-      "price_current": 12328.0
+      "price_current": 12328.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -124,7 +127,8 @@
           "name": "US 8.5 / UK 8"
         }
       ],
-      "price_current": 12328.0
+      "price_current": 12328.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -144,7 +148,8 @@
           "name": "US 9 / UK 8.5"
         }
       ],
-      "price_current": 12328.0
+      "price_current": 12328.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -164,7 +169,8 @@
           "name": "US 9.5 / UK 9"
         }
       ],
-      "price_current": 12328.0
+      "price_current": 12328.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -184,7 +190,8 @@
           "name": "US 10 / UK 9.5"
         }
       ],
-      "price_current": 12328.0
+      "price_current": 12328.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -204,7 +211,8 @@
           "name": "US 10.5 / UK 10"
         }
       ],
-      "price_current": 12328.0
+      "price_current": 12328.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -224,7 +232,8 @@
           "name": "US 11 / UK 10.5"
         }
       ],
-      "price_current": 12328.0
+      "price_current": 12328.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -244,7 +253,8 @@
           "name": "US 11.5 / UK 11"
         }
       ],
-      "price_current": 12328.0
+      "price_current": 12328.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -264,7 +274,8 @@
           "name": "US 12 / UK 11.5"
         }
       ],
-      "price_current": 12328.0
+      "price_current": 12328.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -284,7 +295,8 @@
           "name": "US 13 / UK 12.5"
         }
       ],
-      "price_current": 12328.0
+      "price_current": 12328.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -339,16 +351,17 @@
     "men_shoes"
   ],
   "created_at": "2026-09-13T00:48:31Z",
-  "last_verified_at": "2026-10-29T03:36:45Z",
+  "last_verified_at": "2026-11-16T15:43:47Z",
   "id": "f36d49b1d6facdf8",
   "product_id": "f36d49b1d6facdf8",
   "store": "coach",
-  "updated_at": "2026-10-29T03:36:45Z",
+  "updated_at": "2026-11-16T15:43:47Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15848610791590",
   "shopify_handle": "soho-sneaker-in-loved-leather",
-  "shopify_synced_at": "2026-10-28T11:38:02Z",
+  "shopify_synced_at": "2026-11-14T01:04:42Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

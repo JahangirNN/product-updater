@@ -66,7 +66,8 @@
           "name": "Amber Brown"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -86,7 +87,8 @@
           "name": "Olive"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -106,7 +108,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 6623.0
+      "price_current": 6623.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -134,16 +137,17 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:40:58Z",
-  "last_verified_at": "2026-10-29T03:39:22Z",
+  "last_verified_at": "2026-11-16T15:45:41Z",
   "id": "3e5bd025f825c221",
   "product_id": "3e5bd025f825c221",
   "store": "coach",
-  "updated_at": "2026-10-29T03:39:22Z",
+  "updated_at": "2026-11-16T15:45:41Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841764081830",
   "shopify_handle": "id-billfold-wallet",
-  "shopify_synced_at": "2026-10-08T16:01:31Z",
+  "shopify_synced_at": "2026-11-14T01:12:07Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

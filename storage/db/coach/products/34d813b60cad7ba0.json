@@ -62,7 +62,8 @@
           "name": "Silver/BLACK"
         }
       ],
-      "price_current": 11327.0
+      "price_current": 11327.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -81,7 +82,8 @@
           "option_name": "Color",
           "name": "Silver/BLACK"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -101,7 +103,8 @@
           "name": "Gold/White/Chalk"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 19102.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -121,7 +124,8 @@
           "name": "Gold/Sand/Tan"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 19102.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -141,7 +145,8 @@
           "name": "Gold/Walnut/Tan"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 19102.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -161,7 +166,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -181,7 +187,8 @@
           "name": "Silver/Chalk/Glacier White"
         }
       ],
-      "price_current": 19102.0
+      "price_current": 19102.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -201,7 +208,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 18142.0
+      "price_current": 18142.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -231,23 +239,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Crossbody Bags"
+    "Crossbody Bags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:40:41Z",
-  "last_verified_at": "2026-10-29T03:38:14Z",
+  "last_verified_at": "2026-11-16T15:44:42Z",
   "id": "34d813b60cad7ba0",
   "product_id": "34d813b60cad7ba0",
   "store": "coach",
-  "updated_at": "2026-10-29T03:38:14Z",
+  "updated_at": "2026-11-16T15:44:42Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841763786918",
   "shopify_handle": "klare-crossbody-bag-in-signature-canvas",
-  "shopify_synced_at": "2026-10-16T04:15:44Z",
+  "shopify_synced_at": "2026-11-14T01:08:53Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

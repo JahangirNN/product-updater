@@ -66,7 +66,8 @@
           "name": "Gunmetal/Tan/Black"
         }
       ],
-      "price_current": 9996.0
+      "price_current": 9996.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -86,7 +87,8 @@
           "name": "Gunmetal/Charcoal/Black"
         }
       ],
-      "price_current": 9996.0
+      "price_current": 9996.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -105,7 +107,8 @@
           "option_name": "Color",
           "name": "Gunmetal/Tan Multi"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -125,7 +128,8 @@
           "name": "Gunmetal/Khaki/Charcoal"
         }
       ],
-      "price_current": 9996.0
+      "price_current": 9996.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -149,23 +153,24 @@
   ],
   "tags": [
     "COACH",
-    "Men",
-    "Handbags"
+    "Handbags",
+    "Men"
   ],
   "groups": [
     "men_bags"
   ],
   "created_at": "2026-09-13T00:39:36Z",
-  "last_verified_at": "2026-10-29T03:37:39Z",
+  "last_verified_at": "2026-11-16T15:42:51Z",
   "id": "24c9c173dcdc2944",
   "product_id": "24c9c173dcdc2944",
   "store": "coach",
-  "updated_at": "2026-10-29T03:37:39Z",
+  "updated_at": "2026-11-16T15:42:51Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841762443430",
   "shopify_handle": "sullivan-pack-in-signature-canvas",
-  "shopify_synced_at": "2026-10-28T11:41:26Z",
+  "shopify_synced_at": "2026-11-15T11:07:15Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.289707,
+  "supplier_delisted": false
 }

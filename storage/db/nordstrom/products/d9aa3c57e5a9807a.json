@@ -9,8 +9,8 @@
   "source_sku": "SALOMON-8159650-8",
   "source_price": 130.0,
   "source_compare_at_price": 130.0,
-  "current_price": 12376.0,
-  "compare_at_price": 12376.0,
+  "current_price": 12231.0,
+  "compare_at_price": 12231.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -239,7 +239,7 @@
       "source_compare_at_price": 130.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/6e1f34da-ba22-49c3-b244-655c289aa3d2.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -263,7 +263,7 @@
       "source_compare_at_price": 130.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/6e1f34da-ba22-49c3-b244-655c289aa3d2.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -311,7 +311,7 @@
       "source_compare_at_price": 130.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/6e1f34da-ba22-49c3-b244-655c289aa3d2.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -415,9 +415,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:57:53Z",
+  "last_verified_at": "2026-11-16T13:43:02Z",
   "created_at": "2026-09-17T19:01:50Z",
-  "updated_at": "2026-10-29T03:57:53Z",
+  "updated_at": "2026-11-16T13:43:02Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -427,12 +427,12 @@
     "max": 130.0
   },
   "price_range_inr": {
-    "min": 7425.0,
-    "max": 12376.0
+    "min": 7338.0,
+    "max": 12231.0
   },
-  "price": "12376.00",
+  "price": "12231.00",
   "shopify_product_id": "gid://shopify/Product/15848587559078",
   "shopify_handle": "gender-inclusive-xt-pathway-2-sneaker",
-  "shopify_synced_at": "2026-10-28T16:17:26Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-14T03:07:51Z",
+  "last_synced_fx_rate": 94.086126
 }

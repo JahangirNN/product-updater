@@ -88,7 +88,57 @@
             { "min_discount": 0.50, "max_discount": 0.60, "markup": 0.50 },
             { "min_discount": 0.60, "markup": 0.70 }
           ]
+        },
+        "Sunglasses": {
+          "formula": "usd_tiered_percentage_markup",
+          "description": "Jomashop designer sunglasses tiered USD markup: <=$50: +40%, $50-100: +35%, $100-150: +30%, >$150: +25% with .99 charm",
+          "round_nearest": 100,
+          "charm_offset": -1,
+          "brackets": [
+            { "max_usd": 50.0, "markup_percent": 0.40, "description": "Within $50: 40% markup" },
+            { "min_usd": 50.0, "max_usd": 100.0, "inclusive_min": false, "markup_percent": 0.35, "description": "$50 to $100: 35% markup" },
+            { "min_usd": 100.0, "max_usd": 150.0, "inclusive_min": false, "markup_percent": 0.30, "description": "$100 to $150: 30% markup" },
+            { "min_usd": 150.0, "markup_percent": 0.25, "description": "Above $150: 25% markup" }
+          ]
+        },
+        "Eyewear": {
+          "formula": "usd_tiered_percentage_markup",
+          "description": "Jomashop designer sunglasses tiered USD markup: <=$50: +40%, $50-100: +35%, $100-150: +30%, >$150: +25% with .99 charm",
+          "round_nearest": 100,
+          "charm_offset": -1,
+          "brackets": [
+            { "max_usd": 50.0, "markup_percent": 0.40, "description": "Within $50: 40% markup" },
+            { "min_usd": 50.0, "max_usd": 100.0, "inclusive_min": false, "markup_percent": 0.35, "description": "$50 to $100: 35% markup" },
+            { "min_usd": 100.0, "max_usd": 150.0, "inclusive_min": false, "markup_percent": 0.30, "description": "$100 to $150: 30% markup" },
+            { "min_usd": 150.0, "markup_percent": 0.25, "description": "Above $150: 25% markup" }
+          ]
         }
+      }
+    },
+    "nordstrom": {
+      "default": {
+        "formula": "price_bracket_markup",
+        "description": "Nordstrom tiered markup: within 10K: +45%, within 15K: +40%, above 15K: +35% with .99 charm",
+        "round_nearest": 100,
+        "charm_offset": -1,
+        "brackets": [
+          { "max_inr": 10000, "markup_percent": 0.45, "description": "Within 10K base cost: 45% markup" },
+          { "min_inr": 10000, "max_inr": 15000, "markup_percent": 0.40, "description": "Within 15K base cost: 40% markup" },
+          { "min_inr": 15000, "markup_percent": 0.35, "description": "Above 15K base cost: 35% markup" }
+        ]
+      }
+    },
+    "nordstromrack": {
+      "default": {
+        "formula": "price_bracket_markup",
+        "description": "Nordstrom Rack tiered markup: within 10K: +45%, within 15K: +40%, above 15K: +35% with .99 charm",
+        "round_nearest": 100,
+        "charm_offset": -1,
+        "brackets": [
+          { "max_inr": 10000, "markup_percent": 0.45, "description": "Within 10K base cost: 45% markup" },
+          { "min_inr": 10000, "max_inr": 15000, "markup_percent": 0.40, "description": "Within 15K base cost: 40% markup" },
+          { "min_inr": 15000, "markup_percent": 0.35, "description": "Above 15K base cost: 35% markup" }
+        ]
       }
     },
     "coach": {
@@ -277,6 +327,30 @@
         { "min_discount": 0.40, "max_discount": 0.50, "markup": 0.40 },
         { "min_discount": 0.50, "max_discount": 0.60, "markup": 0.50 },
         { "min_discount": 0.60, "markup": 0.70 }
+      ]
+    },
+    "Sunglasses": {
+      "formula": "usd_tiered_percentage_markup",
+      "description": "Universal designer sunglasses tiered USD markup: <=$50: +40%, $50-100: +35%, $100-150: +30%, >$150: +25% with .99 charm",
+      "round_nearest": 100,
+      "charm_offset": -1,
+      "brackets": [
+        { "max_usd": 50.0, "markup_percent": 0.40, "description": "Within $50: 40% markup" },
+        { "min_usd": 50.0, "max_usd": 100.0, "inclusive_min": false, "markup_percent": 0.35, "description": "$50 to $100: 35% markup" },
+        { "min_usd": 100.0, "max_usd": 150.0, "inclusive_min": false, "markup_percent": 0.30, "description": "$100 to $150: 30% markup" },
+        { "min_usd": 150.0, "markup_percent": 0.25, "description": "Above $150: 25% markup" }
+      ]
+    },
+    "Eyewear": {
+      "formula": "usd_tiered_percentage_markup",
+      "description": "Universal designer sunglasses tiered USD markup: <=$50: +40%, $50-100: +35%, $100-150: +30%, >$150: +25% with .99 charm",
+      "round_nearest": 100,
+      "charm_offset": -1,
+      "brackets": [
+        { "max_usd": 50.0, "markup_percent": 0.40, "description": "Within $50: 40% markup" },
+        { "min_usd": 50.0, "max_usd": 100.0, "inclusive_min": false, "markup_percent": 0.35, "description": "$50 to $100: 35% markup" },
+        { "min_usd": 100.0, "max_usd": 150.0, "inclusive_min": false, "markup_percent": 0.30, "description": "$100 to $150: 30% markup" },
+        { "min_usd": 150.0, "markup_percent": 0.25, "description": "Above $150: 25% markup" }
       ]
     }
   },

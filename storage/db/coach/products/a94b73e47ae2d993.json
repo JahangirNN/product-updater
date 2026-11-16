@@ -59,7 +59,8 @@
           "name": "Black Brown"
         }
       ],
-      "price_current": 7583.0
+      "price_current": 7583.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -81,16 +82,17 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:45:24Z",
-  "last_verified_at": "2026-10-29T03:40:27Z",
+  "last_verified_at": "2026-11-16T15:42:23Z",
   "id": "a94b73e47ae2d993",
   "product_id": "a94b73e47ae2d993",
   "store": "coach",
-  "updated_at": "2026-10-29T03:40:27Z",
+  "updated_at": "2026-11-16T15:42:23Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841767981222",
   "shopify_handle": "3-in-1-wallet-in-loved-leather",
-  "shopify_synced_at": "2026-09-29T05:56:03Z",
+  "shopify_synced_at": "2026-11-13T23:07:07Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

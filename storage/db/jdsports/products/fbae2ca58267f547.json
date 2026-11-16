@@ -12,12 +12,12 @@
   "source_price": 75.0,
   "source_compare_at_price": null,
   "current_price": 7199.0,
-  "compare_at_price": 10948.0,
+  "compare_at_price": 10840.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -57,7 +57,8 @@
           "option_name": "Color",
           "name": "Black/White/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -81,7 +82,8 @@
           "option_name": "Color",
           "name": "Black/White/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -105,7 +107,8 @@
           "option_name": "Color",
           "name": "Black/White/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -129,7 +132,8 @@
           "option_name": "Color",
           "name": "Black/White/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -153,7 +157,8 @@
           "option_name": "Color",
           "name": "Black/White/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -177,7 +182,8 @@
           "option_name": "Color",
           "name": "Black/White/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -201,7 +207,8 @@
           "option_name": "Color",
           "name": "Black/White/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -225,7 +232,8 @@
           "option_name": "Color",
           "name": "Black/White/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -238,7 +246,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/DD1391_100_P1",
       "option_values": [
         {
@@ -249,7 +257,8 @@
           "option_name": "Color",
           "name": "Black/White/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -273,7 +282,8 @@
           "option_name": "Color",
           "name": "Black/White/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -286,7 +296,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/DD1391_100_P1",
       "option_values": [
         {
@@ -297,7 +307,8 @@
           "option_name": "Color",
           "name": "Black/White/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -321,7 +332,8 @@
           "option_name": "Color",
           "name": "Black/White/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -345,7 +357,8 @@
           "option_name": "Color",
           "name": "Black/White/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -369,7 +382,8 @@
           "option_name": "Color",
           "name": "Black/White/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -393,7 +407,8 @@
           "option_name": "Color",
           "name": "Black/White/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -417,7 +432,8 @@
           "option_name": "Color",
           "name": "Black/White/Black"
         }
-      ]
+      ],
+      "is_available": false
     }
   ],
   "product_options": [
@@ -484,12 +500,13 @@
     }
   ],
   "tags": [
-    "Nike",
-    "Footwear",
     "Adult",
-    "Men's",
+    "Footwear",
     "JD Sports",
-    "Nike Dunk Low"
+    "Men's",
+    "Nike",
+    "Nike Dunk Low",
+    "supplier-delisted"
   ],
   "groups": [
     "footwear",
@@ -498,11 +515,13 @@
     "shoes"
   ],
   "created_at": "2026-09-20T16:06:31Z",
-  "updated_at": "2026-10-29T05:37:36Z",
-  "last_verified_at": "2026-10-29T05:37:36Z",
+  "updated_at": "2026-11-16T15:43:09Z",
+  "last_verified_at": "2026-11-16T15:43:07Z",
   "shopify_product_id": "gid://shopify/Product/15851462885542",
   "shopify_handle": "mens-nike-dunk-low-retro-casual-shoes-black-white-black-3136408",
-  "shopify_synced_at": "2026-10-28T03:35:27Z",
+  "shopify_synced_at": "2026-11-16T15:43:07Z",
   "shopify_sync_pending": false,
-  "last_synced_fx_rate": 95.269051
+  "last_synced_fx_rate": 94.262076,
+  "delist_strikes": 5,
+  "supplier_delisted": true
 }

@@ -221,6 +221,22 @@ Supported variables
               <div class="v-stack luxury-pdp-pricing">
                 {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, context: 'product' -%}
 
+                {%- assign is_pdp_ready_to_ship = false -%}
+                {%- for tag in product.tags -%}
+                  {%- assign t_down = tag | downcase -%}
+                  {%- if t_down == 'ready to ship' or t_down == 'instant-ship' or t_down == 'ready-to-ship' or t_down == 'manual-instant-ship-active' -%}
+                    {%- assign is_pdp_ready_to_ship = true -%}
+                    {%- break -%}
+                  {%- endif -%}
+                {%- endfor -%}
+
+                {%- if is_pdp_ready_to_ship -%}
+                  <div class="luxury-pdp-ready-badge-pill">
+                    <span class="ready-indicator"></span>
+                    <span class="ready-text">Ready to Ship &bull; Express Dispatch in 24 Hours</span>
+                  </div>
+                {%- endif -%}
+
                 {%- assign current_var = product.selected_or_first_available_variant -%}
                 {%- if current_var.compare_at_price > current_var.price -%}
                   {%- assign savings_amt = current_var.compare_at_price | minus: current_var.price -%}
@@ -257,6 +273,10 @@ Supported variables
                   </p>
                 {%- endif -%}
               </div>
+
+              {%- if context == 'main_product' -%}
+                {%- render 'checkcheck-authenticity', product: product -%}
+              {%- endif -%}
             {%- endif -%}
 
           {%- when 'payment_terms' -%}
@@ -452,13 +472,13 @@ Supported variables
 
             {%- if context == 'main_product' -%}
               <div class="luxury-pdp-trust-grid">
-                <div class="luxury-pdp-trust-item">
-                  <div class="luxury-pdp-trust-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+                <div class="luxury-pdp-trust-item" onclick="openCheckCheckDrawer()" style="cursor: pointer;">
+                  <div class="luxury-pdp-trust-icon" style="color: #10b981;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
                   </div>
                   <div class="luxury-pdp-trust-text">
-                    <span class="luxury-pdp-trust-title">100% Authentic</span>
-                    <span class="luxury-pdp-trust-desc">Certified serials & luxury box</span>
+                    <span class="luxury-pdp-trust-title">CheckCheck Verified</span>
+                    <span class="luxury-pdp-trust-desc">4-hr independent 3rd-party audit</span>
                   </div>
                 </div>
 

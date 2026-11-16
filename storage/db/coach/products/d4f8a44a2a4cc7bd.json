@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Canvas and grosgrain",
   "specifications": {
     "Material": "Canvas and grosgrain",
@@ -65,7 +65,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cz098_lhblk_a0",
       "option_values": [
         {
@@ -73,7 +73,8 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 14398.0
+      "price_current": 14398.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -93,7 +94,8 @@
           "name": "Silver/Dark Natural"
         }
       ],
-      "price_current": 14398.0
+      "price_current": 14398.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -112,7 +114,8 @@
           "option_name": "Color",
           "name": "Brass/Black"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -131,7 +134,8 @@
           "option_name": "Color",
           "name": "Brass/Chalk"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -143,7 +147,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/caf76_b4m2_a0",
       "option_values": [
         {
@@ -151,7 +155,8 @@
           "name": "Brass/Black Multi"
         }
       ],
-      "price_current": 24016.0
+      "price_current": 24016.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -163,7 +168,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/caf76_b4rhr_a0",
       "option_values": [
         {
@@ -171,7 +176,8 @@
           "name": "Brass/Ivory Multi"
         }
       ],
-      "price_current": 24016.0
+      "price_current": 24016.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -191,7 +197,8 @@
           "name": "Brass/Indigo"
         }
       ],
-      "price_current": 14410.0
+      "price_current": 14410.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -224,23 +231,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Tote Bags"
+    "Tote Bags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:47:07Z",
-  "last_verified_at": "2026-10-29T05:37:27Z",
+  "last_verified_at": "2026-11-16T15:47:16Z",
   "id": "d4f8a44a2a4cc7bd",
   "product_id": "d4f8a44a2a4cc7bd",
   "store": "coach",
-  "updated_at": "2026-10-29T05:37:27Z",
-  "is_active": true,
+  "updated_at": "2026-11-16T15:47:16Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841769357478",
   "shopify_handle": "cargo-tote-bag-20",
-  "shopify_synced_at": "2026-10-23T11:52:55Z",
+  "shopify_synced_at": "2026-11-16T11:55:59Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 94.593871
+  "last_synced_fx_rate": 94.262076,
+  "supplier_delisted": false
 }

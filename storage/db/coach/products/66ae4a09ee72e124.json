@@ -72,7 +72,8 @@
           "name": "Brass/Black"
         }
       ],
-      "price_current": 14398.0
+      "price_current": 14398.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -92,7 +93,8 @@
           "name": "Brass/Chalk"
         }
       ],
-      "price_current": 14398.0
+      "price_current": 14398.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -112,7 +114,8 @@
           "name": "Brass/Dark Peach"
         }
       ],
-      "price_current": 7199.0
+      "price_current": 7199.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -124,7 +127,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw564_b4mpl_a0",
       "option_values": [
         {
@@ -132,7 +135,8 @@
           "name": "Brass/Maple"
         }
       ],
-      "price_current": 14398.0
+      "price_current": 14398.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -144,7 +148,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cd717_b4bk_a0",
       "option_values": [
         {
@@ -152,7 +156,8 @@
           "name": "Brass/Black"
         }
       ],
-      "price_current": 14398.0
+      "price_current": 14398.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -164,7 +169,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw564_b4nv_a0",
       "option_values": [
         {
@@ -172,7 +177,8 @@
           "name": "Brass/Navy"
         }
       ],
-      "price_current": 5759.0
+      "price_current": 5759.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -192,7 +198,8 @@
           "name": "Brass/Ash"
         }
       ],
-      "price_current": 7199.0
+      "price_current": 7199.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -212,7 +219,8 @@
           "name": "Brass/Toffee"
         }
       ],
-      "price_current": 7199.0
+      "price_current": 7199.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -224,7 +232,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw564_b4yth_a0",
       "option_values": [
         {
@@ -232,7 +240,8 @@
           "name": "Brass/Muted Olive"
         }
       ],
-      "price_current": 7199.0
+      "price_current": 7199.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -252,7 +261,8 @@
           "name": "Brass/Vanilla"
         }
       ],
-      "price_current": 7199.0
+      "price_current": 7199.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -272,7 +282,8 @@
           "name": "Brass/Tan Caramel"
         }
       ],
-      "price_current": 14398.0
+      "price_current": 14398.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -292,7 +303,8 @@
           "name": "Brass/Cream Multi"
         }
       ],
-      "price_current": 5759.0
+      "price_current": 5759.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -337,23 +349,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Wallets & Small Goods"
+    "Wallets & Small Goods",
+    "Women"
   ],
   "groups": [
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:42:27Z",
-  "last_verified_at": "2026-10-29T03:38:26Z",
+  "last_verified_at": "2026-11-16T15:45:00Z",
   "id": "66ae4a09ee72e124",
   "product_id": "66ae4a09ee72e124",
   "store": "coach",
-  "updated_at": "2026-10-29T03:38:26Z",
+  "updated_at": "2026-11-16T15:45:00Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15841765490854",
   "shopify_handle": "essential-billfold-wallet",
-  "shopify_synced_at": "2026-10-28T23:43:06Z",
+  "shopify_synced_at": "2026-11-14T01:09:54Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

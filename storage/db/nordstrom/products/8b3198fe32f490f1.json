@@ -9,8 +9,8 @@
   "source_sku": "HOKA-8735215-7",
   "source_price": 175.0,
   "source_compare_at_price": 175.0,
-  "current_price": 16660.0,
-  "compare_at_price": 16660.0,
+  "current_price": 16501.0,
+  "compare_at_price": 16501.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -47,7 +47,7 @@
       "source_compare_at_price": 175.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9e1e6f73-4ae4-43bc-a36c-40210f2a00ce.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -346,7 +346,7 @@
       "source_compare_at_price": 175.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/9e1e6f73-4ae4-43bc-a36c-40210f2a00ce.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -428,9 +428,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T04:02:54Z",
+  "last_verified_at": "2026-11-16T15:49:29Z",
   "created_at": "2026-09-17T15:02:50Z",
-  "updated_at": "2026-10-29T04:02:54Z",
+  "updated_at": "2026-11-16T15:49:29Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "price_range_usd": {
@@ -438,12 +438,12 @@
     "max": 175.0
   },
   "price_range_inr": {
-    "min": 16660.0,
-    "max": 16660.0
+    "min": 16501.0,
+    "max": 16501.0
   },
-  "price": "16660.00",
+  "price": "16501.00",
   "shopify_product_id": "gid://shopify/Product/15850878730406",
   "shopify_handle": "hoka-transport-2-gtx-gore-tex-waterproof-hiking-sneaker-men",
-  "shopify_synced_at": "2026-10-29T00:12:14Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-14T15:19:08Z",
+  "last_synced_fx_rate": 94.289707
 }

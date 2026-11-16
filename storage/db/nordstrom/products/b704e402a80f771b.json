@@ -9,8 +9,8 @@
   "source_sku": "ON-7674613-5",
   "source_price": 200.0,
   "source_compare_at_price": 200.0,
-  "current_price": 19032.0,
-  "compare_at_price": 19032.0,
+  "current_price": 18817.0,
+  "compare_at_price": 18817.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -185,13 +185,13 @@
       "id": 767461306,
       "sku": "ON-7674613-8",
       "title": "UK 6 - Ivory Maroon",
-      "price": "6090.00",
+      "price": "18924.00",
       "compare_at_price": null,
-      "source_price": 64.0,
+      "source_price": 200.0,
       "source_compare_at_price": 200.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/5a65e3cf-ee37-4c15-adb9-ca981237afdd.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -203,19 +203,19 @@
           "name": "Ivory Maroon"
         }
       ],
-      "price_current": 6090.0
+      "price_current": 18924.0
     },
     {
       "id": 767461307,
       "sku": "ON-7674613-8.5",
       "title": "UK 6.5 - Ivory Maroon",
-      "price": "19011.00",
+      "price": "7508.00",
       "compare_at_price": null,
-      "source_price": 200.0,
+      "source_price": 80.0,
       "source_compare_at_price": 200.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/5a65e3cf-ee37-4c15-adb9-ca981237afdd.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -227,15 +227,15 @@
           "name": "Ivory Maroon"
         }
       ],
-      "price_current": 19011.0
+      "price_current": 7508.0
     },
     {
       "id": 767461308,
       "sku": "ON-7674613-9",
       "title": "UK 7 - Ivory Maroon",
-      "price": "6090.00",
+      "price": "7587.00",
       "compare_at_price": null,
-      "source_price": 64.0,
+      "source_price": 80.0,
       "source_compare_at_price": 200.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -251,7 +251,7 @@
           "name": "Ivory Maroon"
         }
       ],
-      "price_current": 6090.0
+      "price_current": 7587.0
     },
     {
       "id": 767461309,
@@ -464,9 +464,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:56:05Z",
+  "last_verified_at": "2026-11-16T16:07:41Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-10-29T03:56:05Z",
+  "updated_at": "2026-11-16T16:07:41Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -476,12 +476,12 @@
     "max": 200.0
   },
   "price_range_inr": {
-    "min": 6090.0,
-    "max": 19032.0
+    "min": 6022.0,
+    "max": 18817.0
   },
-  "price": "19032.00",
+  "price": "18817.00",
   "shopify_product_id": "gid://shopify/Product/15848586838182",
   "shopify_handle": "the-roger-centre-court-tennis-sneaker-women",
-  "shopify_synced_at": "2026-10-27T05:12:38Z",
-  "last_synced_fx_rate": 95.160836
+  "shopify_synced_at": "2026-11-13T21:18:39Z",
+  "last_synced_fx_rate": 94.086126
 }

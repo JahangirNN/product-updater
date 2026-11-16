@@ -12,12 +12,12 @@
   "source_price": 80.0,
   "source_compare_at_price": null,
   "current_price": 7751.0,
-  "compare_at_price": 11621.0,
+  "compare_at_price": 11517.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -96,7 +96,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/DD8561_100_P1",
       "option_values": [
         {
@@ -108,7 +108,7 @@
           "name": "White/Black/Fresh Water/Varsity Red"
         }
       ],
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -121,7 +121,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/DD8561_100_P1",
       "option_values": [
         {
@@ -133,7 +133,7 @@
           "name": "White/Black/Fresh Water/Varsity Red"
         }
       ],
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -196,7 +196,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/DD8561_100_P1",
       "option_values": [
         {
@@ -208,7 +208,7 @@
           "name": "White/Black/Fresh Water/Varsity Red"
         }
       ],
-      "is_available": false
+      "is_available": true
     }
   ],
   "product_options": [
@@ -252,8 +252,7 @@
     "Footwear",
     "Grade School",
     "JD Sports",
-    "Nike",
-    "supplier-delisted"
+    "Nike"
   ],
   "groups": [
     "boys'-shoes",
@@ -262,15 +261,15 @@
     "shoes"
   ],
   "created_at": "2026-09-20T15:55:19Z",
-  "updated_at": "2026-10-29T05:37:00Z",
-  "last_verified_at": "2026-10-29T05:36:59Z",
+  "updated_at": "2026-11-16T15:42:14Z",
+  "last_verified_at": "2026-11-16T15:42:11Z",
   "shopify_product_id": "gid://shopify/Product/15851454628006",
   "shopify_handle": "boys-big-kids-nike-air-griffey-max-1-training-shoes-white-black-fresh-water-varsity-red-5671222",
-  "shopify_synced_at": "2026-10-29T05:36:59Z",
+  "shopify_synced_at": "2026-11-16T15:42:11Z",
   "shopify_sync_pending": false,
   "price": "7751.00",
   "price_current": 7751.0,
-  "delist_strikes": 77,
-  "supplier_delisted": true,
-  "last_synced_fx_rate": 95.252751
+  "delist_strikes": 0,
+  "supplier_delisted": false,
+  "last_synced_fx_rate": 94.399626
 }

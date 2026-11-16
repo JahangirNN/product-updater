@@ -9,7 +9,7 @@
   "source_sku": "SALOMON-8785629-5",
   "source_price": 185.0,
   "source_compare_at_price": null,
-  "current_price": 17612.0,
+  "current_price": 17438.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -254,7 +254,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/5c345b72-d608-4934-9196-07cf7cc386b8.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -369,7 +369,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/5c345b72-d608-4934-9196-07cf7cc386b8.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -482,23 +482,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:42:05Z",
+  "last_verified_at": "2026-11-16T15:58:40Z",
   "created_at": "2026-09-17T18:54:57Z",
-  "updated_at": "2026-10-29T03:42:07Z",
+  "updated_at": "2026-11-16T15:58:40Z",
   "price_range_usd": {
     "min": 185.0,
     "max": 185.0
   },
   "price_range_inr": {
-    "min": 17612.0,
-    "max": 17612.0
+    "min": 17438.0,
+    "max": 17438.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "17612.00",
+  "price": "17438.00",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15848585265318",
   "shopify_handle": "xt-6-stormshade",
-  "shopify_synced_at": "2026-10-29T03:42:05Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-15T20:58:26Z",
+  "last_synced_fx_rate": 94.262076
 }

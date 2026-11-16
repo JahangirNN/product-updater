@@ -133,18 +133,16 @@ def test_product_includes_all_sizes_including_sizes_below_7():
 
     # Check variant titles and option values for sizes below 7
     v_sizes = [v["option_values"][0]["name"] for v in res["variants"]]
-    assert "US 5" in v_sizes
-    assert "US 5.5" in v_sizes
-    assert "US 6" in v_sizes
-    assert "US 6.5" in v_sizes
+    assert "UK 3" in v_sizes    # 5.0 -> 3.0
+    assert "UK 3.5" in v_sizes  # 5.5 -> 3.5
+    assert "UK 4" in v_sizes    # 6.0 -> 4.0
+    assert "UK 4.5" in v_sizes  # 6.5 -> 4.5
+    assert "UK 5" in v_sizes    # 7.0 -> 5.0
 
-    # Check US -> UK mappings in options
-    uk_sizes = [v["option_values"][1]["name"] for v in res["variants"]]
-    assert "UK 3" in uk_sizes    # 5.0 -> 3.0
-    assert "UK 3.5" in uk_sizes  # 5.5 -> 3.5
-    assert "UK 4" in uk_sizes    # 6.0 -> 4.0
-    assert "UK 4.5" in uk_sizes  # 6.5 -> 4.5
-    assert "UK 5" in uk_sizes    # 7.0 -> 5.0
+    # Check option names
+    opt_names = [ov["option_name"] for ov in res["variants"][0]["option_values"]]
+    assert "Size" in opt_names
+    assert "Size (US)" not in opt_names
 
     # Check specifications
     assert "US 5" in res["specifications"]["Available Sizes (US)"]
@@ -236,8 +234,8 @@ def test_duplicate_size_preserves_in_stock_if_any_in_stock():
     res = parse_product_payload(raw_payload, usd_to_inr_rate=90.0)
     assert res is not None
     assert len(res["variants"]) == 7
-    v7 = next(v for v in res["variants"] if "US 7" in v["title"])
-    assert v7["in_stock"] is True, f"US 7 should be in_stock True when one occurrence is in stock, got {v7['in_stock']}"
+    v7 = next(v for v in res["variants"] if "UK 6.5" in v["title"])
+    assert v7["in_stock"] is True, f"UK 6.5 (US 7) should be in_stock True when one occurrence is in stock, got {v7['in_stock']}"
 
 
 def test_fractional_size_parsing():

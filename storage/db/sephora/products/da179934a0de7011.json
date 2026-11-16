@@ -153,8 +153,8 @@
       "current_price": 3224,
       "price_inr": 3224,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "2867448",
       "image_url": "https://www.sephora.com/productimages/sku/s2867448-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2867448+sw.jpg",
@@ -162,7 +162,8 @@
       "variation_value": "Medium Dark",
       "variation_type": "Color",
       "price": 3224,
-      "source_price": 34.0
+      "source_price": 34.0,
+      "inventory_quantity": 0
     },
     {
       "id": "2867471",
@@ -238,8 +239,14 @@
     "makeup-by-mario"
   ],
   "created_at": "2026-11-04T19:02:57Z",
-  "last_verified_at": "2026-11-05T12:38:26Z",
+  "last_verified_at": "2026-11-16T15:43:58Z",
   "id": "da179934a0de7011",
-  "updated_at": "2026-11-05T12:38:26Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:43:58Z",
+  "last_synced_fx_rate": 94.086126,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15994471841958",
+  "shopify_handle": "makeup-by-mario-softsculpt-cream-contour-bronzer-shaping-stick-p516546",
+  "shopify_synced_at": "2026-11-14T03:06:19Z",
+  "shopify_image_synced": true,
+  "primary_image": "https://www.sephora.com/productimages/sku/s2867489-main-zoom.jpg"
 }

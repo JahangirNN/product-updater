@@ -11,8 +11,8 @@
   "source_sku": "3289654",
   "source_price": 60.0,
   "source_compare_at_price": null,
-  "current_price": 5700.0,
-  "compare_at_price": 11424.0,
+  "current_price": 5657.0,
+  "compare_at_price": 11328.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -39,8 +39,8 @@
       "id": null,
       "sku": "3289654",
       "title": "UK 2.5 - Tattoo/Neutral Grey/White/Tattoo",
-      "price": "5700.00",
-      "price_current": 5700.0,
+      "price": "5657.00",
+      "price_current": 5657.0,
       "compare_at_price": null,
       "source_price": 60.0,
       "source_compare_at_price": null,
@@ -57,14 +57,15 @@
           "option_name": "Color",
           "name": "Tattoo/Neutral Grey/White/Tattoo"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3289655",
       "title": "UK 3 - Tattoo/Neutral Grey/White/Tattoo",
-      "price": "5700.00",
-      "price_current": 5700.0,
+      "price": "5657.00",
+      "price_current": 5657.0,
       "compare_at_price": null,
       "source_price": 60.0,
       "source_compare_at_price": null,
@@ -81,14 +82,15 @@
           "option_name": "Color",
           "name": "Tattoo/Neutral Grey/White/Tattoo"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3289656",
       "title": "UK 3.5 - Tattoo/Neutral Grey/White/Tattoo",
-      "price": "5700.00",
-      "price_current": 5700.0,
+      "price": "5657.00",
+      "price_current": 5657.0,
       "compare_at_price": null,
       "source_price": 60.0,
       "source_compare_at_price": null,
@@ -105,20 +107,21 @@
           "option_name": "Color",
           "name": "Tattoo/Neutral Grey/White/Tattoo"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3289657",
       "title": "UK 4 - Tattoo/Neutral Grey/White/Tattoo",
-      "price": "5700.00",
-      "price_current": 5700.0,
+      "price": "5657.00",
+      "price_current": 5657.0,
       "compare_at_price": null,
       "source_price": 60.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IO4837_500_P1",
       "option_values": [
         {
@@ -129,14 +132,15 @@
           "option_name": "Color",
           "name": "Tattoo/Neutral Grey/White/Tattoo"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3289658",
       "title": "UK 4.5 - Tattoo/Neutral Grey/White/Tattoo",
-      "price": "5700.00",
-      "price_current": 5700.0,
+      "price": "5657.00",
+      "price_current": 5657.0,
       "compare_at_price": null,
       "source_price": 60.0,
       "source_compare_at_price": null,
@@ -153,20 +157,21 @@
           "option_name": "Color",
           "name": "Tattoo/Neutral Grey/White/Tattoo"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
       "sku": "3289659",
       "title": "UK 5 - Tattoo/Neutral Grey/White/Tattoo",
-      "price": "5700.00",
-      "price_current": 5700.0,
+      "price": "5657.00",
+      "price_current": 5657.0,
       "compare_at_price": null,
       "source_price": 60.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IO4837_500_P1",
       "option_values": [
         {
@@ -177,14 +182,15 @@
           "option_name": "Color",
           "name": "Tattoo/Neutral Grey/White/Tattoo"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3289660",
       "title": "UK 5.5 - Tattoo/Neutral Grey/White/Tattoo",
-      "price": "5700.00",
-      "price_current": 5700.0,
+      "price": "5657.00",
+      "price_current": 5657.0,
       "compare_at_price": null,
       "source_price": 60.0,
       "source_compare_at_price": null,
@@ -201,20 +207,21 @@
           "option_name": "Color",
           "name": "Tattoo/Neutral Grey/White/Tattoo"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3289661",
       "title": "UK 6 - Tattoo/Neutral Grey/White/Tattoo",
-      "price": "5700.00",
-      "price_current": 5700.0,
+      "price": "5657.00",
+      "price_current": 5657.0,
       "compare_at_price": null,
       "source_price": 60.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IO4837_500_P1",
       "option_values": [
         {
@@ -225,14 +232,15 @@
           "option_name": "Color",
           "name": "Tattoo/Neutral Grey/White/Tattoo"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
       "sku": "3289662",
       "title": "UK 6.5 - Tattoo/Neutral Grey/White/Tattoo",
-      "price": "5700.00",
-      "price_current": 5700.0,
+      "price": "5657.00",
+      "price_current": 5657.0,
       "compare_at_price": null,
       "source_price": 60.0,
       "source_compare_at_price": null,
@@ -249,14 +257,15 @@
           "option_name": "Color",
           "name": "Tattoo/Neutral Grey/White/Tattoo"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
       "sku": "3289663",
       "title": "UK 7 - Tattoo/Neutral Grey/White/Tattoo",
-      "price": "5700.00",
-      "price_current": 5700.0,
+      "price": "5657.00",
+      "price_current": 5657.0,
       "compare_at_price": null,
       "source_price": 60.0,
       "source_compare_at_price": null,
@@ -273,20 +282,21 @@
           "option_name": "Color",
           "name": "Tattoo/Neutral Grey/White/Tattoo"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
       "sku": "3289664",
       "title": "UK 7.5 - Tattoo/Neutral Grey/White/Tattoo",
-      "price": "5700.00",
-      "price_current": 5700.0,
+      "price": "5657.00",
+      "price_current": 5657.0,
       "compare_at_price": null,
       "source_price": 60.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IO4837_500_P1",
       "option_values": [
         {
@@ -297,14 +307,15 @@
           "option_name": "Color",
           "name": "Tattoo/Neutral Grey/White/Tattoo"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3289665",
       "title": "UK 8 - Tattoo/Neutral Grey/White/Tattoo",
-      "price": "5700.00",
-      "price_current": 5700.0,
+      "price": "5657.00",
+      "price_current": 5657.0,
       "compare_at_price": null,
       "source_price": 60.0,
       "source_compare_at_price": null,
@@ -321,20 +332,21 @@
           "option_name": "Color",
           "name": "Tattoo/Neutral Grey/White/Tattoo"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3289666",
       "title": "UK 8.5 - Tattoo/Neutral Grey/White/Tattoo",
-      "price": "5700.00",
-      "price_current": 5700.0,
+      "price": "5657.00",
+      "price_current": 5657.0,
       "compare_at_price": null,
       "source_price": 60.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IO4837_500_P1",
       "option_values": [
         {
@@ -345,20 +357,21 @@
           "option_name": "Color",
           "name": "Tattoo/Neutral Grey/White/Tattoo"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
       "sku": "3289667",
       "title": "UK 9 - Tattoo/Neutral Grey/White/Tattoo",
-      "price": "5700.00",
-      "price_current": 5700.0,
+      "price": "5657.00",
+      "price_current": 5657.0,
       "compare_at_price": null,
       "source_price": 60.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IO4837_500_P1",
       "option_values": [
         {
@@ -369,14 +382,15 @@
           "option_name": "Color",
           "name": "Tattoo/Neutral Grey/White/Tattoo"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
       "sku": "3289668",
       "title": "UK 9.5 - Tattoo/Neutral Grey/White/Tattoo",
-      "price": "5700.00",
-      "price_current": 5700.0,
+      "price": "5657.00",
+      "price_current": 5657.0,
       "compare_at_price": null,
       "source_price": 60.0,
       "source_compare_at_price": null,
@@ -393,7 +407,8 @@
           "option_name": "Color",
           "name": "Tattoo/Neutral Grey/White/Tattoo"
         }
-      ]
+      ],
+      "is_available": false
     }
   ],
   "product_options": [
@@ -457,12 +472,12 @@
     }
   ],
   "tags": [
-    "Nike",
-    "Footwear",
     "Adult",
-    "Women's",
+    "Footwear",
     "JD Sports",
-    "Nike Air Force"
+    "Nike",
+    "Nike Air Force",
+    "Women's"
   ],
   "groups": [
     "footwear",
@@ -471,13 +486,15 @@
     "women's-shoes"
   ],
   "created_at": "2026-09-20T16:04:57Z",
-  "updated_at": "2026-10-29T05:37:33Z",
-  "last_verified_at": "2026-10-29T05:37:33Z",
+  "updated_at": "2026-11-16T15:43:16Z",
+  "last_verified_at": "2026-11-16T15:43:14Z",
   "shopify_product_id": "gid://shopify/Product/15851451089062",
   "shopify_handle": "womens-nike-air-force-1-07-se-casual-shoes-tattoo-neutral-grey-white-tattoo-3289654",
-  "shopify_synced_at": "2026-10-27T12:42:15Z",
+  "shopify_synced_at": "2026-11-16T15:43:14Z",
   "shopify_sync_pending": false,
-  "price": "5700.00",
-  "price_current": 5700.0,
-  "last_synced_fx_rate": 95.269051
+  "price": "5657.00",
+  "price_current": 5657.0,
+  "last_synced_fx_rate": 94.399626,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

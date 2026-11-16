@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.199335,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Coated canvas",
   "specifications": {
     "Material": "Coated canvas",
@@ -88,14 +88,14 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KP071_100",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KP071_100",
         "https://katespade.scene7.com/is/image/KateSpade/KP071_100_1",
         "https://katespade.scene7.com/is/image/KateSpade/KP071_100_3"
       ],
-      "inventory_quantity": 10,
+      "inventory_quantity": 0,
       "image_url": "https://katespade.scene7.com/is/image/KateSpade/KP071_100"
     },
     {
@@ -111,14 +111,14 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KP071_651",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KP071_651",
         "https://katespade.scene7.com/is/image/KateSpade/KP071_651_1",
         "https://katespade.scene7.com/is/image/KateSpade/KP071_651_3"
       ],
-      "inventory_quantity": 10,
+      "inventory_quantity": 0,
       "image_url": "https://katespade.scene7.com/is/image/KateSpade/KP071_651"
     },
     {
@@ -168,10 +168,13 @@
     "handbags"
   ],
   "created_at": "2026-10-29T05:25:56Z",
-  "last_verified_at": "2026-10-29T07:38:25Z",
+  "last_verified_at": "2026-11-16T15:43:53Z",
   "_elapsed_ms": 3741.9470000313595,
   "id": "31b9e00ffc988cb8",
-  "updated_at": "2026-10-29T07:38:25Z",
-  "last_synced_fx_rate": 95.29615,
-  "shopify_sync_pending": true
+  "updated_at": "2026-11-16T15:43:53Z",
+  "last_synced_fx_rate": 94.834253,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15915077173414",
+  "shopify_handle": "dana-tote-bag",
+  "shopify_synced_at": "2026-11-05T10:46:05Z"
 }

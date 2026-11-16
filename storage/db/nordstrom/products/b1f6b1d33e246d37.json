@@ -9,8 +9,8 @@
   "source_sku": "ON-8190620-7",
   "source_price": 170.0,
   "source_compare_at_price": 170.0,
-  "current_price": 16196.0,
-  "compare_at_price": 16196.0,
+  "current_price": 16048.0,
+  "compare_at_price": 16048.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -116,7 +116,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/3883156e-3645-4ec9-b57d-9a6e7459e084.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -139,7 +139,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/3883156e-3645-4ec9-b57d-9a6e7459e084.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -208,7 +208,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/3883156e-3645-4ec9-b57d-9a6e7459e084.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -231,7 +231,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/3883156e-3645-4ec9-b57d-9a6e7459e084.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -277,7 +277,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/3883156e-3645-4ec9-b57d-9a6e7459e084.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -300,7 +300,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/3883156e-3645-4ec9-b57d-9a6e7459e084.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -428,22 +428,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T05:39:33Z",
+  "last_verified_at": "2026-11-16T16:01:20Z",
   "created_at": "2026-09-18T06:59:17Z",
-  "updated_at": "2026-10-29T05:39:33Z",
+  "updated_at": "2026-11-16T16:01:23Z",
   "price_range_usd": {
     "min": 170.0,
     "max": 170.0
   },
   "price_range_inr": {
-    "min": 16196.0,
-    "max": 16196.0
+    "min": 16048.0,
+    "max": 16048.0
   },
-  "price": "16196.00",
+  "price": "16048.00",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15850879516838",
   "shopify_handle": "on-running-cloudswift-4-running-shoe-men",
-  "shopify_synced_at": "2026-10-28T00:06:07Z",
-  "last_synced_fx_rate": 95.269051
+  "shopify_synced_at": "2026-11-16T16:01:20Z",
+  "last_synced_fx_rate": 94.399626
 }

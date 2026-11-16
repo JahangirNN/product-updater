@@ -65,7 +65,8 @@
           "name": "IM/Magenta"
         }
       ],
-      "price_current": 17268.0
+      "price_current": 17268.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -80,23 +81,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Tote Bags"
+    "Tote Bags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:43:28Z",
-  "last_verified_at": "2026-10-29T03:38:55Z",
+  "last_verified_at": "2026-11-16T15:45:33Z",
   "id": "80dac1d232c2817a",
   "product_id": "80dac1d232c2817a",
   "store": "coach",
-  "updated_at": "2026-10-29T03:38:55Z",
+  "updated_at": "2026-11-16T15:45:33Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841766473894",
   "shopify_handle": "medium-city-tote-bag",
-  "shopify_synced_at": "2026-10-08T16:06:22Z",
+  "shopify_synced_at": "2026-11-14T01:11:43Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

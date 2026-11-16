@@ -1,0 +1,1807 @@
+{%- comment -%}
+  Luxury Desktop Mega-Menu Navigation (ADR 0022 - 2026 Minimal Modern Luxury Edition)
+  Features distinct departmental mega-menus for Women and Men, an A-Z Designer Directory,
+  clean geometric uppercase typography, and zero horizontal overflow.
+{%- endcomment -%}
+
+{%- assign nav_pos = nav_position | default: 'all' -%}
+
+{%- if nav_pos != 'right' -%}
+<style>
+  /* 2026 Modern Minimal Luxury Navigation Styling */
+  .header__primary-nav-list {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .luxury-nav-item {
+    position: static !important;
+  }
+
+  .luxury-nav__trigger {
+    font-family: var(--text-font-family);
+    font-size: 0.8125rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    color: rgb(var(--text-color));
+    padding: 0.6rem 0.55rem !important;
+    position: relative;
+    cursor: pointer;
+    transition: opacity 0.2s ease, color 0.2s ease;
+    display: flex;
+    align-items: center;
+    white-space: nowrap !important;
+    text-decoration: none !important;
+  }
+
+  @media screen and (max-width: 1250px) {
+    .header__primary-nav-list {
+      gap: 0.65rem !important;
+    }
+    .luxury-nav__trigger {
+      font-size: 0.75rem !important;
+      padding: 0.5rem 0.35rem !important;
+      letter-spacing: 0.05em !important;
+    }
+  }
+
+  /* Suppress default theme duplicate underline pseudo-element */
+  .header__primary-nav-item [data-title]:before,
+  .header__primary-nav-item [data-title]:hover:before,
+  .luxury-nav__trigger:before {
+    display: none !important;
+    content: none !important;
+  }
+
+  .luxury-nav__trigger::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 0;
+    height: 1.5px;
+    background-color: #c9a876;
+    transition: width 0.25s cubic-bezier(0.25, 1, 0.5, 1), left 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .header__primary-nav-item:hover .luxury-nav__trigger::after,
+  .luxury-nav-item:hover .luxury-nav__trigger::after,
+  details[open] > .luxury-nav__trigger::after {
+    width: 100%;
+    left: 0;
+  }
+
+  /* Full-width seamless mega-menu without horizontal scrollbars */
+  .luxury-mega-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    max-height: calc(100vh - 120px) !important;
+    overflow-y: auto !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.07);
+    padding: 2.25rem 2rem 2.5rem !important;
+    z-index: 99;
+  }
+
+  .luxury-mega-menu::-webkit-scrollbar {
+    width: 5px;
+  }
+  .luxury-mega-menu::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .luxury-mega-menu::-webkit-scrollbar-thumb {
+    background: rgba(201, 168, 118, 0.35);
+    border-radius: 4px;
+  }
+  .luxury-mega-menu::-webkit-scrollbar-thumb:hover {
+    background: rgba(201, 168, 118, 0.7);
+  }
+
+  .luxury-mega-menu__inner {
+    max-width: min(1380px, 96vw);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .luxury-mega-menu__columns {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 1.5rem !important;
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-width: 0;
+  }
+
+  .luxury-mega-menu__col {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  @media screen and (max-width: 1280px) {
+    .luxury-mega-menu {
+      padding: 1.75rem 1.25rem 2rem !important;
+    }
+    .luxury-mega-menu__inner {
+      max-width: 98vw !important;
+      gap: 1.25rem !important;
+    }
+    .luxury-mega-menu__columns {
+      gap: 1rem !important;
+    }
+    .luxury-mega-menu__promo {
+      flex: 0 0 210px !important;
+      width: 210px !important;
+      max-width: 210px !important;
+      padding: 1.15rem !important;
+    }
+    .luxury-mega-menu__col-title {
+      font-size: 0.6875rem !important;
+      letter-spacing: 0.11em !important;
+      padding-bottom: 0.5rem !important;
+      margin-bottom: 0.65rem !important;
+    }
+    .luxury-mega-menu__link {
+      font-size: 0.75rem !important;
+    }
+    .luxury-mega-menu__link--accent {
+      font-size: 0.6875rem !important;
+    }
+  }
+
+  @media screen and (max-width: 1120px) {
+    .luxury-mega-menu {
+      padding: 1.5rem 1rem 1.75rem !important;
+    }
+    .luxury-mega-menu__inner {
+      gap: 0.85rem !important;
+    }
+    .luxury-mega-menu__columns {
+      gap: 0.75rem !important;
+    }
+    .luxury-mega-menu__promo {
+      flex: 0 0 185px !important;
+      width: 185px !important;
+      max-width: 185px !important;
+      padding: 0.95rem !important;
+    }
+    .luxury-mega-menu__col-title {
+      font-size: 0.6563rem !important;
+      letter-spacing: 0.08em !important;
+    }
+    .luxury-mega-menu__link {
+      font-size: 0.7188rem !important;
+    }
+  }
+
+  .luxury-mega-menu__col-title {
+    display: block;
+    font-family: var(--text-font-family);
+    font-size: 0.7188rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    padding-bottom: 0.65rem;
+    margin-bottom: 0.85rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .luxury-mega-menu__col-title:hover {
+    color: #c9a876;
+  }
+
+  .luxury-mega-menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .luxury-mega-menu__link {
+    font-family: var(--text-font-family);
+    font-size: 0.8125rem;
+    letter-spacing: 0.03em;
+    color: #555555;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.15rem 0;
+    transition: color 0.18s ease, transform 0.18s ease;
+  }
+
+  .luxury-mega-menu__link:hover {
+    color: #000000;
+    transform: translateX(3px);
+  }
+
+  .luxury-mega-menu__link--accent {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #c9a876;
+    margin-bottom: 0.35rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .luxury-mega-menu__link--accent:hover {
+    color: #1a1a1a;
+    transform: translateX(3px);
+  }
+
+  .luxury-mega-menu,
+  .luxury-mega-menu__inner {
+    white-space: normal !important;
+  }
+
+  .luxury-mega-menu__promo {
+    flex: 0 0 280px !important;
+    width: 280px !important;
+    max-width: 280px !important;
+    min-width: 0 !important;
+    background: #fbfaf8;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 2px solid #c9a876;
+    border-radius: 1px;
+    padding: 1.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+    min-height: 220px;
+    overflow: hidden !important;
+    white-space: normal !important;
+  }
+
+  .luxury-mega-menu__promo > * {
+    flex: none !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+  }
+
+  .luxury-mega-menu__promo-tag {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9a876;
+    margin-bottom: 0.5rem;
+    white-space: nowrap !important;
+    display: block;
+  }
+
+  .luxury-mega-menu__promo-heading {
+    font-family: var(--heading-font-family);
+    font-size: 1.1875rem;
+    font-weight: 400;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin: 0 0 0.65rem 0;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    display: block;
+  }
+
+  .luxury-mega-menu__promo-body {
+    font-size: 0.8125rem;
+    line-height: 1.55;
+    color: #666666;
+    margin: 0 0 1.25rem 0;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    -webkit-hyphens: manual;
+    hyphens: manual;
+    display: block;
+  }
+
+  .luxury-mega-menu__promo-cta {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 3px;
+    width: fit-content !important;
+    max-width: 100% !important;
+    margin-top: auto;
+    white-space: nowrap !important;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .luxury-mega-menu__promo-cta:hover {
+    color: #c9a876;
+    border-color: #c9a876;
+  }
+
+  /* Brands Specific 4-Column Luxury Architecture (ADR 0022/2026) */
+  .luxury-mega-menu__inner--brands {
+    display: grid !important;
+    grid-template-columns: 1.15fr 1fr 1.05fr 1fr !important;
+    gap: 1.75rem !important;
+    align-items: stretch !important;
+    max-width: min(1380px, 96vw) !important;
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1280px) {
+    .luxury-mega-menu__inner--brands {
+      grid-template-columns: 1.1fr 1fr 1fr 1fr !important;
+      gap: 1rem !important;
+      max-width: 98vw !important;
+    }
+  }
+
+  .luxury-brands-col {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  /* Column 1: Leather Goods & Ateliers Cards */
+  .luxury-ateliers-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .luxury-atelier-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-left: 2.5px solid #c9a876;
+    padding: 0.75rem 0.85rem;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    transition: all 0.22s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .luxury-atelier-card:hover {
+    border-color: #c9a876;
+    background: #faf8f5;
+    box-shadow: 0 4px 14px rgba(201, 168, 118, 0.12);
+    transform: translateY(-1.5px);
+  }
+
+  .luxury-atelier-card__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.45rem;
+  }
+
+  .luxury-atelier-card__title {
+    font-family: var(--text-font-family);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: color 0.18s ease;
+  }
+
+  .luxury-atelier-card__title:hover {
+    color: #c9a876;
+  }
+
+  .luxury-atelier-card__origin {
+    font-size: 0.5625rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #999;
+    font-weight: 500;
+  }
+
+  .luxury-atelier-card__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .luxury-atelier-pill {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.6875rem;
+    letter-spacing: 0.02em;
+    color: #4a4a4a;
+    background: #f7f6f4;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 999px;
+    padding: 0.2rem 0.55rem;
+    text-decoration: none;
+    transition: all 0.18s ease;
+    white-space: nowrap;
+  }
+
+  .luxury-atelier-pill:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+    border-color: #1a1a1a;
+    transform: translateY(-1px);
+  }
+
+  /* Column 2: Master Horology & Swiss Watchmakers */
+  .luxury-horology-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .luxury-horology-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.45rem 0.65rem;
+    border-radius: 2px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    background: #ffffff;
+    transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .luxury-horology-link:hover {
+    background: #faf8f5;
+    border-color: rgba(201, 168, 118, 0.25);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    transform: translateX(3px);
+  }
+
+  .luxury-horology-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .luxury-horology-name {
+    font-family: var(--text-font-family);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #1a1a1a;
+    transition: color 0.18s ease;
+  }
+
+  .luxury-horology-link:hover .luxury-horology-name {
+    color: #c9a876;
+  }
+
+  .luxury-horology-desc {
+    font-size: 0.6875rem;
+    color: #777777;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+  }
+
+  .luxury-horology-origin {
+    font-size: 0.625rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #8c827a;
+    padding: 0.15rem 0.45rem;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.035);
+    font-weight: 500;
+    transition: all 0.18s ease;
+    white-space: nowrap;
+  }
+
+  .luxury-horology-link:hover .luxury-horology-origin {
+    background: rgba(201, 168, 118, 0.15);
+    color: #7d6029;
+  }
+
+  /* Column 3: Curated Maison Directory (A - Z) */
+  .luxury-directory-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 440px;
+    overflow-y: auto;
+    padding-right: 0.35rem;
+  }
+  .luxury-directory-list::-webkit-scrollbar {
+    width: 4px;
+  }
+  .luxury-directory-list::-webkit-scrollbar-thumb {
+    background: #d8cebe;
+    border-radius: 2px;
+  }
+
+  .luxury-directory-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.32rem 0.5rem;
+    border-radius: 2px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    transition: all 0.18s ease;
+  }
+
+  .luxury-directory-link:hover {
+    background: #faf8f5;
+    border-color: rgba(201, 168, 118, 0.2);
+    transform: translateX(3px);
+  }
+
+  .luxury-directory-name {
+    font-family: var(--text-font-family);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #222222;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.18s ease;
+  }
+
+  .luxury-directory-link:hover .luxury-directory-name {
+    color: #c9a876;
+  }
+
+  .luxury-directory-badge {
+    font-size: 0.625rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #8c827a;
+    background: rgba(0, 0, 0, 0.035);
+    padding: 0.15rem 0.45rem;
+    border-radius: 3px;
+    font-weight: 500;
+    transition: all 0.18s ease;
+  }
+
+  .luxury-directory-link:hover .luxury-directory-badge {
+    background: rgba(201, 168, 118, 0.15);
+    color: #7d6029;
+  }
+
+  /* Column 4: Editorial Showcase / Heritage Card */
+  .luxury-editorial-card {
+    background: #fbfaf8;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-top: 2px solid #c9a876;
+    border-radius: 2px;
+    padding: 1.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .luxury-editorial-badge {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9a876;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .luxury-editorial-crest {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(201, 168, 118, 0.08);
+    border: 1px solid rgba(201, 168, 118, 0.25);
+    margin: 0.75rem 0 0.75rem 0;
+    color: #c9a876;
+  }
+
+  .luxury-editorial-title {
+    font-family: var(--heading-font-family);
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .luxury-editorial-text {
+    font-size: 0.8125rem;
+    line-height: 1.55;
+    color: #666666;
+    margin: 0 0 1rem 0;
+  }
+
+  .luxury-editorial-chips {
+    display: flex;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+  }
+
+  .luxury-editorial-chip {
+    font-size: 0.625rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8c827a;
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 0.2rem 0.45rem;
+    border-radius: 2px;
+  }
+
+  /* Champagne Gold Hover Transitions */
+  .luxury-nav__trigger:hover {
+    color: #c9a876 !important;
+  }
+  .luxury-nav-item:hover .luxury-nav__trigger {
+    color: #c9a876 !important;
+  }
+  .luxury-nav__details[open] > .luxury-nav__trigger {
+    color: #c9a876 !important;
+  }
+  .luxury-mega-menu__col a:hover {
+    color: #c9a876 !important;
+    transform: translateX(2px);
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  @media (min-width: 990px) {
+    .luxury-nav__details:not([open]) > .luxury-mega-menu {
+      display: none !important;
+    }
+    .luxury-nav-item:hover > .luxury-nav__details > .luxury-mega-menu,
+    .luxury-nav__details[open] > .luxury-mega-menu {
+      display: block !important;
+    }
+  }
+
+</style>
+{%- endif -%}
+
+{%- if nav_pos == 'left' or nav_pos == 'all' -%}
+{%- comment -%} ==================== WOMEN ==================== {%- endcomment -%}
+<li class="header__primary-nav-item luxury-nav-item">
+  <details class="luxury-nav__details header__menu-disclosure">
+      <summary data-follow-link="{{ routes.collections_url }}/women" class="luxury-nav__trigger" data-title="Women">
+        Women
+      </summary>
+
+      <div class="mega-menu luxury-mega-menu">
+        <div class="luxury-mega-menu__inner">
+          <ul class="mega-menu__linklist luxury-mega-menu__columns unstyled-list">
+            {%- comment -%} Pillar 1: Designer Handbags {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/womens-handbags" class="luxury-mega-menu__col-title">Designer Handbags</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/womens-handbags" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Luxury Bags &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/coach" class="luxury-mega-menu__link">COACH</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/jw-pei" class="luxury-mega-menu__link">JW PEI</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/kate-spade" class="luxury-mega-menu__link">Kate Spade</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/michael-kors" class="luxury-mega-menu__link">Michael Kors</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/satchels" class="luxury-mega-menu__link">Satchels &amp; Top Handles</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/crossbody-bags" class="luxury-mega-menu__link">Crossbody &amp; Messengers</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/totes" class="luxury-mega-menu__link">Totes &amp; Carryalls</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/shoulder-bags" class="luxury-mega-menu__link">Shoulder Bags</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 2: Luxury Footwear {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/women/footwear" class="luxury-mega-menu__col-title">Luxury Footwear</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/women/footwear" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Shoes &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/women/adidas" class="luxury-mega-menu__link">adidas Originals</a></li>
+                <li><a href="{{ routes.collections_url }}/women/asics" class="luxury-mega-menu__link">ASICS</a></li>
+                <li><a href="{{ routes.collections_url }}/women/nike" class="luxury-mega-menu__link">Nike</a></li>
+                <li><a href="{{ routes.collections_url }}/women/on" class="luxury-mega-menu__link">On Running</a></li>
+                <li><a href="{{ routes.collections_url }}/women/salomon" class="luxury-mega-menu__link">Salomon</a></li>
+                <li><a href="{{ routes.collections_url }}/women/hoka" class="luxury-mega-menu__link">HOKA</a></li>
+                <li><a href="{{ routes.collections_url }}/coach/women+footwear" class="luxury-mega-menu__link">COACH Footwear</a></li>
+                <li><a href="{{ routes.collections_url }}/michael-kors/women+footwear" class="luxury-mega-menu__link">Michael Kors Footwear</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 3: Fine Timepieces {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/womens-watches" class="luxury-mega-menu__col-title">Fine Timepieces</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/womens-watches" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Watches &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches/tissot" class="luxury-mega-menu__link">Tissot</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches/seiko" class="luxury-mega-menu__link">Seiko</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches/citizen" class="luxury-mega-menu__link">Citizen</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches/movado" class="luxury-mega-menu__link">Movado</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches/versace" class="luxury-mega-menu__link">Versace</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches/michael-kors" class="luxury-mega-menu__link">Michael Kors</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 4: Wallets & Small Goods {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/wallets-leather-goods/women" class="luxury-mega-menu__col-title">Wallets &amp; Small Goods</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/women" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Wallets &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/women+wristlets" class="luxury-mega-menu__link">Wristlets &amp; Pouches</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/women+card-cases" class="luxury-mega-menu__link">Card Cases &amp; Holders</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/women+wallets" class="luxury-mega-menu__link">Continental &amp; Zip Wallets</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/women+michael-kors" class="luxury-mega-menu__link">Michael Kors</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/women+coach" class="luxury-mega-menu__link">COACH</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 5: Designer Eyewear {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/womens-sunglasses" class="luxury-mega-menu__col-title">Designer Eyewear</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/womens-sunglasses" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Sunglasses &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-sunglasses/michael-kors" class="luxury-mega-menu__link">Michael Kors</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-sunglasses/cat-eye" class="luxury-mega-menu__link">Cat-Eye &amp; Butterfly</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-sunglasses/aviator" class="luxury-mega-menu__link">Aviator &amp; Pilot</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-sunglasses/oversized" class="luxury-mega-menu__link">Oversized &amp; Geometric</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          {%- comment -%} Editorial Card {%- endcomment -%}
+          <div class="mega-menu__promo luxury-mega-menu__promo">
+            <div>
+              <div class="luxury-mega-menu__promo-tag">Women's Boutique</div>
+              <h3 class="luxury-mega-menu__promo-heading">Curated Feminine Luxury</h3>
+              <p class="luxury-mega-menu__promo-body">Swiss diamond dials, structured vegan silhouettes, and archival runway craftsmanship.</p>
+            </div>
+            <a href="{{ routes.collections_url }}/women" class="luxury-mega-menu__promo-cta">
+              Explore Women's Edit &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </details>
+</li>
+
+{%- comment -%} ==================== MEN ==================== {%- endcomment -%}
+<li class="header__primary-nav-item luxury-nav-item">
+  <details class="luxury-nav__details header__menu-disclosure">
+      <summary data-follow-link="{{ routes.collections_url }}/men" class="luxury-nav__trigger" data-title="Men">
+        Men
+      </summary>
+
+      <div class="mega-menu luxury-mega-menu">
+        <div class="luxury-mega-menu__inner">
+          <ul class="mega-menu__linklist luxury-mega-menu__columns unstyled-list">
+            {%- comment -%} Pillar 1: Fine Timepieces {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/mens-watches" class="luxury-mega-menu__col-title">Fine Timepieces</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/mens-watches" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Watches &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches/tissot" class="luxury-mega-menu__link">Tissot</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches/citizen" class="luxury-mega-menu__link">Citizen</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches/movado" class="luxury-mega-menu__link">Movado</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches/seiko" class="luxury-mega-menu__link">Seiko</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches/versace" class="luxury-mega-menu__link">Versace</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches/ferragamo" class="luxury-mega-menu__link">Ferragamo</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 2: Premium Footwear {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/men/footwear" class="luxury-mega-menu__col-title">Premium Footwear</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/men/footwear" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Men's Shoes &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/men/adidas" class="luxury-mega-menu__link">adidas Originals</a></li>
+                <li><a href="{{ routes.collections_url }}/men/asics" class="luxury-mega-menu__link">ASICS</a></li>
+                <li><a href="{{ routes.collections_url }}/men/nike" class="luxury-mega-menu__link">Nike</a></li>
+                <li><a href="{{ routes.collections_url }}/men/salomon" class="luxury-mega-menu__link">Salomon</a></li>
+                <li><a href="{{ routes.collections_url }}/men/on" class="luxury-mega-menu__link">On Running</a></li>
+                <li><a href="{{ routes.collections_url }}/men/hoka" class="luxury-mega-menu__link">HOKA</a></li>
+                <li><a href="{{ routes.collections_url }}/coach/men+footwear" class="luxury-mega-menu__link">COACH Footwear</a></li>
+                <li><a href="{{ routes.collections_url }}/michael-kors/men+footwear" class="luxury-mega-menu__link">Michael Kors Footwear</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 3: Designer Bags {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/mens-bags" class="luxury-mega-menu__col-title">Designer Bags</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/mens-bags" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Men's Bags &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-bags/coach" class="luxury-mega-menu__link">COACH</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-bags/crossbody-bags" class="luxury-mega-menu__link">Messengers &amp; Crossbody</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-bags/backpacks" class="luxury-mega-menu__link">Backpacks &amp; Rucksacks</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-bags/satchels" class="luxury-mega-menu__link">Briefcases &amp; Satchels</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-bags/totes" class="luxury-mega-menu__link">Totes &amp; Carryalls</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 4: Wallets & Small Goods {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/wallets-leather-goods/men" class="luxury-mega-menu__col-title">Wallets &amp; Small Goods</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/men" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Men's Wallets &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/men+billfolds" class="luxury-mega-menu__link">Billfolds &amp; Passcases</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/men+card-cases" class="luxury-mega-menu__link">Card Cases &amp; Money Clips</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/men+tech-accessories" class="luxury-mega-menu__link">MagSafe &amp; Tech Wallets</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/men+michael-kors" class="luxury-mega-menu__link">Michael Kors</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/men+coach" class="luxury-mega-menu__link">COACH</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 5: Designer Eyewear {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/mens-sunglasses" class="luxury-mega-menu__col-title">Designer Eyewear</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/mens-sunglasses" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Sunglasses &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-sunglasses/michael-kors" class="luxury-mega-menu__link">Michael Kors Eyewear</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-sunglasses/aviator" class="luxury-mega-menu__link">Aviator &amp; Pilot</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-sunglasses/navigator" class="luxury-mega-menu__link">Navigator &amp; Square</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-sunglasses/wireframe" class="luxury-mega-menu__link">Wireframe &amp; Metal</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          {%- comment -%} Editorial Card {%- endcomment -%}
+          <div class="mega-menu__promo luxury-mega-menu__promo">
+            <div>
+              <div class="luxury-mega-menu__promo-tag">Men's Boutique</div>
+              <h3 class="luxury-mega-menu__promo-heading">Precision & Form</h3>
+              <p class="luxury-mega-menu__promo-body">Mechanical calibers, technical trail silhouettes, and utilitarian leather craft.</p>
+            </div>
+            <a href="{{ routes.collections_url }}/men" class="luxury-mega-menu__promo-cta">
+              Explore Men's Edit &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </details>
+</li>
+
+{%- comment -%} ==================== BEAUTY & COSMETICS ==================== {%- endcomment -%}
+<li class="header__primary-nav-item luxury-nav-item">
+  <details class="luxury-nav__details header__menu-disclosure">
+    <summary data-follow-link="{{ routes.collections_url }}/beauty" class="luxury-nav__trigger" data-title="Beauty">
+      Beauty
+    </summary>
+
+    <div class="mega-menu luxury-mega-menu">
+      <div class="luxury-mega-menu__inner">
+        <ul class="mega-menu__linklist luxury-mega-menu__columns unstyled-list">
+          {%- comment -%} Pillar 1: Skincare & Lip Care {%- endcomment -%}
+          <li class="luxury-mega-menu__col">
+            <a href="{{ routes.collections_url }}/skincare" class="luxury-mega-menu__col-title">Skincare &amp; Lip Care</a>
+            <ul class="luxury-mega-menu__list">
+              <li><a href="{{ routes.collections_url }}/skincare" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Skincare &rarr;</a></li>
+              <li><a href="{{ routes.collections_url }}/summer-fridays" class="luxury-mega-menu__link">Summer Fridays</a></li>
+              <li><a href="{{ routes.collections_url }}/rhode" class="luxury-mega-menu__link">rhode</a></li>
+              <li><a href="{{ routes.collections_url }}/gisou" class="luxury-mega-menu__link">Gisou</a></li>
+              <li><a href="{{ routes.collections_url }}/glossier" class="luxury-mega-menu__link">Glossier</a></li>
+              <li><a href="{{ routes.collections_url }}/tower-28" class="luxury-mega-menu__link">Tower 28 Beauty</a></li>
+            </ul>
+          </li>
+
+          {%- comment -%} Pillar 2: Designer Makeup {%- endcomment -%}
+          <li class="luxury-mega-menu__col">
+            <a href="{{ routes.collections_url }}/makeup" class="luxury-mega-menu__col-title">Designer Makeup</a>
+            <ul class="luxury-mega-menu__list">
+              <li><a href="{{ routes.collections_url }}/makeup" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Explore Makeup &rarr;</a></li>
+              <li><a href="{{ routes.collections_url }}/haus-labs" class="luxury-mega-menu__link">Haus Labs by Lady Gaga</a></li>
+              <li><a href="{{ routes.collections_url }}/westman-atelier" class="luxury-mega-menu__link">Westman Atelier</a></li>
+              <li><a href="{{ routes.collections_url }}/patrick-ta" class="luxury-mega-menu__link">PATRICK TA</a></li>
+              <li><a href="{{ routes.collections_url }}/makeup-by-mario" class="luxury-mega-menu__link">MAKEUP BY MARIO</a></li>
+              <li><a href="{{ routes.collections_url }}/hourglass" class="luxury-mega-menu__link">Hourglass</a></li>
+              <li><a href="{{ routes.collections_url }}/saie" class="luxury-mega-menu__link">Saie</a></li>
+              <li><a href="{{ routes.collections_url }}/merit" class="luxury-mega-menu__link">MERIT</a></li>
+            </ul>
+          </li>
+
+          {%- comment -%} Pillar 3: Haircare & Body Rituals {%- endcomment -%}
+          <li class="luxury-mega-menu__col">
+            <a href="{{ routes.collections_url }}/haircare" class="luxury-mega-menu__col-title">Haircare &amp; Body</a>
+            <ul class="luxury-mega-menu__list">
+              <li><a href="{{ routes.collections_url }}/haircare" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Explore Hair &amp; Body &rarr;</a></li>
+              <li><a href="{{ routes.collections_url }}/gisou" class="luxury-mega-menu__link">Gisou Honey Infused</a></li>
+              <li><a href="{{ routes.collections_url }}/summer-fridays" class="luxury-mega-menu__link">Summer Fridays Body</a></li>
+              <li><a href="{{ routes.collections_url }}/refy" class="luxury-mega-menu__link">REFY Sculpt &amp; Glow</a></li>
+              <li><a href="{{ routes.collections_url }}/glossier" class="luxury-mega-menu__link">Glossier Fragrance</a></li>
+            </ul>
+          </li>
+
+          {%- comment -%} Pillar 4: Curated Discovery & Sets {%- endcomment -%}
+          <li class="luxury-mega-menu__col">
+            <a href="{{ routes.collections_url }}/beauty-sets" class="luxury-mega-menu__col-title">Value &amp; Gift Sets</a>
+            <ul class="luxury-mega-menu__list">
+              <li><a href="{{ routes.collections_url }}/beauty-sets" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Sets &rarr;</a></li>
+              <li><a href="{{ routes.collections_url }}/beauty-sets" class="luxury-mega-menu__link">Lip Balm &amp; Butter Sets</a></li>
+              <li><a href="{{ routes.collections_url }}/beauty-sets" class="luxury-mega-menu__link">Hydration Travel Kits</a></li>
+              <li><a href="{{ routes.collections_url }}/beauty-sets" class="luxury-mega-menu__link">Dewy Glow Routines</a></li>
+              <li><a href="{{ routes.collections_url }}/beauty-sets" class="luxury-mega-menu__link">Mini Discovery Edits</a></li>
+            </ul>
+          </li>
+
+          {%- comment -%} Pillar 5: Featured Beauty Maisons {%- endcomment -%}
+          <li class="luxury-mega-menu__col">
+            <a href="{{ routes.collections_url }}/beauty" class="luxury-mega-menu__col-title">Trending Maisons</a>
+            <ul class="luxury-mega-menu__list">
+              <li><a href="{{ routes.collections_url }}/beauty" class="luxury-mega-menu__link luxury-mega-menu__link--accent">All Beauty Maisons &rarr;</a></li>
+              <li><a href="{{ routes.collections_url }}/summer-fridays" class="luxury-mega-menu__link">Summer Fridays</a></li>
+              <li><a href="{{ routes.collections_url }}/rhode" class="luxury-mega-menu__link">rhode</a></li>
+              <li><a href="{{ routes.collections_url }}/westman-atelier" class="luxury-mega-menu__link">Westman Atelier</a></li>
+              <li><a href="{{ routes.collections_url }}/haus-labs" class="luxury-mega-menu__link">Haus Labs</a></li>
+              <li><a href="{{ routes.collections_url }}/gisou" class="luxury-mega-menu__link">Gisou</a></li>
+              <li><a href="{{ routes.collections_url }}/kosas" class="luxury-mega-menu__link">Kosas</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        {%- comment -%} Editorial Card {%- endcomment -%}
+        <div class="mega-menu__promo luxury-mega-menu__promo">
+          <div>
+            <div class="luxury-mega-menu__promo-tag">Haute Beaut&eacute;</div>
+            <h3 class="luxury-mega-menu__promo-heading">Clean Modern Radiance</h3>
+            <p class="luxury-mega-menu__promo-body">Clinically formulated skincare, weightless tinted complexion, and honey-infused rituals.</p>
+          </div>
+          <a href="{{ routes.collections_url }}/beauty" class="luxury-mega-menu__promo-cta">
+            Discover Beauty &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </details>
+</li>
+
+{%- comment -%} ==================== FOOTWEAR ==================== {%- endcomment -%}
+<li class="header__primary-nav-item luxury-nav-item">
+  <details class="luxury-nav__details header__menu-disclosure">
+      <summary data-follow-link="{{ routes.collections_url }}/premium-footwear" class="luxury-nav__trigger" data-title="Footwear">
+        Footwear
+      </summary>
+
+      <div class="mega-menu luxury-mega-menu">
+        <div class="luxury-mega-menu__inner">
+          <ul class="mega-menu__linklist luxury-mega-menu__columns unstyled-list">
+            {%- comment -%} Pillar 1: Performance Runners {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/premium-footwear" class="luxury-mega-menu__col-title">Performance Runners</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/premium-footwear" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Runners &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/hoka" class="luxury-mega-menu__link">HOKA</a></li>
+                <li><a href="{{ routes.collections_url }}/on-running" class="luxury-mega-menu__link">On Running</a></li>
+                <li><a href="{{ routes.collections_url }}/salomon" class="luxury-mega-menu__link">Salomon Trail</a></li>
+                <li><a href="{{ routes.collections_url }}/asics" class="luxury-mega-menu__link">ASICS GEL Series</a></li>
+                <li><a href="{{ routes.collections_url }}/nike" class="luxury-mega-menu__link">Nike Running</a></li>
+                <li><a href="{{ routes.collections_url }}/adidas" class="luxury-mega-menu__link">adidas Originals</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 2: Street & Lifestyle {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/premium-footwear" class="luxury-mega-menu__col-title">Street &amp; Lifestyle</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/premium-footwear" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Explore Sneakers &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/adidas" class="luxury-mega-menu__link">adidas Handball Spezial</a></li>
+                <li><a href="{{ routes.collections_url }}/nike" class="luxury-mega-menu__link">Nike Vomero &amp; P-6000</a></li>
+                <li><a href="{{ routes.collections_url }}/salomon" class="luxury-mega-menu__link">Salomon XT-6 &amp; ACS</a></li>
+                <li><a href="{{ routes.collections_url }}/asics" class="luxury-mega-menu__link">ASICS GEL-Kayano &amp; 1130</a></li>
+                <li><a href="{{ routes.collections_url }}/on-running" class="luxury-mega-menu__link">On Cloudtilt &amp; Monster</a></li>
+                <li><a href="{{ routes.collections_url }}/hoka" class="luxury-mega-menu__link">HOKA Clifton &amp; Bondi</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 3: Designer & Runway {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/premium-footwear" class="luxury-mega-menu__col-title">Designer &amp; Runway</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/coach/footwear" class="luxury-mega-menu__link luxury-mega-menu__link--accent">COACH Footwear &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/michael-kors/footwear" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Michael Kors Shoes &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/coach/women+footwear" class="luxury-mega-menu__link">COACH Women's Shoes</a></li>
+                <li><a href="{{ routes.collections_url }}/coach/men+footwear" class="luxury-mega-menu__link">COACH Men's Shoes</a></li>
+                <li><a href="{{ routes.collections_url }}/michael-kors/women+footwear" class="luxury-mega-menu__link">MK Women's Trainers</a></li>
+                <li><a href="{{ routes.collections_url }}/michael-kors/men+footwear" class="luxury-mega-menu__link">MK Men's Trainers</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 4: Shop By Department {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/premium-footwear" class="luxury-mega-menu__col-title">By Department</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/premium-footwear" class="luxury-mega-menu__link luxury-mega-menu__link--accent">All Footwear (1,300+) &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-shoes" class="luxury-mega-menu__link">Women's Footwear</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-shoes" class="luxury-mega-menu__link">Men's Footwear</a></li>
+                <li><a href="{{ routes.collections_url }}/premium-footwear?sort_by=created-descending" class="luxury-mega-menu__link">New Season Arrivals</a></li>
+                <li><a href="{{ routes.collections_url }}/premium-footwear?sort_by=best-selling" class="luxury-mega-menu__link">Most Popular Silhouettes</a></li>
+                <li><a href="{{ routes.collections_url }}/salomon" class="luxury-mega-menu__link">Alpine Trail &amp; Outdoor</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 5: Iconic Silhouettes {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/premium-footwear" class="luxury-mega-menu__col-title">Iconic Silhouettes</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/salomon" class="luxury-mega-menu__link">Salomon XT-6 Expanse</a></li>
+                <li><a href="{{ routes.collections_url }}/nike" class="luxury-mega-menu__link">Nike Zoom Vomero 5</a></li>
+                <li><a href="{{ routes.collections_url }}/asics" class="luxury-mega-menu__link">ASICS GEL-1130</a></li>
+                <li><a href="{{ routes.collections_url }}/on-running" class="luxury-mega-menu__link">On Cloudsurfer Trail</a></li>
+                <li><a href="{{ routes.collections_url }}/hoka" class="luxury-mega-menu__link">HOKA Speedgoat 5</a></li>
+                <li><a href="{{ routes.collections_url }}/adidas" class="luxury-mega-menu__link">adidas Samba &amp; Spezial</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          {%- comment -%} Editorial Card {%- endcomment -%}
+          <div class="mega-menu__promo luxury-mega-menu__promo">
+            <div>
+              <div class="luxury-mega-menu__promo-tag">Footwear Studio</div>
+              <h3 class="luxury-mega-menu__promo-heading">Engineered Motion</h3>
+              <p class="luxury-mega-menu__promo-body">Alpine trail dominance meets retro terrace aesthetics and modern marathon engineering.</p>
+            </div>
+            <a href="{{ routes.collections_url }}/premium-footwear" class="luxury-mega-menu__promo-cta">
+              Explore All Footwear &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </details>
+</li>
+
+{%- comment -%} ==================== HANDBAGS ==================== {%- endcomment -%}
+<li class="header__primary-nav-item luxury-nav-item">
+  <details class="luxury-nav__details header__menu-disclosure">
+      <summary data-follow-link="{{ routes.collections_url }}/designer-bags" class="luxury-nav__trigger" data-title="Handbags">
+        Handbags
+      </summary>
+
+      <div class="mega-menu luxury-mega-menu">
+        <div class="luxury-mega-menu__inner">
+          <ul class="mega-menu__linklist luxury-mega-menu__columns unstyled-list">
+            {%- comment -%} Pillar 1: Iconic Maisons {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/designer-bags" class="luxury-mega-menu__col-title">Iconic Maisons</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/designer-bags" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Bags (1,000+) &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/coach" class="luxury-mega-menu__link">COACH New York</a></li>
+                <li><a href="{{ routes.collections_url }}/jw-pei" class="luxury-mega-menu__link">JW PEI Los Angeles</a></li>
+                <li><a href="{{ routes.collections_url }}/michael-kors" class="luxury-mega-menu__link">Michael Kors Jet Set</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/coach" class="luxury-mega-menu__link">COACH Tabby &amp; Willow</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/jw-pei" class="luxury-mega-menu__link">JW PEI Gabbi &amp; Joy</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/michael-kors" class="luxury-mega-menu__link">MK Bradshaw &amp; Empire</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 2: Women's Silhouettes {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/womens-handbags" class="luxury-mega-menu__col-title">Women's Silhouettes</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/womens-handbags" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Women's Collection &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/satchels" class="luxury-mega-menu__link">Satchels &amp; Top Handles</a></li>
+                <li><a href="{{ routes.collections_url }}/crossbody-bags" class="luxury-mega-menu__link">Crossbody &amp; Messengers</a></li>
+                <li><a href="{{ routes.collections_url }}/totes" class="luxury-mega-menu__link">Totes &amp; Carryalls</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/shoulder-bags" class="luxury-mega-menu__link">Shoulder Bags &amp; Baguettes</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags" class="luxury-mega-menu__link">Clutches &amp; Evening</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 3: Men's Leather Bags {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/mens-bags" class="luxury-mega-menu__col-title">Men's Bags &amp; Packs</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/mens-bags" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Men's Leather Bags &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-bags/coach" class="luxury-mega-menu__link">COACH Men's Collection</a></li>
+                <li><a href="{{ routes.collections_url }}/crossbody-bags" class="luxury-mega-menu__link">Crossbody &amp; Belt Bags</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-bags/backpacks" class="luxury-mega-menu__link">Backpacks &amp; Rucksacks</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-bags/satchels" class="luxury-mega-menu__link">Briefcases &amp; Satchels</a></li>
+                <li><a href="{{ routes.collections_url }}/totes" class="luxury-mega-menu__link">Totes &amp; Utility Bags</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 4: Leather & Craft {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/designer-bags" class="luxury-mega-menu__col-title">Materials &amp; Craft</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/womens-handbags/coach" class="luxury-mega-menu__link">Glove-Tanned Leather</a></li>
+                <li><a href="{{ routes.collections_url }}/jw-pei" class="luxury-mega-menu__link">Sustainable Vegan Leather</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/michael-kors" class="luxury-mega-menu__link">Saffiano &amp; Pebbled</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags" class="luxury-mega-menu__link">Signature Jacquard</a></li>
+                <li><a href="{{ routes.collections_url }}/designer-bags" class="luxury-mega-menu__link">Turnlock &amp; Metal Hardware</a></li>
+                <li><a href="{{ routes.collections_url }}/designer-bags" class="luxury-mega-menu__link">Structured Minimalist Silhouettes</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 5: Curated Edits {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/designer-bags" class="luxury-mega-menu__col-title">Curated Edits</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/designer-bags?sort_by=best-selling" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Best Selling Bags &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/totes" class="luxury-mega-menu__link">Everyday Work Totes</a></li>
+                <li><a href="{{ routes.collections_url }}/crossbody-bags" class="luxury-mega-menu__link">Hands-Free Crossbody</a></li>
+                <li><a href="{{ routes.collections_url }}/designer-bags?sort_by=created-descending" class="luxury-mega-menu__link">Latest Runway Drops</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-handbags/satchels" class="luxury-mega-menu__link">Top-Handle Classics</a></li>
+                <li><a href="{{ routes.collections_url }}/designer-bags" class="luxury-mega-menu__link">The Quiet Luxury Edit</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          {%- comment -%} Editorial Card {%- endcomment -%}
+          <div class="mega-menu__promo luxury-mega-menu__promo">
+            <div>
+              <div class="luxury-mega-menu__promo-tag">Atelier Leather</div>
+              <h3 class="luxury-mega-menu__promo-heading">Architectural Form</h3>
+              <p class="luxury-mega-menu__promo-body">Sculptural vegan crescents, glove-tanned heritage leathers, and precision turnlock hardware.</p>
+            </div>
+            <a href="{{ routes.collections_url }}/designer-bags" class="luxury-mega-menu__promo-cta">
+              Explore Designer Bags &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </details>
+</li>
+{%- endif -%}
+
+{%- if nav_pos == 'right' or nav_pos == 'all' -%}
+{%- comment -%} ==================== WATCHES ==================== {%- endcomment -%}
+<li class="header__primary-nav-item luxury-nav-item">
+  <details class="luxury-nav__details header__menu-disclosure">
+      <summary data-follow-link="{{ routes.collections_url }}/luxury-watches" class="luxury-nav__trigger" data-title="Watches">
+        Watches
+      </summary>
+
+      <div class="mega-menu luxury-mega-menu">
+        <div class="luxury-mega-menu__inner">
+          <ul class="mega-menu__linklist luxury-mega-menu__columns unstyled-list">
+            {%- comment -%} Pillar 1: Swiss & Heritage Horology {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/luxury-watches" class="luxury-mega-menu__col-title">Fine Horology</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/luxury-watches" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Watches (570+) &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/tissot" class="luxury-mega-menu__link">Tissot (Swiss Made)</a></li>
+                <li><a href="{{ routes.collections_url }}/seiko" class="luxury-mega-menu__link">Seiko (Japan)</a></li>
+                <li><a href="{{ routes.collections_url }}/citizen" class="luxury-mega-menu__link">Citizen (Eco-Drive)</a></li>
+                <li><a href="{{ routes.collections_url }}/movado" class="luxury-mega-menu__link">Movado (Museum Classic)</a></li>
+                <li><a href="{{ routes.collections_url }}/versace" class="luxury-mega-menu__link">Versace (Milano)</a></li>
+                <li><a href="{{ routes.collections_url }}/ferragamo" class="luxury-mega-menu__link">Ferragamo (Swiss)</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 2: Men's Timepieces {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/mens-watches" class="luxury-mega-menu__col-title">Men's Timepieces</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/mens-watches" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Men's Watch Edit &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches/tissot" class="luxury-mega-menu__link">Tissot Men's PRX</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches/citizen" class="luxury-mega-menu__link">Citizen Chronographs</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches/seiko" class="luxury-mega-menu__link">Seiko Automatic Diver</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches/movado" class="luxury-mega-menu__link">Movado Modernist</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches/versace" class="luxury-mega-menu__link">Versace Gold &amp; Steel</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-watches/ferragamo" class="luxury-mega-menu__link">Ferragamo Swiss Made</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 3: Women's Timepieces {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/womens-watches" class="luxury-mega-menu__col-title">Women's Timepieces</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/womens-watches" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Women's Watch Edit &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches/tissot" class="luxury-mega-menu__link">Tissot Bellissima &amp; PRX</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches/seiko" class="luxury-mega-menu__link">Seiko Diamond Dials</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches/citizen" class="luxury-mega-menu__link">Citizen Eco-Drive</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches/movado" class="luxury-mega-menu__link">Movado Museum Classic</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-watches/versace" class="luxury-mega-menu__link">Versace Medusa</a></li>
+                <li><a href="{{ routes.collections_url }}/michael-kors-watches" class="luxury-mega-menu__link">Michael Kors Runway</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 4: Movements & Styles {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/luxury-watches" class="luxury-mega-menu__col-title">Movements &amp; Complications</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/luxury-watches" class="luxury-mega-menu__link">Swiss Automatic Calibers</a></li>
+                <li><a href="{{ routes.collections_url }}/citizen" class="luxury-mega-menu__link">Eco-Drive Light Power</a></li>
+                <li><a href="{{ routes.collections_url }}/luxury-watches" class="luxury-mega-menu__link">Precision Chronographs</a></li>
+                <li><a href="{{ routes.collections_url }}/movado" class="luxury-mega-menu__link">Sapphire Modernist Glass</a></li>
+                <li><a href="{{ routes.collections_url }}/luxury-watches" class="luxury-mega-menu__link">Stainless Steel Bracelets</a></li>
+                <li><a href="{{ routes.collections_url }}/luxury-watches" class="luxury-mega-menu__link">Leather Strap Dress Watches</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 5: Masterpiece Lines {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/luxury-watches" class="luxury-mega-menu__col-title">Masterpiece Lines</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/tissot" class="luxury-mega-menu__link">Tissot PRX Powermatic 80</a></li>
+                <li><a href="{{ routes.collections_url }}/seiko" class="luxury-mega-menu__link">Seiko Presage Cocktail</a></li>
+                <li><a href="{{ routes.collections_url }}/citizen" class="luxury-mega-menu__link">Citizen Tsuyosa Automatic</a></li>
+                <li><a href="{{ routes.collections_url }}/movado" class="luxury-mega-menu__link">Movado Museum Dot Dial</a></li>
+                <li><a href="{{ routes.collections_url }}/versace" class="luxury-mega-menu__link">Versace Hellenyium</a></li>
+                <li><a href="{{ routes.collections_url }}/ferragamo" class="luxury-mega-menu__link">Ferragamo Sapphire &amp; Gancini</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          {%- comment -%} Editorial Card {%- endcomment -%}
+          <div class="mega-menu__promo luxury-mega-menu__promo">
+            <div>
+              <div class="luxury-mega-menu__promo-tag">Master Horology</div>
+              <h3 class="luxury-mega-menu__promo-heading">Swiss Precision</h3>
+              <p class="luxury-mega-menu__promo-body">Self-winding mechanical movements, sapphire crystals, and timeless haute horlogerie.</p>
+            </div>
+            <a href="{{ routes.collections_url }}/luxury-watches" class="luxury-mega-menu__promo-cta">
+              Explore Luxury Watches &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </details>
+</li>
+
+{%- comment -%} ==================== ACCESSORIES ==================== {%- endcomment -%}
+<li class="header__primary-nav-item luxury-nav-item">
+  <details class="luxury-nav__details header__menu-disclosure">
+      <summary data-follow-link="{{ routes.collections_url }}/wallets-accessories" class="luxury-nav__trigger" data-title="Accessories">
+        Accessories
+      </summary>
+
+      <div class="mega-menu luxury-mega-menu">
+        <div class="luxury-mega-menu__inner">
+          <ul class="mega-menu__linklist luxury-mega-menu__columns unstyled-list">
+            {%- comment -%} Pillar 1: Small Leather Goods {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/wallets-leather-goods" class="luxury-mega-menu__col-title">Wallets &amp; Small Leather</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Wallets (200+) &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/coach" class="luxury-mega-menu__link">COACH Small Leather</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/michael-kors" class="luxury-mega-menu__link">Michael Kors Wallets</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/women+wristlets" class="luxury-mega-menu__link">Wristlets &amp; Pouches</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/card-cases" class="luxury-mega-menu__link">Card Cases &amp; Money Clips</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-wallets" class="luxury-mega-menu__link">Continental &amp; Zip Wallets</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 2: Designer Eyewear {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/designer-eyewear" class="luxury-mega-menu__col-title">Designer Eyewear</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/designer-eyewear" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Shop All Eyewear &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-sunglasses/michael-kors" class="luxury-mega-menu__link">Michael Kors Sunglasses</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-sunglasses/cat-eye" class="luxury-mega-menu__link">Cat-Eye &amp; Butterfly</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-sunglasses/aviator" class="luxury-mega-menu__link">Aviator &amp; Pilot</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-sunglasses/oversized" class="luxury-mega-menu__link">Oversized &amp; Geometric</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-sunglasses" class="luxury-mega-menu__link">Men's Navigator Frames</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 3: Men's Accessories {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/wallets-accessories" class="luxury-mega-menu__col-title">Men's Essentials</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/men" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Men's Leather Goods &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/men+billfolds" class="luxury-mega-menu__link">Billfolds &amp; Passcases</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/men+card-cases" class="luxury-mega-menu__link">Card Cases &amp; Money Clips</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-accessories" class="luxury-mega-menu__link">Designer Leather Belts</a></li>
+                <li><a href="{{ routes.collections_url }}/mens-sunglasses" class="luxury-mega-menu__link">Men's Sunglasses</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/men+coach" class="luxury-mega-menu__link">COACH Men's Essentials</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 4: Women's Accessories {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/wallets-accessories" class="luxury-mega-menu__col-title">Women's Essentials</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/womens-wallets" class="luxury-mega-menu__link luxury-mega-menu__link--accent">Women's Small Goods &rarr;</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/women+wristlets" class="luxury-mega-menu__link">Wristlets &amp; Pouches</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/women+wallets" class="luxury-mega-menu__link">Continental Zip Wallets</a></li>
+                <li><a href="{{ routes.collections_url }}/womens-sunglasses" class="luxury-mega-menu__link">Designer Sunglasses</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-accessories" class="luxury-mega-menu__link">Keyrings &amp; Bag Charms</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/women+coach" class="luxury-mega-menu__link">COACH Women's Wallets</a></li>
+              </ul>
+            </li>
+
+            {%- comment -%} Pillar 5: Featured Maisons {%- endcomment -%}
+            <li class="luxury-mega-menu__col">
+              <a href="{{ routes.collections_url }}/wallets-accessories" class="luxury-mega-menu__col-title">Featured Maisons</a>
+              <ul class="luxury-mega-menu__list">
+                <li><a href="{{ routes.collections_url }}/wallets-accessories/coach" class="luxury-mega-menu__link">COACH Accessories</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-accessories/michael-kors" class="luxury-mega-menu__link">Michael Kors Small Goods</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods" class="luxury-mega-menu__link">Signature Monogram Leather</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-leather-goods/coach" class="luxury-mega-menu__link">Glove-Tanned Cardholders</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-accessories" class="luxury-mega-menu__link">Polished Hardware Accents</a></li>
+                <li><a href="{{ routes.collections_url }}/wallets-accessories?sort_by=created-descending" class="luxury-mega-menu__link">New Arrivals Edit</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          {%- comment -%} Editorial Card {%- endcomment -%}
+          <div class="mega-menu__promo luxury-mega-menu__promo">
+            <div>
+              <div class="luxury-mega-menu__promo-tag">Accents & Leather</div>
+              <h3 class="luxury-mega-menu__promo-heading">Refined Essentials</h3>
+              <p class="luxury-mega-menu__promo-body">Polished hardware accents, UV400 gradient frames, and handcrafted leather goods.</p>
+            </div>
+            <a href="{{ routes.collections_url }}/wallets-accessories" class="luxury-mega-menu__promo-cta">
+              Explore All Accessories &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </details>
+</li>
+
+{%- comment -%} ==================== BRANDS (CURATED 4-COLUMN LUXURY DIRECTORY) ==================== {%- endcomment -%}
+<li class="header__primary-nav-item luxury-nav-item">
+  <details class="luxury-nav__details header__menu-disclosure">
+      <summary data-follow-link="{{ routes.collections_url }}" class="luxury-nav__trigger" data-title="Brands">
+        Brands
+      </summary>
+
+      <div class="mega-menu luxury-mega-menu luxury-mega-menu--brands">
+        <div class="luxury-mega-menu__inner luxury-mega-menu__inner--brands">
+
+          {%- comment -%} Column 1: Iconic Leather Ateliers & Handbags {%- endcomment -%}
+          <div class="luxury-brands-col">
+            <span class="luxury-mega-menu__col-title">Leather Goods &amp; Ateliers</span>
+            <div class="luxury-ateliers-wrap">
+              <div class="luxury-atelier-card">
+                <div class="luxury-atelier-card__head">
+                  <a href="{{ routes.collections_url }}/coach" class="luxury-atelier-card__title">COACH</a>
+                  <span class="luxury-atelier-card__origin">New York</span>
+                </div>
+                <div class="luxury-atelier-card__pills">
+                  <a href="{{ routes.collections_url }}/coach" class="luxury-atelier-pill">Showroom</a>
+                  <a href="{{ routes.collections_url }}/womens-handbags/coach" class="luxury-atelier-pill">Women's Handbags</a>
+                  <a href="{{ routes.collections_url }}/mens-bags/coach" class="luxury-atelier-pill">Men's Collection</a>
+                  <a href="{{ routes.collections_url }}/coach/footwear" class="luxury-atelier-pill">Footwear</a>
+                </div>
+              </div>
+
+              <div class="luxury-atelier-card">
+                <div class="luxury-atelier-card__head">
+                  <a href="{{ routes.collections_url }}/jw-pei" class="luxury-atelier-card__title">JW PEI</a>
+                  <span class="luxury-atelier-card__origin">Los Angeles</span>
+                </div>
+                <div class="luxury-atelier-card__pills">
+                  <a href="{{ routes.collections_url }}/jw-pei" class="luxury-atelier-pill">Showroom</a>
+                  <a href="{{ routes.collections_url }}/jw-pei/satchels" class="luxury-atelier-pill">Satchels</a>
+                  <a href="{{ routes.collections_url }}/jw-pei/totes" class="luxury-atelier-pill">Totes</a>
+                </div>
+              </div>
+
+              <div class="luxury-atelier-card">
+                <div class="luxury-atelier-card__head luxury-atelier-card__header">
+                  <a href="{{ routes.collections_url }}/kate-spade" class="luxury-atelier-card__title">Kate Spade</a>
+                  <span class="luxury-atelier-card__origin luxury-atelier-card__badge">New York</span>
+                </div>
+                <div class="luxury-atelier-card__pills luxury-atelier-card__links">
+                  <a href="{{ routes.collections_url }}/kate-spade" class="luxury-atelier-pill">Showroom</a>
+                  <a href="{{ routes.collections_url }}/womens-handbags/kate-spade" class="luxury-atelier-pill">Women's Handbags</a>
+                  <a href="{{ routes.collections_url }}/kate-spade/crossbody-bags" class="luxury-atelier-pill">Crossbody</a>
+                  <a href="{{ routes.collections_url }}/kate-spade/shoulder-bags" class="luxury-atelier-pill">Shoulder Bags</a>
+                </div>
+              </div>
+
+              <div class="luxury-atelier-card">
+                <div class="luxury-atelier-card__head">
+                  <a href="{{ routes.collections_url }}/michael-kors" class="luxury-atelier-card__title">Michael Kors</a>
+                  <span class="luxury-atelier-card__origin">Runway &amp; Jet Set</span>
+                </div>
+                <div class="luxury-atelier-card__pills">
+                  <a href="{{ routes.collections_url }}/michael-kors" class="luxury-atelier-pill">Showroom</a>
+                  <a href="{{ routes.collections_url }}/womens-handbags/michael-kors" class="luxury-atelier-pill">Handbags</a>
+                  <a href="{{ routes.collections_url }}/womens-sunglasses/michael-kors" class="luxury-atelier-pill">Sunglasses</a>
+                  <a href="{{ routes.collections_url }}/michael-kors/footwear" class="luxury-atelier-pill">Footwear</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {%- comment -%} Column 2: Master Horology & Swiss Watchmakers {%- endcomment -%}
+          <div class="luxury-brands-col">
+            <span class="luxury-mega-menu__col-title">Fine Timepieces &amp; Horology</span>
+            <ul class="luxury-horology-list">
+              <li>
+                <a href="{{ routes.collections_url }}/tissot" class="luxury-horology-link">
+                  <div class="luxury-horology-info">
+                    <span class="luxury-horology-name">Tissot</span>
+                    <span class="luxury-horology-desc">Swiss Automatic &amp; PRX</span>
+                  </div>
+                  <span class="luxury-horology-origin">Swiss</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/seiko" class="luxury-horology-link">
+                  <div class="luxury-horology-info">
+                    <span class="luxury-horology-name">Seiko</span>
+                    <span class="luxury-horology-desc">Presage &amp; Prospex</span>
+                  </div>
+                  <span class="luxury-horology-origin">Japan</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/citizen" class="luxury-horology-link">
+                  <div class="luxury-horology-info">
+                    <span class="luxury-horology-name">Citizen</span>
+                    <span class="luxury-horology-desc">Promaster &amp; Tsuyosa</span>
+                  </div>
+                  <span class="luxury-horology-origin">Eco-Drive</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/movado" class="luxury-horology-link">
+                  <div class="luxury-horology-info">
+                    <span class="luxury-horology-name">Movado</span>
+                    <span class="luxury-horology-desc">Museum Classic &amp; Modernist</span>
+                  </div>
+                  <span class="luxury-horology-origin">Swiss</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/versace" class="luxury-horology-link">
+                  <div class="luxury-horology-info">
+                    <span class="luxury-horology-name">Versace</span>
+                    <span class="luxury-horology-desc">Milano Haute Horlogerie</span>
+                  </div>
+                  <span class="luxury-horology-origin">Milano</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/ferragamo" class="luxury-horology-link">
+                  <div class="luxury-horology-info">
+                    <span class="luxury-horology-name">Ferragamo</span>
+                    <span class="luxury-horology-desc">Swiss Made Craftsmanship</span>
+                  </div>
+                  <span class="luxury-horology-origin">Swiss Made</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {%- comment -%} Column 3: Performance & Designer Footwear {%- endcomment -%}
+          <div class="luxury-brands-col">
+            <span class="luxury-mega-menu__col-title">Performance &amp; Designer Footwear</span>
+            <ul class="luxury-horology-list">
+              <li>
+                <a href="{{ routes.collections_url }}/all/adidas" class="luxury-horology-link">
+                  <div class="luxury-horology-info">
+                    <span class="luxury-horology-name">adidas Originals</span>
+                    <span class="luxury-horology-desc">Handball Spezial &amp; Classics</span>
+                  </div>
+                  <span class="luxury-horology-origin">Heritage</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/all/asics" class="luxury-horology-link">
+                  <div class="luxury-horology-info">
+                    <span class="luxury-horology-name">ASICS</span>
+                    <span class="luxury-horology-desc">GEL-Kayano &amp; GEL-1130</span>
+                  </div>
+                  <span class="luxury-horology-origin">Japan</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/all/nike" class="luxury-horology-link">
+                  <div class="luxury-horology-info">
+                    <span class="luxury-horology-name">Nike</span>
+                    <span class="luxury-horology-desc">Vomero &amp; P-6000 Running</span>
+                  </div>
+                  <span class="luxury-horology-origin">Oregon</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/all/salomon" class="luxury-horology-link">
+                  <div class="luxury-horology-info">
+                    <span class="luxury-horology-name">Salomon</span>
+                    <span class="luxury-horology-desc">Trail Running &amp; XT-6</span>
+                  </div>
+                  <span class="luxury-horology-origin">Alpine</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/all/on" class="luxury-horology-link">
+                  <div class="luxury-horology-info">
+                    <span class="luxury-horology-name">On Running</span>
+                    <span class="luxury-horology-desc">CloudTec&reg; Engineering</span>
+                  </div>
+                  <span class="luxury-horology-origin">Swiss</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/all/hoka" class="luxury-horology-link">
+                  <div class="luxury-horology-info">
+                    <span class="luxury-horology-name">HOKA</span>
+                    <span class="luxury-horology-desc">Clifton, Bondi &amp; Speedgoat</span>
+                  </div>
+                  <span class="luxury-horology-origin">Maximal</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/coach/footwear" class="luxury-horology-link">
+                  <div class="luxury-horology-info">
+                    <span class="luxury-horology-name">Coach Footwear</span>
+                    <span class="luxury-horology-desc">Signature Court &amp; City Styles</span>
+                  </div>
+                  <span class="luxury-horology-origin">New York</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/michael-kors/footwear" class="luxury-horology-link">
+                  <div class="luxury-horology-info">
+                    <span class="luxury-horology-name">MK Footwear</span>
+                    <span class="luxury-horology-desc">Jet Set Trainers &amp; Slides</span>
+                  </div>
+                  <span class="luxury-horology-origin">Runway</span>
+                </a>
+              </li>
+            </ul>
+            <a href="{{ routes.collections_url }}/all/footwear" class="luxury-mega-menu__link luxury-mega-menu__link--accent" style="margin-top: 0.75rem;">
+              Shop All Footwear &rarr;
+            </a>
+          </div>
+
+          {%- comment -%} Column 4: Curated Maison Directory (A — Z) {%- endcomment -%}
+          <div class="luxury-brands-col">
+            <span class="luxury-mega-menu__col-title">Curated Directory (A &mdash; Z)</span>
+            <ul class="luxury-directory-list">
+              <li>
+                <a href="{{ routes.collections_url }}/all/adidas" class="luxury-directory-link">
+                  <span class="luxury-directory-name">adidas Originals</span>
+                  <span class="luxury-directory-badge">Footwear</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/all/asics" class="luxury-directory-link">
+                  <span class="luxury-directory-name">ASICS</span>
+                  <span class="luxury-directory-badge">Footwear</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/citizen" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Citizen</span>
+                  <span class="luxury-directory-badge">Watches</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/coach" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Coach</span>
+                  <span class="luxury-directory-badge">Leather &amp; Shoes</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/ferragamo" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Ferragamo</span>
+                  <span class="luxury-directory-badge">Swiss Watches</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/gisou" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Gisou</span>
+                  <span class="luxury-directory-badge">Beauty</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/glossier" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Glossier</span>
+                  <span class="luxury-directory-badge">Beauty</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/haus-labs" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Haus Labs</span>
+                  <span class="luxury-directory-badge">Beauty</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/all/hoka" class="luxury-directory-link">
+                  <span class="luxury-directory-name">HOKA</span>
+                  <span class="luxury-directory-badge">Footwear</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/hourglass" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Hourglass</span>
+                  <span class="luxury-directory-badge">Beauty</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/jw-pei" class="luxury-directory-link">
+                  <span class="luxury-directory-name">JW PEI</span>
+                  <span class="luxury-directory-badge">Vegan Leather</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/kate-spade" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Kate Spade</span>
+                  <span class="luxury-directory-badge luxury-directory-cat">Handbags</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/kosas" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Kosas</span>
+                  <span class="luxury-directory-badge">Beauty</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/makeup-by-mario" class="luxury-directory-link">
+                  <span class="luxury-directory-name">MAKEUP BY MARIO</span>
+                  <span class="luxury-directory-badge">Beauty</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/merit" class="luxury-directory-link">
+                  <span class="luxury-directory-name">MERIT</span>
+                  <span class="luxury-directory-badge">Beauty</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/michael-kors" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Michael Kors</span>
+                  <span class="luxury-directory-badge">Multi-Category</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/movado" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Movado</span>
+                  <span class="luxury-directory-badge">Modern Horology</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/all/nike" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Nike</span>
+                  <span class="luxury-directory-badge">Footwear</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/all/on" class="luxury-directory-link">
+                  <span class="luxury-directory-name">On Running</span>
+                  <span class="luxury-directory-badge">Footwear</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/patrick-ta" class="luxury-directory-link">
+                  <span class="luxury-directory-name">PATRICK TA</span>
+                  <span class="luxury-directory-badge">Beauty</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/refy" class="luxury-directory-link">
+                  <span class="luxury-directory-name">REFY</span>
+                  <span class="luxury-directory-badge">Beauty</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/saie" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Saie</span>
+                  <span class="luxury-directory-badge">Beauty</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/all/salomon" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Salomon</span>
+                  <span class="luxury-directory-badge">Footwear</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/seiko" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Seiko</span>
+                  <span class="luxury-directory-badge">Japanese Craft</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/summer-fridays" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Summer Fridays</span>
+                  <span class="luxury-directory-badge">Beauty</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/tissot" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Tissot</span>
+                  <span class="luxury-directory-badge">Swiss Watches</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/tower-28" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Tower 28 Beauty</span>
+                  <span class="luxury-directory-badge">Beauty</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/versace" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Versace</span>
+                  <span class="luxury-directory-badge">Italian Luxury</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/westman-atelier" class="luxury-directory-link">
+                  <span class="luxury-directory-name">Westman Atelier</span>
+                  <span class="luxury-directory-badge">Beauty</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ routes.collections_url }}/rhode" class="luxury-directory-link">
+                  <span class="luxury-directory-name">rhode</span>
+                  <span class="luxury-directory-badge">Beauty</span>
+                </a>
+              </li>
+            </ul>
+            <a href="{{ routes.collections_url }}" class="luxury-mega-menu__link luxury-mega-menu__link--accent" style="margin-top: 0.75rem;">
+              View All Maisons &rarr;
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </details>
+</li>
+{%- endif -%}
+
+<script>
+  (function() {
+    if (window._luxuryNavInit) return;
+    window._luxuryNavInit = true;
+    function initLuxuryNav() {
+      const detailsList = document.querySelectorAll('.luxury-nav__details');
+      detailsList.forEach(function(details) {
+        let timeout;
+        const parent = details.closest('.luxury-nav-item') || details;
+        parent.addEventListener('mouseenter', function() {
+          clearTimeout(timeout);
+          detailsList.forEach(function(d) { if (d !== details) d.removeAttribute('open'); });
+          details.setAttribute('open', '');
+        });
+        parent.addEventListener('mouseleave', function() {
+          timeout = setTimeout(function() {
+            details.removeAttribute('open');
+          }, 150);
+        });
+        const summary = details.querySelector('summary');
+        if (summary) {
+          summary.addEventListener('click', function(e) {
+            const followLink = summary.getAttribute('data-follow-link');
+            if (followLink && window.innerWidth >= 990) {
+              window.location.href = followLink;
+            }
+          });
+        }
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initLuxuryNav);
+    } else {
+      initLuxuryNav();
+    }
+  })();
+</script>

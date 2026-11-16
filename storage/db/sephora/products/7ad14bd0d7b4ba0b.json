@@ -606,7 +606,8 @@
       "variation_value": "15.5 Sable",
       "variation_type": "Color",
       "price": 4647,
-      "source_price": 49.0
+      "source_price": 49.0,
+      "inventory_quantity": 10
     },
     {
       "id": "1827385",
@@ -803,8 +804,14 @@
     "hourglass"
   ],
   "created_at": "2026-11-04T19:06:55Z",
-  "last_verified_at": "2026-11-05T12:41:24Z",
+  "last_verified_at": "2026-11-16T15:45:20Z",
   "id": "7ad14bd0d7b4ba0b",
-  "updated_at": "2026-11-05T12:41:24Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:45:20Z",
+  "last_synced_fx_rate": 94.086126,
+  "shopify_product_id": "gid://shopify/Product/15994034552998",
+  "shopify_handle": "hourglass-vanish-seamless-finish-foundation-stick-p410532",
+  "shopify_synced_at": "2026-11-13T23:06:24Z",
+  "shopify_image_synced": true,
+  "shopify_sync_pending": false,
+  "primary_image": "https://www.sephora.com/productimages/sku/s1841030-main-zoom.jpg"
 }

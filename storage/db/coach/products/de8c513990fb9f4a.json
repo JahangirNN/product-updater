@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Digitally printed leather and refined pebble leather",
   "specifications": {
     "Closure": "Zip-top closure",
@@ -53,7 +53,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef79_impal_a0",
       "option_values": [
         {
@@ -61,7 +61,8 @@
           "name": "Gold/Pale Green"
         }
       ],
-      "price_current": 3648.0
+      "price_current": 3648.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -73,7 +74,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef79_svyuc_a0",
       "option_values": [
         {
@@ -81,7 +82,8 @@
           "name": "Silver/Washed Yellow"
         }
       ],
-      "price_current": 3648.0
+      "price_current": 3648.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -99,23 +101,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Wallets & Small Goods"
+    "Wallets & Small Goods",
+    "Women"
   ],
   "groups": [
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:47:36Z",
-  "last_verified_at": "2026-10-29T05:38:00Z",
+  "last_verified_at": "2026-11-16T15:41:47Z",
   "id": "de8c513990fb9f4a",
   "product_id": "de8c513990fb9f4a",
   "store": "coach",
-  "updated_at": "2026-10-29T05:38:01Z",
+  "updated_at": "2026-11-16T15:41:47Z",
   "shopify_sync_pending": false,
-  "is_active": true,
+  "is_active": false,
   "shopify_product_id": "gid://shopify/Product/15841769717926",
   "shopify_handle": "corner-zip-wristlet-with-floral-print",
-  "shopify_synced_at": "2026-10-29T05:38:00Z",
+  "shopify_synced_at": "2026-11-14T19:04:10Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 93.851604,
+  "supplier_delisted": false
 }

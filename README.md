@@ -116,6 +116,11 @@ All engineering decisions are recorded and immutably numbered in [`docs/adr/`](.
 | **[0020](./docs/adr/0020-shopify-catalog-taxonomy-and-sync-bridge.md)** | Shopify Catalog Taxonomy, Field Distribution & Real-Time Sync Bridge | Accepted |
 | **[0021](./docs/adr/0021-distributed-shopify-connector-and-sync-architecture.md)** | Distributed Shopify Connector & Real-Time Sync Architecture | Accepted |
 | **[0022](./docs/adr/0022-hierarchical-navigation-taxonomy-and-automated-menu-provisioning.md)** | Hierarchical Navigation Taxonomy & Menu Provisioning Architecture | Accepted |
+| **[0023](./docs/adr/0023-hybrid-luxury-navigation-architecture-and-designer-eyewear-integration.md)** | Hybrid Luxury Navigation Architecture & Designer Eyewear Integration | Accepted |
+| **[0024](./docs/adr/0024-permanent-custom-app-token-and-agent-auth-recovery.md)** | Permanent Custom App Token & Agent Auth Recovery | Accepted |
+| **[0025](./docs/adr/0025-footwear-sizing-consolidation-and-canonical-uk-size-option.md)** | Footwear Sizing Consolidation & Canonical UK Size Option | Accepted |
+| **[0026](./docs/adr/0026-delisted-product-multi-strike-and-shopify-draft-neutralization.md)** | Delisted Product Multi-Strike Circuit & Automatic Shopify Draft Neutralization | Accepted |
+| **[0027](./docs/adr/0027-zero-cost-algolia-search-solver-and-fair-lru-freshner.md)** | Zero-Cost Algolia Search Solver for JD Sports & Fair LRU Freshner Scheduling | Accepted |
 
 ---
 

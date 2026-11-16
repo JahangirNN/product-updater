@@ -57,20 +57,23 @@ def create_http_client(
     max_keepalive_connections: int = DEFAULT_MAX_KEEPALIVE_CONNECTIONS,
     max_connections: int = DEFAULT_MAX_CONNECTIONS,
     custom_headers: Optional[Dict[str, str]] = None,
-    follow_redirects: bool = True
+    follow_redirects: bool = True,
+    timeout: Optional[float] = None
 ) -> httpx.Client:
     """
     Instantiate a configured httpx.Client with Chrome 133 headers and connection pooling limits.
     """
+    if timeout is not None:
+        timeout_seconds = timeout
     headers = get_browser_headers(custom_headers)
     limits = create_connection_limits(
         max_keepalive_connections=max_keepalive_connections,
         max_connections=max_connections
     )
-    timeout = httpx.Timeout(timeout_seconds, connect=connect_timeout)
+    timeout_obj = httpx.Timeout(timeout_seconds, connect=connect_timeout)
     return httpx.Client(
         headers=headers,
-        timeout=timeout,
+        timeout=timeout_obj,
         limits=limits,
         follow_redirects=follow_redirects
     )

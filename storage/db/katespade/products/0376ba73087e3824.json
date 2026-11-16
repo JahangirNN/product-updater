@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.199335,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Sname embossed leather",
   "specifications": {
     "Material": "Sname embossed leather",
@@ -71,8 +71,9 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO490_403_1",
         "https://katespade.scene7.com/is/image/KateSpade/KO490_403_4"
       ],
-      "inventory_quantity": 0,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO490_403"
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO490_403",
+      "is_available": false
     },
     {
       "id": null,
@@ -87,7 +88,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KO492_001",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KO492_001",
@@ -95,7 +96,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KO492_001_2"
       ],
       "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO492_001"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KO492_001",
+      "is_available": false
     },
     {
       "id": null,
@@ -110,7 +112,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KP027_203",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KP027_203",
@@ -118,7 +120,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KP027_203_2"
       ],
       "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KP027_203"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KP027_203",
+      "is_available": false
     },
     {
       "id": null,
@@ -133,7 +136,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KP027_250",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KP027_250",
@@ -141,7 +144,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KP027_250_2"
       ],
       "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KP027_250"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KP027_250",
+      "is_available": false
     }
   ],
   "product_options": [
@@ -158,18 +162,25 @@
     }
   ],
   "tags": [
-    "Kate Spade",
-    "Women",
     "Handbags",
-    "Satchels & Top Handles"
+    "Kate Spade",
+    "Satchels & Top Handles",
+    "Women"
   ],
   "groups": [
     "handbags"
   ],
   "created_at": "2026-10-29T05:29:00Z",
-  "last_verified_at": "2026-10-29T07:43:18Z",
+  "last_verified_at": "2026-11-16T15:41:16Z",
   "_elapsed_ms": 2483.680799952708,
   "id": "0376ba73087e3824",
-  "updated_at": "2026-10-29T07:43:18Z",
-  "last_synced_fx_rate": 95.29615
+  "updated_at": "2026-11-16T15:41:16Z",
+  "last_synced_fx_rate": 95.050072,
+  "shopify_product_id": "gid://shopify/Product/15915072946342",
+  "shopify_handle": "riley-snake-embossed-small-top-handle-bag",
+  "shopify_synced_at": "2026-11-15T15:41:16Z",
+  "shopify_sync_pending": false,
+  "delist_strikes": 0,
+  "supplier_delisted": false,
+  "is_active": false
 }

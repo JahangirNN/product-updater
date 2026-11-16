@@ -6,10 +6,10 @@
   "vendor": "JW PEI",
   "product_type": "JH306D06",
   "source_sku": "JH306D06-7",
-  "source_price": 169.0,
+  "source_price": 114.0,
   "source_compare_at_price": 169.0,
-  "current_price": 16028.0,
-  "compare_at_price": 16089.0,
+  "current_price": 10839.0,
+  "compare_at_price": 15861.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -40,9 +40,9 @@
       "id": 44396286279714,
       "sku": "JH306D06-7",
       "title": "Olive Green",
-      "price": "16222.00",
+      "price": "10839.00",
       "compare_at_price": null,
-      "source_price": 169.0,
+      "source_price": 114.0,
       "source_compare_at_price": 169.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -54,7 +54,8 @@
           "name": "Olive Green"
         }
       ],
-      "price_current": 16222.0
+      "price_current": 10839.0,
+      "is_available": false
     },
     {
       "id": 44396286607394,
@@ -66,7 +67,7 @@
       "source_compare_at_price": 169.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1786959554363-mkzy5fiohp.jpg?v=1786961123",
       "option_values": [
         {
@@ -74,7 +75,8 @@
           "name": "Dark Brown"
         }
       ],
-      "price_current": 16217.0
+      "price_current": 16217.0,
+      "is_available": false
     },
     {
       "id": 44396285591586,
@@ -86,7 +88,7 @@
       "source_compare_at_price": 169.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/unnamed_70edbc82-c952-4dca-8552-27ea8e9f03a8.jpg?v=1760493796",
       "option_values": [
         {
@@ -94,7 +96,8 @@
           "name": "Brown"
         }
       ],
-      "price_current": 16217.0
+      "price_current": 16217.0,
+      "is_available": false
     },
     {
       "id": 44396285657122,
@@ -106,7 +109,7 @@
       "source_compare_at_price": 169.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/unnamed_ea61e2b2-d6f3-4fe3-ad1b-25df49186f3e.jpg?v=1760493796",
       "option_values": [
         {
@@ -114,7 +117,8 @@
           "name": "Ginger Yellow"
         }
       ],
-      "price_current": 16217.0
+      "price_current": 16217.0,
+      "is_available": false
     },
     {
       "id": 44396286476322,
@@ -126,7 +130,7 @@
       "source_compare_at_price": 169.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/unnamed_5509b13e-7493-4fed-a58f-38e43ed2d756.jpg?v=1760493823",
       "option_values": [
         {
@@ -134,7 +138,8 @@
           "name": "Grey"
         }
       ],
-      "price_current": 16217.0
+      "price_current": 16217.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -169,9 +174,10 @@
     "26CODE20",
     "26RAM12",
     "26USMD",
-    "bags",
     "Collection VII-SA",
-    "Collection VIII-SMC"
+    "Collection VIII-SMC",
+    "bags",
+    "supplier-delisted"
   ],
   "groups": [
     "handbags"
@@ -180,17 +186,19 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:32:13Z",
-  "updated_at": "2026-10-29T03:36:52Z",
-  "last_verified_at": "2026-10-29T03:36:52Z",
+  "updated_at": "2026-11-16T15:48:29Z",
+  "last_verified_at": "2026-11-16T15:48:26Z",
   "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841782726822",
   "shopify_handle": "hana-wide-faux-suede-tote-bag-olive-green",
-  "shopify_synced_at": "2026-10-17T21:28:23Z",
+  "shopify_synced_at": "2026-11-16T15:48:26Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779786789141-fps1680qmpa.jpg?v=1779788906",
   "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779786789141-fps1680qmpa.jpg?v=1779788906",
   "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\ba2eb10c77fed1af.json",
   "archived": true,
   "canonical_product_id": "gid://shopify/Product/15841771356326",
-  "last_synced_fx_rate": 95.111965
+  "last_synced_fx_rate": 94.086126,
+  "delist_strikes": 22,
+  "supplier_delisted": true
 }

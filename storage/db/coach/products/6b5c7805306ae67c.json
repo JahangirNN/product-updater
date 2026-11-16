@@ -74,7 +74,8 @@
           "name": "Brass/Muted Olive"
         }
       ],
-      "price_current": 19006.0
+      "price_current": 19006.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -94,7 +95,8 @@
           "name": "Brass/Maple"
         }
       ],
-      "price_current": 19006.0
+      "price_current": 19006.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -112,23 +114,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Handbags"
+    "Handbags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:42:36Z",
-  "last_verified_at": "2026-10-29T03:38:32Z",
+  "last_verified_at": "2026-11-16T15:45:04Z",
   "id": "6b5c7805306ae67c",
   "product_id": "6b5c7805306ae67c",
   "store": "coach",
-  "updated_at": "2026-10-29T03:38:32Z",
+  "updated_at": "2026-11-16T15:45:04Z",
   "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841765654694",
   "shopify_handle": "kisslock-frame-bag-27",
-  "shopify_synced_at": "2026-10-28T11:44:31Z",
+  "shopify_synced_at": "2026-11-14T01:10:08Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

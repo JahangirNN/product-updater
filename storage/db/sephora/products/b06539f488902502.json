@@ -17,8 +17,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.834253,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "primary_image_url": "https://www.sephora.com/productimages/sku/s2908697-main-zoom.jpg",
   "images": [
     "https://www.sephora.com/productimages/sku/s2908697-main-zoom.jpg",
@@ -58,8 +58,8 @@
       "current_price": 2371,
       "price_inr": 2371,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "2908697",
       "image_url": "https://www.sephora.com/productimages/sku/s2908697-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2908697+sw.jpg",
@@ -67,7 +67,8 @@
       "variation_value": "rhode Logo - 6 pairs/pack",
       "variation_type": "Size",
       "price": 2371,
-      "source_price": 25.0
+      "source_price": 25.0,
+      "inventory_quantity": 0
     },
     {
       "id": "3040760",
@@ -88,7 +89,8 @@
       "variation_value": "r Icon - 6 pairs/pack",
       "variation_type": "Size",
       "price": 2371,
-      "source_price": 25.0
+      "source_price": 25.0,
+      "inventory_quantity": 0
     }
   ],
   "product_options": [
@@ -120,8 +122,14 @@
     "rhode"
   ],
   "created_at": "2026-11-04T18:59:27Z",
-  "last_verified_at": "2026-11-05T10:49:08Z",
+  "last_verified_at": "2026-11-16T15:42:51Z",
   "id": "b06539f488902502",
-  "updated_at": "2026-11-05T10:49:08Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:42:51Z",
+  "last_synced_fx_rate": 94.086126,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15994226770086",
+  "shopify_handle": "rhode-peptide-eye-prep-depuffing-eye-patches-p518591",
+  "shopify_synced_at": "2026-11-13T14:56:20Z",
+  "shopify_image_synced": true,
+  "primary_image": "https://www.sephora.com/productimages/sku/s2908697-main-zoom.jpg"
 }

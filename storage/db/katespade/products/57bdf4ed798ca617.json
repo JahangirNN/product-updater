@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.199335,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Refined Grain Leather",
   "specifications": {
     "Material": "Refined Grain Leather",
@@ -55,14 +55,14 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KG016_502",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KG016_502",
         "https://katespade.scene7.com/is/image/KateSpade/KG016_502_1",
         "https://katespade.scene7.com/is/image/KateSpade/KG016_502_2"
       ],
-      "inventory_quantity": 10,
+      "inventory_quantity": 0,
       "image_url": "https://katespade.scene7.com/is/image/KateSpade/KG016_502"
     }
   ],
@@ -86,9 +86,13 @@
     "handbags"
   ],
   "created_at": "2026-10-29T05:27:28Z",
-  "last_verified_at": "2026-10-29T07:41:01Z",
+  "last_verified_at": "2026-11-16T15:45:46Z",
   "_elapsed_ms": 2548.227399936877,
   "id": "57bdf4ed798ca617",
-  "updated_at": "2026-10-29T07:41:01Z",
-  "last_synced_fx_rate": 95.29615
+  "updated_at": "2026-11-16T15:45:46Z",
+  "last_synced_fx_rate": 93.851604,
+  "shopify_product_id": "gid://shopify/Product/15915081203878",
+  "shopify_handle": "kristi-crossbody",
+  "shopify_synced_at": "2026-11-12T08:52:45Z",
+  "shopify_sync_pending": false
 }

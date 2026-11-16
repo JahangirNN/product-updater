@@ -9,7 +9,7 @@
   "source_sku": "SALOMON-8785655-7",
   "source_price": 165.0,
   "source_compare_at_price": null,
-  "current_price": 15708.0,
+  "current_price": 15558.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -70,7 +70,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/2018de7d-8dc5-49e6-aae2-723e5cadc142.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -116,7 +116,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/2018de7d-8dc5-49e6-aae2-723e5cadc142.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -162,7 +162,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/2018de7d-8dc5-49e6-aae2-723e5cadc142.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -231,7 +231,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/2018de7d-8dc5-49e6-aae2-723e5cadc142.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -378,23 +378,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:50:04Z",
+  "last_verified_at": "2026-11-16T15:49:18Z",
   "created_at": "2026-09-18T06:49:44Z",
-  "updated_at": "2026-10-29T03:50:04Z",
+  "updated_at": "2026-11-16T15:49:18Z",
   "price_range_usd": {
     "min": 165.0,
     "max": 165.0
   },
   "price_range_inr": {
-    "min": 15708.0,
-    "max": 15708.0
+    "min": 15558.0,
+    "max": 15558.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15850877878438",
   "shopify_handle": "xt-whisper-gtx",
-  "shopify_synced_at": "2026-10-28T19:51:19Z",
+  "shopify_synced_at": "2026-11-14T15:19:01Z",
   "shopify_sync_pending": false,
-  "price": "15708.00",
-  "last_synced_fx_rate": 95.199335
+  "price": "15558.00",
+  "last_synced_fx_rate": 94.289707
 }

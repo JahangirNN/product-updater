@@ -68,7 +68,8 @@
           "name": "Gold/Poppy"
         }
       ],
-      "price_current": 14185.0
+      "price_current": 14185.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -88,7 +89,8 @@
           "name": "Gold/Warm Brown"
         }
       ],
-      "price_current": 14185.0
+      "price_current": 14185.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -108,7 +110,8 @@
           "name": "Gold/Soft Yellow"
         }
       ],
-      "price_current": 9359.0
+      "price_current": 9359.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -128,7 +131,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 14185.0
+      "price_current": 14185.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -148,7 +152,8 @@
           "name": "Gold/Deep Blue"
         }
       ],
-      "price_current": 15470.0
+      "price_current": 15470.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -168,7 +173,8 @@
           "name": "Gold/Chalk Multi"
         }
       ],
-      "price_current": 15598.0
+      "price_current": 15598.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -188,7 +194,8 @@
           "name": "Gold/White/Chalk"
         }
       ],
-      "price_current": 14185.0
+      "price_current": 14185.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -208,7 +215,8 @@
           "name": "Gold/Walnut/Black"
         }
       ],
-      "price_current": 14185.0
+      "price_current": 14185.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -228,7 +236,8 @@
           "name": "Gold/Tan/Brown"
         }
       ],
-      "price_current": 14185.0
+      "price_current": 14185.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -248,7 +257,8 @@
           "name": "Gold/Red/Tan"
         }
       ],
-      "price_current": 9359.0
+      "price_current": 9359.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -268,7 +278,8 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 14185.0
+      "price_current": 14185.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -288,7 +299,8 @@
           "name": "Silver/Maple"
         }
       ],
-      "price_current": 14185.0
+      "price_current": 14185.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -336,23 +348,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Shoulder Bags"
+    "Shoulder Bags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:43:40Z",
-  "last_verified_at": "2026-10-29T03:39:44Z",
+  "last_verified_at": "2026-11-16T15:46:06Z",
   "id": "85d19bb06724ce8f",
   "product_id": "85d19bb06724ce8f",
   "store": "coach",
-  "updated_at": "2026-10-29T03:39:44Z",
+  "updated_at": "2026-11-16T15:46:06Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841795997862",
   "shopify_handle": "emily-shoulder-bag-cdx34-svmpl",
-  "shopify_synced_at": "2026-10-28T23:46:27Z",
+  "shopify_synced_at": "2026-11-14T09:13:11Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

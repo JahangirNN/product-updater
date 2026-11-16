@@ -12,7 +12,7 @@
   "source_price": 65.0,
   "source_compare_at_price": null,
   "current_price": 6239.0,
-  "compare_at_price": 8758.0,
+  "compare_at_price": 8685.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -96,7 +96,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IB5721_100_P1",
       "option_values": [
         {
@@ -108,7 +108,7 @@
           "name": "Pale Ivory/Taupe Haze"
         }
       ],
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -121,7 +121,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IB5721_100_P1",
       "option_values": [
         {
@@ -133,7 +133,7 @@
           "name": "Pale Ivory/Taupe Haze"
         }
       ],
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -196,7 +196,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IB5721_100_P1",
       "option_values": [
         {
@@ -208,7 +208,7 @@
           "name": "Pale Ivory/Taupe Haze"
         }
       ],
-      "is_available": false
+      "is_available": true
     }
   ],
   "product_options": [
@@ -262,13 +262,13 @@
     "shoes"
   ],
   "created_at": "2026-09-20T16:07:40Z",
-  "updated_at": "2026-10-29T05:37:27Z",
-  "last_verified_at": "2026-10-29T05:37:27Z",
+  "updated_at": "2026-11-16T15:43:02Z",
+  "last_verified_at": "2026-11-16T15:43:00Z",
   "shopify_product_id": "gid://shopify/Product/15851456987302",
   "shopify_handle": "big-kids-nike-dunk-low-casual-shoes-pale-ivory-taupe-haze-3291867",
-  "shopify_synced_at": "2026-10-28T21:37:39Z",
+  "shopify_synced_at": "2026-11-16T15:43:00Z",
   "shopify_sync_pending": false,
   "delist_strikes": 0,
   "supplier_delisted": false,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.399626
 }

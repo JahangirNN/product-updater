@@ -9,7 +9,7 @@
   "source_sku": "ON-6724978-7",
   "source_price": 180.0,
   "source_compare_at_price": null,
-  "current_price": 17136.0,
+  "current_price": 16936.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -129,7 +129,7 @@
       "id": 672497802,
       "sku": "ON-6724978-9",
       "title": "UK 8.5 - Frost / Surf",
-      "price": "17287.00",
+      "price": "16936.00",
       "compare_at_price": "16323.00",
       "source_price": 180.0,
       "source_compare_at_price": 169.99,
@@ -147,7 +147,7 @@
           "name": "Frost / Surf"
         }
       ],
-      "price_current": 17287.0
+      "price_current": 16936.0
     },
     {
       "id": 672497803,
@@ -489,7 +489,7 @@
       "id": 672497817,
       "sku": "ON-6724978-CREA-9",
       "title": "UK 8.5 - Cream / Dune",
-      "price": "17287.00",
+      "price": "16936.00",
       "compare_at_price": "16323.00",
       "source_price": 180.0,
       "source_compare_at_price": 169.99,
@@ -507,7 +507,7 @@
           "name": "Cream / Dune"
         }
       ],
-      "price_current": 17287.0
+      "price_current": 16936.0
     },
     {
       "id": 672497818,
@@ -801,7 +801,7 @@
       "id": 672497830,
       "sku": "ON-6724978-ALLO-9",
       "title": "UK 8.5 - Alloy / Silver",
-      "price": "17287.00",
+      "price": "16936.00",
       "compare_at_price": "16324.00",
       "source_price": 180.0,
       "source_compare_at_price": 170.0,
@@ -819,7 +819,7 @@
           "name": "Alloy / Silver"
         }
       ],
-      "price_current": 17287.0
+      "price_current": 16936.0
     },
     {
       "id": 672497831,
@@ -1065,7 +1065,7 @@
       "id": 672497841,
       "sku": "ON-6724978-WHIT-9",
       "title": "UK 8.5 - White / Glacier",
-      "price": "17287.00",
+      "price": "16936.00",
       "compare_at_price": "16324.00",
       "source_price": 180.0,
       "source_compare_at_price": 170.0,
@@ -1083,7 +1083,7 @@
           "name": "White / Glacier"
         }
       ],
-      "price_current": 17287.0
+      "price_current": 16936.0
     },
     {
       "id": 672497842,
@@ -1521,10 +1521,10 @@
       "id": 672497860,
       "sku": "ON-6724978-IVOR-9",
       "title": "UK 8.5 - Ivory / Pearl",
-      "price": "17287.00",
-      "compare_at_price": "17287.00",
+      "price": "16936.00",
+      "compare_at_price": "15954.00",
       "source_price": 180.0,
-      "source_compare_at_price": 180.0,
+      "source_compare_at_price": 169.99,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -1539,7 +1539,7 @@
           "name": "Ivory / Pearl"
         }
       ],
-      "price_current": 17287.0
+      "price_current": 16936.0
     },
     {
       "id": 672497861,
@@ -1641,10 +1641,10 @@
       "id": 672497865,
       "sku": "ON-6724978-IVOR-9",
       "title": "UK 8.5 - Ivory / Ruby",
-      "price": "17287.00",
-      "compare_at_price": "17284.00",
+      "price": "16936.00",
+      "compare_at_price": "15954.00",
       "source_price": 180.0,
-      "source_compare_at_price": 180.0,
+      "source_compare_at_price": 169.99,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -1659,7 +1659,7 @@
           "name": "Ivory / Ruby"
         }
       ],
-      "price_current": 17287.0
+      "price_current": 16936.0
     },
     {
       "id": 672497866,
@@ -2160,10 +2160,10 @@
       "id": 672497887,
       "sku": "ON-6724978-ALLO-9",
       "title": "UK 8.5 - Alloy / Jay",
-      "price": "17284.00",
-      "compare_at_price": null,
+      "price": "16936.00",
+      "compare_at_price": "15954.00",
       "source_price": 180.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 169.99,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -2177,7 +2177,8 @@
           "option_name": "Color",
           "name": "Alloy / Jay"
         }
-      ]
+      ],
+      "price_current": 16936.0
     },
     {
       "id": 672497888,
@@ -2370,10 +2371,10 @@
       "id": 672497896,
       "sku": "ON-6724978-MIDN-9",
       "title": "UK 8.5 - Midnight / Navy",
-      "price": "17284.00",
-      "compare_at_price": null,
+      "price": "16936.00",
+      "compare_at_price": "15954.00",
       "source_price": 180.0,
-      "source_compare_at_price": null,
+      "source_compare_at_price": 169.99,
       "currency": "INR",
       "source_currency": "USD",
       "in_stock": true,
@@ -2387,7 +2388,8 @@
           "option_name": "Color",
           "name": "Midnight / Navy"
         }
-      ]
+      ],
+      "price_current": 16936.0
     },
     {
       "id": 672497897,
@@ -2618,23 +2620,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T04:02:22Z",
+  "last_verified_at": "2026-11-16T15:47:27Z",
   "created_at": "2026-09-17T14:19:11Z",
-  "updated_at": "2026-10-29T04:02:22Z",
+  "updated_at": "2026-11-16T15:47:27Z",
   "price_range_usd": {
     "min": 89.97,
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 8565.0,
-    "max": 17136.0
+    "min": 8465.0,
+    "max": 16936.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "17136.00",
+  "price": "16936.00",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15850876502182",
   "shopify_handle": "on-running-cloudmonster-running-shoe-men",
-  "shopify_synced_at": "2026-10-29T00:11:12Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-13T19:12:37Z",
+  "last_synced_fx_rate": 94.086126
 }

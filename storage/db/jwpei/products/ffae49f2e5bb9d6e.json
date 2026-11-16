@@ -6,10 +6,10 @@
   "vendor": "JW PEI",
   "product_type": "2T192",
   "source_sku": "2T192-41",
-  "source_price": 119.0,
+  "source_price": 102.0,
   "source_compare_at_price": 119.0,
-  "current_price": 11286.0,
-  "compare_at_price": 11329.0,
+  "current_price": 9698.0,
+  "compare_at_price": 11234.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -242,9 +242,9 @@
       "id": 44717187596322,
       "sku": "2T192-41",
       "title": "Burgundy",
-      "price": "11423.00",
+      "price": "9698.00",
       "compare_at_price": null,
-      "source_price": 119.0,
+      "source_price": 102.0,
       "source_compare_at_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -256,7 +256,7 @@
           "name": "Burgundy"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 9698.0
     },
     {
       "id": 44717187858466,
@@ -869,17 +869,17 @@
   "status": "ACTIVE",
   "validation_warnings": [],
   "created_at": "2026-09-10T03:30:02Z",
-  "updated_at": "2026-10-29T03:38:18Z",
-  "last_verified_at": "2026-10-29T03:38:18Z",
+  "updated_at": "2026-11-16T15:41:53Z",
+  "last_verified_at": "2026-11-16T15:41:53Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841787117734",
   "shopify_handle": "carmen-top-handle-bag-burgundy",
-  "shopify_synced_at": "2026-09-29T06:02:02Z",
+  "shopify_synced_at": "2026-11-03T08:45:34Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1780646270663-3cuhxnl1ky8.jpg?v=1780647734",
   "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1780646270663-3cuhxnl1ky8.jpg?v=1780647734",
   "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\ffae49f2e5bb9d6e.json",
   "archived": true,
   "canonical_product_id": "gid://shopify/Product/15841771389094",
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 95.082494
 }

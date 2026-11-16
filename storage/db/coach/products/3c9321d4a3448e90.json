@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Suede and smooth leather",
   "specifications": {
     "Material": "Suede and smooth leather",
@@ -60,7 +60,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cge84_imz28_a0",
       "option_values": [
         {
@@ -68,7 +68,8 @@
           "name": "Gold/Marigold"
         }
       ],
-      "price_current": 17182.0
+      "price_current": 17182.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -83,23 +84,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Crossbody Bags"
+    "Crossbody Bags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:40:55Z",
-  "last_verified_at": "2026-10-29T03:39:22Z",
+  "last_verified_at": "2026-11-16T15:45:35Z",
   "id": "3c9321d4a3448e90",
   "product_id": "3c9321d4a3448e90",
   "store": "coach",
-  "updated_at": "2026-10-29T03:39:22Z",
-  "is_active": true,
+  "updated_at": "2026-11-16T15:45:35Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841795309734",
   "shopify_handle": "mini-rowan-crossbody-bag-cge84-imz28",
-  "shopify_synced_at": "2026-10-08T16:01:23Z",
+  "shopify_synced_at": "2026-11-14T01:12:03Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 93.851604,
+  "supplier_delisted": false
 }

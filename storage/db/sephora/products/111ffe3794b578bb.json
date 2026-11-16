@@ -70,8 +70,8 @@
       "current_price": 1897,
       "price_inr": 1897,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "2903540",
       "image_url": "https://www.sephora.com/productimages/sku/s2903540-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2903540+sw-42.jpg",
@@ -79,7 +79,8 @@
       "variation_value": "You",
       "variation_type": "Scent",
       "price": 1897,
-      "source_price": 20.0
+      "source_price": 20.0,
+      "inventory_quantity": 0
     },
     {
       "id": "2903532",
@@ -150,8 +151,13 @@
     "glossier"
   ],
   "created_at": "2026-11-04T19:01:10Z",
-  "last_verified_at": "2026-11-05T10:50:37Z",
+  "last_verified_at": "2026-11-16T15:43:37Z",
   "id": "111ffe3794b578bb",
-  "updated_at": "2026-11-05T10:50:37Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:43:37Z",
+  "last_synced_fx_rate": 93.851604,
+  "shopify_sync_pending": true,
+  "shopify_product_id": "gid://shopify/Product/15993641435302",
+  "shopify_handle": "glossier-hand-cream-p518459",
+  "shopify_synced_at": "2026-11-12T13:12:51Z",
+  "shopify_image_synced": true
 }

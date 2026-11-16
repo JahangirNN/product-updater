@@ -73,7 +73,8 @@
           "name": "Charcoal/Black"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -93,7 +94,8 @@
           "name": "Sea Green"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -113,7 +115,8 @@
           "name": "Canary"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -133,7 +136,8 @@
           "name": "Denim Chalk"
         }
       ],
-      "price_current": 4320.0
+      "price_current": 4320.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -153,7 +157,8 @@
           "name": "Black Signature"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -173,7 +178,8 @@
           "name": "Black Currant"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -193,7 +199,8 @@
           "name": "Amber Brown"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -213,7 +220,8 @@
           "name": "Gunmetal/Black"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -233,7 +241,8 @@
           "name": "Saddle"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -279,16 +288,17 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:45:44Z",
-  "last_verified_at": "2026-10-29T03:37:07Z",
+  "last_verified_at": "2026-11-16T15:42:00Z",
   "id": "b2374848f53b79bd",
   "product_id": "b2374848f53b79bd",
   "store": "coach",
-  "updated_at": "2026-10-29T03:37:07Z",
+  "updated_at": "2026-11-16T15:42:00Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841768177830",
   "shopify_handle": "compact-billfold-wallet-in-signature-canvas",
-  "shopify_synced_at": "2026-10-23T11:56:27Z",
+  "shopify_synced_at": "2026-11-13T23:05:14Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 94.593871
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

@@ -17,8 +17,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.834253,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "primary_image_url": "https://www.sephora.com/productimages/sku/s2988871-main-zoom.jpg",
   "images": [
     "https://www.sephora.com/productimages/sku/s2988871-main-zoom.jpg",
@@ -66,8 +66,8 @@
       "current_price": 9294,
       "price_inr": 9294,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "2988871",
       "image_url": "https://www.sephora.com/productimages/sku/s2988871-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2988871+sw-62.jpg",
@@ -75,7 +75,8 @@
       "variation_value": "Luck",
       "variation_type": "Color",
       "price": 9294,
-      "source_price": 98.0
+      "source_price": 98.0,
+      "inventory_quantity": 0
     },
     {
       "id": "2988921",
@@ -171,8 +172,14 @@
     "hourglass"
   ],
   "created_at": "2026-11-04T19:06:07Z",
-  "last_verified_at": "2026-11-05T12:40:27Z",
+  "last_verified_at": "2026-11-16T15:44:36Z",
   "id": "b614136b9357a21f",
-  "updated_at": "2026-11-05T12:40:27Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:44:36Z",
+  "last_synced_fx_rate": 94.086126,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15994262814886",
+  "shopify_handle": "hourglass-ambient-lighting-edit-unlocked-palette-p526297",
+  "shopify_synced_at": "2026-11-14T03:06:47Z",
+  "shopify_image_synced": true,
+  "primary_image": "https://www.sephora.com/productimages/sku/s2988871-main-zoom.jpg"
 }

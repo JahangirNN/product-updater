@@ -10,12 +10,12 @@
   "source_price": 144.0,
   "source_compare_at_price": 180.0,
   "current_price": 13822.0,
-  "compare_at_price": 17136.0,
+  "compare_at_price": 16972.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "color": "Orange/Black/Blue",
   "width": "Width - D - Medium",
   "material": "Premium upper with durable overlays and responsive traction outsole",
@@ -200,7 +200,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8150404_01",
       "option_values": [
         {
@@ -213,7 +213,7 @@
         }
       ],
       "price_current": 13822.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -341,19 +341,20 @@
     "men's",
     "nike",
     "shoes",
-    "sizes-10"
+    "sizes-10",
+    "supplier-delisted"
   ],
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-10-29T05:49:51Z",
+  "last_verified_at": "2026-11-16T13:41:21Z",
   "created_at": "2026-09-18T20:48:16Z",
-  "updated_at": "2026-10-29T05:49:51Z",
+  "updated_at": "2026-11-16T13:41:23Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851012751526",
   "shopify_handle": "nike-vomero-plus-men-s-orange-black-blue-v8150404",
-  "shopify_synced_at": "2026-10-28T21:37:27Z",
-  "delist_strikes": 0,
-  "supplier_delisted": false,
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-16T13:41:21Z",
+  "delist_strikes": 12,
+  "supplier_delisted": true,
+  "last_synced_fx_rate": 94.289707
 }

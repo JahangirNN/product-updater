@@ -9,12 +9,12 @@
   "source_sku": "SALOMON-8841087-6.5",
   "source_price": 210.0,
   "source_compare_at_price": 210.0,
-  "current_price": 19992.0,
-  "compare_at_price": 19992.0,
+  "current_price": 19801.0,
+  "compare_at_price": 19801.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "out_of_stock",
+  "availability": "in_stock",
   "material": "Textile and synthetic upper/textile lining/synthetic sole",
   "specifications": {
     "Brand": "Salomon",
@@ -231,7 +231,7 @@
       "source_compare_at_price": 210.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/2204e1c3-421d-45ab-a98f-a487c2f20778.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -376,22 +376,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T04:00:16Z",
+  "last_verified_at": "2026-11-16T16:08:02Z",
   "created_at": "2026-09-18T05:44:30Z",
-  "updated_at": "2026-10-29T04:00:16Z",
+  "updated_at": "2026-11-16T16:08:02Z",
   "price_range_usd": {
     "min": 210.0,
     "max": 210.0
   },
   "price_range_inr": {
-    "min": 19992.0,
-    "max": 19992.0
+    "min": 19801.0,
+    "max": 19801.0
   },
-  "price": "19992.00",
-  "is_active": false,
+  "price": "19801.00",
+  "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15850880598182",
   "shopify_handle": "xt-quest-gore-tex-sneaker-men",
-  "shopify_synced_at": "2026-10-28T20:06:38Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-14T21:14:49Z",
+  "last_synced_fx_rate": 94.289707
 }

@@ -10,7 +10,7 @@
   "source_price": 129.99,
   "source_compare_at_price": 180.0,
   "current_price": 12604.0,
-  "compare_at_price": 17136.0,
+  "compare_at_price": 16992.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -75,7 +75,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42150702_01",
       "option_values": [
         {
@@ -88,15 +88,15 @@
         }
       ],
       "price_current": 12604.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
       "sku": "42150702-8.5",
       "title": "UK 7.5 - Black Spruce/Volt Tint/Lime Blast",
-      "price": "13974.00",
+      "price": "12360.00",
       "compare_at_price": "17278.00",
-      "source_price": 144.99,
+      "source_price": 129.99,
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -112,7 +112,7 @@
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
       ],
-      "price_current": 13974.0,
+      "price_current": 12360.0,
       "is_available": false
     },
     {
@@ -169,9 +169,9 @@
       "id": null,
       "sku": "42150702-10",
       "title": "UK 9 - Black Spruce/Volt Tint/Lime Blast",
-      "price": "14059.00",
+      "price": "12360.00",
       "compare_at_price": "17278.00",
-      "source_price": 144.99,
+      "source_price": 129.99,
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -187,7 +187,7 @@
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
       ],
-      "price_current": 14059.0,
+      "price_current": 12360.0,
       "is_available": false
     },
     {
@@ -225,7 +225,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42150702_01",
       "option_values": [
         {
@@ -238,7 +238,7 @@
         }
       ],
       "price_current": 12604.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -250,7 +250,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42150702_01",
       "option_values": [
         {
@@ -263,7 +263,7 @@
         }
       ],
       "price_current": 12478.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -325,7 +325,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42150702_01",
       "option_values": [
         {
@@ -338,15 +338,15 @@
         }
       ],
       "price_current": 12375.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
       "sku": "42150702-14",
       "title": "UK 13 - Black Spruce/Volt Tint/Lime Blast",
-      "price": "14039.00",
+      "price": "12387.00",
       "compare_at_price": "17278.00",
-      "source_price": 144.99,
+      "source_price": 129.99,
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -362,7 +362,7 @@
           "name": "Black Spruce/Volt Tint/Lime Blast"
         }
       ],
-      "price_current": 14039.0,
+      "price_current": 12387.0,
       "is_available": false
     },
     {
@@ -458,14 +458,14 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-10-29T03:37:22Z",
+  "last_verified_at": "2026-11-16T15:46:02Z",
   "created_at": "2026-09-18T20:48:02Z",
-  "updated_at": "2026-10-29T03:37:22Z",
+  "updated_at": "2026-11-16T15:46:05Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851005575334",
   "shopify_handle": "nike-vomero-plus-men-s-black-spruce-volt-tint-lime-blast-42150702",
-  "shopify_synced_at": "2026-10-28T23:36:55Z",
-  "last_synced_fx_rate": 95.199335,
-  "delist_strikes": 1,
+  "shopify_synced_at": "2026-11-16T15:46:02Z",
+  "last_synced_fx_rate": 94.399626,
+  "delist_strikes": 0,
   "supplier_delisted": false
 }

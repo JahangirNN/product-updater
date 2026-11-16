@@ -58,14 +58,14 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KL804_001",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KL804_001",
         "https://katespade.scene7.com/is/image/KateSpade/KL804_001_1",
         "https://katespade.scene7.com/is/image/KateSpade/KL804_001_3"
       ],
-      "inventory_quantity": 0,
+      "inventory_quantity": 10,
       "image_url": "https://katespade.scene7.com/is/image/KateSpade/KL804_001"
     },
     {
@@ -113,9 +113,13 @@
     "handbags"
   ],
   "created_at": "2026-10-29T05:27:05Z",
-  "last_verified_at": "2026-10-29T07:40:18Z",
+  "last_verified_at": "2026-11-16T15:47:39Z",
   "_elapsed_ms": 2709.316399996169,
   "id": "a85ab1f25197c52a",
-  "updated_at": "2026-10-29T07:40:18Z",
-  "last_synced_fx_rate": 95.29615
+  "updated_at": "2026-11-16T15:47:39Z",
+  "last_synced_fx_rate": 94.289707,
+  "shopify_product_id": "gid://shopify/Product/15915093393574",
+  "shopify_handle": "kayla-large-triple-compartment-shoulder-bag",
+  "shopify_synced_at": "2026-11-15T11:09:47Z",
+  "shopify_sync_pending": false
 }

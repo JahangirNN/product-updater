@@ -9,7 +9,7 @@
   "source_sku": "HOKA-8432287-7",
   "source_price": 145.0,
   "source_compare_at_price": null,
-  "current_price": 13804.0,
+  "current_price": 13688.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -277,7 +277,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/97895463-5c61-4f78-9c7a-7ab9d57ab505.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -392,7 +392,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1f924a51-62b3-4c56-9d37-d470630b6cfd.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -507,7 +507,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/1f924a51-62b3-4c56-9d37-d470630b6cfd.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -708,9 +708,9 @@
       "id": 843228727,
       "sku": "NORDSTROM-8432287-BLAC-12",
       "title": "UK 11.5 - Black / Black",
-      "price": "7612.00",
+      "price": "9507.00",
       "compare_at_price": "13914.00",
-      "source_price": 79.99,
+      "source_price": 99.99,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -726,15 +726,15 @@
           "name": "Black / Black"
         }
       ],
-      "price_current": 7612.0
+      "price_current": 9507.0
     },
     {
       "id": 843228728,
       "sku": "NORDSTROM-8432287-BLAC-10.5",
       "title": "UK 10 - Black / Black",
-      "price": "7612.00",
+      "price": "9507.00",
       "compare_at_price": "13914.00",
-      "source_price": 79.99,
+      "source_price": 99.99,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -750,15 +750,15 @@
           "name": "Black / Black"
         }
       ],
-      "price_current": 7612.0
+      "price_current": 9507.0
     },
     {
       "id": 843228729,
       "sku": "NORDSTROM-8432287-BLAC-7",
       "title": "UK 6.5 - Black / Black",
-      "price": "9595.00",
+      "price": "10254.00",
       "compare_at_price": "13914.00",
-      "source_price": 99.99,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -773,15 +773,16 @@
           "option_name": "Color",
           "name": "Black / Black"
         }
-      ]
+      ],
+      "price_current": 10254.0
     },
     {
       "id": 843228730,
       "sku": "NORDSTROM-8432287-BLAC-9.5",
       "title": "UK 9 - Black / Black",
-      "price": "7612.00",
+      "price": "9507.00",
       "compare_at_price": "13914.00",
-      "source_price": 79.99,
+      "source_price": 99.99,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -797,19 +798,19 @@
           "name": "Black / Black"
         }
       ],
-      "price_current": 7612.0
+      "price_current": 9507.0
     },
     {
       "id": 843228731,
       "sku": "NORDSTROM-8432287-BLAC-13",
       "title": "UK 12.5 - Black / Black",
-      "price": "13988.00",
+      "price": "10254.00",
       "compare_at_price": "13914.00",
-      "source_price": 145.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/9736d7df-0f9d-4ba3-8672-bd7dbda0276b.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -821,15 +822,15 @@
           "name": "Black / Black"
         }
       ],
-      "price_current": 13988.0
+      "price_current": 10254.0
     },
     {
       "id": 843228732,
       "sku": "NORDSTROM-8432287-BLAC-8.5",
       "title": "UK 8 - Black / Black",
-      "price": "8279.00",
+      "price": "10340.00",
       "compare_at_price": "13914.00",
-      "source_price": 87.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -845,7 +846,7 @@
           "name": "Black / Black"
         }
       ],
-      "price_current": 8279.0
+      "price_current": 10340.0
     },
     {
       "id": 843228733,
@@ -874,9 +875,9 @@
       "id": 843228734,
       "sku": "NORDSTROM-8432287-BLAC-7.5",
       "title": "UK 7 - Black / Black",
-      "price": "7612.00",
+      "price": "9507.00",
       "compare_at_price": "13914.00",
-      "source_price": 79.99,
+      "source_price": 99.99,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -892,15 +893,15 @@
           "name": "Black / Black"
         }
       ],
-      "price_current": 7612.0
+      "price_current": 9507.0
     },
     {
       "id": 843228735,
       "sku": "NORDSTROM-8432287-BLAC-11.5",
       "title": "UK 11 - Black / Black",
-      "price": "8279.00",
+      "price": "10340.00",
       "compare_at_price": "13914.00",
-      "source_price": 87.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -916,15 +917,15 @@
           "name": "Black / Black"
         }
       ],
-      "price_current": 8279.0
+      "price_current": 10340.0
     },
     {
       "id": 843228736,
       "sku": "NORDSTROM-8432287-BLAC-14",
       "title": "UK 13.5 - Black / Black",
-      "price": "9595.00",
+      "price": "10254.00",
       "compare_at_price": "13914.00",
-      "source_price": 99.99,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -939,15 +940,16 @@
           "option_name": "Color",
           "name": "Black / Black"
         }
-      ]
+      ],
+      "price_current": 10254.0
     },
     {
       "id": 843228737,
       "sku": "NORDSTROM-8432287-BLAC-8",
       "title": "UK 7.5 - Black / Black",
-      "price": "7612.00",
+      "price": "9507.00",
       "compare_at_price": "13914.00",
-      "source_price": 79.99,
+      "source_price": 99.99,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -963,15 +965,15 @@
           "name": "Black / Black"
         }
       ],
-      "price_current": 7612.0
+      "price_current": 9507.0
     },
     {
       "id": 843228738,
       "sku": "NORDSTROM-8432287-BLAC-11",
       "title": "UK 10.5 - Black / Black",
-      "price": "8279.00",
+      "price": "10340.00",
       "compare_at_price": "13914.00",
-      "source_price": 87.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -987,15 +989,15 @@
           "name": "Black / Black"
         }
       ],
-      "price_current": 8279.0
+      "price_current": 10340.0
     },
     {
       "id": 843228739,
       "sku": "NORDSTROM-8432287-BLAC-9",
       "title": "UK 8.5 - Black / Black",
-      "price": "7612.00",
+      "price": "9507.00",
       "compare_at_price": "13914.00",
-      "source_price": 79.99,
+      "source_price": 99.99,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1011,15 +1013,15 @@
           "name": "Black / Black"
         }
       ],
-      "price_current": 7612.0
+      "price_current": 9507.0
     },
     {
       "id": 843228740,
       "sku": "NORDSTROM-8432287-BLAC-11.5",
       "title": "UK 11 - Black / White",
-      "price": "8279.00",
+      "price": "10340.00",
       "compare_at_price": "13918.00",
-      "source_price": 87.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1035,15 +1037,15 @@
           "name": "Black / White"
         }
       ],
-      "price_current": 8279.0
+      "price_current": 10340.0
     },
     {
       "id": 843228741,
       "sku": "NORDSTROM-8432287-BLAC-12",
       "title": "UK 11.5 - Black / White",
-      "price": "7612.00",
+      "price": "9507.00",
       "compare_at_price": "13918.00",
-      "source_price": 79.99,
+      "source_price": 99.99,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1059,15 +1061,15 @@
           "name": "Black / White"
         }
       ],
-      "price_current": 7612.0
+      "price_current": 9507.0
     },
     {
       "id": 843228742,
       "sku": "NORDSTROM-8432287-BLAC-8",
       "title": "UK 7.5 - Black / White",
-      "price": "7612.00",
+      "price": "9507.00",
       "compare_at_price": "13918.00",
-      "source_price": 79.99,
+      "source_price": 99.99,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1083,19 +1085,19 @@
           "name": "Black / White"
         }
       ],
-      "price_current": 7612.0
+      "price_current": 9507.0
     },
     {
       "id": 843228743,
       "sku": "NORDSTROM-8432287-BLAC-13",
       "title": "UK 12.5 - Black / White",
-      "price": "13988.00",
+      "price": "10254.00",
       "compare_at_price": "13918.00",
-      "source_price": 145.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/b31f405f-1620-46af-805f-255db1c61e6d.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1107,15 +1109,15 @@
           "name": "Black / White"
         }
       ],
-      "price_current": 13988.0
+      "price_current": 10254.0
     },
     {
       "id": 843228745,
       "sku": "NORDSTROM-8432287-BLAC-8.5",
       "title": "UK 8 - Black / White",
-      "price": "8279.00",
+      "price": "10340.00",
       "compare_at_price": "13918.00",
-      "source_price": 87.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1131,15 +1133,15 @@
           "name": "Black / White"
         }
       ],
-      "price_current": 8279.0
+      "price_current": 10340.0
     },
     {
       "id": 843228747,
       "sku": "NORDSTROM-8432287-BLAC-9.5",
       "title": "UK 9 - Black / White",
-      "price": "7612.00",
+      "price": "9507.00",
       "compare_at_price": "13918.00",
-      "source_price": 79.99,
+      "source_price": 99.99,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1155,15 +1157,15 @@
           "name": "Black / White"
         }
       ],
-      "price_current": 7612.0
+      "price_current": 9507.0
     },
     {
       "id": 843228748,
       "sku": "NORDSTROM-8432287-BLAC-10.5",
       "title": "UK 10 - Black / White",
-      "price": "7612.00",
+      "price": "9507.00",
       "compare_at_price": "13918.00",
-      "source_price": 79.99,
+      "source_price": 99.99,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1179,15 +1181,15 @@
           "name": "Black / White"
         }
       ],
-      "price_current": 7612.0
+      "price_current": 9507.0
     },
     {
       "id": 843228750,
       "sku": "NORDSTROM-8432287-BLAC-9",
       "title": "UK 8.5 - Black / White",
-      "price": "7612.00",
+      "price": "9507.00",
       "compare_at_price": "13918.00",
-      "source_price": 79.99,
+      "source_price": 99.99,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1203,15 +1205,15 @@
           "name": "Black / White"
         }
       ],
-      "price_current": 7612.0
+      "price_current": 9507.0
     },
     {
       "id": 843228752,
       "sku": "NORDSTROM-8432287-BLAC-7.5",
       "title": "UK 7 - Black / White",
-      "price": "7612.00",
+      "price": "9507.00",
       "compare_at_price": "13918.00",
-      "source_price": 79.99,
+      "source_price": 99.99,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1227,15 +1229,15 @@
           "name": "Black / White"
         }
       ],
-      "price_current": 7612.0
+      "price_current": 9507.0
     },
     {
       "id": 843228754,
       "sku": "NORDSTROM-8432287-BLAC-14",
       "title": "UK 13.5 - Black / White",
-      "price": "9595.00",
+      "price": "10254.00",
       "compare_at_price": "13918.00",
-      "source_price": 99.99,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1250,15 +1252,16 @@
           "option_name": "Color",
           "name": "Black / White"
         }
-      ]
+      ],
+      "price_current": 10254.0
     },
     {
       "id": 843228755,
       "sku": "NORDSTROM-8432287-BLAC-7",
       "title": "UK 6.5 - Black / White",
-      "price": "9595.00",
+      "price": "10254.00",
       "compare_at_price": "13918.00",
-      "source_price": 99.99,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1273,7 +1276,8 @@
           "option_name": "Color",
           "name": "Black / White"
         }
-      ]
+      ],
+      "price_current": 10254.0
     },
     {
       "id": 843228756,
@@ -1302,9 +1306,9 @@
       "id": 843228762,
       "sku": "NORDSTROM-8432287-BLAC-11",
       "title": "UK 10.5 - Black / White",
-      "price": "8279.00",
+      "price": "10340.00",
       "compare_at_price": "13918.00",
-      "source_price": 87.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1320,7 +1324,7 @@
           "name": "Black / White"
         }
       ],
-      "price_current": 8279.0
+      "price_current": 10340.0
     },
     {
       "id": 843228766,
@@ -1470,7 +1474,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ba973876-0d75-4514-b8d9-bd91a3422d5b.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1677,7 +1681,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/27209108-0c9d-4191-a8d7-5a1e2bbec273.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1971,9 +1975,9 @@
       "id": 8432287120,
       "sku": "NORDSTROM-8432287-ALAB-10",
       "title": "UK 9.5 - Alabaster / Soaring Blue",
-      "price": "8279.00",
+      "price": "10340.00",
       "compare_at_price": "13914.00",
-      "source_price": 87.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1989,7 +1993,7 @@
           "name": "Alabaster / Soaring Blue"
         }
       ],
-      "price_current": 8279.0
+      "price_current": 10340.0
     },
     {
       "id": 8432287121,
@@ -2025,7 +2029,7 @@
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/a73dd277-fe55-4997-a803-705202aa9d73.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2089,9 +2093,9 @@
       "id": 8432287127,
       "sku": "NORDSTROM-8432287-ALAB-8.5",
       "title": "UK 8 - Alabaster / Soaring Blue",
-      "price": "8279.00",
+      "price": "10340.00",
       "compare_at_price": "13918.00",
-      "source_price": 87.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2107,7 +2111,7 @@
           "name": "Alabaster / Soaring Blue"
         }
       ],
-      "price_current": 8279.0
+      "price_current": 10340.0
     },
     {
       "id": 8432287128,
@@ -2136,9 +2140,9 @@
       "id": 8432287129,
       "sku": "NORDSTROM-8432287-ALAB-12",
       "title": "UK 11.5 - Alabaster / Soaring Blue",
-      "price": "8279.00",
+      "price": "10340.00",
       "compare_at_price": "13918.00",
-      "source_price": 87.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2154,7 +2158,7 @@
           "name": "Alabaster / Soaring Blue"
         }
       ],
-      "price_current": 8279.0
+      "price_current": 10340.0
     },
     {
       "id": 8432287131,
@@ -2208,9 +2212,9 @@
       "id": 8432287137,
       "sku": "NORDSTROM-8432287-ALAB-7.5",
       "title": "UK 7 - Alabaster / Soaring Blue",
-      "price": "8279.00",
+      "price": "10340.00",
       "compare_at_price": "13918.00",
-      "source_price": 87.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2226,7 +2230,7 @@
           "name": "Alabaster / Soaring Blue"
         }
       ],
-      "price_current": 8279.0
+      "price_current": 10340.0
     },
     {
       "id": 8432287144,
@@ -2255,9 +2259,9 @@
       "id": 8432287145,
       "sku": "NORDSTROM-8432287-VARS-14",
       "title": "UK 13.5 - Varsity Navy / Faded Navy",
-      "price": "13914.00",
+      "price": "10254.00",
       "compare_at_price": "13918.00",
-      "source_price": 145.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2272,7 +2276,8 @@
           "option_name": "Color",
           "name": "Varsity Navy / Faded Navy"
         }
-      ]
+      ],
+      "price_current": 10254.0
     },
     {
       "id": 8432287146,
@@ -2325,13 +2330,13 @@
       "id": 8432287148,
       "sku": "NORDSTROM-8432287-VARS-13",
       "title": "UK 12.5 - Varsity Navy / Faded Navy",
-      "price": "13914.00",
+      "price": "10254.00",
       "compare_at_price": "13918.00",
-      "source_price": 145.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ea51fe3b-79e6-41c8-bf7c-b653d2dd58b6.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2342,15 +2347,16 @@
           "option_name": "Color",
           "name": "Varsity Navy / Faded Navy"
         }
-      ]
+      ],
+      "price_current": 10254.0
     },
     {
       "id": 8432287149,
       "sku": "NORDSTROM-8432287-VARS-7",
       "title": "UK 6.5 - Varsity Navy / Faded Navy",
-      "price": "13914.00",
+      "price": "10254.00",
       "compare_at_price": "13918.00",
-      "source_price": 145.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2365,7 +2371,8 @@
           "option_name": "Color",
           "name": "Varsity Navy / Faded Navy"
         }
-      ]
+      ],
+      "price_current": 10254.0
     },
     {
       "id": 8432287150,
@@ -2419,9 +2426,9 @@
       "id": 8432287153,
       "sku": "NORDSTROM-8432287-VARS-10.5",
       "title": "UK 10 - Varsity Navy / Faded Navy",
-      "price": "8279.00",
+      "price": "10340.00",
       "compare_at_price": "13918.00",
-      "source_price": 87.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2437,15 +2444,15 @@
           "name": "Varsity Navy / Faded Navy"
         }
       ],
-      "price_current": 8279.0
+      "price_current": 10340.0
     },
     {
       "id": 8432287156,
       "sku": "NORDSTROM-8432287-VARS-9",
       "title": "UK 8.5 - Varsity Navy / Faded Navy",
-      "price": "8279.00",
+      "price": "10340.00",
       "compare_at_price": "13918.00",
-      "source_price": 87.0,
+      "source_price": 108.75,
       "source_compare_at_price": 145.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -2461,7 +2468,7 @@
           "name": "Varsity Navy / Faded Navy"
         }
       ],
-      "price_current": 8279.0
+      "price_current": 10340.0
     },
     {
       "id": 8432287157,
@@ -2648,25 +2655,25 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T05:47:11Z",
+  "last_verified_at": "2026-11-16T15:54:28Z",
   "created_at": "2026-09-17T14:57:32Z",
-  "updated_at": "2026-10-29T05:47:17Z",
+  "updated_at": "2026-11-16T15:54:36Z",
   "price_range_usd": {
-    "min": 79.99,
+    "min": 99.99,
     "max": 145.0
   },
   "price_range_inr": {
-    "min": 7615.0,
-    "max": 13804.0
+    "min": 9439.0,
+    "max": 13688.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": false,
-  "price": "13804.00",
+  "price": "13688.00",
   "shopify_product_id": "gid://shopify/Product/15850880729254",
   "shopify_handle": "mach-7-running-shoe-men",
-  "shopify_synced_at": "2026-10-29T05:47:11Z",
+  "shopify_synced_at": "2026-11-16T15:54:28Z",
   "delist_strikes": 0,
   "supplier_delisted": false,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.399626
 }

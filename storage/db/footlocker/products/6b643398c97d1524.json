@@ -10,12 +10,12 @@
   "source_price": 110.0,
   "source_compare_at_price": null,
   "current_price": 10559.0,
-  "compare_at_price": 10449.0,
+  "compare_at_price": 10384.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "color": "Silver/Blue",
   "width": "Width - D - Medium",
   "material": "Premium upper with durable overlays and responsive traction outsole",
@@ -51,7 +51,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42609401_01",
       "option_values": [
         {
@@ -64,7 +64,7 @@
         }
       ],
       "price_current": 10559.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -76,7 +76,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42609401_01",
       "option_values": [
         {
@@ -89,7 +89,7 @@
         }
       ],
       "price_current": 10559.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -101,7 +101,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42609401_01",
       "option_values": [
         {
@@ -114,7 +114,7 @@
         }
       ],
       "price_current": 10559.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -126,7 +126,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42609401_01",
       "option_values": [
         {
@@ -139,7 +139,7 @@
         }
       ],
       "price_current": 10559.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -151,7 +151,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42609401_01",
       "option_values": [
         {
@@ -164,7 +164,7 @@
         }
       ],
       "price_current": 10559.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -176,7 +176,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42609401_01",
       "option_values": [
         {
@@ -189,7 +189,7 @@
         }
       ],
       "price_current": 10559.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -201,7 +201,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42609401_01",
       "option_values": [
         {
@@ -214,7 +214,7 @@
         }
       ],
       "price_current": 10559.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -226,7 +226,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42609401_01",
       "option_values": [
         {
@@ -239,7 +239,7 @@
         }
       ],
       "price_current": 10559.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -251,7 +251,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42609401_01",
       "option_values": [
         {
@@ -264,7 +264,7 @@
         }
       ],
       "price_current": 10559.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -276,7 +276,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/42609401_01",
       "option_values": [
         {
@@ -289,7 +289,7 @@
         }
       ],
       "price_current": 10559.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -370,20 +370,19 @@
     "footwear",
     "men's",
     "shoes",
-    "sizes-11",
-    "supplier-delisted"
+    "sizes-11"
   ],
   "groups": [
     "ASICS Shoes"
   ],
-  "last_verified_at": "2026-10-29T06:05:00Z",
+  "last_verified_at": "2026-11-16T15:41:37Z",
   "created_at": "2026-09-20T10:38:24Z",
-  "updated_at": "2026-10-29T06:05:01Z",
+  "updated_at": "2026-11-16T15:41:39Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851009212582",
   "shopify_handle": "asics-gel-1130-men-s-silver-blue-42609401",
-  "shopify_synced_at": "2026-10-29T06:05:00Z",
-  "delist_strikes": 40,
-  "supplier_delisted": true,
-  "last_synced_fx_rate": 94.995216
+  "shopify_synced_at": "2026-11-16T15:41:37Z",
+  "delist_strikes": 0,
+  "supplier_delisted": false,
+  "last_synced_fx_rate": 94.399626
 }

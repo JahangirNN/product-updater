@@ -7,9 +7,9 @@
   "product_type": "Shoes & Footwear",
   "gender": "Women",
   "source_sku": "CEF06 MI5  8   B",
-  "source_price": 119.0,
+  "source_price": 99.0,
   "source_compare_at_price": null,
-  "current_price": 11385.0,
+  "current_price": 9291.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -57,9 +57,9 @@
       "id": null,
       "sku": "CEF06 MI5  8   B-5",
       "title": "US 5 / UK 3",
-      "price": "11385.00",
+      "price": "9291.00",
       "compare_at_price": null,
-      "source_price": 119.0,
+      "source_price": 99.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -71,15 +71,16 @@
           "name": "US 5 / UK 3"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 9291.0,
+      "is_available": true
     },
     {
       "id": null,
       "sku": "CEF06 MI5  8   B-5.5",
       "title": "US 5.5 / UK 3.5",
-      "price": "11385.00",
+      "price": "9291.00",
       "compare_at_price": null,
-      "source_price": 119.0,
+      "source_price": 99.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -91,35 +92,16 @@
           "name": "US 5.5 / UK 3.5"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 9291.0,
+      "is_available": true
     },
     {
       "id": null,
       "sku": "CEF06 MI5  8   B-6",
       "title": "US 6 / UK 4",
-      "price": "11385.00",
+      "price": "9291.00",
       "compare_at_price": null,
-      "source_price": 119.0,
-      "source_compare_at_price": null,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://coach.scene7.com/is/image/Coach/cef06_mi5_a0",
-      "option_values": [
-        {
-          "option_name": "Size",
-          "name": "US 6 / UK 4"
-        }
-      ],
-      "price_current": 11423.0
-    },
-    {
-      "id": null,
-      "sku": "CEF06 MI5  8   B-6.5",
-      "title": "US 6.5 / UK 4.5",
-      "price": "11385.00",
-      "compare_at_price": null,
-      "source_price": 119.0,
+      "source_price": 99.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -128,18 +110,40 @@
       "option_values": [
         {
           "option_name": "Size",
+          "name": "US 6 / UK 4"
+        }
+      ],
+      "price_current": 9291.0,
+      "is_available": true
+    },
+    {
+      "id": null,
+      "sku": "CEF06 MI5  8   B-6.5",
+      "title": "US 6.5 / UK 4.5",
+      "price": "9291.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cef06_mi5_a0",
+      "option_values": [
+        {
+          "option_name": "Size",
           "name": "US 6.5 / UK 4.5"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 9291.0,
+      "is_available": false
     },
     {
       "id": null,
       "sku": "CEF06 MI5  8   B-7",
       "title": "US 7 / UK 5",
-      "price": "11385.00",
+      "price": "9291.00",
       "compare_at_price": null,
-      "source_price": 119.0,
+      "source_price": 99.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -151,15 +155,16 @@
           "name": "US 7 / UK 5"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 9291.0,
+      "is_available": true
     },
     {
       "id": null,
       "sku": "CEF06 MI5  8   B-7.5",
       "title": "US 7.5 / UK 5.5",
-      "price": "11385.00",
+      "price": "9291.00",
       "compare_at_price": null,
-      "source_price": 119.0,
+      "source_price": 99.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -171,35 +176,16 @@
           "name": "US 7.5 / UK 5.5"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 9291.0,
+      "is_available": true
     },
     {
       "id": null,
       "sku": "CEF06 MI5  8   B-8",
       "title": "US 8 / UK 6",
-      "price": "11385.00",
+      "price": "9291.00",
       "compare_at_price": null,
-      "source_price": 119.0,
-      "source_compare_at_price": null,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://coach.scene7.com/is/image/Coach/cef06_mi5_a0",
-      "option_values": [
-        {
-          "option_name": "Size",
-          "name": "US 8 / UK 6"
-        }
-      ],
-      "price_current": 11423.0
-    },
-    {
-      "id": null,
-      "sku": "CEF06 MI5  8   B-8.5",
-      "title": "US 8.5 / UK 6.5",
-      "price": "11385.00",
-      "compare_at_price": null,
-      "source_price": 119.0,
+      "source_price": 99.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -208,18 +194,40 @@
       "option_values": [
         {
           "option_name": "Size",
+          "name": "US 8 / UK 6"
+        }
+      ],
+      "price_current": 9291.0,
+      "is_available": true
+    },
+    {
+      "id": null,
+      "sku": "CEF06 MI5  8   B-8.5",
+      "title": "US 8.5 / UK 6.5",
+      "price": "9291.00",
+      "compare_at_price": null,
+      "source_price": 99.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://coach.scene7.com/is/image/Coach/cef06_mi5_a0",
+      "option_values": [
+        {
+          "option_name": "Size",
           "name": "US 8.5 / UK 6.5"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 9291.0,
+      "is_available": false
     },
     {
       "id": null,
       "sku": "CEF06 MI5  8   B-9",
       "title": "US 9 / UK 7",
-      "price": "11385.00",
+      "price": "9291.00",
       "compare_at_price": null,
-      "source_price": 119.0,
+      "source_price": 99.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -231,15 +239,16 @@
           "name": "US 9 / UK 7"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 9291.0,
+      "is_available": false
     },
     {
       "id": null,
       "sku": "CEF06 MI5  8   B-9.5",
       "title": "US 9.5 / UK 7.5",
-      "price": "11385.00",
+      "price": "9291.00",
       "compare_at_price": null,
-      "source_price": 119.0,
+      "source_price": 99.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
@@ -251,19 +260,20 @@
           "name": "US 9.5 / UK 7.5"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 9291.0,
+      "is_available": false
     },
     {
       "id": null,
       "sku": "CEF06 MI5  8   B-10",
       "title": "US 10 / UK 8",
-      "price": "11385.00",
+      "price": "9291.00",
       "compare_at_price": null,
-      "source_price": 119.0,
+      "source_price": 99.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef06_mi5_a0",
       "option_values": [
         {
@@ -271,19 +281,20 @@
           "name": "US 10 / UK 8"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 9291.0,
+      "is_available": false
     },
     {
       "id": null,
       "sku": "CEF06 MI5  8   B-11",
       "title": "US 11 / UK 9",
-      "price": "11385.00",
+      "price": "9291.00",
       "compare_at_price": null,
-      "source_price": 119.0,
+      "source_price": 99.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cef06_mi5_a0",
       "option_values": [
         {
@@ -291,7 +302,8 @@
           "name": "US 11 / UK 9"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 9291.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -339,23 +351,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Shoes & Footwear"
+    "Shoes & Footwear",
+    "Women"
   ],
   "groups": [
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:44:15Z",
-  "last_verified_at": "2026-10-29T03:39:52Z",
+  "last_verified_at": "2026-11-16T15:46:15Z",
   "id": "92c7ca5336b286ee",
   "product_id": "92c7ca5336b286ee",
   "store": "coach",
-  "updated_at": "2026-10-29T03:39:52Z",
+  "updated_at": "2026-11-16T15:46:15Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15848583692454",
   "shopify_handle": "two-band-buckle-sandal-in-signature-jacquard",
-  "shopify_synced_at": "2026-10-28T11:49:31Z",
+  "shopify_synced_at": "2026-11-15T09:13:08Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.289707,
+  "supplier_delisted": false
 }

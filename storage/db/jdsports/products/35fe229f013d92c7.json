@@ -12,12 +12,12 @@
   "source_price": 90.0,
   "source_compare_at_price": null,
   "current_price": 8568.0,
-  "compare_at_price": 13804.0,
+  "compare_at_price": 13720.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -71,7 +71,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IO1908_002_P1",
       "option_values": [
         {
@@ -83,7 +83,7 @@
           "name": "Cool Grey/Deep Royal Blue/Wolf Grey/Black"
         }
       ],
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -121,7 +121,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IO1908_002_P1",
       "option_values": [
         {
@@ -133,7 +133,7 @@
           "name": "Cool Grey/Deep Royal Blue/Wolf Grey/Black"
         }
       ],
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -421,7 +421,8 @@
     "JD Sports",
     "Men's",
     "Nike",
-    "Nike Air Max"
+    "Nike Air Max",
+    "supplier-delisted"
   ],
   "groups": [
     "footwear",
@@ -430,15 +431,15 @@
     "shoes"
   ],
   "created_at": "2026-09-20T15:51:33Z",
-  "updated_at": "2026-10-29T03:37:14Z",
-  "last_verified_at": "2026-10-29T03:37:12Z",
+  "updated_at": "2026-11-16T15:46:17Z",
+  "last_verified_at": "2026-11-16T15:46:15Z",
   "shopify_product_id": "gid://shopify/Product/15851447877798",
   "shopify_handle": "mens-nike-air-max-90-drift-casual-shoes-cool-grey-deep-royal-blue-wolf-grey-black-3287947",
-  "shopify_synced_at": "2026-10-29T03:37:12Z",
+  "shopify_synced_at": "2026-11-16T15:46:15Z",
   "shopify_sync_pending": false,
-  "delist_strikes": 0,
-  "supplier_delisted": false,
+  "delist_strikes": 29,
+  "supplier_delisted": true,
   "price": "8568.00",
   "price_current": 8568.0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 93.851604
 }

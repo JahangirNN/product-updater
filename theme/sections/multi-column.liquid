@@ -1,99 +1,985 @@
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+MAISON SPOTLIGHT — CRAFTSMANSHIP & HERITAGE ATELIER DOSSIERS (multi-column.liquid)
+------------------------------------------------------------------------------------------------------------------------
+Architectural luxury dossier showcase highlighting Maison provenance, materiality, savoir-faire, and iconic silhouettes.
+Features:
+1. Warm Alabaster gallery atmosphere (#f7f5f0) with crisp #ffffff Atelier Dossier cards.
+2. Interactive Discipline Filter Bar (All Ateliers / Haute Leathercraft / Horology & Calibers / Performance).
+3. 3-Piece Interactive Studio Stage per Maison with optical studio normalization (brightness/contrast), live product
+   title/price bar, and 3 hover/tap mini-thumbnails (offset from adjacent sections to prevent duplicate imagery).
+4. Structured 2-Row Savoir-Faire & Iconic Archive Spec Sheet + Live Price Floor & Atelier CTA Footer.
+Zero AI imagery (ADR 0023): 100% real catalog product photography.
+{%- endcomment -%}
+
 {%- if section.blocks.size > 0 -%}
   <style>
     #shopify-section-{{ section.id }} {
-      --multi-column-gap: {% if section.settings.spacing == 'xs' %}1.5rem{% elsif section.settings.spacing == 'sm' %}2.5rem{% elsif section.settings.spacing == 'md' %}3.125rem{% else %}4.375rem{% endif %};
-      --multi-column-column-width: {% if section.settings.stack_on_mobile %}100%{% else %}53vw{% endif %};
-      --multi-column-grid: {% if section.settings.stack_on_mobile %}auto / repeat(auto-fit, var(--multi-column-column-width)){% else %}auto / auto-flow var(--multi-column-column-width){% endif %};
-      --multi-column-content-alignment: safe {{ section.settings.content_alignment }};
+      --ms-cols-desktop: {{ section.settings.columns_per_row | default: 4 }};
+      --ms-gold: #947847;
+      --ms-gold-light: #c9a876;
+      --ms-obsidian: #111111;
+      --ms-ease: cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    @media screen and (min-width: 700px) {
-      #shopify-section-{{ section.id }} {
-        --multi-column-columns-per-row: 2;
-        --multi-column-column-width: {% if section.settings.stack_on_mobile %}calc(100% / var(--multi-column-columns-per-row) - var(--multi-column-gap) * ((var(--multi-column-columns-per-row) - 1) / var(--multi-column-columns-per-row))){% else %}38vw{% endif %};
+    #shopify-section-{{ section.id }} .ms-section {
+      background-color: #f7f5f0;
+      padding-block: clamp(3rem, 5.5vw, 5rem);
+      border-top: 1px solid rgba(17, 17, 17, 0.08);
+      border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+    }
+
+    /* Section Header */
+    #shopify-section-{{ section.id }} .ms-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto clamp(1.5rem, 3vw, 2.25rem);
+    }
+
+    #shopify-section-{{ section.id }} .ms-subheading {
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ms-gold);
+      margin: 0 0 0.45rem;
+    }
+
+    #shopify-section-{{ section.id }} .ms-heading {
+      font-family: var(--heading-font-family, inherit);
+      font-size: clamp(1.65rem, 3.2vw, 2.4rem);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ms-obsidian);
+      margin: 0;
+      line-height: 1.15;
+    }
+
+    /* Interactive Discipline Filter Pills */
+    #shopify-section-{{ section.id }} .ms-filters {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+    }
+
+    #shopify-section-{{ section.id }} .ms-filter-btn {
+      appearance: none;
+      background: #ffffff;
+      border: 1px solid rgba(17, 17, 17, 0.12);
+      color: #555555;
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.625rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 0.55rem 1.1rem;
+      cursor: pointer;
+      transition: all 0.28s var(--ms-ease);
+    }
+
+    #shopify-section-{{ section.id }} .ms-filter-btn:hover {
+      border-color: var(--ms-gold);
+      color: var(--ms-obsidian);
+    }
+
+    #shopify-section-{{ section.id }} .ms-filter-btn.is-active {
+      background: var(--ms-obsidian);
+      border-color: var(--ms-obsidian);
+      color: #ffffff;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Architectural Dossier Grid */
+    #shopify-section-{{ section.id }} .ms-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(0.75rem, 1.5vw, 1.25rem);
+    }
+
+    @media screen and (min-width: 768px) {
+      #shopify-section-{{ section.id }} .ms-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-    @media screen and (min-width: 999px) {
-      #shopify-section-{{ section.id }} {
-        --multi-column-gap: {% if section.settings.spacing == 'xs' %}1.875rem{% elsif section.settings.spacing == 'sm' %}3.125rem{% elsif section.settings.spacing == 'md' %}4.375rem{% else %}5.625rem{% endif %};
-        --multi-column-columns-per-row: {{ section.settings.columns_per_row }};
-        --multi-column-column-width: calc(100% / var(--multi-column-columns-per-row) - var(--multi-column-gap) * ((var(--multi-column-columns-per-row) - 1) / var(--multi-column-columns-per-row)));
-        --multi-column-grid: auto / repeat(auto-fit, var(--multi-column-column-width));
+    @media screen and (min-width: 1024px) {
+      #shopify-section-{{ section.id }} .ms-grid {
+        grid-template-columns: repeat(var(--ms-cols-desktop), minmax(0, 1fr));
+      }
+    }
+
+    /* Individual Atelier Dossier Card */
+    #shopify-section-{{ section.id }} .ms-card {
+      background: #ffffff;
+      border: 1px solid rgba(17, 17, 17, 0.09);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      min-width: 0;
+      transition:
+        transform 0.4s var(--ms-ease),
+        border-color 0.4s var(--ms-ease),
+        box-shadow 0.4s var(--ms-ease),
+        opacity 0.35s var(--ms-ease);
+    }
+
+    #shopify-section-{{ section.id }} .ms-card.is-hidden {
+      display: none;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(148, 120, 71, 0.55);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Card Top Provenance Bar */
+    #shopify-section-{{ section.id }} .ms-card__topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.4rem;
+      padding: 0.6rem 0.85rem;
+      background: #111111;
+      color: #ffffff;
+      border-bottom: 1px solid rgba(201, 168, 118, 0.25);
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__origin {
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.54rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ms-gold-light);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__count {
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.52rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.8);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* 1:1 Studio Stage with 3 Interactive Thumbnails */
+    #shopify-section-{{ section.id }} .ms-card__stage {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: #ffffff;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(17, 17, 17, 0.06);
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__stage-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 1.35rem 1.25rem 2.65rem;
+      background: #ffffff;
+      text-decoration: none;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__stage-img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+      filter: brightness(1.055) contrast(1.055);
+      transition: transform 0.6s var(--ms-ease), opacity 0.25s ease;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card:hover .ms-card__stage-img {
+      transform: scale3d(1.05, 1.05, 1);
+    }
+
+    /* Live Piece Caption + 3-Piece Thumb Strip inside Stage Bottom */
+    #shopify-section-{{ section.id }} .ms-card__stage-bar {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding: 0.4rem 0.7rem;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(6px);
+      border-top: 1px solid rgba(17, 17, 17, 0.06);
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__piece-meta {
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__piece-name {
+      display: block;
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.54rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #111111;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__piece-price {
+      display: block;
+      font-family: var(--body-font-family, inherit);
+      font-size: 0.58rem;
+      font-weight: 600;
+      color: var(--ms-gold);
+      white-space: nowrap;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__thumbs {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.28rem;
+      flex-shrink: 0;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__thumb {
+      width: 30px;
+      height: 30px;
+      padding: 2px;
+      background: #ffffff;
+      border: 1px solid rgba(17, 17, 17, 0.14);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.22s ease, transform 0.22s ease;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__thumb.is-active,
+    #shopify-section-{{ section.id }} .ms-card__thumb:hover {
+      border-color: var(--ms-obsidian);
+      box-shadow: 0 0 0 1px var(--ms-obsidian);
+      transform: translateY(-1px);
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__thumb img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: brightness(1.055) contrast(1.055);
+      pointer-events: none;
+    }
+
+    /* Dossier Body: Title, Heritage Narrative & Craftsmanship Spec Sheet */
+    #shopify-section-{{ section.id }} .ms-card__body {
+      padding: 1rem 1rem 0.9rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__discipline {
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.54rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ms-gold);
+      margin: 0 0 0.2rem;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__title {
+      font-family: var(--heading-font-family, inherit);
+      font-size: clamp(0.95rem, 1.3vw, 1.125rem);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ms-obsidian);
+      margin: 0 0 0.45rem;
+      line-height: 1.2;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__narrative {
+      font-family: var(--body-font-family, inherit);
+      font-size: 0.76rem;
+      line-height: 1.55;
+      color: #555555;
+      margin: 0 0 0.85rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__narrative p {
+      margin: 0;
+    }
+
+    /* 2-Row Craftsmanship & Materiality Spec Sheet */
+    #shopify-section-{{ section.id }} .ms-specs {
+      border-top: 1px solid rgba(17, 17, 17, 0.08);
+      border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+      margin-bottom: 0.85rem;
+    }
+
+    #shopify-section-{{ section.id }} .ms-spec-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding: 0.42rem 0;
+      font-size: 0.65rem;
+    }
+
+    #shopify-section-{{ section.id }} .ms-spec-row + .ms-spec-row {
+      border-top: 1px dashed rgba(17, 17, 17, 0.08);
+    }
+
+    #shopify-section-{{ section.id }} .ms-spec-key {
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.52rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #777777;
+      flex-shrink: 0;
+    }
+
+    #shopify-section-{{ section.id }} .ms-spec-val {
+      font-family: var(--body-font-family, inherit);
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: #111111;
+      text-align: right;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Card Bottom Action Row */
+    #shopify-section-{{ section.id }} .ms-card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__floor {
+      font-family: var(--body-font-family, inherit);
+      font-size: 0.68rem;
+      color: #555555;
+      white-space: nowrap;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__floor strong {
+      color: #111111;
+      font-weight: 600;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.48rem 0.8rem;
+      background: #111111;
+      color: #ffffff !important;
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.56rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none !important;
+      white-space: nowrap;
+      transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    }
+
+    #shopify-section-{{ section.id }} .ms-card:hover .ms-card__cta {
+      background: var(--ms-gold);
+      color: #ffffff !important;
+    }
+
+    /* Mobile Responsive Refinements */
+    @media screen and (max-width: 699px) {
+      #shopify-section-{{ section.id }} .ms-filters {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.4rem;
+      }
+
+      #shopify-section-{{ section.id }} .ms-filter-btn {
+        padding: 0.52rem 0.35rem;
+        font-size: 0.52rem;
+        letter-spacing: 0.1em;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      #shopify-section-{{ section.id }} .ms-card__topbar {
+        padding: 0.45rem 0.55rem;
+      }
+
+      #shopify-section-{{ section.id }} .ms-card__origin {
+        font-size: 0.45rem;
+        letter-spacing: 0.08em;
+      }
+
+      #shopify-section-{{ section.id }} .ms-card__count {
+        font-size: 0.44rem;
+      }
+
+      #shopify-section-{{ section.id }} .ms-card__stage-link {
+        padding: 0.75rem 0.65rem 2.25rem;
+      }
+
+      #shopify-section-{{ section.id }} .ms-card__stage-bar {
+        padding: 0.28rem 0.45rem;
+        gap: 0.3rem;
+      }
+
+      #shopify-section-{{ section.id }} .ms-card__piece-name {
+        font-size: 0.48rem;
+      }
+
+      #shopify-section-{{ section.id }} .ms-card__piece-price {
+        font-size: 0.52rem;
+      }
+
+      #shopify-section-{{ section.id }} .ms-card__thumbs {
+        gap: 0.18rem;
+      }
+
+      #shopify-section-{{ section.id }} .ms-card__thumb {
+        width: 22px;
+        height: 22px;
+      }
+
+      #shopify-section-{{ section.id }} .ms-card__body {
+        padding: 0.65rem 0.6rem 0.65rem;
+      }
+
+      #shopify-section-{{ section.id }} .ms-card__discipline {
+        font-size: 0.46rem;
+        letter-spacing: 0.12em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      #shopify-section-{{ section.id }} .ms-card__title {
+        font-size: 0.78rem;
+      }
+
+      #shopify-section-{{ section.id }} .ms-card__narrative {
+        font-size: 0.65rem;
+        -webkit-line-clamp: 2;
+        margin-bottom: 0.5rem;
+      }
+
+      #shopify-section-{{ section.id }} .ms-specs {
+        margin-bottom: 0.55rem;
+      }
+
+      #shopify-section-{{ section.id }} .ms-spec-row {
+        padding: 0.28rem 0;
+      }
+
+      #shopify-section-{{ section.id }} .ms-spec-key {
+        font-size: 0.44rem;
+        letter-spacing: 0.1em;
+      }
+
+      #shopify-section-{{ section.id }} .ms-spec-val {
+        font-size: 0.53rem;
+      }
+
+      #shopify-section-{{ section.id }} .ms-card__footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.38rem;
+      }
+
+      #shopify-section-{{ section.id }} .ms-card__floor {
+        font-size: 0.58rem;
+      }
+
+      #shopify-section-{{ section.id }} .ms-card__cta {
+        width: 100%;
+        justify-content: center;
+        padding: 0.46rem 0.5rem;
+        font-size: 0.5rem;
+        letter-spacing: 0.12em;
       }
     }
   </style>
 
-  {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+  {%- liquid
+    assign ms_used_pids = '|'
+    assign ms_used_imgs = '|'
+  -%}
 
-  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  <div class="ms-section" data-ms-section="{{ section.id }}">
     <div class="container">
-      <div class="section-stack">
-        {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, text_alignment: section.settings.content_alignment -%}
+      {%- if section.settings.subheading != blank or section.settings.title != blank -%}
+        <div class="ms-header">
+          {%- if section.settings.subheading != blank -%}
+            <p class="ms-subheading">{{ section.settings.subheading }}</p>
+          {%- endif -%}
+          {%- if section.settings.title != blank -%}
+            <h2 class="ms-heading">{{ section.settings.title }}</h2>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
 
-        <multi-column class="multi-column {% unless section.settings.stack_on_mobile %}scroll-area snap-x bleed md:unbleed{% endunless %}">
-          {%- for block in section.blocks -%}
-            <div class="multi-column__item {% if section.settings.overlap_image and block.settings.title != blank %}multi-column__item--overlap{% endif %} snap-center group" {{ block.shopify_attributes }}>
-              {%- capture sizes_attribute -%}
-                (max-width: 699px) 53vw, (max-width: 999px) 38vw, calc((100vw - 3rem * 2) / {{ section.settings.columns_per_row }})
-              {%- endcapture -%}
+      {%- comment -%} Interactive Craftsmanship Discipline Filter Bar {%- endcomment -%}
+      <div class="ms-filters" role="tablist" aria-label="Filter by Craftsmanship Discipline">
+        <button type="button" class="ms-filter-btn is-active" data-ms-filter="all">ALL ATELIERS ({{ section.blocks.size }})</button>
+        <button type="button" class="ms-filter-btn" data-ms-filter="leather">HAUTE LEATHERCRAFT</button>
+        <button type="button" class="ms-filter-btn" data-ms-filter="horology">SWISS &amp; JAPANESE HOROLOGY</button>
+        <button type="button" class="ms-filter-btn" data-ms-filter="footwear">PERFORMANCE ARCHIVE</button>
+      </div>
 
-              {%- liquid
-                capture media_content
-                  assign col_image = block.settings.collection.featured_image | default: block.settings.collection.products.first.featured_media.preview_image
-                  assign block_image = block.settings.image | default: col_image
-                  if block.type == 'image_with_text' and block_image != blank
-                    assign loading_strategy = nil
+      <div class="ms-grid">
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign collection = block.settings.collection
+            assign handle = collection.handle | default: ''
+            assign title = block.settings.title | default: collection.title | default: 'Maison Atelier'
+            assign block_url = block.settings.link_url | default: collection.url | default: routes.collections_url
+            assign count = collection.all_products_count | default: collection.products_count | default: 0
 
-                    if forloop.index > 2 or section.location == 'footer'
-                      assign loading_strategy = 'lazy'
-                    endif
+            comment
+              Assign Provenance, Discipline, and Craftsmanship Spec Matrix per Maison
+            endcomment
+            if handle == 'coach'
+              assign origin = 'EST. 1941 · NEW YORK'
+              assign discipline_tag = 'leather'
+              assign discipline_label = 'American Leathercraft'
+              assign spec_1_k = 'SAVOIR-FAIRE'
+              assign spec_1_v = 'Glove-Tanned Leather'
+              assign spec_2_k = 'HARDWARE'
+              assign spec_2_v = 'Brass Turnlock & C-Motif'
+              assign pool_handles = 'totes,crossbody-bags,designer-bags,coach' | split: ','
+            elsif handle == 'jw-pei'
+              assign origin = 'EST. 2018 · LOS ANGELES'
+              assign discipline_tag = 'leather'
+              assign discipline_label = 'Sculptural Minimalism'
+              assign spec_1_k = 'MATERIALITY'
+              assign spec_1_v = 'Certified Vegan Leather'
+              assign spec_2_k = 'SILHOUETTE'
+              assign spec_2_v = 'Gabbi, Joy & Hana Forms'
+              assign pool_handles = '' | split: ','
+            elsif handle == 'tissot'
+              assign origin = 'EST. 1853 · LE LOCLE'
+              assign discipline_tag = 'horology'
+              assign discipline_label = 'Swiss Chronometry'
+              assign spec_1_k = 'CALIBER'
+              assign spec_1_v = 'Powermatic 80 Automatic'
+              assign spec_2_k = 'CRYSTAL'
+              assign spec_2_v = 'Domed Sapphire Glass'
+              assign pool_handles = '' | split: ','
+            elsif handle == 'michael-kors'
+              assign origin = 'EST. 1981 · NEW YORK'
+              assign discipline_tag = 'leather'
+              assign discipline_label = 'Jet-Set Tailoring'
+              assign spec_1_k = 'MATERIALITY'
+              assign spec_1_v = 'Crossgrain Saffiano'
+              assign spec_2_k = 'SIGNATURE'
+              assign spec_2_v = 'Jet Set & Laila Totes'
+              assign pool_handles = 'crossbody-bags,totes,michael-kors' | split: ','
+            elsif handle == 'versace'
+              assign origin = 'EST. 1978 · MILANO'
+              assign discipline_tag = 'horology'
+              assign discipline_label = 'Italian Haute Horology'
+              assign spec_1_k = 'MOVEMENT'
+              assign spec_1_v = 'Swiss Made Automatic/Quartz'
+              assign spec_2_k = 'EMBLEM'
+              assign spec_2_v = '3D Medusa & La Greca'
+              assign pool_handles = '' | split: ','
+            elsif handle == 'seiko'
+              assign origin = 'EST. 1881 · TOKYO'
+              assign discipline_tag = 'horology'
+              assign discipline_label = 'Japanese Manufacture'
+              assign spec_1_k = 'CALIBER'
+              assign spec_1_v = 'In-House Mechanical'
+              assign spec_2_k = 'DIAL CRAFT'
+              assign spec_2_v = 'Presage & Prospex Series'
+              assign pool_handles = '' | split: ','
+            elsif handle == 'movado'
+              assign origin = 'EST. 1881 · SWITZERLAND'
+              assign discipline_tag = 'horology'
+              assign discipline_label = 'Modernist Horology'
+              assign spec_1_k = 'DESIGN ICON'
+              assign spec_1_v = '12 O’Clock Museum Dot'
+              assign spec_2_k = 'CASEWORK'
+              assign spec_2_v = 'Sculptural PVD & Steel'
+              assign pool_handles = '' | split: ','
+            elsif handle == 'on-running' or handle == 'nike' or handle == 'hoka' or handle == 'salomon'
+              assign origin = 'PERFORMANCE ARCHIVE'
+              if handle == 'on-running'
+                assign origin = 'EST. 2010 · ZÜRICH'
+                assign discipline_label = 'Swiss Footwear Engineering'
+                assign spec_1_k = 'CUSHIONING'
+                assign spec_1_v = 'Patented CloudTec Sole'
+                assign spec_2_k = 'PROPULSION'
+                assign spec_2_v = 'Speedboard Architecture'
+              elsif handle == 'nike'
+                assign origin = 'EST. 1972 · BEAVERTON'
+                assign discipline_label = 'Court & Runway Archive'
+                assign spec_1_k = 'CUSHIONING'
+                assign spec_1_v = 'Encapsulated Air-Sole'
+                assign spec_2_k = 'SILHOUETTE'
+                assign spec_2_v = 'AF1, Dunk & Air Max'
+              else
+                assign origin = 'ALPINE ENGINEERING'
+                assign discipline_label = 'Performance Footwear'
+                assign spec_1_k = 'CHASSIS'
+                assign spec_1_v = 'Maximalist Midsole'
+                assign spec_2_k = 'TRACTION'
+                assign spec_2_v = 'All-Terrain Contagrip'
+              endif
+              assign discipline_tag = 'footwear'
+              assign pool_handles = '' | split: ','
+            else
+              assign origin = 'CERTIFIED ARCHIVE'
+              assign discipline_tag = 'leather'
+              assign discipline_label = 'Maison Savoir-Faire'
+              assign spec_1_k = 'PROVENANCE'
+              assign spec_1_v = '100% Certified Authentic'
+              assign spec_2_k = 'TRANSIT'
+              assign spec_2_v = 'Insured Priority Air'
+              assign pool_handles = '' | split: ','
+            endif
 
-                    echo block_image | image_url: width: block_image.width | image_tag: loading: loading_strategy, sizes: sizes_attribute, widths: '300,400,500,600,800,1000,1200,1400,1600,1800', class: 'zoom-image group-hover:zoom'
-                  elsif block.type == 'video_with_text' and block.settings.video != blank
-                    if block.settings.autoplay and block.settings.loop
-                      assign show_controls = false
-                    else
-                      assign show_controls = true
-                    endif
+            assign p1 = nil
+            assign p2 = nil
+            assign p3 = nil
+            assign min_price = 0
+            assign card_prefixes = '|'
+            assign skipped_count = 0
 
-                    render 'media', media: block.settings.video, autoplay: block.settings.autoplay, loop: block.settings.loop, controls: show_controls, sizes: sizes_attribute, play_button_background: block.settings.play_button_background
+            if collection != blank and collection.products_count > 0
+              for prod in collection.products limit: 50
+                if prod.price > 0
+                  if min_price == 0 or prod.price < min_price
+                    assign min_price = prod.price
                   endif
-                endcapture
-              -%}
+                endif
+              endfor
 
-              {%- assign block_url = block.settings.link_url | default: block.settings.collection.url -%}
-              {%- if media_content != blank -%}
-                {%- if block.type == 'image_with_text' and block_url != blank -%}
-                  <a href="{{ block_url }}" class="overflow-hidden">
-                    {{- media_content -}}
-                  </a>
-                {%- else -%}
-                  <div class="overflow-hidden">
-                    {{- media_content -}}
+              if pool_handles.size > 0
+                for ph in pool_handles
+                  assign sub_col = collections[ph]
+                  if sub_col != blank and sub_col.products_count > 0
+                    for prod in sub_col.products limit: 50
+                      assign vendor_ok = false
+                      assign v_up = prod.vendor | upcase
+                      if handle == 'coach' and v_up contains 'COACH'
+                        assign vendor_ok = true
+                      elsif handle == 'michael-kors' and v_up contains 'KORS'
+                        assign vendor_ok = true
+                      endif
+
+                      assign p_media = prod.featured_media.preview_image | default: prod.featured_image
+                      if vendor_ok and p_media != blank
+                        assign pid_tok = '|' | append: prod.id | append: '|'
+                        assign raw_f = p_media.src | split: '/' | last | split: '?' | first
+                        assign stem = raw_f | split: '_' | first | split: '.' | first
+                        assign img_tok = '|' | append: stem | append: '|'
+                        assign pref = prod.title | slice: 0, 16 | upcase | strip
+                        assign pref_tok = '|' | append: pref | append: '|'
+
+                        unless ms_used_pids contains pid_tok or ms_used_imgs contains img_tok or card_prefixes contains pref_tok
+                          if skipped_count < 2
+                            assign skipped_count = skipped_count | plus: 1
+                          else
+                            if p1 == nil
+                              assign p1 = prod
+                            elsif p2 == nil
+                              assign p2 = prod
+                            elsif p3 == nil
+                              assign p3 = prod
+                            endif
+                            assign ms_used_pids = ms_used_pids | append: prod.id | append: '|'
+                            assign ms_used_imgs = ms_used_imgs | append: stem | append: '|'
+                            assign card_prefixes = card_prefixes | append: pref | append: '|'
+                            if p3 != nil
+                              break
+                            endif
+                          endif
+                        endunless
+                      endif
+                    endfor
+                  endif
+                  if p3 != nil
+                    break
+                  endif
+                endfor
+              endif
+
+              if p3 == nil
+                for prod in collection.products limit: 50 offset: 2
+                  assign p_media = prod.featured_media.preview_image | default: prod.featured_image
+                  if p_media != blank
+                    assign pid_tok = '|' | append: prod.id | append: '|'
+                    assign raw_f = p_media.src | split: '/' | last | split: '?' | first
+                    assign stem = raw_f | split: '_' | first | split: '.' | first
+                    assign img_tok = '|' | append: stem | append: '|'
+                    assign pref = prod.title | slice: 0, 16 | upcase | strip
+                    assign pref_tok = '|' | append: pref | append: '|'
+
+                    unless ms_used_pids contains pid_tok or ms_used_imgs contains img_tok or card_prefixes contains pref_tok
+                      if p1 == nil
+                        assign p1 = prod
+                      elsif p2 == nil
+                        assign p2 = prod
+                      elsif p3 == nil
+                        assign p3 = prod
+                      endif
+                      assign ms_used_pids = ms_used_pids | append: prod.id | append: '|'
+                      assign ms_used_imgs = ms_used_imgs | append: stem | append: '|'
+                      assign card_prefixes = card_prefixes | append: pref | append: '|'
+                      if p3 != nil
+                        break
+                      endif
+                    endunless
+                  endif
+                endfor
+              endif
+
+              if p3 == nil
+                for prod in collection.products limit: 30
+                  assign p_media = prod.featured_media.preview_image | default: prod.featured_image
+                  if p_media != blank
+                    assign pid_tok = '|' | append: prod.id | append: '|'
+                    unless ms_used_pids contains pid_tok
+                      if p1 == nil
+                        assign p1 = prod
+                      elsif p2 == nil
+                        assign p2 = prod
+                      elsif p3 == nil
+                        assign p3 = prod
+                      endif
+                      assign ms_used_pids = ms_used_pids | append: prod.id | append: '|'
+                      if p3 != nil
+                        break
+                      endif
+                    endunless
+                  endif
+                endfor
+              endif
+            endif
+
+            assign lead_img = block.settings.image
+            if lead_img == blank and p1 != nil
+              assign lead_img = p1.featured_media.preview_image | default: p1.featured_image
+            endif
+            if lead_img == blank
+              assign lead_img = collection.image | default: collection.featured_image | default: collection.products.first.featured_media.preview_image
+            endif
+          -%}
+
+          <article
+            class="ms-card"
+            data-ms-card
+            data-ms-discipline="{{ discipline_tag }}"
+            {{ block.shopify_attributes }}
+          >
+            <div>
+              {%- comment -%} Top Provenance Bar {%- endcomment -%}
+              <div class="ms-card__topbar">
+                <span class="ms-card__origin">{{ origin }}</span>
+                {%- if count > 0 -%}
+                  <span class="ms-card__count">{{ count }} PIECES</span>
+                {%- endif -%}
+              </div>
+
+              {%- comment -%} 1:1 Studio Stage with 3 Interactive Thumbnails {%- endcomment -%}
+              <div class="ms-card__stage">
+                <a href="{{ p1.url | default: block_url }}" class="ms-card__stage-link" data-ms-stage-link>
+                  {%- if lead_img != blank -%}
+                    <img
+                      src="{{ lead_img | image_url: width: 640 }}"
+                      alt="{{ p1.title | default: title | escape }}"
+                      class="ms-card__stage-img"
+                      width="400"
+                      height="400"
+                      loading="lazy"
+                      data-ms-stage-img
+                    />
+                  {%- endif -%}
+                </a>
+
+                {%- if p1 != nil -%}
+                  <div class="ms-card__stage-bar">
+                    <div class="ms-card__piece-meta">
+                      <span class="ms-card__piece-name" data-ms-piece-name>{{ p1.title }}</span>
+                      <span class="ms-card__piece-price" data-ms-piece-price>{{ p1.price | money }}</span>
+                    </div>
+
+                    {%- if p2 != nil -%}
+                      <div class="ms-card__thumbs" aria-label="{{ title | escape }} studio pieces">
+                        {%- for t_idx in (1..3) -%}
+                          {%- liquid
+                            assign t_prod = nil
+                            if t_idx == 1
+                              assign t_prod = p1
+                            elsif t_idx == 2
+                              assign t_prod = p2
+                            elsif t_idx == 3
+                              assign t_prod = p3
+                            endif
+                          -%}
+                          {%- if t_prod != nil -%}
+                            {%- assign t_img = t_prod.featured_media.preview_image | default: t_prod.featured_image -%}
+                            <button
+                              type="button"
+                              class="ms-card__thumb {% if t_idx == 1 %}is-active{% endif %}"
+                              data-ms-thumb
+                              data-ms-src="{{ t_img | image_url: width: 640 }}"
+                              data-ms-title="{{ t_prod.title | escape }}"
+                              data-ms-price="{{ t_prod.price | money | escape }}"
+                              data-ms-url="{{ t_prod.url }}"
+                              aria-label="Inspect {{ t_prod.title | escape }}"
+                            >
+                              <img
+                                src="{{ t_img | image_url: width: 120 }}"
+                                alt="{{ t_prod.title | escape }}"
+                                width="30"
+                                height="30"
+                                loading="lazy"
+                              />
+                            </button>
+                          {%- endif -%}
+                        {%- endfor -%}
+                      </div>
+                    {%- endif -%}
                   </div>
                 {%- endif -%}
-              {%- endif -%}
-
-              {%- if block.settings.title != blank or block.settings.content != blank or block.settings.link_text != blank -%}
-                <div class="prose text-{{ section.settings.text_alignment }}">
-                  {%- if block.settings.title != blank -%}
-                    <p class="{{ block.settings.heading_tag }}">{{ block.settings.title }}</p>
-                  {%- endif -%}
-
-                  {{- block.settings.content -}}
-
-                  {%- if block.settings.link_text != blank -%}
-                    <a href="{{ block.settings.link_url }}" class="link">{{ block.settings.link_text | escape }}</a>
-                  {%- endif -%}
-                </div>
-              {%- endif -%}
+              </div>
             </div>
-          {%- endfor -%}
-        </multi-column>
+
+            {%- comment -%} Dossier Body: Title, Narrative, Craftsmanship Spec Table & CTA {%- endcomment -%}
+            <div class="ms-card__body">
+              <div>
+                <p class="ms-card__discipline">{{ discipline_label }}</p>
+                <h3 class="ms-card__title">{{ title }}</h3>
+                {%- if block.settings.content != blank -%}
+                  <div class="ms-card__narrative">
+                    {{- block.settings.content -}}
+                  </div>
+                {%- endif -%}
+              </div>
+
+              <div>
+                <div class="ms-specs">
+                  <div class="ms-spec-row">
+                    <span class="ms-spec-key">{{ spec_1_k }}</span>
+                    <span class="ms-spec-val">{{ spec_1_v }}</span>
+                  </div>
+                  <div class="ms-spec-row">
+                    <span class="ms-spec-key">{{ spec_2_k }}</span>
+                    <span class="ms-spec-val">{{ spec_2_v }}</span>
+                  </div>
+                </div>
+
+                <div class="ms-card__footer">
+                  {%- if min_price > 0 -%}
+                    <span class="ms-card__floor">From <strong>{{ min_price | money }}</strong></span>
+                  {%- else -%}
+                    <span class="ms-card__floor">Certified Archive</span>
+                  {%- endif -%}
+
+                  <a href="{{ block_url }}" class="ms-card__cta">
+                    <span>{{ block.settings.link_text | default: 'EXPLORE' | escape }}</span>
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        {%- endfor -%}
       </div>
     </div>
   </div>
+
+  <script>
+    (function() {
+      const sectionEl = document.querySelector('[data-ms-section="{{ section.id }}"]');
+      if (!sectionEl) return;
+
+      /* Bind 3-Piece Interactive Thumbnails */
+      sectionEl.querySelectorAll('[data-ms-card]').forEach((card) => {
+        const stageImg = card.querySelector('[data-ms-stage-img]');
+        const stageLink = card.querySelector('[data-ms-stage-link]');
+        const pieceName = card.querySelector('[data-ms-piece-name]');
+        const piecePrice = card.querySelector('[data-ms-piece-price]');
+        const thumbs = card.querySelectorAll('[data-ms-thumb]');
+
+        function activateThumb(btn) {
+          const src = btn.getAttribute('data-ms-src');
+          const title = btn.getAttribute('data-ms-title');
+          const price = btn.getAttribute('data-ms-price');
+          const url = btn.getAttribute('data-ms-url');
+
+          if (stageImg && src) stageImg.src = src;
+          if (stageLink && url) stageLink.href = url;
+          if (pieceName && title) pieceName.textContent = title;
+          if (piecePrice && price) piecePrice.textContent = price;
+
+          thumbs.forEach((t) => t.classList.toggle('is-active', t === btn));
+        }
+
+        thumbs.forEach((btn) => {
+          btn.addEventListener('mouseenter', () => activateThumb(btn));
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            activateThumb(btn);
+          });
+        });
+      });
+
+      /* Bind Discipline Filter Buttons */
+      const filterBtns = sectionEl.querySelectorAll('[data-ms-filter]');
+      const cards = sectionEl.querySelectorAll('[data-ms-card]');
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const target = btn.getAttribute('data-ms-filter');
+          filterBtns.forEach((b) => b.classList.toggle('is-active', b === btn));
+          cards.forEach((card) => {
+            const disc = card.getAttribute('data-ms-discipline');
+            const match = target === 'all' || disc === target;
+            card.classList.toggle('is-hidden', !match);
+          });
+        });
+      });
+    })();
+  </script>
 {%- endif -%}
 
 {% schema %}
@@ -123,7 +1009,7 @@
       "min": 2,
       "max": 6,
       "label": "t:sections.multi_column.columns_per_row",
-      "default": 3
+      "default": 4
     },
     {
       "type": "checkbox",
@@ -142,38 +1028,20 @@
       "id": "content_alignment",
       "label": "t:global.position.content_position",
       "options": [
-        {
-          "value": "start",
-          "label": "t:global.position.left"
-        },
-        {
-          "value": "center",
-          "label": "t:global.position.center"
-        },
-        {
-          "value": "end",
-          "label": "t:global.position.right"
-        }
+        { "value": "start", "label": "t:global.position.left" },
+        { "value": "center", "label": "t:global.position.center" },
+        { "value": "end", "label": "t:global.position.right" }
       ],
-      "default": "start"
+      "default": "center"
     },
     {
       "type": "select",
       "id": "text_alignment",
       "label": "t:global.text.alignment",
       "options": [
-        {
-          "value": "start",
-          "label": "t:global.position.left"
-        },
-        {
-          "value": "center",
-          "label": "t:global.position.center"
-        },
-        {
-          "value": "end",
-          "label": "t:global.position.right"
-        }
+        { "value": "start", "label": "t:global.position.left" },
+        { "value": "center", "label": "t:global.position.center" },
+        { "value": "end", "label": "t:global.position.right" }
       ],
       "default": "start"
     },
@@ -182,22 +1050,10 @@
       "id": "spacing",
       "label": "t:global.spacing.column_spacing",
       "options": [
-        {
-          "value": "xs",
-          "label": "t:global.sizes.x_small"
-        },
-        {
-          "value": "sm",
-          "label": "t:global.sizes.small"
-        },
-        {
-          "value": "md",
-          "label": "t:global.sizes.medium"
-        },
-        {
-          "value": "lg",
-          "label": "t:global.sizes.large"
-        }
+        { "value": "xs", "label": "t:global.sizes.x_small" },
+        { "value": "sm", "label": "t:global.sizes.small" },
+        { "value": "md", "label": "t:global.sizes.medium" },
+        { "value": "lg", "label": "t:global.sizes.large" }
       ],
       "default": "md"
     },
@@ -209,13 +1065,13 @@
       "type": "inline_richtext",
       "id": "subheading",
       "label": "t:global.text.subheading",
-      "default": "About"
+      "default": "Maison Spotlight"
     },
     {
       "type": "inline_richtext",
       "id": "title",
       "label": "t:global.text.heading",
-      "default": "Multi-column"
+      "default": "Craftsmanship & Heritage"
     },
     {
       "type": "richtext",
@@ -229,15 +1085,14 @@
       "name": "t:sections.multi_column.blocks.image_with_text.name",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "t:global.image.image",
-          "info": "t:sections.multi_column.blocks.image_with_text.image_size_recommendation"
-        },
-        {
           "type": "collection",
           "id": "collection",
-          "label": "t:global.collection.collection"
+          "label": "Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:global.image.image"
         },
         {
           "type": "inline_richtext",
@@ -248,40 +1103,22 @@
         {
           "type": "select",
           "id": "heading_tag",
-          "label": "t:global.text.heading_style",
+          "label": "t:global.text.style",
           "options": [
-            {
-              "value": "h1",
-              "label": "H1"
-            },
-            {
-              "value": "h2",
-              "label": "H2"
-            },
-            {
-              "value": "h3",
-              "label": "H3"
-            },
-            {
-              "value": "h4",
-              "label": "H4"
-            },
-            {
-              "value": "h5",
-              "label": "H5"
-            },
-            {
-              "value": "h6",
-              "label": "H6"
-            }
+            { "value": "h1", "label": "H1" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" },
+            { "value": "h5", "label": "H5" },
+            { "value": "h6", "label": "H6" }
           ],
-          "default": "h3"
+          "default": "h4"
         },
         {
           "type": "richtext",
           "id": "content",
           "label": "t:global.text.content",
-          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>"
         },
         {
           "type": "url",
@@ -332,40 +1169,22 @@
         {
           "type": "select",
           "id": "heading_tag",
-          "label": "t:global.text.heading_style",
+          "label": "t:global.text.style",
           "options": [
-            {
-              "value": "h1",
-              "label": "H1"
-            },
-            {
-              "value": "h2",
-              "label": "H2"
-            },
-            {
-              "value": "h3",
-              "label": "H3"
-            },
-            {
-              "value": "h4",
-              "label": "H4"
-            },
-            {
-              "value": "h5",
-              "label": "H5"
-            },
-            {
-              "value": "h6",
-              "label": "H6"
-            }
+            { "value": "h1", "label": "H1" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" },
+            { "value": "h5", "label": "H5" },
+            { "value": "h6", "label": "H6" }
           ],
-          "default": "h3"
+          "default": "h4"
         },
         {
           "type": "richtext",
           "id": "content",
           "label": "t:global.text.content",
-          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
+          "default": "<p>Pair text with a video to focus on your chosen product, collection, or blog post.</p>"
         },
         {
           "type": "url",
@@ -382,21 +1201,11 @@
   ],
   "presets": [
     {
-      "name": "t:sections.multi_column.presets.multi_column.name",
-      "category": "t:global.categories.storytelling",
+      "name": "t:sections.multi_column.name",
       "blocks": [
-        {
-          "type": "image_with_text",
-          "settings": {}
-        },
-        {
-          "type": "image_with_text",
-          "settings": {}
-        },
-        {
-          "type": "image_with_text",
-          "settings": {}
-        }
+        { "type": "image_with_text", "settings": {} },
+        { "type": "image_with_text", "settings": {} },
+        { "type": "image_with_text", "settings": {} }
       ]
     }
   ]

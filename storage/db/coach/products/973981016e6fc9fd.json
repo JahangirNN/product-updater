@@ -75,7 +75,8 @@
           "name": "Dark Moss"
         }
       ],
-      "price_current": 18718.0
+      "price_current": 18718.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -95,7 +96,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 18718.0
+      "price_current": 18718.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -115,7 +117,8 @@
           "name": "Light Maroon"
         }
       ],
-      "price_current": 18718.0
+      "price_current": 18718.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -136,23 +139,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Handbags"
+    "Handbags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:44:28Z",
-  "last_verified_at": "2026-10-29T03:39:59Z",
+  "last_verified_at": "2026-11-16T15:46:20Z",
   "id": "973981016e6fc9fd",
   "product_id": "973981016e6fc9fd",
   "store": "coach",
-  "updated_at": "2026-10-29T03:39:59Z",
+  "updated_at": "2026-11-16T15:46:20Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841767391398",
   "shopify_handle": "leon-sling-bag-in-signature-nylon-jacquard",
-  "shopify_synced_at": "2026-10-08T16:08:30Z",
+  "shopify_synced_at": "2026-11-14T01:14:36Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

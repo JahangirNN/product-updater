@@ -57,7 +57,8 @@
           "option_name": "Color",
           "name": "Linen/Platinum Tint/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -81,7 +82,8 @@
           "option_name": "Color",
           "name": "Linen/Platinum Tint/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -105,7 +107,8 @@
           "option_name": "Color",
           "name": "Linen/Platinum Tint/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -129,7 +132,8 @@
           "option_name": "Color",
           "name": "Linen/Platinum Tint/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -153,7 +157,8 @@
           "option_name": "Color",
           "name": "Linen/Platinum Tint/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -177,7 +182,8 @@
           "option_name": "Color",
           "name": "Linen/Platinum Tint/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -201,7 +207,8 @@
           "option_name": "Color",
           "name": "Linen/Platinum Tint/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -225,7 +232,8 @@
           "option_name": "Color",
           "name": "Linen/Platinum Tint/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -249,7 +257,8 @@
           "option_name": "Color",
           "name": "Linen/Platinum Tint/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -273,7 +282,8 @@
           "option_name": "Color",
           "name": "Linen/Platinum Tint/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -297,7 +307,8 @@
           "option_name": "Color",
           "name": "Linen/Platinum Tint/Sail"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -321,7 +332,8 @@
           "option_name": "Color",
           "name": "Linen/Platinum Tint/Sail"
         }
-      ]
+      ],
+      "is_available": true
     }
   ],
   "product_options": [
@@ -376,12 +388,12 @@
     }
   ],
   "tags": [
-    "Nike",
     "Footwear",
-    "Preschool",
-    "Kids'",
     "JD Sports",
-    "Nike Dunk Low"
+    "Kids'",
+    "Nike",
+    "Nike Dunk Low",
+    "Preschool"
   ],
   "groups": [
     "footwear",
@@ -390,13 +402,15 @@
     "shoes"
   ],
   "created_at": "2026-09-20T16:06:33Z",
-  "updated_at": "2026-10-29T03:37:01Z",
-  "last_verified_at": "2026-10-29T03:37:01Z",
+  "updated_at": "2026-11-16T15:45:53Z",
+  "last_verified_at": "2026-11-16T15:45:50Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851446599846",
   "shopify_handle": "little-kids-nike-dunk-low-casual-shoes-linen-platinum-tint-sail-3832106",
-  "shopify_synced_at": "2026-10-10T06:13:25Z",
+  "shopify_synced_at": "2026-11-16T15:45:50Z",
   "price": "6976.00",
   "price_current": 6976.0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.399626,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

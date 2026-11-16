@@ -10,12 +10,12 @@
   "source_price": 110.0,
   "source_compare_at_price": null,
   "current_price": 10559.0,
-  "compare_at_price": 10472.0,
+  "compare_at_price": 10456.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "color": "Maroon/Gold Met/Warm Vanilla",
   "width": "Width - B - Medium",
   "material": "Premium upper with durable overlays and responsive traction outsole",
@@ -65,7 +65,8 @@
           "name": "Maroon/Gold Met/Warm Vanilla"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -89,7 +90,8 @@
           "name": "Maroon/Gold Met/Warm Vanilla"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -113,7 +115,8 @@
           "name": "Maroon/Gold Met/Warm Vanilla"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -137,7 +140,8 @@
           "name": "Maroon/Gold Met/Warm Vanilla"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -161,7 +165,8 @@
           "name": "Maroon/Gold Met/Warm Vanilla"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -173,7 +178,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KK0929_01",
       "option_values": [
         {
@@ -185,7 +190,8 @@
           "name": "Maroon/Gold Met/Warm Vanilla"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -197,7 +203,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KK0929_01",
       "option_values": [
         {
@@ -209,7 +215,8 @@
           "name": "Maroon/Gold Met/Warm Vanilla"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -233,7 +240,8 @@
           "name": "Maroon/Gold Met/Warm Vanilla"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -257,7 +265,8 @@
           "name": "Maroon/Gold Met/Warm Vanilla"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -281,7 +290,8 @@
           "name": "Maroon/Gold Met/Warm Vanilla"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -305,7 +315,8 @@
           "name": "Maroon/Gold Met/Warm Vanilla"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -329,7 +340,8 @@
           "name": "Maroon/Gold Met/Warm Vanilla"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -353,7 +365,8 @@
           "name": "Maroon/Gold Met/Warm Vanilla"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -414,18 +427,21 @@
     "adidas",
     "footwear",
     "shoes",
-    "women's",
-    "sizes-13"
+    "sizes-13",
+    "supplier-delisted",
+    "women's"
   ],
   "groups": [
     "adidas Handball Spezial"
   ],
-  "last_verified_at": "2026-10-29T05:56:28Z",
+  "last_verified_at": "2026-11-16T15:41:59Z",
   "created_at": "2026-09-20T10:34:57Z",
-  "updated_at": "2026-10-29T05:56:28Z",
+  "updated_at": "2026-11-16T15:42:01Z",
   "shopify_product_id": "gid://shopify/Product/15851015241894",
   "shopify_handle": "adidas-originals-handball-spezial-women-s-maroon-gold-met-warm-vanilla-kk0929",
-  "shopify_synced_at": "2026-10-24T06:46:59Z",
+  "shopify_synced_at": "2026-11-16T15:41:59Z",
   "shopify_sync_pending": false,
-  "last_synced_fx_rate": 94.901331
+  "last_synced_fx_rate": 95.050072,
+  "delist_strikes": 55,
+  "supplier_delisted": true
 }

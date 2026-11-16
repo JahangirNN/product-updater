@@ -59,7 +59,8 @@
           "name": "US 5 / UK 3"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -79,7 +80,8 @@
           "name": "US 5.5 / UK 3.5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -99,7 +101,8 @@
           "name": "US 6 / UK 4"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -119,7 +122,8 @@
           "name": "US 6.5 / UK 4.5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -139,7 +143,8 @@
           "name": "US 7 / UK 5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -159,7 +164,8 @@
           "name": "US 7.5 / UK 5.5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -179,7 +185,8 @@
           "name": "US 8 / UK 6"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -199,7 +206,8 @@
           "name": "US 8.5 / UK 6.5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -219,7 +227,8 @@
           "name": "US 9 / UK 7"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -239,7 +248,8 @@
           "name": "US 9.5 / UK 7.5"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -259,7 +269,8 @@
           "name": "US 10 / UK 8"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -279,7 +290,8 @@
           "name": "US 11 / UK 9"
         }
       ],
-      "price_current": 14878.0
+      "price_current": 14878.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -327,23 +339,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Shoes & Footwear"
+    "Shoes & Footwear",
+    "Women"
   ],
   "groups": [
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:40:39Z",
-  "last_verified_at": "2026-10-29T03:38:16Z",
+  "last_verified_at": "2026-11-16T15:44:44Z",
   "id": "33ecd2902800ada0",
   "product_id": "33ecd2902800ada0",
   "store": "coach",
-  "updated_at": "2026-10-29T03:38:16Z",
+  "updated_at": "2026-11-16T15:44:44Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15848605352102",
   "shopify_handle": "soho-sneaker-in-mixed-signature-cde16-l77-11-b",
-  "shopify_synced_at": "2026-10-08T16:00:52Z",
+  "shopify_synced_at": "2026-11-14T01:09:07Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

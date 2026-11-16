@@ -10,6 +10,7 @@ import httpx
 
 from stores.nordstrom.delta import (
     check_price_and_stock as nordstrom_check_price_and_stock,
+    apply_delta_to_product,
     norm_size_string
 )
 

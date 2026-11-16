@@ -101,7 +101,8 @@
       "variation_value": "Sprinkle - warm pearly pink",
       "variation_type": "Color",
       "price": 2371,
-      "source_price": 25.0
+      "source_price": 25.0,
+      "inventory_quantity": 0
     },
     {
       "id": "2895779",
@@ -113,8 +114,8 @@
       "current_price": 2371,
       "price_inr": 2371,
       "compare_at_price": null,
-      "in_stock": false,
-      "is_active": false,
+      "in_stock": true,
+      "is_active": true,
       "barcode": "2895779",
       "image_url": "https://www.sephora.com/productimages/sku/s2895779-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2895779+sw.jpg",
@@ -122,7 +123,8 @@
       "variation_value": "Juice Box - hot pink",
       "variation_type": "Color",
       "price": 2371,
-      "source_price": 25.0
+      "source_price": 25.0,
+      "inventory_quantity": 10
     },
     {
       "id": "2895860",
@@ -134,8 +136,8 @@
       "current_price": 2371,
       "price_inr": 2371,
       "compare_at_price": null,
-      "in_stock": false,
-      "is_active": false,
+      "in_stock": true,
+      "is_active": true,
       "barcode": "2895860",
       "image_url": "https://www.sephora.com/productimages/sku/s2895860-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2895860+sw.jpg",
@@ -143,7 +145,8 @@
       "variation_value": "Spicy Marg - bright coral",
       "variation_type": "Color",
       "price": 2371,
-      "source_price": 25.0
+      "source_price": 25.0,
+      "inventory_quantity": 10
     },
     {
       "id": "2896124",
@@ -164,7 +167,8 @@
       "variation_value": "Freckle - neutral peach",
       "variation_type": "Color",
       "price": 2371,
-      "source_price": 25.0
+      "source_price": 25.0,
+      "inventory_quantity": 10
     },
     {
       "id": "2916823",
@@ -206,7 +210,8 @@
       "variation_value": "Sleepy Girl - soft mauve",
       "variation_type": "Color",
       "price": 2371,
-      "source_price": 25.0
+      "source_price": 25.0,
+      "inventory_quantity": 0
     },
     {
       "id": "2895969",
@@ -354,8 +359,14 @@
     "rhode"
   ],
   "created_at": "2026-11-04T18:58:40Z",
-  "last_verified_at": "2026-11-05T10:48:45Z",
+  "last_verified_at": "2026-11-16T15:42:38Z",
   "id": "8209ca0f4c60dedd",
-  "updated_at": "2026-11-05T10:48:45Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:42:38Z",
+  "last_synced_fx_rate": 94.289707,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15994076266662",
+  "shopify_handle": "rhode-pocket-blush-buildable-hydrating-cream-blush-p517483",
+  "shopify_synced_at": "2026-11-14T15:04:34Z",
+  "shopify_image_synced": true,
+  "primary_image": "https://www.sephora.com/productimages/sku/s2896181-main-zoom.jpg"
 }

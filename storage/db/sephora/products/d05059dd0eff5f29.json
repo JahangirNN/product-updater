@@ -137,8 +137,8 @@
       "current_price": 4552,
       "price_inr": 4552,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "2434181",
       "image_url": "https://www.sephora.com/productimages/sku/s2434181-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2434181+sw.jpg",
@@ -146,7 +146,8 @@
       "variation_value": "Nectar",
       "variation_type": "Color",
       "price": 4552,
-      "source_price": 48.0
+      "source_price": 48.0,
+      "inventory_quantity": 0
     },
     {
       "id": "2648038",
@@ -245,10 +246,10 @@
     "westman-atelier"
   ],
   "created_at": "2026-11-04T18:54:16Z",
-  "last_verified_at": "2026-11-05T10:46:41Z",
+  "last_verified_at": "2026-11-16T15:41:45Z",
   "id": "d05059dd0eff5f29",
-  "updated_at": "2026-11-05T10:46:41Z",
-  "last_synced_fx_rate": 94.834253,
+  "updated_at": "2026-11-16T15:41:45Z",
+  "last_synced_fx_rate": 93.851604,
   "price_range_inr": {
     "min": 2466,
     "max": 4552
@@ -256,5 +257,10 @@
   "price_range_usd": {
     "min": 26.0,
     "max": 48.0
-  }
+  },
+  "shopify_sync_pending": true,
+  "shopify_product_id": "gid://shopify/Product/15994413613222",
+  "shopify_handle": "westman-atelier-lit-up-glassy-gel-highlighter-stick-p468430",
+  "shopify_synced_at": "2026-11-12T13:30:09Z",
+  "shopify_image_synced": true
 }

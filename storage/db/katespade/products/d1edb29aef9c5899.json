@@ -62,14 +62,14 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KL806_001",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KL806_001",
         "https://katespade.scene7.com/is/image/KateSpade/KL806_001_1",
         "https://katespade.scene7.com/is/image/KateSpade/KL806_001_3"
       ],
-      "inventory_quantity": 0,
+      "inventory_quantity": 10,
       "image_url": "https://katespade.scene7.com/is/image/KateSpade/KL806_001"
     },
     {
@@ -141,9 +141,13 @@
     "handbags"
   ],
   "created_at": "2026-10-29T05:27:11Z",
-  "last_verified_at": "2026-10-29T07:40:29Z",
+  "last_verified_at": "2026-11-16T15:44:54Z",
   "_elapsed_ms": 3097.245699958876,
   "id": "d1edb29aef9c5899",
-  "updated_at": "2026-10-29T07:40:29Z",
-  "last_synced_fx_rate": 95.29615
+  "updated_at": "2026-11-16T15:44:54Z",
+  "last_synced_fx_rate": 93.851604,
+  "shopify_product_id": "gid://shopify/Product/15915100176550",
+  "shopify_handle": "kayla-triple-crossbody-bag",
+  "shopify_synced_at": "2026-11-12T08:52:02Z",
+  "shopify_sync_pending": false
 }

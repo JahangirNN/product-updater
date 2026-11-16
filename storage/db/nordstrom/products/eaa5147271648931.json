@@ -9,7 +9,7 @@
   "source_sku": "ON-9176810-5",
   "source_price": 180.0,
   "source_compare_at_price": null,
-  "current_price": 17082.0,
+  "current_price": 16967.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -266,7 +266,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/cf21fee1-94cd-4360-90d2-2a5bd4e57a8f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -565,7 +565,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/08e88f7e-b7ab-409f-8466-06575cafef0b.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -910,7 +910,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/d44c7adf-3969-449b-8e86-032b1c4e5af5.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1020,23 +1020,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T05:38:05Z",
+  "last_verified_at": "2026-11-16T15:48:00Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-10-29T05:38:05Z",
+  "updated_at": "2026-11-16T15:48:00Z",
   "price_range_usd": {
     "min": 180.0,
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 17082.0,
-    "max": 17082.0
+    "min": 16967.0,
+    "max": 16967.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "17082.00",
+  "price": "16967.00",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15848582512806",
   "shopify_handle": "on-running-cloudtilt-arc",
-  "shopify_synced_at": "2026-10-24T07:41:33Z",
-  "last_synced_fx_rate": 94.901331
+  "shopify_synced_at": "2026-11-16T03:45:58Z",
+  "last_synced_fx_rate": 94.262076
 }

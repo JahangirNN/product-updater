@@ -10,7 +10,7 @@
   "source_price": 95.0,
   "source_compare_at_price": null,
   "current_price": 9119.0,
-  "compare_at_price": 9044.0,
+  "compare_at_price": 8968.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -150,7 +150,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/Q4309101_01",
       "option_values": [
         {
@@ -163,7 +163,7 @@
         }
       ],
       "price_current": 9119.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -200,7 +200,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/Q4309101_01",
       "option_values": [
         {
@@ -213,7 +213,7 @@
         }
       ],
       "price_current": 9119.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -250,7 +250,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/Q4309101_01",
       "option_values": [
         {
@@ -263,7 +263,7 @@
         }
       ],
       "price_current": 9119.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -300,7 +300,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/Q4309101_01",
       "option_values": [
         {
@@ -313,7 +313,7 @@
         }
       ],
       "price_current": 9119.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -486,14 +486,14 @@
   "groups": [
     "Nike Mind"
   ],
-  "last_verified_at": "2026-10-29T05:57:51Z",
+  "last_verified_at": "2026-11-16T15:43:40Z",
   "created_at": "2026-09-20T10:34:56Z",
-  "updated_at": "2026-10-29T05:57:53Z",
+  "updated_at": "2026-11-16T15:43:42Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851016388774",
   "shopify_handle": "nike-mind-001-women-s-summit-white-mtlc-silver-phantom-q4309101",
-  "shopify_synced_at": "2026-10-29T05:57:51Z",
+  "shopify_synced_at": "2026-11-16T15:43:40Z",
   "delist_strikes": 0,
   "supplier_delisted": false,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.399626
 }

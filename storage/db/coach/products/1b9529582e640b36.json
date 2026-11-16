@@ -59,7 +59,8 @@
           "name": "US 5 / UK 3"
         }
       ],
-      "price_current": 3284.0
+      "price_current": 3284.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -79,7 +80,8 @@
           "name": "US 6 / UK 4"
         }
       ],
-      "price_current": 3284.0
+      "price_current": 3284.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -99,7 +101,8 @@
           "name": "US 7 / UK 5"
         }
       ],
-      "price_current": 3284.0
+      "price_current": 3284.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -119,7 +122,8 @@
           "name": "US 8 / UK 6"
         }
       ],
-      "price_current": 3284.0
+      "price_current": 3284.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -139,7 +143,8 @@
           "name": "US 9 / UK 7"
         }
       ],
-      "price_current": 3284.0
+      "price_current": 3284.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -159,7 +164,8 @@
           "name": "US 10 / UK 8"
         }
       ],
-      "price_current": 3284.0
+      "price_current": 3284.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -179,7 +185,8 @@
           "name": "US 11 / UK 9"
         }
       ],
-      "price_current": 3284.0
+      "price_current": 3284.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -212,23 +219,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Shoes & Footwear"
+    "Shoes & Footwear",
+    "Women"
   ],
   "groups": [
     "women_shoes"
   ],
   "created_at": "2026-09-13T00:39:08Z",
-  "last_verified_at": "2026-10-29T03:37:29Z",
+  "last_verified_at": "2026-11-16T15:41:38Z",
   "id": "1b9529582e640b36",
   "product_id": "1b9529582e640b36",
   "store": "coach",
-  "updated_at": "2026-10-29T03:37:29Z",
+  "updated_at": "2026-11-16T15:41:38Z",
   "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15848604467366",
   "shopify_handle": "rexy-10th-birthday-udele-slide-with-sticker-print",
-  "shopify_synced_at": "2026-10-28T11:40:45Z",
+  "shopify_synced_at": "2026-11-14T23:03:48Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 95.199335,
+  "supplier_delisted": false
 }

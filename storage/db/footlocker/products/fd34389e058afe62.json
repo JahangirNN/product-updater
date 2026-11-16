@@ -10,12 +10,12 @@
   "source_price": 110.0,
   "source_compare_at_price": null,
   "current_price": 10559.0,
-  "compare_at_price": 10472.0,
+  "compare_at_price": 10408.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "color": "Brown/Black/Yellow",
   "width": "Width - D - Medium",
   "material": "Premium upper with durable overlays and responsive traction outsole",
@@ -53,7 +53,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KJ7415_01",
       "option_values": [
         {
@@ -65,7 +65,8 @@
           "name": "Brown/Black/Yellow"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -77,7 +78,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KJ7415_01",
       "option_values": [
         {
@@ -89,7 +90,8 @@
           "name": "Brown/Black/Yellow"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -101,7 +103,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KJ7415_01",
       "option_values": [
         {
@@ -113,7 +115,8 @@
           "name": "Brown/Black/Yellow"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -125,7 +128,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KJ7415_01",
       "option_values": [
         {
@@ -137,7 +140,8 @@
           "name": "Brown/Black/Yellow"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -149,7 +153,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KJ7415_01",
       "option_values": [
         {
@@ -161,7 +165,8 @@
           "name": "Brown/Black/Yellow"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -173,7 +178,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KJ7415_01",
       "option_values": [
         {
@@ -185,7 +190,8 @@
           "name": "Brown/Black/Yellow"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -197,7 +203,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KJ7415_01",
       "option_values": [
         {
@@ -209,7 +215,8 @@
           "name": "Brown/Black/Yellow"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -221,7 +228,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KJ7415_01",
       "option_values": [
         {
@@ -233,7 +240,8 @@
           "name": "Brown/Black/Yellow"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -245,7 +253,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KJ7415_01",
       "option_values": [
         {
@@ -257,7 +265,8 @@
           "name": "Brown/Black/Yellow"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -281,7 +290,8 @@
           "name": "Brown/Black/Yellow"
         }
       ],
-      "price_current": 10559.0
+      "price_current": 10559.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -332,19 +342,22 @@
   "tags": [
     "adidas",
     "footwear",
-    "shoes",
     "men's",
-    "sizes-10"
+    "shoes",
+    "sizes-10",
+    "supplier-delisted"
   ],
   "groups": [
     "adidas Handball Spezial"
   ],
-  "last_verified_at": "2026-10-29T05:58:58Z",
+  "last_verified_at": "2026-11-16T15:44:05Z",
   "created_at": "2026-09-20T10:34:57Z",
-  "updated_at": "2026-10-29T05:58:58Z",
+  "updated_at": "2026-11-16T15:44:07Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851016781990",
   "shopify_handle": "adidas-originals-handball-spezial-men-s-brown-black-yellow-kj7415",
-  "shopify_synced_at": "2026-10-07T03:50:56Z",
-  "last_synced_fx_rate": 95.252751
+  "shopify_synced_at": "2026-11-16T15:44:05Z",
+  "last_synced_fx_rate": 94.620171,
+  "delist_strikes": 31,
+  "supplier_delisted": true
 }

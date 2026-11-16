@@ -57,7 +57,8 @@
           "name": "Gold/Warm Brown"
         }
       ],
-      "price_current": 6618.0
+      "price_current": 6618.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -72,23 +73,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Wallets & Small Goods"
+    "Wallets & Small Goods",
+    "Women"
   ],
   "groups": [
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:45:36Z",
-  "last_verified_at": "2026-10-29T03:37:01Z",
+  "last_verified_at": "2026-11-16T15:41:52Z",
   "id": "aec2633581f8494e",
   "product_id": "aec2633581f8494e",
   "store": "coach",
-  "updated_at": "2026-10-29T03:37:01Z",
+  "updated_at": "2026-11-16T15:41:52Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841768112294",
   "shopify_handle": "card-case-with-charms",
-  "shopify_synced_at": "2026-10-14T08:26:00Z",
+  "shopify_synced_at": "2026-11-14T11:04:31Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

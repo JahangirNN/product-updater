@@ -12,7 +12,7 @@
   "source_price": 90.0,
   "source_compare_at_price": null,
   "current_price": 8639.0,
-  "compare_at_price": 16184.0,
+  "compare_at_price": 16048.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -57,7 +57,8 @@
           "option_name": "Color",
           "name": "Chalk/Chalk/Metallic Silver"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -81,7 +82,8 @@
           "option_name": "Color",
           "name": "Chalk/Chalk/Metallic Silver"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -105,7 +107,8 @@
           "option_name": "Color",
           "name": "Chalk/Chalk/Metallic Silver"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -129,7 +132,8 @@
           "option_name": "Color",
           "name": "Chalk/Chalk/Metallic Silver"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -153,7 +157,8 @@
           "option_name": "Color",
           "name": "Chalk/Chalk/Metallic Silver"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -177,7 +182,8 @@
           "option_name": "Color",
           "name": "Chalk/Chalk/Metallic Silver"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
@@ -201,7 +207,8 @@
           "option_name": "Color",
           "name": "Chalk/Chalk/Metallic Silver"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -225,7 +232,8 @@
           "option_name": "Color",
           "name": "Chalk/Chalk/Metallic Silver"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -249,7 +257,8 @@
           "option_name": "Color",
           "name": "Chalk/Chalk/Metallic Silver"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -273,7 +282,8 @@
           "option_name": "Color",
           "name": "Chalk/Chalk/Metallic Silver"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -297,7 +307,8 @@
           "option_name": "Color",
           "name": "Chalk/Chalk/Metallic Silver"
         }
-      ]
+      ],
+      "is_available": false
     }
   ],
   "product_options": [
@@ -349,12 +360,12 @@
     }
   ],
   "tags": [
-    "Nike",
-    "Footwear",
     "Adult",
-    "Women's",
+    "Footwear",
     "JD Sports",
-    "Nike Air Max"
+    "Nike",
+    "Nike Air Max",
+    "Women's"
   ],
   "groups": [
     "footwear",
@@ -363,11 +374,13 @@
     "women's-shoes"
   ],
   "created_at": "2026-09-20T15:51:10Z",
-  "updated_at": "2026-10-29T05:37:14Z",
-  "last_verified_at": "2026-10-29T05:37:14Z",
+  "updated_at": "2026-11-16T15:42:29Z",
+  "last_verified_at": "2026-11-16T15:42:29Z",
   "shopify_product_id": "gid://shopify/Product/15851449843878",
   "shopify_handle": "womens-nike-air-max-muse-casual-shoes-chalk-chalk-metallic-silver-3289201",
-  "shopify_synced_at": "2026-10-25T14:44:41Z",
+  "shopify_synced_at": "2026-10-31T15:12:13Z",
   "shopify_sync_pending": false,
-  "last_synced_fx_rate": 95.036492
+  "last_synced_fx_rate": 95.073571,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

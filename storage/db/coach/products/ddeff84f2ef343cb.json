@@ -65,7 +65,8 @@
           "name": "Maple"
         }
       ],
-      "price_current": 14398.0
+      "price_current": 14398.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -85,7 +86,8 @@
           "name": "Brown/White"
         }
       ],
-      "price_current": 14398.0
+      "price_current": 14398.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -103,23 +105,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Shoulder Bags"
+    "Shoulder Bags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:47:33Z",
-  "last_verified_at": "2026-10-29T05:38:03Z",
+  "last_verified_at": "2026-11-16T15:41:46Z",
   "id": "ddeff84f2ef343cb",
   "product_id": "ddeff84f2ef343cb",
   "store": "coach",
-  "updated_at": "2026-10-29T05:38:03Z",
+  "updated_at": "2026-11-16T15:41:46Z",
   "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841769685158",
   "shopify_handle": "alterego-side-buckle-shoulder-bag",
-  "shopify_synced_at": "2026-09-29T05:56:50Z",
+  "shopify_synced_at": "2026-11-14T23:04:52Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.620171,
+  "supplier_delisted": false
 }

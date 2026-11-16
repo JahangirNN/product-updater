@@ -16,8 +16,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -71,7 +71,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IB4401_043_P1",
       "option_values": [
         {
@@ -83,7 +83,7 @@
           "name": "Pure Platinum/Rush Fuchsia/Blue Beyond/Light Lemon Twist"
         }
       ],
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -96,7 +96,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IB4401_043_P1",
       "option_values": [
         {
@@ -108,7 +108,7 @@
           "name": "Pure Platinum/Rush Fuchsia/Blue Beyond/Light Lemon Twist"
         }
       ],
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -253,7 +253,8 @@
     "JD Sports",
     "Kids'",
     "Nike",
-    "Nike Air Max"
+    "Nike Air Max",
+    "supplier-delisted"
   ],
   "groups": [
     "footwear",
@@ -262,13 +263,13 @@
     "shoes"
   ],
   "created_at": "2026-09-20T15:49:36Z",
-  "updated_at": "2026-10-29T03:37:08Z",
-  "last_verified_at": "2026-10-29T03:37:08Z",
+  "updated_at": "2026-11-16T15:46:10Z",
+  "last_verified_at": "2026-11-16T15:46:09Z",
   "shopify_product_id": "gid://shopify/Product/15851447222438",
   "shopify_handle": "big-kids-nike-air-max-270-casual-shoes-pure-platinum-rush-fuchsia-blue-beyond-light-lemon-twist-3701727",
-  "shopify_synced_at": "2026-10-27T12:43:54Z",
+  "shopify_synced_at": "2026-11-16T15:46:09Z",
   "shopify_sync_pending": false,
-  "last_synced_fx_rate": 95.269051,
-  "delist_strikes": 0,
-  "supplier_delisted": false
+  "last_synced_fx_rate": 95.29615,
+  "delist_strikes": 74,
+  "supplier_delisted": true
 }

@@ -55,7 +55,8 @@
           "name": "Green"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -75,7 +76,8 @@
           "name": "Black Brown"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -95,7 +97,8 @@
           "name": "Black/Grey"
         }
       ],
-      "price_current": 2995.0
+      "price_current": 2995.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -115,7 +118,8 @@
           "name": "Brown"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -135,7 +139,8 @@
           "name": "Light Indigo"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -155,7 +160,8 @@
           "name": "Silver/Denim"
         }
       ],
-      "price_current": 3686.0
+      "price_current": 3686.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -175,7 +181,8 @@
           "name": "Gold/Indigo"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -194,7 +201,8 @@
           "option_name": "Color",
           "name": "Silver/PEONY"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -214,7 +222,8 @@
           "name": "Blue Multi"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -234,7 +243,8 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -254,7 +264,8 @@
           "name": "Gold/Dark Cardinal"
         }
       ],
-      "price_current": 2246.0
+      "price_current": 2246.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -274,7 +285,8 @@
           "name": "Silver/Chalk"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -294,7 +306,8 @@
           "name": "Gold/Latte Multi"
         }
       ],
-      "price_current": 2246.0
+      "price_current": 2246.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -352,16 +365,17 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:48:41Z",
-  "last_verified_at": "2026-10-29T03:37:02Z",
+  "last_verified_at": "2026-11-16T15:42:01Z",
   "id": "f6ad8c219f063f94",
   "product_id": "f6ad8c219f063f94",
   "store": "coach",
-  "updated_at": "2026-10-29T03:37:02Z",
+  "updated_at": "2026-11-16T15:42:01Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841770406054",
   "shopify_handle": "slim-id-card-case-in-signature-camo-print",
-  "shopify_synced_at": "2026-10-26T09:59:12Z",
+  "shopify_synced_at": "2026-11-13T23:05:16Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.160836
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

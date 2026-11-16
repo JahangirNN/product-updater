@@ -1,171 +1,19 @@
 {
   "sections": {
-    "slideshow": {
-      "type": "slideshow",
-      "blocks": {
-        "slide-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/efc44023-aa7f-421b-a1b6-01f1721542c9.png",
-            "mobile_image": "shopify://shop_images/68b969ad-371e-41db-be94-950287140dec.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-end-start text-start",
-            "desktop_text_position": "sm:place-self-end-start sm:text-start",
-            "content_max_width": 780,
-            "button_1_text": "Explore",
-            "button_1_link": "shopify://collections/luxury-watches",
-            "button_1_style": "fill",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#1c1c1c",
-            "button_2_text": "Ready to Ship",
-            "button_2_link": "shopify://collections/instant-ship",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#1c1c1c",
-            "background": "",
-            "background_opacity": 50,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 100%)"
-          }
-        },
-        "slide-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/6ebe917e-e20a-4ce6-b231-f862ae2f00b6.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 500,
-            "button_1_text": "Discover",
-            "button_1_link": "shopify://collections/luxury-watches",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 50,
-            "text_color": "#ffffff",
-            "border_color": "#ffffff",
-            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.1), rgba(4, 4, 4, 0.45) 100%)"
-          }
-        }
-      },
-      "block_order": [
-        "slide-1",
-        "slide-2"
-      ],
+    "hero_video": {
+      "type": "hero-video",
       "settings": {
-        "allow_transparent_header": true,
-        "show_next_section_button": true,
-        "media_size": "fill",
-        "show_initial_transition": true,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 6,
-        "background": "#000000",
-        "controls_color": "#ffffff"
+        "desktop_video_url": "https://cdn.shopify.com/videos/c/o/v/4566d2c5692a4de485ac3856e13ff074.mp4",
+        "mobile_video_url": "https://cdn.shopify.com/videos/c/o/v/6e693e51902f4afd85b5bcedd13b8cd1.mp4",
+        "subheading": "Quiet Luxury Curations",
+        "title": "The Rare Avenue",
+        "button_1_text": "Explore Collection",
+        "button_1_link": "shopify://collections/all",
+        "button_2_text": "New Arrivals",
+        "button_2_link": "shopify://collections/all"
       }
     },
-    "scrolling-marquee": {
-      "type": "scrolling-content",
-      "blocks": {
-        "text-1": {
-          "type": "text",
-          "settings": {
-            "text": "TISSOT"
-          }
-        },
-        "text-2": {
-          "type": "text",
-          "settings": {
-            "text": "SEIKO"
-          }
-        },
-        "text-3": {
-          "type": "text",
-          "settings": {
-            "text": "CITIZEN"
-          }
-        },
-        "text-4": {
-          "type": "text",
-          "settings": {
-            "text": "MOVADO"
-          }
-        },
-        "text-5": {
-          "type": "text",
-          "settings": {
-            "text": "VERSACE"
-          }
-        },
-        "text-6": {
-          "type": "text",
-          "settings": {
-            "text": "COACH"
-          }
-        },
-        "text-7": {
-          "type": "text",
-          "settings": {
-            "text": "SALOMON"
-          }
-        },
-        "text-8": {
-          "type": "text",
-          "settings": {
-            "text": "JW PEI"
-          }
-        },
-        "text-9": {
-          "type": "text",
-          "settings": {
-            "text": "FERRAGAMO"
-          }
-        },
-        "text-10": {
-          "type": "text",
-          "settings": {
-            "text": "MICHAEL KORS"
-          }
-        }
-      },
-      "block_order": [
-        "text-1",
-        "text-2",
-        "text-3",
-        "text-4",
-        "text-5",
-        "text-6",
-        "text-7",
-        "text-8",
-        "text-9",
-        "text-10"
-      ],
-      "settings": {
-        "separate_section_with_border": true,
-        "scrolling_speed": 0.3,
-        "scroll_direction": "left",
-        "pause_on_hover": true,
-        "text_font": "heading",
-        "text_font_size_mobile": 14,
-        "text_font_size_desktop": 16,
-        "section_vertical_spacing_mobile": 14,
-        "section_vertical_spacing_desktop": 18,
-        "item_horizontal_spacing_mobile": 40,
-        "item_horizontal_spacing_desktop": 80,
-        "background": "#0a0a0a",
-        "text_color": "#f0ede6"
-      }
-    },
-    "marquee-collection-list": {
+    "marquee": {
       "type": "marquee-collection-list",
       "blocks": {
         "card-1": {
@@ -180,10 +28,10 @@
         "card-2": {
           "type": "collection_card",
           "settings": {
-            "collection": "instant-ship",
+            "collection": "premium-footwear",
             "title": "Premium Footwear",
-            "subheading": "Designer Sneakers",
-            "url": "/collections/women?filter.p.tag=Footwear"
+            "subheading": "Sneakers & Athletic Icons",
+            "url": "shopify://collections/premium-footwear"
           }
         },
         "card-3": {
@@ -198,10 +46,10 @@
         "card-4": {
           "type": "collection_card",
           "settings": {
-            "collection": "instant-ship",
-            "title": "Ready to Ship",
-            "subheading": "Dispatch in 24h",
-            "url": "shopify://collections/instant-ship"
+            "collection": "designer-eyewear",
+            "title": "Designer Eyewear",
+            "subheading": "Architectural Optics",
+            "url": "shopify://collections/designer-eyewear"
           }
         },
         "card-5": {
@@ -216,28 +64,28 @@
         "card-6": {
           "type": "collection_card",
           "settings": {
-            "collection": "women",
+            "collection": "nike",
             "title": "Nike",
-            "subheading": "Icons & Collabs",
-            "url": "/collections/women?filter.p.vendor=Nike"
+            "subheading": "Iconic Sportswear",
+            "url": "shopify://collections/nike"
           }
         },
         "card-7": {
           "type": "collection_card",
           "settings": {
-            "collection": "jw-pei",
-            "title": "JW PEI",
-            "subheading": "Modern Sculptural",
-            "url": "shopify://collections/jw-pei"
+            "collection": "tissot",
+            "title": "Tissot",
+            "subheading": "Swiss Horology 1853",
+            "url": "shopify://collections/tissot"
           }
         },
         "card-8": {
           "type": "collection_card",
           "settings": {
-            "collection": "tissot",
-            "title": "Tissot",
-            "subheading": "Swiss Horology",
-            "url": "shopify://collections/tissot"
+            "collection": "wallets-leather-goods",
+            "title": "Small Leather Goods",
+            "subheading": "Wallets & Card Cases",
+            "url": "shopify://collections/wallets-leather-goods"
           }
         },
         "card-9": {
@@ -252,28 +100,127 @@
         "card-10": {
           "type": "collection_card",
           "settings": {
-            "collection": "women",
+            "collection": "on-running",
             "title": "On Running",
             "subheading": "Swiss Performance",
-            "url": "/collections/women/on"
+            "url": "shopify://collections/on-running"
           }
         },
         "card-11": {
           "type": "collection_card",
           "settings": {
-            "collection": "women",
-            "title": "HOKA",
-            "subheading": "Max Cushioning",
-            "url": "/collections/women/hoka"
+            "collection": "movado",
+            "title": "Movado",
+            "subheading": "Museum Modernism",
+            "url": "shopify://collections/movado"
           }
         },
         "card-12": {
           "type": "collection_card",
           "settings": {
-            "collection": "wallets-leather-goods",
-            "title": "Small Leather Goods",
-            "subheading": "Fine Accessories",
-            "url": "shopify://collections/wallets-leather-goods"
+            "collection": "crossbody-bags",
+            "title": "Crossbody & Shoulder",
+            "subheading": "Everyday Silhouettes",
+            "url": "shopify://collections/crossbody-bags"
+          }
+        },
+        "card-13": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "adidas",
+            "title": "adidas",
+            "subheading": "Terrace & Originals",
+            "url": "shopify://collections/adidas"
+          }
+        },
+        "card-14": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "citizen",
+            "title": "Citizen",
+            "subheading": "Eco-Drive Calibers",
+            "url": "shopify://collections/citizen"
+          }
+        },
+        "card-15": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "jw-pei",
+            "title": "JW PEI",
+            "subheading": "Modern Sculptural",
+            "url": "shopify://collections/jw-pei"
+          }
+        },
+        "card-16": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "hoka",
+            "title": "HOKA",
+            "subheading": "Maximalist Cushioning",
+            "url": "shopify://collections/hoka"
+          }
+        },
+        "card-17": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "seiko",
+            "title": "Seiko",
+            "subheading": "Japanese Precision",
+            "url": "shopify://collections/seiko"
+          }
+        },
+        "card-18": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "totes",
+            "title": "Luxury Totes",
+            "subheading": "Spacious Carryalls",
+            "url": "shopify://collections/totes"
+          }
+        },
+        "card-19": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "asics",
+            "title": "ASICS",
+            "subheading": "SportStyle & Gel Tech",
+            "url": "shopify://collections/asics"
+          }
+        },
+        "card-20": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "versace",
+            "title": "Versace",
+            "subheading": "Italian Haute Horology",
+            "url": "shopify://collections/versace"
+          }
+        },
+        "card-21": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "mens-bags",
+            "title": "Men's Briefcases",
+            "subheading": "Executive Leathercraft",
+            "url": "shopify://collections/mens-bags"
+          }
+        },
+        "card-22": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "salomon",
+            "title": "Salomon",
+            "subheading": "Alpine Trail Icons",
+            "url": "shopify://collections/salomon"
+          }
+        },
+        "card-ks": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "kate-spade",
+            "title": "Kate Spade",
+            "subheading": "New York Leathercraft",
+            "url": "shopify://collections/kate-spade"
           }
         }
       },
@@ -283,176 +230,38 @@
         "card-3",
         "card-4",
         "card-5",
+        "card-ks",
         "card-6",
         "card-7",
         "card-8",
         "card-9",
         "card-10",
         "card-11",
-        "card-12"
+        "card-12",
+        "card-13",
+        "card-14",
+        "card-15",
+        "card-16",
+        "card-17",
+        "card-18",
+        "card-19",
+        "card-20",
+        "card-21",
+        "card-22"
       ],
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": true,
         "subheading": "Curated Portfolios",
         "title": "Explore by Maison & Category",
-        "speed": 35,
+        "speed": 60,
         "direction": "left",
         "pause_on_hover": true,
         "card_width": 280,
         "gap": 20
       }
     },
-    "category-tiles": {
-      "type": "media-grid",
-      "blocks": {
-        "image-1": {
-          "type": "image",
-          "settings": {
-            "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/0ef9b579-e631-47b9-bba0-4c0f75a3d0b5.png",
-            "column_count": "4",
-            "row_count": 1,
-            "title": "LUXURY HANDBAGS",
-            "heading_tag": "h3",
-            "content": "",
-            "link_text": "",
-            "link_url": "shopify://collections/designer-bags",
-            "link_style": "link",
-            "text_position": "place-self-center text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 25
-          }
-        },
-        "image-2": {
-          "type": "image",
-          "settings": {
-            "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/8732c475-8a37-47ed-ae7a-b1dfbf9f4b40.png",
-            "column_count": "4",
-            "row_count": 1,
-            "title": "PREMIUM FOOTWEAR",
-            "heading_tag": "h3",
-            "content": "",
-            "link_text": "",
-            "link_url": "/collections/women?filter.p.tag=Footwear",
-            "link_style": "link",
-            "text_position": "place-self-center text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 25
-          }
-        },
-        "image-3": {
-          "type": "image",
-          "settings": {
-            "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/66493d7c-363c-4c3e-b1b1-9c6d3a8d4101.png",
-            "column_count": "4",
-            "row_count": 1,
-            "title": "SWISS TIMEPIECES",
-            "heading_tag": "h3",
-            "content": "",
-            "link_text": "",
-            "link_url": "shopify://collections/luxury-watches",
-            "link_style": "link",
-            "text_position": "place-self-center text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 25
-          }
-        }
-      },
-      "block_order": [
-        "image-1",
-        "image-2",
-        "image-3"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": false,
-        "desktop_row_height": 290,
-        "mobile_row_height": 180,
-        "section_width": "lg",
-        "spacing": "md",
-        "subheading": "",
-        "title": "",
-        "content": ""
-      }
-    },
-    "featured-collections-1": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "instant-ship",
-            "products_count": 8,
-            "title": "READY TO SHIP (24H)",
-            "link_url": "shopify://collections/instant-ship",
-            "link_text": "View All Ready to Ship"
-          }
-        },
-        "collection-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "designer-bags",
-            "products_count": 8,
-            "title": "ICONIC HANDBAGS",
-            "link_url": "shopify://collections/designer-bags",
-            "link_text": "View All Luxury Bags"
-          }
-        },
-        "collection-3": {
-          "type": "collection",
-          "settings": {
-            "collection": "coach",
-            "products_count": 8,
-            "title": "COACH NEW YORK",
-            "link_url": "shopify://collections/coach",
-            "link_text": "Explore COACH"
-          }
-        },
-        "collection-4": {
-          "type": "collection",
-          "settings": {
-            "collection": "jw-pei",
-            "products_count": 8,
-            "title": "JW PEI STATEMENT",
-            "link_url": "shopify://collections/jw-pei",
-            "link_text": "Explore JW PEI"
-          }
-        },
-        "collection-5": {
-          "type": "collection",
-          "settings": {
-            "collection": "michael-kors",
-            "products_count": 8,
-            "title": "MICHAEL KORS JET SET",
-            "link_url": "shopify://collections/michael-kors",
-            "link_text": "Explore Michael Kors"
-          }
-        }
-      },
-      "block_order": [
-        "collection-1",
-        "collection-2",
-        "collection-3",
-        "collection-4",
-        "collection-5"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": true,
-        "hide_product_information": false,
-        "stack_products": false,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
-        "subheading": "Curated Designer Drops",
-        "title": "New Arrivals & Iconic Handbags"
-      }
-    },
-    "department-split": {
+    "department_split": {
       "type": "department-split",
       "blocks": {
         "women-campaign": {
@@ -487,11 +296,11 @@
         "separate_section_with_border": true,
         "subheading": "Curated Portfolios",
         "title": "Explore by Department",
-        "desktop_aspect_ratio": "4 / 5",
-        "mobile_aspect_ratio": "1 / 1"
+        "desktop_aspect_ratio": "4 / 3",
+        "mobile_aspect_ratio": "4 / 3"
       }
     },
-    "brand-tiles": {
+    "brand_tiles": {
       "type": "brand-tiles",
       "blocks": {
         "brand-1": {
@@ -507,16 +316,6 @@
         "brand-2": {
           "type": "brand",
           "settings": {
-            "collection": "michael-kors",
-            "title": "Michael Kors",
-            "subheading": "Jet Set Luxury",
-            "link_url": "shopify://collections/michael-kors",
-            "show_style_count": true
-          }
-        },
-        "brand-3": {
-          "type": "brand",
-          "settings": {
             "collection": "tissot",
             "title": "Tissot",
             "subheading": "Swiss Horology 1853",
@@ -524,7 +323,27 @@
             "show_style_count": true
           }
         },
+        "brand-3": {
+          "type": "brand",
+          "settings": {
+            "collection": "michael-kors",
+            "title": "Michael Kors",
+            "subheading": "Jet Set Luxury",
+            "link_url": "shopify://collections/michael-kors",
+            "show_style_count": true
+          }
+        },
         "brand-4": {
+          "type": "brand",
+          "settings": {
+            "collection": "nike",
+            "title": "NIKE",
+            "subheading": "Court & Air Heritage",
+            "link_url": "shopify://collections/nike",
+            "show_style_count": true
+          }
+        },
+        "brand-5": {
           "type": "brand",
           "settings": {
             "collection": "jw-pei",
@@ -534,27 +353,7 @@
             "show_style_count": true
           }
         },
-        "brand-5": {
-          "type": "brand",
-          "settings": {
-            "collection": "movado",
-            "title": "Movado",
-            "subheading": "Modernist Museum Dial",
-            "link_url": "shopify://collections/movado",
-            "show_style_count": true
-          }
-        },
         "brand-6": {
-          "type": "brand",
-          "settings": {
-            "collection": "citizen",
-            "title": "Citizen",
-            "subheading": "Eco-Drive Technology",
-            "link_url": "shopify://collections/citizen",
-            "show_style_count": true
-          }
-        },
-        "brand-7": {
           "type": "brand",
           "settings": {
             "collection": "versace",
@@ -564,7 +363,37 @@
             "show_style_count": true
           }
         },
+        "brand-7": {
+          "type": "brand",
+          "settings": {
+            "collection": "on-running",
+            "title": "On Running",
+            "subheading": "Swiss CloudTec",
+            "link_url": "shopify://collections/on-running",
+            "show_style_count": true
+          }
+        },
         "brand-8": {
+          "type": "brand",
+          "settings": {
+            "collection": "movado",
+            "title": "Movado",
+            "subheading": "Modernist Museum Dial",
+            "link_url": "shopify://collections/movado",
+            "show_style_count": true
+          }
+        },
+        "brand-9": {
+          "type": "brand",
+          "settings": {
+            "collection": "hoka",
+            "title": "HOKA",
+            "subheading": "Maximalist Performance",
+            "link_url": "shopify://collections/hoka",
+            "show_style_count": true
+          }
+        },
+        "brand-10": {
           "type": "brand",
           "settings": {
             "collection": "seiko",
@@ -574,49 +403,40 @@
             "show_style_count": true
           }
         },
-        "brand-9": {
-          "type": "brand",
-          "settings": {
-            "collection": "instant-ship",
-            "title": "Ready to Ship",
-            "subheading": "Dispatch in 24 Hours",
-            "link_url": "shopify://collections/instant-ship",
-            "show_style_count": true
-          }
-        },
-        "brand-10": {
-          "type": "brand",
-          "settings": {
-            "collection": "luxury-watches",
-            "title": "Luxury Watches",
-            "subheading": "Certified Calibers",
-            "link_url": "shopify://collections/luxury-watches",
-            "show_style_count": true
-          }
-        },
         "brand-11": {
           "type": "brand",
           "settings": {
-            "collection": "designer-bags",
-            "title": "Designer Bags",
-            "subheading": "Iconic Silhouettes",
-            "link_url": "shopify://collections/designer-bags",
+            "collection": "citizen",
+            "title": "Citizen",
+            "subheading": "Eco-Drive Technology",
+            "link_url": "shopify://collections/citizen",
             "show_style_count": true
           }
         },
         "brand-12": {
           "type": "brand",
           "settings": {
-            "collection": "wallets-leather-goods",
-            "title": "Leather Goods",
-            "subheading": "Wallets & Pouches",
-            "link_url": "shopify://collections/wallets-leather-goods",
+            "collection": "salomon",
+            "title": "Salomon",
+            "subheading": "Alpine Sportstyle",
+            "link_url": "shopify://collections/salomon",
+            "show_style_count": true
+          }
+        },
+        "brand-ks": {
+          "type": "brand",
+          "settings": {
+            "collection": "kate-spade",
+            "title": "Kate Spade",
+            "subheading": "Joyful Sophistication \u00b7 New York",
+            "link_url": "shopify://collections/kate-spade",
             "show_style_count": true
           }
         }
       },
       "block_order": [
         "brand-1",
+        "brand-ks",
         "brand-2",
         "brand-3",
         "brand-4",
@@ -639,524 +459,55 @@
         "card_aspect_ratio": "4 / 5"
       }
     },
-    "featured-collections-2": {
-      "type": "featured-collections",
+    "sneaker_vault": {
+      "type": "sneaker-vault",
       "blocks": {
-        "watch-1": {
-          "type": "collection",
+        "tab_terrace": {
+          "type": "archetype_tab",
           "settings": {
-            "collection": "tissot",
-            "products_count": 8,
-            "title": "TISSOT SWISS",
-            "link_url": "shopify://collections/tissot",
-            "link_text": "View Tissot"
+            "title": "Terrace & Retro",
+            "collection": "premium-footwear",
+            "products_count": 8
           }
         },
-        "watch-2": {
-          "type": "collection",
+        "tab_mens": {
+          "type": "archetype_tab",
           "settings": {
-            "collection": "seiko",
-            "products_count": 8,
-            "title": "SEIKO AUTOMATICS",
-            "link_url": "shopify://collections/seiko",
-            "link_text": "View Seiko"
+            "title": "Men's Footwear",
+            "collection": "mens-shoes",
+            "products_count": 8
           }
         },
-        "watch-3": {
-          "type": "collection",
+        "tab_womens": {
+          "type": "archetype_tab",
           "settings": {
-            "collection": "citizen",
-            "products_count": 8,
-            "title": "CITIZEN ECO-DRIVE",
-            "link_url": "shopify://collections/citizen",
-            "link_text": "View Citizen"
-          }
-        },
-        "watch-4": {
-          "type": "collection",
-          "settings": {
-            "collection": "movado",
-            "products_count": 8,
-            "title": "MOVADO MUSEUM",
-            "link_url": "shopify://collections/movado",
-            "link_text": "View Movado"
-          }
-        },
-        "watch-5": {
-          "type": "collection",
-          "settings": {
-            "collection": "versace",
-            "products_count": 8,
-            "title": "VERSACE MAISON",
-            "link_url": "shopify://collections/versace",
-            "link_text": "View Versace"
+            "title": "Women's Footwear",
+            "collection": "womens-shoes",
+            "products_count": 8
           }
         }
       },
       "block_order": [
-        "watch-1",
-        "watch-2",
-        "watch-3",
-        "watch-4",
-        "watch-5"
+        "tab_terrace",
+        "tab_mens",
+        "tab_womens"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": true,
-        "hide_product_information": false,
-        "stack_products": false,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
-        "subheading": "Horological Icons",
-        "title": "The Swiss & Japanese Vault"
+        "subheading": "Curated Footwear Runway",
+        "title": "Sneaker Vault"
       }
     },
-    "trust-badges": {
-      "type": "text-with-icons",
-      "blocks": {
-        "badge-1": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-shield",
-            "icon_width": 28,
-            "mobile_icon_width": 24,
-            "title": "100% Guaranteed Authentic",
-            "content": "<p>Every timepiece and designer piece is rigorously verified with certified serials and official documentation.</p>"
-          }
-        },
-        "badge-2": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-delivery-truck",
-            "icon_width": 28,
-            "mobile_icon_width": 24,
-            "title": "Complimentary Insured Transit",
-            "content": "<p>Dispatched via priority worldwide air transit with full transit insurance and signature verification on delivery.</p>"
-          }
-        },
-        "badge-3": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-award-gift",
-            "icon_width": 28,
-            "mobile_icon_width": 24,
-            "title": "2-Year Maison Warranty",
-            "content": "<p>Comprehensive 24-month protection covering mechanical movements, internal calibers, and craftsmanship.</p>"
-          }
-        },
-        "badge-4": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-customer-support",
-            "icon_width": 28,
-            "mobile_icon_width": 24,
-            "title": "VIP Client Advisor Concierge",
-            "content": "<p>Dedicated personal luxury advisors available 7 days a week for styling guidance, sizing, and private inquiries.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "badge-1",
-        "badge-2",
-        "badge-3",
-        "badge-4"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": true,
-        "stack_on_mobile": false,
-        "icon_color": "",
-        "text_color": "",
-        "text_alignment": "center"
-      }
-    },
-    "newsletter": {
-      "type": "newsletter",
-      "settings": {
-        "color_scheme": "scheme-3",
-        "separate_section_with_border": true,
-        "image_size": "sm",
-        "subheading": "Private Client Club",
-        "title": "NEWSLETTER",
-        "content": "<p>Receive privileged invitations to private horological releases, rare archival drops, and exclusive client trunk shows.</p>",
-        "button_text": "SUBSCRIBE",
-        "overlay_color": "#000000",
-        "overlay_opacity": 30
-      }
-    },
-    "brand-story": {
-      "type": "rich-text",
-      "blocks": {
-        "story-subheading": {
-          "type": "subheading",
-          "settings": {
-            "text": "Maison Heritage"
-          }
-        },
-        "story-heading": {
-          "type": "heading",
-          "settings": {
-            "text": "The Rare Avenue Private Client Service",
-            "heading_tag": "h2"
-          }
-        },
-        "story-text": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>Curating certified horological icons, handcrafted leathergoods, and verified designer essentials. Dispatched directly from verified international authorized channels with guaranteed authenticity, white-glove packaging, and all-inclusive duty delivery.</p>"
-          }
-        },
-        "story-button": {
-          "type": "button",
-          "settings": {
-            "text": "Explore The Vault",
-            "url": "shopify://collections/instant-ship",
-            "style": "outline"
-          }
-        }
-      },
-      "block_order": [
-        "story-subheading",
-        "story-heading",
-        "story-text",
-        "story-button"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": true,
-        "content_width": "sm",
-        "text_position": "center",
-        "remove_vertical_spacing": false
-      }
-    },
-    "silhouette-collections": {
-      "type": "collection-list",
-      "blocks": {
-        "col-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "designer-bags",
-            "subheading": "Spacious Luxury",
-            "title": "Totes & Carryalls",
-            "button_text": "Explore Totes",
-            "button_link": "shopify://collections/designer-bags",
-            "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "col-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "womens-handbags",
-            "subheading": "Everyday Ease",
-            "title": "Crossbody & Shoulder",
-            "button_text": "Shop Handbags",
-            "button_link": "shopify://collections/womens-handbags",
-            "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "col-3": {
-          "type": "collection",
-          "settings": {
-            "collection": "women",
-            "subheading": "Engineered Movement",
-            "title": "Performance Footwear",
-            "button_text": "Shop Footwear",
-            "button_link": "/collections/women?filter.p.tag=Footwear",
-            "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "col-4": {
-          "type": "collection",
-          "settings": {
-            "collection": "luxury-watches",
-            "subheading": "Horological Icons",
-            "title": "Swiss Automatics",
-            "button_text": "Shop Watches",
-            "button_link": "shopify://collections/luxury-watches",
-            "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "col-5": {
-          "type": "collection",
-          "settings": {
-            "collection": "wallets-leather-goods",
-            "subheading": "Fine Accessories",
-            "title": "Small Leather Goods",
-            "button_text": "Shop Wallets",
-            "button_link": "shopify://collections/wallets-leather-goods",
-            "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "col-6": {
-          "type": "collection",
-          "settings": {
-            "collection": "womens-sunglasses",
-            "subheading": "Designer Optics",
-            "title": "Luxury Eyewear",
-            "button_text": "Shop Eyewear",
-            "button_link": "shopify://collections/womens-sunglasses",
-            "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        }
-      },
-      "block_order": [
-        "col-1",
-        "col-2",
-        "col-3",
-        "col-4",
-        "col-5",
-        "col-6"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": true,
-        "subheading": "Curated Silhouettes",
-        "title": "Explore by Category",
-        "content": "",
-        "collections_per_row_desktop": 5,
-        "collections_per_row_mobile": "2",
-        "stack_collections": false,
-        "stack_collections_mobile": false,
-        "show_text_outside": false,
-        "space_items": true,
-        "image_size": "portrait"
-      }
-    },
-    "footwear-collections": {
-      "type": "featured-collections",
-      "blocks": {
-        "footwear-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "women",
-            "products_count": 8,
-            "title": "PERFORMANCE RUNNING",
-            "link_url": "/collections/women?filter.p.tag=Footwear",
-            "link_text": "View All Footwear"
-          }
-        },
-        "footwear-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "coach",
-            "products_count": 8,
-            "title": "COACH SNEAKERS & LOAFERS",
-            "link_url": "shopify://collections/coach",
-            "link_text": "View COACH Shoes"
-          }
-        },
-        "footwear-3": {
-          "type": "collection",
-          "settings": {
-            "collection": "michael-kors",
-            "products_count": 8,
-            "title": "MICHAEL KORS FOOTWEAR",
-            "link_url": "shopify://collections/michael-kors",
-            "link_text": "View MK Shoes"
-          }
-        },
-        "footwear-4": {
-          "type": "collection",
-          "settings": {
-            "collection": "instant-ship",
-            "products_count": 8,
-            "title": "READY TO SHIP (24H)",
-            "link_url": "shopify://collections/instant-ship",
-            "link_text": "View Instant Ship"
-          }
-        }
-      },
-      "block_order": [
-        "footwear-1",
-        "footwear-2",
-        "footwear-3",
-        "footwear-4"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": true,
-        "hide_product_information": false,
-        "stack_products": false,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
-        "subheading": "Engineered Motion & Streetwear",
-        "title": "Performance & Designer Footwear"
-      }
-    },
-    "maison-spotlight": {
-      "type": "multi-column",
-      "blocks": {
-        "maison-1": {
-          "type": "image_with_text",
-          "settings": {
-            "collection": "coach",
-            "title": "COACH NEW YORK",
-            "heading_tag": "h4",
-            "content": "<p>American leathercraft heritage since 1941. Renowned for glove-tanned leather, iconic brass turnlocks, and archival bag forms.</p>",
-            "link_text": "Explore COACH",
-            "link_url": "shopify://collections/coach"
-          }
-        },
-        "maison-2": {
-          "type": "image_with_text",
-          "settings": {
-            "collection": "jw-pei",
-            "title": "JW PEI",
-            "heading_tag": "h4",
-            "content": "<p>Sculptural modernism made with certified vegan materials. Minimalist silhouettes adored by international tastemakers.</p>",
-            "link_text": "Explore JW PEI",
-            "link_url": "shopify://collections/jw-pei"
-          }
-        },
-        "maison-3": {
-          "type": "image_with_text",
-          "settings": {
-            "collection": "tissot",
-            "title": "TISSOT SUISSE",
-            "heading_tag": "h4",
-            "content": "<p>Swiss chronometry rooted in Le Locle since 1853. Precision Powermatic 80 movements and iconic integrated sport silhouettes.</p>",
-            "link_text": "Explore Tissot",
-            "link_url": "shopify://collections/tissot"
-          }
-        },
-        "maison-4": {
-          "type": "image_with_text",
-          "settings": {
-            "collection": "women",
-            "title": "ON RUNNING",
-            "heading_tag": "h4",
-            "content": "<p>Swiss-engineered zero-gravity running. Patented CloudTec\u00ae cushioning and Speedboard\u00ae propulsion for supreme motion.</p>",
-            "link_text": "Explore On",
-            "link_url": "/collections/women/on"
-          }
-        }
-      },
-      "block_order": [
-        "maison-1",
-        "maison-2",
-        "maison-3",
-        "maison-4"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": true,
-        "subheading": "Maison Spotlight",
-        "title": "Craftsmanship & Heritage",
-        "columns_per_row": 4,
-        "stack_on_mobile": false,
-        "content_alignment": "center",
-        "spacing": "md"
-      }
-    },
-    "accessories-grid": {
-      "type": "collection-list",
-      "blocks": {
-        "acc-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "wallets-leather-goods",
-            "subheading": "Fine Accessories",
-            "title": "Continental & Zip Wallets",
-            "button_text": "Explore Wallets",
-            "button_link": "shopify://collections/wallets-leather-goods",
-            "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "acc-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "wallets-leather-goods",
-            "subheading": "Slim Silhouette",
-            "title": "Card Cases & Wristlets",
-            "button_text": "Explore Card Cases",
-            "button_link": "shopify://collections/wallets-leather-goods",
-            "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "acc-3": {
-          "type": "collection",
-          "settings": {
-            "collection": "womens-sunglasses",
-            "subheading": "Designer Frames",
-            "title": "Women's Sunglasses",
-            "button_text": "Explore Eyewear",
-            "button_link": "shopify://collections/womens-sunglasses",
-            "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "acc-4": {
-          "type": "collection",
-          "settings": {
-            "collection": "mens-sunglasses",
-            "subheading": "Aviator & Navigator",
-            "title": "Men's Luxury Eyewear",
-            "button_text": "Explore Eyewear",
-            "button_link": "shopify://collections/mens-sunglasses",
-            "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        }
-      },
-      "block_order": [
-        "acc-1",
-        "acc-2",
-        "acc-3",
-        "acc-4"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": true,
-        "subheading": "Everyday Accoutrements",
-        "title": "Small Leather Goods & Curated Eyewear",
-        "content": "",
-        "collections_per_row_desktop": 4,
-        "collections_per_row_mobile": "2",
-        "stack_collections": false,
-        "stack_collections_mobile": false,
-        "show_text_outside": false,
-        "space_items": true,
-        "image_size": "portrait"
-      }
+    "trust_strip": {
+      "type": "checkcheck-trust-strip",
+      "settings": {}
     }
   },
   "order": [
-    "slideshow",
-    "scrolling-marquee",
-    "marquee-collection-list",
-    "silhouette-collections",
-    "category-tiles",
-    "featured-collections-1",
-    "department-split",
-    "footwear-collections",
-    "maison-spotlight",
-    "brand-tiles",
-    "featured-collections-2",
-    "accessories-grid",
-    "trust-badges",
-    "newsletter",
-    "brand-story"
+    "hero_video",
+    "marquee",
+    "department_split",
+    "brand_tiles",
+    "sneaker_vault",
+    "trust_strip"
   ]
 }

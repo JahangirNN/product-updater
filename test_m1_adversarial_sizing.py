@@ -320,12 +320,12 @@ def run_tests():
     }
     ps_prod = parse_product_payload(ps_raw)
     ordered_labels = [v["option_values"][0]["name"] for v in ps_prod["variants"]]
-    idx_105c = ordered_labels.index("US 10.5C") if "US 10.5C" in ordered_labels else -1
-    idx_10y = ordered_labels.index("US 1.0Y") if "US 1.0Y" in ordered_labels else -1
+    idx_10c = ordered_labels.index("UK 10") if "UK 10" in ordered_labels else -1
+    idx_135 = ordered_labels.index("UK 13.5") if "UK 13.5" in ordered_labels else -1
 
-    check("Preschool sequence places US 10.5C BEFORE US 1.0Y in foot length progression",
-          idx_105c >= 0 and idx_10y >= 0 and idx_105c < idx_10y,
-          f"US 1.0Y (idx {idx_10y}) appeared before US 10.5C (idx {idx_105c}) due to raw numeric sorting: {ordered_labels}")
+    check("Preschool sequence places UK 10 (US 10.5C) BEFORE UK 13.5 (US 1.0Y) in foot length progression",
+          idx_10c >= 0 and idx_135 >= 0 and idx_10c < idx_135,
+          f"UK 13.5 (idx {idx_135}) appeared before UK 10 (idx {idx_10c}) due to raw numeric sorting: {ordered_labels}")
 
     print("\n" + "=" * 80)
     print(f"RESULTS SUMMARY: {passed_tests} / {total_tests} tests passed ({(passed_tests/total_tests)*100:.1f}%)")

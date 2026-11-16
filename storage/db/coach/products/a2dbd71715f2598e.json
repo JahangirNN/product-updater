@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Main: Denim and leather scraps",
   "specifications": {
     "Material": "Main: Denim and leather scraps",
@@ -65,7 +65,8 @@
           "name": "Brown/Multi"
         }
       ],
-      "price_current": 18719.0
+      "price_current": 18719.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -85,7 +86,8 @@
           "name": "Black/Black"
         }
       ],
-      "price_current": 18719.0
+      "price_current": 18719.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -97,7 +99,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cgq22_lli_a0",
       "option_values": [
         {
@@ -105,7 +107,8 @@
           "name": "Indigo/Black"
         }
       ],
-      "price_current": 18718.0
+      "price_current": 18718.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -125,7 +128,8 @@
           "name": "Black/Chalk"
         }
       ],
-      "price_current": 18719.0
+      "price_current": 18719.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -145,7 +149,8 @@
           "name": "Olive Multi"
         }
       ],
-      "price_current": 18719.0
+      "price_current": 18719.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -165,7 +170,8 @@
           "name": "Chalk"
         }
       ],
-      "price_current": 18719.0
+      "price_current": 18719.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -185,7 +191,8 @@
           "name": "Blush"
         }
       ],
-      "price_current": 18719.0
+      "price_current": 18719.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -205,7 +212,8 @@
           "name": "Maple"
         }
       ],
-      "price_current": 18719.0
+      "price_current": 18719.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -225,7 +233,8 @@
           "name": "Denim"
         }
       ],
-      "price_current": 18719.0
+      "price_current": 18719.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -245,7 +254,8 @@
           "name": "Denim Sig Multi"
         }
       ],
-      "price_current": 18719.0
+      "price_current": 18719.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -287,23 +297,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Shoulder Bags"
+    "Shoulder Bags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:44:59Z",
-  "last_verified_at": "2026-10-29T03:40:18Z",
+  "last_verified_at": "2026-11-16T15:42:12Z",
   "id": "a2dbd71715f2598e",
   "product_id": "a2dbd71715f2598e",
   "store": "coach",
-  "updated_at": "2026-10-29T03:40:18Z",
-  "is_active": true,
+  "updated_at": "2026-11-16T15:42:12Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841796620454",
   "shopify_handle": "alterego-small-slouchy-shoulder-bag-cgq22-lli",
-  "shopify_synced_at": "2026-10-28T23:48:13Z",
+  "shopify_synced_at": "2026-11-15T11:05:37Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.289707,
+  "supplier_delisted": false
 }

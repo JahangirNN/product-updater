@@ -1,0 +1,195 @@
+{%- comment -%}
+  The Rare Avenue Quiet Luxury — Product Card Variants Enhancement
+  Renders interactive color picture thumbnails and size variant pills on product cards.
+  Strict Clean-Room Architecture (ADR 0030).
+{%- endcomment -%}
+
+{%- liquid
+  if product == blank or product.has_only_default_variant
+    assign should_render = false
+  else
+    assign should_render = true
+  endif
+-%}
+
+{%- if should_render -%}
+  {%- liquid
+    assign color_opt_idx = nil
+    assign size_opt_idx = nil
+
+    for opt in product.options_with_values
+      assign opt_name_lower = opt.name | downcase
+      if opt_name_lower contains 'color' or opt_name_lower contains 'colour' or opt_name_lower contains 'shade'
+        assign color_opt_idx = forloop.index
+      elsif opt_name_lower contains 'size' or opt_name_lower contains 'uk' or opt_name_lower contains 'us' or opt_name_lower contains 'eu'
+        assign size_opt_idx = forloop.index
+      endif
+    endfor
+
+    # If no explicit size option found but there is another non-color option with multiple values, use it as size
+    if size_opt_idx == nil and product.options_with_values.size > 0
+      for opt in product.options_with_values
+        if forloop.index != color_opt_idx and opt.values.size > 1
+          assign size_opt_idx = forloop.index
+          break
+        endif
+      endfor
+    endif
+
+    assign color_prop = nil
+    if color_opt_idx == 1
+      assign color_prop = 'option1'
+    elsif color_opt_idx == 2
+      assign color_prop = 'option2'
+    elsif color_opt_idx == 3
+      assign color_prop = 'option3'
+    endif
+
+    assign size_prop = nil
+    if size_opt_idx == 1
+      assign size_prop = 'option1'
+    elsif size_opt_idx == 2
+      assign size_prop = 'option2'
+    elsif size_opt_idx == 3
+      assign size_prop = 'option3'
+    endif
+  -%}
+
+  <div class="luxury-card__variants" data-card-variants>
+    {%- comment -%} Color Variants with Picture Thumbnails {%- endcomment -%}
+    {%- if color_prop != nil -%}
+      {%- liquid
+        assign seen_colors = ''
+        assign color_count = 0
+        assign max_colors = 5
+      -%}
+
+      {%- capture color_swatches_html -%}
+        {%- for variant in product.variants -%}
+          {%- assign color_val = variant[color_prop] | strip -%}
+          {%- if color_val != blank -%}
+            {%- assign check_token = '|' | append: color_val | append: '|' -%}
+            {%- unless seen_colors contains check_token -%}
+              {%- assign seen_colors = seen_colors | append: check_token -%}
+              {%- assign color_count = color_count | plus: 1 -%}
+              {%- if color_count <= max_colors -%}
+                {%- assign var_img = variant.featured_media | default: variant.featured_image | default: product.featured_media -%}
+                {%- if var_img != blank -%}
+                  <button
+                    type="button"
+                    class="luxury-card__color-btn{% if forloop.first %} is-active{% endif %}"
+                    data-variant-id="{{ variant.id }}"
+                    data-price="{{ variant.price | money_without_trailing_zeros | replace: '.00', '' }}"
+                    data-price-raw="{{ variant.price }}"
+                    data-compare-at="{% if variant.compare_at_price > variant.price %}{{ variant.compare_at_price | money_without_trailing_zeros | replace: '.00', '' }}{% endif %}"
+                    data-compare-at-raw="{{ variant.compare_at_price | default: 0 }}"
+                    data-img-src="{{ var_img | image_url: width: 600 }}"
+                    data-img-srcset="{{ var_img | image_url: width: 400 }} 400w, {{ var_img | image_url: width: 600 }} 600w, {{ var_img | image_url: width: 800 }} 800w"
+                    data-variant-url="{{ variant.url | default: product.url }}"
+                    title="{{ color_val | escape }}"
+                    aria-label="{{ color_val | escape }}"
+                  >
+                    <img
+                      src="{{ var_img | image_url: width: 48, height: 48, crop: 'center' }}"
+                      alt="{{ color_val | escape }}"
+                      loading="lazy"
+                      width="24"
+                      height="24"
+                      class="luxury-card__color-img"
+                    />
+                  </button>
+                {%- endif -%}
+              {%- endif -%}
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endcapture -%}
+
+      {%- if color_count > 1 and color_swatches_html != blank -%}
+        <div class="luxury-card__color-row">
+          <div class="luxury-card__color-list">
+            {{ color_swatches_html }}
+            {%- if color_count > max_colors -%}
+              {%- assign extra_colors = color_count | minus: max_colors -%}
+              <span class="luxury-card__more-badge">+{{ extra_colors }}</span>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- comment -%} Size Variants with Luxury Pills {%- endcomment -%}
+    {%- if size_prop != nil -%}
+      {%- liquid
+        assign seen_sizes = ''
+        assign size_count = 0
+        assign max_sizes = 6
+      -%}
+
+      {%- capture size_pills_html -%}
+        {%- for variant in product.variants -%}
+          {%- assign size_val = variant[size_prop] | strip -%}
+          {%- if size_val != blank -%}
+            {%- assign check_size_token = '|' | append: size_val | append: '|' -%}
+            {%- unless seen_sizes contains check_size_token -%}
+              {%- assign seen_sizes = seen_sizes | append: check_size_token -%}
+              {%- assign size_count = size_count | plus: 1 -%}
+              {%- if size_count <= max_sizes -%}
+                {%- liquid
+                  # Determine if this size is available in any variant and pick target variant
+                  assign size_available = false
+                  assign target_variant = variant
+                  for v in product.variants
+                    if v[size_prop] == size_val and v.available
+                      assign size_available = true
+                      assign target_variant = v
+                      break
+                    endif
+                  endfor
+
+                  # Clean up display (e.g. 'US 9 / UK 7' -> 'UK 7' or keep concise)
+                  assign display_size = size_val
+                  if display_size contains '/'
+                    assign parts = display_size | split: '/'
+                    for p in parts
+                      assign p_strip = p | strip
+                      if p_strip contains 'UK'
+                        assign display_size = p_strip
+                        break
+                      endif
+                    endfor
+                  endif
+                -%}
+                <a
+                  href="{{ target_variant.url | default: product.url }}"
+                  class="luxury-card__size-pill{% unless size_available %} is-sold-out{% endunless %}"
+                  data-variant-id="{{ target_variant.id }}"
+                  data-price="{{ target_variant.price | money_without_trailing_zeros | replace: '.00', '' }}"
+                  data-price-raw="{{ target_variant.price }}"
+                  data-compare-at="{% if target_variant.compare_at_price > target_variant.price %}{{ target_variant.compare_at_price | money_without_trailing_zeros | replace: '.00', '' }}{% endif %}"
+                  data-compare-at-raw="{{ target_variant.compare_at_price | default: 0 }}"
+                  title="{% if size_available %}{{ display_size }}{% else %}{{ display_size }} (Sold Out){% endif %}"
+                  {% unless size_available %}tabindex="-1" aria-disabled="true"{% endunless %}
+                >
+                  {{- display_size -}}
+                </a>
+              {%- endif -%}
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endcapture -%}
+
+      {%- if size_count > 1 and size_pills_html != blank -%}
+        <div class="luxury-card__size-row">
+          <div class="luxury-card__size-list">
+            {{ size_pills_html }}
+            {%- if size_count > max_sizes -%}
+              {%- assign extra_sizes = size_count | minus: max_sizes -%}
+              <span class="luxury-card__more-badge">+{{ extra_sizes }}</span>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+{%- endif -%}

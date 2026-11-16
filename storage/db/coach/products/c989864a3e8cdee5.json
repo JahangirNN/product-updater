@@ -62,7 +62,8 @@
           "name": "Navy/Green"
         }
       ],
-      "price_current": 28317.0
+      "price_current": 28317.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -77,23 +78,24 @@
   ],
   "tags": [
     "COACH",
-    "Men",
-    "Handbags"
+    "Handbags",
+    "Men"
   ],
   "groups": [
     "men_bags"
   ],
   "created_at": "2026-09-13T00:46:34Z",
-  "last_verified_at": "2026-10-29T03:37:15Z",
+  "last_verified_at": "2026-11-16T15:46:48Z",
   "id": "c989864a3e8cdee5",
   "product_id": "c989864a3e8cdee5",
   "store": "coach",
-  "updated_at": "2026-10-29T03:37:15Z",
+  "updated_at": "2026-11-16T15:46:48Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841768931494",
   "shopify_handle": "mott-messenger-bag-33",
-  "shopify_synced_at": "2026-09-29T05:56:30Z",
+  "shopify_synced_at": "2026-11-14T01:16:16Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

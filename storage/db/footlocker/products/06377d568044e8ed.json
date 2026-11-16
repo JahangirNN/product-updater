@@ -10,12 +10,12 @@
   "source_price": 190.0,
   "source_compare_at_price": null,
   "current_price": 18238.0,
-  "compare_at_price": 18088.0,
+  "compare_at_price": 17978.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "color": "Tattoo/Tattoo/Particle Rose",
   "width": "Width - B - Medium",
   "material": "Premium upper with durable overlays and responsive traction outsole",
@@ -276,7 +276,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/Q2181501_01",
       "option_values": [
         {
@@ -289,7 +289,7 @@
         }
       ],
       "price_current": 18238.0,
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -538,19 +538,20 @@
     "nike",
     "shoes",
     "sizes-17",
+    "supplier-delisted",
     "women's"
   ],
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-10-29T03:37:20Z",
+  "last_verified_at": "2026-11-16T15:44:55Z",
   "created_at": "2026-09-18T20:48:25Z",
-  "updated_at": "2026-10-29T03:37:20Z",
+  "updated_at": "2026-11-16T15:44:57Z",
   "shopify_product_id": "gid://shopify/Product/15851005640870",
   "shopify_handle": "nike-vomero-roam-women-s-tattoo-tattoo-particle-rose-q2181501",
-  "shopify_synced_at": "2026-10-20T15:21:28Z",
+  "shopify_synced_at": "2026-11-16T15:44:55Z",
   "shopify_sync_pending": false,
-  "delist_strikes": 0,
-  "supplier_delisted": false,
-  "last_synced_fx_rate": 95.052511
+  "delist_strikes": 27,
+  "supplier_delisted": true,
+  "last_synced_fx_rate": 93.851604
 }

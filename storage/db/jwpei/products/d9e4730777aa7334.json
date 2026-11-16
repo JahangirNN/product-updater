@@ -6,14 +6,14 @@
   "vendor": "JW PEI",
   "product_type": "2T310",
   "source_sku": "2T310-5",
-  "source_price": 119.0,
+  "source_price": 78.0,
   "source_compare_at_price": 119.0,
-  "current_price": 11286.0,
-  "compare_at_price": 11329.0,
+  "current_price": 7416.0,
+  "compare_at_price": 11168.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Vegan Leather",
   "specifications": {
     "Main Material": "Vegan Leather",
@@ -47,7 +47,7 @@
       "source_compare_at_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1783071012370-na4lcshpy2k.jpg?v=1783310160",
       "option_values": [
         {
@@ -55,19 +55,20 @@
           "name": "Black"
         }
       ],
-      "price_current": 11419.0
+      "price_current": 11419.0,
+      "is_available": false
     },
     {
       "id": 44818645745698,
       "sku": "2T310-5",
       "title": "Navy",
-      "price": "11423.00",
+      "price": "7416.00",
       "compare_at_price": null,
-      "source_price": 119.0,
+      "source_price": 78.0,
       "source_compare_at_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1783507664476-gi3wnpk97w6.jpg?v=1783591753",
       "option_values": [
         {
@@ -75,7 +76,8 @@
           "name": "Navy"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 7416.0,
+      "is_available": false
     },
     {
       "id": 44818645778466,
@@ -87,7 +89,7 @@
       "source_compare_at_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1783507570472-t5r30cgpnhc.jpg?v=1783591696",
       "option_values": [
         {
@@ -95,7 +97,8 @@
           "name": "Burgundy"
         }
       ],
-      "price_current": 11419.0
+      "price_current": 11419.0,
+      "is_available": false
     },
     {
       "id": 44818647842850,
@@ -107,7 +110,7 @@
       "source_compare_at_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1783507728401-a2bc334ivt.jpg?v=1783591995",
       "option_values": [
         {
@@ -115,7 +118,8 @@
           "name": "Dark Brown"
         }
       ],
-      "price_current": 11419.0
+      "price_current": 11419.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -146,7 +150,8 @@
     "26NOES",
     "26USMD",
     "Collection V",
-    "Collection VIII-SA"
+    "Collection VIII-SA",
+    "supplier-delisted"
   ],
   "groups": [
     "handbags"
@@ -155,17 +160,19 @@
   "validation_warnings": [],
   "id": "d9e4730777aa7334",
   "created_at": "2026-09-09T15:49:52Z",
-  "updated_at": "2026-10-29T03:37:37Z",
-  "last_verified_at": "2026-10-29T03:37:37Z",
-  "is_active": true,
+  "updated_at": "2026-11-16T15:44:28Z",
+  "last_verified_at": "2026-11-16T15:44:25Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841784955046",
   "shopify_handle": "natalie-metal-geometric-pendant-handle-bag-navy",
-  "shopify_synced_at": "2026-09-29T06:01:22Z",
+  "shopify_synced_at": "2026-11-16T15:44:25Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1783507664476-gi3wnpk97w6.jpg?v=1783591753",
   "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1783507664476-gi3wnpk97w6.jpg?v=1783591753",
   "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\d9e4730777aa7334.json",
   "archived": true,
   "canonical_product_id": "gid://shopify/Product/15841773289638",
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "delist_strikes": 23,
+  "supplier_delisted": true
 }

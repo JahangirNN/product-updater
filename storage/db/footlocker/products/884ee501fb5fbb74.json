@@ -10,7 +10,7 @@
   "source_price": 110.0,
   "source_compare_at_price": null,
   "current_price": 10559.0,
-  "compare_at_price": 10472.0,
+  "compare_at_price": 10384.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -100,7 +100,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KZ6704_01",
       "option_values": [
         {
@@ -148,7 +148,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KZ6704_01",
       "option_values": [
         {
@@ -196,7 +196,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/KZ6704_01",
       "option_values": [
         {
@@ -419,12 +419,12 @@
   "groups": [
     "adidas Handball Spezial"
   ],
-  "last_verified_at": "2026-10-29T05:44:04Z",
+  "last_verified_at": "2026-11-16T15:42:22Z",
   "created_at": "2026-09-20T10:38:22Z",
-  "updated_at": "2026-10-29T05:44:04Z",
+  "updated_at": "2026-11-16T15:42:22Z",
   "shopify_product_id": "gid://shopify/Product/15851010424998",
   "shopify_handle": "adidas-originals-handball-spezial-men-s-dusky-bronze-off-white-gum-kz6704",
-  "shopify_synced_at": "2026-10-07T03:54:22Z",
-  "shopify_sync_pending": true,
-  "last_synced_fx_rate": 95.252751
+  "shopify_synced_at": "2026-11-15T16:08:53Z",
+  "shopify_sync_pending": false,
+  "last_synced_fx_rate": 94.262076
 }

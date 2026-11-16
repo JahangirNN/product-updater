@@ -12,7 +12,7 @@
   "source_price": 120.0,
   "source_compare_at_price": null,
   "current_price": 11406.0,
-  "compare_at_price": 16184.0,
+  "compare_at_price": 16048.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -321,7 +321,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/II7080_001_P1",
       "option_values": [
         {
@@ -333,7 +333,7 @@
           "name": "Black/Fire Red/Metallic Gold/White"
         }
       ],
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -457,15 +457,15 @@
     "shoes"
   ],
   "created_at": "2026-09-20T15:57:32Z",
-  "updated_at": "2026-10-29T03:37:32Z",
-  "last_verified_at": "2026-10-29T03:37:32Z",
+  "updated_at": "2026-11-16T15:46:48Z",
+  "last_verified_at": "2026-11-16T15:46:46Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851444207782",
   "shopify_handle": "mens-nike-air-diamond-turf-2-casual-shoes-black-fire-red-metallic-gold-white-3385169",
-  "shopify_synced_at": "2026-10-26T05:57:39Z",
+  "shopify_synced_at": "2026-11-16T15:46:46Z",
   "price": "11406.00",
   "price_current": 11406.0,
   "delist_strikes": 0,
   "supplier_delisted": false,
-  "last_synced_fx_rate": 95.160836
+  "last_synced_fx_rate": 94.399626
 }

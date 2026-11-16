@@ -70,7 +70,8 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 12281.0
+      "price_current": 12281.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -90,7 +91,8 @@
           "name": "Silver/Deep Blue"
         }
       ],
-      "price_current": 12281.0
+      "price_current": 12281.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -110,7 +112,8 @@
           "name": "Silver/Olive"
         }
       ],
-      "price_current": 12281.0
+      "price_current": 12281.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -130,7 +133,8 @@
           "name": "Silver/Black Signature"
         }
       ],
-      "price_current": 12281.0
+      "price_current": 12281.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -150,7 +154,8 @@
           "name": "Silver/Light Indigo"
         }
       ],
-      "price_current": 14185.0
+      "price_current": 14185.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -177,23 +182,24 @@
   ],
   "tags": [
     "COACH",
-    "Men",
-    "Crossbody Bags"
+    "Crossbody Bags",
+    "Men"
   ],
   "groups": [
     "men_bags"
   ],
   "created_at": "2026-09-13T00:48:12Z",
-  "last_verified_at": "2026-10-29T03:36:31Z",
+  "last_verified_at": "2026-11-16T15:43:43Z",
   "id": "ee826dcad83e5c2d",
   "product_id": "ee826dcad83e5c2d",
   "store": "coach",
-  "updated_at": "2026-10-29T03:36:31Z",
+  "updated_at": "2026-11-16T15:43:43Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841770111142",
   "shopify_handle": "fletcher-crossbody-bag",
-  "shopify_synced_at": "2026-10-28T11:36:58Z",
+  "shopify_synced_at": "2026-11-14T01:04:23Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

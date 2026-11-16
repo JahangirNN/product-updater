@@ -1,45 +1,94 @@
-# Python
+# ==============================================================================
+# PRODUCT-UPDATER .gitignore (PROD DAEMON & CATALOG SYNC)
+# ==============================================================================
+
+# 1. Credentials & Secrets (STRICT PROTECTION)
+.env
+*.env
+.env.*
+!.env.example
+config/shopify_config.json
+.shopify/
+
+# 2. Virtual Environments & Local Interpreters
+venv/
+.venv/
+*/venv/
+env/
+ENV/
+
+# 3. Python Bytecode, Caches & Builds
 __pycache__/
+*/__pycache__/
 *.py[cod]
 *$py.class
 *.so
-venv/
-.venv/
-env/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
 
-# Node & Frontend
+# 4. Background Daemon State, PID Locks & Runtime Logs
+*.pid
+storage/*.pid
+storage/daemon.pid
+storage/test_pids/
+storage/db/history/
+*.jsonl
+*.lock
+logs/
+*/logs/
+*.log
+*.log.*
+
+# 5. Browser Automation & Playwright Caches
+.playwright/
+playwright-report/
+test-results/
+.cache/
+camoufox-cache/
+
+# 6. Temporary Test Dumps, Debug Folders & Scratch Files
+.agents/
+ORIGINAL_REQUEST.md
+debug_theme_files/
+temp_remote_review/
+artifacts/
+*/artifacts/
+scratch/
+*/scratch/
+tmp/
+*.tmp
+*.temp
+*_dump.html
+header_dump_*.html
+
+# 7. Local Node & Frontend Builds
 node_modules/
 frontend/node_modules/
 frontend/dist/
 *.local
 
-# Environment & credentials
-.env
-.env.*
-!.env.example
-
-# Local storage & databases
-storage/*.db
-storage/*.sqlite3
-storage/backups/
-storage/exports/
-
-# Logs & temp
-*.log
-logs/
-tmp/
-scratch/
-
-# IDE & OS
-.vscode/
-.idea/
+# 8. OS & IDE Metadata
 .DS_Store
 Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
 
-# Runtime & Scratch
-storage/*.pid
-storage/test_pids/
-*.lock
-.agents/
-ORIGINAL_REQUEST.md
-
+# 9. Test Screenshots (Allow theme assets only)
+*.png
+*.jpg
+*.jpeg
+!theme/assets/*.png
+!theme/assets/*.jpg
+!theme/assets/*.jpeg
+!theme/assets/*.svg
+!theme/assets/*.mp4

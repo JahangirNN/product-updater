@@ -77,7 +77,8 @@
           "name": "Dark Moss"
         }
       ],
-      "price_current": 18718.0
+      "price_current": 18718.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -97,7 +98,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 18718.0
+      "price_current": 18718.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -117,7 +119,8 @@
           "name": "Light Maroon"
         }
       ],
-      "price_current": 18718.0
+      "price_current": 18718.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -137,7 +140,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 47515.0
+      "price_current": 47515.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -158,23 +162,24 @@
   ],
   "tags": [
     "COACH",
-    "Men",
-    "Crossbody Bags"
+    "Crossbody Bags",
+    "Men"
   ],
   "groups": [
     "men_bags"
   ],
   "created_at": "2026-09-12T23:00:00Z",
-  "last_verified_at": "2026-10-29T03:37:19Z",
+  "last_verified_at": "2026-11-16T15:44:01Z",
   "id": "01feba31445d6192",
   "product_id": "01feba31445d6192",
   "store": "coach",
-  "updated_at": "2026-10-29T03:37:19Z",
+  "updated_at": "2026-11-16T15:44:01Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841760903334",
   "shopify_handle": "leo-crossbody-in-signature-nylon",
-  "shopify_synced_at": "2026-09-29T05:53:28Z",
+  "shopify_synced_at": "2026-11-14T01:05:36Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

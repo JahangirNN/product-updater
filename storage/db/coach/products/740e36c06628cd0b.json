@@ -57,7 +57,8 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 7199.0
+      "price_current": 7199.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -77,7 +78,8 @@
           "name": "Silver/Burnished Amber"
         }
       ],
-      "price_current": 9119.0
+      "price_current": 9119.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -97,7 +99,8 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 9119.0
+      "price_current": 9119.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -109,7 +112,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/ccd08_b4ms_a0",
       "option_values": [
         {
@@ -117,7 +120,8 @@
           "name": "Brass/MUSHROOM"
         }
       ],
-      "price_current": 9119.0
+      "price_current": 9119.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -137,7 +141,8 @@
           "name": "Brass/Denim"
         }
       ],
-      "price_current": 9119.0
+      "price_current": 9119.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -157,7 +162,8 @@
           "name": "Brass/Maple"
         }
       ],
-      "price_current": 7199.0
+      "price_current": 7199.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -177,7 +183,8 @@
           "name": "Brass/Melon Pink"
         }
       ],
-      "price_current": 3600.0
+      "price_current": 3600.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -197,7 +204,8 @@
           "name": "Brass/Chalk"
         }
       ],
-      "price_current": 9119.0
+      "price_current": 9119.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -217,7 +225,8 @@
           "name": "Pewter/Black"
         }
       ],
-      "price_current": 9119.0
+      "price_current": 9119.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -237,7 +246,8 @@
           "name": "Brass/Cream"
         }
       ],
-      "price_current": 3648.0
+      "price_current": 3648.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -257,7 +267,8 @@
           "name": "Brass/Candy Apple"
         }
       ],
-      "price_current": 4560.0
+      "price_current": 4560.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -269,7 +280,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cm434_b4yth_a0",
       "option_values": [
         {
@@ -277,7 +288,8 @@
           "name": "Brass/Muted Olive"
         }
       ],
-      "price_current": 4560.0
+      "price_current": 4560.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -297,7 +309,8 @@
           "name": "Brass/Vanilla"
         }
       ],
-      "price_current": 4560.0
+      "price_current": 4560.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -309,7 +322,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cm434_b4ytj_a0",
       "option_values": [
         {
@@ -317,7 +330,8 @@
           "name": "Brass/Dark Peach"
         }
       ],
-      "price_current": 4560.0
+      "price_current": 4560.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -337,7 +351,8 @@
           "name": "Brass/Black"
         }
       ],
-      "price_current": 9119.0
+      "price_current": 9119.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -349,7 +364,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cdl81_b4cah_a0",
       "option_values": [
         {
@@ -357,7 +372,8 @@
           "name": "Brass/Chalk Multi"
         }
       ],
-      "price_current": 9119.0
+      "price_current": 9119.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -377,7 +393,8 @@
           "name": "Brass/Black Multi"
         }
       ],
-      "price_current": 9119.0
+      "price_current": 9119.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -397,7 +414,8 @@
           "name": "Brass/Merlot Multi"
         }
       ],
-      "price_current": 7199.0
+      "price_current": 7199.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -417,7 +435,8 @@
           "name": "Brass/Ash Multi"
         }
       ],
-      "price_current": 3600.0
+      "price_current": 3600.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -437,7 +456,8 @@
           "name": "Brass/Oak Maple"
         }
       ],
-      "price_current": 7199.0
+      "price_current": 7199.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -457,7 +477,8 @@
           "name": "Brass/Yellow Green"
         }
       ],
-      "price_current": 2880.0
+      "price_current": 2880.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -477,7 +498,8 @@
           "name": "Brass/Black"
         }
       ],
-      "price_current": 7199.0
+      "price_current": 7199.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -549,23 +571,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Wallets & Small Goods"
+    "Wallets & Small Goods",
+    "Women"
   ],
   "groups": [
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:42:53Z",
-  "last_verified_at": "2026-10-29T03:38:41Z",
+  "last_verified_at": "2026-11-16T15:45:14Z",
   "id": "740e36c06628cd0b",
   "product_id": "740e36c06628cd0b",
   "store": "coach",
-  "updated_at": "2026-10-29T03:38:41Z",
+  "updated_at": "2026-11-16T15:45:14Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15841765916838",
   "shopify_handle": "essential-card-case-in-colorblock",
-  "shopify_synced_at": "2026-10-27T04:51:40Z",
+  "shopify_synced_at": "2026-11-16T11:50:46Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.160836
+  "last_synced_fx_rate": 94.262076,
+  "supplier_delisted": false
 }

@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.199335,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Smooth Leather",
   "specifications": {
     "Material": "Smooth Leather",
@@ -56,15 +56,16 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KL040_960",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KL040_960",
         "https://katespade.scene7.com/is/image/KateSpade/KL040_960_1",
         "https://katespade.scene7.com/is/image/KateSpade/KL040_960_3"
       ],
-      "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KL040_960"
+      "inventory_quantity": 0,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KL040_960",
+      "is_available": false
     }
   ],
   "product_options": [
@@ -78,18 +79,25 @@
     }
   ],
   "tags": [
-    "Kate Spade",
-    "Women",
+    "Crossbody Bags",
     "Handbags",
-    "Crossbody Bags"
+    "Kate Spade",
+    "Women"
   ],
   "groups": [
     "handbags"
   ],
   "created_at": "2026-10-29T05:29:25Z",
-  "last_verified_at": "2026-10-29T07:43:55Z",
+  "last_verified_at": "2026-11-16T15:41:36Z",
   "_elapsed_ms": 3271.368300076574,
   "id": "f07c435ebd1d0115",
-  "updated_at": "2026-10-29T07:43:55Z",
-  "last_synced_fx_rate": 95.29615
+  "updated_at": "2026-11-16T15:41:36Z",
+  "last_synced_fx_rate": 95.050072,
+  "shopify_product_id": "gid://shopify/Product/15915104108710",
+  "shopify_handle": "snack-bar-popsicle-crossbody-bag",
+  "shopify_synced_at": "2026-11-15T15:41:40Z",
+  "shopify_sync_pending": false,
+  "delist_strikes": 0,
+  "supplier_delisted": false,
+  "is_active": false
 }

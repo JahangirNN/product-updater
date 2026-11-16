@@ -9,7 +9,7 @@
   "source_sku": "SALOMON-7722684-6",
   "source_price": 220.0,
   "source_compare_at_price": null,
-  "current_price": 20959.0,
+  "current_price": 20738.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -59,7 +59,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/e5059fe3-7051-4680-9fee-8c4ec2e9eab0.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -174,7 +174,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/e5059fe3-7051-4680-9fee-8c4ec2e9eab0.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -381,7 +381,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/aebba98d-6258-4952-bd16-3d488a33bf59.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -404,7 +404,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/aebba98d-6258-4952-bd16-3d488a33bf59.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -634,7 +634,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/930f268e-0dba-48f6-83da-43069633564f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -726,7 +726,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/930f268e-0dba-48f6-83da-43069633564f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -927,23 +927,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T01:41:27Z",
+  "last_verified_at": "2026-11-16T15:57:56Z",
   "created_at": "2026-09-18T06:53:45Z",
-  "updated_at": "2026-10-29T01:41:28Z",
+  "updated_at": "2026-11-16T15:57:56Z",
   "price_range_usd": {
     "min": 220.0,
     "max": 220.0
   },
   "price_range_inr": {
-    "min": 20959.0,
-    "max": 20959.0
+    "min": 20738.0,
+    "max": 20738.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": false,
-  "price": "20959.00",
+  "price": "20738.00",
   "shopify_product_id": "gid://shopify/Product/15850876567718",
   "shopify_handle": "salomon-xt-pu-re-advanced-sneaker-men",
-  "shopify_synced_at": "2026-10-27T21:34:56Z",
-  "last_synced_fx_rate": 95.269051
+  "shopify_synced_at": "2026-11-15T20:57:58Z",
+  "last_synced_fx_rate": 94.262076
 }

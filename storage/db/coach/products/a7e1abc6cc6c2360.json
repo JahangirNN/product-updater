@@ -67,7 +67,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cz402_qbnrx_a0",
       "option_values": [
         {
@@ -75,7 +75,8 @@
           "name": "Gunmetal/Tan/Black"
         }
       ],
-      "price_current": 23901.0
+      "price_current": 23901.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -87,7 +88,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cz402_qbmi5_a0",
       "option_values": [
         {
@@ -95,7 +96,8 @@
           "name": "Gunmetal/Charcoal/Black"
         }
       ],
-      "price_current": 23901.0
+      "price_current": 23901.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -115,7 +117,8 @@
           "name": "Gunmetal/Grey/Charcoal"
         }
       ],
-      "price_current": 23901.0
+      "price_current": 23901.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -136,23 +139,24 @@
   ],
   "tags": [
     "COACH",
-    "Men",
-    "Handbags"
+    "Handbags",
+    "Men"
   ],
   "groups": [
     "men_bags"
   ],
   "created_at": "2026-09-13T00:45:22Z",
-  "last_verified_at": "2026-10-29T03:40:26Z",
+  "last_verified_at": "2026-11-16T15:42:21Z",
   "id": "a7e1abc6cc6c2360",
   "product_id": "a7e1abc6cc6c2360",
   "store": "coach",
-  "updated_at": "2026-10-29T03:40:26Z",
+  "updated_at": "2026-11-16T15:42:21Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15841767915686",
   "shopify_handle": "sullivan-portfolio-brief-in-signature-canvas",
-  "shopify_synced_at": "2026-10-27T23:46:37Z",
+  "shopify_synced_at": "2026-11-13T23:07:06Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.269051
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

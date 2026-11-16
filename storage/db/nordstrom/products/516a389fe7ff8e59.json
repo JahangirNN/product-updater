@@ -9,7 +9,7 @@
   "source_sku": "HOKA-8432290-7",
   "source_price": 165.0,
   "source_compare_at_price": null,
-  "current_price": 15708.0,
+  "current_price": 15553.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -88,7 +88,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/862e98f0-ee61-4c68-81ff-a669f4012310.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -111,7 +111,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/862e98f0-ee61-4c68-81ff-a669f4012310.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -295,7 +295,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/862e98f0-ee61-4c68-81ff-a669f4012310.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -318,7 +318,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/862e98f0-ee61-4c68-81ff-a669f4012310.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -364,7 +364,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/862e98f0-ee61-4c68-81ff-a669f4012310.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -429,9 +429,9 @@
       "id": 843229029,
       "sku": "NORDSTROM-8432290-ASTE-12",
       "title": "UK 11.5 - Asteroid / Downpour",
-      "price": "7537.00",
+      "price": "9413.00",
       "compare_at_price": "15838.00",
-      "source_price": 79.2,
+      "source_price": 99.0,
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -447,7 +447,7 @@
           "name": "Asteroid / Downpour"
         }
       ],
-      "price_current": 7537.0
+      "price_current": 9413.0
     },
     {
       "id": 843229030,
@@ -477,9 +477,9 @@
       "id": 843229031,
       "sku": "NORDSTROM-8432290-ASTE-9.5",
       "title": "UK 9 - Asteroid / Downpour",
-      "price": "7537.00",
+      "price": "9413.00",
       "compare_at_price": "15838.00",
-      "source_price": 79.2,
+      "source_price": 99.0,
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -495,7 +495,7 @@
           "name": "Asteroid / Downpour"
         }
       ],
-      "price_current": 7537.0
+      "price_current": 9413.0
     },
     {
       "id": 843229032,
@@ -525,9 +525,9 @@
       "id": 843229033,
       "sku": "NORDSTROM-8432290-ASTE-7.5",
       "title": "UK 7 - Asteroid / Downpour",
-      "price": "7537.00",
+      "price": "9413.00",
       "compare_at_price": "15833.00",
-      "source_price": 79.2,
+      "source_price": 99.0,
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -543,7 +543,7 @@
           "name": "Asteroid / Downpour"
         }
       ],
-      "price_current": 7537.0
+      "price_current": 9413.0
     },
     {
       "id": 843229034,
@@ -572,9 +572,9 @@
       "id": 843229036,
       "sku": "NORDSTROM-8432290-ASTE-11.5",
       "title": "UK 11 - Asteroid / Downpour",
-      "price": "7537.00",
+      "price": "9413.00",
       "compare_at_price": "15833.00",
-      "source_price": 79.2,
+      "source_price": 99.0,
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -590,7 +590,7 @@
           "name": "Asteroid / Downpour"
         }
       ],
-      "price_current": 7537.0
+      "price_current": 9413.0
     },
     {
       "id": 843229037,
@@ -620,9 +620,9 @@
       "id": 843229039,
       "sku": "NORDSTROM-8432290-ASTE-7",
       "title": "UK 6.5 - Asteroid / Downpour",
-      "price": "9500.00",
+      "price": "15558.00",
       "compare_at_price": "15833.00",
-      "source_price": 99.0,
+      "source_price": 165.0,
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -637,7 +637,8 @@
           "option_name": "Color",
           "name": "Asteroid / Downpour"
         }
-      ]
+      ],
+      "price_current": 15558.0
     },
     {
       "id": 843229042,
@@ -672,7 +673,7 @@
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/30423932-d12a-4a09-b6e0-c25d4a11611a.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -787,7 +788,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/262ac0e9-30ae-4471-8924-0d84b2b651e2.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1036,9 +1037,9 @@
       "id": 843229068,
       "sku": "NORDSTROM-8432290-VARS-10",
       "title": "UK 9.5 - Varsity Navy / Faded Navy",
-      "price": "7537.00",
+      "price": "9413.00",
       "compare_at_price": "15838.00",
-      "source_price": 79.2,
+      "source_price": 99.0,
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1054,7 +1055,7 @@
           "name": "Varsity Navy / Faded Navy"
         }
       ],
-      "price_current": 7537.0
+      "price_current": 9413.0
     },
     {
       "id": 843229069,
@@ -1066,7 +1067,7 @@
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ec306173-cac7-409f-8efe-7b86f67c1b67.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1108,9 +1109,9 @@
       "id": 843229071,
       "sku": "NORDSTROM-8432290-VARS-9",
       "title": "UK 8.5 - Varsity Navy / Faded Navy",
-      "price": "7537.00",
+      "price": "9413.00",
       "compare_at_price": "15838.00",
-      "source_price": 79.2,
+      "source_price": 99.0,
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1126,7 +1127,7 @@
           "name": "Varsity Navy / Faded Navy"
         }
       ],
-      "price_current": 7537.0
+      "price_current": 9413.0
     },
     {
       "id": 843229072,
@@ -1138,7 +1139,7 @@
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ec306173-cac7-409f-8efe-7b86f67c1b67.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1202,9 +1203,9 @@
       "id": 843229077,
       "sku": "NORDSTROM-8432290-VARS-8",
       "title": "UK 7.5 - Varsity Navy / Faded Navy",
-      "price": "7537.00",
+      "price": "9413.00",
       "compare_at_price": "15838.00",
-      "source_price": 79.2,
+      "source_price": 99.0,
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1220,7 +1221,7 @@
           "name": "Varsity Navy / Faded Navy"
         }
       ],
-      "price_current": 7537.0
+      "price_current": 9413.0
     },
     {
       "id": 843229078,
@@ -1232,7 +1233,7 @@
       "source_compare_at_price": 165.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/ec306173-cac7-409f-8efe-7b86f67c1b67.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1396,23 +1397,25 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T04:01:51Z",
+  "last_verified_at": "2026-11-16T15:47:34Z",
   "created_at": "2026-09-17T14:51:04Z",
-  "updated_at": "2026-10-29T04:01:51Z",
+  "updated_at": "2026-11-16T15:47:34Z",
   "price_range_usd": {
-    "min": 79.2,
+    "min": 99.0,
     "max": 165.0
   },
   "price_range_inr": {
-    "min": 7540.0,
-    "max": 15708.0
+    "min": 9332.0,
+    "max": 15553.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": false,
-  "price": "15708.00",
+  "price": "15553.00",
   "shopify_product_id": "gid://shopify/Product/15850877386918",
   "shopify_handle": "arahi-sr-sneaker-men",
-  "shopify_synced_at": "2026-10-29T00:10:28Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-16T07:45:09Z",
+  "last_synced_fx_rate": 94.262076,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

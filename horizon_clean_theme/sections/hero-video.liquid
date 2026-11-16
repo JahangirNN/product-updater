@@ -1,0 +1,363 @@
+{%- comment -%}
+  Hero Video Showcase — The Rare Avenue Quiet Luxury (ADR 0022 / ADR 0030)
+  Responsive video player using Shopify CDN URLs for desktop (16:9) and mobile (9:16).
+  Autoplay, muted background loop, responsive aspect ratios, zero CLS.
+{%- endcomment -%}
+
+<div class="hero-video slideshow section section--full-width-margin" id="shopify-section-{{ section.id }}">
+  <div class="hero-video__wrapper">
+    <div class="hero-video__media hero-video__media--desktop">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        class="hero-video__player"
+        src="{{ section.settings.desktop_video_url | default: 'https://cdn.shopify.com/videos/c/o/v/4566d2c5692a4de485ac3856e13ff074.mp4' }}"
+      >
+        <source src="{{ section.settings.desktop_video_url | default: 'https://cdn.shopify.com/videos/c/o/v/4566d2c5692a4de485ac3856e13ff074.mp4' }}" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="hero-video__media hero-video__media--mobile">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        class="hero-video__player"
+        src="{{ section.settings.mobile_video_url | default: 'https://cdn.shopify.com/videos/c/o/v/6e693e51902f4afd85b5bcedd13b8cd1.mp4' }}"
+      >
+        <source src="{{ section.settings.mobile_video_url | default: 'https://cdn.shopify.com/videos/c/o/v/6e693e51902f4afd85b5bcedd13b8cd1.mp4' }}" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="hero-video__overlay"></div>
+
+    <!-- Quiet Luxury Interactive Sound Controller (Mute / Unmute Toggle) -->
+    <button
+      type="button"
+      class="hero-video__sound-toggle"
+      aria-label="Unmute video sound"
+      aria-pressed="false"
+      id="hero-video-sound-btn-{{ section.id }}"
+      title="Toggle sound"
+    >
+      <svg class="hero-video__sound-icon hero-video__sound-icon--muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <line x1="23" y1="9" x2="17" y2="15"></line>
+        <line x1="17" y1="9" x2="23" y2="15"></line>
+      </svg>
+      <svg class="hero-video__sound-icon hero-video__sound-icon--unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 5"></polygon>
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+      </svg>
+      <span class="visually-hidden">Toggle Sound</span>
+    </button>
+
+    <div class="hero-video__content">
+      {%- if section.settings.subheading != blank -%}
+        <span class="hero-video__subheading">{{ section.settings.subheading }}</span>
+      {%- endif -%}
+      {%- if section.settings.title != blank -%}
+        <h2 class="hero-video__heading">{{ section.settings.title }}</h2>
+      {%- endif -%}
+      <div class="hero-video__buttons">
+        {%- if section.settings.button_1_text != blank -%}
+          <a href="{{ section.settings.button_1_link | default: '/collections/all' }}" class="button button--primary hero-video__btn">
+            {{ section.settings.button_1_text }}
+          </a>
+        {%- endif -%}
+        {%- if section.settings.button_2_text != blank -%}
+          <a href="{{ section.settings.button_2_link | default: '/collections' }}" class="button button--secondary hero-video__btn">
+            {{ section.settings.button_2_text }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  #shopify-section-{{ section.id }} .hero-video {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #000000;
+  }
+  #shopify-section-{{ section.id }} .hero-video__wrapper {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  #shopify-section-{{ section.id }} .hero-video__media {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  #shopify-section-{{ section.id }} .hero-video__player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  #shopify-section-{{ section.id }} .hero-video__media--desktop {
+    display: block;
+  }
+  #shopify-section-{{ section.id }} .hero-video__media--mobile {
+    display: none;
+  }
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .hero-video__wrapper {
+      min-height: calc(100vh - 60px);
+      aspect-ratio: 9 / 16;
+    }
+    #shopify-section-{{ section.id }} .hero-video__media--desktop {
+      display: none;
+    }
+    #shopify-section-{{ section.id }} .hero-video__media--mobile {
+      display: block;
+    }
+  }
+  #shopify-section-{{ section.id }} .hero-video__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.45) 100%);
+    pointer-events: none;
+  }
+  #shopify-section-{{ section.id }} .hero-video__content {
+    position: relative;
+    z-index: 2;
+    padding: 3rem 2rem max(3.5rem, env(safe-area-inset-bottom, 2.5rem));
+    max-width: 720px;
+    color: #ffffff;
+  }
+  #shopify-section-{{ section.id }} .hero-video__subheading {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9a876;
+    margin-bottom: 0.75rem;
+  }
+  #shopify-section-{{ section.id }} .hero-video__heading {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin: 0 0 1.5rem 0;
+  }
+  #shopify-section-{{ section.id }} .hero-video__buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  #shopify-section-{{ section.id }} .hero-video__btn {
+    font-size: 0.8125rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.85rem 1.75rem;
+  }
+
+  /* Quiet Luxury Interactive Sound Controller Styles */
+  #shopify-section-{{ section.id }} .hero-video__sound-toggle {
+    position: absolute;
+    bottom: 2.25rem;
+    right: 2.25rem;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(18, 18, 18, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    outline: none;
+    padding: 0;
+  }
+  #shopify-section-{{ section.id }} .hero-video__sound-toggle:hover {
+    background: #c9a876;
+    border-color: #c9a876;
+    color: #121212;
+    transform: scale(1.08);
+    box-shadow: 0 8px 28px rgba(201, 168, 118, 0.45);
+  }
+  #shopify-section-{{ section.id }} .hero-video__sound-toggle.is-unmuted {
+    background: #c9a876;
+    border-color: #c9a876;
+    color: #121212;
+  }
+  #shopify-section-{{ section.id }} .hero-video__sound-icon {
+    display: block;
+    width: 22px;
+    height: 22px;
+    pointer-events: none;
+    transition: transform 0.2s ease;
+  }
+  #shopify-section-{{ section.id }} .hero-video__sound-icon--unmuted {
+    display: none;
+  }
+  #shopify-section-{{ section.id }} .hero-video__sound-toggle.is-unmuted .hero-video__sound-icon--muted {
+    display: none;
+  }
+  #shopify-section-{{ section.id }} .hero-video__sound-toggle.is-unmuted .hero-video__sound-icon--unmuted {
+    display: block;
+  }
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .hero-video__sound-toggle {
+      bottom: 1.5rem;
+      right: 1.25rem;
+      width: 44px;
+      height: 44px;
+    }
+  }
+</style>
+
+<script>
+  (function() {
+    function initHeroVideoSound() {
+      const btn = document.getElementById('hero-video-sound-btn-{{ section.id }}');
+      if (!btn) return;
+      const section = document.getElementById('shopify-section-{{ section.id }}');
+      if (!section) return;
+      const videos = section.querySelectorAll('video.hero-video__player');
+      if (!videos.length) return;
+
+      const deskVid = section.querySelector('.hero-video__media--desktop video.hero-video__player');
+      const mobVid = section.querySelector('.hero-video__media--mobile video.hero-video__player');
+      let isSoundActive = false;
+
+      function updateActiveVideoAudio() {
+        if (!isSoundActive) {
+          if (deskVid) deskVid.muted = true;
+          if (mobVid) mobVid.muted = true;
+          return;
+        }
+        const isMobile = window.innerWidth <= 749;
+        const activeVid = isMobile ? mobVid : deskVid;
+        const inactiveVid = isMobile ? deskVid : mobVid;
+
+        if (inactiveVid) {
+          inactiveVid.muted = true;
+        }
+        if (activeVid) {
+          activeVid.muted = false;
+          activeVid.volume = 1.0;
+          const playPromise = activeVid.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(function() {});
+          }
+        }
+      }
+
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        isSoundActive = !isSoundActive;
+
+        updateActiveVideoAudio();
+
+        if (isSoundActive) {
+          btn.classList.add('is-unmuted');
+          btn.setAttribute('aria-label', 'Mute video sound');
+          btn.setAttribute('aria-pressed', 'true');
+          btn.setAttribute('title', 'Mute sound');
+        } else {
+          btn.classList.remove('is-unmuted');
+          btn.setAttribute('aria-label', 'Unmute video sound');
+          btn.setAttribute('aria-pressed', 'false');
+          btn.setAttribute('title', 'Unmute sound');
+        }
+      });
+
+      window.addEventListener('resize', function() {
+        if (isSoundActive) {
+          updateActiveVideoAudio();
+        }
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initHeroVideoSound);
+    } else {
+      initHeroVideoSound();
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Hero Video",
+  "settings": [
+    {
+      "type": "text",
+      "id": "desktop_video_url",
+      "label": "Desktop Video URL",
+      "default": "https://cdn.shopify.com/videos/c/o/v/4566d2c5692a4de485ac3856e13ff074.mp4"
+    },
+    {
+      "type": "text",
+      "id": "mobile_video_url",
+      "label": "Mobile Video URL (9:16)",
+      "default": "https://cdn.shopify.com/videos/c/o/v/6e693e51902f4afd85b5bcedd13b8cd1.mp4"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Quiet Luxury Curations"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "The Rare Avenue"
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "First Button Label",
+      "default": "Explore Collection"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "First Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Second Button Label",
+      "default": "New Arrivals"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Second Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Video"
+    }
+  ]
+}
+{% endschema %}

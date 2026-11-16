@@ -6,10 +6,10 @@
   "vendor": "JW PEI",
   "product_type": "2T47",
   "source_sku": "2T47-2",
-  "source_price": 99.0,
+  "source_price": 68.0,
   "source_compare_at_price": 99.0,
-  "current_price": 9389.0,
-  "compare_at_price": 9425.0,
+  "current_price": 6466.0,
+  "compare_at_price": 9346.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -80,9 +80,9 @@
       "id": 41210520240162,
       "sku": "2T47-2",
       "title": "White",
-      "price": "9503.00",
+      "price": "6466.00",
       "compare_at_price": null,
-      "source_price": 99.0,
+      "source_price": 68.0,
       "source_compare_at_price": 99.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -94,7 +94,7 @@
           "name": "White"
         }
       ],
-      "price_current": 9503.0
+      "price_current": 6466.0
     },
     {
       "id": 41210521714722,
@@ -371,17 +371,17 @@
   "validation_warnings": [],
   "id": "92563079186827b4",
   "created_at": "2026-09-09T15:44:58Z",
-  "updated_at": "2026-10-29T05:38:19Z",
-  "last_verified_at": "2026-10-29T05:38:19Z",
+  "updated_at": "2026-11-16T15:47:31Z",
+  "last_verified_at": "2026-11-16T15:47:31Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841780498598",
   "shopify_handle": "elise-top-handle-bag-white",
-  "shopify_synced_at": "2026-09-29T06:00:08Z",
+  "shopify_synced_at": "2026-11-16T07:46:32Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T47-2-1.jpg?v=1752239033",
   "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T47-2-1.jpg?v=1752239033",
   "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\92563079186827b4.json",
   "archived": true,
   "canonical_product_id": "gid://shopify/Product/15841771946150",
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.262076
 }

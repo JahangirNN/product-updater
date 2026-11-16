@@ -1,0 +1,1044 @@
+
+<style>
+  .header-sidebar__sub-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 10;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    padding-bottom: max(3.5rem, env(safe-area-inset-bottom, 2.5rem));
+  }
+  .header-sidebar__sub-panel[hidden] {
+    display: none !important;
+  }
+  .header-sidebar__linklist,
+  .header-sidebar__linklist ul,
+  .header-sidebar__sub-panel ul,
+  .header-sidebar__sub-panel li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .header-sidebar__back-button {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 1rem 1.25rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    background: #faf8f5;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .header-sidebar__back-button:hover {
+    background: #f4efe8;
+    color: #c9a876;
+  }
+  .header-sidebar__back-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #c9a876;
+    font-size: 1.15rem;
+  }
+  .header-sidebar__linklist-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 1.25rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 0.875rem;
+  }
+  .header-sidebar__nested-linklist {
+    padding: 0.5rem 1.25rem 0.75rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .header-sidebar__nested-linklist a {
+    color: #555555;
+    text-decoration: none;
+    font-size: 0.8125rem;
+    transition: color 0.2s ease;
+  }
+  .header-sidebar__nested-linklist a:hover {
+    color: #c9a876;
+  }
+</style>
+
+{%- comment -%}
+  Luxury 3-Tier Sidebar Panels (ADR 0022)
+  Provides Women, Men, and Designers hierarchical navigation panels for Horizon Quiet Luxury header-sidebar.
+{%- endcomment -%}
+
+<style>
+  .header-sidebar__sub-panel .header-sidebar__linklist,
+  #header-panel-brands .header-sidebar__linklist {
+    padding-bottom: max(3.5rem, env(safe-area-inset-bottom, 2.5rem)) !important;
+  }
+
+  /* Luxury Mobile Brands Drawer (ADR 0022/2026) */
+  .luxury-sidebar__section-title {
+    padding: 0.9rem 1.25rem 0.45rem !important;
+    font-size: 0.6875rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase !important;
+    color: #8c827a !important;
+    background: #faf8f5 !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04) !important;
+    display: flex !important;
+    align-items: center !important;
+    list-style: none !important;
+  }
+
+  .luxury-sidebar__all-link-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0.95rem 1.25rem !important;
+    font-size: 0.8125rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.09em !important;
+    text-transform: uppercase !important;
+    color: #c9a876 !important;
+    background: #ffffff !important;
+    text-decoration: none !important;
+    transition: background 0.2s ease, color 0.2s ease !important;
+  }
+
+  .luxury-sidebar__all-link-btn:hover {
+    background: #faf8f5 !important;
+    color: #1a1a1a !important;
+  }
+
+  .luxury-sidebar__brand-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+
+  .luxury-sidebar__brand-name {
+    font-weight: 500;
+    color: #1a1a1a;
+    letter-spacing: 0.02em;
+  }
+
+  .luxury-sidebar__chip {
+    font-size: 0.625rem !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    padding: 0.2rem 0.5rem !important;
+    border-radius: 999px !important;
+    background: rgba(201, 168, 118, 0.12) !important;
+    color: #8a6c38 !important;
+    border: 1px solid rgba(201, 168, 118, 0.25) !important;
+    margin-left: auto !important;
+    margin-right: 0.75rem !important;
+    white-space: nowrap !important;
+    line-height: 1.2 !important;
+  }
+
+  .luxury-sidebar__arrow {
+    color: #bbb;
+    font-size: 0.75rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .header-sidebar__linklist-button:hover .luxury-sidebar__arrow {
+    transform: translateX(2px);
+    color: #c9a876;
+  }
+</style>
+
+<div id="header-panel-women" class="header-sidebar__sub-panel" hidden>
+  <button type="button" class="header-sidebar__back-button link-faded {% if show_dividers %}is-divided{% endif %} text-with-icon {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %} md:hidden" data-action="close-panel">
+    <span class="header-sidebar__back-arrow">&larr;</span>
+    <span>Back to Menu (Women)</span>
+  </button>
+
+  <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list" style="padding-bottom: max(3rem, env(safe-area-inset-bottom, 2rem));">
+    <li>
+      <a href="/collections/women" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" style="font-weight: 600; color: #c9a876;">
+        Shop All Women's Boutique &rarr;
+      </a>
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Designer Handbags
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/womens-handbags" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Luxury Bags &rarr;</a>
+            <a href="/collections/womens-handbags/coach" class="link-faded-reverse">COACH</a>
+            <a href="/collections/womens-handbags/jw-pei" class="link-faded-reverse">JW PEI</a>
+            <a href="/collections/womens-handbags/kate-spade" class="link-faded-reverse">Kate Spade</a>
+            <a href="/collections/womens-handbags/michael-kors" class="link-faded-reverse">Michael Kors</a>
+            <a href="/collections/womens-handbags/satchels" class="link-faded-reverse">Satchels &amp; Top Handles</a>
+            <a href="/collections/womens-handbags/crossbody-bags" class="link-faded-reverse">Crossbody &amp; Messengers</a>
+            <a href="/collections/womens-handbags/totes" class="link-faded-reverse">Totes &amp; Carryalls</a>
+            <a href="/collections/womens-handbags/shoulder-bags" class="link-faded-reverse">Shoulder Bags</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Luxury Footwear
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/women/footwear" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Shoes &rarr;</a>
+            <a href="/collections/women/adidas" class="link-faded-reverse">adidas Originals</a>
+            <a href="/collections/women/asics" class="link-faded-reverse">ASICS</a>
+            <a href="/collections/women/nike" class="link-faded-reverse">Nike</a>
+            <a href="/collections/women/on" class="link-faded-reverse">On Running</a>
+            <a href="/collections/women/salomon" class="link-faded-reverse">Salomon</a>
+            <a href="/collections/women/hoka" class="link-faded-reverse">HOKA</a>
+            <a href="/collections/coach/women+footwear" class="link-faded-reverse">COACH Footwear</a>
+            <a href="/collections/michael-kors/women+footwear" class="link-faded-reverse">Michael Kors Footwear</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Fine Timepieces
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/womens-watches" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Women's Watches &rarr;</a>
+            <a href="/collections/womens-watches/tissot" class="link-faded-reverse">Tissot</a>
+            <a href="/collections/womens-watches/seiko" class="link-faded-reverse">Seiko</a>
+            <a href="/collections/womens-watches/citizen" class="link-faded-reverse">Citizen</a>
+            <a href="/collections/womens-watches/movado" class="link-faded-reverse">Movado</a>
+            <a href="/collections/womens-watches/versace" class="link-faded-reverse">Versace</a>
+            <a href="/collections/womens-watches/michael-kors" class="link-faded-reverse">Michael Kors</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Wallets &amp; Small Goods
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/wallets-leather-goods/women" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Wallets &rarr;</a>
+            <a href="/collections/wallets-leather-goods/women+wristlets" class="link-faded-reverse">Wristlets &amp; Pouches</a>
+            <a href="/collections/wallets-leather-goods/women+card-cases" class="link-faded-reverse">Card Cases &amp; Holders</a>
+            <a href="/collections/wallets-leather-goods/women+wallets" class="link-faded-reverse">Continental &amp; Zip Wallets</a>
+            <a href="/collections/wallets-leather-goods/women+michael-kors" class="link-faded-reverse">Michael Kors</a>
+            <a href="/collections/wallets-leather-goods/women+coach" class="link-faded-reverse">COACH</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Designer Eyewear
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/womens-sunglasses" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Sunglasses &rarr;</a>
+            <a href="/collections/womens-sunglasses/michael-kors" class="link-faded-reverse">Michael Kors</a>
+            <a href="/collections/womens-sunglasses/cat-eye" class="link-faded-reverse">Cat-Eye &amp; Butterfly</a>
+            <a href="/collections/womens-sunglasses/aviator" class="link-faded-reverse">Aviator &amp; Pilot</a>
+            <a href="/collections/womens-sunglasses/oversized" class="link-faded-reverse">Oversized &amp; Geometric</a>
+          </div>
+        </details>
+      
+    </li>
+  </ul>
+</div>
+
+<div id="header-panel-men" class="header-sidebar__sub-panel" hidden>
+  <button type="button" class="header-sidebar__back-button link-faded {% if show_dividers %}is-divided{% endif %} text-with-icon {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %} md:hidden" data-action="close-panel">
+    <span class="header-sidebar__back-arrow">&larr;</span>
+    <span>Back to Menu (Men)</span>
+  </button>
+
+  <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list" style="padding-bottom: max(3rem, env(safe-area-inset-bottom, 2rem));">
+    <li>
+      <a href="/collections/men" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" style="font-weight: 600; color: #c9a876;">
+        Shop All Men's Boutique &rarr;
+      </a>
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Fine Timepieces
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/mens-watches" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Men's Watches &rarr;</a>
+            <a href="/collections/mens-watches/tissot" class="link-faded-reverse">Tissot</a>
+            <a href="/collections/mens-watches/citizen" class="link-faded-reverse">Citizen</a>
+            <a href="/collections/mens-watches/movado" class="link-faded-reverse">Movado</a>
+            <a href="/collections/mens-watches/seiko" class="link-faded-reverse">Seiko</a>
+            <a href="/collections/mens-watches/versace" class="link-faded-reverse">Versace</a>
+            <a href="/collections/mens-watches/ferragamo" class="link-faded-reverse">Ferragamo</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Premium Footwear
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/men/footwear" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Men's Shoes &rarr;</a>
+            <a href="/collections/men/adidas" class="link-faded-reverse">adidas Originals</a>
+            <a href="/collections/men/asics" class="link-faded-reverse">ASICS</a>
+            <a href="/collections/men/nike" class="link-faded-reverse">Nike</a>
+            <a href="/collections/men/salomon" class="link-faded-reverse">Salomon</a>
+            <a href="/collections/men/on" class="link-faded-reverse">On Running</a>
+            <a href="/collections/men/hoka" class="link-faded-reverse">HOKA</a>
+            <a href="/collections/coach/men+footwear" class="link-faded-reverse">COACH Footwear</a>
+            <a href="/collections/michael-kors/men+footwear" class="link-faded-reverse">Michael Kors Footwear</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Designer Bags
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/mens-bags" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Men's Bags &rarr;</a>
+            <a href="/collections/mens-bags/coach" class="link-faded-reverse">COACH</a>
+            <a href="/collections/mens-bags/crossbody-bags" class="link-faded-reverse">Messengers &amp; Crossbody</a>
+            <a href="/collections/mens-bags/backpacks" class="link-faded-reverse">Backpacks &amp; Rucksacks</a>
+            <a href="/collections/mens-bags/satchels" class="link-faded-reverse">Briefcases &amp; Satchels</a>
+            <a href="/collections/mens-bags/totes" class="link-faded-reverse">Totes &amp; Carryalls</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Wallets &amp; Small Goods
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/wallets-leather-goods/men" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Men's Wallets &rarr;</a>
+            <a href="/collections/wallets-leather-goods/men+billfolds" class="link-faded-reverse">Billfolds &amp; Passcases</a>
+            <a href="/collections/wallets-leather-goods/men+card-cases" class="link-faded-reverse">Card Cases &amp; Money Clips</a>
+            <a href="/collections/wallets-leather-goods/men+tech-accessories" class="link-faded-reverse">MagSafe &amp; Tech Wallets</a>
+            <a href="/collections/wallets-leather-goods/men+michael-kors" class="link-faded-reverse">Michael Kors</a>
+            <a href="/collections/wallets-leather-goods/men+coach" class="link-faded-reverse">COACH</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Designer Eyewear
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/mens-sunglasses" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Sunglasses &rarr;</a>
+            <a href="/collections/mens-sunglasses/michael-kors" class="link-faded-reverse">Michael Kors Eyewear</a>
+            <a href="/collections/mens-sunglasses/aviator" class="link-faded-reverse">Aviator &amp; Pilot</a>
+            <a href="/collections/mens-sunglasses/navigator" class="link-faded-reverse">Navigator &amp; Square</a>
+            <a href="/collections/mens-sunglasses/wireframe" class="link-faded-reverse">Wireframe &amp; Metal</a>
+          </div>
+        </details>
+      
+    </li>
+  </ul>
+</div>
+
+<div id="header-panel-beauty" class="header-sidebar__sub-panel" hidden>
+  <button type="button" class="header-sidebar__back-button link-faded {% if show_dividers %}is-divided{% endif %} text-with-icon {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %} md:hidden" data-action="close-panel">
+    <span class="header-sidebar__back-arrow">&larr;</span>
+    <span>Back to Menu (Beauty)</span>
+  </button>
+
+  <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list" style="padding-bottom: max(3rem, env(safe-area-inset-bottom, 2rem));">
+    <li>
+      <a href="/collections/beauty" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" style="font-weight: 600; color: #c9a876;">
+        Explore Haute Beaut&eacute; &rarr;
+      </a>
+    </li>
+
+    <li>
+      <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+        <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+          Skincare &amp; Lip Care
+          <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+        </summary>
+        <div class="header-sidebar__nested-linklist">
+          <a href="/collections/skincare" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Skincare &rarr;</a>
+          <a href="/collections/summer-fridays" class="link-faded-reverse">Summer Fridays</a>
+          <a href="/collections/rhode" class="link-faded-reverse">rhode</a>
+          <a href="/collections/gisou" class="link-faded-reverse">Gisou</a>
+          <a href="/collections/glossier" class="link-faded-reverse">Glossier</a>
+          <a href="/collections/tower-28" class="link-faded-reverse">Tower 28 Beauty</a>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+        <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+          Designer Makeup
+          <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+        </summary>
+        <div class="header-sidebar__nested-linklist">
+          <a href="/collections/makeup" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Explore Makeup &rarr;</a>
+          <a href="/collections/haus-labs" class="link-faded-reverse">Haus Labs</a>
+          <a href="/collections/westman-atelier" class="link-faded-reverse">Westman Atelier</a>
+          <a href="/collections/patrick-ta" class="link-faded-reverse">PATRICK TA</a>
+          <a href="/collections/makeup-by-mario" class="link-faded-reverse">MAKEUP BY MARIO</a>
+          <a href="/collections/hourglass" class="link-faded-reverse">Hourglass</a>
+          <a href="/collections/saie" class="link-faded-reverse">Saie</a>
+          <a href="/collections/merit" class="link-faded-reverse">MERIT</a>
+          <a href="/collections/kosas" class="link-faded-reverse">Kosas</a>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+        <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+          Haircare &amp; Body
+          <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+        </summary>
+        <div class="header-sidebar__nested-linklist">
+          <a href="/collections/haircare" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Explore Hair &amp; Body &rarr;</a>
+          <a href="/collections/gisou" class="link-faded-reverse">Gisou Honey Infused</a>
+          <a href="/collections/summer-fridays" class="link-faded-reverse">Summer Fridays Body</a>
+          <a href="/collections/refy" class="link-faded-reverse">REFY Sculpt &amp; Define</a>
+          <a href="/collections/glossier" class="link-faded-reverse">Glossier Fragrance</a>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+        <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+          Value &amp; Gift Sets
+          <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+        </summary>
+        <div class="header-sidebar__nested-linklist">
+          <a href="/collections/beauty-sets" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Sets &rarr;</a>
+          <a href="/collections/beauty-sets" class="link-faded-reverse">Lip Balm &amp; Butter Duos</a>
+          <a href="/collections/beauty-sets" class="link-faded-reverse">Glow Routine Sets</a>
+          <a href="/collections/beauty-sets" class="link-faded-reverse">Mini Discovery Edits</a>
+        </div>
+      </details>
+    </li>
+  </ul>
+</div>
+
+<div id="header-panel-footwear" class="header-sidebar__sub-panel" hidden>
+  <button type="button" class="header-sidebar__back-button link-faded {% if show_dividers %}is-divided{% endif %} text-with-icon {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %} md:hidden" data-action="close-panel">
+    <span class="header-sidebar__back-arrow">&larr;</span>
+    <span>Back to Menu (Footwear)</span>
+  </button>
+
+  <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list" style="padding-bottom: max(3rem, env(safe-area-inset-bottom, 2rem));">
+    <li>
+      <a href="/collections/premium-footwear" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" style="font-weight: 600; color: #c9a876;">
+        Shop All Footwear &rarr;
+      </a>
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Performance Runners
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/premium-footwear" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop All Runners &rarr;</a>
+            <a href="/collections/hoka" class="link-faded-reverse">HOKA</a>
+            <a href="/collections/on-running" class="link-faded-reverse">On Running</a>
+            <a href="/collections/salomon" class="link-faded-reverse">Salomon</a>
+            <a href="/collections/asics" class="link-faded-reverse">ASICS</a>
+            <a href="/collections/nike" class="link-faded-reverse">Nike</a>
+            <a href="/collections/adidas" class="link-faded-reverse">adidas Originals</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Street &amp; Lifestyle
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/premium-footwear" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop Lifestyle &rarr;</a>
+            <a href="/collections/adidas" class="link-faded-reverse">adidas Originals</a>
+            <a href="/collections/asics" class="link-faded-reverse">ASICS GEL Series</a>
+            <a href="/collections/nike" class="link-faded-reverse">Nike Vomero &amp; P-6000</a>
+            <a href="/collections/salomon" class="link-faded-reverse">Salomon XT-6</a>
+            <a href="/collections/on-running" class="link-faded-reverse">On Cloudtilt</a>
+            <a href="/collections/hoka" class="link-faded-reverse">HOKA Clifton</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Designer Footwear
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/premium-footwear" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop Designer Shoes &rarr;</a>
+            <a href="/collections/coach/footwear" class="link-faded-reverse">COACH Footwear</a>
+            <a href="/collections/michael-kors/footwear" class="link-faded-reverse">Michael Kors Footwear</a>
+            <a href="/collections/coach/women+footwear" class="link-faded-reverse">COACH Women's Shoes</a>
+            <a href="/collections/coach/men+footwear" class="link-faded-reverse">COACH Men's Shoes</a>
+            <a href="/collections/michael-kors/women+footwear" class="link-faded-reverse">MK Women's Shoes</a>
+            <a href="/collections/michael-kors/men+footwear" class="link-faded-reverse">MK Men's Shoes</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Shop By Department
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/womens-shoes" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Women's Footwear Edit &rarr;</a>
+            <a href="/collections/mens-shoes" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Men's Footwear Edit &rarr;</a>
+            <a href="/collections/premium-footwear?sort_by=created-descending" class="link-faded-reverse">New Arrivals</a>
+            <a href="/collections/premium-footwear?sort_by=best-selling" class="link-faded-reverse">Bestsellers</a>
+          </div>
+        </details>
+      
+    </li>
+  </ul>
+</div>
+
+<div id="header-panel-handbags" class="header-sidebar__sub-panel" hidden>
+  <button type="button" class="header-sidebar__back-button link-faded {% if show_dividers %}is-divided{% endif %} text-with-icon {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %} md:hidden" data-action="close-panel">
+    <span class="header-sidebar__back-arrow">&larr;</span>
+    <span>Back to Menu (Handbags)</span>
+  </button>
+
+  <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list" style="padding-bottom: max(3rem, env(safe-area-inset-bottom, 2rem));">
+    <li>
+      <a href="/collections/designer-bags" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" style="font-weight: 600; color: #c9a876;">
+        Shop All Designer Bags &rarr;
+      </a>
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Iconic Maisons
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/coach" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">COACH Showroom &rarr;</a>
+            <a href="/collections/womens-handbags/coach" class="link-faded-reverse">COACH Handbags</a>
+            <a href="/collections/jw-pei" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">JW PEI Showroom &rarr;</a>
+            <a href="/collections/womens-handbags/jw-pei" class="link-faded-reverse">JW PEI Handbags</a>
+            <a href="/collections/kate-spade" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Kate Spade Showroom &rarr;</a>
+            <a href="/collections/womens-handbags/kate-spade" class="link-faded-reverse">Kate Spade Handbags</a>
+            <a href="/collections/michael-kors" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Michael Kors Showroom &rarr;</a>
+            <a href="/collections/womens-handbags/michael-kors" class="link-faded-reverse">Michael Kors Handbags</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Women's Silhouettes
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/womens-handbags" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop Women's Bags &rarr;</a>
+            <a href="/collections/womens-handbags/satchels" class="link-faded-reverse">Satchels &amp; Top Handles</a>
+            <a href="/collections/crossbody-bags" class="link-faded-reverse">Crossbody &amp; Messengers</a>
+            <a href="/collections/totes" class="link-faded-reverse">Totes &amp; Carryalls</a>
+            <a href="/collections/womens-handbags/shoulder-bags" class="link-faded-reverse">Shoulder Bags</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Men's Bags &amp; Packs
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/mens-bags" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop Men's Bags &rarr;</a>
+            <a href="/collections/mens-bags/coach" class="link-faded-reverse">COACH Men's Bags</a>
+            <a href="/collections/crossbody-bags" class="link-faded-reverse">Crossbody &amp; Messengers</a>
+            <a href="/collections/mens-bags/backpacks" class="link-faded-reverse">Backpacks &amp; Rucksacks</a>
+            <a href="/collections/mens-bags/satchels" class="link-faded-reverse">Briefcases &amp; Satchels</a>
+            <a href="/collections/totes" class="link-faded-reverse">Totes &amp; Carryalls</a>
+          </div>
+        </details>
+      
+    </li>
+  </ul>
+</div>
+
+<div id="header-panel-watches" class="header-sidebar__sub-panel" hidden>
+  <button type="button" class="header-sidebar__back-button link-faded {% if show_dividers %}is-divided{% endif %} text-with-icon {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %} md:hidden" data-action="close-panel">
+    <span class="header-sidebar__back-arrow">&larr;</span>
+    <span>Back to Menu (Watches)</span>
+  </button>
+
+  <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list" style="padding-bottom: max(3rem, env(safe-area-inset-bottom, 2rem));">
+    <li>
+      <a href="/collections/luxury-watches" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" style="font-weight: 600; color: #c9a876;">
+        Shop All Luxury Watches &rarr;
+      </a>
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Fine Horology Maisons
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/tissot" class="link-faded-reverse">Tissot (Swiss Made)</a>
+            <a href="/collections/seiko" class="link-faded-reverse">Seiko (Japan)</a>
+            <a href="/collections/citizen" class="link-faded-reverse">Citizen (Eco-Drive)</a>
+            <a href="/collections/movado" class="link-faded-reverse">Movado (Modernist)</a>
+            <a href="/collections/versace" class="link-faded-reverse">Versace (Milano)</a>
+            <a href="/collections/ferragamo" class="link-faded-reverse">Ferragamo (Swiss)</a>
+            <a href="/collections/michael-kors-watches" class="link-faded-reverse">Michael Kors</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Men's Timepieces
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/mens-watches" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop Men's Watches &rarr;</a>
+            <a href="/collections/mens-watches/tissot" class="link-faded-reverse">Tissot</a>
+            <a href="/collections/mens-watches/citizen" class="link-faded-reverse">Citizen</a>
+            <a href="/collections/mens-watches/seiko" class="link-faded-reverse">Seiko</a>
+            <a href="/collections/mens-watches/movado" class="link-faded-reverse">Movado</a>
+            <a href="/collections/mens-watches/versace" class="link-faded-reverse">Versace</a>
+            <a href="/collections/mens-watches/ferragamo" class="link-faded-reverse">Ferragamo</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Women's Timepieces
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/womens-watches" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">Shop Women's Watches &rarr;</a>
+            <a href="/collections/womens-watches/tissot" class="link-faded-reverse">Tissot</a>
+            <a href="/collections/womens-watches/seiko" class="link-faded-reverse">Seiko</a>
+            <a href="/collections/womens-watches/citizen" class="link-faded-reverse">Citizen</a>
+            <a href="/collections/womens-watches/movado" class="link-faded-reverse">Movado</a>
+            <a href="/collections/womens-watches/versace" class="link-faded-reverse">Versace</a>
+            <a href="/collections/michael-kors-watches" class="link-faded-reverse">Michael Kors</a>
+          </div>
+        </details>
+      
+    </li>
+  </ul>
+</div>
+
+<div id="header-panel-accessories" class="header-sidebar__sub-panel" hidden>
+  <button type="button" class="header-sidebar__back-button link-faded {% if show_dividers %}is-divided{% endif %} text-with-icon {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %} md:hidden" data-action="close-panel">
+    <span class="header-sidebar__back-arrow">&larr;</span>
+    <span>Back to Menu (Accessories)</span>
+  </button>
+
+  <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list" style="padding-bottom: max(3rem, env(safe-area-inset-bottom, 2rem));">
+    <li>
+      <a href="/collections/wallets-accessories" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}" style="font-weight: 600; color: #c9a876;">
+        Shop All Wallets &amp; Accessories &rarr;
+      </a>
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Wallets &amp; Small Leather Goods
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/wallets-leather-goods" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">All Leather Goods &rarr;</a>
+            <a href="/collections/womens-wallets" class="link-faded-reverse">Women's Wallets</a>
+            <a href="/collections/wallets-leather-goods/men" class="link-faded-reverse">Men's Wallets</a>
+            <a href="/collections/wallets-leather-goods/card-cases" class="link-faded-reverse">Card Cases &amp; Clips</a>
+            <a href="/collections/wallets-leather-goods/coach" class="link-faded-reverse">COACH Small Leather</a>
+            <a href="/collections/wallets-leather-goods/michael-kors" class="link-faded-reverse">Michael Kors Small Leather</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Designer Eyewear
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/designer-eyewear" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">All Sunglasses &rarr;</a>
+            <a href="/collections/womens-sunglasses/michael-kors" class="link-faded-reverse">Michael Kors Sunglasses</a>
+            <a href="/collections/womens-sunglasses/cat-eye" class="link-faded-reverse">Cat-Eye &amp; Butterfly</a>
+            <a href="/collections/womens-sunglasses/aviator" class="link-faded-reverse">Aviator &amp; Pilot</a>
+            <a href="/collections/womens-sunglasses/oversized" class="link-faded-reverse">Oversized &amp; Geometric</a>
+            <a href="/collections/mens-sunglasses" class="link-faded-reverse">Men's Sunglasses</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+          <summary class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            Belts &amp; Essentials
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/wallets-accessories" class="link-faded-reverse">Designer Belts</a>
+            <a href="/collections/wallets-accessories/coach" class="link-faded-reverse">COACH Accessories</a>
+            <a href="/collections/wallets-accessories/michael-kors" class="link-faded-reverse">Michael Kors Accessories</a>
+          </div>
+        </details>
+      
+    </li>
+  </ul>
+</div>
+
+<div id="header-panel-brands" class="header-sidebar__sub-panel" hidden>
+  <button type="button" class="header-sidebar__back-button link-faded {% if show_dividers %}is-divided{% endif %} text-with-icon {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %} md:hidden" data-action="close-panel">
+    <span class="header-sidebar__back-arrow">&larr;</span>
+    <span>Back to Menu (Maisons)</span>
+  </button>
+
+  <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list" style="padding-bottom: max(3.5rem, env(safe-area-inset-bottom, 2.5rem));">
+    <li>
+      <a href="/collections" class="luxury-sidebar__all-link-btn">
+        <span>View All Maisons</span>
+        <span>&rarr;</span>
+      </a>
+    </li>
+
+    {%- comment -%} Section 1: Iconic Leather Maisons {%- endcomment -%}
+    <li class="luxury-sidebar__section-title">
+      Leather Goods &amp; Ateliers
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group">
+          <summary class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            <span class="luxury-sidebar__brand-name">COACH</span>
+            <span class="luxury-sidebar__chip">Bags &amp; Leather</span>
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/coach" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">All COACH Showroom</a>
+            <a href="/collections/womens-handbags/coach" class="link-faded-reverse">Women's Handbags</a>
+            <a href="/collections/mens-bags/coach" class="link-faded-reverse">Men's Collection</a>
+            <a href="/collections/coach/footwear" class="link-faded-reverse">COACH Footwear</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group">
+          <summary class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            <span class="luxury-sidebar__brand-name">JW PEI</span>
+            <span class="luxury-sidebar__chip">Vegan Leather</span>
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/jw-pei" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">All JW PEI Showroom</a>
+            <a href="/collections/jw-pei/satchels" class="link-faded-reverse">Satchels &amp; Top Handles</a>
+            <a href="/collections/jw-pei/totes" class="link-faded-reverse">Totes &amp; Carryalls</a>
+          </div>
+        </details>
+      
+    </li>
+
+    <li>
+      <div class="luxury-sidebar__brand-block">
+        <details class="accordion__disclosure group">
+          <summary class="header-sidebar__linklist-button luxury-sidebar__brand-btn luxury-sidebar__brand-summary {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            <span class="luxury-sidebar__brand-name">Kate Spade</span>
+            <span class="luxury-sidebar__chip luxury-sidebar__brand-origin">New York</span>
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist luxury-sidebar__sub-links">
+            <a href="/collections/kate-spade" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">All Kate Spade Showroom &rarr;</a>
+            <a href="/collections/womens-handbags/kate-spade" class="link-faded-reverse">Women's Handbags</a>
+            <a href="/collections/kate-spade/crossbody-bags" class="link-faded-reverse">Crossbody Bags</a>
+            <a href="/collections/kate-spade/shoulder-bags" class="link-faded-reverse">Shoulder Bags</a>
+            <a href="/collections/kate-spade/satchels" class="link-faded-reverse">Satchels &amp; Top Handles</a>
+            <a href="/collections/kate-spade/totes" class="link-faded-reverse">Totes &amp; Carryalls</a>
+          </div>
+        </details>
+      </div>
+    </li>
+
+    <li>
+      
+        <details class="accordion__disclosure group">
+          <summary class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+            <span class="luxury-sidebar__brand-name">Michael Kors</span>
+            <span class="luxury-sidebar__chip">Multi-Category</span>
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </summary>
+          <div class="header-sidebar__nested-linklist">
+            <a href="/collections/michael-kors" class="link-faded-reverse" style="font-weight: 600; color: #c9a876;">All MK Showroom</a>
+            <a href="/collections/womens-handbags/michael-kors" class="link-faded-reverse">Luxury Handbags</a>
+            <a href="/collections/michael-kors-watches" class="link-faded-reverse">Luxury Watches</a>
+            <a href="/collections/womens-sunglasses/michael-kors" class="link-faded-reverse">Designer Sunglasses</a>
+            <a href="/collections/michael-kors/footwear" class="link-faded-reverse">Michael Kors Footwear</a>
+          </div>
+        </details>
+      
+    </li>
+
+    {%- comment -%} Section 2: Fine Timepieces & Horology {%- endcomment -%}
+    <li class="luxury-sidebar__section-title">
+      Fine Timepieces &amp; Horology
+    </li>
+
+    <li>
+      <a href="/collections/tissot" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">Tissot</span>
+        <span class="luxury-sidebar__chip">Swiss Watches</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/seiko" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">Seiko</span>
+        <span class="luxury-sidebar__chip">Japanese Craft</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/citizen" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">Citizen</span>
+        <span class="luxury-sidebar__chip">Eco-Drive</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/movado" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">Movado</span>
+        <span class="luxury-sidebar__chip">Modern Horology</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/versace" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">Versace</span>
+        <span class="luxury-sidebar__chip">Milano Haute</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/ferragamo" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">Ferragamo</span>
+        <span class="luxury-sidebar__chip">Swiss Made</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    {%- comment -%} Section 3: Performance & Designer Footwear {%- endcomment -%}
+    <li class="luxury-sidebar__section-title">
+      Performance &amp; Designer Footwear
+    </li>
+
+    <li>
+      <a href="/collections/all/adidas" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">adidas Originals</span>
+        <span class="luxury-sidebar__chip">Handball Spezial</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/all/asics" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">ASICS</span>
+        <span class="luxury-sidebar__chip">GEL-Kayano &amp; 1130</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/all/nike" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">Nike</span>
+        <span class="luxury-sidebar__chip">Vomero &amp; P-6000</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/all/salomon" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">Salomon</span>
+        <span class="luxury-sidebar__chip">Trail Running</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/all/on" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">On Running</span>
+        <span class="luxury-sidebar__chip">Swiss Tech</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/all/hoka" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">HOKA</span>
+        <span class="luxury-sidebar__chip">Maximalist</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/coach/footwear" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">Coach Footwear</span>
+        <span class="luxury-sidebar__chip">City &amp; Court</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/collections/michael-kors/footwear" class="header-sidebar__linklist-button luxury-sidebar__brand-btn {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %}">
+        <span class="luxury-sidebar__brand-name">MK Footwear</span>
+        <span class="luxury-sidebar__chip">Jet Set</span>
+        <span class="luxury-sidebar__arrow">&rarr;</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<script>
+  (function() {
+    if (window._luxuryPanelsInit) return;
+    window._luxuryPanelsInit = true;
+    function initSidebarPanels() {
+      // Handle opening panels via button[aria-controls]
+      document.querySelectorAll('button[aria-controls^="header-panel-"]').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('aria-controls');
+          const targetPanel = document.getElementById(targetId);
+          if (targetPanel) {
+            targetPanel.removeAttribute('hidden');
+            targetPanel.classList.add('is-active');
+            targetPanel.style.transform = 'translateX(0)';
+          }
+        });
+      });
+      // Handle back button closing panels via [data-action="close-panel"]
+      document.querySelectorAll('[data-action="close-panel"]').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const panel = this.closest('.header-sidebar__sub-panel');
+          if (panel) {
+            panel.classList.remove('is-active');
+            panel.setAttribute('hidden', '');
+            panel.style.transform = 'translateX(100%)';
+          }
+        });
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initSidebarPanels);
+    } else {
+      initSidebarPanels();
+    }
+  })();
+</script>

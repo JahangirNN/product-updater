@@ -10,7 +10,7 @@
   "source_price": 155.0,
   "source_compare_at_price": null,
   "current_price": 14878.0,
-  "compare_at_price": 14756.0,
+  "compare_at_price": 14632.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -243,7 +243,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/M6803011_01",
       "option_values": [
         {
@@ -337,12 +337,12 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-10-29T05:59:54Z",
+  "last_verified_at": "2026-11-16T15:44:19Z",
   "created_at": "2026-09-18T20:48:18Z",
-  "updated_at": "2026-10-29T05:59:54Z",
+  "updated_at": "2026-11-16T15:44:22Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851007541414",
   "shopify_handle": "nike-vomero-18-men-s-smoke-grey-black-orange-m6803011",
-  "shopify_synced_at": "2026-10-28T15:34:09Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-16T15:44:19Z",
+  "last_synced_fx_rate": 94.399626
 }

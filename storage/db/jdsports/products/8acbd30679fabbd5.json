@@ -12,12 +12,12 @@
   "source_price": 90.0,
   "source_compare_at_price": null,
   "current_price": 8550.0,
-  "compare_at_price": 11424.0,
+  "compare_at_price": 11409.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -246,7 +246,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/HF5441_107_P1",
       "option_values": [
         {
@@ -258,7 +258,7 @@
           "name": "White/Midnight Navy/White"
         }
       ],
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -296,7 +296,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/HF5441_107_P1",
       "option_values": [
         {
@@ -308,7 +308,7 @@
           "name": "White/Midnight Navy/White"
         }
       ],
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -449,7 +449,8 @@
     "JD Sports",
     "Men's",
     "Nike",
-    "Nike Dunk Low"
+    "Nike Dunk Low",
+    "supplier-delisted"
   ],
   "groups": [
     "footwear",
@@ -458,15 +459,15 @@
     "shoes"
   ],
   "created_at": "2026-09-20T16:06:31Z",
-  "updated_at": "2026-10-29T05:37:46Z",
-  "last_verified_at": "2026-10-29T05:37:46Z",
+  "updated_at": "2026-11-16T15:43:25Z",
+  "last_verified_at": "2026-11-16T15:43:23Z",
   "shopify_product_id": "gid://shopify/Product/15851454005414",
   "shopify_handle": "mens-nike-dunk-low-retro-casual-shoes-white-midnight-navy-white-3774330",
-  "shopify_synced_at": "2026-10-27T12:42:31Z",
+  "shopify_synced_at": "2026-11-16T15:43:23Z",
   "shopify_sync_pending": false,
-  "delist_strikes": 0,
-  "supplier_delisted": false,
+  "delist_strikes": 64,
+  "supplier_delisted": true,
   "price": "8550.00",
   "price_current": 8550.0,
-  "last_synced_fx_rate": 95.269051
+  "last_synced_fx_rate": 95.073571
 }

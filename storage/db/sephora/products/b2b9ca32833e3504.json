@@ -169,8 +169,8 @@
       "current_price": 3983,
       "price_inr": 3983,
       "compare_at_price": null,
-      "in_stock": false,
-      "is_active": false,
+      "in_stock": true,
+      "is_active": true,
       "barcode": "2816296",
       "image_url": "https://www.sephora.com/productimages/sku/s2816296-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2816296+sw.jpg",
@@ -178,7 +178,8 @@
       "variation_value": "We Need Better Lighting",
       "variation_type": "Color",
       "price": 3983,
-      "source_price": 42.0
+      "source_price": 42.0,
+      "inventory_quantity": 10
     },
     {
       "id": "2816262",
@@ -276,8 +277,13 @@
     "patrick-ta"
   ],
   "created_at": "2026-11-04T18:45:47Z",
-  "last_verified_at": "2026-11-05T10:41:15Z",
+  "last_verified_at": "2026-11-16T15:48:21Z",
   "id": "b2b9ca32833e3504",
-  "updated_at": "2026-11-05T10:41:15Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:48:21Z",
+  "last_synced_fx_rate": 94.620171,
+  "shopify_sync_pending": true,
+  "shopify_product_id": "gid://shopify/Product/15994230014118",
+  "shopify_handle": "patrick-ta-major-dimension-eye-illusion-eyeshadow-duo-p512579",
+  "shopify_synced_at": "2026-11-12T13:27:19Z",
+  "shopify_image_synced": true
 }

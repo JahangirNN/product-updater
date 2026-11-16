@@ -9,7 +9,7 @@
   "source_sku": "ON-7672552-7",
   "source_price": 170.0,
   "source_compare_at_price": null,
-  "current_price": 16196.0,
+  "current_price": 16085.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -4001,23 +4001,25 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:38:00Z",
+  "last_verified_at": "2026-11-16T13:42:51Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-10-29T03:38:00Z",
+  "updated_at": "2026-11-16T13:42:51Z",
   "price_range_usd": {
     "min": 170.0,
     "max": 170.0
   },
   "price_range_inr": {
-    "min": 16196.0,
-    "max": 16196.0
+    "min": 16085.0,
+    "max": 16085.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "16196.00",
+  "price": "16085.00",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15850877092006",
   "shopify_handle": "cloudtilt-athletic-sneaker-men",
-  "shopify_synced_at": "2026-10-28T01:35:18Z",
-  "last_synced_fx_rate": 95.269051
+  "shopify_synced_at": "2026-11-14T01:04:25Z",
+  "last_synced_fx_rate": 94.620171,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

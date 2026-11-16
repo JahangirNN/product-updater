@@ -11,8 +11,8 @@
   "source_sku": "3848016",
   "source_price": 100.0,
   "source_compare_at_price": null,
-  "current_price": 9688.0,
-  "compare_at_price": 11424.0,
+  "current_price": 9429.0,
+  "compare_at_price": 11328.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -39,8 +39,8 @@
       "id": null,
       "sku": "3848016",
       "title": "UK 5.5 - Black/White/Clover",
-      "price": "9599.00",
-      "price_current": 9599.0,
+      "price": "9429.00",
+      "price_current": 9429.0,
       "compare_at_price": null,
       "source_price": 100.0,
       "source_compare_at_price": null,
@@ -57,14 +57,15 @@
           "option_name": "Color",
           "name": "Black/White/Clover"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3848017",
       "title": "UK 6 - Black/White/Clover",
-      "price": "9599.00",
-      "price_current": 9599.0,
+      "price": "9429.00",
+      "price_current": 9429.0,
       "compare_at_price": null,
       "source_price": 100.0,
       "source_compare_at_price": null,
@@ -81,14 +82,15 @@
           "option_name": "Color",
           "name": "Black/White/Clover"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3331859",
       "title": "UK 6.5 - Black/White/Clover",
-      "price": "9599.00",
-      "price_current": 9599.0,
+      "price": "9429.00",
+      "price_current": 9429.0,
       "compare_at_price": null,
       "source_price": 100.0,
       "source_compare_at_price": null,
@@ -105,14 +107,15 @@
           "option_name": "Color",
           "name": "Black/White/Clover"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3331860",
       "title": "UK 7 - Black/White/Clover",
-      "price": "9599.00",
-      "price_current": 9599.0,
+      "price": "9429.00",
+      "price_current": 9429.0,
       "compare_at_price": null,
       "source_price": 100.0,
       "source_compare_at_price": null,
@@ -129,38 +132,15 @@
           "option_name": "Color",
           "name": "Black/White/Clover"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3331861",
       "title": "UK 7.5 - Black/White/Clover",
-      "price": "9599.00",
-      "price_current": 9599.0,
-      "compare_at_price": null,
-      "source_price": 100.0,
-      "source_compare_at_price": null,
-      "currency": "INR",
-      "source_currency": "USD",
-      "in_stock": false,
-      "image_url": "https://media.jdsports.com/i/finishline/IV2706_011_P1",
-      "option_values": [
-        {
-          "option_name": "Size",
-          "name": "UK 7.5"
-        },
-        {
-          "option_name": "Color",
-          "name": "Black/White/Clover"
-        }
-      ]
-    },
-    {
-      "id": null,
-      "sku": "3331862",
-      "title": "UK 8 - Black/White/Clover",
-      "price": "9599.00",
-      "price_current": 9599.0,
+      "price": "9429.00",
+      "price_current": 9429.0,
       "compare_at_price": null,
       "source_price": 100.0,
       "source_compare_at_price": null,
@@ -171,20 +151,46 @@
       "option_values": [
         {
           "option_name": "Size",
+          "name": "UK 7.5"
+        },
+        {
+          "option_name": "Color",
+          "name": "Black/White/Clover"
+        }
+      ],
+      "is_available": true
+    },
+    {
+      "id": null,
+      "sku": "3331862",
+      "title": "UK 8 - Black/White/Clover",
+      "price": "9429.00",
+      "price_current": 9429.0,
+      "compare_at_price": null,
+      "source_price": 100.0,
+      "source_compare_at_price": null,
+      "currency": "INR",
+      "source_currency": "USD",
+      "in_stock": false,
+      "image_url": "https://media.jdsports.com/i/finishline/IV2706_011_P1",
+      "option_values": [
+        {
+          "option_name": "Size",
           "name": "UK 8"
         },
         {
           "option_name": "Color",
           "name": "Black/White/Clover"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3331863",
       "title": "UK 8.5 - Black/White/Clover",
-      "price": "9599.00",
-      "price_current": 9599.0,
+      "price": "9429.00",
+      "price_current": 9429.0,
       "compare_at_price": null,
       "source_price": 100.0,
       "source_compare_at_price": null,
@@ -201,20 +207,21 @@
           "option_name": "Color",
           "name": "Black/White/Clover"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
       "sku": "3331864",
       "title": "UK 9 - Black/White/Clover",
-      "price": "9599.00",
-      "price_current": 9599.0,
+      "price": "9429.00",
+      "price_current": 9429.0,
       "compare_at_price": null,
       "source_price": 100.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IV2706_011_P1",
       "option_values": [
         {
@@ -225,20 +232,21 @@
           "option_name": "Color",
           "name": "Black/White/Clover"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3331865",
       "title": "UK 9.5 - Black/White/Clover",
-      "price": "9599.00",
-      "price_current": 9599.0,
+      "price": "9429.00",
+      "price_current": 9429.0,
       "compare_at_price": null,
       "source_price": 100.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/IV2706_011_P1",
       "option_values": [
         {
@@ -249,14 +257,15 @@
           "option_name": "Color",
           "name": "Black/White/Clover"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3331866",
       "title": "UK 10 - Black/White/Clover",
-      "price": "9599.00",
-      "price_current": 9599.0,
+      "price": "9429.00",
+      "price_current": 9429.0,
       "compare_at_price": null,
       "source_price": 100.0,
       "source_compare_at_price": null,
@@ -273,20 +282,21 @@
           "option_name": "Color",
           "name": "Black/White/Clover"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3331867",
       "title": "UK 10.5 - Black/White/Clover",
-      "price": "9599.00",
-      "price_current": 9599.0,
+      "price": "9429.00",
+      "price_current": 9429.0,
       "compare_at_price": null,
       "source_price": 100.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IV2706_011_P1",
       "option_values": [
         {
@@ -297,14 +307,15 @@
           "option_name": "Color",
           "name": "Black/White/Clover"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
       "sku": "3331868",
       "title": "UK 11 - Black/White/Clover",
-      "price": "9599.00",
-      "price_current": 9599.0,
+      "price": "9429.00",
+      "price_current": 9429.0,
       "compare_at_price": null,
       "source_price": 100.0,
       "source_compare_at_price": null,
@@ -321,20 +332,21 @@
           "option_name": "Color",
           "name": "Black/White/Clover"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
       "sku": "3475481",
       "title": "UK 11.5 - Black/White/Clover",
-      "price": "9599.00",
-      "price_current": 9599.0,
+      "price": "9429.00",
+      "price_current": 9429.0,
       "compare_at_price": null,
       "source_price": 100.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IV2706_011_P1",
       "option_values": [
         {
@@ -345,20 +357,21 @@
           "option_name": "Color",
           "name": "Black/White/Clover"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
       "sku": "3331869",
       "title": "UK 12 - Black/White/Clover",
-      "price": "9599.00",
-      "price_current": 9599.0,
+      "price": "9429.00",
+      "price_current": 9429.0,
       "compare_at_price": null,
       "source_price": 100.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IV2706_011_P1",
       "option_values": [
         {
@@ -369,20 +382,21 @@
           "option_name": "Color",
           "name": "Black/White/Clover"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
       "sku": "3331870",
       "title": "UK 13 - Black/White/Clover",
-      "price": "9599.00",
-      "price_current": 9599.0,
+      "price": "9429.00",
+      "price_current": 9429.0,
       "compare_at_price": null,
       "source_price": 100.0,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://media.jdsports.com/i/finishline/IV2706_011_P1",
       "option_values": [
         {
@@ -393,14 +407,15 @@
           "option_name": "Color",
           "name": "Black/White/Clover"
         }
-      ]
+      ],
+      "is_available": true
     },
     {
       "id": null,
       "sku": "3475484",
       "title": "UK 14 - Black/White/Clover",
-      "price": "9599.00",
-      "price_current": 9599.0,
+      "price": "9429.00",
+      "price_current": 9429.0,
       "compare_at_price": null,
       "source_price": 100.0,
       "source_compare_at_price": null,
@@ -417,7 +432,8 @@
           "option_name": "Color",
           "name": "Black/White/Clover"
         }
-      ]
+      ],
+      "is_available": false
     }
   ],
   "product_options": [
@@ -484,11 +500,11 @@
     }
   ],
   "tags": [
-    "Nike",
-    "Footwear",
     "Adult",
-    "Men's",
+    "Footwear",
     "JD Sports",
+    "Men's",
+    "Nike",
     "Nike Dunk Low"
   ],
   "groups": [
@@ -498,13 +514,15 @@
     "shoes"
   ],
   "created_at": "2026-09-20T16:06:31Z",
-  "updated_at": "2026-10-29T05:38:12Z",
-  "last_verified_at": "2026-10-29T05:38:12Z",
+  "updated_at": "2026-11-16T15:44:20Z",
+  "last_verified_at": "2026-11-16T15:44:18Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851452661926",
   "shopify_handle": "mens-nike-dunk-low-retro-casual-shoes-black-white-clover-3848016",
-  "shopify_synced_at": "2026-10-23T03:54:44Z",
-  "price": "9688.00",
-  "price_current": 9688.0,
-  "last_synced_fx_rate": 94.593871
+  "shopify_synced_at": "2026-11-16T15:44:18Z",
+  "price": "9429.00",
+  "price_current": 9429.0,
+  "last_synced_fx_rate": 94.399626,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

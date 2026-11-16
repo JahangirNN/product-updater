@@ -57,18 +57,71 @@
     }
   {%- endif -%}
 
-  #shopify-section-{{ section.id }} .header__primary-nav {
-    flex-wrap: nowrap !important;
-    column-gap: clamp(0.45rem, 1.1vw, 1.75rem) !important;
-    align-items: center !important;
+  #shopify-section-{{ section.id }} .header {
+    column-gap: clamp(1.25rem, 2.2vw, 2.75rem) !important;
   }
 
-  @media screen and (min-width: 1000px) and (max-width: 1250px) {
-    #shopify-section-{{ section.id }} .luxury-nav__trigger {
-      padding: 0.45rem 0.18rem !important;
-      font-size: 0.73rem !important;
-      letter-spacing: 0.07em !important;
-    }
+  #shopify-section-{{ section.id }} .header__primary-nav {
+    position: static !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #shopify-section-{{ section.id }} .header__split-nav-left {
+    position: static !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    column-gap: clamp(0.65rem, 1.2vw, 1.6rem) !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #shopify-section-{{ section.id }} .header__logo {
+    justify-self: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+
+  #shopify-section-{{ section.id }} .header__secondary-nav {
+    position: static !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    justify-self: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #shopify-section-{{ section.id }} .header__split-nav-right {
+    position: static !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    column-gap: clamp(0.65rem, 1.2vw, 1.6rem) !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #shopify-section-{{ section.id }} .header__secondary-icons {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    column-gap: clamp(0.65rem, 1.1vw, 1.35rem) !important;
+    margin: 0 !important;
+    margin-left: auto !important;
+    padding: 0 !important;
+    list-style: none !important;
   }
 
   #shopify-section-{{ section.id }} .header__primary-nav-item > a,
@@ -76,6 +129,52 @@
   #shopify-section-{{ section.id }} .header__primary-nav-item > details > summary,
   #shopify-section-{{ section.id }} .luxury-nav__trigger {
     white-space: nowrap !important;
+    font-family: var(--text-font-family) !important;
+    font-size: clamp(0.6875rem, 0.78vw, 0.75rem) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    padding: 0.5rem 0.25rem !important;
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1180px) {
+    #shopify-section-{{ section.id }} .header {
+      column-gap: 0.85rem !important;
+    }
+    #shopify-section-{{ section.id }} .header__split-nav-left,
+    #shopify-section-{{ section.id }} .header__split-nav-right {
+      column-gap: clamp(0.35rem, 0.65vw, 0.75rem) !important;
+    }
+    #shopify-section-{{ section.id }} .header__secondary-icons {
+      column-gap: 0.55rem !important;
+    }
+    #shopify-section-{{ section.id }} .luxury-nav__trigger {
+      padding: 0.4rem 0.12rem !important;
+      font-size: 0.625rem !important;
+      letter-spacing: 0.04em !important;
+    }
+    #shopify-section-{{ section.id }} .header__logo {
+      max-width: 120px !important;
+    }
+  }
+
+  @media screen and (max-width: 999px) {
+    #shopify-section-{{ section.id }} .header__split-nav-left,
+    #shopify-section-{{ section.id }} .header__split-nav-right {
+      display: none !important;
+    }
+    #shopify-section-{{ section.id }} .header__primary-nav {
+      justify-content: flex-start !important;
+      width: auto !important;
+    }
+    #shopify-section-{{ section.id }} .header__secondary-nav {
+      justify-content: flex-end !important;
+      width: auto !important;
+    }
+    #shopify-section-{{ section.id }} .header__secondary-icons {
+      margin-left: 0 !important;
+      column-gap: 0.75rem !important;
+    }
   }
 
   /* Suppress default theme duplicate underline pseudo-element */
@@ -137,12 +236,12 @@
         </button>
 
         {%- if section.settings.layout != 'drawer' -%}
-          <ul class="contents unstyled-list md-max:hidden">
-            {%- render 'luxury-desktop-nav', menu_open_trigger: section.settings.menu_open_trigger, menu_text_font: section.settings.menu_text_font -%}
+          <ul class="header__split-nav-left unstyled-list md-max:hidden">
+            {%- render 'luxury-desktop-nav', nav_position: 'left', menu_open_trigger: section.settings.menu_open_trigger, menu_text_font: section.settings.menu_text_font -%}
 
             {%- for link in menu.links -%}
               {%- assign link_title_downcase = link.title | strip | downcase -%}
-              {%- unless link_title_downcase == 'women' or link_title_downcase == 'men' or link_title_downcase == 'designers' or link_title_downcase == 'brands' or link_title_downcase contains 'watch' -%}
+              {%- unless link_title_downcase == 'women' or link_title_downcase == 'men' or link_title_downcase == 'footwear' or link_title_downcase == 'handbags' or link_title_downcase == 'watches' or link_title_downcase == 'accessories' or link_title_downcase == 'designers' or link_title_downcase == 'brands' or link_title_downcase contains 'watch' or link_title_downcase contains 'ready to ship' or link.url contains 'instant-ship' or link_title_downcase contains 'gift' or link.url contains 'gift' -%}
                 {% liquid
                   assign mega_menu_block = ''
 
@@ -237,7 +336,13 @@
         endif
       -%}
 
-      <ul class="contents unstyled-list">
+      {%- if section.settings.layout != 'drawer' -%}
+        <ul class="header__split-nav-right unstyled-list md-max:hidden">
+          {%- render 'luxury-desktop-nav', nav_position: 'right', menu_open_trigger: section.settings.menu_open_trigger, menu_text_font: section.settings.menu_text_font -%}
+        </ul>
+      {%- endif -%}
+
+      <ul class="header__secondary-icons unstyled-list">
         {%- if show_country_selector or show_locale_selector -%}
           <li class="localization-selectors md-max:hidden">
             {%- if show_country_selector -%}

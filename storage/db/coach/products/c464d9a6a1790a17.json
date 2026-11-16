@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.674534,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Suede, leather and recycled polyester mesh upper",
   "specifications": {
     "Material": "Suede, leather and recycled polyester mesh upper",
@@ -59,7 +59,8 @@
           "name": "US 7 / UK 6.5"
         }
       ],
-      "price_current": 4467.0
+      "price_current": 4467.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -79,7 +80,8 @@
           "name": "US 7.5 / UK 7"
         }
       ],
-      "price_current": 4467.0
+      "price_current": 4467.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -99,7 +101,8 @@
           "name": "US 8 / UK 7.5"
         }
       ],
-      "price_current": 4467.0
+      "price_current": 4467.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -119,7 +122,8 @@
           "name": "US 8.5 / UK 8"
         }
       ],
-      "price_current": 4467.0
+      "price_current": 4467.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -131,7 +135,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cew36_z0h_a0",
       "option_values": [
         {
@@ -139,7 +143,8 @@
           "name": "US 9 / UK 8.5"
         }
       ],
-      "price_current": 4467.0
+      "price_current": 4467.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -151,7 +156,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cew36_z0h_a0",
       "option_values": [
         {
@@ -159,7 +164,8 @@
           "name": "US 9.5 / UK 9"
         }
       ],
-      "price_current": 4467.0
+      "price_current": 4467.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -179,7 +185,8 @@
           "name": "US 10 / UK 9.5"
         }
       ],
-      "price_current": 4467.0
+      "price_current": 4467.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -191,7 +198,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cew36_z0h_a0",
       "option_values": [
         {
@@ -199,7 +206,8 @@
           "name": "US 10.5 / UK 10"
         }
       ],
-      "price_current": 4467.0
+      "price_current": 4467.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -219,7 +227,8 @@
           "name": "US 11 / UK 10.5"
         }
       ],
-      "price_current": 4467.0
+      "price_current": 4467.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -239,7 +248,8 @@
           "name": "US 11.5 / UK 11"
         }
       ],
-      "price_current": 4467.0
+      "price_current": 4467.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -251,7 +261,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cew36_z0h_a0",
       "option_values": [
         {
@@ -259,7 +269,8 @@
           "name": "US 12 / UK 11.5"
         }
       ],
-      "price_current": 4467.0
+      "price_current": 4467.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -271,7 +282,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cew36_z0h_a0",
       "option_values": [
         {
@@ -279,7 +290,8 @@
           "name": "US 13 / UK 12.5"
         }
       ],
-      "price_current": 4467.0
+      "price_current": 4467.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -334,16 +346,17 @@
     "men_shoes"
   ],
   "created_at": "2026-09-13T00:46:23Z",
-  "last_verified_at": "2026-10-29T03:40:51Z",
+  "last_verified_at": "2026-11-16T15:42:47Z",
   "id": "c464d9a6a1790a17",
   "product_id": "c464d9a6a1790a17",
   "store": "coach",
-  "updated_at": "2026-10-29T03:40:51Z",
-  "is_active": true,
+  "updated_at": "2026-11-16T15:42:47Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15848609808550",
   "shopify_handle": "retro-runner-cew36-z0h-8-d",
-  "shopify_synced_at": "2026-10-28T23:49:54Z",
+  "shopify_synced_at": "2026-11-13T23:08:36Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 93.851604,
+  "supplier_delisted": false
 }

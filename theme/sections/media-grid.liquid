@@ -1,102 +1,420 @@
 {%- if section.blocks.size > 0 -%}
   <style>
-    #shopify-section-{{ section.id }} {
-      --media-grid-row-height: {{ section.settings.mobile_row_height }}px;
-      --media-grid-gap: {% if section.settings.spacing == 'xs' %}0.5rem{% elsif section.settings.spacing == 'sm' %}1rem{% elsif section.settings.spacing == 'md' %}1.5rem{% elsif section.settings.spacing == 'lg' %}2rem{% else %}0rem{% endif %};
-
-      {%- if section.settings.section_width == 'full' -%}
-        --container-gutter: var(--media-grid-gap);
-      {%- endif -%}
-
-      {%- if section.settings.subheading == blank and section.settings.title == blank and section.settings.content == blank and section.settings.section_width == 'full' -%}
-        --section-vertical-spacing-override: var(--media-grid-gap);
-      {%- endif -%}
+    #shopify-section-{{ section.id }} .pillar-triptych-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
     }
 
-    @media screen and (min-width: 700px) {
-      #shopify-section-{{ section.id }} {
-        --media-grid-row-height: {{ section.settings.desktop_row_height }}px;
+    @media screen and (min-width: 900px) {
+      #shopify-section-{{ section.id }} .pillar-triptych-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
       }
     }
 
-    @media screen and (min-width: 1150px) {
-      #shopify-section-{{ section.id }} {
-        --media-grid-gap: {% if section.settings.spacing == 'xs' %}0.75rem{% elsif section.settings.spacing == 'sm' %}1.25rem{% elsif section.settings.spacing == 'md' %}1.875rem{% elsif section.settings.spacing == 'lg' %}2.5rem{% else %}0rem{% endif %};
-      }
+    #shopify-section-{{ section.id }} .pillar-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      border-radius: 4px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+      overflow: hidden;
+      text-decoration: none;
+      color: #111111;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201, 168, 118, 0.55);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Top Header Bar */
+    #shopify-section-{{ section.id }} .pillar-card__topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding: 0.85rem 1.15rem 0.65rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      background-color: #ffffff;
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card__kicker {
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.5625rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #947847;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card__pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.22rem 0.55rem;
+      border-radius: 9999px;
+      background: #111111;
+      border: 1px solid rgba(201, 168, 118, 0.35);
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.5625rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #c9a876;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* Asymmetric 3-Piece Studio Bento Stage */
+    #shopify-section-{{ section.id }} .pillar-card__bento {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      background-color: rgba(0, 0, 0, 0.05);
+      aspect-ratio: 4 / 3;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card__hero-cell {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      overflow: hidden;
+      position: relative;
+      min-width: 0;
+      min-height: 0;
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card__hero-img {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      min-width: 0;
+      min-height: 0;
+      object-fit: contain;
+      object-position: center;
+      transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card:hover .pillar-card__hero-img {
+      transform: scale(1.05);
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card__side-cell {
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.65rem;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: background-color 0.25s ease;
+      min-width: 0;
+      min-height: 0;
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card__side-cell:hover {
+      background-color: #faf9f6;
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card__side-img {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      min-width: 0;
+      min-height: 0;
+      object-fit: contain;
+      object-position: center;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card__side-cell:hover .pillar-card__side-img {
+      transform: scale(1.06);
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card__side-vendor {
+      position: absolute;
+      bottom: 0.35rem;
+      right: 0.45rem;
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.5rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #767676;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 0.1rem 0.35rem;
+      border-radius: 2px;
+      pointer-events: none;
+    }
+
+    /* Editorial Bottom Plate */
+    #shopify-section-{{ section.id }} .pillar-card__footer {
+      padding: 1rem 1.15rem 1.15rem;
+      background-color: #ffffff;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      text-align: left;
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card__maisons {
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.5625rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #767676;
+      margin: 0 0 0.3rem 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card__title {
+      font-family: var(--heading-font-family, inherit);
+      font-size: 1.125rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #111111;
+      margin: 0 0 0.65rem 0;
+      line-height: 1.25;
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card__meta-row {
+      margin-top: auto;
+      padding-top: 0.6rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card__price-floor {
+      font-family: var(--body-font-family, inherit);
+      font-size: 0.75rem;
+      color: #555555;
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card__price-floor strong {
+      color: #111111;
+      font-weight: 600;
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-family: var(--heading-font-family, inherit);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #947847;
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+
+    #shopify-section-{{ section.id }} .pillar-card:hover .pillar-card__cta {
+      color: #111111;
+      transform: translateX(3px);
     }
   </style>
 
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
   <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
-    <div class="container {% unless section.settings.section_width == 'full' %}container--{{ section.settings.section_width }}{% endunless %}">
+    <div class="container">
       <div class="section-stack">
-        {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content -%}
+        {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, text_alignment: 'center' -%}
 
-        <media-grid class="media-grid">
+        <div class="pillar-triptych-grid">
           {%- for block in section.blocks -%}
-            {%- capture block_content -%}
-              <div class="content-over-media color-scheme color-scheme--{{ block.settings.color_scheme.id }} group" reveal-on-scroll="true" style="--content-over-media-overlay: {{ block.settings.overlay_color.rgb }} / {{ block.settings.overlay_opacity | divided_by: 100.0 }};">
-                {%- if block.type == 'image' -%}
-                  {%- if block.settings.image -%}
-                    {%- if section.settings.section_width == 'full' -%}
-                      {%- capture sizes_attribute -%}(max-width: 699px) 100vw, {{ 100.0 | divided_by: 12.0 | times: block.settings.column_count | round }}vw{%- endcapture -%}
-                    {%- else -%}
-                      {%- capture sizes_attribute -%}(max-width: 699px) 100vw, {{ 1260.0 | divided_by: 12.0 | times: block.settings.column_count | round }}px{%- endcapture -%}
-                    {%- endif -%}
+            {%- liquid
+              assign link_url = block.settings.link_url | default: '/collections/all'
+              assign col_handle = link_url | split: '/collections/' | last | split: '?' | first | split: '/' | first
+              assign pillar_col = collections[col_handle]
 
-                    {%- liquid
-                      assign loading_strategy = nil
+              assign p1 = nil
+              assign p2 = nil
+              assign p3 = nil
+              assign min_price = 0
 
-                      # As of today, Shopify reset the automatic loading strategy on each section group. This section is often used in the footer group
-                      # to show some images on every pages. This allows to ensure that all images are always lazy-loaded when this section is used in the footer.
-                      if section.location == 'footer'
-                        assign loading_strategy = 'lazy'
-                      endif
+              if col_handle == 'designer-bags'
+                assign p_kicker = 'HAUTE LEATHERCRAFT'
+                assign p_maisons = 'COACH · MICHAEL KORS · JW PEI'
+                assign p1 = collections['designer-bags'].products[0] | default: collections['totes'].products[0]
+                assign p2 = collections['totes'].products[1] | default: collections['crossbody-bags'].products[1]
+                assign p3 = collections['jw-pei'].products[2] | default: collections['jw-pei'].products[0]
+              elsif col_handle == 'premium-footwear'
+                assign p_kicker = 'ATHLETIC & RUNWAY ARCHIVE'
+                assign p_maisons = 'NIKE · ON RUNNING · HOKA · ADIDAS · SALOMON'
+                assign p1 = collections['nike'].products[3] | default: collections['nike'].products[0]
+                assign p2 = collections['on-running'].products[1] | default: collections['on-running'].products[0]
+                assign p3 = collections['hoka'].products[1] | default: collections['adidas'].products[0]
+              elsif col_handle == 'luxury-watches'
+                assign p_kicker = 'SWISS & JAPANESE HOROLOGY'
+                assign p_maisons = 'TISSOT · SEIKO · CITIZEN · MOVADO · VERSACE'
+                assign p1 = collections['tissot'].products[2] | default: collections['tissot'].products[0]
+                assign p2 = collections['movado'].products[1] | default: collections['movado'].products[0]
+                assign p3 = collections['versace'].products[1] | default: collections['citizen'].products[1]
+              else
+                assign p_kicker = 'CURATED PORTFOLIO'
+                assign p_maisons = 'THE RARE AVENUE VAULT'
+                if pillar_col != blank
+                  assign p1 = pillar_col.products[0]
+                  assign p2 = pillar_col.products[1]
+                  assign p3 = pillar_col.products[2]
+                endif
+              endif
 
-                      echo block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: loading_strategy, sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600', class: 'zoom-image group-hover:zoom'
-                    -%}
-                  {%- else -%}
-                    {%- capture collection_image -%}collection-{% cycle '1', '2', '3', '4' %}{%- endcapture -%}
-                    {{- collection_image | placeholder_svg_tag: 'placeholder zoom-image group-hover:zoom' -}}
-                  {%- endif -%}
-                {%- else -%}
-                  {%- if block.settings.video -%}
-                    {%- render 'media', media: block.settings.video, autoplay: block.settings.autoplay, loop: true, controls: block.settings.show_controls -%}
-                  {%- else -%}
-                    {%- capture collection_image -%}collection-{% cycle '1', '2', '3', '4' %}{%- endcapture -%}
-                    {{- collection_image | placeholder_svg_tag: 'placeholder zoom-image group-hover:zoom' -}}
-                  {%- endif -%}
-                {%- endif -%}
+              if pillar_col != blank and pillar_col.products_count > 0
+                for prod in pillar_col.products limit: 45
+                  if prod.price > 0
+                    if min_price == 0 or prod.price < min_price
+                      assign min_price = prod.price
+                    endif
+                  endif
+                endfor
+              endif
 
-                {%- if block.settings.title != blank or block.settings.content != blank or block.settings.link_text != blank -%}
-                  <div class="prose prose--tight {{ block.settings.text_position }}">
-                    <p class="{{ block.settings.heading_tag }}">{{ block.settings.title }}</p>
+              assign img1 = p1.featured_media.preview_image | default: p1.featured_image
+              assign img2 = p2.featured_media.preview_image | default: p2.featured_image
+              assign img3 = p3.featured_media.preview_image | default: p3.featured_image
+              assign total_pieces = pillar_col.all_products_count | default: pillar_col.products_count
+            -%}
 
-                    {{- block.settings.content -}}
-
-                    {%- if block.settings.link_text != blank -%}
-                      {%- render 'button', content: block.settings.link_text, style: block.settings.link_style -%}
-                    {%- endif -%}
-                  </div>
+            <a href="{{ link_url }}" class="pillar-card" {{ block.shopify_attributes }}>
+              <div class="pillar-card__topbar">
+                <span class="pillar-card__kicker">{{ p_kicker }}</span>
+                {%- if total_pieces > 0 -%}
+                  <span class="pillar-card__pill">{{ total_pieces }} PIECES</span>
                 {%- endif -%}
               </div>
-            {%- endcapture -%}
 
-            {%- if block.settings.link_url -%}
-              <a href="{{ block.settings.link_url }}" class="media-grid__item" style="--media-grid-item-column-span: {{ block.settings.column_count }}; --media-grid-item-row-span: {{ block.settings.row_count }}" {{ block.shopify_attributes }}>
-                {{- block_content -}}
-              </a>
-            {%- else -%}
-              <div class="media-grid__item" style="--media-grid-item-column-span: {{ block.settings.column_count }}; --media-grid-item-row-span: {{ block.settings.row_count }}" {{ block.shopify_attributes }}>
-                {{- block_content -}}
+              <div class="pillar-card__bento">
+                <div class="pillar-card__hero-cell">
+                  {%- if img1 != blank -%}
+                    <img
+                      src="{{ img1 | image_url: width: 800 }}"
+                      alt="{{ p1.title | default: block.settings.title | escape }}"
+                      width="600"
+                      height="600"
+                      loading="lazy"
+                      class="pillar-card__hero-img"
+                    />
+                  {%- endif -%}
+                </div>
+
+                <div
+                  class="pillar-card__side-cell"
+                  {% if img2 != blank %}data-swap-src="{{ img2 | image_url: width: 800 }}"{% endif %}
+                >
+                  {%- if img2 != blank -%}
+                    <img
+                      src="{{ img2 | image_url: width: 400 }}"
+                      alt="{{ p2.title | escape }}"
+                      width="300"
+                      height="300"
+                      loading="lazy"
+                      class="pillar-card__side-img"
+                    />
+                    {%- if p2.vendor != blank -%}
+                      <span class="pillar-card__side-vendor">{{ p2.vendor }}</span>
+                    {%- endif -%}
+                  {%- endif -%}
+                </div>
+
+                <div
+                  class="pillar-card__side-cell"
+                  {% if img3 != blank %}data-swap-src="{{ img3 | image_url: width: 800 }}"{% endif %}
+                >
+                  {%- if img3 != blank -%}
+                    <img
+                      src="{{ img3 | image_url: width: 400 }}"
+                      alt="{{ p3.title | escape }}"
+                      width="300"
+                      height="300"
+                      loading="lazy"
+                      class="pillar-card__side-img"
+                    />
+                    {%- if p3.vendor != blank -%}
+                      <span class="pillar-card__side-vendor">{{ p3.vendor }}</span>
+                    {%- endif -%}
+                  {%- endif -%}
+                </div>
               </div>
-            {%- endif -%}
+
+              <div class="pillar-card__footer">
+                <p class="pillar-card__maisons">{{ p_maisons }}</p>
+                <h3 class="pillar-card__title">{{ block.settings.title }}</h3>
+                <div class="pillar-card__meta-row">
+                  {%- if min_price > 0 -%}
+                    <span class="pillar-card__price-floor">From <strong>{{ min_price | money }}</strong></span>
+                  {%- else -%}
+                    <span class="pillar-card__price-floor">Verified Authentic</span>
+                  {%- endif -%}
+                  <span class="pillar-card__cta">
+                    {{ block.settings.link_text | default: 'Explore Vault' | escape }} &rarr;
+                  </span>
+                </div>
+              </div>
+            </a>
           {%- endfor -%}
-        </media-grid>
+        </div>
       </div>
     </div>
   </div>
+
+  <script>
+    (function() {
+      if (window._rareAvenuePillarSwapInitialized) return;
+      window._rareAvenuePillarSwapInitialized = true;
+
+      document.addEventListener('mouseover', function(e) {
+        const side = e.target.closest('.pillar-card__side-cell[data-swap-src]');
+        if (!side) return;
+        const card = side.closest('.pillar-card');
+        if (!card) return;
+        const heroImg = card.querySelector('.pillar-card__hero-img');
+        const newSrc = side.getAttribute('data-swap-src');
+        if (heroImg && newSrc) {
+          if (!card._defaultHeroSrc) card._defaultHeroSrc = heroImg.src;
+          heroImg.src = newSrc;
+        }
+      }, { passive: true });
+
+      document.addEventListener('mouseout', function(e) {
+        const side = e.target.closest('.pillar-card__side-cell[data-swap-src]');
+        if (!side) return;
+        const card = side.closest('.pillar-card');
+        if (card && card._defaultHeroSrc) {
+          const heroImg = card.querySelector('.pillar-card__hero-img');
+          if (heroImg) heroImg.src = card._defaultHeroSrc;
+        }
+      }, { passive: true });
+    })();
+  </script>
 {%- endif -%}
 
 {% schema %}

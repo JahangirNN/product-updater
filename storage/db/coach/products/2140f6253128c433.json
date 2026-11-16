@@ -65,7 +65,8 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -85,7 +86,8 @@
           "name": "Brass/Dark Fuchsia"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -105,7 +107,8 @@
           "name": "Brass/Deep Sky Multi"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -125,7 +128,8 @@
           "name": "Brass/Black"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -145,7 +149,8 @@
           "name": "Brass/Olive"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -165,7 +170,8 @@
           "name": "Brass/Black Currant"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -185,7 +191,8 @@
           "name": "Brass/Navy"
         }
       ],
-      "price_current": 6479.0
+      "price_current": 6479.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -205,7 +212,8 @@
           "name": "Brass/Maple"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -225,7 +233,8 @@
           "name": "Brass/Scarlet"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -245,7 +254,8 @@
           "name": "Brass/Toffee"
         }
       ],
-      "price_current": 7775.0
+      "price_current": 7775.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -265,7 +275,8 @@
           "name": "Brass/Fuchsia"
         }
       ],
-      "price_current": 10079.0
+      "price_current": 10079.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -285,7 +296,8 @@
           "name": "Brass/Pink Multi"
         }
       ],
-      "price_current": 11759.0
+      "price_current": 11759.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -305,7 +317,8 @@
           "name": "Brass/Chalk"
         }
       ],
-      "price_current": 11759.0
+      "price_current": 11759.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -325,7 +338,8 @@
           "name": "Brass/Kelly Green"
         }
       ],
-      "price_current": 10079.0
+      "price_current": 10079.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -345,7 +359,8 @@
           "name": "Brass/Maple"
         }
       ],
-      "price_current": 12959.0
+      "price_current": 12959.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -365,7 +380,8 @@
           "name": "Brass/Melon Pink"
         }
       ],
-      "price_current": 7775.0
+      "price_current": 7775.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -422,23 +438,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Handbags"
+    "Handbags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:39:27Z",
-  "last_verified_at": "2026-10-29T03:37:37Z",
+  "last_verified_at": "2026-11-16T15:46:53Z",
   "id": "2140f6253128c433",
   "product_id": "2140f6253128c433",
   "store": "coach",
-  "updated_at": "2026-10-29T03:37:37Z",
+  "updated_at": "2026-11-16T15:46:53Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841795211430",
   "shopify_handle": "plaza-bag-cft28-lhblk",
-  "shopify_synced_at": "2026-10-14T17:28:17Z",
+  "shopify_synced_at": "2026-11-14T01:16:25Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

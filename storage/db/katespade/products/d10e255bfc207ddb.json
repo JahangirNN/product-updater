@@ -7,14 +7,14 @@
   "product_type": "Crossbody Bags",
   "gender": "Women",
   "source_sku": "KC928-020",
-  "source_price": 74.25,
+  "source_price": 198.0,
   "source_compare_at_price": null,
-  "current_price": 7069,
+  "current_price": 18869.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.199335,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Saffiano leather",
   "specifications": {
     "Material": "Saffiano leather",
@@ -57,14 +57,14 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KC928_020",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KC928_020",
         "https://katespade.scene7.com/is/image/KateSpade/KC928_020_3",
         "https://katespade.scene7.com/is/image/KateSpade/KC928_020_4"
       ],
-      "inventory_quantity": 10,
+      "inventory_quantity": 0,
       "image_url": "https://katespade.scene7.com/is/image/KateSpade/KC928_020"
     },
     {
@@ -112,9 +112,13 @@
     "handbags"
   ],
   "created_at": "2026-10-29T05:25:28Z",
-  "last_verified_at": "2026-10-29T07:37:32Z",
+  "last_verified_at": "2026-11-16T15:42:04Z",
   "_elapsed_ms": 3347.5126000121236,
   "id": "d10e255bfc207ddb",
-  "updated_at": "2026-10-29T07:37:32Z",
-  "last_synced_fx_rate": 95.29615
+  "updated_at": "2026-11-16T15:42:04Z",
+  "last_synced_fx_rate": 95.29615,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15915099783334",
+  "shopify_handle": "bleecker-small-crossbody-bag",
+  "shopify_synced_at": "2026-10-30T08:31:53Z"
 }

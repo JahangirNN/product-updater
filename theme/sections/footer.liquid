@@ -70,6 +70,8 @@
 
                       <ul class="v-stack gap-2.5 unstyled-list" role="list">
                         {%- for link in menu.links -%}
+                          {%- assign link_title_lc = link.title | strip | downcase -%}
+                          {%- if link_title_lc contains 'ready to ship' or link.url contains 'instant-ship' or link_title_lc contains 'gift' or link.url contains 'gift' -%}{%- continue -%}{%- endif -%}
                           <li>
                             <a href="{{ link.url }}" class="link-faded">{{ link.title }}</a>
                           </li>

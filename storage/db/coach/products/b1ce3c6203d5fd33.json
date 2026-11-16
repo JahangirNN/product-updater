@@ -80,7 +80,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -100,7 +101,8 @@
           "name": "Gold/Dark Stone"
         }
       ],
-      "price_current": 6719.0
+      "price_current": 6719.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -120,7 +122,8 @@
           "name": "Gold/Chalk"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -140,7 +143,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -160,7 +164,8 @@
           "name": "Gold/Maple"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -180,7 +185,8 @@
           "name": "Gold/Poppy"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -200,7 +206,8 @@
           "name": "Gold/Walnut/Black"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -220,7 +227,8 @@
           "name": "Gold/Sand/Chalk"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -240,7 +248,8 @@
           "name": "Silver/Sand/Taupe"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -260,7 +269,8 @@
           "name": "Gold/Tan/Black"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -280,7 +290,8 @@
           "name": "Gold/Tan/Brown"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -300,7 +311,8 @@
           "name": "Gold/White/Chalk"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -320,7 +332,8 @@
           "name": "Gold/Navy"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -340,7 +353,8 @@
           "name": "Gold/Black Currant"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -360,7 +374,8 @@
           "name": "Gold/Chalk Multi"
         }
       ],
-      "price_current": 7487.0
+      "price_current": 7487.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -380,7 +395,8 @@
           "name": "Gold/Light Lemon"
         }
       ],
-      "price_current": 6719.0
+      "price_current": 6719.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -400,7 +416,8 @@
           "name": "Gold/Light Blue"
         }
       ],
-      "price_current": 6719.0
+      "price_current": 6719.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -420,7 +437,8 @@
           "name": "Gold/Tan"
         }
       ],
-      "price_current": 5615.0
+      "price_current": 5615.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -440,7 +458,8 @@
           "name": "Gold/Indigo"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -460,7 +479,8 @@
           "name": "Silver/LIGHT VIOLET"
         }
       ],
-      "price_current": 7218.0
+      "price_current": 7218.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -480,7 +500,8 @@
           "name": "Silver/PINK"
         }
       ],
-      "price_current": 7218.0
+      "price_current": 7218.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -499,7 +520,8 @@
           "option_name": "Color",
           "name": "Silver/Chalk/Jasmine"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -519,7 +541,8 @@
           "name": "Silver/MINT"
         }
       ],
-      "price_current": 7218.0
+      "price_current": 7218.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -539,7 +562,8 @@
           "name": "Silver/LIGHT VIOLET"
         }
       ],
-      "price_current": 7218.0
+      "price_current": 7218.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -559,7 +583,8 @@
           "name": "Silver/BLACK"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -579,7 +604,8 @@
           "name": "Silver/Black Multi"
         }
       ],
-      "price_current": 9138.0
+      "price_current": 9138.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -599,7 +625,8 @@
           "name": "Silver/BLACK/PURPLE"
         }
       ],
-      "price_current": 9138.0
+      "price_current": 9138.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -618,7 +645,8 @@
           "option_name": "Color",
           "name": "Silver/CLAY"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -638,7 +666,8 @@
           "name": "Gold/Dark Natural Multi"
         }
       ],
-      "price_current": 7218.0
+      "price_current": 7218.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -658,7 +687,8 @@
           "name": "Gold/Sand/Tan"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -678,7 +708,8 @@
           "name": "Silver/BLACK"
         }
       ],
-      "price_current": 10377.0
+      "price_current": 10377.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -774,23 +805,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Handbags"
+    "Handbags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:45:43Z",
-  "last_verified_at": "2026-10-29T03:37:13Z",
+  "last_verified_at": "2026-11-16T15:43:57Z",
   "id": "b1ce3c6203d5fd33",
   "product_id": "b1ce3c6203d5fd33",
   "store": "coach",
-  "updated_at": "2026-10-29T03:37:13Z",
+  "updated_at": "2026-11-16T15:43:57Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15841796980902",
   "shopify_handle": "nolita-19-cbq88-imblk",
-  "shopify_synced_at": "2026-10-28T11:39:42Z",
+  "shopify_synced_at": "2026-11-14T01:05:22Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

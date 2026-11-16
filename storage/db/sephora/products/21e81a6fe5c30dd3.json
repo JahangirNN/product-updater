@@ -74,8 +74,8 @@
       "current_price": 3035,
       "price_inr": 3035,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "3019452",
       "image_url": "https://www.sephora.com/productimages/sku/s3019452-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s3019452+sw.jpg",
@@ -83,7 +83,8 @@
       "variation_value": "Medium / Rose Crush",
       "variation_type": "Color",
       "price": 3035,
-      "source_price": 32.0
+      "source_price": 32.0,
+      "inventory_quantity": 0
     },
     {
       "id": "3019437",
@@ -136,8 +137,14 @@
     "makeup-by-mario"
   ],
   "created_at": "2026-11-04T19:02:56Z",
-  "last_verified_at": "2026-11-05T12:38:11Z",
+  "last_verified_at": "2026-11-16T15:44:02Z",
   "id": "21e81a6fe5c30dd3",
-  "updated_at": "2026-11-05T12:38:11Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:44:02Z",
+  "last_synced_fx_rate": 94.262076,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15993704054950",
+  "shopify_handle": "makeup-by-mario-mini-blush-veil-skin-enhancer-duo-p526005",
+  "shopify_synced_at": "2026-11-15T15:43:38Z",
+  "shopify_image_synced": true,
+  "primary_image": "https://www.sephora.com/productimages/sku/s3019478-main-zoom.jpg"
 }

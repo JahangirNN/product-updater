@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.199335,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Pebbled leather",
   "specifications": {
     "Material": "Pebbled leather",
@@ -67,7 +67,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KN634_001_2"
       ],
       "inventory_quantity": 0,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KN634_001"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KN634_001",
+      "is_available": false
     },
     {
       "id": null,
@@ -82,15 +83,16 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KN634_403",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KN634_403",
         "https://katespade.scene7.com/is/image/KateSpade/KN634_403_1",
         "https://katespade.scene7.com/is/image/KateSpade/KN634_403_3"
       ],
-      "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KN634_403"
+      "inventory_quantity": 0,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KN634_403",
+      "is_available": false
     }
   ],
   "product_options": [
@@ -105,18 +107,26 @@
     }
   ],
   "tags": [
-    "Kate Spade",
-    "Women",
     "Handbags",
-    "Totes & Carryalls"
+    "Kate Spade",
+    "Totes & Carryalls",
+    "Women",
+    "supplier-delisted"
   ],
   "groups": [
     "handbags"
   ],
   "created_at": "2026-10-29T05:29:29Z",
-  "last_verified_at": "2026-10-29T07:43:59Z",
+  "last_verified_at": "2026-11-16T15:49:19Z",
   "_elapsed_ms": 3558.4851999301463,
   "id": "e1481fb6ac539fab",
-  "updated_at": "2026-10-29T07:43:59Z",
-  "last_synced_fx_rate": 95.29615
+  "updated_at": "2026-11-16T15:49:21Z",
+  "last_synced_fx_rate": 95.050072,
+  "shopify_product_id": "gid://shopify/Product/15915101913254",
+  "shopify_handle": "stash-small-carryall-bag",
+  "shopify_synced_at": "2026-11-16T15:49:19Z",
+  "shopify_sync_pending": false,
+  "delist_strikes": 8,
+  "supplier_delisted": true,
+  "is_active": false
 }

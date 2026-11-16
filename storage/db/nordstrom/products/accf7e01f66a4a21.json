@@ -9,12 +9,12 @@
   "source_sku": "SALOMON-8170756-6",
   "source_price": 200.0,
   "source_compare_at_price": 200.0,
-  "current_price": 19040.0,
-  "compare_at_price": 19040.0,
+  "current_price": 18852.0,
+  "compare_at_price": 18852.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Synthetic, leather and textile upper/textile lining/synthetic sole",
   "specifications": {
     "Brand": "Salomon",
@@ -162,7 +162,7 @@
       "source_compare_at_price": 200.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/779f9868-5fe7-4a55-843c-a979ef5de319.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -480,24 +480,24 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:55:30Z",
+  "last_verified_at": "2026-11-16T16:12:07Z",
   "created_at": "2026-09-17T19:01:53Z",
-  "updated_at": "2026-10-29T03:55:30Z",
+  "updated_at": "2026-11-16T16:12:07Z",
   "status": "ACTIVE",
   "validation_warnings": [],
-  "is_active": true,
+  "is_active": false,
   "shopify_sync_pending": false,
   "price_range_usd": {
     "min": 200.0,
     "max": 200.0
   },
   "price_range_inr": {
-    "min": 19040.0,
-    "max": 19040.0
+    "min": 18852.0,
+    "max": 18852.0
   },
-  "price": "19040.00",
+  "price": "18852.00",
   "shopify_product_id": "gid://shopify/Product/15850879352998",
   "shopify_handle": "salomon-acs-pro-trail-running-shoe-gender-inclusive",
-  "shopify_synced_at": "2026-10-28T19:57:25Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-16T12:10:45Z",
+  "last_synced_fx_rate": 94.262076
 }

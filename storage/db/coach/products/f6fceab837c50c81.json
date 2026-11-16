@@ -53,7 +53,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cft73_immpl_a0",
       "option_values": [
         {
@@ -61,7 +61,8 @@
           "name": "Gold/Maple"
         }
       ],
-      "price_current": 4703.0
+      "price_current": 4703.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -81,7 +82,8 @@
           "name": "Gold/Walnut/Black"
         }
       ],
-      "price_current": 4703.0
+      "price_current": 4703.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -101,7 +103,8 @@
           "name": "Silver/Sand/Taupe"
         }
       ],
-      "price_current": 4703.0
+      "price_current": 4703.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -121,7 +124,8 @@
           "name": "Gold/Maple"
         }
       ],
-      "price_current": 4703.0
+      "price_current": 4703.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -141,7 +145,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 4703.0
+      "price_current": 4703.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -165,23 +170,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Wallets & Small Goods"
+    "Wallets & Small Goods",
+    "Women"
   ],
   "groups": [
     "women_wallets"
   ],
   "created_at": "2026-09-13T00:48:45Z",
-  "last_verified_at": "2026-10-29T03:38:46Z",
+  "last_verified_at": "2026-11-16T15:45:15Z",
   "id": "f6fceab837c50c81",
   "product_id": "f6fceab837c50c81",
   "store": "coach",
-  "updated_at": "2026-10-29T03:38:46Z",
+  "updated_at": "2026-11-16T15:45:15Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841770438822",
   "shopify_handle": "flap-card-case-in-signature-canvas",
-  "shopify_synced_at": "2026-10-23T12:03:03Z",
+  "shopify_synced_at": "2026-11-15T01:08:08Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 94.593871
+  "last_synced_fx_rate": 94.289707,
+  "supplier_delisted": false
 }

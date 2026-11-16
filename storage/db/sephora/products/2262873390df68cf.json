@@ -470,8 +470,8 @@
       "current_price": 2276,
       "price_inr": 2276,
       "compare_at_price": null,
-      "in_stock": false,
-      "is_active": false,
+      "in_stock": true,
+      "is_active": true,
       "barcode": "2697613",
       "image_url": "https://www.sephora.com/productimages/sku/s2697613-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2697613+sw.jpg",
@@ -479,7 +479,8 @@
       "variation_value": "14.0 PV",
       "variation_type": "Color",
       "price": 2276,
-      "source_price": 24.0
+      "source_price": 24.0,
+      "inventory_quantity": 10
     },
     {
       "id": "2945079",
@@ -705,8 +706,14 @@
     "tower-28-beauty"
   ],
   "created_at": "2026-11-04T18:51:27Z",
-  "last_verified_at": "2026-11-05T10:44:01Z",
+  "last_verified_at": "2026-11-16T15:49:07Z",
   "id": "2262873390df68cf",
-  "updated_at": "2026-11-05T10:44:01Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:49:07Z",
+  "last_synced_fx_rate": 94.086126,
+  "shopify_product_id": "gid://shopify/Product/15993706545318",
+  "shopify_handle": "tower-28-beauty-swipe-all-over-hydrating-serum-concealer-with-18-hr-wear-p507142",
+  "shopify_synced_at": "2026-11-14T09:07:03Z",
+  "shopify_image_synced": true,
+  "shopify_sync_pending": false,
+  "primary_image": "https://www.sephora.com/productimages/sku/s2945038-main-zoom.jpg"
 }

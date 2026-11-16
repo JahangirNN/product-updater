@@ -9,8 +9,8 @@
   "source_sku": "HOKA-8430923-7",
   "source_price": 130.0,
   "source_compare_at_price": 130.0,
-  "current_price": 12371.0,
-  "compare_at_price": 12371.0,
+  "current_price": 12258.0,
+  "compare_at_price": 12258.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -65,13 +65,13 @@
       "id": 843092301,
       "sku": "HOKA-8430923-7.5",
       "title": "UK 7 - Black Walnut",
-      "price": "8041.00",
+      "price": "12258.00",
       "compare_at_price": "12479.00",
-      "source_price": 84.5,
+      "source_price": 130.0,
       "source_compare_at_price": 130.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/16e27737-070b-4867-849f-4f56afc6ca64.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -83,19 +83,19 @@
           "name": "Black Walnut"
         }
       ],
-      "price_current": 8041.0
+      "price_current": 12258.0
     },
     {
       "id": 843092302,
       "sku": "HOKA-8430923-8",
       "title": "UK 7.5 - Black Walnut",
-      "price": "12297.00",
+      "price": "7995.00",
       "compare_at_price": "12479.00",
-      "source_price": 130.0,
+      "source_price": 84.5,
       "source_compare_at_price": 130.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/16e27737-070b-4867-849f-4f56afc6ca64.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -107,7 +107,7 @@
           "name": "Black Walnut"
         }
       ],
-      "price_current": 12297.0
+      "price_current": 7995.0
     },
     {
       "id": 843092303,
@@ -361,9 +361,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:55:39Z",
+  "last_verified_at": "2026-11-16T15:51:10Z",
   "created_at": "2026-09-17T14:55:40Z",
-  "updated_at": "2026-10-29T03:55:39Z",
+  "updated_at": "2026-11-16T15:51:10Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "is_active": true,
@@ -373,12 +373,14 @@
     "max": 130.0
   },
   "price_range_inr": {
-    "min": 8041.0,
-    "max": 12371.0
+    "min": 7967.0,
+    "max": 12258.0
   },
-  "price": "12371.00",
+  "price": "12258.00",
   "shopify_product_id": "gid://shopify/Product/15848581988518",
   "shopify_handle": "hoka-ora-primo-ext-slip-on-sneaker-men",
-  "shopify_synced_at": "2026-10-26T06:15:55Z",
-  "last_synced_fx_rate": 95.160836
+  "shopify_synced_at": "2026-11-14T19:37:10Z",
+  "last_synced_fx_rate": 94.289707,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

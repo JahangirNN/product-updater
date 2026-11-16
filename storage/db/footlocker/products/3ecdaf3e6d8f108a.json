@@ -10,12 +10,12 @@
   "source_price": 180.0,
   "source_compare_at_price": null,
   "current_price": 17278.0,
-  "compare_at_price": 17136.0,
+  "compare_at_price": 17032.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "color": "Lt Crimson/Lt Soft Pink/Team Red",
   "width": "Width - B - Medium",
   "material": "Premium upper with durable overlays and responsive traction outsole",
@@ -63,7 +63,8 @@
           "name": "Lt Crimson/Lt Soft Pink/Team Red"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -75,7 +76,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/M7185640_01",
       "option_values": [
         {
@@ -87,7 +88,8 @@
           "name": "Lt Crimson/Lt Soft Pink/Team Red"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -111,7 +113,8 @@
           "name": "Lt Crimson/Lt Soft Pink/Team Red"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -135,7 +138,8 @@
           "name": "Lt Crimson/Lt Soft Pink/Team Red"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -147,7 +151,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/M7185640_01",
       "option_values": [
         {
@@ -159,7 +163,8 @@
           "name": "Lt Crimson/Lt Soft Pink/Team Red"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -183,7 +188,8 @@
           "name": "Lt Crimson/Lt Soft Pink/Team Red"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -207,7 +213,8 @@
           "name": "Lt Crimson/Lt Soft Pink/Team Red"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -219,7 +226,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/M7185640_01",
       "option_values": [
         {
@@ -231,7 +238,8 @@
           "name": "Lt Crimson/Lt Soft Pink/Team Red"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -255,7 +263,8 @@
           "name": "Lt Crimson/Lt Soft Pink/Team Red"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -279,7 +288,8 @@
           "name": "Lt Crimson/Lt Soft Pink/Team Red"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -303,7 +313,8 @@
           "name": "Lt Crimson/Lt Soft Pink/Team Red"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -327,7 +338,8 @@
           "name": "Lt Crimson/Lt Soft Pink/Team Red"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -351,7 +363,8 @@
           "name": "Lt Crimson/Lt Soft Pink/Team Red"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -375,7 +388,8 @@
           "name": "Lt Crimson/Lt Soft Pink/Team Red"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -399,7 +413,8 @@
           "name": "Lt Crimson/Lt Soft Pink/Team Red"
         }
       ],
-      "price_current": 17278.0
+      "price_current": 17278.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -463,21 +478,24 @@
     }
   ],
   "tags": [
-    "nike",
     "footwear",
+    "nike",
     "shoes",
-    "women's",
-    "sizes-15"
+    "sizes-15",
+    "supplier-delisted",
+    "women's"
   ],
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-10-29T03:37:47Z",
+  "last_verified_at": "2026-11-16T15:46:05Z",
   "created_at": "2026-09-18T20:48:28Z",
-  "updated_at": "2026-10-29T03:37:47Z",
+  "updated_at": "2026-11-16T15:46:07Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851007738022",
   "shopify_handle": "nike-zoom-vomero-5-women-s-lt-crimson-lt-soft-pink-team-red-m7185640",
-  "shopify_synced_at": "2026-10-25T14:44:43Z",
-  "last_synced_fx_rate": 95.036492
+  "shopify_synced_at": "2026-11-16T15:46:05Z",
+  "last_synced_fx_rate": 93.851604,
+  "delist_strikes": 27,
+  "supplier_delisted": true
 }

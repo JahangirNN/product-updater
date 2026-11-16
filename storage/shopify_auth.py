@@ -9,8 +9,15 @@ import sys
 import json
 import time
 import subprocess
+from datetime import datetime, timezone
 from typing import Optional, Dict, Any, Tuple
 import httpx
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 from storage.logger import log_shopify_error, log_shopify_warning
 
@@ -19,43 +26,161 @@ CONFIG_FILE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(
 DEFAULT_SHOP_DOMAIN = "hewmvw-am.myshopify.com"
 DEFAULT_API_VERSION = "2026-04"
 
-
 _LAST_CLI_REFRESH_TIME: float = 0.0
 _CLI_REFRESH_COOLDOWN_SECONDS: float = 300.0  # 5-minute cooldown between CLI refresh attempts
 
+_AUTH_CIRCUIT_BREAKER_UNTIL: float = 0.0
+_AUTH_CIRCUIT_BREAKER_COOLDOWN: float = 300.0  # 5-minute circuit breaker on 401
+
+_CLIENT_CREDENTIALS_CACHE: Dict[str, Any] = {
+    "access_token": "",
+    "expires_at": 0.0,
+    "scope": ""
+}
+
+
+def is_auth_circuit_breaker_active() -> bool:
+    """Check if authentication circuit breaker is currently active."""
+    global _AUTH_CIRCUIT_BREAKER_UNTIL
+    return time.time() < _AUTH_CIRCUIT_BREAKER_UNTIL
+
+
+def trip_auth_circuit_breaker(cooldown_seconds: float = _AUTH_CIRCUIT_BREAKER_COOLDOWN) -> None:
+    """Trip authentication circuit breaker to prevent rapid error spamming."""
+    global _AUTH_CIRCUIT_BREAKER_UNTIL
+    _AUTH_CIRCUIT_BREAKER_UNTIL = time.time() + cooldown_seconds
+
+
+def reset_auth_circuit_breaker() -> None:
+    """Reset authentication circuit breaker on successful authentication."""
+    global _AUTH_CIRCUIT_BREAKER_UNTIL
+    _AUTH_CIRCUIT_BREAKER_UNTIL = 0.0
+
+
+def get_client_app_credentials(shop_domain: str = DEFAULT_SHOP_DOMAIN) -> Tuple[str, str]:
+    """Retrieve (client_id, client_secret) from environment variables or shopify_config.json."""
+    client_id = os.environ.get("SHOPIFY_CLIENT_ID", "").strip()
+    client_secret = os.environ.get("SHOPIFY_CLIENT_SECRET", "").strip()
+    if client_id and client_secret:
+        return client_id, client_secret
+
+    if os.path.exists(CONFIG_FILE_PATH):
+        try:
+            with open(CONFIG_FILE_PATH, "r", encoding="utf-8") as f:
+                cfg = json.load(f)
+            client_id = client_id or cfg.get("client_id", "").strip()
+            client_secret = client_secret or cfg.get("client_secret", "").strip()
+            if client_id and client_secret:
+                return client_id, client_secret
+        except Exception:
+            pass
+
+    return "", ""
+
+
+def fetch_token_via_client_credentials(
+    shop_domain: str = DEFAULT_SHOP_DOMAIN,
+    force_refresh: bool = False
+) -> Tuple[str, str]:
+    """
+    Programmatically obtain an Admin API access token using Shopify Client Credentials Grant:
+    POST https://{shop_domain}/admin/oauth/access_token
+    Payload: client_id, client_secret, grant_type='client_credentials'
+    Auto-refreshes seamlessly whenever the 24-hour token nears expiration (300s buffer).
+    Returns (access_token, error_message).
+    """
+    global _CLIENT_CREDENTIALS_CACHE
+    now = time.time()
+    if not force_refresh and _CLIENT_CREDENTIALS_CACHE.get("access_token") and now < _CLIENT_CREDENTIALS_CACHE.get("expires_at", 0.0):
+        return _CLIENT_CREDENTIALS_CACHE["access_token"], ""
+
+    client_id, client_secret = get_client_app_credentials(shop_domain)
+    if not client_id or not client_secret:
+        return "", "SHOPIFY_CLIENT_ID or SHOPIFY_CLIENT_SECRET not configured in environment or config"
+
+    url = f"https://{shop_domain}/admin/oauth/access_token"
+    payload = {
+        "client_id": client_id,
+        "client_secret": client_secret,
+        "grant_type": "client_credentials"
+    }
+
+    try:
+        with httpx.Client(timeout=20.0) as oauth_client:
+            resp = oauth_client.post(url, json=payload, headers={"Content-Type": "application/json"})
+            if resp.status_code == 200:
+                data = resp.json()
+                token = data.get("access_token", "").strip()
+                expires_in = data.get("expires_in", 86400)
+                scope = data.get("scope", "")
+                if token:
+                    _CLIENT_CREDENTIALS_CACHE["access_token"] = token
+                    _CLIENT_CREDENTIALS_CACHE["expires_at"] = now + max(60, expires_in - 300)
+                    _CLIENT_CREDENTIALS_CACHE["scope"] = scope
+                    reset_auth_circuit_breaker()
+                    return token, ""
+                return "", "Shopify Client Credentials returned 200 but missing access_token in body"
+            else:
+                return "", f"Shopify Client Credentials HTTP {resp.status_code}: {resp.text[:300]}"
+    except Exception as exc:
+        return "", f"Shopify Client Credentials network exception: {exc}"
+
 
 def refresh_cli_session(shop_domain: str = DEFAULT_SHOP_DOMAIN) -> bool:
-    """Trigger Shopify CLI to refresh session tokens silently via CLI with cooldown to prevent blocking."""
-    global _LAST_CLI_REFRESH_TIME
-    now = time.time()
-    if now - _LAST_CLI_REFRESH_TIME < _CLI_REFRESH_COOLDOWN_SECONDS:
-        return False
-    _LAST_CLI_REFRESH_TIME = now
-    try:
-        cmd = ["shopify.cmd" if sys.platform == "win32" else "shopify", "theme", "list", f"--store={shop_domain}"]
-        res = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-            timeout=5
-        )
-        if res.returncode != 0:
-            log_shopify_warning(f"Shopify CLI token auto-refresh exited with code {res.returncode}: {res.stderr.strip()[:200]}")
-        return res.returncode == 0
-    except subprocess.TimeoutExpired:
-        log_shopify_warning(f"Shopify CLI token auto-refresh timed out after 5s for {shop_domain} (manual interactive login required).")
-        return False
-    except Exception as exc:
-        log_shopify_warning(f"Shopify CLI token auto-refresh exception: {exc}")
-        return False
+    """
+    Shopify CLI sessions require interactive browser OAuth when expired.
+    Silent background processes cannot complete browser authentication.
+    Returns False immediately to prevent hanging, and advises on permanent resolution.
+    """
+    log_shopify_warning(
+        f"Shopify CLI session token expired for {shop_domain}. "
+        f"Interactive login required via 'shopify theme list --store={shop_domain}', "
+        f"or configure Custom App client credentials in .env (recommended, auto-refreshed)."
+    )
+    return False
 
 
 def get_shopify_credentials(shop_domain: str = DEFAULT_SHOP_DOMAIN) -> Tuple[str, str, str]:
     """
     Retrieve active (shop_domain, access_token, api_version).
-    Checks CLI session store first for auto-refreshed session tokens,
-    falling back to static config/shopify_config.json.
+    Hierarchical resolution:
+    1. Dynamic Client Credentials Grant from SHOPIFY_CLIENT_ID + SHOPIFY_CLIENT_SECRET (auto-refreshes seamlessly, highest priority).
+    2. Static Custom App token from config/shopify_config.json (access_token).
+    3. Static Custom App token from SHOPIFY_ADMIN_ACCESS_TOKEN environment variable.
+    4. Dynamic CLI session token from %APPDATA% (validated against expiresAt timestamp).
     """
+    # 1. Dynamic Client Credentials Grant (Headless, 0 manual logins, auto-refreshed)
+    client_id, client_secret = get_client_app_credentials(shop_domain)
+    if client_id and client_secret:
+        token, err = fetch_token_via_client_credentials(shop_domain)
+        if token:
+            api_ver = os.environ.get("SHOPIFY_API_VERSION", DEFAULT_API_VERSION)
+            return shop_domain, token, api_ver
+        else:
+            log_shopify_warning(f"Client credentials exchange failed: {err}. Falling back to static/CLI tokens.")
+
+    # 2. Static config file (Permanent Custom App Admin API token)
+    if os.path.exists(CONFIG_FILE_PATH):
+        try:
+            with open(CONFIG_FILE_PATH, "r", encoding="utf-8") as f:
+                cfg = json.load(f)
+            static_token = cfg.get("access_token", "").strip()
+            if static_token:
+                return (
+                    cfg.get("shop_domain", shop_domain),
+                    static_token,
+                    cfg.get("api_version", DEFAULT_API_VERSION)
+                )
+        except Exception as exc:
+            log_shopify_warning(f"Error reading {CONFIG_FILE_PATH}: {exc}")
+
+    # 3. Environment variable
+    env_token = os.environ.get("SHOPIFY_ADMIN_ACCESS_TOKEN", "").strip()
+    if env_token:
+        env_domain = os.environ.get("SHOPIFY_STORE_DOMAIN", shop_domain)
+        return env_domain, env_token, os.environ.get("SHOPIFY_API_VERSION", DEFAULT_API_VERSION)
+
+    # 3. CLI session store with expiresAt validation
     if os.path.exists(CLI_CONFIG_PATH):
         try:
             with open(CLI_CONFIG_PATH, "r", encoding="utf-8") as f:
@@ -65,31 +190,37 @@ def get_shopify_credentials(shop_domain: str = DEFAULT_SHOP_DOMAIN) -> Tuple[str
                 sessions = json.loads(session_raw) if isinstance(session_raw, str) else session_raw
                 acc = sessions.get("accounts.shopify.com", {})
                 apps = acc.get("applications", {})
+
+                matched_apps = []
                 for app_k, app_v in apps.items():
                     if shop_domain in app_k and app_v.get("accessToken"):
-                        token = app_v.get("accessToken")
+                        matched_apps.insert(0, (app_k, app_v))
+                    elif app_v.get("accessToken"):
+                        matched_apps.append((app_k, app_v))
+
+                now_utc = datetime.now(timezone.utc)
+                for app_k, app_v in matched_apps:
+                    token = app_v.get("accessToken", "").strip()
+                    expires_at_str = app_v.get("expiresAt")
+                    if not token:
+                        continue
+
+                    is_expired = False
+                    if expires_at_str:
+                        try:
+                            clean_iso = expires_at_str.replace("Z", "+00:00")
+                            exp_dt = datetime.fromisoformat(clean_iso)
+                            if now_utc >= exp_dt:
+                                is_expired = True
+                        except Exception:
+                            pass
+
+                    if not is_expired:
                         return shop_domain, token, DEFAULT_API_VERSION
-                for app_k, app_v in apps.items():
-                    if app_v.get("accessToken"):
-                        return shop_domain, app_v.get("accessToken"), DEFAULT_API_VERSION
-        except Exception:
-            pass
+        except Exception as exc:
+            log_shopify_warning(f"Error reading CLI session config: {exc}")
 
-    if os.path.exists(CONFIG_FILE_PATH):
-        try:
-            with open(CONFIG_FILE_PATH, "r", encoding="utf-8") as f:
-                cfg = json.load(f)
-            return (
-                cfg.get("shop_domain", shop_domain),
-                cfg.get("access_token", ""),
-                cfg.get("api_version", DEFAULT_API_VERSION)
-            )
-        except Exception:
-            pass
-
-    env_token = os.environ.get("SHOPIFY_ADMIN_ACCESS_TOKEN", "")
-    env_domain = os.environ.get("SHOPIFY_STORE_DOMAIN", shop_domain)
-    return env_domain, env_token, DEFAULT_API_VERSION
+    return shop_domain, "", DEFAULT_API_VERSION
 
 
 _CLIENT: Optional[httpx.Client] = None
@@ -119,18 +250,31 @@ def execute_shopify_graphql(
     Automatically backs off and retries on rate limits (HTTP 429 or GraphQL THROTTLED).
     Returns (data_dict, extensions_dict, error_message).
     """
+    if is_auth_circuit_breaker_active():
+        remaining = max(0, int(_AUTH_CIRCUIT_BREAKER_UNTIL - time.time()))
+        err_msg = (
+            f"HTTP 401 Unauthorized: Shopify authentication circuit-breaker active ({remaining}s remaining). "
+            f"Please configure a permanent Custom App token in config/shopify_config.json or re-authenticate via Shopify CLI."
+        )
+        return None, {}, err_msg
+
     domain, token, version = get_shopify_credentials(shop_domain)
     if not token:
         if allow_retry and refresh_cli_session(domain):
             return execute_shopify_graphql(query, variables, shop_domain, timeout, allow_retry=False)
-        err_msg = "No valid Shopify access token found. Please authenticate via Shopify CLI."
+        trip_auth_circuit_breaker(cooldown_seconds=300.0)
+        err_msg = (
+            f"No valid Shopify access token found for {domain}. "
+            f"Please configure a permanent Custom App token in config/shopify_config.json "
+            f"(recommended, never expires) or re-authenticate via Shopify CLI."
+        )
         log_shopify_error(err_msg)
         return None, {}, err_msg
 
     url = f"https://{domain}/admin/api/{version}/graphql.json"
     headers = {
         "Content-Type": "application/json",
-        "Authorization": f"Bearer {token}"
+        "X-Shopify-Access-Token": token
     }
 
     payload: Dict[str, Any] = {"query": query}
@@ -143,13 +287,26 @@ def execute_shopify_graphql(
         try:
             resp = client.post(url, json=payload, headers=headers)
 
-            # Handle token expiration with transparent auto-refresh or fail fast
+            # Handle token expiration with transparent auto-refresh or fail fast with circuit breaker
             if resp.status_code == 401:
-                if allow_retry and attempt == 0:
-                    log_shopify_warning(f"Shopify Admin GraphQL returned 401 Unauthorized for {domain}. Triggering CLI session auto-refresh...")
-                    if refresh_cli_session(domain):
+                cid, csec = get_client_app_credentials(domain)
+                if cid and csec and allow_retry:
+                    log_shopify_warning(
+                        f"Shopify Admin GraphQL HTTP 401 for {domain}. "
+                        f"Auto-refreshing session token via Client Credentials Grant..."
+                    )
+                    new_token, auth_err = fetch_token_via_client_credentials(domain, force_refresh=True)
+                    if new_token:
                         return execute_shopify_graphql(query, variables, shop_domain, timeout, allow_retry=False)
-                err_msg = f"HTTP 401 Unauthorized: Shopify session token expired for {domain}"
+                    else:
+                        log_shopify_error(f"Failed to auto-refresh token via Client Credentials: {auth_err}")
+
+                trip_auth_circuit_breaker(cooldown_seconds=300.0)
+                err_msg = (
+                    f"HTTP 401 Unauthorized: Shopify session token expired for {domain}. "
+                    f"Tripped 5-minute auth circuit breaker. "
+                    f"Action: Verify Custom App client credentials or grant permissions in Shopify Developer Dashboard."
+                )
                 log_shopify_error(err_msg)
                 return None, {}, err_msg
 
@@ -174,6 +331,7 @@ def execute_shopify_graphql(
                     err_msg = json.dumps(errors)
                     log_shopify_error(f"Shopify Admin GraphQL returned errors: {err_msg}")
                     return data, extensions, f"GraphQL Errors: {err_msg}"
+                reset_auth_circuit_breaker()
                 return data, extensions, ""
             else:
                 err_msg = f"HTTP {resp.status_code}: {resp.text}"
@@ -217,3 +375,118 @@ def execute_shopify_graphql(
             err_msg = f"Request Exception: {exc}"
             log_shopify_error(f"Shopify Admin GraphQL exception: {err_msg}", exc=exc)
             return None, {}, err_msg
+
+
+def get_shopify_auth_status(shop_domain: str = DEFAULT_SHOP_DOMAIN) -> Dict[str, Any]:
+    """Inspect all credential sources and report health, expiration, and active source."""
+    status: Dict[str, Any] = {
+        "shop_domain": shop_domain,
+        "active_source": "none",
+        "has_token": False,
+        "token_preview": None,
+        "is_permanent": False,
+        "client_credentials_configured": False,
+        "client_credentials_scopes": None,
+        "cli_token_present": False,
+        "cli_token_expired": False,
+        "cli_expires_at": None,
+        "config_token_present": False,
+        "env_token_present": False,
+        "circuit_breaker_active": is_auth_circuit_breaker_active(),
+        "circuit_breaker_remaining_seconds": max(0, int(_AUTH_CIRCUIT_BREAKER_UNTIL - time.time()))
+    }
+
+    # 1. Check Client Credentials Grant (Highest priority)
+    cid, csec = get_client_app_credentials(shop_domain)
+    if cid and csec:
+        status["client_credentials_configured"] = True
+        tok, err = fetch_token_via_client_credentials(shop_domain)
+        if tok:
+            status["active_source"] = "client_credentials"
+            status["has_token"] = True
+            status["token_preview"] = f"{tok[:8]}...{tok[-4:]}"
+            status["is_permanent"] = True
+            status["client_credentials_scopes"] = _CLIENT_CREDENTIALS_CACHE.get("scope", "")
+            return status
+
+    # 2. Check config file (Permanent Custom App Admin API token)
+    if os.path.exists(CONFIG_FILE_PATH):
+        try:
+            with open(CONFIG_FILE_PATH, "r", encoding="utf-8") as f:
+                cfg = json.load(f)
+            t = cfg.get("access_token", "").strip()
+            if t:
+                status["config_token_present"] = True
+                status["active_source"] = "config_file"
+                status["has_token"] = True
+                status["token_preview"] = f"{t[:8]}...{t[-4:]}"
+                status["is_permanent"] = True
+                return status
+        except Exception:
+            pass
+
+    # 2. Check environment variable
+    env_t = os.environ.get("SHOPIFY_ADMIN_ACCESS_TOKEN", "").strip()
+    if env_t:
+        status["env_token_present"] = True
+        status["active_source"] = "environment"
+        status["has_token"] = True
+        status["token_preview"] = f"{env_t[:8]}...{env_t[-4:]}"
+        status["is_permanent"] = True
+        return status
+
+    # 3. Check CLI store
+    if os.path.exists(CLI_CONFIG_PATH):
+        try:
+            with open(CLI_CONFIG_PATH, "r", encoding="utf-8") as f:
+                cli_data = json.load(f)
+            session_raw = cli_data.get("sessionStore")
+            if session_raw:
+                sessions = json.loads(session_raw) if isinstance(session_raw, str) else session_raw
+                acc = sessions.get("accounts.shopify.com", {})
+                apps = acc.get("applications", {})
+                now_utc = datetime.now(timezone.utc)
+                for app_k, app_v in apps.items():
+                    tok = app_v.get("accessToken", "").strip()
+                    exp = app_v.get("expiresAt")
+                    if tok:
+                        status["cli_token_present"] = True
+                        status["cli_expires_at"] = exp
+                        is_exp = False
+                        if exp:
+                            try:
+                                exp_dt = datetime.fromisoformat(exp.replace("Z", "+00:00"))
+                                is_exp = (now_utc >= exp_dt)
+                            except Exception:
+                                pass
+                        status["cli_token_expired"] = is_exp
+                        if not is_exp:
+                            status["active_source"] = "shopify_cli"
+                            status["has_token"] = True
+                            status["token_preview"] = f"{tok[:8]}...{tok[-4:]}"
+                            status["is_permanent"] = False
+                            return status
+        except Exception:
+            pass
+
+    return status
+
+
+def save_permanent_token(
+    token: str,
+    shop_domain: str = DEFAULT_SHOP_DOMAIN,
+    api_version: str = DEFAULT_API_VERSION
+) -> bool:
+    """Save a permanent Custom App Admin API token into config/shopify_config.json and reset circuit breaker."""
+    os.makedirs(os.path.dirname(CONFIG_FILE_PATH), exist_ok=True)
+    cfg = {
+        "shop_domain": shop_domain,
+        "access_token": token.strip(),
+        "api_version": api_version,
+        "configured_at": datetime.now(timezone.utc).isoformat(),
+        "note": "Permanent Custom App Admin API token - does not expire."
+    }
+    with open(CONFIG_FILE_PATH, "w", encoding="utf-8") as f:
+        json.dump(cfg, f, indent=2)
+    reset_auth_circuit_breaker()
+    return True

@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.199335,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Pebbled Leather",
   "specifications": {
     "Material": "Pebbled Leather",
@@ -54,15 +54,16 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KL012_404",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KL012_404",
         "https://katespade.scene7.com/is/image/KateSpade/KL012_404_3",
         "https://katespade.scene7.com/is/image/KateSpade/KL012_404_4"
       ],
-      "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KL012_404"
+      "inventory_quantity": 0,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KL012_404",
+      "is_available": false
     }
   ],
   "product_options": [
@@ -76,18 +77,26 @@
     }
   ],
   "tags": [
-    "Kate Spade",
-    "Women",
     "Handbags",
-    "Totes & Carryalls"
+    "Kate Spade",
+    "Totes & Carryalls",
+    "Women",
+    "supplier-delisted"
   ],
   "groups": [
     "handbags"
   ],
   "created_at": "2026-10-29T05:26:16Z",
-  "last_verified_at": "2026-10-29T07:38:55Z",
+  "last_verified_at": "2026-11-16T15:51:02Z",
   "_elapsed_ms": 3122.253300040029,
   "id": "ebdb2c0c55c2dcc6",
-  "updated_at": "2026-10-29T07:38:55Z",
-  "last_synced_fx_rate": 95.29615
+  "updated_at": "2026-11-16T15:51:03Z",
+  "last_synced_fx_rate": 94.620171,
+  "shopify_product_id": "gid://shopify/Product/15915103355046",
+  "shopify_handle": "dumpling-medium-tote",
+  "shopify_synced_at": "2026-11-16T15:51:02Z",
+  "shopify_sync_pending": false,
+  "delist_strikes": 28,
+  "supplier_delisted": true,
+  "is_active": false
 }

@@ -79,7 +79,8 @@
           "name": "Gold/Walnut/Black"
         }
       ],
-      "price_current": 7583.0
+      "price_current": 7583.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -99,7 +100,8 @@
           "name": "Gold/Tan/Brown"
         }
       ],
-      "price_current": 7583.0
+      "price_current": 7583.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -119,7 +121,8 @@
           "name": "Gold/Sand/Chalk"
         }
       ],
-      "price_current": 7583.0
+      "price_current": 7583.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -139,7 +142,8 @@
           "name": "Gold/White/Chalk"
         }
       ],
-      "price_current": 7583.0
+      "price_current": 7583.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -151,7 +155,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cx161_svam_a0",
       "option_values": [
         {
@@ -159,7 +163,8 @@
           "name": "Silver/Aquamarine"
         }
       ],
-      "price_current": 7583.0
+      "price_current": 7583.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -179,7 +184,8 @@
           "name": "Gold/Crimson"
         }
       ],
-      "price_current": 4799.0
+      "price_current": 4799.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -209,23 +215,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Wallets & Small Goods"
+    "Wallets & Small Goods",
+    "Women"
   ],
   "groups": [
     "women_wristlets"
   ],
   "created_at": "2026-09-13T00:45:01Z",
-  "last_verified_at": "2026-10-29T03:40:19Z",
+  "last_verified_at": "2026-11-16T15:42:13Z",
   "id": "a2fa6558924c6af7",
   "product_id": "a2fa6558924c6af7",
   "store": "coach",
-  "updated_at": "2026-10-29T03:40:19Z",
+  "updated_at": "2026-11-16T15:42:13Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15848608989350",
   "shopify_handle": "double-zip-wallet-in-signature-canvas-cx161-imxaq",
-  "shopify_synced_at": "2026-10-08T16:09:42Z",
+  "shopify_synced_at": "2026-11-13T23:06:14Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

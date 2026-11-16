@@ -57,7 +57,8 @@
           "name": "Gunmetal/Chalk/Black"
         }
       ],
-      "price_current": 3648.0
+      "price_current": 3648.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -77,7 +78,8 @@
           "name": "Gunmetal/Charcoal/Black"
         }
       ],
-      "price_current": 6656.0
+      "price_current": 6656.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -89,7 +91,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cw170_qbnrx_a0",
       "option_values": [
         {
@@ -97,7 +99,8 @@
           "name": "Gunmetal/Tan/Black"
         }
       ],
-      "price_current": 6656.0
+      "price_current": 6656.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -117,7 +120,8 @@
           "name": "Gold/Powder Pink"
         }
       ],
-      "price_current": 6656.0
+      "price_current": 6656.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -137,7 +141,8 @@
           "name": "Silver/Black Signature"
         }
       ],
-      "price_current": 6656.0
+      "price_current": 6656.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -157,7 +162,8 @@
           "name": "Silver/Tan/Black"
         }
       ],
-      "price_current": 6656.0
+      "price_current": 6656.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -177,7 +183,8 @@
           "name": "Silver/GREEN"
         }
       ],
-      "price_current": 6656.0
+      "price_current": 6656.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -197,7 +204,8 @@
           "name": "SV/Walnut/Black"
         }
       ],
-      "price_current": 6656.0
+      "price_current": 6656.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -217,7 +225,8 @@
           "name": "Silver/Maple"
         }
       ],
-      "price_current": 6656.0
+      "price_current": 6656.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -237,7 +246,8 @@
           "name": "Gunmetal/Black"
         }
       ],
-      "price_current": 6656.0
+      "price_current": 6656.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -286,16 +296,17 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:41:23Z",
-  "last_verified_at": "2026-10-29T03:39:32Z",
+  "last_verified_at": "2026-11-16T15:45:55Z",
   "id": "4afa16169702659d",
   "product_id": "4afa16169702659d",
   "store": "coach",
-  "updated_at": "2026-10-29T03:39:32Z",
+  "updated_at": "2026-11-16T15:45:55Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15841764442278",
   "shopify_handle": "passport-card-case-in-signature-canvas-with-patches",
-  "shopify_synced_at": "2026-10-28T19:45:39Z",
+  "shopify_synced_at": "2026-11-14T05:06:00Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

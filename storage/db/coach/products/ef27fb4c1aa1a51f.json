@@ -62,7 +62,8 @@
           "name": "Silver/Black Brown"
         }
       ],
-      "price_current": 14185.0
+      "price_current": 14185.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -77,23 +78,24 @@
   ],
   "tags": [
     "COACH",
-    "Men",
-    "Crossbody Bags"
+    "Crossbody Bags",
+    "Men"
   ],
   "groups": [
     "men_bags"
   ],
   "created_at": "2026-09-13T00:48:13Z",
-  "last_verified_at": "2026-10-29T03:36:32Z",
+  "last_verified_at": "2026-11-16T15:43:44Z",
   "id": "ef27fb4c1aa1a51f",
   "product_id": "ef27fb4c1aa1a51f",
   "store": "coach",
-  "updated_at": "2026-10-29T03:36:32Z",
+  "updated_at": "2026-11-16T15:43:44Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841770143910",
   "shopify_handle": "fletcher-crossbody-bag-in-loved-leather",
-  "shopify_synced_at": "2026-10-28T11:37:00Z",
+  "shopify_synced_at": "2026-11-14T01:04:28Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

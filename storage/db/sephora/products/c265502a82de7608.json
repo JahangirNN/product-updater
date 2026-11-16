@@ -114,8 +114,8 @@
       "current_price": 7113,
       "price_inr": 7113,
       "compare_at_price": null,
-      "in_stock": false,
-      "is_active": false,
+      "in_stock": true,
+      "is_active": true,
       "barcode": "2415081",
       "image_url": "https://www.sephora.com/productimages/sku/s2415081-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2415081+sw.jpg",
@@ -123,7 +123,8 @@
       "variation_value": "Peau de Rose",
       "variation_type": "Color",
       "price": 7113,
-      "source_price": 75.0
+      "source_price": 75.0,
+      "inventory_quantity": 10
     }
   ],
   "product_options": [
@@ -154,8 +155,13 @@
     "westman-atelier"
   ],
   "created_at": "2026-11-04T18:54:50Z",
-  "last_verified_at": "2026-11-05T10:47:03Z",
+  "last_verified_at": "2026-11-16T15:42:03Z",
   "id": "c265502a82de7608",
-  "updated_at": "2026-11-05T10:47:03Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:42:03Z",
+  "last_synced_fx_rate": 93.851604,
+  "shopify_sync_pending": true,
+  "shopify_product_id": "gid://shopify/Product/15994350469286",
+  "shopify_handle": "westman-atelier-super-loaded-tinted-cream-highlighter-p468432",
+  "shopify_synced_at": "2026-11-12T13:29:05Z",
+  "shopify_image_synced": true
 }

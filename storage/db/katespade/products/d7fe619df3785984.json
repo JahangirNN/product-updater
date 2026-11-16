@@ -9,7 +9,7 @@
   "source_sku": "KN666-250",
   "source_price": 78.75,
   "source_compare_at_price": null,
-  "current_price": 7497,
+  "current_price": 7409.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -53,20 +53,20 @@
       "option1": "Balsam Green",
       "option2": null,
       "option3": null,
-      "price": "7497",
+      "price": "7409.0",
       "compare_at_price": null,
       "source_price": 78.75,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KN666_300",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KN666_300",
         "https://katespade.scene7.com/is/image/KateSpade/KN666_300_1",
         "https://katespade.scene7.com/is/image/KateSpade/KN666_300_3"
       ],
-      "inventory_quantity": 0,
+      "inventory_quantity": 10,
       "image_url": "https://katespade.scene7.com/is/image/KateSpade/KN666_300"
     },
     {
@@ -76,7 +76,7 @@
       "option1": "Cashew Milk",
       "option2": null,
       "option3": null,
-      "price": "7497",
+      "price": "7409.0",
       "compare_at_price": null,
       "source_price": 78.75,
       "source_compare_at_price": null,
@@ -114,9 +114,13 @@
     "handbags"
   ],
   "created_at": "2026-10-29T05:25:35Z",
-  "last_verified_at": "2026-10-29T07:37:42Z",
+  "last_verified_at": "2026-11-16T15:42:27Z",
   "_elapsed_ms": 2554.145500063896,
   "id": "d7fe619df3785984",
-  "updated_at": "2026-10-29T07:37:42Z",
-  "last_synced_fx_rate": 95.29615
+  "updated_at": "2026-11-16T15:42:27Z",
+  "last_synced_fx_rate": 94.086126,
+  "shopify_product_id": "gid://shopify/Product/15915100831910",
+  "shopify_handle": "cargo-crossbody-bag",
+  "shopify_synced_at": "2026-11-13T12:42:40Z",
+  "shopify_sync_pending": false
 }

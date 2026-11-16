@@ -9,12 +9,12 @@
   "source_sku": "ON-8433498-5",
   "source_price": 150.0,
   "source_compare_at_price": 150.0,
-  "current_price": 14255.0,
-  "compare_at_price": 14255.0,
+  "current_price": 14113.0,
+  "compare_at_price": 14113.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Textile and synthetic upper/textile lining/rubber sole",
   "specifications": {
     "Brand": "On",
@@ -162,7 +162,7 @@
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/b9600fce-2f98-48b0-8a93-1991a9d9c7c9.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -402,22 +402,22 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:51:31Z",
+  "last_verified_at": "2026-11-16T15:48:29Z",
   "created_at": "2026-09-18T06:57:42Z",
-  "updated_at": "2026-10-29T03:51:31Z",
+  "updated_at": "2026-11-16T15:48:29Z",
   "price_range_usd": {
     "min": 150.0,
     "max": 150.0
   },
   "price_range_inr": {
-    "min": 14255.0,
-    "max": 14255.0
+    "min": 14113.0,
+    "max": 14113.0
   },
-  "is_active": true,
+  "is_active": false,
   "shopify_sync_pending": false,
-  "price": "14255.00",
+  "price": "14113.00",
   "shopify_product_id": "gid://shopify/Product/15850877681830",
   "shopify_handle": "on-running-cloudnova-form-2-sneaker-women",
-  "shopify_synced_at": "2026-10-25T03:05:40Z",
-  "last_synced_fx_rate": 95.036492
+  "shopify_synced_at": "2026-11-13T19:22:06Z",
+  "last_synced_fx_rate": 94.086126
 }

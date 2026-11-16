@@ -95,6 +95,23 @@ def upsert_product_to_shopify(prod: Dict[str, Any], forex_rate: Optional[float] 
             return False, None, f"UserErrors: {err_details}"
         
     p_node = res.get("product")
+    if p_node and p_node.get("id"):
+        try:
+            num_id = p_node["id"].split("/")[-1]
+            from storage.shopify_auth import get_shopify_credentials, get_shopify_http_client
+            from storage.shopify_taxonomy import is_product_delisted
+            domain, token, _ = get_shopify_credentials()
+            if domain and token:
+                client = get_shopify_http_client()
+                rest_url = f"https://{domain}/admin/api/2024-01/products/{num_id}.json"
+                delisted = is_product_delisted(prod)
+                client.put(
+                    rest_url,
+                    json={"product": {"id": int(num_id), "published": not delisted, "status": "draft" if delisted else "active"}},
+                    headers={"X-Shopify-Access-Token": token, "Content-Type": "application/json"}
+                )
+        except Exception:
+            pass
     return True, p_node, ""
 
 
@@ -112,9 +129,13 @@ def sync_delta_to_shopify(updated_product: Dict[str, Any], delta_res: Dict[str, 
         
     success, p_node, err = upsert_product_to_shopify(updated_product, forex_rate)
     if success:
+        now_iso = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+        updated_product["shopify_synced_at"] = now_iso
+        updated_product["shopify_sync_pending"] = False
         log_shopify_success(f"Synced delta for {updated_product.get('title', '')[:35]} (GID: {shopify_id})")
         return True
     else:
+        updated_product["shopify_sync_pending"] = True
         log_shopify_error(f"Failed to sync delta for {updated_product.get('title', '')[:35]} (GID: {shopify_id}): {err}")
         return False
 

@@ -9,8 +9,8 @@
   "source_sku": "ON-7740696-5",
   "source_price": 180.0,
   "source_compare_at_price": 180.0,
-  "current_price": 17136.0,
-  "compare_at_price": 17136.0,
+  "current_price": 16967.0,
+  "compare_at_price": 16967.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989284,
@@ -167,7 +167,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/2fe9f549-5290-48ad-9843-668fc545e9cd.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -287,7 +287,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/2fe9f549-5290-48ad-9843-668fc545e9cd.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -335,7 +335,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/2fe9f549-5290-48ad-9843-668fc545e9cd.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -353,7 +353,7 @@
       "id": 774069613,
       "sku": "ON-7740696-11.5",
       "title": "UK 9.5 - Cerulean Ice",
-      "price": "17129.00",
+      "price": "17032.00",
       "compare_at_price": "17278.00",
       "source_price": 180.0,
       "source_compare_at_price": 180.0,
@@ -371,7 +371,7 @@
           "name": "Cerulean Ice"
         }
       ],
-      "price_current": 17129.0
+      "price_current": 17032.0
     },
     {
       "id": 774069614,
@@ -469,9 +469,9 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T05:38:11Z",
+  "last_verified_at": "2026-11-16T16:12:01Z",
   "created_at": "2026-09-10T11:17:40Z",
-  "updated_at": "2026-10-29T05:38:13Z",
+  "updated_at": "2026-11-16T16:12:01Z",
   "status": "ACTIVE",
   "validation_warnings": [],
   "price_range_usd": {
@@ -479,14 +479,14 @@
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 17136.0,
-    "max": 17136.0
+    "min": 16967.0,
+    "max": 16967.0
   },
   "is_active": true,
   "shopify_sync_pending": false,
-  "price": "17136.00",
+  "price": "16967.00",
   "shopify_product_id": "gid://shopify/Product/15848580284582",
   "shopify_handle": "on-running-cloudmonster-1-running-shoe-women",
-  "shopify_synced_at": "2026-10-29T05:38:11Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-16T04:08:00Z",
+  "last_synced_fx_rate": 94.262076
 }

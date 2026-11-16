@@ -134,15 +134,15 @@
       "current_price": 1897,
       "price_inr": 1897,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "2895936",
       "image_url": "https://www.sephora.com/productimages/sku/s2895936-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2895936+sw.jpg",
       "size": "0.3oz/10ml",
       "variation_value": "Salty Tan - soft mauve",
       "variation_type": "Color",
-      "inventory_quantity": 10,
+      "inventory_quantity": 0,
       "price": 1897,
       "source_price": 20.0
     },
@@ -177,8 +177,8 @@
       "current_price": 1897,
       "price_inr": 1897,
       "compare_at_price": null,
-      "in_stock": false,
-      "is_active": false,
+      "in_stock": true,
+      "is_active": true,
       "barcode": "2896009",
       "image_url": "https://www.sephora.com/productimages/sku/s2896009-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2896009+sw.jpg",
@@ -186,7 +186,8 @@
       "variation_value": "PB&J - warm berry brown",
       "variation_type": "Color",
       "price": 1897,
-      "source_price": 20.0
+      "source_price": 20.0,
+      "inventory_quantity": 10
     },
     {
       "id": "2896132",
@@ -265,9 +266,14 @@
     "rhode"
   ],
   "created_at": "2026-11-04T18:58:44Z",
-  "last_verified_at": "2026-11-05T10:49:02Z",
+  "last_verified_at": "2026-11-16T15:42:40Z",
   "id": "999554fd588eb9f4",
-  "updated_at": "2026-11-05T10:49:02Z",
-  "last_synced_fx_rate": 94.834253,
-  "shopify_sync_pending": true
+  "updated_at": "2026-11-16T15:42:40Z",
+  "last_synced_fx_rate": 93.851604,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15994213499046",
+  "shopify_handle": "rhode-peptide-lip-tint-nourishing-glaze-p517552",
+  "shopify_synced_at": "2026-11-12T16:18:22Z",
+  "shopify_image_synced": true,
+  "primary_image": "https://www.sephora.com/productimages/sku/s2895761-main-zoom.jpg"
 }

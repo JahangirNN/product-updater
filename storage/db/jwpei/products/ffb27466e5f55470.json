@@ -6,10 +6,10 @@
   "vendor": "JW PEI",
   "product_type": "2T33",
   "source_sku": "2T33-46",
-  "source_price": 119.0,
+  "source_price": 76.0,
   "source_compare_at_price": 119.0,
-  "current_price": 11286.0,
-  "compare_at_price": 11329.0,
+  "current_price": 7226.0,
+  "compare_at_price": 11285.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
@@ -45,7 +45,7 @@
       "source_compare_at_price": 139.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-1ArtificalCrystalMiniTopHandleBag-Black_1_9a0fbd9b-9cbe-4a44-a408-1a261cd095fa.jpg?v=1784716428",
       "option_values": [
         {
@@ -53,7 +53,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 13338.0
+      "price_current": 13338.0,
+      "is_available": false
     },
     {
       "id": 40510215716898,
@@ -65,7 +66,7 @@
       "source_compare_at_price": 89.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/products/2T33-0FauxFurMiniTopHandleBag-Orange_2_eaa3ec3a-853c-4ba4-9e85-9049f146a3d2.jpg?v=1752239443",
       "option_values": [
         {
@@ -73,15 +74,16 @@
           "name": "Orange"
         }
       ],
-      "price_current": 8540.0
+      "price_current": 8540.0,
+      "is_available": false
     },
     {
       "id": 43028625260578,
       "sku": "2T33-46",
       "title": "Pink",
-      "price": "11423.00",
+      "price": "7226.00",
       "compare_at_price": null,
-      "source_price": 119.0,
+      "source_price": 76.0,
       "source_compare_at_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -93,7 +95,8 @@
           "name": "Pink"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 7226.0,
+      "is_available": false
     },
     {
       "id": 40785944903714,
@@ -105,7 +108,7 @@
       "source_compare_at_price": 89.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/products/2T33-72FauxFurMiniTopHandleBag-GrassGreen_3_a012d533-7fd0-4f26-bbe7-80b82da08d4d.jpg?v=1752239376",
       "option_values": [
         {
@@ -113,7 +116,8 @@
           "name": "Standard"
         }
       ],
-      "price_current": 8540.0
+      "price_current": 8540.0,
+      "is_available": false
     },
     {
       "id": 41066037346338,
@@ -125,7 +129,7 @@
       "source_compare_at_price": 139.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-45_1366b0a7-6dd5-470c-9fe0-b51b3e576705.jpg?v=1752239262",
       "option_values": [
         {
@@ -133,7 +137,8 @@
           "name": "Red"
         }
       ],
-      "price_current": 13338.0
+      "price_current": 13338.0,
+      "is_available": false
     },
     {
       "id": 40510209720354,
@@ -145,7 +150,7 @@
       "source_compare_at_price": 89.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/products/2T33-4Frront_fa5ae5e6-958d-4449-9893-a46cd1ae026d.jpg?v=1752239446",
       "option_values": [
         {
@@ -153,7 +158,8 @@
           "name": "Pink"
         }
       ],
-      "price_current": 8540.0
+      "price_current": 8540.0,
+      "is_available": false
     },
     {
       "id": 41067220795426,
@@ -165,7 +171,7 @@
       "source_compare_at_price": 149.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-54-1.jpg?v=1752239194",
       "option_values": [
         {
@@ -173,7 +179,8 @@
           "name": "Blue"
         }
       ],
-      "price_current": 14298.0
+      "price_current": 14298.0,
+      "is_available": false
     },
     {
       "id": 41080959991842,
@@ -185,7 +192,7 @@
       "source_compare_at_price": 139.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-82-1.jpg?v=1752239173",
       "option_values": [
         {
@@ -193,7 +200,8 @@
           "name": "Yellow"
         }
       ],
-      "price_current": 13338.0
+      "price_current": 13338.0,
+      "is_available": false
     },
     {
       "id": 44289848049698,
@@ -205,7 +213,7 @@
       "source_compare_at_price": 89.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-17-FRONT.jpg?v=1766137126",
       "option_values": [
         {
@@ -213,7 +221,8 @@
           "name": "Black Croc"
         }
       ],
-      "price_current": 8540.0
+      "price_current": 8540.0,
+      "is_available": false
     },
     {
       "id": 44289848115234,
@@ -225,7 +234,7 @@
       "source_compare_at_price": 109.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-16-FRONT.jpg?v=1765945777",
       "option_values": [
         {
@@ -233,7 +242,8 @@
           "name": "Black"
         }
       ],
-      "price_current": 10459.0
+      "price_current": 10459.0,
+      "is_available": false
     },
     {
       "id": 44289848148002,
@@ -245,7 +255,7 @@
       "source_compare_at_price": 99.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-41-FRONT.jpg?v=1766137243",
       "option_values": [
         {
@@ -253,7 +263,8 @@
           "name": "Burgundy"
         }
       ],
-      "price_current": 9500.0
+      "price_current": 9500.0,
+      "is_available": false
     },
     {
       "id": 45894510837794,
@@ -265,7 +276,7 @@
       "source_compare_at_price": 89.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1784882469576-dumvrqxtiw4.jpg?v=1784887100",
       "option_values": [
         {
@@ -273,7 +284,8 @@
           "name": "Pink"
         }
       ],
-      "price_current": 8540.0
+      "price_current": 8540.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -331,15 +343,16 @@
     "26RAM12",
     "26USMD",
     "ALLAITEMS-NOREMOVE",
-    "bags",
     "Collection IV",
     "Collection VII-AE",
     "Collection VII-CA",
     "Collection VII-SMC",
     "Collection VIII-AU",
     "Handle Bag",
+    "bags",
     "othersnotguaranteexmas",
-    "spo-cs-disabled"
+    "spo-cs-disabled",
+    "supplier-delisted"
   ],
   "groups": [
     "handbags"
@@ -348,17 +361,19 @@
   "validation_warnings": [],
   "id": "ffb27466e5f55470",
   "created_at": "2026-09-09T15:47:24Z",
-  "updated_at": "2026-10-29T03:38:20Z",
-  "last_verified_at": "2026-10-29T03:38:20Z",
+  "updated_at": "2026-11-16T15:47:35Z",
+  "last_verified_at": "2026-11-16T15:47:33Z",
   "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841787150502",
   "shopify_handle": "abacus-embroidered-floral-mini-top-handle-bag-pink",
-  "shopify_synced_at": "2026-10-28T11:38:05Z",
+  "shopify_synced_at": "2026-11-16T15:47:33Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-46-FRONT.jpg?v=1752237790",
   "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/2T33-46-FRONT.jpg?v=1752237790",
   "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\ffb27466e5f55470.json",
   "archived": true,
   "canonical_product_id": "gid://shopify/Product/15841772175526",
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.834253,
+  "delist_strikes": 36,
+  "supplier_delisted": true
 }

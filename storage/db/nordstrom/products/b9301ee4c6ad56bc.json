@@ -9,8 +9,8 @@
   "source_sku": "HOKA-8132801-7",
   "source_price": 180.0,
   "source_compare_at_price": 180.0,
-  "current_price": 17136.0,
-  "compare_at_price": 17136.0,
+  "current_price": 16967.0,
+  "compare_at_price": 16967.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -47,7 +47,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/a62390a5-2289-47fc-b3ab-d107bbbe04bc.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -93,7 +93,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/a62390a5-2289-47fc-b3ab-d107bbbe04bc.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -300,7 +300,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/a62390a5-2289-47fc-b3ab-d107bbbe04bc.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -323,7 +323,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/a62390a5-2289-47fc-b3ab-d107bbbe04bc.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -402,22 +402,24 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:59:11Z",
+  "last_verified_at": "2026-11-16T16:07:46Z",
   "created_at": "2026-09-17T14:58:56Z",
-  "updated_at": "2026-10-29T03:59:11Z",
+  "updated_at": "2026-11-16T16:07:46Z",
   "shopify_product_id": "gid://shopify/Product/15848582054054",
   "shopify_handle": "mafate-speed-4-lite-sneaker-men",
-  "shopify_synced_at": "2026-10-28T20:04:09Z",
+  "shopify_synced_at": "2026-11-16T00:04:08Z",
   "shopify_sync_pending": false,
   "price_range_usd": {
     "min": 180.0,
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 17136.0,
-    "max": 17136.0
+    "min": 16967.0,
+    "max": 16967.0
   },
-  "price": "17136.00",
+  "price": "16967.00",
   "is_active": true,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.262076,
+  "delist_strikes": 0,
+  "supplier_delisted": false
 }

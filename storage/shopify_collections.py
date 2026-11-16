@@ -22,10 +22,9 @@ COLLECTIONS_MANIFEST: List[Dict[str, Any]] = [
         "handle": "instant-ship",
         "descriptionHtml": "<p>In-stock luxury designer pieces ready to ship immediately — authentic, verified, and delivered with express dispatch.</p>",
         "ruleSet": {
-            "appliedDisjunctively": True,
+            "appliedDisjunctively": False,
             "rules": [
-                {"column": "TAG", "relation": "EQUALS", "condition": "Ready to Ship"},
-                {"column": "TAG", "relation": "EQUALS", "condition": "instant-ship"}
+                {"column": "TAG", "relation": "EQUALS", "condition": "manual-instant-ship-active"}
             ]
         }
     },
@@ -327,6 +326,18 @@ COLLECTIONS_MANIFEST: List[Dict[str, Any]] = [
             ]
         }
     },
+    {
+        "title": "Kate Spade",
+        "handle": "kate-spade",
+        "descriptionHtml": "<p>Discover the joyful sophistication of Kate Spade New York. Explore crisp color palettes, iconic shoulder bags, versatile crossbodies, and finely crafted leather essentials.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": True,
+            "rules": [
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "Kate Spade"},
+                {"column": "TAG", "relation": "EQUALS", "condition": "Kate Spade"}
+            ]
+        }
+    },
 
     # --- Brand Showrooms: Footwear ---
     {
@@ -485,6 +496,226 @@ COLLECTIONS_MANIFEST: List[Dict[str, Any]] = [
                 {"column": "TITLE", "relation": "CONTAINS", "condition": "Michael Kors"}
             ]
         }
+    },
+
+    # --- Master Categories: Beauty & Cosmetics ---
+    {
+        "title": "Beauty & Cosmetics",
+        "handle": "beauty",
+        "descriptionHtml": "<p>Discover our curated collection of luxury beauty, viral skincare formulations, cult lip balms, and clean cosmetics from premier global ateliers.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": True,
+            "rules": [
+                {"column": "TAG", "relation": "EQUALS", "condition": "Beauty"},
+                {"column": "TAG", "relation": "EQUALS", "condition": "Cosmetics"}
+            ]
+        }
+    },
+    {
+        "title": "Luxury Skincare & Lip Care",
+        "handle": "skincare",
+        "descriptionHtml": "<p>Nourishing serums, barrier creams, and award-winning lip treatments crafted with potent botanical ingredients.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "TAG", "relation": "EQUALS", "condition": "Skincare"}
+            ]
+        }
+    },
+    {
+        "title": "Designer Makeup & Complexion",
+        "handle": "makeup",
+        "descriptionHtml": "<p>Luminous dew blushes, skin tints, weightless bronzers, and precision brow sculptors for effortless radiance.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "TAG", "relation": "EQUALS", "condition": "Makeup"}
+            ]
+        }
+    },
+    {
+        "title": "Luxury Haircare & Body Mist",
+        "handle": "haircare",
+        "descriptionHtml": "<p>Deeply nourishing hair masks, hydrating oils, and enchanting fine fragrance mists for daily indulgence.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "TAG", "relation": "EQUALS", "condition": "Haircare"}
+            ]
+        }
+    },
+    {
+        "title": "Value & Gift Sets",
+        "handle": "beauty-sets",
+        "descriptionHtml": "<p>Exclusive curated sets, limited-edition holiday vaults, and travel-size essentials bundled for gifting.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "TAG", "relation": "EQUALS", "condition": "Value & Gift Sets"}
+            ]
+        }
+    },
+
+    # --- Brand Showrooms: 14 Luxury Beauty Maisons ---
+    {
+        "title": "Summer Fridays",
+        "handle": "summer-fridays",
+        "descriptionHtml": "<p>Simple, effective clean beauty formulas including the cult-favorite Lip Butter Balm and Jet Lag Mask.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "Summer Fridays"}
+            ]
+        }
+    },
+    {
+        "title": "Gisou",
+        "handle": "gisou",
+        "descriptionHtml": "<p>Bee-powered luxury haircare and body treatments infused with Mirsalehi Honey.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "Gisou"}
+            ]
+        }
+    },
+    {
+        "title": "Haus Labs",
+        "handle": "haus-labs",
+        "descriptionHtml": "<p>High-performance artistry cosmetics formulated with clean, skin-loving ingredients by Lady Gaga.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "Haus Labs"}
+            ]
+        }
+    },
+    {
+        "title": "Patrick Ta",
+        "handle": "patrick-ta",
+        "descriptionHtml": "<p>Major Dimension artistry makeup designed to bring Hollywood red carpet glamour into everyday beauty.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": True,
+            "rules": [
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "PATRICK TA"},
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "Patrick Ta"}
+            ]
+        }
+    },
+    {
+        "title": "Saie",
+        "handle": "saie",
+        "descriptionHtml": "<p>Clean, conscious makeup engineered for a glowing, skin-first finish without compromise.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "Saie"}
+            ]
+        }
+    },
+    {
+        "title": "Tower 28 Beauty",
+        "handle": "tower-28",
+        "descriptionHtml": "<p>High-performance, 100% clean makeup and SOS skincare designed specifically for sensitive skin.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": True,
+            "rules": [
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "Tower 28 Beauty"},
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "Tower 28"}
+            ]
+        }
+    },
+    {
+        "title": "MERIT",
+        "handle": "merit",
+        "descriptionHtml": "<p>Minimalist luxury beauty essentials curated to streamline your daily morning routine.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": True,
+            "rules": [
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "MERIT"},
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "Merit"}
+            ]
+        }
+    },
+    {
+        "title": "Westman Atelier",
+        "handle": "westman-atelier",
+        "descriptionHtml": "<p>Second-skin clean luxury cosmetics crafted with plant-powered skincare actives by Gucci Westman.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "Westman Atelier"}
+            ]
+        }
+    },
+    {
+        "title": "Kosas",
+        "handle": "kosas",
+        "descriptionHtml": "<p>Comfy, nourishing makeup that doubles as clinically proven skincare for makeup lovers.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "Kosas"}
+            ]
+        }
+    },
+    {
+        "title": "rhode",
+        "handle": "rhode",
+        "descriptionHtml": "<p>Deliberately curated, glaze-inducing skincare and peptide lip tints by Hailey Rhode Bieber.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": True,
+            "rules": [
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "rhode"},
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "Rhode"}
+            ]
+        }
+    },
+    {
+        "title": "Glossier",
+        "handle": "glossier",
+        "descriptionHtml": "<p>Intuitive, uncomplicated skincare and beauty essentials inspired by real-life beauty routines.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "Glossier"}
+            ]
+        }
+    },
+    {
+        "title": "MAKEUP BY MARIO",
+        "handle": "makeup-by-mario",
+        "descriptionHtml": "<p>Master-level formulas and architectural complexion brushes engineered by celebrity artist Mario Dedivanovic.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": True,
+            "rules": [
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "MAKEUP BY MARIO"},
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "Makeup by Mario"}
+            ]
+        }
+    },
+    {
+        "title": "Hourglass",
+        "handle": "hourglass",
+        "descriptionHtml": "<p>Cruelty-free luxury cosmetics renowned for Ambient Lighting powders and transformative complexion formulas.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": False,
+            "rules": [
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "Hourglass"}
+            ]
+        }
+    },
+    {
+        "title": "REFY",
+        "handle": "refy",
+        "descriptionHtml": "<p>Innovative, sculpt-defining beauty tools and brow essentials designed to enhance natural features.</p>",
+        "ruleSet": {
+            "appliedDisjunctively": True,
+            "rules": [
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "REFY"},
+                {"column": "VENDOR", "relation": "EQUALS", "condition": "Refy"}
+            ]
+        }
     }
 ]
 
@@ -577,7 +808,25 @@ def provision_collection(spec: Dict[str, Any], existing_collections: Optional[Di
         return False, None, f"UserErrors: {err_msg}"
 
     node = res.get("collection")
+    if node and node.get("id"):
+        publish_smart_collection_rest(node.get("id"))
     return True, node, "created"
+
+
+def publish_smart_collection_rest(collection_id_or_gid: Any) -> bool:
+    """Ensure smart collection is published to Online Store sales channel via REST API."""
+    try:
+        from storage.shopify_auth import get_shopify_credentials
+        import httpx
+        cid = str(collection_id_or_gid).split("/")[-1]
+        domain, token, version = get_shopify_credentials()
+        headers = {"Content-Type": "application/json", "X-Shopify-Access-Token": token}
+        url = f"https://{domain}/admin/api/2024-07/smart_collections/{cid}.json"
+        res = httpx.put(url, json={"smart_collection": {"id": int(cid), "published": True}}, headers=headers, timeout=10.0)
+        return res.status_code == 200
+    except Exception as e:
+        log_warning(f"Failed to auto-publish collection {collection_id_or_gid}: {e}")
+        return False
 
 
 def provision_all_collections() -> Dict[str, Any]:

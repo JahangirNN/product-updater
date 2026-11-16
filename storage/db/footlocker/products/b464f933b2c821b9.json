@@ -10,7 +10,7 @@
   "source_price": 120.0,
   "source_compare_at_price": null,
   "current_price": 11519.0,
-  "compare_at_price": 11424.0,
+  "compare_at_price": 11311.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -173,7 +173,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/IH9212_01",
       "option_values": [
         {
@@ -197,7 +197,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/IH9212_01",
       "option_values": [
         {
@@ -420,12 +420,12 @@
   "groups": [
     "adidas Handball Spezial"
   ],
-  "last_verified_at": "2026-10-29T03:36:40Z",
+  "last_verified_at": "2026-11-16T13:42:17Z",
   "created_at": "2026-09-20T10:38:23Z",
-  "updated_at": "2026-10-29T03:36:40Z",
+  "updated_at": "2026-11-16T13:42:17Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851013046438",
   "shopify_handle": "adidas-originals-handball-spezial-women-s-hi-res-green-purple-rush-gold-met-ih9212",
-  "shopify_synced_at": "2026-10-17T03:28:26Z",
-  "last_synced_fx_rate": 95.10014
+  "shopify_synced_at": "2026-11-12T08:52:57Z",
+  "last_synced_fx_rate": 93.851604
 }

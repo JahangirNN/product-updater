@@ -94,8 +94,17 @@ def check_price_and_stock(
                     "has_changed": False
                 }
 
-            # 4. Handle Delisting / 404
-            if status_code == 404 or "Product Not Available" in html_content:
+            # 4. Handle Delisting / 404 / Sephora Discontinued Redirects
+            final_url = str(resp.url or "").lower()
+            is_delisted_redirect = ("productnotcarried" in final_url) or ("/error/404" in final_url)
+            is_not_found_body = (
+                "product not available" in html_content.lower()
+                or "page you’re looking for cannot be found" in html_content.lower()
+                or "page you're looking for cannot be found" in html_content.lower()
+            )
+
+            if status_code == 404 or is_delisted_redirect or is_not_found_body:
+                is_real_404 = (status_code == 404) or ("/error/404" in final_url)
                 return {
                     "status": "not_found",
                     "id": product.get("id"),
@@ -104,9 +113,11 @@ def check_price_and_stock(
                     "availability": old_availability,
                     "source_price": old_source_price,
                     "price": str(product.get("current_price", "")),
-                    "message": "404 Product not found / delisted.",
+                    "message": f"Sephora product delisted / not found (status={status_code}, redirect={is_delisted_redirect}).",
                     "elapsed_ms": elapsed_ms,
-                    "has_changed": False
+                    "has_changed": False,
+                    "is_http_404": is_real_404,
+                    "http_status": 404 if is_real_404 else 200
                 }
 
             if status_code != 200 or len(html_content) < 5000:

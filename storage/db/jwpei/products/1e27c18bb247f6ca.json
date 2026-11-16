@@ -6,14 +6,14 @@
   "vendor": "JW PEI",
   "product_type": "2T276",
   "source_sku": "2T276-4",
-  "source_price": 119.0,
+  "source_price": 80.0,
   "source_compare_at_price": 119.0,
-  "current_price": 11286.0,
-  "compare_at_price": 11329.0,
+  "current_price": 7607.0,
+  "compare_at_price": 11234.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.843169,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Croc-Embossed Vegan Leather",
   "specifications": {
     "Main Material": "Croc-Embossed Vegan Leather",
@@ -183,13 +183,13 @@
       "id": 43953517396002,
       "sku": "2T276-4",
       "title": "Burgundy Croc",
-      "price": "11423.00",
+      "price": "7607.00",
       "compare_at_price": null,
-      "source_price": 119.0,
+      "source_price": 80.0,
       "source_compare_at_price": 119.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779705522614-3gyn8saumi8.jpg?v=1779786868",
       "option_values": [
         {
@@ -197,7 +197,7 @@
           "name": "Burgundy Croc"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 7607.0
     },
     {
       "id": 43953517428770,
@@ -343,17 +343,17 @@
   "validation_warnings": [],
   "id": "1e27c18bb247f6ca",
   "created_at": "2026-09-09T15:51:49Z",
-  "updated_at": "2026-10-29T05:36:40Z",
-  "last_verified_at": "2026-10-29T05:36:40Z",
-  "is_active": true,
+  "updated_at": "2026-11-16T15:44:16Z",
+  "last_verified_at": "2026-11-16T15:44:16Z",
+  "is_active": false,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841772929190",
   "shopify_handle": "bria-structured-top-handle-bag-burgundy-croc",
-  "shopify_synced_at": "2026-09-29T05:58:01Z",
+  "shopify_synced_at": "2026-11-12T08:58:07Z",
   "image": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779705522614-3gyn8saumi8.jpg?v=1779786868",
   "image_url": "https://cdn.shopify.com/s/files/1/0150/6292/5412/files/1779705522614-3gyn8saumi8.jpg?v=1779786868",
   "_local_file": "C:\\Users\\Administrator\\WorkPlace\\dropship-scraper-portable-20260905\\product-updater\\storage\\db\\jwpei\\products\\1e27c18bb247f6ca.json",
   "archived": true,
   "canonical_product_id": "gid://shopify/Product/15841772503206",
-  "last_synced_fx_rate": 95.252751
+  "last_synced_fx_rate": 93.851604
 }

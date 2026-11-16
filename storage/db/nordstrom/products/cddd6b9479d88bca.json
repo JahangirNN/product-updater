@@ -9,8 +9,8 @@
   "source_sku": "ON-9129766-7",
   "source_price": 180.0,
   "source_compare_at_price": 180.0,
-  "current_price": 17129.0,
-  "compare_at_price": 17129.0,
+  "current_price": 16967.0,
+  "compare_at_price": 16967.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
@@ -115,7 +115,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/23feda42-ec89-4eac-a833-d3e956294a9c.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -184,7 +184,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/23feda42-ec89-4eac-a833-d3e956294a9c.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -427,24 +427,24 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:57:23Z",
+  "last_verified_at": "2026-11-16T16:15:17Z",
   "created_at": "2026-09-17T14:19:11Z",
-  "updated_at": "2026-10-29T03:57:23Z",
+  "updated_at": "2026-11-16T16:15:17Z",
   "price_range_usd": {
     "min": 180.0,
     "max": 180.0
   },
   "price_range_inr": {
-    "min": 17129.0,
-    "max": 17129.0
+    "min": 16967.0,
+    "max": 16967.0
   },
-  "price": "17129.00",
+  "price": "16967.00",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15850879942822",
   "shopify_handle": "the-roger-clubhouse-pro-2-tennis-shoe",
-  "shopify_synced_at": "2026-10-26T18:14:42Z",
+  "shopify_synced_at": "2026-11-16T04:10:40Z",
   "delist_strikes": 0,
   "supplier_delisted": false,
-  "last_synced_fx_rate": 95.160836
+  "last_synced_fx_rate": 94.262076
 }

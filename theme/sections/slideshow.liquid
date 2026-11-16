@@ -44,27 +44,65 @@ may have important consequence on the section itself.
             {%- endif -%}
           {%- else -%}
             {%- liquid
-              if section.settings.autoplay
-                assign loop_video = false
-              else
-                assign loop_video = true
-              endif
-
-              if block.settings.video != blank
-                if block.settings.mobile_video == blank
-                  render 'media', media: block.settings.video, autoplay: true, loop: loop_video, controls: false, preload: forloop.first
-                else
-                  render 'media', media: block.settings.video, autoplay: true, loop: loop_video, controls: false, preload: forloop.first, class: 'hidden sm:block'
-                  render 'media', media: block.settings.mobile_video, autoplay: true, loop: loop_video, controls: false, preload: forloop.first, class: 'sm:hidden'
-                endif
-              else
-                capture placeholder_image
-                  cycle 'placeholder': 'lifestyle-1', 'lifestyle-2'
-                endcapture
-
-                echo placeholder_image | placeholder_svg_tag: 'placeholder' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"'
-              endif
+              assign loop_video = true
+              assign default_hero_video_cdn = 'https://cdn.shopify.com/videos/c/vp/4566d2c5692a4de485ac3856e13ff074/4566d2c5692a4de485ac3856e13ff074.HD-720p-2.1Mbps-96684109.mp4'
+              assign default_hero_video_mobile_cdn = 'https://cdn.shopify.com/videos/c/vp/6e693e51902f4afd85b5bcedd13b8cd1/6e693e51902f4afd85b5bcedd13b8cd1.HD-720p-1.6Mbps-98014703.mp4'
+              assign default_hero_video_asset = 'the-rare-avenue-hero-video.mp4' | asset_url
+              assign default_hero_video_mobile_asset = 'hero-video-mobile-9-16.mp4' | asset_url
+              assign default_hero_poster = 'https://cdn.shopify.com/s/files/1/0759/1457/6038/files/preview_images/4566d2c5692a4de485ac3856e13ff074.thumbnail.0000000000.jpg?v=1791375023'
             -%}
+
+            {%- if block.settings.video != blank -%}
+              {%- if block.settings.mobile_video != blank -%}
+                {%- render 'media', media: block.settings.video, autoplay: true, loop: loop_video, controls: false, preload: forloop.first, class: 'hidden sm:block' -%}
+                {%- render 'media', media: block.settings.mobile_video, autoplay: true, loop: loop_video, controls: false, preload: forloop.first, class: 'sm:hidden' -%}
+              {%- else -%}
+                {%- render 'media', media: block.settings.video, autoplay: true, loop: loop_video, controls: false, preload: forloop.first, class: 'hidden sm:block' -%}
+                <video-media autoplay style="--aspect-ratio: 9/16;" class="sm:hidden">
+                  <video 
+                    class="object-cover" 
+                    playsinline 
+                    autoplay 
+                    muted 
+                    loop 
+                    preload="{% if forloop.first %}auto{% else %}metadata{% endif %}"
+                    poster="{{ default_hero_poster }}"
+                  >
+                    <source src="{{ default_hero_video_mobile_cdn }}" type="video/mp4">
+                    <source src="{{ default_hero_video_mobile_asset }}" type="video/mp4">
+                  </video>
+                </video-media>
+              {%- endif -%}
+            {%- else -%}
+              <video-media autoplay style="--aspect-ratio: 16/9;" class="hidden sm:block">
+                <video 
+                  class="object-cover" 
+                  playsinline 
+                  autoplay 
+                  muted 
+                  loop 
+                  preload="auto"
+                  poster="{{ default_hero_poster }}"
+                >
+                  <source src="{{ default_hero_video_cdn }}" type="video/mp4">
+                  <source src="{{ default_hero_video_asset }}" type="video/mp4">
+                </video>
+              </video-media>
+              <video-media autoplay style="--aspect-ratio: 9/16;" class="sm:hidden">
+                <video 
+                  class="object-cover" 
+                  playsinline 
+                  autoplay 
+                  muted 
+                  loop 
+                  preload="auto"
+                  poster="{{ default_hero_poster }}"
+                >
+                  <source src="{{ default_hero_video_mobile_cdn }}" type="video/mp4">
+                  <source src="{{ default_hero_video_mobile_asset }}" type="video/mp4">
+                </video>
+              </video-media>
+            {%- endif -%}
           {%- endif -%}
 
           {%- comment -%}---------------- CONTENT ----------------{%- endcomment -%}
@@ -125,14 +163,14 @@ may have important consequence on the section itself.
           </div>
         </div>
 
-        {%- if block.type == 'video' and block.settings.video != blank and block.settings.allow_sound -%}
+        {%- if block.type == 'video' and block.settings.allow_sound -%}
           <div class="slideshow__volume-control" style="{% render 'surface', text_color: section.settings.controls_color %}">
-            <button data-action="unmute">
+            <button type="button" data-action="unmute" aria-label="Unmute video">
               <span class="sr-only">{{ 'general.accessibility.unmute_video' | t }}</span>
               {%- render 'icon' with 'unmute' -%}
             </button>
 
-            <button data-action="mute" hidden>
+            <button type="button" data-action="mute" aria-label="Mute video" hidden>
               <span class="sr-only">{{ 'general.accessibility.mute_video' | t }}</span>
               {%- render 'icon' with 'mute' -%}
             </button>
@@ -175,6 +213,182 @@ may have important consequence on the section itself.
       </button>
     {%- endif -%}
   </slideshow-carousel>
+
+  <style>
+    #shopify-section-{{ section.id }} .slideshow__volume-control {
+      position: absolute !important;
+      bottom: clamp(1.25rem, 3vw, 2.5rem) !important;
+      left: clamp(1.25rem, 3.5vw, 2.5rem) !important;
+      inset-block-end: clamp(1.25rem, 3vw, 2.5rem) !important;
+      inset-inline-start: clamp(1.25rem, 3.5vw, 2.5rem) !important;
+      z-index: 30 !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    #shopify-section-{{ section.id }} .slideshow__volume-control button {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 34px !important;
+      height: 34px !important;
+      border-radius: 50% !important;
+      background: rgba(0, 0, 0, 0.45) !important;
+      backdrop-filter: blur(8px) !important;
+      -webkit-backdrop-filter: blur(8px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      color: #ffffff !important;
+      cursor: pointer !important;
+      transition: all 0.25s ease !important;
+      padding: 0 !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    #shopify-section-{{ section.id }} .slideshow__volume-control button:hover {
+      background: rgba(0, 0, 0, 0.8) !important;
+      border-color: rgba(255, 255, 255, 0.75) !important;
+      transform: scale(1.1) !important;
+    }
+
+    #shopify-section-{{ section.id }} .slideshow__volume-control button[hidden] {
+      display: none !important;
+    }
+
+    #shopify-section-{{ section.id }} .slideshow__slide-content {
+      padding-left: clamp(4.5rem, 6vw, 6.5rem) !important;
+    }
+
+    @media screen and (max-width: 699px) {
+      #shopify-section-{{ section.id }} .slideshow__slide-content {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+        padding-bottom: 5.5rem !important;
+      }
+      #shopify-section-{{ section.id }} .slideshow__volume-control {
+        bottom: 1.5rem !important;
+        left: 1.25rem !important;
+      }
+    }
+
+    /* Strictly suppress native browser player controls and resume icons */
+    #shopify-section-{{ section.id }} video::-webkit-media-controls,
+    #shopify-section-{{ section.id }} video::-webkit-media-controls-enclosure,
+    #shopify-section-{{ section.id }} video::-webkit-media-controls-panel,
+    #shopify-section-{{ section.id }} video::-webkit-media-controls-overlay-play-button {
+      display: none !important;
+      -webkit-appearance: none !important;
+      opacity: 0 !important;
+    }
+
+    #shopify-section-{{ section.id }} video-media[suspended] {
+      pointer-events: auto !important;
+    }
+  </style>
+
+  <script>
+    (function() {
+      function ensureAutoplay() {
+        const section = document.getElementById('shopify-section-{{ section.id }}');
+        if (!section) return;
+
+        const videos = section.querySelectorAll('video');
+        videos.forEach(function(video) {
+          video.muted = true;
+          video.defaultMuted = true;
+          video.playsInline = true;
+          video.setAttribute('playsinline', '');
+          video.setAttribute('webkit-playsinline', '');
+          video.setAttribute('muted', '');
+          video.controls = false;
+          video.removeAttribute('controls');
+
+          const vMedia = video.closest('video-media');
+          if (vMedia) {
+            vMedia.removeAttribute('suspended');
+          }
+
+          function tryPlay() {
+            if (video.paused) {
+              video.muted = true;
+              const p = video.play();
+              if (p && typeof p.catch === 'function') {
+                p.catch(function() {});
+              }
+            }
+          }
+
+          tryPlay();
+
+          // If low-power mode or mobile policy delayed autoplay, play on first user interaction
+          const onUserEngage = function() {
+            tryPlay();
+            window.removeEventListener('touchstart', onUserEngage, { passive: true });
+            window.removeEventListener('pointerdown', onUserEngage, { passive: true });
+            window.removeEventListener('scroll', onUserEngage, { passive: true });
+          };
+          window.addEventListener('touchstart', onUserEngage, { passive: true, once: true });
+          window.addEventListener('pointerdown', onUserEngage, { passive: true, once: true });
+          window.addEventListener('scroll', onUserEngage, { passive: true, once: true });
+
+          // Intercept and strip any controls or suspended attribute added by third-party scripts
+          try {
+            const observer = new MutationObserver(function() {
+              if (video.hasAttribute('controls')) {
+                video.removeAttribute('controls');
+              }
+              if (vMedia && vMedia.hasAttribute('suspended')) {
+                vMedia.removeAttribute('suspended');
+              }
+            });
+            observer.observe(video, { attributes: true, attributeFilter: ['controls'] });
+            if (vMedia) {
+              observer.observe(vMedia, { attributes: true, attributeFilter: ['suspended'] });
+            }
+          } catch (_) {}
+        });
+      }
+
+      function initHeroVolumeToggle() {
+        const section = document.getElementById('shopify-section-{{ section.id }}');
+        if (!section) return;
+
+        section.addEventListener('click', function(e) {
+          const btn = e.target.closest('.slideshow__volume-control button');
+          if (!btn) return;
+          e.preventDefault();
+          e.stopPropagation();
+
+          const slide = btn.closest('.slideshow__slide') || section;
+          const videos = Array.from(slide.querySelectorAll('video'));
+          if (videos.length === 0) return;
+
+          const action = btn.getAttribute('data-action');
+          const isMute = action !== 'unmute';
+          videos.forEach(function(v) {
+            v.muted = isMute;
+          });
+
+          const unmuteBtn = slide.querySelector('[data-action="unmute"]');
+          const muteBtn = slide.querySelector('[data-action="mute"]');
+          if (unmuteBtn && muteBtn) {
+            unmuteBtn.hidden = !isMute;
+            muteBtn.hidden = isMute;
+          }
+        });
+      }
+
+      function init() {
+        ensureAutoplay();
+        initHeroVolumeToggle();
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
 {%- endif -%}
 
 {% schema %}

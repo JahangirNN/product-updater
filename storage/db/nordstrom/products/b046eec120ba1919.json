@@ -7,14 +7,14 @@
   "vendor": "NORDSTROM",
   "product_type": "Athletic Shoes",
   "source_sku": "HOKA-8431600-7",
-  "source_price": 155.0,
+  "source_price": 108.5,
   "source_compare_at_price": null,
-  "current_price": 14756.0,
+  "current_price": 10230.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 96.021592,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "Textile and synthetic upper and lining/rubber sole",
   "specifications": {
     "Brand": "NORDSTROM",
@@ -736,7 +736,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://n.nordstrommedia.com/it/9d17c08e-a967-4b36-ad3a-43e555ffc339.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -1006,9 +1006,9 @@
       "id": 843160041,
       "sku": "NORDSTROM-8431600-MIDN-7.5",
       "title": "UK 7 - Midnight Blue / Grout",
-      "price": "8260.00",
+      "price": "10316.00",
       "compare_at_price": "14883.00",
-      "source_price": 86.8,
+      "source_price": 108.5,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1024,7 +1024,7 @@
           "name": "Midnight Blue / Grout"
         }
       ],
-      "price_current": 8260.0
+      "price_current": 10316.0
     },
     {
       "id": 843160042,
@@ -1053,9 +1053,9 @@
       "id": 843160043,
       "sku": "NORDSTROM-8431600-MIDN-12",
       "title": "UK 11.5 - Midnight Blue / Grout",
-      "price": "8260.00",
+      "price": "10316.00",
       "compare_at_price": "14883.00",
-      "source_price": 86.8,
+      "source_price": 108.5,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1071,15 +1071,15 @@
           "name": "Midnight Blue / Grout"
         }
       ],
-      "price_current": 8260.0
+      "price_current": 10316.0
     },
     {
       "id": 843160044,
       "sku": "NORDSTROM-8431600-MIDN-10.5",
       "title": "UK 10 - Midnight Blue / Grout",
-      "price": "8260.00",
+      "price": "10316.00",
       "compare_at_price": "14883.00",
-      "source_price": 86.8,
+      "source_price": 108.5,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1095,7 +1095,7 @@
           "name": "Midnight Blue / Grout"
         }
       ],
-      "price_current": 8260.0
+      "price_current": 10316.0
     },
     {
       "id": 843160045,
@@ -1170,9 +1170,9 @@
       "id": 843160048,
       "sku": "NORDSTROM-8431600-MIDN-11.5",
       "title": "UK 11 - Midnight Blue / Grout",
-      "price": "8260.00",
+      "price": "10316.00",
       "compare_at_price": "14883.00",
-      "source_price": 86.8,
+      "source_price": 108.5,
       "source_compare_at_price": 155.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -1188,7 +1188,7 @@
           "name": "Midnight Blue / Grout"
         }
       ],
-      "price_current": 8260.0
+      "price_current": 10316.0
     },
     {
       "id": 843160049,
@@ -1336,23 +1336,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:55:54Z",
+  "last_verified_at": "2026-11-16T15:46:04Z",
   "created_at": "2026-09-18T07:01:25Z",
-  "updated_at": "2026-10-29T03:55:54Z",
+  "updated_at": "2026-11-16T15:46:04Z",
   "price_range_usd": {
-    "min": 86.8,
+    "min": 108.5,
     "max": 155.0
   },
   "price_range_inr": {
-    "min": 8263.0,
-    "max": 14756.0
+    "min": 10230.0,
+    "max": 14615.0
   },
   "status": "ACTIVE",
-  "is_active": true,
-  "price": "14756.00",
+  "is_active": false,
+  "price": "10230.00",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15850879451302",
   "shopify_handle": "challenger-8-trail-running-shoe-men-wide",
-  "shopify_synced_at": "2026-10-28T19:58:22Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-14T18:25:31Z",
+  "last_synced_fx_rate": 94.289707
 }

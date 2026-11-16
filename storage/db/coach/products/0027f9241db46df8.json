@@ -49,7 +49,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfr91_svxam_a0",
       "option_values": [
         {
@@ -57,7 +57,8 @@
           "name": "Sv/Walnut/Black"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 11423.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -77,7 +78,8 @@
           "name": "Silver/Black"
         }
       ],
-      "price_current": 9503.0
+      "price_current": 9503.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -97,7 +99,8 @@
           "name": "Silver/Deep Blue"
         }
       ],
-      "price_current": 9503.0
+      "price_current": 9503.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -117,7 +120,8 @@
           "name": "Silver/Olive"
         }
       ],
-      "price_current": 9503.0
+      "price_current": 9503.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -137,7 +141,8 @@
           "name": "Silver/Light Indigo"
         }
       ],
-      "price_current": 11423.0
+      "price_current": 11423.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -157,7 +162,8 @@
           "name": "Silver/Black Signature"
         }
       ],
-      "price_current": 9503.0
+      "price_current": 9503.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -177,7 +183,8 @@
           "name": "Gunmetal/Black"
         }
       ],
-      "price_current": 9503.0
+      "price_current": 9503.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -197,7 +204,8 @@
           "name": "Silver/Olive"
         }
       ],
-      "price_current": 9503.0
+      "price_current": 9503.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -217,7 +225,8 @@
           "name": "Gunmetal/Charcoal/Black"
         }
       ],
-      "price_current": 9503.0
+      "price_current": 9503.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -237,7 +246,8 @@
           "name": "Gunmetal/Grey/Charcoal"
         }
       ],
-      "price_current": 9503.0
+      "price_current": 9503.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -276,23 +286,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Handbags"
+    "Handbags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-12T22:59:58Z",
-  "last_verified_at": "2026-10-29T03:36:58Z",
+  "last_verified_at": "2026-11-16T15:41:52Z",
   "id": "0027f9241db46df8",
   "product_id": "0027f9241db46df8",
   "store": "coach",
-  "updated_at": "2026-10-29T03:36:58Z",
+  "updated_at": "2026-11-16T15:41:52Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15841760772262",
   "shopify_handle": "pouch-in-signature-canvas",
-  "shopify_synced_at": "2026-10-27T23:37:26Z",
+  "shopify_synced_at": "2026-11-14T11:04:34Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.269051
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

@@ -3,12 +3,17 @@
     "firecrawl": {
       "serverUrl": "https://mcp.firecrawl.dev/v2/mcp",
       "headers": {
-        "Authorization": "Bearer fc-5536da28f44342329859982d2c848986"
+        "Authorization": "Bearer fc-c8760028c40942e685a271b9a4067238"
       }
     },
     "context7": {
       "command": "npx",
-      "args": ["-y", "@upstash/context7-mcp", "--api-key", "ctx7sk-0aaf2325-c1c4-47e2-bbd2-987e5ce5ef87"]
+      "args": [
+        "-y",
+        "@upstash/context7-mcp",
+        "--api-key",
+        "ctx7sk-d20e4c43-d52c-4185-b349-9b6e86b51476"
+      ]
     }
   }
 }

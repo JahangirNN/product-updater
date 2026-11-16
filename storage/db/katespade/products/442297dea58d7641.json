@@ -14,7 +14,7 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.199335,
-  "availability": "in_stock",
+  "availability": "out_of_stock",
   "material": "100% recycled nylon",
   "specifications": {
     "Material": "100% recycled nylon",
@@ -70,8 +70,9 @@
         "https://katespade.scene7.com/is/image/KateSpade/KL193_300_1",
         "https://katespade.scene7.com/is/image/KateSpade/KL193_300_2"
       ],
-      "inventory_quantity": 0,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KL193_300"
+      "inventory_quantity": 10,
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KL193_300",
+      "is_available": false
     },
     {
       "id": null,
@@ -94,7 +95,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KL193_600_3"
       ],
       "inventory_quantity": 0,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KL193_600"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KL193_600",
+      "is_available": false
     },
     {
       "id": null,
@@ -109,7 +111,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image": "https://katespade.scene7.com/is/image/KateSpade/KL193_651",
       "images": [
         "https://katespade.scene7.com/is/image/KateSpade/KL193_651",
@@ -117,7 +119,8 @@
         "https://katespade.scene7.com/is/image/KateSpade/KL193_651_3"
       ],
       "inventory_quantity": 10,
-      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KL193_651"
+      "image_url": "https://katespade.scene7.com/is/image/KateSpade/KL193_651",
+      "is_available": false
     }
   ],
   "product_options": [
@@ -133,18 +136,25 @@
     }
   ],
   "tags": [
-    "Kate Spade",
-    "Women",
     "Handbags",
-    "Totes & Carryalls"
+    "Kate Spade",
+    "Totes & Carryalls",
+    "Women"
   ],
   "groups": [
     "handbags"
   ],
   "created_at": "2026-10-29T05:29:14Z",
-  "last_verified_at": "2026-10-29T07:43:39Z",
+  "last_verified_at": "2026-11-16T15:41:38Z",
   "_elapsed_ms": 4507.72059999872,
   "id": "442297dea58d7641",
-  "updated_at": "2026-10-29T07:43:39Z",
-  "last_synced_fx_rate": 95.29615
+  "updated_at": "2026-11-16T15:41:38Z",
+  "last_synced_fx_rate": 95.29615,
+  "shopify_product_id": "gid://shopify/Product/15915078582438",
+  "shopify_handle": "sam-icon-ksnyl-mini-tote-bag",
+  "shopify_synced_at": "2026-11-15T15:41:41Z",
+  "shopify_sync_pending": false,
+  "delist_strikes": 0,
+  "supplier_delisted": false,
+  "is_active": false
 }

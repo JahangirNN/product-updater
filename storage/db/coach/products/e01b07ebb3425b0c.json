@@ -65,7 +65,8 @@
           "name": "Matte Black/Tan Black"
         }
       ],
-      "price_current": 12383.0
+      "price_current": 12383.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -85,7 +86,8 @@
           "name": "Matte Black/Black Signature"
         }
       ],
-      "price_current": 12383.0
+      "price_current": 12383.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -105,7 +107,8 @@
           "name": "Sv/Black Currant"
         }
       ],
-      "price_current": 12383.0
+      "price_current": 12383.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -125,7 +128,8 @@
           "name": "Silver/GREEN"
         }
       ],
-      "price_current": 12383.0
+      "price_current": 12383.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -145,7 +149,8 @@
           "name": "SV/Walnut/Black"
         }
       ],
-      "price_current": 14302.0
+      "price_current": 14302.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -165,7 +170,8 @@
           "name": "Silver/Amber Brown"
         }
       ],
-      "price_current": 12383.0
+      "price_current": 12383.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -185,7 +191,8 @@
           "name": "Silver/BLACK"
         }
       ],
-      "price_current": 12383.0
+      "price_current": 12383.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -205,7 +212,8 @@
           "name": "Silver/Maple"
         }
       ],
-      "price_current": 12383.0
+      "price_current": 12383.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -225,7 +233,8 @@
           "name": "Silver/Light Indigo"
         }
       ],
-      "price_current": 14302.0
+      "price_current": 14302.0,
+      "is_available": false
     }
   ],
   "product_options": [
@@ -264,23 +273,24 @@
   ],
   "tags": [
     "COACH",
-    "Men",
-    "Crossbody Bags"
+    "Crossbody Bags",
+    "Men"
   ],
   "groups": [
     "men_bags"
   ],
   "created_at": "2026-09-13T00:47:39Z",
-  "last_verified_at": "2026-10-29T05:38:06Z",
+  "last_verified_at": "2026-11-16T15:41:49Z",
   "id": "e01b07ebb3425b0c",
   "product_id": "e01b07ebb3425b0c",
   "store": "coach",
-  "updated_at": "2026-10-29T05:38:06Z",
+  "updated_at": "2026-11-16T15:41:49Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841769783462",
   "shopify_handle": "tristan-crossbody-bag-14-in-signature-canvas-with-patches",
-  "shopify_synced_at": "2026-10-18T08:26:48Z",
+  "shopify_synced_at": "2026-11-14T19:04:09Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.111965
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

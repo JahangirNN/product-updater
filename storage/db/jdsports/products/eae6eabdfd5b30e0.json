@@ -16,8 +16,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "material": "Leather, synthetic and textile upper with rubber traction outsole",
   "specifications": {
     "Brand": "Nike",
@@ -96,7 +96,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/DD1873_114_P1",
       "option_values": [
         {
@@ -108,7 +108,7 @@
           "name": "White/Elemental Pink/Dark Pony/Sail"
         }
       ],
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -121,7 +121,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/DD1873_114_P1",
       "option_values": [
         {
@@ -133,7 +133,7 @@
           "name": "White/Elemental Pink/Dark Pony/Sail"
         }
       ],
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -221,7 +221,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/DD1873_114_P1",
       "option_values": [
         {
@@ -233,7 +233,7 @@
           "name": "White/Elemental Pink/Dark Pony/Sail"
         }
       ],
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -246,7 +246,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/DD1873_114_P1",
       "option_values": [
         {
@@ -258,7 +258,7 @@
           "name": "White/Elemental Pink/Dark Pony/Sail"
         }
       ],
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -371,7 +371,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://media.jdsports.com/i/finishline/DD1873_114_P1",
       "option_values": [
         {
@@ -383,7 +383,7 @@
           "name": "White/Elemental Pink/Dark Pony/Sail"
         }
       ],
-      "is_available": true
+      "is_available": false
     },
     {
       "id": null,
@@ -477,7 +477,8 @@
     "JD Sports",
     "Nike",
     "Nike Dunk Low",
-    "Women's"
+    "Women's",
+    "supplier-delisted"
   ],
   "groups": [
     "footwear",
@@ -486,13 +487,13 @@
     "women's-shoes"
   ],
   "created_at": "2026-09-20T16:10:40Z",
-  "updated_at": "2026-10-29T05:37:33Z",
-  "last_verified_at": "2026-10-29T05:37:33Z",
+  "updated_at": "2026-11-16T15:43:08Z",
+  "last_verified_at": "2026-11-16T15:43:06Z",
   "shopify_product_id": "gid://shopify/Product/15851461705894",
   "shopify_handle": "womens-nike-dunk-low-next-nature-casual-shoes-white-elemental-pink-dark-pony-sail-3760931",
-  "shopify_synced_at": "2026-10-21T09:22:45Z",
+  "shopify_synced_at": "2026-11-16T15:43:06Z",
   "shopify_sync_pending": false,
-  "delist_strikes": 0,
-  "supplier_delisted": false,
-  "last_synced_fx_rate": 95.052511
+  "delist_strikes": 30,
+  "supplier_delisted": true,
+  "last_synced_fx_rate": 93.851604
 }

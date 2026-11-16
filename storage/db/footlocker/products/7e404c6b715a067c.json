@@ -10,7 +10,7 @@
   "source_price": 140.0,
   "source_compare_at_price": null,
   "current_price": 13439.0,
-  "compare_at_price": 13328.0,
+  "compare_at_price": 13216.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -243,7 +243,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/3A542107_01",
       "option_values": [
         {
@@ -337,12 +337,12 @@
   "groups": [
     "ASICS Shoes"
   ],
-  "last_verified_at": "2026-10-29T06:07:38Z",
+  "last_verified_at": "2026-11-16T15:43:57Z",
   "created_at": "2026-09-20T10:38:24Z",
-  "updated_at": "2026-10-29T06:07:38Z",
-  "shopify_sync_pending": true,
+  "updated_at": "2026-11-16T15:43:57Z",
+  "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851009999014",
   "shopify_handle": "asics-gel-nyc-2055-women-s-dolphin-grey-white-3a542107",
-  "shopify_synced_at": "2026-10-07T03:58:34Z",
-  "last_synced_fx_rate": 95.252751
+  "shopify_synced_at": "2026-11-05T08:50:31Z",
+  "last_synced_fx_rate": 94.834253
 }

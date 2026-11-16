@@ -17,8 +17,8 @@
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 94.834253,
-  "availability": "in_stock",
-  "is_active": true,
+  "availability": "out_of_stock",
+  "is_active": false,
   "primary_image_url": "https://www.sephora.com/productimages/sku/s3023660-main-zoom.jpg",
   "images": [
     "https://www.sephora.com/productimages/sku/s3023660-main-zoom.jpg",
@@ -51,8 +51,8 @@
       "current_price": 3414,
       "price_inr": 3414,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "3023660",
       "image_url": "https://www.sephora.com/productimages/sku/s3023660-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s3023660-swatch-zoom.jpg",
@@ -60,7 +60,8 @@
       "variation_value": "3023660",
       "variation_type": "None",
       "price": 3414,
-      "source_price": 36.0
+      "source_price": 36.0,
+      "inventory_quantity": 0
     }
   ],
   "product_options": [
@@ -87,8 +88,13 @@
     "summer-fridays"
   ],
   "created_at": "2026-11-04T18:27:46Z",
-  "last_verified_at": "2026-11-05T12:44:18Z",
+  "last_verified_at": "2026-11-16T15:46:48Z",
   "id": "4848e8292f25f77f",
-  "updated_at": "2026-11-05T12:44:18Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:46:48Z",
+  "last_synced_fx_rate": 94.262076,
+  "shopify_product_id": "gid://shopify/Product/15993764610214",
+  "shopify_handle": "summer-fridays-marshmallow-minis-body-and-lip-set-p526100",
+  "shopify_synced_at": "2026-11-16T07:45:52Z",
+  "shopify_image_synced": true,
+  "shopify_sync_pending": false
 }

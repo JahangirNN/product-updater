@@ -9,7 +9,7 @@
   "source_sku": "SALOMON-7997785-6",
   "source_price": 74.99,
   "source_compare_at_price": null,
-  "current_price": 7136.0,
+  "current_price": 7069.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -741,9 +741,9 @@
       "id": 799778530,
       "sku": "SALOMON-7997785-VANI-8",
       "title": "UK 7.5 - Vanilla Ice",
-      "price": "14470.00",
+      "price": "7071.00",
       "compare_at_price": "14403.00",
-      "source_price": 150.0,
+      "source_price": 74.99,
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -759,7 +759,7 @@
           "name": "Vanilla Ice"
         }
       ],
-      "price_current": 14470.0
+      "price_current": 7071.0
     },
     {
       "id": 799778531,
@@ -857,9 +857,9 @@
       "id": 799778535,
       "sku": "SALOMON-7997785-VANI-14",
       "title": "UK 13.5 - Vanilla Ice",
-      "price": "14470.00",
+      "price": "7071.00",
       "compare_at_price": "14403.00",
-      "source_price": 150.0,
+      "source_price": 74.99,
       "source_compare_at_price": 150.0,
       "currency": "INR",
       "source_currency": "USD",
@@ -875,7 +875,7 @@
           "name": "Vanilla Ice"
         }
       ],
-      "price_current": 14470.0
+      "price_current": 7071.0
     },
     {
       "id": 799778536,
@@ -1047,23 +1047,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T03:57:33Z",
+  "last_verified_at": "2026-11-16T16:11:21Z",
   "created_at": "2026-09-18T05:46:35Z",
-  "updated_at": "2026-10-29T03:57:33Z",
+  "updated_at": "2026-11-16T16:11:21Z",
   "price_range_usd": {
     "min": 74.99,
     "max": 150.0
   },
   "price_range_inr": {
-    "min": 7136.0,
-    "max": 14274.0
+    "min": 7069.0,
+    "max": 14139.0
   },
   "status": "ACTIVE",
   "is_active": false,
   "shopify_sync_pending": false,
-  "price": "7136.00",
+  "price": "7069.00",
   "shopify_product_id": "gid://shopify/Product/15850879975590",
   "shopify_handle": "salomon-gender-inclusive-xt-pathway-gore-tex-waterproof-sneaker",
-  "shopify_synced_at": "2026-10-27T02:14:09Z",
-  "last_synced_fx_rate": 95.160836
+  "shopify_synced_at": "2026-11-15T21:16:06Z",
+  "last_synced_fx_rate": 94.262076
 }

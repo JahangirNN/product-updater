@@ -136,8 +136,8 @@
       "current_price": 6544,
       "price_inr": 6544,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "2897353",
       "image_url": "https://www.sephora.com/productimages/sku/s2897353-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2897353+sw.jpg",
@@ -145,7 +145,8 @@
       "variation_value": "Atelier F4",
       "variation_type": "Color",
       "price": 6544,
-      "source_price": 69.0
+      "source_price": 69.0,
+      "inventory_quantity": 0
     },
     {
       "id": "2897296",
@@ -750,8 +751,14 @@
     "westman-atelier"
   ],
   "created_at": "2026-11-04T18:54:00Z",
-  "last_verified_at": "2026-11-05T10:46:46Z",
+  "last_verified_at": "2026-11-16T15:41:43Z",
   "id": "97d19fe8c608e554",
-  "updated_at": "2026-11-05T10:46:46Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:41:43Z",
+  "last_synced_fx_rate": 94.086126,
+  "shopify_product_id": "gid://shopify/Product/15994204291238",
+  "shopify_handle": "westman-atelier-supr-me-bio-complex-liquid-foundation-with-exosomes-peptides-p525193",
+  "shopify_synced_at": "2026-11-14T07:05:10Z",
+  "shopify_image_synced": true,
+  "shopify_sync_pending": false,
+  "primary_image": "https://www.sephora.com/productimages/sku/s2897361-main-zoom.jpg"
 }

@@ -70,7 +70,8 @@
           "name": "Gold/Light Blue"
         }
       ],
-      "price_current": 11327.0
+      "price_current": 11327.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -90,7 +91,8 @@
           "name": "Gold/Navy"
         }
       ],
-      "price_current": 16222.0
+      "price_current": 16222.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -102,7 +104,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/cfp33_imwbr_a0",
       "option_values": [
         {
@@ -110,7 +112,8 @@
           "name": "Gold/Warm Brown"
         }
       ],
-      "price_current": 16222.0
+      "price_current": 16222.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -130,7 +133,8 @@
           "name": "Silver/Black Brown"
         }
       ],
-      "price_current": 21022.0
+      "price_current": 21022.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -142,7 +146,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://coach.scene7.com/is/image/Coach/ces95_imyw7_a0",
       "option_values": [
         {
@@ -150,7 +154,8 @@
           "name": "Gold/Cinnamon"
         }
       ],
-      "price_current": 21022.0
+      "price_current": 21022.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -170,7 +175,8 @@
           "name": "Gold/Black"
         }
       ],
-      "price_current": 21022.0
+      "price_current": 21022.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -200,23 +206,24 @@
   ],
   "tags": [
     "COACH",
-    "Women",
-    "Handbags"
+    "Handbags",
+    "Women"
   ],
   "groups": [
     "women_bags"
   ],
   "created_at": "2026-09-13T00:41:39Z",
-  "last_verified_at": "2026-10-29T03:39:45Z",
+  "last_verified_at": "2026-11-16T15:46:11Z",
   "id": "522d0de493b808ff",
   "product_id": "522d0de493b808ff",
   "store": "coach",
-  "updated_at": "2026-10-29T03:39:45Z",
+  "updated_at": "2026-11-16T15:46:11Z",
   "shopify_sync_pending": false,
   "is_active": true,
   "shopify_product_id": "gid://shopify/Product/15841764835494",
   "shopify_handle": "rowan-bucket-bag",
-  "shopify_synced_at": "2026-10-28T19:46:12Z",
+  "shopify_synced_at": "2026-11-14T05:06:16Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

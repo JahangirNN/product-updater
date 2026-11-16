@@ -93,8 +93,8 @@
       "current_price": 3604,
       "price_inr": 3604,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "2434462",
       "image_url": "https://www.sephora.com/productimages/sku/s2434462-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2434462+sw.jpg",
@@ -102,7 +102,8 @@
       "variation_value": "Chou Chou",
       "variation_type": "Color",
       "price": 3604,
-      "source_price": 38.0
+      "source_price": 38.0,
+      "inventory_quantity": 0
     },
     {
       "id": "2434454",
@@ -244,8 +245,13 @@
     "westman-atelier"
   ],
   "created_at": "2026-11-04T18:54:57Z",
-  "last_verified_at": "2026-11-05T10:46:59Z",
+  "last_verified_at": "2026-11-16T15:41:47Z",
   "id": "d4187d20cd59efb4",
-  "updated_at": "2026-11-05T10:46:59Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:41:47Z",
+  "last_synced_fx_rate": 93.851604,
+  "shopify_sync_pending": true,
+  "shopify_product_id": "gid://shopify/Product/15994439729318",
+  "shopify_handle": "westman-atelier-squeaky-clean-liquid-lip-hydrating-lip-balm-p469873",
+  "shopify_synced_at": "2026-11-12T13:30:36Z",
+  "shopify_image_synced": true
 }

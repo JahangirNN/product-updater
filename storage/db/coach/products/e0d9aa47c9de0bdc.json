@@ -72,7 +72,8 @@
           "name": "Gunmetal/Black"
         }
       ],
-      "price_current": 4703.0
+      "price_current": 4703.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -92,7 +93,8 @@
           "name": "Chalk"
         }
       ],
-      "price_current": 4703.0
+      "price_current": 4703.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -104,7 +106,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": true,
+      "in_stock": false,
       "image_url": "https://coach.scene7.com/is/image/Coach/cj728_sad_a0",
       "option_values": [
         {
@@ -112,7 +114,8 @@
           "name": "Saddle"
         }
       ],
-      "price_current": 4703.0
+      "price_current": 4703.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -131,7 +134,8 @@
           "option_name": "Color",
           "name": "Mango"
         }
-      ]
+      ],
+      "is_available": false
     },
     {
       "id": null,
@@ -151,7 +155,8 @@
           "name": "Light Denim"
         }
       ],
-      "price_current": 3686.0
+      "price_current": 3686.0,
+      "is_available": false
     },
     {
       "id": null,
@@ -171,7 +176,8 @@
           "name": "Amber Brown"
         }
       ],
-      "price_current": 4703.0
+      "price_current": 4703.0,
+      "is_available": true
     },
     {
       "id": null,
@@ -191,7 +197,8 @@
           "name": "Poppy"
         }
       ],
-      "price_current": 3744.0
+      "price_current": 3744.0,
+      "is_available": true
     }
   ],
   "product_options": [
@@ -231,16 +238,17 @@
     "men_wallets"
   ],
   "created_at": "2026-09-13T00:47:41Z",
-  "last_verified_at": "2026-10-29T05:38:06Z",
+  "last_verified_at": "2026-11-16T15:46:32Z",
   "id": "e0d9aa47c9de0bdc",
   "product_id": "e0d9aa47c9de0bdc",
   "store": "coach",
-  "updated_at": "2026-10-29T05:38:06Z",
+  "updated_at": "2026-11-16T15:46:32Z",
   "is_active": true,
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15841769750694",
   "shopify_handle": "id-wallet",
-  "shopify_synced_at": "2026-10-28T17:38:22Z",
+  "shopify_synced_at": "2026-11-14T01:15:15Z",
   "delist_strikes": 0,
-  "last_synced_fx_rate": 95.199335
+  "last_synced_fx_rate": 94.086126,
+  "supplier_delisted": false
 }

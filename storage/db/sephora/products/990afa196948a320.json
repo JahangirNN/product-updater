@@ -68,8 +68,8 @@
       "current_price": 3604,
       "price_inr": 3604,
       "compare_at_price": null,
-      "in_stock": true,
-      "is_active": true,
+      "in_stock": false,
+      "is_active": false,
       "barcode": "2957108",
       "image_url": "https://www.sephora.com/productimages/sku/s2957108-main-zoom.jpg",
       "swatch_url": "https://www.sephora.com/productimages/sku/s2957108+sw.jpg",
@@ -77,7 +77,8 @@
       "variation_value": "Evoke",
       "variation_type": "Color",
       "price": 3604,
-      "source_price": 38.0
+      "source_price": 38.0,
+      "inventory_quantity": 0
     },
     {
       "id": "2957090",
@@ -161,7 +162,8 @@
       "variation_value": "Dream",
       "variation_type": "Color",
       "price": 3604,
-      "source_price": 38.0
+      "source_price": 38.0,
+      "inventory_quantity": 10
     }
   ],
   "product_options": [
@@ -196,8 +198,14 @@
     "hourglass"
   ],
   "created_at": "2026-11-04T19:06:45Z",
-  "last_verified_at": "2026-11-05T12:40:47Z",
+  "last_verified_at": "2026-11-16T15:45:06Z",
   "id": "990afa196948a320",
-  "updated_at": "2026-11-05T12:40:47Z",
-  "last_synced_fx_rate": 94.834253
+  "updated_at": "2026-11-16T15:45:06Z",
+  "last_synced_fx_rate": 94.289707,
+  "shopify_sync_pending": false,
+  "shopify_product_id": "gid://shopify/Product/15994209042598",
+  "shopify_handle": "hourglass-unreal-radiant-glow-liquid-highlighter-p521357",
+  "shopify_synced_at": "2026-11-15T07:09:10Z",
+  "shopify_image_synced": true,
+  "primary_image": "https://www.sephora.com/productimages/sku/s2957108-main-zoom.jpg"
 }

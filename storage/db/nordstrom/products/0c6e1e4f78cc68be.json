@@ -9,7 +9,7 @@
   "source_sku": "HOKA-9052797-7",
   "source_price": 125.0,
   "source_compare_at_price": null,
-  "current_price": 11900.0,
+  "current_price": 11783.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -423,7 +423,7 @@
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/35bdb3f0-987f-49a3-9314-5547081e882f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -519,7 +519,7 @@
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/35bdb3f0-987f-49a3-9314-5547081e882f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -543,7 +543,7 @@
       "source_compare_at_price": 125.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/35bdb3f0-987f-49a3-9314-5547081e882f.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -750,23 +750,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-10-29T04:00:55Z",
+  "last_verified_at": "2026-11-16T16:14:44Z",
   "created_at": "2026-09-18T06:50:18Z",
-  "updated_at": "2026-10-29T04:00:55Z",
+  "updated_at": "2026-11-16T16:14:44Z",
   "price_range_usd": {
     "min": 125.0,
     "max": 125.0
   },
   "price_range_inr": {
-    "min": 11900.0,
-    "max": 11900.0
+    "min": 11783.0,
+    "max": 11783.0
   },
   "status": "ACTIVE",
   "is_active": true,
   "shopify_sync_pending": false,
-  "price": "11900.00",
+  "price": "11783.00",
   "shopify_product_id": "gid://shopify/Product/15850875781286",
   "shopify_handle": "hoka-solimar-2-training-shoe-men",
-  "shopify_synced_at": "2026-10-28T20:07:40Z",
-  "last_synced_fx_rate": 95.199335
+  "shopify_synced_at": "2026-11-16T12:12:53Z",
+  "last_synced_fx_rate": 94.262076
 }
