@@ -38,17 +38,19 @@ def init_logger(
     general_log_name: str = "freshner.log",
     error_log_name: str = "errors.log",
     shopify_error_log_name: str = "shopify_errors.log",
-    rotation_general: str = "500 MB",
-    rotation_error: str = "500 MB",
-    rotation_shopify: str = "20 MB",
-    retention_general: str = "14 days",
-    retention_error: str = "30 days",
-    retention_shopify: str = "30 days",
+    rotation_general: str = "20 MB",
+    rotation_error: str = "10 MB",
+    rotation_shopify: str = "10 MB",
+    retention_general: str = "5 days",
+    retention_error: str = "14 days",
+    retention_shopify: str = "14 days",
     console_level: str = "INFO"
 ) -> None:
     """
     Initialize centralized logging with dual file sinks, dedicated Shopify error sink,
     and colorized console output.
+    Enforces automatic size rotation (10-20 MB), gzip compression, and retention limits
+    to guarantee the server disk is never exhausted (ADR 0005, ADR 0009).
     Pure functional setup. Safe to call multiple times (idempotent).
     """
     global _INITIALIZED
@@ -80,7 +82,7 @@ def init_logger(
             enqueue=True
         )
 
-        # 2. General Operational Log Sink (INFO+)
+        # 2. General Operational Log Sink (INFO+) with Gzip Compression
         file_fmt = "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | {name}:{line} - {message}"
         _loguru_logger.add(
             general_log_path,
@@ -88,6 +90,7 @@ def init_logger(
             level="INFO",
             rotation=rotation_general,
             retention=retention_general,
+            compression="gz",
             encoding="utf-8",
             enqueue=True
         )
@@ -103,6 +106,7 @@ def init_logger(
             level="ERROR",
             rotation=rotation_error,
             retention=retention_error,
+            compression="gz",
             encoding="utf-8",
             backtrace=True,
             diagnose=True,
@@ -121,13 +125,15 @@ def init_logger(
             filter=lambda record: bool(record["extra"].get("shopify")) or "shopify" in record["message"].lower(),
             rotation=rotation_shopify,
             retention=retention_shopify,
+            compression="gz",
             encoding="utf-8",
             backtrace=True,
             diagnose=True,
             enqueue=True
         )
     else:
-        # Graceful fallback to standard logging
+        # Graceful fallback to standard logging with RotatingFileHandler
+        import logging.handlers
         root = _std_logging.getLogger()
         root.setLevel(_std_logging.INFO)
         formatter = _std_logging.Formatter("%(asctime)s | %(levelname)-8s | %(name)s:%(lineno)d - %(message)s")
@@ -136,22 +142,38 @@ def init_logger(
         sh.setFormatter(formatter)
         root.addHandler(sh)
 
-        fh_general = _std_logging.FileHandler(general_log_path, encoding="utf-8")
+        fh_general = logging.handlers.RotatingFileHandler(
+            general_log_path, maxBytes=20 * 1024 * 1024, backupCount=5, encoding="utf-8"
+        )
         fh_general.setLevel(_std_logging.INFO)
         fh_general.setFormatter(formatter)
         root.addHandler(fh_general)
 
-        fh_error = _std_logging.FileHandler(error_log_path, encoding="utf-8")
+        fh_error = logging.handlers.RotatingFileHandler(
+            error_log_path, maxBytes=10 * 1024 * 1024, backupCount=5, encoding="utf-8"
+        )
         fh_error.setLevel(_std_logging.ERROR)
         fh_error.setFormatter(formatter)
         root.addHandler(fh_error)
 
-        fh_shopify = _std_logging.FileHandler(shopify_log_path, encoding="utf-8")
+        fh_shopify = logging.handlers.RotatingFileHandler(
+            shopify_log_path, maxBytes=10 * 1024 * 1024, backupCount=5, encoding="utf-8"
+        )
         fh_shopify.setLevel(_std_logging.WARNING)
         fh_shopify.setFormatter(formatter)
         root.addHandler(fh_shopify)
 
     _INITIALIZED = True
+
+
+def log_debug(message: str, **kwargs: Any) -> None:
+    """Log debug message (routed to DEBUG level, preventing disk inflation)."""
+    if not _INITIALIZED:
+        init_logger()
+    if _HAS_LOGURU and _loguru_logger is not None:
+        _loguru_logger.opt(depth=1).debug(message, **kwargs)
+    else:
+        _std_logging.debug(message)
 
 
 def log_info(message: str, **kwargs: Any) -> None:

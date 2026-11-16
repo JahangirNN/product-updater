@@ -10,7 +10,7 @@
   "source_price": 127.5,
   "source_compare_at_price": null,
   "current_price": 12018.0,
-  "compare_at_price": 16025.0,
+  "compare_at_price": 16048.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -166,13 +166,13 @@
       "id": null,
       "sku": "D0884025-7.5",
       "title": "UK 5 - Charcoal/Photon Dust",
-      "price": "16318.00",
+      "price": "12036.00",
       "compare_at_price": null,
-      "source_price": 170.0,
+      "source_price": 127.5,
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/D0884025_01",
       "option_values": [
         {
@@ -184,7 +184,7 @@
           "name": "Charcoal/Photon Dust"
         }
       ],
-      "price_current": 16318.0
+      "price_current": 12036.0
     },
     {
       "id": null,
@@ -473,12 +473,12 @@
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-11-16T13:41:53Z",
+  "last_verified_at": "2026-11-16T17:42:13Z",
   "created_at": "2026-09-18T20:48:02Z",
-  "updated_at": "2026-11-16T13:41:53Z",
+  "updated_at": "2026-11-16T17:42:15Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851008426150",
   "shopify_handle": "nike-zoom-vomero-5-women-s-charcoal-photon-dust-d0884025",
-  "shopify_synced_at": "2026-11-15T17:52:56Z",
-  "last_synced_fx_rate": 94.262076
+  "shopify_synced_at": "2026-11-16T17:42:13Z",
+  "last_synced_fx_rate": 94.399626
 }

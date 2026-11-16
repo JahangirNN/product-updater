@@ -33,6 +33,7 @@ from storage.pricing_engine import resolve_storefront_pricing
 from storage.shopify_taxonomy import resolve_product_type, resolve_authentic_vendor
 from storage.logger import (
     init_logger,
+    log_debug,
     log_info,
     log_success,
     log_warning,
@@ -636,7 +637,13 @@ def sync_store_batch(
                             items_since_recycle = 0
 
                         results.append(res)
-                        log_info(f"[{store_name.upper()} {idx:2d}/{len(store_items)}] {res.get('handle', item.get('id'))[:28]:28s} | {res.get('status', 'unknown'):7s} | {res.get('availability', 'unknown'):12s} | ${res.get('current_source_price')} | {res.get('elapsed_ms', 0):.0f}ms")
+                        item_label = f"[{store_name.upper()} {idx:2d}/{len(store_items)}] {res.get('handle', item.get('id'))[:28]:28s} | {res.get('status', 'unknown'):7s} | {res.get('availability', 'unknown'):12s} | ${res.get('current_source_price')} | {res.get('elapsed_ms', 0):.0f}ms"
+                        if res.get("has_changed"):
+                            log_info(f"⚡ [SHIFT] {item_label}")
+                        elif res.get("status") not in ("success", "not_found"):
+                            log_warning(item_label)
+                        else:
+                            log_debug(item_label)
 
                         # Fail-fast circuit breaker check
                         if store_limiter.get("is_circuit_open") and store_limiter["is_circuit_open"]():
@@ -714,9 +721,17 @@ def sync_store_batch(
                             "has_changed": False
                         }
                     results.append(res)
-                    if idx % 10 == 0 or idx == len(future_to_item) or len(future_to_item) <= 5:
-                        log_info(f"[{store_name.upper()} {idx:3d}/{len(future_to_item)}] {res.get('handle', '')[:28]:28s} | {res.get('status', 'unknown'):7s} | {res.get('availability', 'unknown'):12s} | ${res.get('current_source_price')} | {res.get('elapsed_ms', 0):.0f}ms")
+                    item_label = f"[{store_name.upper()} {idx:3d}/{len(future_to_item)}] {res.get('handle', '')[:28]:28s} | {res.get('status', 'unknown'):7s} | {res.get('availability', 'unknown'):12s} | ${res.get('current_source_price')} | {res.get('elapsed_ms', 0):.0f}ms"
+                    if res.get("has_changed"):
+                        log_info(f"⚡ [SHIFT] {item_label}")
+                    elif res.get("status") not in ("success", "not_found"):
+                        log_warning(item_label)
+                    else:
+                        log_debug(item_label)
 
+    shifts = sum(1 for r in results if r.get("has_changed"))
+    successes = sum(1 for r in results if r.get("status") == "success")
+    log_info(f"[{store_name.upper()}] Sweep complete: {len(results)} items polled | {shifts} shifts detected | {successes} active")
     return results
 
 

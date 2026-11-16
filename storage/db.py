@@ -218,6 +218,16 @@ def append_delta_event(event_entry: Dict[str, Any], queue_file: str = "storage/d
                 import fcntl
                 fcntl.flock(lock_f.fileno(), fcntl.LOCK_EX)
 
+            # If queue file exceeds 10 MB, rotate to .old to avoid unbounded disk growth
+            try:
+                if os.path.exists(queue_file) and os.path.getsize(queue_file) > 10 * 1024 * 1024:
+                    old_file = queue_file + ".old"
+                    if os.path.exists(old_file):
+                        os.remove(old_file)
+                    os.replace(queue_file, old_file)
+            except Exception:
+                pass
+
             # Append event line to JSONL queue
             with open(queue_file, "a", encoding="utf-8") as qf:
                 qf.write(line)
@@ -239,22 +249,28 @@ def append_delta_event(event_entry: Dict[str, Any], queue_file: str = "storage/d
 
 def read_delta_events(queue_file: str = "storage/db/history/delta_events.jsonl") -> List[Dict[str, Any]]:
     """
-    Read all delta events from the JSONL queue file.
+    Read all delta events from the JSONL queue file (including .old if present).
     Returns a list of event dicts for backward compatibility with consumers.
     """
     events = []
-    if not os.path.exists(queue_file):
-        return events
-    try:
-        with open(queue_file, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if line:
-                    try:
-                        events.append(json.loads(line))
-                    except json.JSONDecodeError:
-                        continue
-    except Exception:
-        pass
+    files_to_read = []
+    old_file = queue_file + ".old"
+    if os.path.exists(old_file):
+        files_to_read.append(old_file)
+    if os.path.exists(queue_file):
+        files_to_read.append(queue_file)
+
+    for target_path in files_to_read:
+        try:
+            with open(target_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line:
+                        try:
+                            events.append(json.loads(line))
+                        except json.JSONDecodeError:
+                            continue
+        except Exception:
+            pass
     return events
 

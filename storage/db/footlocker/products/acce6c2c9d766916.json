@@ -10,12 +10,12 @@
   "source_price": 144.0,
   "source_compare_at_price": 180.0,
   "current_price": 13822.0,
-  "compare_at_price": 16972.0,
+  "compare_at_price": 16992.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "color": "Orange/Black/Blue",
   "width": "Width - D - Medium",
   "material": "Premium upper with durable overlays and responsive traction outsole",
@@ -125,7 +125,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8150404_01",
       "option_values": [
         {
@@ -138,7 +138,7 @@
         }
       ],
       "price_current": 13822.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -150,7 +150,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8150404_01",
       "option_values": [
         {
@@ -163,7 +163,7 @@
         }
       ],
       "price_current": 13822.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -175,7 +175,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8150404_01",
       "option_values": [
         {
@@ -188,7 +188,7 @@
         }
       ],
       "price_current": 13822.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -200,7 +200,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8150404_01",
       "option_values": [
         {
@@ -213,7 +213,7 @@
         }
       ],
       "price_current": 13822.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -225,7 +225,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8150404_01",
       "option_values": [
         {
@@ -238,7 +238,7 @@
         }
       ],
       "price_current": 13822.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -341,20 +341,19 @@
     "men's",
     "nike",
     "shoes",
-    "sizes-10",
-    "supplier-delisted"
+    "sizes-10"
   ],
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-11-16T13:41:21Z",
+  "last_verified_at": "2026-11-16T17:41:25Z",
   "created_at": "2026-09-18T20:48:16Z",
-  "updated_at": "2026-11-16T13:41:23Z",
+  "updated_at": "2026-11-16T17:41:27Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851012751526",
   "shopify_handle": "nike-vomero-plus-men-s-orange-black-blue-v8150404",
-  "shopify_synced_at": "2026-11-16T13:41:21Z",
-  "delist_strikes": 12,
-  "supplier_delisted": true,
-  "last_synced_fx_rate": 94.289707
+  "shopify_synced_at": "2026-11-16T17:41:25Z",
+  "delist_strikes": 0,
+  "supplier_delisted": false,
+  "last_synced_fx_rate": 94.399626
 }

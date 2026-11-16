@@ -10,7 +10,7 @@
   "source_price": 95.0,
   "source_compare_at_price": null,
   "current_price": 9119.0,
-  "compare_at_price": 8955.0,
+  "compare_at_price": 8968.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
@@ -249,7 +249,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/H4309001_01",
       "option_values": [
         {
@@ -262,7 +262,7 @@
         }
       ],
       "price_current": 9119.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -299,7 +299,7 @@
       "source_compare_at_price": null,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/H4309001_01",
       "option_values": [
         {
@@ -312,7 +312,7 @@
         }
       ],
       "price_current": 9119.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -485,14 +485,14 @@
   "groups": [
     "Nike Mind"
   ],
-  "last_verified_at": "2026-11-16T13:41:41Z",
+  "last_verified_at": "2026-11-16T17:42:01Z",
   "created_at": "2026-09-20T10:34:56Z",
-  "updated_at": "2026-11-16T13:41:41Z",
+  "updated_at": "2026-11-16T17:42:04Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851005837478",
   "shopify_handle": "nike-mind-001-women-s-black-hyper-crimson-chrome-h4309001",
-  "shopify_synced_at": "2026-11-16T05:41:39Z",
+  "shopify_synced_at": "2026-11-16T17:42:01Z",
   "delist_strikes": 0,
   "supplier_delisted": false,
-  "last_synced_fx_rate": 94.262076
+  "last_synced_fx_rate": 94.399626
 }

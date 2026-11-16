@@ -7,9 +7,9 @@
   "vendor": "HOKA",
   "product_type": "Athletic Shoes",
   "source_sku": "HOKA-7501129-10",
-  "source_price": 170.0,
+  "source_price": 136.0,
   "source_compare_at_price": null,
-  "current_price": 16025.0,
+  "current_price": 12838.0,
   "compare_at_price": null,
   "currency": "INR",
   "source_currency": "USD",
@@ -655,7 +655,7 @@
       "source_compare_at_price": 170.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://n.nordstrommedia.com/it/2cbc8650-4fd1-484e-9a45-714d430aaa13.jpeg?crop=pad&trim=color",
       "option_values": [
         {
@@ -2964,23 +2964,23 @@
   "groups": [
     "shoes"
   ],
-  "last_verified_at": "2026-11-16T13:42:38Z",
+  "last_verified_at": "2026-11-16T17:42:30Z",
   "created_at": "2026-09-17T14:55:30Z",
-  "updated_at": "2026-11-16T13:42:38Z",
+  "updated_at": "2026-11-16T17:42:37Z",
   "price_range_usd": {
     "min": 68.0,
     "max": 170.0
   },
   "price_range_inr": {
-    "min": 6410.0,
-    "max": 16025.0
+    "min": 6419.0,
+    "max": 16048.0
   },
   "status": "ACTIVE",
   "is_active": true,
-  "price": "16025.00",
+  "price": "12838.00",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15848581398694",
   "shopify_handle": "hoka-mafate-speed-2-sneaker-men",
-  "shopify_synced_at": "2026-11-16T01:42:34Z",
-  "last_synced_fx_rate": 94.262076
+  "shopify_synced_at": "2026-11-16T17:42:30Z",
+  "last_synced_fx_rate": 94.399626
 }

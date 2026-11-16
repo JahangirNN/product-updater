@@ -10,12 +10,12 @@
   "source_price": 129.99,
   "source_compare_at_price": 180.0,
   "current_price": 12604.0,
-  "compare_at_price": 16967.0,
+  "compare_at_price": 16992.0,
   "currency": "INR",
   "source_currency": "USD",
   "forex_rate_used": 95.989567,
-  "availability": "out_of_stock",
-  "is_active": false,
+  "availability": "in_stock",
+  "is_active": true,
   "color": "College Grey/Light Iron Ore/Medium Ash",
   "width": "Width - D - Medium",
   "material": "Premium upper with durable overlays and responsive traction outsole",
@@ -75,7 +75,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8150005_01",
       "option_values": [
         {
@@ -88,7 +88,7 @@
         }
       ],
       "price_current": 12604.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -125,7 +125,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8150005_01",
       "option_values": [
         {
@@ -138,7 +138,7 @@
         }
       ],
       "price_current": 12478.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -325,7 +325,7 @@
       "source_compare_at_price": 180.0,
       "currency": "INR",
       "source_currency": "USD",
-      "in_stock": false,
+      "in_stock": true,
       "image_url": "https://assets.footlocker.com/is/image/FLDM/V8150005_01",
       "option_values": [
         {
@@ -338,7 +338,7 @@
         }
       ],
       "price_current": 12478.0,
-      "is_available": false
+      "is_available": true
     },
     {
       "id": null,
@@ -425,20 +425,19 @@
     "men's",
     "nike",
     "shoes",
-    "sizes-13",
-    "supplier-delisted"
+    "sizes-13"
   ],
   "groups": [
     "Nike Vomero"
   ],
-  "last_verified_at": "2026-11-16T13:42:28Z",
+  "last_verified_at": "2026-11-16T17:42:50Z",
   "created_at": "2026-09-18T20:48:12Z",
-  "updated_at": "2026-11-16T13:42:29Z",
+  "updated_at": "2026-11-16T17:42:52Z",
   "shopify_sync_pending": false,
   "shopify_product_id": "gid://shopify/Product/15851009278118",
   "shopify_handle": "nike-vomero-plus-men-s-college-grey-light-iron-ore-medium-ash-v8150005",
-  "shopify_synced_at": "2026-11-16T13:42:28Z",
-  "delist_strikes": 6,
-  "supplier_delisted": true,
-  "last_synced_fx_rate": 94.262076
+  "shopify_synced_at": "2026-11-16T17:42:50Z",
+  "delist_strikes": 0,
+  "supplier_delisted": false,
+  "last_synced_fx_rate": 94.399626
 }
