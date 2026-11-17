@@ -105,10 +105,183 @@
           </div>
         </li>
       </ul>
+
+      <!-- Client Care & Policy Action Links -->
+      <div class="luxury-footer-policy-links" style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid rgba(0, 0, 0, 0.08); display: flex; flex-wrap: wrap; gap: 0.65rem 1rem;">
+        <button type="button" onclick="openPolicyModal('returns')" class="luxury-footer-policy-btn" style="background: none; border: none; padding: 0; font-size: 0.72rem; color: #1a1a1a; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; font-weight: 500;">
+          7-Day Return Policy &rarr;
+        </button>
+        <button type="button" onclick="openPolicyModal('shipping')" class="luxury-footer-policy-btn" style="background: none; border: none; padding: 0; font-size: 0.72rem; color: #1a1a1a; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; font-weight: 500;">
+          Shipping &amp; Duties &rarr;
+        </button>
+        <button type="button" onclick="openPolicyModal('authenticity')" class="luxury-footer-policy-btn" style="background: none; border: none; padding: 0; font-size: 0.72rem; color: #1a1a1a; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; font-weight: 500;">
+          Authenticity Guarantee &rarr;
+        </button>
+      </div>
     </div>
 
   </div>
 </div>
+
+<!-- ==================== LUXURY CLIENT POLICIES MODAL DIALOG ==================== -->
+<div id="ra-policy-modal" class="ra-policy-modal-backdrop" aria-hidden="true" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.65); backdrop-filter: blur(4px); z-index: 9999999; display: none; pointer-events: none; align-items: center; justify-content: center; padding: 1.5rem 1rem; box-sizing: border-box;" onclick="if(event.target===this) closePolicyModal();">
+  <div class="ra-policy-modal-card" style="background: #ffffff; border: 1px solid rgba(0, 0, 0, 0.12); max-width: 620px; width: 100%; max-height: calc(100vh - 4rem); overflow-y: auto; padding: 2rem 2.25rem; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.25); box-sizing: border-box; font-family: var(--font-body--family, sans-serif);">
+    <button type="button" onclick="closePolicyModal()" aria-label="Close dialog" style="position: absolute; top: 1rem; right: 1rem; background: #f5f4ef; border: 1px solid rgba(0,0,0,0.1); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.1rem; line-height: 1; color: #1a1a1a;">&times;</button>
+    
+    <div id="ra-policy-modal-content">
+      <!-- Populated dynamically via JS -->
+    </div>
+  </div>
+</div>
+
+<script>
+  var RA_POLICIES = {
+    returns: {
+      title: "7-DAY LUXURY RETURN & EXCHANGE POLICY",
+      content: `
+        <p style="font-size: 0.8125rem; line-height: 1.6; color: #444; margin-bottom: 1rem;">
+          At <strong>The Rare Avenue</strong>, we stand behind the impeccable quality of our curated luxury catalog. If you are not completely satisfied with your acquisition, you may initiate a return or exchange within <strong>7 days of confirmed delivery</strong>.
+        </p>
+        <h4 style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #1a1a1a; margin: 1.25rem 0 0.5rem 0;">Return Eligibility Conditions:</h4>
+        <ul style="font-size: 0.8125rem; line-height: 1.6; color: #444; padding-left: 1.25rem; margin: 0 0 1rem 0;">
+          <li><strong>General Merchandise:</strong> Items must be completely unworn, unwashed, and in their pristine original condition with all security tags, serial tags, dust bags, and designer packaging attached.</li>
+          <li><strong>Cosmetics &amp; Fragrances:</strong> For health and hygiene compliance, beauty and fragrance items can only be returned if they remain in their original unopened condition with the factory cellophane seal intact. Opened or sprayed items cannot be accepted.</li>
+          <li><strong>Footwear:</strong> Shoes must be tested only on clean, carpeted surfaces. Soles must be entirely spotless, and the original branded shoebox must be undamaged and returned inside protective outer packaging.</li>
+          <li><strong>Watches:</strong> Must include all links, protective plastic coverings, official warranty card/booklet, and presentation box.</li>
+        </ul>
+        <h4 style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #1a1a1a; margin: 1.25rem 0 0.5rem 0;">How to Initiate a Return:</h4>
+        <p style="font-size: 0.8125rem; line-height: 1.6; color: #444; margin-bottom: 0.5rem;">
+          Simply reach out to our Concierge Team via WhatsApp at <a href="https://wa.me/919106951947" target="_blank" style="color: #047857; font-weight: 600;">+91 91069 51947</a> or email <a href="mailto:Contact@therareavenue.com" style="color: #1a1a1a; font-weight: 600;">Contact@therareavenue.com</a> with your Order Number and photos of the item. We will arrange a complimentary insured reverse courier pickup from your doorstep.
+        </p>
+      `
+    },
+    shipping: {
+      title: "INSURED SHIPPING & DOORSTEP DELIVERY",
+      content: `
+        <p style="font-size: 0.8125rem; line-height: 1.6; color: #444; margin-bottom: 1rem;">
+          Every acquisition from The Rare Avenue is handled with white-glove security from our global ateliers directly to your doorstep.
+        </p>
+        <h4 style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #1a1a1a; margin: 1.25rem 0 0.5rem 0;">Delivery Timelines:</h4>
+        <ul style="font-size: 0.8125rem; line-height: 1.6; color: #444; padding-left: 1.25rem; margin: 0 0 1rem 0;">
+          <li><strong>Ready to Ship Items:</strong> Dispatched within 24 hours. Express air transit takes <strong>2 to 4 business days</strong> across metro cities.</li>
+          <li><strong>International Atelier Curations:</strong> Sourced from authorized boutiques across North America, Europe, and Japan. Transit, custom clearance, and doorstep delivery take <strong>6 to 9 business days</strong>.</li>
+        </ul>
+        <h4 style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #1a1a1a; margin: 1.25rem 0 0.5rem 0;">Duties, Taxes &amp; Packaging:</h4>
+        <ul style="font-size: 0.8125rem; line-height: 1.6; color: #444; padding-left: 1.25rem; margin: 0 0 1rem 0;">
+          <li><strong>All-Inclusive Pricing:</strong> All Indian customs import duties, tariffs, and GST are 100% prepaid by The Rare Avenue. You will never encounter unexpected fees at delivery.</li>
+          <li><strong>Double-Box Protection:</strong> Luxury footwear and handbags are always double-boxed in high-rigidity corrugated outer cartons to safeguard collectible boxes and fine leather.</li>
+          <li><strong>End-to-End Insurance:</strong> Every parcel is fully insured against loss, transit damage, or theft until signed for at your door.</li>
+        </ul>
+      `
+    },
+    authenticity: {
+      title: "100% PROVENANCE & AUTHENTICITY GUARANTEE",
+      content: `
+        <p style="font-size: 0.8125rem; line-height: 1.6; color: #444; margin-bottom: 1rem;">
+          At The Rare Avenue, authenticity is not a promise—it is our founding principle. We maintain an uncompromising zero-tolerance policy regarding counterfeit goods.
+        </p>
+        <h4 style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #1a1a1a; margin: 1.25rem 0 0.5rem 0;">Our Multi-Tier Verification Process:</h4>
+        <ul style="font-size: 0.8125rem; line-height: 1.6; color: #444; padding-left: 1.25rem; margin: 0 0 1rem 0;">
+          <li><strong>Direct Boutique Sourcing:</strong> Our procurement network sources exclusively from authorized flagship boutiques, tier-1 luxury department stores (Nordstrom, Saks, Sephora), and verified brand distributors.</li>
+          <li><strong>Independent CheckCheck® Protocol:</strong> For streetwear footwear and high-risk sneakers, items undergo physical multi-point verification via CheckCheck with serialized tamper-proof tags and verifiable digital Certificates of Authenticity.</li>
+          <li><strong>Horology Quality Assurance:</strong> Swiss timepieces include complete serial hallmarks, official reference numbers, and presentation cases with international service validity.</li>
+          <li><strong>Full Money-Back Guarantee:</strong> In the extraordinary event that an item is ever shown to fall short of 100% authenticity, we provide an immediate 100% refund including all shipping costs.</li>
+        </ul>
+      `
+    },
+    terms: {
+      title: "TERMS OF SERVICE & CLIENT AGREEMENT",
+      content: `
+        <p style="font-size: 0.8125rem; line-height: 1.6; color: #444; margin-bottom: 1rem;">
+          Welcome to <strong>The Rare Avenue</strong>. By acquiring merchandise through our digital atelier, you agree to the following terms designed to protect our clientele and preserve the integrity of our curated collections.
+        </p>
+        <h4 style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #1a1a1a; margin: 1.25rem 0 0.5rem 0;">Orders &amp; Acquisitions:</h4>
+        <p style="font-size: 0.8125rem; line-height: 1.6; color: #444; margin-bottom: 0.5rem;">
+          All orders are subject to inventory verification and authenticity inspection prior to final courier dispatch. In the rare event an item fails pre-shipment authentication or is unavailable at our partner flagship, a full 100% refund is immediately processed.
+        </p>
+        <h4 style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #1a1a1a; margin: 1.25rem 0 0.5rem 0;">Pricing &amp; Taxes:</h4>
+        <p style="font-size: 0.8125rem; line-height: 1.6; color: #444; margin-bottom: 0.5rem;">
+          All listed prices are displayed in Indian Rupees (INR) and are strictly inclusive of all import duties, customs tariffs, insurance, and GST. No supplemental charges will ever be levied upon delivery.
+        </p>
+      `
+    },
+    privacy: {
+      title: "CLIENT PRIVACY & DATA PROTECTION",
+      content: `
+        <p style="font-size: 0.8125rem; line-height: 1.6; color: #444; margin-bottom: 1rem;">
+          At <strong>The Rare Avenue</strong>, discretion and client confidentiality are held in the highest regard. We treat your personal details and acquisition records with rigorous data security standards.
+        </p>
+        <h4 style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #1a1a1a; margin: 1.25rem 0 0.5rem 0;">Information Handling:</h4>
+        <p style="font-size: 0.8125rem; line-height: 1.6; color: #444; margin-bottom: 0.5rem;">
+          We collect personal identifying information (name, shipping address, contact phone, email) solely for the fulfillment, insurance coverage, and white-glove delivery of your orders. Your data is never sold, leased, or distributed to third-party marketing entities.
+        </p>
+        <h4 style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #1a1a1a; margin: 1.25rem 0 0.5rem 0;">Encrypted Transactions:</h4>
+        <p style="font-size: 0.8125rem; line-height: 1.6; color: #444; margin-bottom: 0.5rem;">
+          Payment processing is managed exclusively through certified Level-1 PCI-DSS compliant gateways utilizing 256-bit SSL encryption. We never store raw payment card data on our servers.
+        </p>
+      `
+    }
+  };
+
+  function openPolicyModal(policyKey) {
+    var modal = document.getElementById('ra-policy-modal');
+    var contentEl = document.getElementById('ra-policy-modal-content');
+    var policy = RA_POLICIES[policyKey];
+    if (!modal || !contentEl || !policy) return;
+
+    contentEl.innerHTML = `
+      <h3 style="font-family: var(--font-heading--family, serif); font-size: 1.05rem; font-weight: 600; letter-spacing: 0.06em; color: #1a1a1a; margin: 0 0 1.25rem 0; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(0,0,0,0.1);">${policy.title}</h3>
+      <div>${policy.content}</div>
+    `;
+
+    modal.style.display = 'flex';
+    modal.style.pointerEvents = 'all';
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePolicyModal() {
+    var modal = document.getElementById('ra-policy-modal');
+    if (!modal) return;
+    modal.style.display = 'none';
+    modal.style.pointerEvents = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closePolicyModal();
+  });
+
+  // Client-side Policy URL Resolver (Transforms 404 policy URLs into luxury policy views)
+  (function initPolicyUrlResolver() {
+    var path = window.location.pathname.toLowerCase();
+    if (path.indexOf('/policies/') !== -1) {
+      var key = 'returns';
+      if (path.indexOf('shipping') !== -1) key = 'shipping';
+      else if (path.indexOf('authenticity') !== -1) key = 'authenticity';
+      else if (path.indexOf('terms') !== -1) key = 'terms';
+      else if (path.indexOf('privacy') !== -1) key = 'privacy';
+
+      var pol = RA_POLICIES[key];
+      if (pol) {
+        document.title = pol.title + " – The Rare Avenue";
+        var renderPolicyPage = function() {
+          var main = document.getElementById('MainContent');
+          if (main) {
+            main.innerHTML = '<div class="page-width" style="max-width: 840px; margin: 4rem auto; padding: 2.5rem 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.04);"><h1 style="font-family: var(--font-heading--family, serif); font-size: 1.6rem; font-weight: 600; letter-spacing: 0.05em; color: #1a1a1a; margin: 0 0 2rem 0; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.1);">' + pol.title + '</h1><div style="font-size: 0.9rem; line-height: 1.7; color: #333;">' + pol.content + '</div></div>';
+            window.scrollTo(0, 0);
+          }
+        };
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', renderPolicyPage);
+        } else {
+          renderPolicyPage();
+        }
+      }
+    }
+  })();
+</script>
 
 <style>
   /* ==========================================================================

@@ -99,9 +99,7 @@
               <summary class="cart-note__summary">
 
                 <span class="cart-note__label cart-primary-typography">
-
-                  {{ 'content.seller_note' | t }}
-
+                  Add Gift Message / Special Instructions
                 </span>
 
                 <span class="cart-totals__icon">
@@ -127,19 +125,13 @@
                 </label>
 
                 <textarea
-
                   form="cart-form"
-
                   on:input="/updateCartNote"
-
                   id="cart-note"
-
                   class="cart-note__instructions"
-
                   name="note"
-
+                  placeholder="Enter a complimentary gift message or special delivery instructions..."
                   data-skip-node-update
-
                 >{{ cart.note }}</textarea>
 
               </div>
@@ -220,7 +212,7 @@
 
             <summary class="cart-discount__summary">
 
-              <span class="cart-discount__label cart-primary-typography">{{ 'content.discount' | t }}</span>
+              <span class="cart-discount__label cart-primary-typography">Have a Promo Code? (Discount)</span>
 
               <span class="cart-totals__icon">
 

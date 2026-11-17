@@ -224,6 +224,15 @@
               </div>
             </volume-pricing>
           {%- endif -%}
+          {%- liquid
+            assign p_type_lc = product.type | downcase
+            assign p_tags_lc = product.tags | join: ',' | downcase
+            assign is_footwear_item = false
+            if p_type_lc contains 'footwear' or p_type_lc contains 'shoes' or p_type_lc contains 'sneaker' or p_tags_lc contains 'footwear' or p_tags_lc contains 'shoes' or p_tags_lc contains 'sneakers'
+              assign is_footwear_item = true
+            endif
+          -%}
+          {%- if is_footwear_item -%}
           <!-- Optional CheckCheck (+₹699) Certification Toggle (ADR 0029) -->
           <div class="checkcheck-addon-wrapper" data-checkcheck-variant-id="57721101779110" data-cart-add-endpoint="/cart/add.js" data-bundled-with-prop="_bundled_with" style="margin: 0.75rem 0 1rem 0; padding: 0.85rem 1rem; background: #faf9f6; border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 4px;">
             <label class="checkcheck-addon-label" style="display: flex; align-items: flex-start; gap: 0.65rem; cursor: pointer;">
@@ -240,6 +249,7 @@
             </div>
           </div>
           {% render 'checkcheck-authenticity', hide_strip: true %}
+          {%- endif -%}
 
           {% content_for 'block',
             type: 'add-to-cart',

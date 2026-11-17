@@ -64,6 +64,13 @@
       {% paginate collection.products by products_per_page %}
         {% capture children %}
           {% for product in collection.products %}
+            {%- liquid
+              assign p_type_lc = product.type | downcase
+              assign p_handle_lc = product.handle | downcase
+              if p_type_lc == 'addon' or p_type_lc == 'service' or p_type_lc contains 'care & storage' or p_handle_lc contains 'checkcheck' or p_handle_lc contains 'dust-bag' or product.tags contains 'Addon'
+                continue
+              endif
+            -%}
             <li
               id="{{ section.id }}-{{ product.id }}"
               class="product-grid__item product-grid__item--{{ forloop.index0 }}"

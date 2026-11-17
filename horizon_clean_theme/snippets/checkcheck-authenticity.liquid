@@ -3,6 +3,10 @@
   Integrates CheckCheck Connect Shopify App & Trust Kit Branding (ADR 0029)
 {%- endcomment -%}
 
+{%- assign p_type = product.type | downcase -%}
+{%- assign p_tags = product.tags | join: ',' | downcase -%}
+{%- if p_type contains 'footwear' or p_type contains 'shoes' or p_type contains 'sneakers' or p_tags contains 'footwear' or p_tags contains 'sneakers' -%}
+
 {%- liquid
   assign coa_url = product.metafields.checkcheck.coa_url | default: product.metafields.checkcheck.certificate_url
   assign coa_id = product.metafields.checkcheck.check_id | default: product.metafields.checkcheck.cert_id
@@ -127,7 +131,8 @@
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     z-index: 2147483647;
-    display: none;
+    display: none !important;
+    pointer-events: none !important;
     align-items: center;
     justify-content: center;
     padding: 1.5rem 1rem;
@@ -137,7 +142,8 @@
   }
 
   .ra-cc-modal-backdrop.is-open {
-    display: flex;
+    display: flex !important;
+    pointer-events: all !important;
     opacity: 1;
   }
 
@@ -607,6 +613,8 @@
   function openCheckCheckDrawer() {
     var modal = ensureCheckCheckInBody();
     if (modal) {
+      modal.style.display = 'flex';
+      modal.style.pointerEvents = 'all';
       modal.classList.add('is-open');
       modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
@@ -618,6 +626,8 @@
     if (modal) {
       modal.classList.remove('is-open');
       modal.setAttribute('aria-hidden', 'true');
+      modal.style.display = 'none';
+      modal.style.pointerEvents = 'none';
       document.body.style.overflow = '';
     }
   }
@@ -632,3 +642,4 @@
     if (e.key === 'Escape') closeCheckCheckDrawer();
   });
 </script>
+{%- endif -%}

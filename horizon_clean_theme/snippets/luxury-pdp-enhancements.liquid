@@ -822,10 +822,14 @@
       </div>
     </div>
     
+    {%- assign p_type_lower = product.type | downcase -%}
+    {%- assign p_tags_lower = product.tags | join: ',' | downcase -%}
+    {%- if p_type_lower contains 'footwear' or p_type_lower contains 'shoes' or p_tags_lower contains 'footwear' or p_tags_lower contains 'sneakers' -%}
     <label class="sticky-checkcheck-toggle" style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.6875rem; color: #10b981; font-weight: 600; cursor: pointer; white-space: nowrap; margin-right: 0.5rem;">
       <input type="checkbox" id="sticky-checkcheck-addon" style="accent-color: #10b981; width: 14px; height: 14px; cursor: pointer;">
       <span>+ CheckCheck (+₹699)</span>
     </label>
+    {%- endif -%}
 
     <button type="button" class="luxury-sticky-buy-bar__cta" id="luxury-sticky-buy-btn">
       Add to Bag
@@ -837,7 +841,7 @@
   (function() {
     function initStickyBuyBar() {
       var stickyBar = document.getElementById('luxury-sticky-buy-bar');
-      var mainBuyBtn = document.querySelector('.product-form form [type="submit"], .product-form button[name="add"], .buy-buttons button');
+      var mainBuyBtn = document.querySelector('.buy-buttons-block button, .buy-buttons button, [name="add"], .product-form__submit, form[action*="/cart/add"] [type="submit"], .product-form form [type="submit"]');
       var stickyBtn = document.getElementById('luxury-sticky-buy-btn');
 
       if (!stickyBar || !mainBuyBtn) return;
