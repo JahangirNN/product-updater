@@ -44,7 +44,8 @@ ALL_CATALOG_STORES = [
     "nordstrom",
     "jdsports",
     "footlocker",
-    "sephora"
+    "sephora",
+    "katespade"
 ]
 
 

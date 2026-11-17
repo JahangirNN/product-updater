@@ -223,6 +223,32 @@
         }
       }
     },
+    "katespade": {
+      "default": {
+        "formula": "price_bracket_markup",
+        "description": "Kate Spade tiered markup: within 10K: +45%, within 15K: +40%, above 15K: +35% with .99 charm",
+        "round_nearest": 100,
+        "charm_offset": -1,
+        "brackets": [
+          {
+            "max_inr": 10000,
+            "markup_percent": 0.45,
+            "description": "Within 10K base cost: 45% markup"
+          },
+          {
+            "min_inr": 10000,
+            "max_inr": 15000,
+            "markup_percent": 0.40,
+            "description": "Within 15K base cost: 40% markup"
+          },
+          {
+            "min_inr": 15000,
+            "markup_percent": 0.35,
+            "description": "Above 15K base cost: 35% markup"
+          }
+        ]
+      }
+    },
     "sephora": {
       "default": {
         "formula": "usd_tiered_percentage_markup",
