@@ -77,17 +77,42 @@ def check_price_and_stock(
 
             elapsed_ms = (time.perf_counter() - t_start) * 1000
 
-            # 3. Handle Rate Limiting / 429
-            if status_code in (429, 503):
-                wait_sec = 30.0
-                trip_circuit_breaker(resolved_store, wait_sec)
-                record_throttle(resolved_store)
+            # 3. Handle Rate Limiting & Akamai WAF Blocks (403, 429, 503)
+            if status_code in (403, 429, 503) or (status_code == 200 and "Access Denied" in html_content):
+                wait_sec = 1800.0  # 30-minute cooldown
+                if rate_limiter and callable(getattr(rate_limiter, "trip_circuit_breaker", None)):
+                    try:
+                        rate_limiter.trip_circuit_breaker(resolved_store, wait_sec)
+                    except TypeError:
+                        rate_limiter.trip_circuit_breaker(wait_sec)
+                elif isinstance(rate_limiter, dict) and callable(rate_limiter.get("trip_circuit_breaker")):
+                    rate_limiter["trip_circuit_breaker"](wait_sec)
+                else:
+                    trip_circuit_breaker(resolved_store, wait_sec)
+
+                if rate_limiter and callable(getattr(rate_limiter, "record_throttle", None)):
+                    try:
+                        rate_limiter.record_throttle(resolved_store)
+                    except TypeError:
+                        rate_limiter.record_throttle()
+                elif isinstance(rate_limiter, dict) and callable(rate_limiter.get("record_throttle")):
+                    rate_limiter["record_throttle"]()
+                else:
+                    record_throttle(resolved_store)
+
                 return {
                     "status": "rate_limited",
                     "id": product.get("id"),
                     "handle": handle,
                     "store": resolved_store,
-                    "message": f"HTTP {status_code} - rate limited. Circuit breaker tripped.",
+                    "availability": old_availability,
+                    "old_availability": old_availability,
+                    "source_price": old_source_price,
+                    "old_source_price": old_source_price,
+                    "is_active": (old_availability == "in_stock"),
+                    "price_changed": False,
+                    "stock_changed": False,
+                    "message": f"HTTP {status_code} Akamai WAF Throttled. Circuit breaker tripped for {wait_sec:.0f}s.",
                     "elapsed_ms": elapsed_ms,
                     "has_changed": False
                 }
